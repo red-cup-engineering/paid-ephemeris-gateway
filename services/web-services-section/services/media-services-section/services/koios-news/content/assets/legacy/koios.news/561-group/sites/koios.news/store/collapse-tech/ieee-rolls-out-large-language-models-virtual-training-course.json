@@ -1,0 +1,69 @@
+{
+  "subject": "ieee-rolls-out-large-language-models-virtual-training-course",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "IEEE Rolls Out Large Language Models Virtual Training Course"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/large-language-models-ieee-course"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://spectrum.ieee.org/large-language-models-ieee-course"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/large-language-models-ieee-course"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Large language models have moved out of the research lab and into engineers’ daily workflow. LLMs serve as reasoning engines that can orchestrate complex tasks including identifying vulnerabilities in source code and transforming fragmented project discussions into rigorous technical specifications. While the general public uses AI tools to write email and plan vacations, technical professionals use LLMs as core architectural elements that are fundamentally changing how digital infrastructures are built and maintained. As the AI models move into mainstream engineering practice, the demand for technical expertise is rising. The LLM technology market is expected to grow by about 33 percent every year through 2030 , according to MarketsandMarkets . The rapid expansion suggests that proficiency in implementing and securing the models is transitioning from a niche into a core requirement for technologists. More than just a better search engine To use LLMs effectively, technical professionals must move beyond treating them as conversational robots. At a fundamental level, the AI systems are built on the transformer architecture , a framework that replaced the older method of processing data in a fixed, sequential order. Unlike earlier models that analyzed information one step at a time, transformers use self-attention mechanisms to ingest vast datasets simultaneously. For technical professionals, LLMs are core architectural elements that are fundamentally changing how digital infrastructures are built and maintained. Relying on such LLMs without understanding their internal logic creates a significant reliability risk. To build tools that work consistently, developers must understand the core principles that govern how the models process information and generate results. By mastering how a model processes information and how its internal settings influence the result, developers can move away from a trial-and-error approach toward a more precise one to ensure the AI tool handles complex data reliably. Four ways LLMs are changing jobs Here are areas that integrate large language models. Moving past basic prompts. Developers are using application program interfaces (APIs) to connect LLMs directly to their databases and software tools. Employing the APIs allows AI to perform work such as executing code or searching through internal repositories. Fixing the “hallucination” problem. LLMs are at risk of hallucinations , which are generated facts or code that looks correct but actually is wrong or broken. To fix the problem, retrieval-augmented generation (RAG) forces AI to look up information in a trusted source such as a company’s database. Prioritizing data security. When using AI with proprietary code, security is a major concern. Engineers must learn how to set up “private” instances of the models to ensure that sensitive company data stays within a secure cloud environment and is not used to train public versions. The future of collaboration. By automating repetitive coding tasks and summarizing thousands of pages of documentation, LLMs let engineers spend more time on high-level designs and solving important issues. Online course program helps with mastering the tech The gap between people who use AI and those who understand how to build with it is growing wider. To help technical professionals stay ahead, IEEE offers a five-course online program, Large Language Models Demystified , available through the IEEE Learning Network . The program, developed by IEEE Educational Activities in partnership with the IEEE Computer Society , is built for people who want to understand the “how” and the “why” behind the technology. Rather than just teaching basic prompting, the curriculum dives into the engineering behind generative AI, including: Evolution, impact, and hands-on exercises: the shift from statistical methods to modern transformers, including hands-on model optimization. Understanding transformer architectures: the mathematical core of self-attention and positional encoding, implemented in NumPy and Python . Architectural analysis and implementation: advanced LLM design with practical model-building exercises. Training and modeling with PyTorch: end-to-end pipelines in PyTorch , leveraging parameter-efficient techniques such as low-rank adaptation and quantization. Optimization, alignment, and deployment: performance scaling, reinforcement learning from human feedback (RLHF) , group-relative policy optimization , RAG, and agentic AI. Upon completion of the program, participants earn professional development credits and a digital badge from IEEE to verify their expertise. Enroll in the course program on the IEEE Learning Network. Organizations looking to prepare their teams to work on LLMs can connect with an IEEE content specialist to discuss group enrollment and tailored training paths."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/large-language-models-ieee-course"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 18:00:01 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/large-language-models-ieee-course"
+      },
+      "status": "supported"
+    }
+  ]
+}

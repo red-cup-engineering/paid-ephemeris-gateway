@@ -1,0 +1,69 @@
+{
+  "subject": "pandemic-roulette",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Pandemic Roulette"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/icn-sunday-morning-pandemic-roulette/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/14062026/icn-sunday-morning-pandemic-roulette/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/icn-sunday-morning-pandemic-roulette/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Go behind the scenes with managing editor Jamie Smith Hopkins and ICN reporters Katie Surma and Kiley Price as they explain what sloth deaths in Florida reveal about the global wildlife trade and risks to public health. By Katie Surma, Kiley Price Billions of live animals move through the legal and illegal wildlife trade, a massive industry a former CDC epidemiologist described as “pandemic roulette.”"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/icn-sunday-morning-pandemic-roulette/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 08:50:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/icn-sunday-morning-pandemic-roulette/"
+      },
+      "status": "supported"
+    }
+  ]
+}

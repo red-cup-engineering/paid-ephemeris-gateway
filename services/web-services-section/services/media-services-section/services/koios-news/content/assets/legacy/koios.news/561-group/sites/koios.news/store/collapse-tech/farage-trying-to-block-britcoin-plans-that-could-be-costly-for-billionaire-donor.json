@@ -1,0 +1,69 @@
+{
+  "subject": "farage-trying-to-block-britcoin-plans-that-could-be-costly-for-billionaire-donor",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Farage trying to block ‘Britcoin’ plans that could be costly for billionaire donor"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Reform UK leader used private meeting at Bank of England to urge governor to drop plans for state-run cryptocurrency</p><p>Nigel Farage has been trying to block a Bank of England cryptocurrency plan that could be costly for the billionaire bankrolling his party.</p><p>The Reform UK leader has said Christopher Harborne wants nothing in exchange for the millions he has donated to the party and the undeclared £5m personal gift to Farage that the Guardian <a href=\"https://www.theguardian.com/politics/2026/apr/29/revealed-nigel-farage-was-given-undisclosed-5m-by-crypto-billionaire-in-2024\">revealed</a> in April.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 10:30:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/nigel-farage-trying-block-britcoin-crypto-plans-bank-of-england-christopher-harborne"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "crazy-town-episode-127-what-lies-beneath-amoc-el-nino-climate-chaos-with-emily-schoerning",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Crazy Town: Episode 127. What Lies Beneath: AMOC, El Niño, & Climate Chaos with Emily Schoerning"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/crazy-town-episode-127-what-lies-beneath/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-17/crazy-town-episode-127-what-lies-beneath/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/crazy-town-episode-127-what-lies-beneath/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Emily Schoerning returns to discuss the oceanic dynamics – from worrisome to downright apocalyptic – that could make the Strait of Hormuz disruption look like a five-minute wait at the Starbucks drive-thru."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/crazy-town-episode-127-what-lies-beneath/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 08:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/crazy-town-episode-127-what-lies-beneath/"
+      },
+      "status": "supported"
+    }
+  ]
+}

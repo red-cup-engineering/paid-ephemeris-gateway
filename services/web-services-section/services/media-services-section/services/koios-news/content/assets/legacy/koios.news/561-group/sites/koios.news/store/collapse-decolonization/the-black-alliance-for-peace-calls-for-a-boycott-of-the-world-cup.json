@@ -1,0 +1,69 @@
+{
+  "subject": "the-black-alliance-for-peace-calls-for-a-boycott-of-the-world-cup",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Black Alliance for Peace Calls for a Boycott of the World Cup"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-alliance-peace-calls-boycott-world-cup-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/black-alliance-peace-calls-boycott-world-cup-0"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-alliance-peace-calls-boycott-world-cup-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">The Black Alliance for Peace Calls for a Boycott of the World Cup</span> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-17T09:56:24+05:30\" title=\"Wednesday, June 17, 2026 - 09:56\" class=\"datetime\">Wed, 06/17/2026 - 09:56</time> </span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-hidden field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/1968\" hreflang=\"en\">Margaret Kimberley, BAR Executive Editor and Senior Columnist</a></div> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/3252\" hreflang=\"en\">Austin Cole</a></div> </div> <div class=\"video-container\"> <iframe class=\"video-frame\" src=\"https://www.youtube.com/embed/KNwcfhzrx_U\" frameborder=\"0\" allowfullscreen></iframe> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-alliance-peace-calls-boycott-world-cup-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 04:26:24 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-alliance-peace-calls-boycott-world-cup-0"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "rights-groups-brand-home-office-s-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rights groups brand Home Office's AI age guesser for asylum-seekers as biased and inaccurate"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "More than 60 rights groups have told the UK government to scrap plans to use AI-powered facial age estimation on asylum-seeking children, warning the technology is biased, inaccurate, and potentially unlawful. In an open letter sent to border security and asylum minister Alex Norris, 62 organizations, including Amnesty International, Human Rights Watch, Liberty, the Electronic Frontier Foundation, Foxglove, and the Open Rights Group, called on the Home Office to halt deployment of facial age estimation (FAE) technology, currently slated for rollout from 2027. The intervention comes after the Home Office unveiled plans to use AI-powered facial age estimation to help immigration officers decide whether someone claiming to be a child is likely to be over or under 18. Ministers insist the technology will support, rather than replace, human decision-making. But the coalition behind the letter is unconvinced. \"There are substantial and well-founded concerns about the bias of FAE,\" the groups wrote, arguing that the technology has \"baked-in failures and discrimination,\" particularly affecting women and people of color. The groups also highlighted an uncomfortable detail in the Home Office's own guidance: the technology's performance varies by ethnicity and skin tone. That makes it difficult to see why officials believe it will be reliable for assessing asylum-seeking children, who are predominantly people of color, they argued. The organizations also took aim at what may be the technology's biggest practical problem: age estimation systems are least precise around the exact boundary the Home Office wants them to assess. \"The Home Office admits FAE systems are imprecise at the crucial 16-to-18-year-old boundary,\" the letter notes, citing government figures showing even the best-performing systems have an error margin of roughly 2.5 years in that range. The groups argue that the technology may fare even worse on asylum-seeking children. Their letter says trauma, violence, malnutrition, dehydration, sleep deprivation, and long journeys can leave children looking older than they are, potentially skewing the results. \"As such... we can see no basis upon which the Home Office has concluded this technology will increase the accuracy of its decision making,\" the groups wrote. The coalition also raised questions about the data used to develop and test the systems and demanded details about the images and datasets used for training, arguing it is unclear how consent could lawfully have been obtained if asylum-seeking children were included. The Register asked the Home Office to comment. The Home Office has so far released only limited details about its testing program. The groups noted that officials have yet to publish detailed results, methodologies, or impact assessments that would allow independent scrutiny of the technology's performance. The letter also noted that no Equality Impact Assessment or Data Protection Impact Assessment has been made public. The groups have given the department 21 days to respond to a series of questions covering testing methods, training data, safeguards, appeal mechanisms, and how facial age estimates would ultimately influence asylum decisions. The row also exposes a broader disagreement over age assessments. While the Home Office has emphasized cases involving adults claiming to be children, campaigners argue the greater risk is that vulnerable children end up being treated as adults. Until then, the government's AI age guesser remains a technology it says works, but has yet to fully show its workings. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 13:02:46 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892"
+      },
+      "status": "supported"
+    }
+  ]
+}

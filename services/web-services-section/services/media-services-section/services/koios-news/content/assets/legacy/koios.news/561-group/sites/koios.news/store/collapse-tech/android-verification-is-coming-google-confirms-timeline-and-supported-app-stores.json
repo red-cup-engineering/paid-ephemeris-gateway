@@ -1,0 +1,69 @@
+{
+  "subject": "android-verification-is-coming-google-confirms-timeline-and-supported-app-stores",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Android verification is coming: Google confirms timeline and supported app stores"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Almost 20 years ago, Google pitched Android as the more open alternative to Apple's walled garden. Last year, Google announced it would begin erecting its own walls through developer verification. The company has issued an update on its plans, affirming that the verification system will begin rolling out in select countries later this year. We're also learning which app stores are participating in verification and the timeline for key features like the recently revealed \"advanced flow\" for bypassing verification. Google has claimed that developer verification is a necessary change to smartphone software distribution, pointing to the increased prevalence of scams that trick Android users into installing malware apps. Google's solution requires verifying the identities of developers outside the Play Store just like it does for devs publishing on its platform. This has proven to be a contentious change for myriad reasons. In the new blog post , Google's Matthew Forsythe confirms that the developer verification system is slated to come online on September 30 of this year. The initial deployment will be limited to countries with a high level of app scams: Brazil, Indonesia, Singapore, and Thailand. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 19:53:33 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/google-shares-updated-timeline-for-rolling-out-android-developer-verification/"
+      },
+      "status": "supported"
+    }
+  ]
+}

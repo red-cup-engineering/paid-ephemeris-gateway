@@ -1,0 +1,69 @@
+{
+  "subject": "uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK to ban social media for kids under 16, may impose overnight curfews"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/tech-policy/2026/06/uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The UK government announced today that it will ban social media for all kids under the age of 16 in rules expected to take effect in spring 2027. The ban will apply to platforms including Snapchat, TikTok, YouTube, Instagram, Facebook, and X. \"We’re going further than any country in the world by banning social media for under-16s and putting wider protections in place to give kids their childhood back,\" Prime Minister Keir Starmer said in the announcement. In addition to the ban on social media, Starmer's government said it will impose \"world-leading blocks on harmful functions such as livestreaming and stranger communication with children for under-16s... Restrictions on these functionalities will also be on by default for 16- and 17-year-olds to prevent a cliff-edge at 16.\" The livestreaming and stranger-contact rules would apply to a range of services, such as online gaming. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 20:14:04 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/uk-to-ban-social-media-for-kids-under-16-may-impose-overnight-curfews/"
+      },
+      "status": "supported"
+    }
+  ]
+}

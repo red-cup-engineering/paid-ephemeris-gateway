@@ -1,0 +1,69 @@
+{
+  "subject": "rockstar-games-faces-full-hearing-over-alleged-union-busting",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rockstar Games faces full hearing over alleged union busting"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/rockstar-games-faces-full-hearing-over-alleged-union-busting/5258514"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/offbeat/2026/06/19/rockstar-games-faces-full-hearing-over-alleged-union-busting/5258514"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/rockstar-games-faces-full-hearing-over-alleged-union-busting/5258514"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Rockstar Games has suffered a legal setback in a dispute over alleged union busting, clearing the way for a final employment tribunal hearing shortly before Grand Theft Auto VI is due to launch. The developer had sought to have \"blacklisting\" allegations struck from the case. The employment tribunal rejected the request, and the final hearing is scheduled to run from September 10 to October 15. According to the Independent Workers' Union of Great Britain (IWGB), which brought the case, blacklisting is a practice in which information about workers engaged in union activity is compiled to facilitate discrimination. The Register asked the IWGB for more information, but the union did not respond. Rockstar declined to comment on ongoing legal matters. The legal dispute stems from the sudden dismissal of 31 IWGB members in October 2025. According to the IWGB, the dismissed workers were part of a private trade union Discord channel where they discussed ways to improve the workplace. An anonymous source told The Register that when management became aware of the channel, the staff were summarily fired. At the time, a spokesperson for Rockstar's holding company, Take-Two Interactive, said: \"We strive to make the world's best entertainment properties by giving our best-in-class creative teams positive work environments and ongoing career opportunities. Our culture is focused on teamwork, excellence, and kindness. \"Rockstar Games terminated a small number of individuals for gross misconduct, and for no other reason. As always, we fully support Rockstar's ambitions and approach.\" This week, Ellie Dunstan, one of the workers fired last year, described the employment tribunal ruling as a \"huge moment for us.\" \"Rockstar thought they could control the narrative. They're wrong, and we look forward to proving it. Our case will now be heard in full and put to the test as it should be. The world will get to see for itself the evidence as to what happened last October. \"We loved our work at Rockstar. Losing our passion, our colleagues, and our incomes in the blink of an eye was devastating, and the company management has treated us with disdain ever since.\" Tech companies are often quick to derail unionization where possible, while working conditions in game development have faced particular scrutiny over \"crunch,\" the practice of employees working extended hours in the run-up to a release. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/rockstar-games-faces-full-hearing-over-alleged-union-busting/5258514"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:04:33 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/rockstar-games-faces-full-hearing-over-alleged-union-busting/5258514"
+      },
+      "status": "supported"
+    }
+  ]
+}

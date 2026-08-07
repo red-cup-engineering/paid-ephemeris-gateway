@@ -1,0 +1,69 @@
+{
+  "subject": "us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "US kills 3 in strike on alleged drug smuggling boat in Eastern Pacific"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/news/2026/6/19/us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The attack is the latest in a series of strikes on vessels operated by 'narco-terrorists,' according to Washington."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:23:26 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/us-kills-3-in-strike-on-alleged-drug-smuggling-boat-in-eastern-pacific?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

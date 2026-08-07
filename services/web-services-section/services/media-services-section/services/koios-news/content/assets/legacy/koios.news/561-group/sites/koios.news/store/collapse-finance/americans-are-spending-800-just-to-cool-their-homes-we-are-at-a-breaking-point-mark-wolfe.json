@@ -1,0 +1,69 @@
+{
+  "subject": "americans-are-spending-800-just-to-cool-their-homes-we-are-at-a-breaking-point-mark-wolfe",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Americans are spending $800 just to cool their homes. We are at a breaking point | Mark Wolfe"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>While the stock market booms for the rich, cost of living is soaring for everyone else</p><p>Since 2020, the stock market has more than doubled. Americans who own substantial financial assets are reveling in economic success. For everyone else, the economy feels very different. This summer, the average family will spend nearly <a href=\"https://neada.org/summer-cooling-costs-projected-to-hit-record-highs-as-household-electric-bills-rise-10-5-june-price-update/\">$800</a> just to keep their home cool, almost 40% more than in 2020 and up 10.5% since last summer.</p><p>Americans now carry more than <a href=\"https://www.wsj.com/personal-finance/credit/us-credit-card-debt-af5c7c77\">$1.2tn</a> in credit card debt. Nearly <a href=\"https://www.surveymonkey.com/curiosity/cnbc-money-survey-affordability-april-2026/\">60%</a> say they are living paycheck to paycheck. One in six households is behind on its utility bills. Every year, utilities disconnect electric service more than <a href=\"https://www.eia.gov/analysis/requests/residential/utility/\">13m times</a>. Nearly 40% of lower-income households struggle to pay their energy bills.</p><p>Mark Wolfe is an energy economist and serves as the executive director of the National Energy Assistance Directors Association representing the state directors of the Low Income Home Energy Assistance Program and the co-director of the Center on Energy Poverty and Climate. He also serves as an adjunct professor at the Trachtenberg School of Public Policy at George Washington University</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 11:00:01 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/18/heat-air-conditioning-costs"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "could-the-hpv-vaccine-eliminate-cervical-cancer-deaths",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Could the HPV vaccine eliminate cervical cancer deaths?"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/could-the-hpv-vaccine-eliminate-cervical-cancer-deaths?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/news/2026/6/19/could-the-hpv-vaccine-eliminate-cervical-cancer-deaths?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/could-the-hpv-vaccine-eliminate-cervical-cancer-deaths?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The HPV vaccine has reduced the risk of cervical cancer death before age 30 to effectively zero in the United Kingdom."
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/could-the-hpv-vaccine-eliminate-cervical-cancer-deaths?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:41:34 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/could-the-hpv-vaccine-eliminate-cervical-cancer-deaths?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

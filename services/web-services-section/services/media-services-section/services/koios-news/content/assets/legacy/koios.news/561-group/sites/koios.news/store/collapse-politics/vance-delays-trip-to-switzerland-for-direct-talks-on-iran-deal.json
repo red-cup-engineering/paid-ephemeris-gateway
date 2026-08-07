@@ -1,0 +1,69 @@
+{
+  "subject": "vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Vance Delays Trip to Switzerland for Direct Talks on Iran Deal"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/18/us/politics/vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Mr. Vance said earlier at a press briefing that he did not know if he would travel to Switzerland on Friday for the talks, where he was initially expected for a signing ceremony."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 03:57:26 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/vance-delays-trip-to-switzerland-for-direct-talks-on-iran-deal.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

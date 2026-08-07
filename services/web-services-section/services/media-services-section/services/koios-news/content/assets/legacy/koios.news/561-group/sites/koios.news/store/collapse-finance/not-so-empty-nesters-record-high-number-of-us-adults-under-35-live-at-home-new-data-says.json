@@ -1,0 +1,69 @@
+{
+  "subject": "not-so-empty-nesters-record-high-number-of-us-adults-under-35-live-at-home-new-data-says",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Not so empty nesters: record-high number of US adults under 35 live at home, new data says"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Data shows that the increase in at-home living stems from high housing costs rather than labor market conditions</p><p>A record number of the US’s young adults were living with their parents last year, <a href=\"https://www.realtor.com/news/trends/young-adults-living-with-parents-employed-housing-costs/\">according to new data from Realtor.com</a>, as high housing costs pushed the milestone of independent living out of reach.</p><p>A third of young adults between the ages of 25 and 35 – 25.2 million people – were living with their parents in 2025. Of those, 70% had jobs, and many held college degrees, highlighting that the increase in at-home living stems from high housing costs rather than labor market conditions.</p> <a href=\"https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 15:33:53 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/society/2026/jun/18/us-adults-under-35-living-at-home"
+      },
+      "status": "supported"
+    }
+  ]
+}

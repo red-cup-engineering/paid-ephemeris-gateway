@@ -1,0 +1,69 @@
+{
+  "subject": "a-literal-coverup-what-is-the-kennedy-center-hiding-behind-those-tarps",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘A Literal Coverup’: What Is the Kennedy Center Hiding Behind Those Tarps?"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/kennedy-center-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/kennedy-center-trump.html"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/kennedy-center-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The arts center says it pulled President Trump’s name from the building front. But the result remains hidden by tarps, prompting questions and speculation."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/kennedy-center-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 01:52:35 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/kennedy-center-trump.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Feds snooze as US datacenter law set to lapse with no replacement in site"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/15/feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site/5255679"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/public-sector/2026/06/15/feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site/5255679"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/15/feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site/5255679"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "US legislation covering federal datacenters is set to expire in September and it appears that the Trump administration is simply going to allow it to lapse without replacement. The Federal Data Center Enhancement Act (FDCEA) of 2023 covers certain standards that are to be adhered to for facilities that are wholly or partially owned, operated, or maintained by a federal agency. It includes requirements relating to availability and uptime of the facility; the use of sustainable energy sources; protection against power failure; protections against physical intrusion and natural disasters; plus IT security protections. We understand that the legislation will sunset on September 30, 2026, and according to Wired, neither the US Congress nor the Trump administration appears to be making any move to extend the act, or put alternate legislation in place. The danger is that if the FDCEA is not renewed or superseded by similar legislation, then federal agencies across the US may cease to follow the requirements and simply act as they see fit when procuring new datacenter infrastructure. We asked the White House and Congress for comment. According to implementation guidance issued by the Office of Management and Budget (OMB) under the previous administration, agency datacenters “must provide secure and highly available computing infrastructure to enable reliable access to Federal information and information systems.” It notes that the \"needs of the federal government with respect to data access and data processing systems have evolved since 2014,” when the Federal Data Center Consolidation Initiative (FDCCI) was established, and hence the latter was not renewed but replaced by the FDCEA. The OMB states that effective operation of datacenters requires regular monitoring, and optimization of resources by operators, and directs agencies to incorporate automated tools into the management of all new facilities, including tools that monitor metrics such as electrical consumption. It also states that the “cost, scarcity, and environmental impact of energy and water consumption necessitates that agencies evaluate datacenters against resource consumption metrics and best practices when making their decisions” regarding new datacenter builds. Perhaps most importantly, it requires that federal facilities “must be able to meet the reliability and resiliency needs of their hosted information and information systems through implementation of the appropriate information security and physical security protections.” It is widely known that the Trump administration does not look kindly on regulations, especially those relating to environmental protection. Instead, policy has focused on fast-tracking the federal permitting process for datacenters, particularly those dedicated to training and developing AI models. A recent report from Politico stated that the Trump administration was not inclined to set nationwide environmental requirements or recommendations for the datacenter industry. Instead, Environmental Protection Agency (EPA) Administrator Lee Zeldin said that while there are technologies and practices that reduce air pollution and water usage, individual states and communities know what works best for them. At the same time, opposition to datacenter construction is growing across the US, precisely because of public fears over factors such as air pollution, water usage, and the prospect of spiking energy bills. A recent survey found more than 70 percent of respondents said that they would be against the construction of an AI datacenter in their neighborhood. ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/15/feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site/5255679"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:47:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/15/feds-snooze-as-us-datacenter-law-set-to-lapse-with-no-replacement-in-site/5255679"
+      },
+      "status": "supported"
+    }
+  ]
+}

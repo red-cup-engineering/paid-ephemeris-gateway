@@ -1,0 +1,69 @@
+{
+  "subject": "wall-street-and-european-markets-hit-record-highs-and-oil-price-falls-to-three-month-low-after-us-iran-peace-deal-as-it-happened",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Wall Street and European markets hit record highs and oil price falls to three-month low after US-Iran peace deal – as it happened"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Rolling coverage of the latest economic and financial news</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/jun/15/oil-prices-fall-strait-of-hormuz-reopening-hopes-iran-us-peace-deal\">Oil prices tumble amid hopes strait of Hormuz will soon reopen</a></p></li></ul><p><strong>European stock markets have hit a record high at the start of trading, as relief over the US-Iran peace deal ripples across global markets.</strong></p><p>The pan-European Stoxx 600 index has jumped by 0.9% to 639 points, over the previous record high set just before the Iran war started, with shares rising in London, Frankfurt, Paris, Madrid and Milan.</p><p>The move has given investors a clear reason to dial back some of the geopolitical risk premium that has hung over markets, especially as the Strait of Hormuz is expected to reopen and oil prices move sharply lower.</p><p>Energy prices have been one of the clearest transmission channels from Middle East tensions into inflation, bond yields and equity sentiment, and there is likely to be a concerted effort to get prices down even further once this deal is finalised.</p> <a href=\"https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 15:57:04 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/15/oil-price-low-stock-markets-rally-us-iran-peace-deal-ftse-wall-street-live-news-updates"
+      },
+      "status": "supported"
+    }
+  ]
+}

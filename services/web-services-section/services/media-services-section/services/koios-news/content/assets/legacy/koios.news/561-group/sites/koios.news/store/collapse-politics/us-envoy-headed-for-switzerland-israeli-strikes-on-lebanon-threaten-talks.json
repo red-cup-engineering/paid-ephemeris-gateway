@@ -1,0 +1,69 @@
+{
+  "subject": "us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "US envoy headed for Switzerland, Israeli strikes on Lebanon threaten talks"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:12.975Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/20/us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/news/2026/6/20/us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:12.975Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/20/us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "US media are reporting that Witkoff and Kushner are preparing for negotiations with Iran after talks were postponed."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:12.975Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/20/us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 07:02:41 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:12.975Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/20/us-envoy-headed-for-switzerland-israeli-strikes-on-lebanon-threaten-talks?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "don-t-wait-for-prime-day-we-found-the-31-best-early-deals-from-amazon-and-its-competitors",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Don’t wait for Prime Day. We found the 31 best early deals from Amazon and its competitors"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Love or hate Amazon, its 23-26 June Prime Day event is a good time to snag discounts on tech, fashion and more, including much-loved brands such as Anyday and Caraway</p><ul><li><p><a href=\"https://www.theguardian.com/global/2025/sep/09/sign-up-to-the-filter-us-our-newsletter-guide-to-buying-fewer-better-products\">Sign up for the Filter US newsletter, your weekly guide to buying fewer, better things</a></p></li></ul><p>You don’t have the wait until after Turkey Day: early summer is actually one of the best times of the year to snag a deal. <a href=\"https://www.theguardian.com/technology/amazon\">Amazon</a> is kicking off its annual summer sale on 23 June, and just as Christmas songs start playing in stores two months early, the company and many other retailers are slashing prices in advance.</p><p>We’ve handpicked 31 of the best deals based on products the Filter has tested and loved in the past, including discounts on some of our favorite brands such as <a href=\"https://www.theguardian.com/thefilter-us/2026/mar/07/field-company-no-5-chef-skillet-review\">Field Company</a>, <a href=\"https://www.theguardian.com/thefilter-us/2025/dec/25/glass-food-containers-to-store-leftovers\">Anyday</a> and <a href=\"https://www.theguardian.com/thefilter-us/2026/jun/16/caraway-cookware-review\">Caraway</a>. If you want to shop at Amazon, we’ve handpicked products that are actually worth your money, and very few require a Prime subscription. If you prefer other retailers, we have oodles of those too.</p><p><strong>Best tech deal:<br></strong>AirPods Pro 3</p><p><strong>Best home deal:<br></strong>Levoit Tower Fan</p> <a href=\"https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 14:15:05 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter-us/2026/jun/18/best-early-amazon-prime-deals-sales"
+      },
+      "status": "supported"
+    }
+  ]
+}

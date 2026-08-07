@@ -1,0 +1,69 @@
+{
+  "subject": "protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Protesters to rally against World Cup sponsor Hyundai before Mexico game"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<ul><li><p>Focus on business dealings with mining company </p></li><li><p>Guadalajara rally to highlight fate of ‘disappeared’</p></li></ul><p>Hyundai will be targeted by protesters at a rally before the Group A game between Mexico and South Korea in Guadalajara on Thursday, due to the World Cup sponsor’s business dealings with the South American mining company Ternium.</p><p>A 2025 report from the environmental group Mighty Earth criticised Hyundai’s involvement in what they described as a “dirty steel supply chain”, as the South Korean motor company is a major buyer of iron ore from Ternium for use in steel production. Ternium has faced repeated criticisms for its destructive environmental impact and corporate governance policies from campaign groups, as well as its alleged links to the disappearance of two Mexican activists.</p> <a href=\"https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 13:04:58 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/football/2026/jun/17/protesters-to-rally-against-world-cup-sponsor-hyundai-before-mexico-game"
+      },
+      "status": "supported"
+    }
+  ]
+}

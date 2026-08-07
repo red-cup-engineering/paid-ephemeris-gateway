@@ -1,0 +1,69 @@
+{
+  "subject": "sen-gillibrand-s-son-is-building-a-perps-exchange-that-wants-dual-cftc-sec-oversight-report",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Sen. Gillibrand’s son is building a perps exchange that wants dual CFTC, SEC oversight: report"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405334/sen-gillibrand-son-building-perps-exchange-dual-cftc-sec-oversight?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theblock.co/post/405334/sen-gillibrand-son-building-perps-exchange-dual-cftc-sec-oversight?utm_source=rss&utm_medium=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405334/sen-gillibrand-son-building-perps-exchange-dual-cftc-sec-oversight?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The American Perpetuals Exchange Corporation raised $30 million at a $300 million valuation, Fortune reported on Thursday."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405334/sen-gillibrand-son-building-perps-exchange-dual-cftc-sec-oversight?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:06:11 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405334/sen-gillibrand-son-building-perps-exchange-dual-cftc-sec-oversight?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

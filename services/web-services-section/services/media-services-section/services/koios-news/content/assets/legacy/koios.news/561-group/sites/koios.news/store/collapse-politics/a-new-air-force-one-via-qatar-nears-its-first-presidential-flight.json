@@ -1,0 +1,69 @@
+{
+  "subject": "a-new-air-force-one-via-qatar-nears-its-first-presidential-flight",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "A New Air Force One, via Qatar, Nears Its First Presidential Flight"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/new-air-force-one-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/new-air-force-one-trump.html"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/new-air-force-one-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "President Trump showed off the new red, white and blue Boeing 747, a gift from Qatar that prompted a storm of criticism from lawmakers, before a flyover on July 4."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/new-air-force-one-trump.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 23:50:24 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/new-air-force-one-trump.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

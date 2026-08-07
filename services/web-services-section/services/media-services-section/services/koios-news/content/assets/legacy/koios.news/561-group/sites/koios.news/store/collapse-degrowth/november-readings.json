@@ -1,0 +1,69 @@
+{
+  "subject": "november-readings",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "November readings"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2022/12/november-readings-5/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://unevenearth.org/2022/12/november-readings-5/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2022/12/november-readings-5/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Getty Images, via VICE Once a month, we put together a list of stories we’ve been reading: news you might’ve missed or crucial conversations going on around the web. We focus on environmental justice, radical municipalism, new politics, political theory, and resources for action and education. We try to include articles that have been published recently but will last, that are relatively light and inspiring, and are from corners of the web that don’t always get the light of day. This will also be a space to keep you up to date with news about what’s happening at Uneven Earth. On this month’s list, you’ll find a bunch of readings on the COP15 and COP27, worker exploitation behind AI innovation, the disastrous environmental impact of the World Cup in Qatar, the importance of working less, the growing popularity of degrowth, and so much more. We also linked a website you can use to get past paywalls! We don’t always have time to run articles through it before adding them, so keep the page bookmarked for those we might miss. If you find these lists useful, you can support us by sharing them on social media and with your friends and family! A small note that the articles linked in this newsletter do not represent the views of Uneven Earth. When reading, please keep in mind that we don’t have capacity to do further research on the authors or publishers! Uneven Earth updates Las promesas vacías de las Soluciones Basadas en la Naturaleza: los casos de Shell y BP | Las SbN encubren la falta de interés de las grandes corporaciones y gobiernos por lograr emisiones cero reales Top 5 articles to read AI isn’t artificial or intelligent . How AI innovation is powered by underpaid workers in foreign countries. The World Cup in Qatar is a climate catastrophe Getting out of the food-energy-climate crisis Having more fun is good for the planet The Degrowth Paradox – degrowth is growing . A Twitter thread. News you might’ve missed Climate activists, including scientists, are arrested in protests at private airports Barcelona students to take mandatory climate crisis module from 2024 It’s official: France bans short haul domestic flights in favour of train travel Revealed: How the livestock industry funds the ‘greenhouse gas guru’ Brazil, Indonesia and DRC in talks to form ‘Opec of rainforests’ UK power station owner cuts down primary forests in Canada Where we’re at: analysis Taking back the mountains &nbsp; Roshan Krishnan on energy democracy, carbon offsets, and finding a political home Global struggles Escape from the closed loop . Protests in China are shining a light not only on the country’s draconian population management but restrictions on workers everywhere. From Ürümchi to Shanghai: Demands from Chinese and Hong Kong socialists Is the world paying enough attention to Indigenous mental health? Lost and damaged: the COP The biodiversity crisis in numbers – a visual guide COP27 and imperialism: Weaving a crown of thorns for the Global South Greenwash and techno-babble take us towards catastrophe. We need to turn the great power of social movements against them ‘Extractivism’ is destroying nature: to tackle it Cop15 must go beyond simple targets “Loss and damage” is not enough: Why we need climate reparations CCS causes the problem it fails to solve Chasing future biotech solutions to climate change risks delaying action in the present – it may even make things worse Cities and radical municipalism Recycling our cities, one building at a time A challenge for cities: Going green, without the gentrification A YIMBY and a “Left NIMBY” duke it out Paris became a cycling success story—and built a roadmap for other cities Food politics The fertiliser trap: the rising cost of farming’s addiction to chemical fertilisers (report) Just think about it… Where have all the snow crabs gone? The spirit of the wetlands Huge decline of working class people in the arts reflects fall in wider society The ”I have NO friends” loneliness epidemic Degrowth Degrowth on CNN: A dangerous idea or the answer to the world’s biggest problems? Our obsession with economic growth is deadly ‘Green’ tech can’t save us from climate change Gurus of degrowth: Say hello to the ancient cynics What is the theory of degrowth? Gustavo Petro’s development proposal Degrowth can work — here’s how science can help &nbsp; ‘Now is time to hold degrowth as the banner of environmentalism’ &nbsp; Sci-fi, art and storytelling Architect Indy Johar: ‘The scale of what we’re about to face is completely underestimated’ Can solarpunk save the world? Octavia Butler’s science fiction predicted the world we live in What if we cancel the apocalypse? Resources Archive.today to get past paywalls on articles Want to receive this as a newsletter in your inbox? Subscribe here . The post November readings first appeared on Uneven Earth ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2022/12/november-readings-5/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 12 Dec 2022 13:58:02 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2022/12/november-readings-5/"
+      },
+      "status": "supported"
+    }
+  ]
+}

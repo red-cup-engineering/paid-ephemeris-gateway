@@ -1,0 +1,69 @@
+{
+  "subject": "more-than-a-game-football-friendship-and-mental-health-recovery",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "More than a game: Football, friendship and mental health recovery"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/features/longform/2026/6/19/more-than-a-game-football-friendship-and-mental-health-recovery?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/features/longform/2026/6/19/more-than-a-game-football-friendship-and-mental-health-recovery?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/features/longform/2026/6/19/more-than-a-game-football-friendship-and-mental-health-recovery?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Men recovering from bipolar disorder, schizophrenia and other mental health challenges find help through football."
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/features/longform/2026/6/19/more-than-a-game-football-friendship-and-mental-health-recovery?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:05:12 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/features/longform/2026/6/19/more-than-a-game-football-friendship-and-mental-health-recovery?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "the-sociology-study-that-changed-my-thinking",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The sociology study that changed my thinking"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/12/the-sociology-study-that-changed-my-thinking/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/12/the-sociology-study-that-changed-my-thinking/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/12/the-sociology-study-that-changed-my-thinking/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Lars Syll In 2003, the American sociologist Devah Pager published a study that laid bare two ugly truths about the labour market. First, having a criminal record dramatically reduces your chances of finding a job. Second — and more disturbingly — being black is often a greater handicap than having a felony conviction. Pager’s experiment was brilliantly simple. […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/12/the-sociology-study-that-changed-my-thinking/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 14:07:19 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/12/the-sociology-study-that-changed-my-thinking/"
+      },
+      "status": "supported"
+    }
+  ]
+}

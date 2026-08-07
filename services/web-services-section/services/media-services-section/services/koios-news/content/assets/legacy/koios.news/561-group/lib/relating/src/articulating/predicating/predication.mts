@@ -1,0 +1,606 @@
+import {
+  predicationBaseObjectCoincidenceHolds,
+  predicationCellCoincidenceHolds,
+  predicationNodeCoincidenceHolds,
+  predicationPredicateCoincidenceHolds,
+  predicationTermCoincidenceHolds,
+} from "../carrier-coincidence.mjs";
+import { type ArticulationCell, type Claim, type Mark, type Token } from "../utterance.mjs";
+
+/**
+ * A term in a predication: a token occupying a subject or object position.
+ * Claims remain utterance-layer borne content; they are not entity positions in
+ * predication cells.
+ */
+export type PredicationTerm = Token;
+/**
+ * A predicate in a predication: an object of the predicate category, carried by
+ * a mark. This is not identical to an utterance claim; predicating may derive a
+ * predicate object from claim content, but the predication layer keeps its own
+ * carrier.
+ */
+export class Predicate {
+  readonly kind = "predication.predicate" as const;
+  readonly claim: Claim;
+  readonly mark: Mark;
+
+  constructor(claimCarrier: Claim) {
+    this.claim = claimCarrier;
+    this.mark = claimCarrier.mark;
+    Object.freeze(this);
+  }
+}
+
+export type PredicationPredicate = Predicate;
+/**
+ * A predication node: the immutable subject-predicate-object triple read off a
+ * cell.
+ */
+export type PredicationNode = readonly [PredicationTerm, PredicationPredicate, PredicationTerm];
+/**
+ * An object of the base category: a term, a predicate, or a predication node.
+ */
+export type PredicationBaseObject = PredicationTerm | PredicationPredicate | PredicationNode;
+/**
+ * A datum admitted when building a predication site: either a cell or a
+ * specialization morphism.
+ */
+export type PredicationDatum = Cell | SpecializationMorphism;
+
+/** A relational cell: a subject term, a predicate, and an object term. */
+export interface Cell {
+  readonly subject: PredicationTerm;
+  readonly predicate: PredicationPredicate;
+  readonly object: PredicationTerm;
+}
+
+/**
+ * A directed edge in the base category from a domain object to a codomain
+ * object.
+ */
+export interface Edge<Domain = PredicationBaseObject, Codomain = PredicationBaseObject> {
+  readonly domain: Domain;
+  readonly codomain: Codomain;
+}
+
+/**
+ * A specialization edge between terms, tagged with kind
+ * "predication.specialization": its domain is the general term and its codomain
+ * the specialized term.
+ */
+export interface SpecializationMorphism extends Edge<PredicationTerm, PredicationTerm> {
+  readonly kind: "predication.specialization";
+}
+
+/**
+ * A deduplicated collection of entity terms appearing as cell subjects or
+ * objects.
+ */
+export interface EntitySet<T = PredicationTerm> {
+  readonly kind: "predication.entitySet";
+  readonly entities: readonly T[];
+}
+
+/** A deduplicated collection of the predicates appearing in cells. */
+export interface PredicateSet<T = PredicationPredicate> {
+  readonly kind: "predication.predicateSet";
+  readonly predicates: readonly T[];
+}
+
+/**
+ * A deduplicated set of cells together with the entity set of their subjects
+ * and objects and the predicate set of their predicates.
+ */
+export interface CellSet {
+  readonly kind: "predication.cellSet";
+  readonly cells: readonly Cell[];
+  readonly entities: EntitySet<PredicationTerm>;
+  readonly predicates: PredicateSet<PredicationPredicate>;
+}
+
+/**
+ * The generated predication-cell-set Phi = E x Pi x E, presented by its
+ * generators rather than by a finite family of materialized cells.
+ */
+export interface GeneratedPredicationCellSet {
+  readonly kind: "predication.generatedCellSet";
+  readonly entities: EntitySet<PredicationTerm>;
+  readonly predicates: PredicateSet<PredicationPredicate>;
+}
+
+/**
+ * The base category of a predication: its objects, specialization edges, and
+ * the converse, subject-projection, and object-projection edges derived from
+ * the cells' nodes.
+ */
+export interface BaseCategory {
+  readonly kind: "predication.base";
+  readonly objects: readonly PredicationBaseObject[];
+  readonly specialization: readonly Edge<PredicationTerm, PredicationTerm>[];
+  readonly converse: readonly Edge<PredicationNode, PredicationNode>[];
+  readonly subjectProjection: readonly Edge<PredicationNode, PredicationTerm>[];
+  readonly objectProjection: readonly Edge<PredicationNode, PredicationTerm>[];
+}
+
+/**
+ * A predication site: the cell set, the specialization morphisms, and the
+ * base category derived from them.
+ */
+export interface PredicationSite {
+  readonly kind: "predication.site";
+  readonly cells: CellSet;
+  readonly specializations: readonly SpecializationMorphism[];
+  readonly base: BaseCategory;
+}
+
+/**
+ * The transfinite predication-tier precursor to predication-fibration: the
+ * generated cell set, base predicate category, and the fiber-functor precursor
+ * over the same entity set.
+ */
+export interface PredicationFiberFunctorCarrier {
+  readonly kind: "predication.fiberFunctor";
+  readonly cellSet: GeneratedPredicationCellSet;
+  readonly base: BaseCategory;
+  readonly entities: EntitySet<PredicationTerm>;
+}
+
+/**
+ * The codomain object generated by predicating from a potential aperiodic
+ * articulation cell.
+ */
+export interface TransfinitePredicationCategory {
+  readonly kind: "predication.transfiniteCategory";
+  readonly predicationCellSet: GeneratedPredicationCellSet;
+  readonly predicationFiberFunctor: PredicationFiberFunctorCarrier;
+}
+
+/**
+ * The result of cohering a predication: the saturated cell set and the residue
+ * carrier whose base has its specialization relation transitively closed.
+ */
+export interface CoherenceCarrier {
+  readonly kind: "predication.coherence";
+  readonly saturated: CellSet;
+  readonly residue: PredicationSite;
+}
+
+/**
+ * Witness that two terms coincide, tagged "predication.termIdentity:witness"
+ * and carrying the two terms.
+ */
+export interface PredicationTermIdentityWitness {
+  readonly kind: "predication.termIdentity:witness";
+  readonly left: PredicationTerm;
+  readonly right: PredicationTerm;
+}
+
+/**
+ * Obstruction recording that two terms do not coincide, tagged
+ * "predication.termIdentity-obstruction" and carrying the two terms.
+ */
+export interface PredicationTermIdentityObstruction {
+  readonly kind: "predication.termIdentity-obstruction";
+  readonly left: PredicationTerm;
+  readonly right: PredicationTerm;
+}
+
+/**
+ * The judgment of term identity: either a witness of coincidence or an
+ * obstruction.
+ */
+export type PredicationTermIdentityJudgment = PredicationTermIdentityWitness | PredicationTermIdentityObstruction;
+
+/**
+ * Witness that two predicates coincide, tagged
+ * "predication.predicateIdentity:witness" and carrying the two predicates.
+ */
+export interface PredicationPredicateIdentityWitness {
+  readonly kind: "predication.predicateIdentity:witness";
+  readonly left: PredicationPredicate;
+  readonly right: PredicationPredicate;
+}
+
+/**
+ * Obstruction recording that two predicates do not coincide, tagged
+ * "predication.predicateIdentity-obstruction" and carrying the two predicates.
+ */
+export interface PredicationPredicateIdentityObstruction {
+  readonly kind: "predication.predicateIdentity-obstruction";
+  readonly left: PredicationPredicate;
+  readonly right: PredicationPredicate;
+}
+
+/**
+ * The judgment of predicate identity: either a witness of coincidence or an
+ * obstruction.
+ */
+export type PredicationPredicateIdentityJudgment = PredicationPredicateIdentityWitness | PredicationPredicateIdentityObstruction;
+
+/**
+ * Witness that two cells coincide, tagged "predication.cellIdentity:witness"
+ * and carrying the two cells.
+ */
+export interface CellIdentityWitness {
+  readonly kind: "predication.cellIdentity:witness";
+  readonly left: Cell;
+  readonly right: Cell;
+}
+
+/**
+ * Obstruction recording that two cells do not coincide, tagged
+ * "predication.cellIdentity-obstruction" and carrying the two cells.
+ */
+export interface CellIdentityObstruction {
+  readonly kind: "predication.cellIdentity-obstruction";
+  readonly left: Cell;
+  readonly right: Cell;
+}
+
+/**
+ * The judgment of cell identity: either a witness of coincidence or an
+ * obstruction.
+ */
+export type CellIdentityJudgment = CellIdentityWitness | CellIdentityObstruction;
+
+/**
+ * Witness that two predication nodes coincide, tagged
+ * "predication.nodeIdentity:witness" and carrying the two nodes.
+ */
+export interface PredicationNodeIdentityWitness {
+  readonly kind: "predication.nodeIdentity:witness";
+  readonly left: PredicationNode;
+  readonly right: PredicationNode;
+}
+
+/**
+ * Obstruction recording that two predication nodes do not coincide, tagged
+ * "predication.nodeIdentity-obstruction" and carrying the two nodes.
+ */
+export interface PredicationNodeIdentityObstruction {
+  readonly kind: "predication.nodeIdentity-obstruction";
+  readonly left: PredicationNode;
+  readonly right: PredicationNode;
+}
+
+/**
+ * The judgment of node identity: either a witness of coincidence or an
+ * obstruction.
+ */
+export type PredicationNodeIdentityJudgment = PredicationNodeIdentityWitness | PredicationNodeIdentityObstruction;
+
+/**
+ * Witness that two base objects coincide, tagged
+ * "predication.baseObjectIdentity:witness" and carrying the two objects.
+ */
+export interface PredicationBaseObjectIdentityWitness {
+  readonly kind: "predication.baseObjectIdentity:witness";
+  readonly left: PredicationBaseObject;
+  readonly right: PredicationBaseObject;
+}
+
+/**
+ * Obstruction recording that two base objects do not coincide, tagged
+ * "predication.baseObjectIdentity-obstruction" and carrying the two objects.
+ */
+export interface PredicationBaseObjectIdentityObstruction {
+  readonly kind: "predication.baseObjectIdentity-obstruction";
+  readonly left: PredicationBaseObject;
+  readonly right: PredicationBaseObject;
+}
+
+/**
+ * The judgment of base-object identity: either a witness of coincidence or an
+ * obstruction.
+ */
+export type PredicationBaseObjectIdentityJudgment = PredicationBaseObjectIdentityWitness | PredicationBaseObjectIdentityObstruction;
+
+/**
+ * Judges whether two terms coincide, returning a frozen witness when their
+ * carrier coincidence holds and an obstruction otherwise.
+ */
+export function predicationTermIdentity(left: PredicationTerm, right: PredicationTerm): PredicationTermIdentityJudgment {
+  return predicationTermCoincidenceHolds(left, right)
+    ? Object.freeze({ kind: "predication.termIdentity:witness" as const, left, right })
+    : Object.freeze({ kind: "predication.termIdentity-obstruction" as const, left, right });
+}
+
+/**
+ * Judges whether two predicates coincide, returning a frozen witness when their
+ * carrier coincidence holds and an obstruction otherwise.
+ */
+export function predicationPredicateIdentity(left: PredicationPredicate, right: PredicationPredicate): PredicationPredicateIdentityJudgment {
+  return predicationPredicateCoincidenceHolds(left, right)
+    ? Object.freeze({ kind: "predication.predicateIdentity:witness" as const, left, right })
+    : Object.freeze({ kind: "predication.predicateIdentity-obstruction" as const, left, right });
+}
+
+/** Promotes utterance-layer claim content into a predication-layer predicate
+ * object. The promotion preserves the mark but does not identify claim and
+ * predicate as the same carrier. */
+export function predicateOfClaim(claimCarrier: Claim): PredicationPredicate {
+  return new Predicate(claimCarrier);
+}
+
+/**
+ * Judges whether two cells coincide, returning a frozen witness when their
+ * carrier coincidence holds and an obstruction otherwise.
+ */
+export function cellIdentity(left: Cell, right: Cell): CellIdentityJudgment {
+  return predicationCellCoincidenceHolds(left, right)
+    ? Object.freeze({ kind: "predication.cellIdentity:witness" as const, left, right })
+    : Object.freeze({ kind: "predication.cellIdentity-obstruction" as const, left, right });
+}
+
+/**
+ * Judges whether two predication nodes coincide, returning a frozen witness
+ * when their carrier coincidence holds and an obstruction otherwise.
+ */
+export function predicationNodeIdentity(left: PredicationNode, right: PredicationNode): PredicationNodeIdentityJudgment {
+  return predicationNodeCoincidenceHolds(left, right)
+    ? Object.freeze({ kind: "predication.nodeIdentity:witness" as const, left, right })
+    : Object.freeze({ kind: "predication.nodeIdentity-obstruction" as const, left, right });
+}
+
+/**
+ * Judges whether two base objects coincide, returning a frozen witness when
+ * their carrier coincidence holds and an obstruction otherwise.
+ */
+export function predicationBaseObjectIdentity(left: PredicationBaseObject, right: PredicationBaseObject): PredicationBaseObjectIdentityJudgment {
+  return predicationBaseObjectCoincidenceHolds(left, right)
+    ? Object.freeze({ kind: "predication.baseObjectIdentity:witness" as const, left, right })
+    : Object.freeze({ kind: "predication.baseObjectIdentity-obstruction" as const, left, right });
+}
+
+function uniqueBy<T>(values: Iterable<T>, same: (left: T, right: T) => boolean): readonly T[] {
+  const out: T[] = [];
+  for (const value of values) if (!out.some((item) => same(item, value))) out.push(value);
+  return Object.freeze(out);
+}
+
+/**
+ * Builds an entity set from an iterable of entities, deduplicating by the given
+ * sameness predicate.
+ */
+export function entitySet<T = PredicationTerm>(
+  entities: Iterable<T>,
+  same: (left: T, right: T) => boolean,
+): EntitySet<T> {
+  return Object.freeze({
+    kind: "predication.entitySet" as const,
+    entities: uniqueBy([...entities], same),
+  });
+}
+
+/**
+ * Builds a predicate set from an iterable of predicates, deduplicating by the
+ * given sameness predicate.
+ */
+export function predicateSet<T = PredicationPredicate>(
+  predicates: Iterable<T>,
+  same: (left: T, right: T) => boolean,
+): PredicateSet<T> {
+  return Object.freeze({
+    kind: "predication.predicateSet" as const,
+    predicates: uniqueBy([...predicates], same),
+  });
+}
+
+/**
+ * Builds a cell set from cells, deduplicating by cell coincidence and deriving
+ * the entity set of subjects and objects and the predicate set of predicates.
+ */
+export function cellSet(cells: readonly Cell[]): CellSet {
+  const witnessedCells = uniqueBy(cells, predicationCellCoincidenceHolds);
+  return Object.freeze({
+    kind: "predication.cellSet" as const,
+    cells: Object.freeze(witnessedCells),
+    entities: entitySet(witnessedCells.flatMap((c) => [c.subject, c.object]), predicationTermCoincidenceHolds),
+    predicates: predicateSet(witnessedCells.map((c) => c.predicate), predicationPredicateCoincidenceHolds),
+  });
+}
+
+/** Presents Phi = E x Pi x E by its entity and predicate generators. */
+export function generatedPredicationCellSet(
+  entities: EntitySet<PredicationTerm>,
+  predicates: PredicateSet<PredicationPredicate>,
+): GeneratedPredicationCellSet {
+  return Object.freeze({
+    kind: "predication.generatedCellSet" as const,
+    entities,
+    predicates,
+  });
+}
+
+/**
+ * Constructs a frozen cell from a subject, predicate, and object, throwing a
+ * TypeError if any is missing or the object is null.
+ */
+export function cell(subject: PredicationTerm, predicate: PredicationPredicate, object: PredicationTerm): Cell {
+  if (subject === undefined || predicate === undefined || object === undefined || object === null) {
+    throw new TypeError("cell: subject, predicate, and non-null object must be present");
+  }
+  return Object.freeze({ subject, predicate, object });
+}
+
+/**
+ * Type guard: holds when the value is a non-null object carrying subject,
+ * predicate, and object properties.
+ */
+export const isCell = (value: object): value is Cell =>
+  "subject" in value && "predicate" in value && "object" in value;
+
+/**
+ * Constructs a frozen specialization morphism whose domain is the general term
+ * and codomain the specialized term.
+ */
+export function specializationMorphism(specialized: PredicationTerm, general: PredicationTerm): SpecializationMorphism {
+  return Object.freeze({
+    kind: "predication.specialization" as const,
+    domain: general,
+    codomain: specialized,
+  });
+}
+
+/**
+ * Type guard: holds when the value is a non-null object whose kind is
+ * "predication.specialization".
+ */
+export function isSpecializationMorphism(value: object): value is SpecializationMorphism {
+  return "kind" in value && value.kind === "predication.specialization";
+}
+
+function baseCategory(
+  cellCarrier: CellSet | GeneratedPredicationCellSet,
+  specializations: readonly SpecializationMorphism[] = [],
+): BaseCategory {
+  const materializedCells = "cells" in cellCarrier ? cellCarrier.cells : [];
+  const nodeOf = (c: Cell): PredicationNode => Object.freeze([c.subject, c.predicate, c.object] as const);
+  return Object.freeze({
+    kind: "predication.base" as const,
+    objects: uniqueBy([...cellCarrier.entities.entities, ...cellCarrier.predicates.predicates], predicationBaseObjectCoincidenceHolds),
+    specialization: Object.freeze(specializations),
+    converse: Object.freeze(materializedCells.map((c) => Object.freeze({ domain: nodeOf(c), codomain: Object.freeze([c.object, c.predicate, c.subject] as const) }))),
+    subjectProjection: Object.freeze(materializedCells.map((c) => Object.freeze({ domain: nodeOf(c), codomain: c.subject }))),
+    objectProjection: Object.freeze(materializedCells.map((c) => Object.freeze({ domain: nodeOf(c), codomain: c.object }))),
+  });
+}
+
+/**
+ * Builds a predication site from data: partitions cells and specialization
+ * morphisms, forms the cell set, and derives the base category with objects,
+ * specialization edges, and converse and projection edges from each cell's
+ * node.
+ */
+export function predicationSite(witnesses: readonly PredicationDatum[]): PredicationSite {
+  const cells = witnesses.filter(isCell);
+  const specializations = witnesses.filter(isSpecializationMorphism);
+  const cellCarrier = cellSet(cells);
+  const base = baseCategory(cellCarrier, specializations);
+  return Object.freeze({
+    kind: "predication.site" as const,
+    cells: cellCarrier,
+    specializations: Object.freeze(specializations),
+    base,
+  });
+}
+
+/** Builds the transfinite predication category generated by entity/predicate generators. */
+export function transfinitePredicationCategory(
+  predicationCellSet: GeneratedPredicationCellSet,
+): TransfinitePredicationCategory {
+  const base = baseCategory(predicationCellSet);
+  const predicationFiberFunctor = Object.freeze({
+    kind: "predication.fiberFunctor" as const,
+    cellSet: predicationCellSet,
+    base,
+    entities: predicationCellSet.entities,
+  });
+  return Object.freeze({
+    kind: "predication.transfiniteCategory" as const,
+    predicationCellSet,
+    predicationFiberFunctor,
+  });
+}
+
+/** Opens the generated transfinite predication category around an articulation carrier. */
+export function generatePredicationCategory(articulation: ArticulationCell): TransfinitePredicationCategory {
+  const [carrier] = articulation.potentialAperiodicArticulationCell;
+  return transfinitePredicationCategory(generatedPredicationCellSet(
+    entitySet([carrier.token], predicationTermCoincidenceHolds),
+    predicateSet([predicateOfClaim(carrier.claim)], predicationPredicateCoincidenceHolds),
+  ));
+}
+
+/**
+ * Projects a generated transfinite predication category to the finite carrier
+ * presentation used by the current topology engine.
+ */
+export function materializePredicationCategory(category: TransfinitePredicationCategory): PredicationSite {
+  const cells = category.predicationCellSet.entities.entities.flatMap((subject) =>
+    category.predicationCellSet.predicates.predicates.flatMap((predicate) =>
+      category.predicationCellSet.entities.entities.map((object) => cell(subject, predicate, object))));
+  return predicationSite(cells);
+}
+
+/** The predication regime: build the relational cells from the articulated
+ *  givens. Predicating consumes the potential aperiodic articulation cell,
+ *  opens the transfinite predication category around the token-schema and
+ *  claim-schema position carried by its utterance, and materializes that
+ *  category as the predication site consumed by positing. It does not
+ *  extract subject/object labels from mark values, and it does not assign
+ *  charge. */
+export function predicate(articulation: ArticulationCell): PredicationSite {
+  return materializePredicationCategory(generatePredicationCategory(articulation));
+}
+
+/**
+ * Returns the base category with its specialization relation transitively
+ * closed: repeatedly adds an edge from a domain to a codomain whenever they are
+ * connected through an intermediate term.
+ */
+export function closeSpecialization(base: BaseCategory): BaseCategory {
+  const edges = base.specialization.map((edge) => [edge.domain, edge.codomain] as const);
+  const has = (domain: PredicationTerm, codomain: PredicationTerm): boolean =>
+    edges.some(([d, c]) => predicationTermCoincidenceHolds(d, domain) && predicationTermCoincidenceHolds(c, codomain));
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const [leftDomain, leftCodomain] of [...edges]) {
+      for (const [rightDomain, rightCodomain] of [...edges]) {
+        if (predicationTermCoincidenceHolds(leftCodomain, rightDomain) && !has(leftDomain, rightCodomain)) {
+          edges.push([leftDomain, rightCodomain] as const);
+          changed = true;
+        }
+      }
+    }
+  }
+  return Object.freeze({
+    ...base,
+    specialization: Object.freeze(edges.map(([domain, codomain]) => Object.freeze({ domain, codomain }))),
+  });
+}
+
+/**
+ * Coheres a predication site: returns a coherence carrier whose saturated
+ * cells are the carrier's cells and whose residue is the carrier with its base
+ * specialization transitively closed.
+ */
+export function cohere(predication: PredicationSite): CoherenceCarrier {
+  return Object.freeze({
+    kind: "predication.coherence" as const,
+    saturated: predication.cells,
+    residue: Object.freeze({
+      kind: "predication.site" as const,
+      cells: predication.cells,
+      specializations: predication.specializations,
+      base: closeSpecialization(predication.base),
+    }),
+  });
+}
+
+/**
+ * A carrier of entity pairs not connected by specialization, tagged
+ * "predication.unrelatedPairs" and holding the unrelated edges.
+ */
+export interface UnrelatedPairsCarrier {
+  readonly kind: "predication.unrelatedPairs";
+  readonly edges: readonly Edge[];
+}
+
+/**
+ * Computes the pairs of entities not connected by the transitively closed
+ * specialization relation, returning an edge for each unrelated ordered pair.
+ */
+export function unrelatedPairs(predication: PredicationSite): UnrelatedPairsCarrier {
+  const closed = closeSpecialization(predication.base);
+  const related = (domain: PredicationTerm, codomain: PredicationTerm): boolean =>
+    closed.specialization.some((edge) => predicationTermCoincidenceHolds(edge.domain, domain) && predicationTermCoincidenceHolds(edge.codomain, codomain));
+  const edges: Edge[] = [];
+  for (const domain of predication.cells.entities.entities) {
+    for (const codomain of predication.cells.entities.entities) {
+      if (!related(domain, codomain)) edges.push(Object.freeze({ domain, codomain }));
+    }
+  }
+  return Object.freeze({ kind: "predication.unrelatedPairs" as const, edges: Object.freeze(edges) });
+}

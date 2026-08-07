@@ -1,0 +1,69 @@
+{
+  "subject": "use-of-hmrc-s-taxing-ir35-status-tool-drops-71-in-two-years",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Use of HMRC's taxing IR35 status tool drops 71% in two years"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/19/use-of-hmrcs-taxing-ir35-status-tool-drops-71-in-two-years/5258452"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/public-sector/2026/06/19/use-of-hmrcs-taxing-ir35-status-tool-drops-71-in-two-years/5258452"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/19/use-of-hmrcs-taxing-ir35-status-tool-drops-71-in-two-years/5258452"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Use of HMRC's own tool for checking compliance with the UK's controversial IR35 freelancer tax rules has fallen sharply, according to Freedom of Information data obtained by tax adviser IR35 Shield. The Check Employment Status for Tax tool, better known as CEST, was created to help firms decide whether contractors should be taxed like employees. But usage fell 43 percent during the 2025-26 tax year, and dropped 71 percent between 2023-24 and 2024-25, from 458,894 determinations to 135,178. The findings suggest that firms continue to abandon CEST in favor of alternative status assessment solutions and more comprehensive compliance processes, IR35 Shield said. CEO Dave Chaplin said: \"The majority of firms we speak to for the first time are either lifting blanket bans or seeking to move away from using CEST, having realized it is not compulsory to use, nor does it give them the level of certainty they need.\" The decline is not the result of changes to the tool or legislation, according to IR35 Shield. \"The underlying CEST logic has not been updated since November 2019 and was based on HMRC's view of the law at that time. Despite the courts dismissing HMRC's position in key areas, upon which the tool was based, the tool has not been updated,\" Chaplin said. IR35 Shield pointed out that HMRC lost a recent employment status case with Professional Game Match Officials Limited (PGMOL). Entering the facts of the case into CEST would have produced an indeterminate result, it said. In 2022, the Public Accounts Committee Committee (PAC) found that central government was spending hundreds of millions of pounds to cover tax owed for individuals wrongly assessed as self-employed. \"Government departments and agencies owed, or expected to owe, HMRC £263 million in 2020-21 due to incorrect administration of the rules,\" the House of Commons spending watchdog said. Part of the compliance problem was down to HMRC’s guidance and the CEST tool. \"Some questions within CEST were difficult to interpret correctly, and the guidance was long, too general in scope and not integrated into CEST itself,\" the PAC said. In a statement sent to The Register, a spokesperson at HMRC, said: \"We always expected use of the tool to reduce as employers familiarised themselves with the 2021 off-payroll working reforms, and the majority of those who use the tool are satisfied with the service they receive. \"The tool is rigorously tested against case law and we’ll stand by the tool’s results, so long as the information provided is correct in accordance with our guidance.\" ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/19/use-of-hmrcs-taxing-ir35-status-tool-drops-71-in-two-years/5258452"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 10:00:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/public-sector/2026/06/19/use-of-hmrcs-taxing-ir35-status-tool-drops-71-in-two-years/5258452"
+      },
+      "status": "supported"
+    }
+  ]
+}

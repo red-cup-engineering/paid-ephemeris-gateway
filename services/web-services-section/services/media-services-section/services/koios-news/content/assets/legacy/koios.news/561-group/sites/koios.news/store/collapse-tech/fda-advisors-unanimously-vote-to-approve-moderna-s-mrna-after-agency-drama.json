@@ -1,0 +1,69 @@
+{
+  "subject": "fda-advisors-unanimously-vote-to-approve-moderna-s-mrna-after-agency-drama",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "FDA advisors unanimously vote to approve Moderna's mRNA after agency drama"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Independent advisors for the Food and Drug Administration on Friday voted 9–0 in support of approving Moderna's seasonal mRNA flu vaccine, which a Trump appointee at the agency initially tried to block from even being reviewed. In an all-day meeting, members of the FDA's advisory committee—known as VRBPAC for Vaccines and Related Biological Products Advisory Committee—pored over data and presentations on the vaccine, which is dubbed mRNA-1010 and branded as mFlusiva. The presentations included a review from FDA scientists, which was supportive of the vaccine. Data from a Phase 3 trial including over 40,000 adults age 50 and older found the mRNA vaccine was around 27 percent more effective against seasonal flu than a standard flu shot. A smaller Phase 3 trial, involving data from nearly 3,000 people age 65 years and older, showed the shot produces stronger immune responses than a high-dose flu vaccine, which is recommended for this age group. The safety profile of the vaccine was also generally good. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 22:08:59 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/"
+      },
+      "status": "supported"
+    }
+  ]
+}

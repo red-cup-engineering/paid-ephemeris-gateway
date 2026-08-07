@@ -1,0 +1,69 @@
+{
+  "subject": "boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Boats, bankers and borders: five symbols that sum up Brexit a decade on"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>What do the touchstones of the referendum debate tell us about the complex legacy of Britain leaving the EU?</p><p>Ten years ago the UK voted 52% to 48% to leave the European Union, triggering a long and tortuous political process.</p><p>It took until 1 January 2021 for the country to sever its links to the single market and customs union, but the fractures Brexit left in Britain’s body politic, international relations and economy remain.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 04:00:52 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/boats-bankers-and-borders-five-symbols-that-sum-up-brexit-a-decade-on"
+      },
+      "status": "supported"
+    }
+  ]
+}

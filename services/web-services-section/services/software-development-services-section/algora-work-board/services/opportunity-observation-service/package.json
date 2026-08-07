@@ -1,0 +1,17 @@
+{
+  "name": "@rsc-quiescent/algora-opportunity-observation-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/fetch-live.mjs",
+    "./parse": "./src/parse-bounty-comment.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/github-services-section": "1.0.0",
+    "@rsc-quiescent/software-work-qualification-assay-service": "1.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

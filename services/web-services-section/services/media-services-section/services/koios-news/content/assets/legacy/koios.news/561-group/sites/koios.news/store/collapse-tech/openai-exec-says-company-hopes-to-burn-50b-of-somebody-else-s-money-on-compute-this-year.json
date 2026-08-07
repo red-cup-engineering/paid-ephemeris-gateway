@@ -1,0 +1,69 @@
+{
+  "subject": "openai-exec-says-company-hopes-to-burn-50b-of-somebody-else-s-money-on-compute-this-year",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "OpenAI exec says company hopes to burn $50B of somebody else's money on compute this year"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/openai-exec-says-it-will-burn-50b-on-compute-this-year/5226088"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/05/05/openai-exec-says-it-will-burn-50b-on-compute-this-year/5226088"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/openai-exec-says-it-will-burn-50b-on-compute-this-year/5226088"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "An executive for ChatGPT maker OpenAI said in court testimony on Tuesday that the AI model developer expects to burn $50 billion on computing power before the end of the year. Cofounder and president Greg Brockman threw out the number, which was previously reported by Bloomberg, during OpenAI's closely watched legal battle with hype-fiend Elon Musk. If it wasn't obvious, that would be $50 billion of someone else's money. Nearly four years after ChatGPT kicked off the AI boom, OpenAI's leadership hasn't yet figured out how to turn a profit. Heck, the company can't even manage to hit its own revenue targets, if recent reports are to be believed. That hasn't stopped CEO Sam Altman from talking the likes of Microsoft, Amazon, SoftBank, Nvidia and others into issuing press releases claiming plans to invest tens of billions of dollars into his quest for AGI. (Or was it AI superintelligence? The goalposts haven't exactly been fixed in concrete.) We're not sure if \"investment\" adequately captures the roundabout financial engineering that's gone into these highly publicized deals. Many are contingent on OpenAI using some of the pledged cash to lease massive quantities of compute either directly from its backers or their partners. Back in February, Amazon, Nvidia, and SoftBank announced a $110 billion investment in the AI startup, at least $80 billion of which came with strings attached. For example, OpenAI would need to rent two gigawatts of Amazon's Trainium AI accelerators and deploy its top GPT models in AWS to claim $35 billion of the $50 billion promised by the cloud titan. Similarly, Nvidia's $30 billion investment was tied to the deployment of five gigawatts of training and inference compute capacity at an estimated cost of $300 billion. In other words, these companies' investments in OpenAI are really more of a discount or rebate. It raises the question: Can OpenAI actually burn $50 billion in 2026, or is it simply throwing out more big numbers in hopes of maintaining an air of unassailable momentum? Place your bets – ideally in the form of burning as many heavily subsidized tokens as you can now, before prices inevitably rise. We've reached out to OpenAI for comment; we'll let you know if we hear anything back. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/openai-exec-says-it-will-burn-50b-on-compute-this-year/5226088"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 05 May 2026 23:02:01 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/openai-exec-says-it-will-burn-50b-on-compute-this-year/5226088"
+      },
+      "status": "supported"
+    }
+  ]
+}

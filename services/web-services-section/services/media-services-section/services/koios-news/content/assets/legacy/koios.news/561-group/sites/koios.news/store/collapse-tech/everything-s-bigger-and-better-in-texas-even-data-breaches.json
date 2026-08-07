@@ -1,0 +1,69 @@
+{
+  "subject": "everything-s-bigger-and-better-in-texas-even-data-breaches",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Everything's bigger and better in Texas – even data breaches"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The Texas Parks and Wildlife Department (TPWD) says 3 million Texans had their data stolen following a breach at one of its suppliers. People with state-issued hunting and fishing licenses are among those affected after attackers breached the vendor that handles license sales and copied customer data. Details of victims' driving license and passport numbers may be present in the leaked data. Basic personal information, such as email addresses, phone numbers, and residential addresses also leaked. Social Security numbers (SSNs), financial data, or information relating to minors were not involved, according to the department's disclosure. According to a filing with the Office of the Attorney General, the attack on the unnamed vendor affected 3,087,721 Texans. The filing appears to contradict the department's disclosure, noting that individuals' names and SSNs were also involved. Affected Texans were offered the usual one year of free credit monitoring services provided by Kroll, as long as they enroll by September 14. A Kroll webpage dedicated to the incident reveals that an investigation has not determined when the breach took place. The department notified Texas Cyber Command on May 13, however. \"We recognize the seriousness of this issue and have identified and implemented additional security options to better protect customer information,\" said TPWD. \"Many of our staff are hunters and anglers and were affected by this incident. We are committed to continuing to work with the license system vendor to implement increased safeguards to prevent future incidents.\" TPWD said it is working with the affected vendor to introduce additional preventive measures, including enhanced monitoring and access controls. The org went on to say that new license sales currently scheduled for August will go ahead as planned, although the website used to purchase licenses was unreachable at the time of writing. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:01:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815"
+      },
+      "status": "supported"
+    }
+  ]
+}

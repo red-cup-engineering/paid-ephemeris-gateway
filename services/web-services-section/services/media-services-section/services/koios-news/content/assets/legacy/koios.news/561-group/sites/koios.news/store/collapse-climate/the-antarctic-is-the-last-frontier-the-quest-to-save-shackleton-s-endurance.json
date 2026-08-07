@@ -1,0 +1,69 @@
+{
+  "subject": "the-antarctic-is-the-last-frontier-the-quest-to-save-shackleton-s-endurance",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘The Antarctic is the last frontier’: the quest to save Shackleton’s Endurance"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Amid fears the wreck will be more accessible to explorers – and new species – as the climate warms, conservationists want to create the region’s first underwater protected area</p><p>The harsh temperatures, treacherous currents and shifting pack ice of the Antarctic’s Weddell Sea, which crushed and sank his ship, Endurance, in 1915, led Ernest Shackleton to describe it as the “worst portion of the worst sea in the world”.</p><p>For more than a century, the inhospitable conditions, which present a challenge even for modern icebreaker ships, helped to protect the lost wreck, <a href=\"https://www.theguardian.com/world/2022/mar/09/ernest-shackleton-wrecked-ship-endurance-antarctic\">which was discovered in 2022</a>, its structure still largely intact.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 06:00:04 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area"
+      },
+      "status": "supported"
+    }
+  ]
+}

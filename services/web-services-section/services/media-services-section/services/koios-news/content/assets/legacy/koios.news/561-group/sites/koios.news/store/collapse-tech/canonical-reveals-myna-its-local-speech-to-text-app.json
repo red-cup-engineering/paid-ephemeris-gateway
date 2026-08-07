@@ -1,0 +1,69 @@
+{
+  "subject": "canonical-reveals-myna-its-local-speech-to-text-app",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Canonical reveals Myna, its local speech-to-text app"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/canonical-unveils-myna-speech-to-text-app-for-ubuntu-2610/5258376"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/os-platforms/2026/06/18/canonical-unveils-myna-speech-to-text-app-for-ubuntu-2610/5258376"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/canonical-unveils-myna-speech-to-text-app-for-ubuntu-2610/5258376"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Canonical has published more details about the local speech-to-text engine that will take dictation in the forthcoming Ubuntu version 26.10, aka \"Stonking Stingray.\" In a post on the company’s Discourse forums on Wednesday, the outfit named one of the most significant new elements that’s coming in the next version: Myna: Speech to Text for Ubuntu Desktop. Earlier this month, we reported from the Ubuntu Summit that Canonical was going big on AI and that one of the first signs would be speech-to-text input via locally run speech-recognition models. After the Summit, the company then published the Ubuntu Desktop 26.10 “Stonking Stingray” Roadmap, as we mentioned towards the end of our review of MX Linux 25.2. The announcement explains – and illustrates – what the plan is, how it will work, and the user interface that the team is aiming for in the initial release: For Ubuntu 26.10, we’re deliberately focusing on the basics: a reliable desktop dictation. The initial experience will be simple: Press a keyboard shortcut, speak naturally, and see the resulting text appear in the application you’re using. Myna is designed to provide speech recognition with clear visual feedback while dictation is active. This is good stuff. Although it won’t be an accessibility revolution on its own, it’s an important step and will help desktop Linux catch up with the commercial competition. Speech recognition is built into Apple’s macOS in a tool called Voice Control. On modern Macs with Apple Silicon processors, the recognition engine is on-device and works offline. For a few months in 2023, The Reg's FOSS desk was unable to use his right arm, and when he returned to work, he dictated his articles into an M1 MacBook Air using this feature. Register columnist Colin Hughes knows much more about such matters than we do. He wrote about how Voice Control needed more work later that same year, and he returned to the subject on Global Accessibility Awareness Day – May 21. Microsoft’s current offering is called Voice Access, which is replacing the Windows Speech Recognition tool that Microsoft introduced with Windows Vista in 2006. The Myna project will be open source, and there’s already a GitHub repository for it, but there’s not very much there yet beyond some planning notes. There’s time: although the October release of 26.10 is only about four months away, this is not a major new pioneering technology. Various tools can already do similar things. One of the first was Mycroft, although it is no longer around: some three years ago, The Register described how the creator of the Linux virtual assistant blamed a \"patent troll\" for the project’s death. There is also Michal Kosciesza’s Speech Note tool, which you can install from Flathub. Last August, we reported on the release of FFmpeg 8, which can use the local whisper.cpp version of OpenAI’s Whisper model to do on-device speech-to-text, enabling it to automatically add subtitles to video files. Although this writer is unconcerned about being labelled an AI hater, we do feel allowing voice control of a PC is an acceptable and beneficial role for the technology. Or as the author of jqwik and noted AI skeptic Johannes Link put it, an Ethical Use of Generative AI. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/canonical-unveils-myna-speech-to-text-app-for-ubuntu-2610/5258376"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 18:04:09 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/canonical-unveils-myna-speech-to-text-app-for-ubuntu-2610/5258376"
+      },
+      "status": "supported"
+    }
+  ]
+}

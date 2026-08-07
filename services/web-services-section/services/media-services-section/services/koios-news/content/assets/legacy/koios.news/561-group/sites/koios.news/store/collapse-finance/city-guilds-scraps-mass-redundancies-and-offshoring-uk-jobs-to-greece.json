@@ -1,0 +1,69 @@
+{
+  "subject": "city-guilds-scraps-mass-redundancies-and-offshoring-uk-jobs-to-greece",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "City & Guilds scraps mass redundancies and offshoring UK jobs to Greece"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>PeopleCert had been planning to cut about 400 jobs in £22m savings drive at training body it bought last year</p><p>The vocational training body City &amp; Guilds has guaranteed that plans for mass compulsory redundancies and the offshoring of hundreds of UK jobs to Greece will no longer go ahead.</p><p>The proposal to remove about 400 UK roles was <a href=\"https://www.theguardian.com/uk-news/2025/dec/14/city-guilds-uk-workforce-peoplecert-cost-cutting-drive\">first reported by the Guardian in December</a> as part of a £22m cost-cutting drive after the acquisition of the charity’s training and awards business by the Greek-owned PeopleCert in October.</p> <a href=\"https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:17:53 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/education/2026/jun/18/city-and-guilds-scraps-mass-redundancies-offshoring-uk-jobs-to-greece"
+      },
+      "status": "supported"
+    }
+  ]
+}

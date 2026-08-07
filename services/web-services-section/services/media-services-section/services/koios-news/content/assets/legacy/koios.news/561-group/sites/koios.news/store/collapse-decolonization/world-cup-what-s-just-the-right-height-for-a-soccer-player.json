@@ -1,0 +1,69 @@
+{
+  "subject": "world-cup-what-s-just-the-right-height-for-a-soccer-player",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "World Cup: what’s just the right height for a soccer player?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/world-cup-whats-just-the-right-height-for-a-soccer-player-285236"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://theconversation.com/world-cup-whats-just-the-right-height-for-a-soccer-player-285236"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/world-cup-whats-just-the-right-height-for-a-soccer-player-285236"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>It’s a <a href=\"https://books.google.com.au/books/about/Anthropometrica.html?id=Bkk8FuB0P4IC&amp;redir_esc=y\">Darwinian jungle</a> out there in sportsland. Players with the right stuff are selected, and those without it end up on the sidelines. If you haven’t got what it takes, they won’t take what you’ve got.</p> <p>This certainly applies to skill, grit, stamina and strength, but also to body size and shape.</p> <p>What researchers call the “<a href=\"https://www.semanticscholar.org/paper/MORPHOLOGICAL-OPTIMISATION-%2C-OVERLAP-ZONES-AND-IN-Lozovina-Lozovina/6bf195ac85cc79c410f035dbc6582e5d83a5688f\">Law of Morphological Optimisation</a>” tells us that athletes who have the right bodies for their sport are the ones who succeed. We’ve recently seen that in the NBA finals in the towering figure of San Antonio Spurs player Victor Wembanyana (224cm).</p> <p>But what about soccer players? Is there an optimal height for an elite footballer?</p> <p></p> <h2>Finding just the right height for a soccer player</h2> <p>World Cup players seem to come <a href=\"https://www.topendsports.com/sport/soccer/anthropometry-worldcup2018.htm\">in all sizes</a>: from XS (Argentina’s Diego Maradona, 165cm) and S (Argentina’s Lionel Messi, who as a child suffered growth hormone deficiency, is 170cm) to M (Brazil’s Pelé, 173cm), L (France’s Zinedine Zidane, 185cm) and even XL (Norway’s Erling Braut Haaland is 195cm).</p> <p>The winners of the FIFA Ballon d’Or award for the best player in the world have been a whole range of heights. Messi, as mentioned, is just 170cm, while Spain’s Rodrigo Hernández Cascante (better known as Rodri) is 190cm.</p> <p>There is also no straight-line correlation between average team height and team performance. </p> <p>World Cup winners Argentina, Spain and Brazil have been among the <a href=\"https://sportstar.thehindu.com/football/fifa-world-cup/news/fifa-world-cup-tallest-who-is-the-shortest-tallest-player-teams-in-the-qatar-2022-wc-soccer/article66150384.ece\">shorter teams</a> over the <a href=\"https://www.statista.com/statistics/871381/fifa-world-cup-2018-russia-teams-by-average-player-height/?srsltid=AfmBOoo47MhznvHHJ32cr-F08KypIp185tn42fhQs39GRkqCuJARSo1x\">years</a>. So parents of aspiring Socceroos needn’t worry too much about their height. </p> <p></p> <p>There is, however, one unusual thing about the height of World Cup teams: the average height of all the teams is strikingly similar. </p> <p>In the vast majority of the 48 teams at this year’s World Cup, the average height is <a href=\"https://www.givemesport.com/world-cup-teams-ranked-height-tallest-smallest-football-soccer/\">between 180cm and 185cm</a>. </p> <p>Media outlets <a href=\"https://www.sofascore.com/news/tallest-national-teams-bosnia-herzegovina-lead\">report</a> the two <a href=\"https://www.givemesport.com/world-cup-teams-ranked-height-tallest-smallest-football-soccer/\">tallest teams</a> – the Bosnians and the Norwegians – average 187cm, while the Australian team averages <a href=\"https://www.givemesport.com/world-cup-teams-ranked-height-tallest-smallest-football-soccer/\">183cm</a>. The shortest team is the Saudis, at <a href=\"https://www.givemesport.com/world-cup-teams-ranked-height-tallest-smallest-football-soccer/\">178cm</a>.</p> <p>Players are, on average, taller than <a href=\"https://ourworldindata.org/human-height\">typical men</a> of the same age from the same country. </p> <p>What’s remarkable is that the difference between team height and population height is <em>greater</em> for short countries, and less for tall countries.</p> <p>The data suggest every team is looking for some players about 180–185cm tall, which may be just the right height for a soccer player.</p> <p>To understand why this might be so, we need to look at the <a href=\"https://campsaustralia.barcaacademy.com/blog/soccer-positions-player-roles/\">dynamics of the game</a>.</p> <h2>The right height for the job</h2> <p>Player height is specific to the demands of the position. </p> <p>Goalkeepers are by far the <a href=\"https://www.topendsports.com/sport/soccer/anthropometry-tallest.htm\">tallest</a> (189cm is about the World Cup <a href=\"https://www.topendsports.com/sport/soccer/anthropometry-worldcup2018.htm\">average</a>) because they need exceptional reach to block shots. </p> <p><a href=\"https://www.fifa.com/en/tournaments/mens/worldcup/articles/tallest-players-history\">Australia’s tallest ever World Cup player</a> was the 202cm goalkeeper <a href=\"https://en.wikipedia.org/wiki/Zeljko_Kalac\">Zeljko Kalac</a>. At one point, there was even discussion of <a href=\"https://www.tiktok.com/@football.hattrick/video/7345241807501937962\">enlarging the goals</a> because goalkeepers were getting so big. </p> <p>The main role of defenders is to get in the way of attackers and compete for aerial balls (especially via headers) so they are also <a href=\"https://www.topendsports.com/sport/soccer/anthropometry-worldcup2018.htm\">quite tall</a>: 183cm, on average. </p> <p>Messi has scored just over <a href=\"https://www.beinsports.com/en-us/soccer/articles/how-many-goals-does-lionel-messi-have-full-career-breakdown-2026-05-03\">30 headers</a> in his career so far, while the much taller Cristiano Ronaldo has scored <a href=\"https://www.olympics.com/en/news/cristiano-ronaldo-highest-jumps-football-vertical-leap\">more than 150</a>. Taller players also perform better in defensive walls when a free kick is awarded.</p> <p>Attacking players – midfielders and forwards – need to be mobile with high acceleration, so they tend to be a <a href=\"https://www.topendsports.com/sport/soccer/anthropometry-worldcup2018.htm\">little shorter</a> at about 175–180cm. Two of the greatest ever attackers – Maradona (165cm) and Messi (170cm) – have been quite short.</p> <p>It seems World Cup teams need at least some players who are large enough to win headers, form defensive walls and block opponents.</p> <p>And once one team has players of this size, other teams also need to choose players of a similar size to remain competitive — it’s a kind of anthropometric arms race. This can be challenging for generally <a href=\"https://en.wikipedia.org/wiki/Human_height_by_country\">short nations</a> such as Mexico and Ecuador.</p> <h2>The long and the short of it</h2> <p>Height is certainly not as valuable an asset for a soccer player as other characteristics such as ball skills, stamina, agility, the ability to read the play and sense where players are on the field – all of which have little to do with height. </p> <p>For this reason, we only rarely see extremely tall soccer players.</p> <p>There are far fewer very tall men in the population, and hence fewer very tall men with superb ball skills.</p> <p>Your guess as to who will win the World Cup is as bad as mine. But I can say with confidence that it will be a team of young men of somewhat above average height.</p> <p>And it will be France.</p> <p>Maybe.</p><img src=\"https://counter.theconversation.com/content/285236/count.gif\" alt=\"The Conversation\" width=\"1\" height=\"1\" /> <p class=\"fine-print\"><em><span>Tim Olds has received funding from the Australian Sports Commission.</span></em></p>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/world-cup-whats-just-the-right-height-for-a-soccer-player-285236"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-19T04:32:17Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/world-cup-whats-just-the-right-height-for-a-soccer-player-285236"
+      },
+      "status": "supported"
+    }
+  ]
+}

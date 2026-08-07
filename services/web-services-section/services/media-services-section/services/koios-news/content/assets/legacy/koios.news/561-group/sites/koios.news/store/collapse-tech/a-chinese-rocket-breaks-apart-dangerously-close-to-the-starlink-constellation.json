@@ -1,0 +1,69 @@
+{
+  "subject": "a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "A Chinese rocket breaks apart dangerously close to the Starlink constellation"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/space/2026/06/a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The upper stage from a commercial Chinese rocket that launched last week has broken apart in space, spreading debris in a heavily trafficked part of low-Earth orbit home to the International Space Station and a significant portion of SpaceX's Starlink broadband network. The breakup occurred shortly after the Zhuque-2E rocket reached orbit on June 9 with two satellites providing direct-to-cell communications, perhaps around the time the upper stage was expected to perform a disposal burn. The US Space Force confirmed the breakup event in a post on space-track.org , a website used by the military to distribute orbit data to the public. \"The tracked pieces are being incorporated into routine conjunction assessment to support spaceflight safety,\" the Space Force wrote in an advisory. \"There are currently no threats to human spaceflight. Analysis is ongoing.\" Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:55:41 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-chinese-rocket-breaks-apart-dangerously-close-to-the-starlink-constellation/"
+      },
+      "status": "supported"
+    }
+  ]
+}

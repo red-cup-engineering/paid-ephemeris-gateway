@@ -1,0 +1,69 @@
+{
+  "subject": "what-you-need-to-know-about-the-preliminary-u-s-iran-agreement-signed-by-trump",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "What you need to know about the preliminary U.S.-Iran agreement signed by Trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863544/trump-us-iran-agreement"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5863544/trump-us-iran-agreement"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863544/trump-us-iran-agreement"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Here's a look at the preliminary agreement between the U.S. and Iran, and the challenges that remain to find lasting peace. (Image credit: Iranian Presidency Office via AP)"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863544/trump-us-iran-agreement"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:30:52 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863544/trump-us-iran-agreement"
+      },
+      "status": "supported"
+    }
+  ]
+}

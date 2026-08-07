@@ -1,0 +1,69 @@
+{
+  "subject": "uk-critical-infrastructure-hit-by-200-cyber-incidents-in-a-year-agency-says",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK critical infrastructure hit by 200 cyber incidents in a year, agency says"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Head of National Cyber Security Centre says UK in ‘ongoing contest with capable adversaries’ and AI could add to threat </p><p>The UK’s critical national infrastructure has been hit by more than 200 cyber incidents over the past year and state-linked assailants were behind three-quarters of the attacks, according to the state cybersecurity body.</p><p>Richard Horne, the chief executive of the National Cyber Security Centre (NCSC), said hostile states such as Russia, China and Iran were increasingly targeting systems behind the UK’s key services.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 15:00:35 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/17/uk-critical-infrastructure-cyber-incidents-ncsc"
+      },
+      "status": "supported"
+    }
+  ]
+}

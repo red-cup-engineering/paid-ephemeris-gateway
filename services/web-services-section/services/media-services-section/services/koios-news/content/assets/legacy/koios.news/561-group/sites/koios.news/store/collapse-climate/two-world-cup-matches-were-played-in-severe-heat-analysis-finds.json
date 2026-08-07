@@ -1,0 +1,69 @@
+{
+  "subject": "two-world-cup-matches-were-played-in-severe-heat-analysis-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Two World Cup matches were played in ‘severe heat’, analysis finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Games in Miami and Monterrey were at heat level a players’ union had warned in the past should trigger delays</p><p>Two of the first round of matches at the World Cup were played at a level of severe heat that a football players’ union has previously said should trigger the delay or postponement of games, a Guardian analysis has found.</p><p>A further four games were played in cities with temperatures also beyond that level of heat, though conditions inside the stadiums were mitigated by air conditioning.</p> <a href=\"https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 12:30:31 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/football/2026/jun/19/world-cup-matches-severe-heat-level-analysis"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "hot-weather-behind-rise-in-retail-sales-in-great-britain-in-may",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Hot weather behind rise in retail sales in Great Britain in May"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Sales rose 1.2% on back of demand for items such as fans and paddling pools, says Office for National Statistics</p><p>Retail sales bounced back to growth in May as <a href=\"https://www.theguardian.com/uk-news/2026/may/25/uk-heat-may-temperature-record-weather#:~:text=UK%20records%20its%20hottest%20ever,C%20%7C%20UK%20weather%20%7C%20The%20Guardian\">record hot weather</a> spurred sales of fans and paddling pools, while online purchases also soared.</p><p>The Office for National Statistics (ONS) said the volume of retail sales in Great Britain grew 1.2% in May compared with the previous month, the strongest monthly rate of growth since January.</p> <a href=\"https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:17:26 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/19/hot-weather-rise-uk-retail-sales-may"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[submodule "content"]
+	path = content
+	url = git@github.com:emsenn/koios-news-content.git
+[submodule "data"]
+	path = data
+	url = git@github.com:emsenn/koios-news-data.git

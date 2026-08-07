@@ -1,0 +1,133 @@
+{
+  "name": "@emsenn/animating",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Animating — the agency domain operationalized as one category package. The root import rolls up the public animating carriers and morphisms; explicit subpaths carry the becoming/doing/working/governing hierarchy, with prehending under becoming, acting and embodying under doing, learning/dreaming/lessons and accounting under working, and deciding/federating under governing. Each public surface descends to relational carriers, Marks, and Utterances; representation codecs and LLM enactors live outside animating.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit && tsc -p tsconfig.scripts.json --noEmit",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.scripts.build.json && chmod +x dist/scripts/govern.mjs dist/scripts/admit.mjs dist/scripts/dispatch.mjs dist/scripts/consensus.mjs",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "animating-govern": "./dist/scripts/govern.mjs",
+    "animating-admit": "./dist/scripts/admit.mjs",
+    "animating-dispatch": "./dist/scripts/dispatch.mjs",
+    "animating-consensus": "./dist/scripts/consensus.mjs"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./becoming": {
+      "types": "./dist/becoming/index.d.mts",
+      "import": "./dist/becoming/index.mjs"
+    },
+    "./becoming/prehending": {
+      "types": "./dist/becoming/prehending/index.d.mts",
+      "import": "./dist/becoming/prehending/index.mjs"
+    },
+    "./becoming/doing": {
+      "types": "./dist/becoming/doing/index.d.mts",
+      "import": "./dist/becoming/doing/index.mjs"
+    },
+    "./becoming/doing/acting": {
+      "types": "./dist/becoming/doing/acting/index.d.mts",
+      "import": "./dist/becoming/doing/acting/index.mjs"
+    },
+    "./becoming/doing/algebra": {
+      "types": "./dist/becoming/doing/algebra/index.d.mts",
+      "import": "./dist/becoming/doing/algebra/index.mjs"
+    },
+    "./becoming/doing/embodying": {
+      "types": "./dist/becoming/doing/embodying/index.d.mts",
+      "import": "./dist/becoming/doing/embodying/index.mjs"
+    },
+    "./becoming/doing/embodying/boundary": {
+      "types": "./dist/becoming/doing/embodying/boundary/index.d.mts",
+      "import": "./dist/becoming/doing/embodying/boundary/index.mjs"
+    },
+    "./becoming/doing/working": {
+      "types": "./dist/becoming/doing/working/index.d.mts",
+      "import": "./dist/becoming/doing/working/index.mjs"
+    },
+    "./becoming/doing/working/algebra": {
+      "types": "./dist/becoming/doing/working/algebra/index.d.mts",
+      "import": "./dist/becoming/doing/working/algebra/index.mjs"
+    },
+    "./becoming/doing/working/accounting": {
+      "types": "./dist/becoming/doing/working/accounting/index.d.mts",
+      "import": "./dist/becoming/doing/working/accounting/index.mjs"
+    },
+    "./becoming/doing/working/learning": {
+      "types": "./dist/becoming/doing/working/learning/index.d.mts",
+      "import": "./dist/becoming/doing/working/learning/index.mjs"
+    },
+    "./becoming/doing/working/learning/dreaming": {
+      "types": "./dist/becoming/doing/working/learning/dreaming/index.d.mts",
+      "import": "./dist/becoming/doing/working/learning/dreaming/index.mjs"
+    },
+    "./becoming/doing/working/learning/algebra": {
+      "types": "./dist/becoming/doing/working/learning/algebra/index.d.mts",
+      "import": "./dist/becoming/doing/working/learning/algebra/index.mjs"
+    },
+    "./becoming/doing/working/learning/lessons": {
+      "types": "./dist/becoming/doing/working/learning/lessons/index.d.mts",
+      "import": "./dist/becoming/doing/working/learning/lessons/index.mjs"
+    },
+    "./becoming/doing/working/governing": {
+      "types": "./dist/becoming/doing/working/governing/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/index.mjs"
+    },
+    "./becoming/doing/working/governing/federating": {
+      "types": "./dist/becoming/doing/working/governing/federating/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/federating/index.mjs"
+    },
+    "./becoming/doing/working/governing/federating/assertion-worlds": {
+      "types": "./dist/becoming/doing/working/governing/federating/assertion-worlds/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/federating/assertion-worlds/index.mjs"
+    },
+    "./becoming/doing/working/governing/algebra": {
+      "types": "./dist/becoming/doing/working/governing/algebra/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/algebra/index.mjs"
+    },
+    "./becoming/doing/working/governing/deciding": {
+      "types": "./dist/becoming/doing/working/governing/deciding/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/deciding/index.mjs"
+    },
+    "./becoming/doing/working/governing/deciding/fleet": {
+      "types": "./dist/becoming/doing/working/governing/deciding/fleet/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/deciding/fleet/index.mjs"
+    },
+    "./becoming/doing/working/governing/deciding/fleet/consensus": {
+      "types": "./dist/becoming/doing/working/governing/deciding/fleet/consensus/index.d.mts",
+      "import": "./dist/becoming/doing/working/governing/deciding/fleet/consensus/index.mjs"
+    },
+    "./scripts": {
+      "types": "./dist/scripts/api.d.mts",
+      "import": "./dist/scripts/api.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/content": "workspace:*",
+    "@emsenn/communicating": "workspace:*",
+    "@emsenn/relating": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

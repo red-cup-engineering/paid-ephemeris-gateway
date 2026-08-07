@@ -1,0 +1,69 @@
+{
+  "subject": "anthropic-now-atop-the-ai-bubble-files-for-its-ipo",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Anthropic, now atop the AI bubble, files for its IPO"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Anthropic has beaten OpenAI to the IPO punch, just days after its latest private funding round eclipsed its top rival’s valuation, setting up a showdown that could pump more air into - or finally pop - the AI bubble. Anthropic said Monday in a press release that it had filed a confidential S-1 form with the US Securities and Exchange Commission, setting the stage for an eventual initial public offering of shares in the world’s (currently) most valuable AI startup. Given it’s a confidential filing, Anthropic shared little information and declined to answer questions on the matter. “The proposed initial public offering will depend on market conditions and other factors,” Anthropic said in the announcement. “The number of shares to be offered and the price have not yet been set.” Those market conditions could look like anything by the time the SEC finishes reviewing the filing and it’s made available to the public for scrutiny, but the winds inflating the AI bubble are currently blowing in Anthropic’s favor. The company reported last week that it completed a $65 billion series H funding round, pushing its post-money valuation to $965 billion, sending it rocketing past OpenAI’s most recently-reported valuation of $852 billion, which at the time was the highest-ever valuation of a pre-IPO tech company. With Anthropic now on the top of the heap, it’s a perfect time to file an IPO prospectus before Altman and company steal the lead back. That said, Anthropic has made some clever choices that have put it atop the heap for now. Claude Code has done wonders for Anthropic’s reputation as the more useful of the pair, which is backed up by the fact that Anthropic reportedly earns more in revenue despite having a fraction of OpenAI’s user base. Of course, that doesn’t mean Anthropic’s valuation is realistic, nor that it’s actually posting a profit. According to a recent story in the Wall Street Journal, Anthropic is on the verge of reporting its first quarter of operating profit, according to people at the company who spoke anonymously. The Journal also notes that, as a private company, Anthropic isn’t required to post financials or report numbers any more realistic than what one would get with any good ass-pull – the word \"profit\" could exclude all sorts of expenses. Toss in an potential Series H round (the WSJ piece was published prior to Anthropic announcing its recent valuation) and a looming IPO, and the realism of that profitability figure is questionable. We won’t be able to accurately assess the state of Anthropic’s finances until that IPO filing becomes public, which could end up serving as the first real look behind the shroud of fiscal secrecy that AI firms have operated behind. If Anthropic’s numbers look anything like what SpaceX’s IPO filing revealed (i.e., ridiculous valuations on top of massive losses) it could cause the AI bubble to start looking even flimsier than it already does. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 01 Jun 2026 20:12:22 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/01/anthropic-now-atop-the-ai-bubble-files-for-its-ipo/5249753"
+      },
+      "status": "supported"
+    }
+  ]
+}

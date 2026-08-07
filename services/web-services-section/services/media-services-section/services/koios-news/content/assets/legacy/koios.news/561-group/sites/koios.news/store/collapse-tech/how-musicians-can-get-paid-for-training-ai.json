@@ -1,0 +1,69 @@
+{
+  "subject": "how-musicians-can-get-paid-for-training-ai",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "How Musicians Can Get Paid for Training AI"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ai-music-attribution"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://spectrum.ieee.org/ai-music-attribution"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ai-music-attribution"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Musicians are accustomed to getting paid each time their creative work is used. Across vinyl/CD sales, streams, radio, cover versions, and those numerous niches like karaoke, there are agreements in place about what “use” means. Underlying this is a simple economic principle: The more something is used, the more money it makes. Generative AI has complicated the definition of use . On the one hand, you could argue that the use of a piece of musical training data happens just once, at the point of training. On the other hand, creators would be right to complain that the creative essence of their work lives on in the structure of the model, used every time the model produces an output. Now, companies like Sureel and SoundVerse are working to re-create the essential economic principle that motivates creativity in an era of AI. Such initiatives aim to turn the generative AI industry from one guilty of “the biggest act of copyright theft in history” into one that coexists harmoniously with hardworking artists. Music Royalties for the AI era Sureel , a startup Warner Music Group just acquired , has partnered with the Swedish copyright agency STIM to explore the potential for music creators to get paid when their music is used to train generative AI tools . Sureel’s software labels online media, such as a music file, with instructions determined by the owner. The instructions specify whether an AI company may use the media freely in training, limit its influence in any given training set, or avoid it altogether. The software then tracks how the AI company uses the media in training and sets licensing fees accordingly. Meanwhile, the founders of the AI music company SoundVerse “[reject] one-time royalty buyouts as insufficient and [advocate] for ongoing participation of artists in the AI lifecycle,” they wrote in a 2025 white paper . They argue that each time a generative AI system produces an output, certain pieces of training data play a greater role than others. If the system outputs music resembling jazz, the jazz in the training set has arguably contributed more than, say, the folk music. You can therefore differentially reward each piece of training data for each output. Sureel’s Co-President Benji Rogers told me, “Attribution isn’t about re-creating the old economics. It’s about measuring, for the first time, the thing the old economics only approximated.” Such influence attribution needs to do more than superficially measure how similar a training data point is to the AI output. The challenge is to attribute causality, or a relationship between the training data and the trained AI, Sureel CEO Tamay Aykut says. Even if the AI industry achieved that, however, it might encourage people to create music designed to maximize training-data royalties. While all creative markets lead to new incentives (music streaming, for example, has driven songs to have shorter intros), the industry could do without another economic structure that is easily gamed, in which someone’s reverse-engineered pastiche diverts royalties away from original works of creative expression. RELATED: Generative AI Has a Visual Plagiarism Problem Inferring the influence of a particular piece of music on a generated piece of music, if a well-defined problem at all, may involve more advanced information theoretic principles, or modelling the actual historical role and impact of individual works. Aykut proposes that in carefully designed attribution systems, more unusual and unpolished musical works could even have more inherent value than radio standards. Simon Gozzi, Head of Business Development at STIM, says the company is in the process of seeing how Sureel’s attribution reports could underlie licensing agreements between musicians and AI companies. Could generative AI attribution strategies not only sustain the economic logic that “popularity pays,” but also motivate musical experimentation and diversity? It’s a compelling concept when public sentiment rightly fears generative AI’s threat to cultural vibrancy, pushing power towards tech companies, deskilling creative workers, shrinking revenue in the creative sector, and filling the internet with slop. “Attribution is one of the few credible tools we have,” Rogers says. There’s a window of opportunity to debate and establish approaches to paying for AI training data that serve a vibrant and sustainable creative sector. The technical problem of training data attribution is both complex and ill-defined. Just as a simplistic attribution strategy based on measuring similarity might motivate people to reverse-engineer the canonical works of a genre to capture royalties, a more complex attribution strategy based on some information theory of originality might be easily gamed or fail to reward human cultural production. For creative workers, there’s good reason to fear that even with the best intentions, AI attribution will only compound the baroque and opaque arms races that they are already weary of navigating. Some voices within the music AI sector are also skeptical. Drew Silverstein, president of SourceAudio, says, “Attribution would seem to be the obvious answer, but it’s flawed in AI, so we have to look at other models.” He advocates simple negotiated agreements with an agreed or annually recurring price at the point of training. Meanwhile, the copyright lawsuits that have dominated the generative AI revolution are beginning to give way to an increasing number of privately negotiated agreements, such as those between Universal, Warner, and major AI companies to work together on training models with copyright consent. Although little is certain , these agreements may have considerable influence over the industry norms that arise. Right now, there’s a window of opportunity to debate and establish approaches that pay for AI training data while also sustaining a vibrant creative sector. Sophisticated engineering solutions will have a role to play, but they need to take into account the cultural complexity of the challenge, and enable fairness and transparency through good design. Making AI training pay off It remains to be seen whether monolithic generative models such as Suno actually have as much credibility as first touted. In many creative applications of AI, there’s a renewed focus on smaller customized models that are tailored for specific human creative expressive needs such as IRCAM’s RAVE model or Jen’s Style Filters . Meanwhile, more mainstream “end user” creative applications may be shifting towards a focus on fan engagement. OpenAI’s sudden dropping of Sora , despite being in negotiations with Disney and Suno’s recent emphasis on building fan engagement experiences that draw directly on the work of artists , following its deal with Universal, both point to teething troubles in the creative AI sector. A move to smaller, more targeted models and applications would give more room for creator alliances. For example, collectives of musicians might band together to provide the training data for a smaller custom model, for which revenue splits might be egalitarian or based on other principles of fairness. The same may possibly be true of hybrid model architectures and structured training regimes where different data sources are used at different points in the training process, as well as retrieval augmented generation, which mixes context-specific information with training data to improve results. An approach that produces worse results but enables fairer or more transparent paths of attribution may be more successful if it brings creators on board with more lucrative royalty flows and even clear credits. Also, no matter how sophisticated an attribution algorithm is, it will always be grounded in human decisions, ranging from the wise and the fair to the arbitrary and corrupt. Ask a music industry insider to explain how the percentage split between recording and songwriting royalties is determined, and you’re in for a long answer. At best, the machinery of training data attribution will enable open and informed discussion about what makes our creative and cultural sectors fair and vibrant. At worst, it will conceal already opaque private agreements in complex black boxes. This is where national policies are vital. Attribution must be “multi-layered and auditable, open to expert and regulatory scrutiny,” Rogers says. Crafting such policies will take expertise from computer science, musicology, law, and economics. AI-competitive governments will be able to boost their cultural and creative sectors by supporting institutions that fulfil this purpose. Even the most neoliberal economies look beyond markets to sustain cultural expression, whether through public arts funding or measures like local music quotas for radio. As the economic impact of generative AI in the creative sector takes form, taxation, redistribution, and active support of cultural infrastructures may still be the most effective way to support positive social outcomes. Taxing big AI and redistributing that revenue back to the creative workers that contributed to the industry’s wealth is, after all, another “AI attribution strategy.”"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ai-music-attribution"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 15:04:23 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ai-music-attribution"
+      },
+      "status": "supported"
+    }
+  ]
+}

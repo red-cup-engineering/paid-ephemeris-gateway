@@ -1,0 +1,69 @@
+{
+  "subject": "federal-reserve-board-announces-that-results-from-its-annual-bank-stress-test-will-be-released-on-wednesday-june-24-at-4-p-m-edt",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Federal Reserve Board announces that results from its annual bank stress test will be released on Wednesday, June 24, at 4 p.m. EDT."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 9 Jun 2026 20:00:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260609a.htm"
+      },
+      "status": "supported"
+    }
+  ]
+}

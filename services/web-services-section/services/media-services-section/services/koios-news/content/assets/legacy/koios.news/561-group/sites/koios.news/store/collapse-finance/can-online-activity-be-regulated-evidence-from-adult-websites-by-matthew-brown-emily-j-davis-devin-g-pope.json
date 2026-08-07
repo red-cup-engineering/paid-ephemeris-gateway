@@ -1,0 +1,69 @@
+{
+  "subject": "can-online-activity-be-regulated-evidence-from-adult-websites-by-matthew-brown-emily-j-davis-devin-g-pope",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Can Online Activity Be Regulated? Evidence from Adult Websites -- by Matthew Brown, Emily J. Davis, Devin G. Pope"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35322#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nber.org/papers/w35322#fromrss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35322#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The consequences of online regulations depend on the extent to which users can circumvent restrictions or substitute toward noncompliant platforms. Since 2023, 25 U.S. states have implemented age verification laws that caused prominent adult websites (including Pornhub) to restrict local access for all users. We study how these restrictions affected browsing activity using individual-level panel data. Access restrictions reduced overall time spent on adult sites by roughly 10%. Specifically, for every 100 hours spent on top adult sites before restrictions, about 50 hours remained accessible at noncompliant sites that never restricted access, 30 hours persisted through VPN-based circumvention, 10 hours were substituted from compliant sites to noncompliant sites, and 10 hours were no longer spent on adult sites."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35322#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35322#fromrss"
+      },
+      "status": "supported"
+    }
+  ]
+}

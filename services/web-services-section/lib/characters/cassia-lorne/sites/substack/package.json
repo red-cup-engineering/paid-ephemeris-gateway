@@ -1,0 +1,30 @@
+{
+  "name": "@rsc-quiescent/cassia-lorne-substack-com",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Cassia Lorne's Routine Read — a syndication-only divination publication: a two-stage daily diviner cycle (atomic divinations, then synthesis under gates) into a reviewable content store.",
+  "exports": {
+    ".": "./src/indicators.ts",
+    "./gates": "./src/gates.ts",
+    "./mill": "./src/mill.ts",
+    "./read": "./src/read.ts",
+    "./hive-draft": "./src/hive-draft.ts",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "divine:indicators": "node src/indicators.ts",
+    "divine:read": "node src/read.ts",
+    "divine:hive-draft": "node src/hive-draft.ts",
+    "divine": "npm run divine:indicators && npm run divine:read && npm run divine:hive-draft",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lenticule-science/divining": "0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

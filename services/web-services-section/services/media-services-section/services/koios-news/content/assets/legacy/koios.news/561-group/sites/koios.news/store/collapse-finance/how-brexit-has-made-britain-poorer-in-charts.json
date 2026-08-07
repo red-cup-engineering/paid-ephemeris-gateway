@@ -1,0 +1,69 @@
+{
+  "subject": "how-brexit-has-made-britain-poorer-in-charts",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "How Brexit has made Britain poorer – in charts"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Forecasters were wrong about an immediate recession but right that we would be worse off outside the EU</p><p>As the 10th anniversary of the Brexit vote approaches, the verdict on Britain’s economic performance is clear: voting to leave has resulted in severe costs for households and businesses.</p><p>The immediate recession predicted in the Treasury forecasts ordered by George Osborne – dubbed “<a href=\"https://www.theguardian.com/global/video/2016/jun/27/project-fear-over-says-boris-johnson-video\">project fear</a>” by the Leave campaign – did not happen. The impact from the Covid pandemic, wars in Ukraine and Iran, and Donald Trump’s trade battles also cloud the picture.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 05:00:34 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/14/how-uk-economy-changed-since-brexit-vote-charts"
+      },
+      "status": "supported"
+    }
+  ]
+}

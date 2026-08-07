@@ -1,0 +1,69 @@
+{
+  "subject": "us-and-uk-central-banks-expected-to-keep-interest-rates-on-hold-amid-iran-peace-deal",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "US and UK central banks expected to keep interest rates on hold amid Iran peace deal"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Federal Reserve to make first decision under Kevin Warsh as Middle East hopes ease inflation pressures</p><p>Central banks in the US and UK are expected to leave interest rates on hold this week as the peace deal in the Middle East is predicted to ease inflationary pressures.</p><p>The US Federal Reserve is expected to hold its benchmark interest rate at a range of 3.5% to 3.75% on Thursday, in what will be the first policy decision under the new Fed chair – and Donald Trump’s pick – Kevin Warsh.</p> <a href=\"https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 12:43:29 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/us-uk-interest-rates-federal-reserve-iran-war-kevin-warshinflation"
+      },
+      "status": "supported"
+    }
+  ]
+}

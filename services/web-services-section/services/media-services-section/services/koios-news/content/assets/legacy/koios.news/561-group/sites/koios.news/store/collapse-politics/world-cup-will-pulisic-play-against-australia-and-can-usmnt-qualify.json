@@ -1,0 +1,69 @@
+{
+  "subject": "world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "World Cup: Will Pulisic play against Australia and can USMNT qualify?"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/sports/2026/6/19/world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Will Christian Pulisic be fit for United States as they seek to secure top spot in Group D with win over Australia?"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:07:15 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/world-cup-will-pulisic-play-against-australia-and-can-usmnt-qualify?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

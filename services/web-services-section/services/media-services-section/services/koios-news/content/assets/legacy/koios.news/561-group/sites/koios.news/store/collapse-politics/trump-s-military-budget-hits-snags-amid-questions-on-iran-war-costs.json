@@ -1,0 +1,69 @@
+{
+  "subject": "trump-s-military-budget-hits-snags-amid-questions-on-iran-war-costs",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Trump’s Military Budget Hits Snags Amid Questions on Iran War Costs"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Republicans and Democrats alike are casting doubt on a push for the largest military budget in history as the administration declines to disclose the cost of the war with Iran."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 09:02:25 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/military-budget-congress-iran-trump-hegseth.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

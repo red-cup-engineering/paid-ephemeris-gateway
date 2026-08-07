@@ -1,0 +1,69 @@
+{
+  "subject": "most-difficult-day-in-the-history-of-digital-credit-strive-ceo-says-leverage-liquidation-drove-strc-and-sata-selloff",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘Most difficult day in the history of digital credit’: Strive CEO says leverage liquidation drove STRC and SATA selloff"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405406/strive-ceo-strc-sata?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theblock.co/post/405406/strive-ceo-strc-sata?utm_source=rss&utm_medium=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405406/strive-ceo-strc-sata?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "STRC and SATA, designed to trade near a $100 par value, fell significantly on Thursday before partially recovering."
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405406/strive-ceo-strc-sata?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:32:36 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theblock.co/post/405406/strive-ceo-strc-sata?utm_source=rss&utm_medium=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

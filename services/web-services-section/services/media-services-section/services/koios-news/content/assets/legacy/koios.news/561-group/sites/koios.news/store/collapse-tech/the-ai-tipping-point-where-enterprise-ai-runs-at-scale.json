@@ -1,0 +1,69 @@
+{
+  "subject": "the-ai-tipping-point-where-enterprise-ai-runs-at-scale",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The AI tipping point: where enterprise AI runs at scale"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/the-ai-tipping-point-where-enterprise-ai-runs-at-scale/5258147"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/06/18/the-ai-tipping-point-where-enterprise-ai-runs-at-scale/5258147"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/the-ai-tipping-point-where-enterprise-ai-runs-at-scale/5258147"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "When enterprises first began building AI strategies, the default assumption was straightforward: AI would run in the hyperscaler cloud. The APIs were ready, GPU capacity was building out, and the inertia of a decade of public cloud investment pointed in one direction. Broadcom’s Private Cloud Outlook 2026 report finds that, as enterprises move to scale, the direction has changed. The Private Cloud Outlook 2026: The AI Tipping Point draws on a blind, global survey of 1,800 senior IT leaders across eight countries. Now in its second year, the report tracks a shift in cloud strategy that is no longer something on the horizon, but one already showing up in production workloads, capital budgets, and board-level priorities. Enterprise AI has found its infrastructure home in private cloud. Production AI is moving to private cloud Last year, 56 percent of enterprises used public cloud as the primary environment for production AI inference. This year, that figure has fallen 15 percentage points to 41 percent, while 56 percent of enterprises are now running or planning to run production inferencing in a private cloud. The shift goes deeper than the top-line numbers. Forty-three percent of enterprises actively repatriating workloads are moving AI training, large language models, and inference out of the public cloud, a category that did not exist in last year's study. The broader repatriation trend has accelerated sharply as well: 83 percent of enterprises are now considering repatriation , up from 69 percent in 2025, and half have already moved at least some workloads, a 15-point jump in a single year. The forces driving enterprise AI to private cloud are the same ones that pulled storage, security-sensitive applications, and regulated data there before it. Security, control, cost, and governance did not become more important because of AI, but the consequences of getting them wrong became much harder to absorb at production scale. When IT leaders place workloads, those classified as high-security, latency sensitive, business critical, or data-intensive consistently land in private cloud. The bill for AI infrastructure has arrived For the first time in this study, cost has overtaken security as the top concern about public cloud. That reflects a familiar reality for enterprise IT leaders: public cloud costs were already difficult to forecast and manage, and AI workloads have made that problem substantially worse. Nearly all IT leaders surveyed (97 percent) believe some portion of their public cloud spend is wasted, and more than half (52 percent) say that waste exceeds 25 percent of their total spending. Generative AI and agentic workloads are compounding the pressure, with 62 percent of IT leaders reporting that they are very or extremely concerned about AI infrastructure costs. Enterprises are revising their investment strategies accordingly. Net intent to increase private cloud investment over three years has risen from 51 percent to 72 percent, and private cloud investment is now growing at more than twice the rate of public cloud. Cost predictability has become the second biggest driver of that shift, cited by 39 percent of organizations. Enterprises that built AI ambitions on variable, consumption-based public cloud pricing are recalculating. Private cloud, with its predictable economics and direct IT control over infrastructure, is increasingly where the budget decisions are landing. Sovereignty has become a board-level priority Geopolitics has moved squarely into the infrastructure conversation. Eighty-six percent of IT leaders say geopolitical and regulatory factors are now directly affecting their IT strategy and operations. Data sovereignty and residency requirements are the top concern, cited by 54 percent of respondents, followed by jurisdiction-specific compliance requirements at 51 percent. For enterprises operating across borders, decisions about where data lives carry direct implications for where workloads can run. AI workloads that process sensitive, regulated, or proprietary data require infrastructure that provides governance and control from the ground up. Security and compliance remain the single most important factor in workload placement decisions, cited by 32 percent of respondents. AI is adding new obligations on top of existing ones: data protection and privacy (37 percent) and security and control (36 percent) are now the leading infrastructure requirements that AI imposes. Private cloud provides the governance architecture to meet those requirements by design, built in from the start rather than bolted on after deployment. Complexity is a platform problem Running production AI at enterprise scale is an operations challenge as much as an infrastructure one. The top skills gap cited by IT leaders is AI infrastructure and operations, named by 40 percent of respondents, followed by cloud security operations at 38 percent and Kubernetes operations at 37 percent. To close that gap, 81 percent of enterprises now fully outsource or use professional services for their cloud-related needs. Operational simplification matters as much as picking the right technology partners. Enterprises that standardize on a unified, well-governed private cloud platform address the AI skills challenge with fewer specialists, less operational fragmentation, and clearer organizational accountability. A platform-centric approach reduces the surface area that teams have to manage, and that is where the real operational gains lie. The tipping point is here The Private Cloud Outlook 2026 confirms what the data has been building toward for two years. Enterprise IT has reached the AI tipping point, and private cloud is the preferred platform for production AI because it addresses what AI at scale demands: security, cost predictability, data sovereignty, and governance that enterprises cannot treat as optional. VMware Cloud Foundation 9.1 is built for this environment. It provides a unified platform for running AI and traditional workloads together, with the performance, cost controls, and security capabilities that production AI at enterprise scale requires. The research shows where enterprise AI is heading, and VMware Cloud Foundation is the platform built to get organizations there. Read the full Private Cloud Outlook 2026 report: https://www.vmware.com/docs/private-cloud-outlook-2026 Contributed by Broadcom."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/the-ai-tipping-point-where-enterprise-ai-runs-at-scale/5258147"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:00:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/the-ai-tipping-point-where-enterprise-ai-runs-at-scale/5258147"
+      },
+      "status": "supported"
+    }
+  ]
+}

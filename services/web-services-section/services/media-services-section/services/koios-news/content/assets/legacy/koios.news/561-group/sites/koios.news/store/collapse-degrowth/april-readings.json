@@ -1,0 +1,69 @@
+{
+  "subject": "april-readings",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "April readings"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/05/april-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://unevenearth.org/2023/05/april-readings-4/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/05/april-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Getty Images, via Heatmap Once a month, we put together a list of stories we’ve been reading: news you might’ve missed or crucial conversations going on around the web. We focus on environmental justice, radical municipalism, new politics, political theory, and resources for action and education. We try to include articles that have been published recently but will last, that are relatively light and inspiring, and are from corners of the web that don’t always get the light of day. This will also be a space to keep you up to date with news about what’s happening at Uneven Earth. This time, we feature interesting reads on the state of work and ‘quiet quitting’; post-car societies, future and present; the false promise of saving the planet by planting trees; the Turkey-Syria earthquakes; big beef’s climate messaging machine; de-extinction and why it isn’t worth the ethical cost; the conundrums of climate fiction; the new How to Blow Up a Pipeline movie, a dramatization of Malm’s 2021 book of the same name; and so much more. If you find these lists useful, you can support us by sharing them on social media and with your friends and family! A small note that the articles linked in this newsletter do not represent the views of Uneven Earth. When reading, please keep in mind that we don’t have capacity to do further research on the authors or publishers! Uneven Earth updates On planning and disaster: Notes from an earthquake | How disasters are baked into Turkey’s developmental model—and what kind of opposition could emerge out of the ruins of the earthquake Top 5 articles to read The age of the crisis of work &nbsp; How to make friends . Fighting the system may take a while. Why not go to a bar? Is a post-car future actually possible? Experts say yes — here’s how we could get there The illusion of saving the planet with a trillion trees &nbsp; Universal public services: the power of decommodifying survival News you might’ve missed Illegal gold mining influencers are tearing up the Amazon &nbsp; Methane leaks from oil and gas industry are 70% higher than EPA estimates, study shows Chile plans to nationalize its vast lithium industry Manuel Teran’s death: DeKalb County releases autopsy for ‘Cop City’ protester . Tortugita’s death has officially been ruled a homicide. Where we’re at: analysis Climate diplomacy is hopeless, says author of How to Blow Up a Pipeline So much of the world economy has been going in reverse &nbsp; The lithium problem . Can we rapidly reduce carbon emissions while minimizing the damage caused by resource extraction? The real-world costs of the digital race for Bitcoin . Bitcoin mines cash in on electricity — by devouring it, selling it, even turning it off — and they cause immense pollution. In many cases, the public pays a price. The toxic dust from Turkey’s earthquakes &nbsp; Why Asia’s early heat wave is so alarming &nbsp; Global struggles There’s no greater feminist cause than the climate fight – and saving each other My continent is not your giant climate laboratory . Chukwumerije Okereke urges African governments to stand against the ploy by Western organizations to normalize research on risky geoengineering technologies. Indigenous Pataxó demand land demarcation amid rising violence and murders As tiger count grows, India’s Indigenous demand land rights FEMA sued over using disaster funds to rebuild Puerto Rico’s power grid &nbsp; Cities and radical municipalism How Tokyo became an anti-car paradise This neighborhood is ‘banning’ cars for all residents — but it’s offering them a thought-provoking deal in return Exactly how much less America walks than other countries, in five charts Spain and Portugal tackle property crisis by embracing public housing What Barcelona can teach New York City about truly affordable housing &nbsp; ‘They try to build their money from our weakness’: Tenants fight rent increases, maintenance issues at apartment complex owned by federal pension fund Return of the child-friendly city? How social movements are changing European urban areas &nbsp; Let the postpandemic city grow wild Food politics Food corporations paid shareholders $53.5bn while millions went hungry Blood, soil, and grass-fed beef Inside big beef’s climate messaging machine: confuse, defend and downplay &nbsp; You can’t eat profits . A democratic vision for England’s tormented farmlands.&nbsp; Just think about it… Why intergenerational thinking is essential to heal the planet The planetary emergency is a crisis of spirituality &nbsp; Bringing back woolly mammoths and dodos is a bad idea &nbsp; These adorable tiny owls are thriving in the most unlikely place I lead a litter-picking group, but I will always defend litterers. This is why Degrowth The ideology of growth and its origins . An excerpt from The Future is Degrowth . Degrowth in Japan Sci-fi, art and storytelling Climate fiction won’t save us . As the world burns, readers increasingly look to climate fiction for hope, predictions, and actionable solutions. But can the genre really be a manual for useful change? Is eco-terrorism now self-defence? Inside explosive film How to Blow Up a Pipeline How to Blow Up a Pipeline movie poses terror threat, Kansas City Intel Agency claims &nbsp; Want to receive this as a newsletter in your inbox? Subscribe here . The post April readings first appeared on Uneven Earth ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/05/april-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 11 May 2023 20:41:55 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/05/april-readings-4/"
+      },
+      "status": "supported"
+    }
+  ]
+}

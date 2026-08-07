@@ -1,0 +1,69 @@
+{
+  "subject": "when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "When the Saints go marching out: New Orleans and the resilience of cities"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-15/when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A recent study published in Nature Sustainability concluded that New Orleans residents should plan now to move away from the city. For the hundreds of thousands who live in New Orleans, and the millions of others who love the Crescent City, this is an incredibly sad conclusion. And it’s a conclusion that many other cities rich in culture and history around the world will face as sea levels rise."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 08:00:55 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/when-the-saints-go-marching-out-new-orleans-and-the-resilience-of-cities/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "new-models-constantly-renovate-poverty",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "New models constantly renovate poverty"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/01/new-models-constantly-renovate-poverty/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/01/new-models-constantly-renovate-poverty/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/01/new-models-constantly-renovate-poverty/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Andri Stahel"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/01/new-models-constantly-renovate-poverty/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 01 Jun 2026 17:04:31 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/01/new-models-constantly-renovate-poverty/"
+      },
+      "status": "supported"
+    }
+  ]
+}

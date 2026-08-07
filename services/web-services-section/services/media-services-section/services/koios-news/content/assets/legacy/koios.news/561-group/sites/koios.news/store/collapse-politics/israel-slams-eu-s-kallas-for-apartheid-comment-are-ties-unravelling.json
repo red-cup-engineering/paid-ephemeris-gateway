@@ -1,0 +1,69 @@
+{
+  "subject": "israel-slams-eu-s-kallas-for-apartheid-comment-are-ties-unravelling",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Israel slams EU’s Kallas for ‘apartheid’ comment: Are ties unravelling?"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/israel-slams-eus-kallas-for-apartheid-comment-are-ties-unravelling?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/news/2026/6/19/israel-slams-eus-kallas-for-apartheid-comment-are-ties-unravelling?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/israel-slams-eus-kallas-for-apartheid-comment-are-ties-unravelling?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Leaked media reports quoted EU's top diplomat likening Israel to South Africa's apartheid regime."
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/israel-slams-eus-kallas-for-apartheid-comment-are-ties-unravelling?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 13:58:52 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/israel-slams-eus-kallas-for-apartheid-comment-are-ties-unravelling?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

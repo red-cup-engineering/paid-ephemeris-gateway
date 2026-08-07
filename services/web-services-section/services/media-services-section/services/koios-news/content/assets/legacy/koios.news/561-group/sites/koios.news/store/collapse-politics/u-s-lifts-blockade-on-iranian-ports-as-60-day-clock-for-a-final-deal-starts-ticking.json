@@ -1,0 +1,69 @@
+{
+  "subject": "u-s-lifts-blockade-on-iranian-ports-as-60-day-clock-for-a-final-deal-starts-ticking",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "U.S. lifts blockade on Iranian ports as 60-day clock for a final deal starts ticking"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The U.S. is allowing ships to enter and exit Iranian ports and coastal areas as the countries move to a new phase of negotiations over the next 60 days. (Image credit: Amirhossein Khorgooei)"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:28:30 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz"
+      },
+      "status": "supported"
+    }
+  ]
+}

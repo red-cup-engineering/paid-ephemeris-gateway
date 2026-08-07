@@ -1,0 +1,69 @@
+{
+  "subject": "geopolitical-jitters-push-europe-s-internet-registry-away-from-cloud-first-strategy",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Geopolitical jitters push Europe's internet registry away from cloud-first strategy"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/geopolitical-jitters-push-europes-internet-registry-away-from-cloud-first-strategy/5258704"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/networks/2026/06/19/geopolitical-jitters-push-europes-internet-registry-away-from-cloud-first-strategy/5258704"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/geopolitical-jitters-push-europes-internet-registry-away-from-cloud-first-strategy/5258704"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Europe's internet registry is abandoning its cloud migration plans over geopolitical risk, but reversing course now means rebuilding the resilient, secure infrastructure it needs. The RIPE Network Coordination Centre - which oversees the regional internet registry (RIR) for Europe, the Middle East, and parts of Asia - had, like many organizations, adopted a \"cloud-first\" strategy that involved moving move core services and databases to cloud providers. But, as with many European organizations, the arrival of the Trump administration delivered a wake-up call, prompting it to reassess the risks of relying on US-based hyperscalers for parts of its infrastructure. In a blog post, RIPE Managing Director Hans Petter Holen says returning to the previous status quo is no longer an option - stakeholder expectations about the security, stability, and resilience of services have risen, among other things. In a presentation at last month's RIPE NCC General Meeting, Holen said much of the organization's infrastructure needs an overhaul, requiring a jump in capital expenditure (capex) to levels not seen in years, before the cloud-first strategy was adopted. \"To start with, we will need to replace hardware that has reached, or in some cases passed, the end of its lifecycle. This is the result of trade-offs between capex and opex over the period in which we were focused on cloud deployments, as well as various assumptions and decisions about how this balance would evolve over the long term,\" he said. RIPE needs to consider its datacenter footprint - the number and location of facilities - while minimizing interdependencies between them to allow for expansion into additional sites as needed. Geographically redundant storage and backups are also needed, Holen said, along with a decision on future virtualization platforms that limit vendor lock-in risks. Despite these challenges, the organization expects to complete a migration to a greenfield deployment by 2028 at an additional cost of €5 million, effectively returning capital spending to levels last seen before 2020. To fund this, RIPE will need to balance internal cost savings against membership fees. Holen said he is aware that some members are concerned about the fees they've paid in recent years and don't want to see further rises. Yet despite this, a vote on the membership charging scheme at the General Meeting went the opposite way from what was expected: rather than switching to a sliding scale - under which 74 percent of members would have paid less - members opted to keep the existing flat fee. Clearly discombobulated by this turn of affairs, RIPE dedicated a blog to picking over the reasons why the membership voted the way it did. It's worth noting that of 19,415 eligible members, only 3,421 registered to vote and 3,049 actually cast ballots, resulting in a 15.7 percent turnout. Yet this was described as one of the highest turnouts on record, falling only slightly short of the May 2020 peak. The result was close, with 51.1 percent voting for the status quo and 48.9 percent voting for the alternate sliding-scale charging scheme. RIPE claims a swing of just 35 votes would have delivered a different outcome. Both schemes generate the same total income, but the new one would have shifted the burden so that members with more internet number resources pay more. In the end, RIPE wonders if mixed messages may have contributed to the result. The organization says it communicated repeatedly with members through various channels to encourage participation. But during the lengthy process of preparing the charging scheme options, RIPE published consultations on different ideas for the base fee and various additional fees - some of which were later abandoned following member input, though not everyone may have realized it. Misconceptions also persisted, including the belief that paying more would mean greater voting rights - an idea that was strongly opposed. \"Perhaps our initial assumption that many of you would prefer a tiered model was inflated. It is true there was a long-standing demand for it,\" the blog concludes. \"But we also hear from people who believe in equality over equity when it comes to financial contribution. To them, the varying amounts of resources members hold shouldn't be a reason for them to pay accordingly.\" ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/geopolitical-jitters-push-europes-internet-registry-away-from-cloud-first-strategy/5258704"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 12:24:41 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/geopolitical-jitters-push-europes-internet-registry-away-from-cloud-first-strategy/5258704"
+      },
+      "status": "supported"
+    }
+  ]
+}

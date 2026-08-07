@@ -1,0 +1,69 @@
+{
+  "subject": "israel-is-likely-to-continue-attacks-in-lebanon-u-s-intelligence-concludes",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Israel Is Likely to Continue Attacks in Lebanon, U.S. Intelligence Concludes"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/israel-lebanon-trump-cease-fire.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/israel-lebanon-trump-cease-fire.html"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/israel-lebanon-trump-cease-fire.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The new cease-fire between the United States and Iran calls for an end to fighting in Lebanon, but U.S. intelligence officials do not expect Israel to halt its strikes on Hezbollah."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/israel-lebanon-trump-cease-fire.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 20:51:42 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/israel-lebanon-trump-cease-fire.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

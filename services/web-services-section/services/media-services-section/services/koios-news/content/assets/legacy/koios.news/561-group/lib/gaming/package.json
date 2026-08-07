@@ -1,0 +1,55 @@
+{
+  "name": "@emsenn/gaming",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gaming — concurrent game systems (CGS) operationalized as one package downstream of animating and upstream of computing: algebra carriers (Player/Opponent polarity, polarized prime event structures, strategies, ludics loci and designs, interaction as the knowledge-join), topology closure/settling, linear-logic proof, causal/spatial geometry, dynamics analysis, operational game computers, and charge-faithful codecs. Each former game-* package is now a module subpath. A game is a configuration of animating handedness over the relating substrate.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit && tsc -p tsconfig.scripts.json --noEmit",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.scripts.build.json && chmod +x dist/scripts/*.mjs",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "bin": {
+    "admit-game": "./dist/scripts/admit-game.mjs",
+    "game": "./dist/scripts/game.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./structuring": {
+      "types": "./dist/structuring/index.d.mts",
+      "import": "./dist/structuring/index.mjs"
+    },
+    "./encoding": {
+      "types": "./dist/encoding/index.d.mts",
+      "import": "./dist/encoding/index.mjs"
+    },
+    "./running": {
+      "types": "./dist/running/index.d.mts",
+      "import": "./dist/running/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/animating": "workspace:*",
+    "@emsenn/communicating": "workspace:*",
+    "@emsenn/relating": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

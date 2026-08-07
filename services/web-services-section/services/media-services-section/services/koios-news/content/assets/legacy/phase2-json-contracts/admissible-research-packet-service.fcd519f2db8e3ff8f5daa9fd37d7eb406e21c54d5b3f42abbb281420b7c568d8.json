@@ -1,0 +1,49 @@
+{
+  "kind": "provider-authored-service-contract",
+  "id": "koios-news-service-section/admissible-research-packet/v1",
+  "provider": "koios-news-service-section",
+  "service": "form a source-custodied research packet from separately contracted current evidence and bounded prior-research recovery",
+  "admission": "ActivityStreams Offer<ServiceSolicitation> addressed to the provider, followed by Accept<ServiceContract> carrying the exact provider offer",
+  "dependencies": [
+    {
+      "provider": "newscable-source-broker",
+      "contract": "newscable-source-broker/source-bundle-service/v1",
+      "evidence": "digest-bound SourceBundleDelivery"
+    },
+    {
+      "provider": "corpus-management-team",
+      "contract": "recovering-prior-research",
+      "evidence": "digest-bound PriorResearchRecoveryResult or PriorResearchProjectionResult"
+    }
+  ],
+  "preconditions": [
+    "the demand names one publication-owned assignment, exact freshness and evidence budgets, exact customer-declared primary-source URLs, and the customer source-policy digest",
+    "current evidence is an accepted Newscable delivery whose digest binds every returned immutable bundle",
+    "prior research is an accepted Corpus Management result whose digests bind its contextual and gap bundles",
+    "the customer accepts the zero-price offer and its exact demand digest"
+  ],
+  "postconditions": [
+    "the provider returns a research packet containing fresh relevant current-source claims and digest-bound prior-research context, or a typed refusal",
+    "prior-corpus excerpts remain context-only and never become public factual claims without separate current-source admission",
+    "the packet binds its current-source and prior-research custody evidence without reading or writing either customer's or provider's territory",
+    "the demand and search terms remain attention pressure rather than evidence",
+    "the customer independently admits or refuses the packet and retains all assignment, corpus, editorial, publication, and delivery authority"
+  ],
+  "refusals": [
+    "invalid-demand",
+    "invalid-assignment",
+    "invalid-evidence-budget",
+    "invalid-primary-source-declaration",
+    "missing-source-policy",
+    "retrieval-treaty-unavailable",
+    "current-evidence-custody-unproven",
+    "prior-research-custody-unproven",
+    "fresh-evidence-insufficient",
+    "changed-demand"
+  ],
+  "price": {
+    "amount": 0,
+    "currency": "USD",
+    "settlement": "provider receipt"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "zte-and-china-telecom-guangdong-advance-cross-vendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "ZTE and China Telecom Guangdong advance cross‑vendor IP network simulation pilots, paving the way for intelligent network operations"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/18/zte-and-china-telecom-guangdong-advance-crossvendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations/5258361"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/networks/2026/06/18/zte-and-china-telecom-guangdong-advance-crossvendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations/5258361"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/18/zte-and-china-telecom-guangdong-advance-crossvendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations/5258361"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "ZTE announced that China Telecom Guangdong has officially released the E‑Surfing Simulation 2.0 – Cross‑Vendor IP Network Simulation Standard at the Talent & Expertise Development Forum (Peizhi Talent Empowerment Initiative) hosted by the company. Built on the joint simulation system co-developed by ZTE and China Telecom Guangdong, the standard applies digital twin technology to form a closed‑loop workflow from change submission through simulation verification to implementation authorization. This marks a pivotal shift of network O&M from experience‑reliant manual work to systematic pre‑verification. The solution has become a replicable benchmark for multi‑vendor collaborative simulation in the telecommunications industry, serving as a milestone to accelerate the rollout of intelligent network operations across the sector. Achieving High‑Precision Network Simulation to Strengthen Predictive O&M Capabilities The system adopts advanced network mirroring technology and proprietary protocol simulation algorithms, overcoming the traditional bottleneck of resource‑intensive dynamic modeling. It achieves over 95% digital twin fidelity for device status and routing protocols. O&M staff can accurately evaluate the impact of network adjustments in advance, enhancing the safety and precision of network operations. Breaking Multi‑Vendor Simulation Barriers to Build an Efficient O&M Model As communication networks keep expanding and evolving into more complex architectures, cross‑vendor O&M faces prominent challenges including low modeling efficiency, difficult collaboration and excessive resource consumption. ZTE and China Telecom Guangdong have innovated a distributed cross‑vendor simulation architecture following the principle of vendor‑specific simulation, unified collaboration. A global coordinator works seamlessly with dedicated simulation systems from different vendors to eliminate device simulation barriers, effectively reduce development and maintenance costs and enhance system scalability. Remarkable Pilot Results Enable Zero‑Error Network Changes Prior to the standard release, China Telecom Guangdong and ZTE completed phased pilot deployments from single-vendor to multi-vendor scenarios in Foshan and Yangjiang. The pilots covered all devices on the new metropolitan area networks of the two cities, targeting four core scenarios: protocol parameter modification, new home broadband service cutover, new device commissioning and network transformation. The solution covers more than 90% of mainstream network change scenarios. Field tests prove that pre‑simulation verification can substantially lower network change risks and realize zero‑error operations, laying a solid foundation for large‑scale nationwide promotion. Looking ahead, ZTE and China Telecom Guangdong will further upgrade system functions, expand application scenarios and iterate the standard to solidify the ecosystem of cross‑vendor intelligent O&M. Leveraging technological collaboration, ZTE will build the HI‑IPNet high-performance and high-intelligence IP network core platform, driving the IP network to evolve from manual O&M to intelligent scheduling and global cross‑network coordination. Committed to openness and continuous innovation, ZTE will partner with global industry players to advance the automation and intelligence of telecommunication networks, empowering the high‑quality development of the digital economy. Contributed by ZTE."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/18/zte-and-china-telecom-guangdong-advance-crossvendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations/5258361"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:21:55 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/18/zte-and-china-telecom-guangdong-advance-crossvendor-ip-network-simulation-pilots-paving-the-way-for-intelligent-network-operations/5258361"
+      },
+      "status": "supported"
+    }
+  ]
+}

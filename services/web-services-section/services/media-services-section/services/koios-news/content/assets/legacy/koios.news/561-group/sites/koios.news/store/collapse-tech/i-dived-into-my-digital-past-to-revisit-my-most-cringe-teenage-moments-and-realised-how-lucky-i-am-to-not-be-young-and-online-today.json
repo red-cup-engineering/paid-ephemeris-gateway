@@ -1,0 +1,69 @@
+{
+  "subject": "i-dived-into-my-digital-past-to-revisit-my-most-cringe-teenage-moments-and-realised-how-lucky-i-am-to-not-be-young-and-online-today",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "I dived into my digital past to revisit my most cringe teenage moments – and realised how lucky I am to not be young and online today"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Twenty years ago I briefly became the victim of a viral pile-on – all because of a silly YouTube video. But I’m glad I had the chance to embarrass myself and move on. Are today’s teens so fortunate?</p><p>As a teenager, I went kind of viral – and the most amazing thing about that is it had absolutely zero effect on my life. It was the summer holidays in 2006, and my friends Jessie, Emma and I decided to film ourselves singing along to our favourite song. We were overheated and hyperactive, jumping up and down&nbsp;and headbanging, stretching our arms to the heavens as&nbsp;we confessed to our mamas that we’d “just killed a&nbsp;maaaaaan” before asking Scaramouche if he’d do the&nbsp;fandango.</p><p>Later, I added a couple of captions to the video implying we were drunk, even though I was 14 and the closest I’d been to buzzed was the pure placebo of clutching a glass bottle of J2O. Then – for reasons that are now lost to me – I uploaded the video to YouTube a month later, on 19 September 2006, under the title “Bohemian Crap-sody”.</p> <a href=\"https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 05:00:53 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.717Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/society/2026/jun/20/digital-past-cringe-teenage-moments-lucky-not-young-online-today"
+      },
+      "status": "supported"
+    }
+  ]
+}

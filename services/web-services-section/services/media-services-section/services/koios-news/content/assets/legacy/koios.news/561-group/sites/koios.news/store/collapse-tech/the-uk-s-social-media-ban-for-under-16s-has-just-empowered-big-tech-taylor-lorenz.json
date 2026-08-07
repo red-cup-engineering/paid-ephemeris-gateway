@@ -1,0 +1,69 @@
+{
+  "subject": "the-uk-s-social-media-ban-for-under-16s-has-just-empowered-big-tech-taylor-lorenz",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The UK’s social media ban for under-16s has just empowered big tech | Taylor Lorenz"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Age verification means that the sector’s biggest players will now have access to information that will only make them richer and more powerful</p><p>This week, the UK announced a <a href=\"https://www.theguardian.com/uk-news/video/2026/jun/15/keir-starmer-announces-social-media-ban-for-under-16s-in-uk-video\">wide-ranging ban on social media</a> that will soon block users from communicating or accessing information on apps such as X, Instagram, YouTube, Facebook, TikTok and<strong> </strong>Snapchat unless they prove that they’re over the age of 16.</p><p>The prime minister, Keir Starmer, called the policy “<a href=\"https://www.theguardian.com/uk-news/2026/jun/15/uk-under-16s-social-media-ban-how-will-it-work\">a line in the sand</a>”. “Tech giants had their chance and failed,” <a href=\"https://www.gov.uk/government/news/social-media-to-be-banned-for-under-16s-in-landmark-government-move-to-givekids-their-childhood-back\">he said</a>, “but we’re stepping in to protect children, back parents and set a new normal for future generations.” All internet users, especially children, should be protected from exploitative systems online, but this new law will only foster more harm and help the largest and most powerful tech companies consolidate power and influence over everyone’s lives.</p><p>Taylor Lorenz is a technology journalist who writes the newsletter <a href=\"https://www.usermag.co/\">User Mag</a> and is the author of the bestselling book <a href=\"https://guardianbookshop.com/extremely-online-9780753560792/\">Extremely Online: The Untold Story of Fame, Influence, and Power on the Internet</a></p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 13:27:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/uk-social-media-ban-under-16s-big-tech-age-verification"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "fox-strikes-22bn-deal-for-roku-to-fuel-streaming-push",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Fox strikes $22bn deal for Roku to fuel streaming push"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Deal gives network access to more than 100m households using Roku streaming platform</p><p><a href=\"https://www.theguardian.com/media/fox\">Fox Corp</a> is buying Roku in a cash-and-stock deal ⁠valued at about $22bn in a bet that pairing its sports and news programming with a top TV streaming platform will strengthen its position as audiences shift online.</p><p>The deal, ⁠announced on Monday, gives ⁠Fox access to ​the more than 100m households using Roku’s streaming platform, potentially helping the cable TV-reliant media company better target ads and reduce reliance on traditional distribution.</p> <a href=\"https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 14:14:05 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/fox-roku-acquisition-deal"
+      },
+      "status": "supported"
+    }
+  ]
+}

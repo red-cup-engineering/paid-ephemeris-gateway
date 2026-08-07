@@ -1,0 +1,69 @@
+{
+  "subject": "microsoft-s-latest-windows-bug-belongs-in-the-recycle-bin",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Microsoft's latest Windows bug belongs in the Recycle Bin"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/microsofts-latest-windows-bug-belongs-in-the-recycle-bin/5258779"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/personal-tech/2026/06/19/microsofts-latest-windows-bug-belongs-in-the-recycle-bin/5258779"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/microsofts-latest-windows-bug-belongs-in-the-recycle-bin/5258779"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Microsoft's latest Windows update has introduced a cosmetic bug that exposes the Recycle Bin's internal file-naming scheme when users permanently delete a file. When permanently deleting a single item from the Recycle Bin, Windows now displays its internal name – such as $Rxxxxx.ext – in the confirmation dialog rather than the file's original name. The name is correct in the Recycle Bin itself and also correct if restored. It's only in the deletion confirmation dialog that Windows exposes its innards. There is a workaround, but Microsoft isn't sharing it unless an organization contacts Microsoft Support for business. Otherwise, the company stated: \"A resolution is in progress and will be included in a future Windows update.\" Unlike other problems reported by users, including OneDrive woes and Blue Screens, this is relatively minor. However, it is an example of ongoing quality issues, coming after Windows boss Pavan Davuluri said Microsoft is working to improve the reliability of its software. It has been ten days since the June 9 update was released, and a few weeks remain until the next Patch Tuesday release. So far, there are two known issues with the update, compared to one for May's update (although that could make the update fail – quite a bit more severe than an annoying text error). The glitch affects desktop versions of Windows from Windows 10 Enterprise LTSB 2016 through Windows 11 26H1, as well as Windows Server 2012 through 2025. The bug is little more than a cosmetic irritation but at a time Microsoft when has acknowledged it needs to make Windows more reliable, even small failures like this do little to inspire confidence. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/microsofts-latest-windows-bug-belongs-in-the-recycle-bin/5258779"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 14:06:04 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/microsofts-latest-windows-bug-belongs-in-the-recycle-bin/5258779"
+      },
+      "status": "supported"
+    }
+  ]
+}

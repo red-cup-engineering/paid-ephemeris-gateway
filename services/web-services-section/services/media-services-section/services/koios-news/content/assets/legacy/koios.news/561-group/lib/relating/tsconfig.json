@@ -1,0 +1,26 @@
+{
+  "$comment": "Self-contained package config. Keep this in sync with the workspace strictness policy, but do not extend a parent workspace file: standalone clones need to typecheck and build from this directory alone.",
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2024"],
+    "types": ["node"],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    "baseUrl": "."
+  },
+  "include": ["src/**/*.mts", "scripts/**/*.mts"]
+}

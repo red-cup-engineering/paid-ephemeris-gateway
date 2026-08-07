@@ -1,0 +1,69 @@
+{
+  "subject": "alabama-governor-names-four-new-psc-members-including-its-first-two-black-appointees",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Alabama Governor Names Four New PSC Members, Including Its First Two Black Appointees"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/17062026/alabama-expands-utilities-regulator-with-four-new-commissioners/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/17062026/alabama-expands-utilities-regulator-with-four-new-commissioners/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/17062026/alabama-expands-utilities-regulator-with-four-new-commissioners/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Gov. Kay Ivey announced the appointments as a first step under new legislation expanding the state’s utilities regulator from three to seven seats in 2027. By Dennis Pillion The Alabama Public Service Commission has never had a Black commissioner in its 145-year history, but that’s about to change."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/17062026/alabama-expands-utilities-regulator-with-four-new-commissioners/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 23:12:55 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/17062026/alabama-expands-utilities-regulator-with-four-new-commissioners/"
+      },
+      "status": "supported"
+    }
+  ]
+}

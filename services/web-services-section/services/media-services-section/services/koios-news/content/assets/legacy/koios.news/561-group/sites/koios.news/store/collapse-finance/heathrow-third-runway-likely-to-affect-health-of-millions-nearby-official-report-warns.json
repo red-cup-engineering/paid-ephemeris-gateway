@@ -1,0 +1,69 @@
+{
+  "subject": "heathrow-third-runway-likely-to-affect-health-of-millions-nearby-official-report-warns",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Heathrow third runway likely to affect health of millions nearby, official report warns"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Expansion could also harm access to housing, education, healthcare, open spaces and transport, analysis says</p><p>Construction of a third runway at Heathrow is likely to have significant adverse effects on the health and wellbeing of up to 3 million people living nearby, an official report has said, as the government launched the next stage of its rapid <a href=\"https://www.theguardian.com/environment/2025/oct/22/heathrow-third-runway-plans-fast-tracked-anps\">airport expansion plan</a>.</p><p>An analysis for the Department for Transport (DfT) has found that expanding London’s hub airport could have “major adverse” impacts on the health of the most local population.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:19:01 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/heathrow-third-runway-likely-to-affect-health-millions-people-nearby-official-report"
+      },
+      "status": "supported"
+    }
+  ]
+}

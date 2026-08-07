@@ -1,0 +1,69 @@
+{
+  "subject": "social-capital-and-community-resilience-a-conversation-with-daniel-aldrich",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Social capital and community resilience: A conversation with Daniel Aldrich"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/social-capital-and-community-resilience-a-conversation-with-daniel-aldrich/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-16/social-capital-and-community-resilience-a-conversation-with-daniel-aldrich/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/social-capital-and-community-resilience-a-conversation-with-daniel-aldrich/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Daniel Aldrich is a leading expert on how social ties shape disaster recovery, his perspective shaped by his family’s flight from Katrina and his work at USAID. In this interview, he explains why social capital is vital to strengthening communities in the face of crises."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/social-capital-and-community-resilience-a-conversation-with-daniel-aldrich/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 08:00:24 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/social-capital-and-community-resilience-a-conversation-with-daniel-aldrich/"
+      },
+      "status": "supported"
+    }
+  ]
+}

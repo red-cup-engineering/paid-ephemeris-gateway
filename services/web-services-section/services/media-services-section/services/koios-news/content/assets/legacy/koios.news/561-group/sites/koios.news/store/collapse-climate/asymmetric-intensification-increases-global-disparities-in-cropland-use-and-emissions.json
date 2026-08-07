@@ -1,0 +1,69 @@
+{
+  "subject": "asymmetric-intensification-increases-global-disparities-in-cropland-use-and-emissions",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Asymmetric intensification increases global disparities in cropland use and emissions"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02666-1"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nature.com/articles/s41558-026-02666-1"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02666-1"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Nature Climate Change, Published online: 16 June 2026; doi:10.1038/s41558-026-02666-1 The authors classify cropland and emissions changes for 174 countries over 30 years. They highlight the asymmetric intensification of global disparities, with imports from countries with high emissions intensities and low-efficiency cropland expansion rising 4.2-fold since 1992."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02666-1"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-16"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02666-1"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "medieval-inflation-medicine",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Medieval inflation medicine"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/29/medieval-inflation-medicine/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/05/29/medieval-inflation-medicine/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/29/medieval-inflation-medicine/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Lars Syll The current inflation is partly about some companies and capital owners taking the opportunity to increase their profit margins without there being any real cost increases that would ‘justify’ this. This type of ‘stealth’ price increase becomes easier to implement as inflation expectations rise. As always in the market, it is those […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/29/medieval-inflation-medicine/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 29 May 2026 14:32:47 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/29/medieval-inflation-medicine/"
+      },
+      "status": "supported"
+    }
+  ]
+}

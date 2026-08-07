@@ -1,0 +1,69 @@
+{
+  "subject": "sick-and-wrong-ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Sick and wrong: Ontario auditors find doctors' AI note takers routinely blow basic facts"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The AI systems approved for Ontario healthcare providers routinely missed critical details, inserted incorrect information, and hallucinated content that neither patients nor clinicians mentioned, according to a provincial audit of 20 approved vendors’ systems. The findings come from the Office of the Auditor General of Ontario, Canada, and are included in a larger report about the state of AI usage by public services in the province. They specifically address the AI Scribe program, the Ontario Ministry of Health initiated for physicians, nurse practitioners, and other healthcare professionals across the broader health sector. As part of the procurement process, officials conducted evaluations using simulated doctor-patient recordings. Medical professionals then reviewed the original recordings alongside the AI-generated notes to evaluate their accuracy. What they found was, frankly, shocking for anyone concerned about the accuracy of AI in critical situations. Nine out of 20 AI systems reportedly “fabricated information and made suggestions to patients' treatment plans” that weren’t discussed in the recordings. According to the report, evaluators spotted potentially devastating incorrect information in the sample reports, such as no masses being found, or patients being anxious, even though these things were never discussed in the recordings. Twelve of the 20 systems evaluated inserted incorrect drug information into patient notes, while 17 of the systems “missed key details about the patients’ mental health issues” that were discussed in the recordings. Six of the systems “missed the patients’ mental health issues fully or partially or were missing key details,” per the report. OntarioMD, a group that offers support for physicians in adopting new technologies and was involved in the AI Scribe procurement process, has recommended that doctors manually review their AI notes for accuracy, but the report notes there’s no mandatory attestation feature in any of the AI Scribe-approved systems. Bad evaluations don’t help, either AI systems making mistakes isn’t exactly shocking. As we’ve reported previously, consumer-focused AI has a tendency to provide bad medical information to users, and some studies have found large language models failed to produce appropriate differential diagnoses in roughly 80 percent of tested cases. But the tools evaluated here are for doctors, not consumers, and such poor performance necessitates explanation. A good portion of the report blames how the systems were evaluated. According to the report, the weight given to various categories of AI Scribe performances was wonky. While 30 percent of a platform’s evaluation score depended solely on whether they had a domestic presence in Ontario, the accuracy of medical notes contributed only 4 percent to the total score. Bias controls accounted for only 2 percent of the total evaluation score; threat, risk, and privacy assessments counted for another 2 percent; and SOC 2 Type 2 compliance contributed an additional 4 percentage points. In other words, criteria tied to accuracy, bias controls, and key security and privacy safeguards made up only a small portion of the total evaluation score for the AI Scribe systems. “Inaccurate weightings could result in the selection of vendors whose AI tools may produce inaccurate or biased medical records or lack adequate protection to safeguard sensitive personal health information,” the report said of the scoring regime. The Register reached out to the Ontario Health Ministry for its take on the report, and whether it was going to conform to its recommendations for the AI Scribe program, but we didn’t immediately hear back. A spokesperson for the Ministry told the CBC on Wednesday that more than 5,000 physicians in Ontario are participating in the AI Scribe program and there have been no known reports of patient harms associated with the technology. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 14 May 2026 22:50:05 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771"
+      },
+      "status": "supported"
+    }
+  ]
+}

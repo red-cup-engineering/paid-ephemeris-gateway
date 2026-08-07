@@ -1,0 +1,69 @@
+{
+  "subject": "colorado-governor-overruled-his-own-clemency-board-to-release-tina-peters",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Colorado Governor Overruled His Own Clemency Board to Release Tina Peters"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/colorado-clemency-board-tina-peters.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/18/us/politics/colorado-clemency-board-tina-peters.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/colorado-clemency-board-tina-peters.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Two members of Gov. Jared Polis’s board that reviews commutation requests came forward to say the secretive panel had twice rejected the release of Tina Peters, convicted of election tampering."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/colorado-clemency-board-tina-peters.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 20:50:35 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/18/us/politics/colorado-clemency-board-tina-peters.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

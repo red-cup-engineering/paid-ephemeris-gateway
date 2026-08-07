@@ -1,0 +1,69 @@
+{
+  "subject": "2-000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "2,000 retired Google Pixel phones get a second life as a private cloud"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/on-prem/2026/06/18/2000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud/5258035"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/on-prem/2026/06/18/2000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud/5258035"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/on-prem/2026/06/18/2000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud/5258035"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Once you're done with your smartphone, it either ends up in a drawer, on the growing second-hand market, or perhaps in a recycle bin. However, it's a computer and, when combined with others like it, can offer real processing power. Computer scientists at the University of California, San Diego, working in collaboration with Google, plan to deploy a rather unusual compute cluster built not from conventional servers, but using 2,000 retired phones. The goal is to demonstrate how these devices might continue to serve as a low-cost, low-carbon computing platform after their original owners have abandoned them for a shiny new widget to doomscroll TikTok on. “The project was the brainchild of Jennifer Switzer, a former PhD student at UCSD who is now working on a post-doc at Google,” Ryan Kastner, an associate professor of computer science at UCSD, told El Reg. In particular, UCSD will be using 2,000 Pixel Fold smartphones courtesy of Google. Google estimates that the average person upgrades their phone every four years or so. While the physical device and battery may show some wear and tear from their years of service, their core computing functionalities remain intact. “It's just a vast amount of sort of thrown away compute and recycling is a terrible option for most of these smartphones,” Kastner said, adding that Switzer started by building a couple of small clusters using smartphones to prove the concept. Since then, the project’s scale has grown considerably. According to the Chocolate Factory, the motherboard represents about 50 percent of the smartphone’s embodied carbon. A lot of early testing used unmodified smartphones, Kastner noted, but as the team quickly learned, this wasn’t practical or safe. “In some early meetings with Google, their engineers said that, if you're going to put these in the datacenter, those batteries are no-go — a lot of things are a no-go — because they're just fire hazards,” he said. Some of this work was done by researchers, including Switzer and another UCSD computer science prof Patrick Pannuto, but for the full deployment this fall, Kastner said, Google is working with a third party to extract the phones' motherboards from their cases. Once the phone’s motherboards have been extracted from their shells, the researchers say that the chips hiding within remain more than potent enough to be useful for a variety of tasks. In many cases, the single-threaded performance of these chips is as good as, if not better than, what you’d find from a many-cored datacenter chip. The Pixel Fold smartphones, which will form the basis of the cluster, are powered by a Google Tensor G2 processor with two 2.85 GHz Cortex-X1, two 2.35 GHz Cortex-A78 and four 1.80 GHz Cortex-A55 Arm cores, a Mali-G710 MP7 GPU, and 12 GB of system memory. Early benchmarking using the SPEC suite suggests that 25-50 phones should deliver performance similar to that of a conventional server. The major challenge, instead, is distributing workloads across multiple devices, each of which has a handful of cores of one or more varieties, and most have 8-12 GB of memory. UCSD researchers are approaching this challenge from a couple of different angles. The first is by targeting applications that can easily fit within a single device. The second is using Kubernetes to orchestrate container deployments across clusters of 25-50 phones. For this to work, the devices first need to be flashed with a Linux operating system suitable for the job. While Android makes for a great handheld experience, it is not intended for server duty. In the blog post, researchers note that Android includes functionality intended to stop rogue applications from chewing up excessive amounts of memory and draining your battery. In server context, these safety mechanisms are no longer necessary. Kastner told us this was by no means an easy task, but the team has made steady progress toward getting Linux running smoothly on these devices, including support for the phone’s onboard GPUs. Access to some functionality, like the chip’s integrated tensor processing unit, remains elusive. Clustering these devices will require networking the phones together. Normally these devices would connect over cellular or Wi-Fi, but at this scale, this not only isn’t practical, but also has implications for security, he explained. Instead, the team will employ PCBs that both supply power and break out wired Ethernet networking. The researchers suggest that many EdTech, grading, and research workloads commonly run by universities in the cloud are small enough to run on the cluster without issue. “The vast majority of these applications are within the capabilities of a single smartphone to host, with the standard grading backend running on small cloud instances,” a blog post detailing the planned deployment reads. “Early experiments show that even a moderately-sized cluster of 20 phones is capable of supporting peak submission rates for a 75+ student class.” \"A lot of the sort of function as a service workloads seem to make a whole lot of sense, because they're sort of sporadic, and don't need a whole lot of high-performance compute,\" Kastner said. Alongside traditional IT applications, the cluster will also support exploration into parallel computing and systems programming, which sounds an awful lot like the smartphone equivalent of the Beowulf clusters of the ‘90s, which saw researchers cobble together supercomputers from consumer PCs. UCSD is also home to the San Diego Supercomputing Center. Kastner told us the plan is to make the cluster available to teams working at the center, which suggests we could see a High-Performance Linpack run before long. The full smartphone cluster is expected to launch this fall. Depending on how well the initial phase goes, we're told the cluster could grow even larger. This is far from the only unorthodox cluster we’ve seen in recent memory. Just up the Pacific coast from San Diego, UC Santa Barbara deployed what at the time was the largest Raspberry Pi cluster ever. The system, built in collaboration with Oracle, featured 1,050 Raspberry Pi 3B+ single board computers. More recently, we came across a tiny cluster developed by Gigabyte that packed 40 Intel Lunar Lake notebook processors, each with eight cores and 32 GB of memory, into a system the size of a pizza box. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/on-prem/2026/06/18/2000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud/5258035"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 23:39:28 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/on-prem/2026/06/18/2000-retired-google-pixel-phones-get-a-second-life-as-a-private-cloud/5258035"
+      },
+      "status": "supported"
+    }
+  ]
+}

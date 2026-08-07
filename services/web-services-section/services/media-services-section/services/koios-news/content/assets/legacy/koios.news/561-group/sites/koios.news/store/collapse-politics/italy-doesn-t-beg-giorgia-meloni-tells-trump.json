@@ -1,0 +1,69 @@
+{
+  "subject": "italy-doesn-t-beg-giorgia-meloni-tells-trump",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Italy Doesn’t ‘Beg,’ Giorgia Meloni Tells Trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/world/europe/meloni-trump-italy.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/world/europe/meloni-trump-italy.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/world/europe/meloni-trump-italy.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "President Trump said the Italian leader had “begged” him to take a photo together at the Group of 7 summit in France. The remarks come as their once-friendly relationship has frayed."
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/world/europe/meloni-trump-italy.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:44:45 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/world/europe/meloni-trump-italy.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

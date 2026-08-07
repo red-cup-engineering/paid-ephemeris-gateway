@@ -1,0 +1,69 @@
+{
+  "subject": "uk-inflation-unexpectedly-stays-at-2-8-with-higher-transport-costs-offset-by-slower-food-price-rises-as-it-happened",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK inflation unexpectedly stays at 2.8% with higher transport costs offset by slower food price rises – as it happened"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Food prices rose at the slowest rate since December 2024 with declines in inflation for meat, cheese, vegetables and cheese</p><p>UK house price inflation has picked up while rents are rising at a slower pace, according to official figures.</p><p>Average monthy private rents rose at an annual rate of 3.3% to £1,383 in My, down from 3.5% in April, <a href=\"https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/privaterentandhousepricesuk/june2026\">according to the Office for National Statistics</a>.</p><p>It’s a key reason why headline CPI unexpectedly stayed at 2.8%, despite upward pressure from air fares and a quirk related to road tax. Food prices fell in May relative to April, a trend we’ve also seen in the eurozone and Eastern Europe. If anything, the latest producer price data suggests food inflation will continue to fall sharply over the next couple of months. That will gradually change, but it’s a reminder that the energy price spike is unlikely to reach its peak impact on food inflation until the first quarter of next year.</p><p>In general, it’s too early to see much impact from the Middle East crisis beyond fuel prices. Services inflation is bouncing around, partly due to the timing of Easter this year, but the Bank of England’s preferred gauge of “core services” – which excludes volatile and indexed categories – has been more stable just below 4%. The BoE’s own “Decision Maker Panel” of CFOs points to services inflation staying around current levels through the summer.</p> <a href=\"https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 14:19:59 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/17/uk-inflation-unexpectedly-unchanged-higher-transport-costs-offset-slower-food-price-rises-oil-federal-reserve-iran-war-live-updates"
+      },
+      "status": "supported"
+    }
+  ]
+}

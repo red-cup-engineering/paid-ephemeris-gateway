@@ -1,0 +1,30 @@
+{
+  "type": "BlockchainTrashpandaVirtualsPilotBuyerProvisioningEvidence",
+  "recordedAt": "2026-07-22T18:55:32.940Z",
+  "purpose": "one isolated internal operational-lifecycle pilot purchase only",
+  "agent": {
+    "id": "019f8b2b-4249-7c8b-b0ef-a27155daefde",
+    "name": "Trashpanda Pilot Buyer",
+    "wallet": "eip155:8453:0x987bc9a5c75ed0eda174bf4470df2c3e755ed7eb",
+    "signerPolicy": "restricted ACP-only",
+    "signerApproval": "completed"
+  },
+  "separation": {
+    "yanagiRecoveryWallet": "eip155:8453:0x224c08a8526751887a83e2711b167f890c6d078d",
+    "yanagiSellerOperatorWallet": "eip155:8453:0x9e1e497e38b776db1a79f0db9dd558bcca8b26fc",
+    "distinctFromRecovery": true,
+    "distinctFromSeller": true,
+    "recoveryWalletCommercialRuntimeUse": false
+  },
+  "credentialEvidence": {
+    "privateSignerRecorded": false,
+    "mnemonicRecorded": false,
+    "runtimeCredentialRecorded": false
+  },
+  "economicClassification": {
+    "externalDemand": false,
+    "willingnessToPayEvidence": false,
+    "productionPricingEvidence": false,
+    "valueCreatedRecognition": "operational-validation-only"
+  }
+}

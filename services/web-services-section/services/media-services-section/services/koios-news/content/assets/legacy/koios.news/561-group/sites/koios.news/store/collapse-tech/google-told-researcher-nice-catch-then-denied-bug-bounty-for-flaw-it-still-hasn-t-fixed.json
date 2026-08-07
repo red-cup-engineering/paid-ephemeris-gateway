@@ -1,0 +1,69 @@
+{
+  "subject": "google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasn-t-fixed",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Google told researcher 'Nice catch!' Then denied bug bounty for flaw it still hasn't fixed"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/18/google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasnt-fixed/5258076"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/security/2026/06/18/google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasnt-fixed/5258076"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/18/google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasnt-fixed/5258076"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "EXCLUSIVE Google has a security hole in a Kubernetes operator that could allow attackers to bypass Google Cloud Platform (GCP) identity and access protections and gain full control over any organization's cloud environment. Or it has a serious communication and transparency problem when it comes to its bug bounty programs. Maybe both. Researcher and frequent cloud bug hunter Justin O'Leary told us that he found and reported to Google a major flaw that allows any Kubernetes namespace user to bypass GCP's Identity and Access Management (IAM) controls and therefore gain root access to managing an organization's cloud resources. Google initially rated the bug high priority and high severity, with a rep telling O'Leary \"Nice Catch!\" Then, the cloud giant changed course and told O'Leary and The Register that there's no vulnerability, so no fix and no reward payout. The bug report, however, is still marked high-priority and accepted. O'Leary spoke exclusively with The Register about the vulnerability, which he named ConfigConfusion, and what has happened since he reported it to Google on March 8. He is also releasing a blog post with more details. It stems from an issue in Config Connector, an open source Kubernetes add-on that lets users manage Google Cloud resources through Kubernetes. According to O'Leary, Config Connector doesn't perform an authorization check, and this allows any Config Connector service account with org-level permissions to bypass Identity and Access Management (IAM) authorization and gain the highest level of control (roles/owner) to an entire GCP Organization – the root node of all of a company's resources within Google Cloud. On March 27, a Google security engineer accepted O'Leary's report and told him: \"Nice catch!\" The employee said that they filed a bug based on O'Leary's report with the relevant product team and assured him the Chocolate Factory's security squad would work with relevant Google Cloud people to fix the flaw. \"We'll work with the product team to ensure this issue is address. We'll let you know when the issue was fixed,\" the engineer said. \"In the meantime, review the payment option selected in your bughunters.google.com profile.\" Google assigned the bug P1 priority and S1 severity, signifying a flaw worthy of urgent repair because it affects a large percentage of users and can disrupt core organizational functions. \"I figured that was the end of that,\" O'Leary said in a phone interview with The Register. Eleven days later, on April 7, he received a new message from a Google Security Bot reversing the earlier decision. The Reg viewed the email, and O'Leary included a screenshot in his Thursday writeup. The message said that the Cloud Vulnerability Reward Program panel decided that the \"security impact of this issue does not meet the criteria to qualify for a reward.\" After reviewing the bug report, Google determined the software \"is working as intended,\" the message continued. It also noted that the program's decision not to pay a bounty \"does not mean that the product team won't fix the issue.\" Nearly three months later, the case remains P1/S1 with the status \"in progress (accepted).\" Google hasn't assigned a CVE or issued a fix. O'Leary didn't receive any reward for his research. This isn't the first time this has happened to O'Leary – or other security researchers submitting bug bounty reports. O'Leary had a similar experience with Microsoft earlier this year. In a story that has become all too familiar among bug hunters, O'Leary disclosed a privilege escalation vulnerability in Azure Backup for AKS. Microsoft rejected his report – and then silently patched the flaw without assigning a CVE or publishing a security advisory. \"This is a pattern,\" O'Leary told us. \"This is just how these trillion-dollar companies deal with people like me. In my day job, we use GKE, and it's incredibly frustrating on my end, when I find a critical vulnerability in the system that's being widely used, and I can't even get the vendor to patch their own stuff.\" Google's response When The Reg asked Google about O'Leary's situation, the company told us that it didn't issue a bug bounty reward because there's no vulnerability. “The issue reported does not qualify for a reward because the GCP IAM authorization bypass is only exploitable if an attacker has access to a Config Connector Service Account that’s been granted the Organization Admin role by the organization (i.e., it is privileged),\" a Google spokesperson said in an email to The Register. \"Additionally, an attacker would first need to gain entry to an organization's environment (e.g., an exposed container) in order to leverage the privileged Config Connector instance and execute commands with administrative authority, such as the IAM bypass,\" the spokesperson continued. \"Granting this level of access to the Config Connector Service Account goes against Google Cloud’s publicly shared best practices and the principle of least privilege.\" Google did not answer The Register's questions about why the bug report case remains marked in progress – and not closed – on its end of things. O'Leary told us this is the same explanation he received. And he doesn't buy it. Yes, the Config Connector service account does need org-level permissions to manage resources across multiple GKE clusters. But Google's own documentation instructs users how to do this, he noted. We confirmed this as well. Moreover, \"having those permissions doesn't mean any namespace user should be able to abuse them,\" O'Leary posited. \"A developer with kubectl access to one namespace – and zero GCP IAM permissions – should not be able to become Organization Owner. They also shouldn't be able to impersonate any service account in the project with no audit trail.\" According to O'Leary: \"The vulnerability is the missing authorization check. Config Connector executes privileged operations on behalf of users without verifying those users are authorized.\" Three lines, five seconds, full admin control In a video demonstrating ConfigConfusion, O'Leary shows how an attacker can write three lines of YAML to achieve full administrative control of a GCP Organization in about five seconds. \"Config Connector has these missing validation checks,\" he said. \"Config Connector is basically a Google-managed Kubernetes operator, and I found that having these missing validation checks creates these confused deputies, which means there's no validation of who's asking for what.\" Confused deputies pose a major security challenge because they allow an entity that doesn't have permission to perform an action to force a more-privileged entity to perform the action. To exploit this issue, a user with kubectl access to one namespace – and no GCP permissions – submits a malicious IAMPolicyMember, which escalates the attacker's privileges. Config Connector passes the user-controlled organization ID directly to the GCP IAM API without performing an authorization check, making the user a GCP Organization owner. This gives the attacker full admin control over everything in the environment – projects, secrets, billing, and Gmail accounts. \"And there's no record of it,\" O'Leary said. This is because \"the attacker's Kubernetes identity never touches GCP IAM,\" he wrote in the disclosure. \"Config Connector executes the request using its own elevated credentials.\" 'Jenga' vulnerabilities According to O'Leary, Google has fixed this confused-deputy issue twice before in different services that access GCP. Tenable Research documented those issues and reported them to Google. One, called ImageRunner, abused permissions in Google Cloud Run to pull private Google Artifact Registry and Google Container Registry images in the same account. The second, ConfusedComposer, allowed an identity with edit permissions inside a Cloud Composer environment to escalate privileges to the default Cloud Build service account. \"This privilege-escalation vulnerability in GCP builds upon a broader attack class of vulnerabilities in cloud services that we call 'Jenga,'\" Tenable security researcher Liv Matan said at the time. ConfusedComposer \"exploits the somewhat-hidden cloud provider misconfigurations related to cloud services permissions to escalate privileges beyond intended access levels,\" Matan explained. \"This variant highlights how attackers can abuse interconnected services the cloud provider automatically deploys behind the scenes, as part of a service-orchestration process.\" Google ultimately added authorization checks to both Cloud Run and Cloud Composer. O'Leary says he doesn't understand why Google can't also add that check to Config Connector. Or perhaps he does. \"It's just me versus Google,\" he said. \"They can't do that same level of gaslighting to Tenable because they have PR teams and legal teams to fight them. I'm just a guy saying I don't understand how this is true\" – that is, how something can be both a high-severity, high-priority bug and also working as intended. \"And they just say: 'Well, it is true.'\" ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/18/google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasnt-fixed/5258076"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:00:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/18/google-told-researcher-nice-catch-then-denied-bug-bounty-for-flaw-it-still-hasnt-fixed/5258076"
+      },
+      "status": "supported"
+    }
+  ]
+}

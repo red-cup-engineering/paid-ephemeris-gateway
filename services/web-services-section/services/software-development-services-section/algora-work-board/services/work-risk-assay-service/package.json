@@ -1,0 +1,13 @@
+{
+  "name": "@rsc-quiescent/software-work-risk-assay-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/funder-reputation.mjs",
+    "./repo-trust": "./src/repo-trust.mjs"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

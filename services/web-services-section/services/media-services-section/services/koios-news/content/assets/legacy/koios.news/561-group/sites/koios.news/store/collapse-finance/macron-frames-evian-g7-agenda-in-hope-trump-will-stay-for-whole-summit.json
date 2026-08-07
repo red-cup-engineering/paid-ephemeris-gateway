@@ -1,0 +1,69 @@
+{
+  "subject": "macron-frames-evian-g7-agenda-in-hope-trump-will-stay-for-whole-summit",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Macron frames Évian G7 agenda in hope Trump will stay for whole summit"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>US president left last meeting early, but world leaders aim to end Ukraine war and push for resolution in Gaza and Iran</p><p>Emmanuel Macron, the host of the G7 summit in Évian-les-Bains, has framed an agenda to make it as palatable as possible to his guest of honour, but the French president has no idea if Donald Trump, a haphazard summit attender, will last the full three days – or disrupt the proceedings every hour he stays.</p><p>The US president <a href=\"https://www.theguardian.com/us-news/2025/jun/17/trump-iran-g7-europe-israel-deal\">quit the last G7 summit</a> in Kananaskis, Canada, early <a href=\"https://www.theguardian.com/us-news/2025/jun/16/trump-g7-summit-middle-east-israel-iran\">to work on the Iran conflict</a>, and this year, <em>plus </em><em>ça change</em>, Iran may also draw presidential attention. For good measure, he insulted this summit’s host before leaving Canada last year, describing Macron as “publicity seeking” and adding: “Purposefully or not, Emmanuel Macron always gets it wrong.”</p> <a href=\"https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 04:00:02 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/macron-evian-g7-agenda-summit-trump"
+      },
+      "status": "supported"
+    }
+  ]
+}

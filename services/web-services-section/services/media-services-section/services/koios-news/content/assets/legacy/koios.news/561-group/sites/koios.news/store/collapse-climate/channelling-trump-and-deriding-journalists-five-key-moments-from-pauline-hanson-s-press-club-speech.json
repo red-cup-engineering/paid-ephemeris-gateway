@@ -1,0 +1,69 @@
+{
+  "subject": "channelling-trump-and-deriding-journalists-five-key-moments-from-pauline-hanson-s-press-club-speech",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Channelling Trump and deriding journalists: five key moments from Pauline Hanson’s Press Club speech"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>One Nation leader uses platform to rail against multiculturalism, the media and the climate change ‘hoax’ </p><ul><li><p><a href=\"https://www.theguardian.com/australia-news/live/2026/jun/17/australia-news-live-victoria-marines-weapons-pauline-hanson-one-nation-national-press-club-labor-childcare-medicare-anthony-albanese-ntwnfb\">Follow our Australia news live blog for latest updates</a></p></li><li><p>Get our <a href=\"https://www.theguardian.com/email-newsletters?CMP=cvau_sfl\">breaking news email</a>, <a href=\"https://app.adjust.com/w4u7jx3\">free app</a> or <a href=\"https://www.theguardian.com/australia-news/series/full-story?CMP=cvau_sfl\">daily news podcast</a></p></li></ul><p>A nationally televised address to the National Press Club was perhaps the clearest proof yet of Pauline Hanson’s arrival in the mainstream of Australian politics.</p><p>The One Nation leader used the platform to rail against multiculturalism, the climate change “hoax” and the media in a speech that was interrupted by a protest highlighting her opposition to wage rises for the lowest-paid workers.</p> <a href=\"https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 07:35:14 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/australia-news/2026/jun/17/channelling-trump-deriding-journalists-five-key-takeaways-from-pauline-hansons-press-club-speech-ntwnfb"
+      },
+      "status": "supported"
+    }
+  ]
+}

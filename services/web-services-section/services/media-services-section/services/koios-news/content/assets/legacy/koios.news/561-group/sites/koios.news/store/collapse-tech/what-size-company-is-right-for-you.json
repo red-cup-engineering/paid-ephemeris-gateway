@@ -1,0 +1,69 @@
+{
+  "subject": "what-size-company-is-right-for-you",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "What Size Company Is Right for You?"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/fortune-500-companies-vs-startups"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://spectrum.ieee.org/fortune-500-companies-vs-startups"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/fortune-500-companies-vs-startups"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "This article is crossposted from IEEE Spectrum ’s careers newsletter. Sign up now to get insider tips, expert advice, and practical strategies, written i n partnership with tech career development company Parsity and delivered to your inbox for free! Small Startup, Mid-Size Company, or Fortune 100? The Pros and Cons Early in my career, I walked into a shared office space on my first day as a full stack software developer and sat down between the CTO and the CEO to get onboarded. There were four of us in total. Before the day was over, I received my first assignment. This was one of the most formative—and most stressful—experiences of my professional life. In the decade since, I have worked at half a dozen companies including Fortune 100 firms, mid-size startups, and companies you’ve probably never heard of. I have also spoken with roughly a thousand developers at various stages of their careers. Most engineers entering the field are obsessed with landing at Google, Meta, or Amazon. But those roles represent approximately 0.6 percent of software engineering positions. For most of us, the real choice is between a small startup, a mid-size company, and a large enterprise. Each comes with tradeoffs, and your experience will differ from mine. What follows is an honest account of what you might reasonably expect. The Small Startup Pros Your work actually matters. A feature you build might determine whether the company closes its next funding round. You gain exposure to the full spectrum of the business, from deployment pipelines to sales and operations and everything in between. You wear many hats out of necessity. For engineers who want to grow quickly and understand how a product is built end to end, few environments move faster. Cons Everything is on fire, always. Work-life balance is difficult to maintain when every release feels critical. Priorities shift without warning and culture tends to reflect the personality of whoever has the most influence in a small room. Startups optimize for speed over craft which means engineers learn to move fast but don’t always learn to build well, and that gap can follow you into your next role. The Mid-Size Company Pros “So this is how a real business works.” There is process, documentation, a quality assurance function, and some form of career structure. The team is large enough to offer a diversity of experience and perspective. Stability is a myth, especially nowadays, but it is considerably more predictable than an early-stage startup. Cons “So this is how a real business works?” Processes that enable quality also produce friction. Access controls, approval workflows, and cross-team dependencies slow things down. The career ladder exists but it might stop at senior engineer. Without significant organizational growth, your salary and title can plateau early. The Large Enterprise Pros That badge on your LinkedIn profile just bought you credibility for the next five years. Compensation at this level can be meaningfully higher, particularly when equity is included. The career ladder is long and clearly defined. Engineering practices at mature organizations tend to be more rigorous, and a well-known employer carries market value in future job searches. Cons It’s slow. Technology stacks often lag industry trends by several years. Political dynamics shape advancement as much as technical ability does. Skill atrophy is a risk when you spend years on a narrow slice of a legacy system. You are now a small fish in a big pond and it will be harder to get noticed. The Roadmap I Would Take If I Could Start Over According to a recent Stack Overflow survey, 47 percent of professional developers work at companies with fewer than 100 employees. This may surprise you because social media is dominated by engineers who work at the most well known companies on the planet. The path most engineers imagine for themselves and the path most engineers actually walk are two very different things. If I could do it again, here’s the path I’d take: Start at a small company to build breadth and learn how a business works across functions. This also provides some room to experiment within different roles. Next, move to a mid-size organization with a clear goal of reaching a senior or leadership role. Making a lateral move is easier than trying to get up-leveled at the next company. Finally, target a more mature company where a leadership position opens the door to meaningful equity and long-term growth (aka stocks and bonuses). Each stop builds something the others cannot. The startup gives you range. The mid-size company gives you a taste of how larger orgs operate. The enterprise gives you leverage, credibility and maybe even some stability. Your path will not look like mine. At a five person startup, I had no idea what I was in for. Looking back, I would not trade it. Just know what you are signing up for before you sign. —Brian Reclaiming Social Engineering for Good “Social engineering” is a concept that has become associated with phishing, in which scammers manipulate people into disclosing personal information. But shaping human behavior in this way doesn’t have to have such negative effects. Systems engineer Guru Madhavan argues that we need to reclaim the term and govern the practice to defend ourselves from bad actors and benefit from social engineering’s good side. Read more here. Get Your Medical Mobile App Verified by IEEE Smartphone apps are increasingly used to help manage medical conditions, but many of these have not been verified by any regulatory agencies. To help ensure these apps are credible, the IEEE Standards Association recently launched a directory listing apps that have been vetted by experts for technical soundness, ethical design, data security and privacy, and clinical efficacy. The registry will be publically available at no cost, and developers can now apply for approval. Read more here. Finding Success in Industry as a Chip Designer A veteran chip designer reflects on what he learned when moving from academia to industry, where the goal changes from proof of concept to ensuring a design works reliably at scale. Differences in risk tolerance, he discovered, lead to varying approaches in the rapidly growing semiconductor industry. Read more here."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/fortune-500-companies-vs-startups"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 09 Jun 2026 18:41:14 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/fortune-500-companies-vs-startups"
+      },
+      "status": "supported"
+    }
+  ]
+}

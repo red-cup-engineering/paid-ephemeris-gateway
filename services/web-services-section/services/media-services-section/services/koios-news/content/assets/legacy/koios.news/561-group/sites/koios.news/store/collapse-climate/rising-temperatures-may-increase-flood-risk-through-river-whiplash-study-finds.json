@@ -1,0 +1,69 @@
+{
+  "subject": "rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rising temperatures may increase flood risk through river ‘whiplash’, study finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Sudden shifts from wet to dry weather, or vice versa, may foil typical drought- and flood-prevention measures</p><p>Rising temperatures may trigger a dangerous increase in “hydroclimatic whiplash” in rivers that would make traditional approaches to flood and drought planning insufficient, a study has found.</p><p>As temperatures rise owing to the worsening climate crisis, rivers will experience increasingly rapid transitions between heavy downpours and long dry spells – called hydroclimatic whiplash events – because a warmer atmosphere holds more moisture, intensifying rainfall extremes.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 13:24:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds"
+      },
+      "status": "supported"
+    }
+  ]
+}

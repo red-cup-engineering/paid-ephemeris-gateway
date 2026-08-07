@@ -1,0 +1,69 @@
+{
+  "subject": "it-s-a-scam-americans-express-unease-over-spacex-s-influence-on-retirement-savings",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘It’s a scam’: Americans express unease over SpaceX’s influence on retirement savings"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Guardian readers in the US share concerns about how the SpaceX IPO and AI boom affect their retirement accounts</p><p>Elon Musk became the world’s first trillionaire last week after <a href=\"https://www.theguardian.com/science/2026/jun/12/spacex-stock-price-ipo-spcx\">SpaceX debuted on the stock market </a>with a valuation of $1.77tn.</p><p>Millions of Americans could soon become indirect investors in SpaceX and other emerging AI-focused companies as US markets increasingly shift toward AI-driven investments.</p> <a href=\"https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 12:00:33 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/science/2026/jun/19/spacex-retirement-savings-elon-musk"
+      },
+      "status": "supported"
+    }
+  ]
+}

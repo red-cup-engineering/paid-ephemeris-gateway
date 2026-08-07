@@ -1,0 +1,69 @@
+{
+  "subject": "black-agenda-report-june-19-2026",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Black Agenda Report June 19, 2026"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-19-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/black-agenda-report-june-19-2026"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-19-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Black Agenda Report June 19, 2026</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-19T06:12:57+05:30\" title=\"Friday, June 19, 2026 - 06:12\" class=\"datetime\">Fri, 06/19/2026 - 06:12</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay; encrypted-media\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2342207624%3Fsecret_token%3Ds-ZwphEglJ4Oq&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\"></iframe></p> <div style=\"color:#cccccc;font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-size:10px;font-weight:100;line-break:anywhere;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:normal;\"><a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733\" title=\"Black Agenda Radio\" target=\"_blank\">Black Agenda Radio</a> · <a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733/black-agenda-report-june-19/s-ZwphEglJ4Oq\" title=\"Black Agenda Report June 19, 2026\" target=\"_blank\">Black Agenda Report June 19, 2026</a></div> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>In this week’s segment, we discuss the increase in racist mob violence against Black and brown immigrants in Britain. First, we have a discussion of housing policy in New York, and why low and moderate-income Black people need rent regulations and other housing protections.</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/US Politics\">US Politics</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/New York City\">New York City</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Ireland\">Ireland</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Racism\">Racism</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Rent\">Rent</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/white supremacy\">white supremacy</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/housing\">housing</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/affordable housing\">affordable housing</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/riots\">riots</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-19-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:42:57 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-19-2026"
+      },
+      "status": "supported"
+    }
+  ]
+}

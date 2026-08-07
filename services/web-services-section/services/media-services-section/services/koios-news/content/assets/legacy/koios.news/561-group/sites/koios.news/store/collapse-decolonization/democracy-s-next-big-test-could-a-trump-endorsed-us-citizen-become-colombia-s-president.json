@@ -1,0 +1,69 @@
+{
+  "subject": "democracy-s-next-big-test-could-a-trump-endorsed-us-citizen-become-colombia-s-president",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Democracy’s next big test: could a Trump-endorsed US citizen become Colombia’s president?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/democracys-next-big-test-could-a-trump-endorsed-us-citizen-become-colombias-president-284445"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://theconversation.com/democracys-next-big-test-could-a-trump-endorsed-us-citizen-become-colombias-president-284445"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/democracys-next-big-test-could-a-trump-endorsed-us-citizen-become-colombias-president-284445"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>On Sunday, voters in Colombia will choose their next president in a contest that could have implications far beyond the country’s borders.</p> <p>One of the leading candidates is <a href=\"https://www.as-coa.org/articles/colombias-2026-presidential-candidates-cepeda-de-la-espriella-and-valencia\">Abelardo de la Espriella</a>, a far-right celebrity lawyer who has been endorsed by US President Donald Trump and has pledged to take an “iron fist” approach to crime if elected.</p> <p>De la Espriella led <a href=\"https://www.aljazeera.com/news/2026/6/2/celebration-shock-and-scepticism-follow-colombias-presidential-election\">Iván Cepeda</a>, a philosopher and veteran human-rights senator, after the first round of voting, and some polls make him the favourite. But nothing is settled. Undecided voters and the large number of Colombians who stayed home in the first round could still hand the presidency to Cepeda.</p> <p>Should de la Espriella win, the wave that carried other far-right leaders to victory in Latin America – Nayib Bukele (El Salvador), Javier Milei (Argentina) and José Antonio Kast (Chile) – would claim its largest prize yet.</p> <h2>The candidate, and the danger</h2> <p>De la Espriella, who goes by the nickname “El Tigre” (“the Tiger”), is more a performer than a political candidate. For starters, he has no political experience. At rallies, he wears the <a href=\"https://www.infobae.com/colombia/2026/06/04/la-justicia-prohibe-a-abelardo-de-la-espriella-usar-la-camiseta-de-la-seleccion-colombia-en-su-campana-esto-dicta-el-documento-oficial/\">Colombian national football jersey</a> (even after a judge ordered him to stop) and finishes his speeches with a military salute and a fiery slogan, “Firmes por la Patria” (“Firm for the Homeland”).</p> <p>On policy, he is unmistakably far right. He pledges to end Colombia’s decades-long armed civil conflict with a <a href=\"https://justiceforcolombia.org/who-is-de-la-espriella-the-colombian-far-rights-presidential-candidate/\">military offensive</a> in just 90 days. He has also promised to build mega prisons (like Bukele in El Salvador) to wipe out criminals he likens to cockroaches and rats.</p> <p>And he has threatened to <a href=\"https://www.semana.com/politica/articulo/abelardo-de-la-espriella-anuncia-que-si-es-presidente-retira-a-colombia-de-la-onu-la-oea-y-la-cidh-son-directorios-politicos-de-la-izquierda-que-no-han-servido/202528/\">pull Colombia out</a> of the United Nations, the Organisation of American States (OAS) and the Inter-American Human-Rights System. </p> <p>International relations scholar Arlene Tickner <a href=\"https://x.com/arlenebtickner/status/2065548565074608264\">calls</a> the idea absurd and self-defeating. Multilateral forums, she argues, are where middle powers like Colombia build alliances and stop more powerful nations from always getting their way. </p> <p>De la Espriella’s economic plan would shrink the state <a href=\"https://www.valoraanalitik.com/asi-es-el-plan-economico-y-fiscal-de-abelardo-de-la-espriella-revivira-la-industria-petrolera-y-recortara-el-tamano-del-estado/\">by 40% and result in some 700,000 public employees and contractors</a> losing their jobs. This would be disastrous for one of the world’s most unequal countries. </p> <p>His legal clients have included <a href=\"https://www.usnews.com/news/world/articles/2026-05-28/colombia-presidential-candidate-de-la-espriella-proposes-mega-prisons-crime-crackdown\">Alex Saab</a>, the alleged money-laundering frontman for Venezuela’s Maduro government, and others linked to paramilitary groups. A 2009 inquiry into his own alleged paramilitary links was <a href=\"https://colombiareports.com/abelardo-de-la-espriella/\">shelved by prosecutors</a>; he denies any wrongdoing.</p> <h2>A president sworn to Washington?</h2> <p>Though de la Espriella is a self-styled “defender of the homeland”, he is also a <a href=\"https://thehill.com/policy/international/5908360-colombia-el-tigre-trump/\">naturalised US citizen</a> and registered Republican who lived in Miami. </p> <p>To become a US citizen, de la Espriella swore the <a href=\"https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test/naturalization-oath-of-allegiance-to-the-united-states-of-america\">US oath of allegiance</a>. This required renouncing “all allegiance and fidelity” to any foreign state and pledging to bear arms for the United States. </p> <p>Yet, how could a president direct the nation’s foreign relations and command its armed forces, as Colombia’s <a href=\"https://www.banrep.gov.co/en/regulation/political-constitution-colombia-1991\">constitution</a> requires, having sworn to renounce allegiances to other states?</p> <p>Colombia’s ban on dual nationals serving in high office exempts those born in Colombia, as de la Espriella was. But the tensions over his US ties run deeper. </p> <p>De la Espriella has said he would <a href=\"https://efectococuyo.com/politica/espriella-cepeda-segunda-vuelta-espera-relaciones-venezuela/\">conduct relations with Venezuela through the US State Department</a> following the US kidnapping of Venezuelan President Nicolás Maduro in January. This would hand Washington control over one of Colombia’s most important and complex relationships. </p> <p>And on June 2, Trump gave de la Espriella a “<a href=\"https://www.usnews.com/news/world/articles/2026-06-02/trump-endorses-columbian-presidential-candidate-de-la-espriella\">complete and total endorsement</a>” – a move decried by several US lawmakers as “<a href=\"https://chuygarcia.house.gov/sites/evo-subsites/chuygarcia-evo.house.gov/files/evo-media-document/letter-to-admin-re-colombia-6.17.26-final.pdf\">brazen interference</a>” in Colombia’s election.</p> <p>Days later, US immigration agents arrested the Colombian activist <a href=\"https://www.newsweek.com/trump-admin-responds-ice-detains-beto-coral-colombian-president-ally-12087542\">Beto Coral</a>, who had filed a complaint against de la Espriella in US courts and campaigned against him in Miami. One congressman called the arrest “<a href=\"https://x.com/RepMcGovern/status/2067336535410930086\">deeply alarming</a>”. The Colombian-born Republican Senator Bernie Moreno <a href=\"https://x.com/berniemoreno/status/2067255656332116216\">applauded it</a>, though, telling Coral to “have a nice life back in Colombia”.</p> <h2>Why the message lands</h2> <p>Why, then, would Colombians rally behind a man so plainly at odds with their own interests? </p> <p>For one, the media shapes what Colombians see. According to <a href=\"https://rsf.org/en/latin-american-media-under-control-families-economic-and-political-elites\">Reporters Without Borders</a>, Colombian media is dominated by a few business families, and, as <a href=\"https://academic.oup.com/anncom/advance-article/doi/10.1093/anncom/wlaf003/8125714\">scholars note</a>, they tend to cover the left more harshly than the right. For years, the reformist Petro government has been painted as a disaster, while entrenched inequality is just accepted.</p> <p>De la Espriella has also played on people’s fears over crime, and <a href=\"https://www.pbs.org/newshour/world/pro-trump-lawyer-de-la-espriella-pulls-ahead-in-colombias-presidential-race-with-promise-of-crime-crackdown\">this is landing among some voters</a>. Some critics blame Petro’s “<a href=\"https://www.cfr.org/articles/petros-total-peace-plan-turns-one-good-bad-and-ugly\">total peace</a>” plan with armed groups and gangs, and indeed, it has <a href=\"https://www.aljazeera.com/news/longform/2026/5/29/colombias-total-peace-plan-a-failure-or-unfinished-business-for-petro\">stumbled</a>. </p> <p>But Colombia’s homicide rate, near <a href=\"https://insightcrime.org/news/insight-crime-2025-homicide-round-up/\">26 per 100,000</a> people, is well below its early-1990s peak. </p> <p>And previous “iron fist” attempts by the government to crack down on violent armed groups led to one of the darkest moments in Colombian history – the <a href=\"https://justiceforcolombia.org/jep-peace-court-findings-increase-false-positive-army-killings-to-7837-victims/\">7,837 civilians</a> killed by soldiers in the early 2000s and dressed up as guerrillas to <a href=\"https://www.theguardian.com/world/2020/nov/19/colombia-false-positives-killings-general-mario-montoya-trial\">inflate their body counts</a>.</p> <p>A de la Espriella win would not only expand strongman rule in Latin America, it would give the Trump administration even greater sway over what happens in the region. On June 21, Colombians will decide whether the country that wrote one of Latin America’s boldest constitutions still trusts it to hold.</p><img src=\"https://counter.theconversation.com/content/284445/count.gif\" alt=\"The Conversation\" width=\"1\" height=\"1\" /> <p class=\"fine-print\"><em><span>Juan Zahir Naranjo Cáceres does not work for, consult, own shares in or receive funding from any company or organisation that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment.</span></em></p>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/democracys-next-big-test-could-a-trump-endorsed-us-citizen-become-colombias-president-284445"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-19T03:35:08Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/democracys-next-big-test-could-a-trump-endorsed-us-citizen-become-colombias-president-284445"
+      },
+      "status": "supported"
+    }
+  ]
+}

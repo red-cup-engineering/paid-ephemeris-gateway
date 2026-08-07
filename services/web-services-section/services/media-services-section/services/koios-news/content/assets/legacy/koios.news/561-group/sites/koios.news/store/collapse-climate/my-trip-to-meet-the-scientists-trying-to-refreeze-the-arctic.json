@@ -1,0 +1,69 @@
+{
+  "subject": "my-trip-to-meet-the-scientists-trying-to-refreeze-the-arctic",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "My trip to meet the scientists trying to refreeze the Arctic"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>In this week’s newsletter: The melting of the Arctic’s summer sea ice is the most visible upshot of the climate crisis. Refreezing it might be a long shot – but do drastic times call for drastic measures?</p><p>• <a href=\"https://www.theguardian.com/global/2022/sep/20/sign-up-for-the-down-to-earth-newsletter-our-free-environmental-email\">Don’t get Down to Earth delivered to your inbox? Sign up here</a></p><p>Speeding across rapidly melting Arctic ice on a snowmobile gave me a vivid feel for its beauty and fragility. The brilliant white landscape gleamed ahead, while the sky blue pools of meltwater jetted up on to my boots.</p><p>When I visited Cambridge Bay in northern Canada at the start of this month, the melt season had hit with brutal speed: temperatures were 5-10C above normal, kickstarting the melting almost overnight.</p><p><strong><a href=\"https://www.theguardian.com/global-development/2026/jun/17/armed-groups-colombian-farmers-election-run-off-guaviare-small-landowners-security-candidate\">Why farmers see Colombia’s knife-edge election as a battle for the Amazon’s future</a></strong></p><p><strong><a href=\"https://www.theguardian.com/news/2026/jun/14/jamaica-beach-access-crisis-plantation-tourism\">Jamaica’s beach access crisis: ‘We shouldn’t be forced to fight for what is already ours’</a></strong></p><p><strong><a href=\"https://www.theguardian.com/environment/2026/jun/15/shackleton-endurance-shipwrecks-global-heating-antarctic-underwater-protected-area\">‘The Antarctic is the last frontier’: the quest to save Shackleton’s Endurance</a></strong></p> <a href=\"https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:00:26 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/scientists-refreeze-arctic-melting-sea-ice"
+      },
+      "status": "supported"
+    }
+  ]
+}

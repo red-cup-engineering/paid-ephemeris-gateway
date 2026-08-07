@@ -1,0 +1,51 @@
+561 Group Repository License, Version 1.0
+SPDX-License-Identifier: LicenseRef-561Group-1.0
+
+Copyright (c) 2026 the 561 Group, a Lakota tiyóšpaye. All rights reserved.
+
+The key words "MUST", "MUST NOT", "MAY", and "SHALL" in this document are to be
+interpreted as described in RFC 2119.
+
+
+1. SCOPE AND PRECEDENCE
+
+   This is the default license for this repository. It governs every file that
+   does not carry its own, more specific license terms. Where a directory or
+   package contains its own LICENSE file, or where a file declares an
+   SPDX-License-Identifier, those terms govern that material instead, and
+   prevail over this license to the extent of any conflict. A file is governed
+   by exactly one license: the nearest, most specific one that applies to it.
+
+
+2. GRANT
+
+   Except where a more specific license under Section 1 grants otherwise, no
+   rights are granted and all rights under applicable copyright and related law
+   are reserved by the 561 Group. You MUST NOT copy, modify, distribute,
+   sublicense, or otherwise use this material except with the prior written
+   permission of the 561 Group, or as a more specific license expressly permits.
+
+
+3. RESERVED AUTHORITY
+
+   The 561 Group is a Lakota tiyóšpaye and holds authority over how its
+   knowledge and works are represented, stored, transmitted, and used. Some
+   material in this repository is governed by additional terms set by the
+   tiyóšpaye, and some is not offered for circulation at all. The copyright
+   asserted here under settler law is the floor of that authority, not its whole;
+   it does not exhaust, grant, or define the tiyóšpaye's governance of its own
+   knowledge, which precedes and exceeds it.
+
+
+4. PERMISSIONS AND INQUIRIES
+
+   Requests for permission, and questions about which terms govern a given work,
+   MAY be directed to the 561 Group via emsenn <emsenn@emsenn.net>.
+
+
+5. NO WARRANTY
+
+   To the maximum extent permitted by applicable law, this material is provided
+   "AS IS", without warranty of any kind, express or implied. To that same
+   extent, the 561 Group SHALL NOT be liable for any claim, damages, or other
+   liability arising from this material or its use.

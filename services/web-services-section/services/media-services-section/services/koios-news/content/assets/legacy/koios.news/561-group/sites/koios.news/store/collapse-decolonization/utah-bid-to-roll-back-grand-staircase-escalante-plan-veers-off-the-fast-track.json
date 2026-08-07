@@ -1,0 +1,69 @@
+{
+  "subject": "utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Utah bid to roll back Grand Staircase-Escalante plan veers off the fast track"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/news/utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "This story was originally published by Utah News Dispatch. Annie Knox Utah News Dispatch A plan from Sen. Mike Lee and Rep. Celeste Maloy to change how the federal government manages a Utah national monument is facing a steeper road ahead after moving slower than anticipated and missing a deadline.&nbsp; With support from the rest of Utah’s all-Republican congressional delegation, Lee and Maloy in March proposed undoing a Biden-era management plan for the Grand Staircase-Escalante National Monument spanning 1.9 million acres in southern Utah. Their effort drew intense opposition from environmental groups and Native American tribes.&nbsp;&nbsp; In Lee and Maloy’s view, the 2025 guidelines went too far in restricting uses like road access. The lawmakers noted neighboring rural counties opposed the restrictions, saying standards set by the first Trump administration were better for managing the protected land.&nbsp;&nbsp;&nbsp; Lee and Maloy invoked the Congressional Review Act , allowing Congress to review and overturn federal rules in an expedited process and by a simple majority of votes in the U.S. House and Senate. But the deadline for those votes came and went on the evening of Thursday, June 11, without any action from Congress. In a joint prepared statement, Lee and Maloy said they’re not abandoning their plan.&nbsp; “While the CRA pathway is no longer available for this measure, our focus on this issue is unchanged,” they said in the statement. “This was a procedural outcome, not a reflection of support for the underlying policy, and we are evaluating next steps. We remain committed to restoring our community’s voice in the monument’s future.” Legal experts told Utah News Dispatch in May that if successful, the effort would have caused&nbsp; immense uncertainty on the ground, &nbsp;leaving federal land managers guessing about how they’re supposed to do their jobs. Under the act, they’d be barred from using a “substantially similar” framework in the future, but it’s not clear how different their next steps would need to be.&nbsp; On Friday, June 12, a coalition of Native American tribes said the proposal would bring “devastating effects for the monument and for our peoples” and celebrated that the 2025 plan remains intact. “That plan, for the first time, heeded our voices and our Traditional Knowledge by establishing a framework for Tribal co-stewardship over our ancestral lands,” said Autumn Gillard, coordinator for the Grand Staircase-Escalante Inter-Tribal Coalition, and who is Southern Paiute.&nbsp;&nbsp; Gillard said&nbsp; use of the Congressional Review Act &nbsp;to overturn the monument guidelines would have been a “a direct strike against the Federal government’s duty to consult with Tribes.” It would also be the first time Congress used the act to undo a management plan for a national monument.&nbsp; The current plan protects cultural places, petroglyphs, pictographs and structures that remain important for traditions, ceremonies, and domestic life, Gillard said, and removing it would have raised the risk of looting and vandalism.&nbsp; The management plan also sets guidelines for camping, cattle grazing and other uses inside the monument. Changes to the plan could alter which activities are allowed and where within the monument they’re permitted, but would not affect its size.&nbsp; The coalition said now that the fast-track window has closed, Lee would need 60 votes that he’s unlikely to get in order to overcome the Senate filibuster, a procedural maneuver to delay legislation. The monument was created by former President Bill Clinton in 1996, over the objections of Utah officials. Clinton used his power under the Antiquities Act, a century-old law giving presidents authority to declare monuments to protect places of cultural, historical and scientific significance. President Donald Trump drastically reduced the monument’s boundaries in 2017, before President Joe Biden restored it to its original size in 2021.&nbsp; The post Utah bid to roll back Grand Staircase-Escalante plan veers off the fast track appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 20:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/utah-bid-to-roll-back-grand-staircase-escalante-plan-veers-off-the-fast-track/"
+      },
+      "status": "supported"
+    }
+  ]
+}

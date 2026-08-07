@@ -1,0 +1,69 @@
+{
+  "subject": "italy-s-meloni-once-trump-s-closest-ally-in-europe-says-he-made-up-a-story-about-her",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Italy's Meloni, once Trump's closest ally in Europe, says he made up a story about her"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864264/meloni-trump-fight-beg"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5864264/meloni-trump-fight-beg"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864264/meloni-trump-fight-beg"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "\"Italy and I do not beg,\" Meloni said in a video rebuke posted on social media Friday. Italy's top diplomat, meanwhile, said he was cancelling a visit to the U.S because of the alleged remarks. (Image credit: Geert Vanden Wijngaert)"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864264/meloni-trump-fight-beg"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:32:35 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864264/meloni-trump-fight-beg"
+      },
+      "status": "supported"
+    }
+  ]
+}

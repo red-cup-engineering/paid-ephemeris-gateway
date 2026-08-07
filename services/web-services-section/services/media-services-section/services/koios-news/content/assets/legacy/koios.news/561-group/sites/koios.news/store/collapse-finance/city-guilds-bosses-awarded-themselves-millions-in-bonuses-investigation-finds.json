@@ -1,0 +1,69 @@
+{
+  "subject": "city-guilds-bosses-awarded-themselves-millions-in-bonuses-investigation-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "City & Guilds bosses awarded themselves millions in bonuses, investigation finds"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Report finds Kirstie Donnelly and Abid Ismail paid bonuses ‘without authorisation or knowledge’ of superiors </p><p>The two most senior executives at City &amp; Guilds awarded themselves millions of pounds of bonuses “without authorisation from, or knowledge of” their superiors, an internal investigation into last year’s £166m sale of the vocational charity has found.</p><p>The report on the conduct of Kirstie Donnelly, the former chief executive of City &amp; Guilds, and the body’s finance chief, Abid Ismail, sets out how the pair “directly authorised and paid bonuses to themselves” of nearly £3m combined.</p> <a href=\"https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:13:46 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bosses-city-guilds-millions-bonuses-investigation-kirstie-donnelly-abid-ismail"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Runtime-generated farm data is regenerated, not tracked.
+logs/*.jsonl
+logs/**/*.jsonl
+records/search-console.json

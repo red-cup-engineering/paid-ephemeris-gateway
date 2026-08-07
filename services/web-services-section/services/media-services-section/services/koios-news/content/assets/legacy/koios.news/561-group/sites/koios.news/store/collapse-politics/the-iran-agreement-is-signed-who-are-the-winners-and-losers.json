@@ -1,0 +1,69 @@
+{
+  "subject": "the-iran-agreement-is-signed-who-are-the-winners-and-losers",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Iran agreement is signed. Who are the winners and losers?"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861808/the-iran-agreement-is-signed-who-are-the-winners-and-losers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5861808/the-iran-agreement-is-signed-who-are-the-winners-and-losers"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861808/the-iran-agreement-is-signed-who-are-the-winners-and-losers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The U.S. and Iran have signed a preliminary agreement. Who are the winners and losers? We unpack what we know."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861808/the-iran-agreement-is-signed-who-are-the-winners-and-losers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:26:16 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861808/the-iran-agreement-is-signed-who-are-the-winners-and-losers"
+      },
+      "status": "supported"
+    }
+  ]
+}

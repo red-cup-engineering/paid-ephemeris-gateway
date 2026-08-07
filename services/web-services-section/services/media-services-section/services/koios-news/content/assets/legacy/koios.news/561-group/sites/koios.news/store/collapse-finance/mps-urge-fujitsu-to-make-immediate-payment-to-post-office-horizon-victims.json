@@ -1,0 +1,69 @@
+{
+  "subject": "mps-urge-fujitsu-to-make-immediate-payment-to-post-office-horizon-victims",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "MPs urge Fujitsu to make ‘immediate’ payment to Post Office Horizon victims"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Liam Byrne, who chairs Commons business committee, says too many operators are still waiting for redress</p><p>The Japanese tech company at the centre of the Post Office IT scandal is facing calls from a parliamentary committee to make an “immediate” payment towards the compensation bill for victims.</p><p>Fujitsu supplied the faulty Horizon software to the UK Post Office, which led to branch operators being wrongly prosecuted over discrepancies in their business accounts.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:00:26 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/fujitsu-immediate-payment-post-office-horizon-victims"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "the-right-wants-money-for-defence-it-should-start-with-mod-wastefulness-or-even-the-pensioner-triple-lock-polly-toynbee",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The right wants money for defence. It should start with MoD wastefulness – or even the pensioner triple lock | Polly Toynbee"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>There is nothing left to be squeezed from disabled people or families, yet some continue to bang the same old drum</p><p>What’s it to be, warfare or welfare, social or military spending, guns or butter? Hermann Göring coined that phrase calling for re-armament, “Guns will make us powerful, butter will only make us fat.” In her “<a href=\"https://www.margaretthatcher.org/document/102939\">Britain awake</a>” speech, Margaret Thatcher in 1976 warned that the Soviets “put guns before butter, while we put just about everything before guns” – though defence spending <a href=\"https://pa.media/blogs/fact-check/fact-check-defence-spending-fell-below-3-of-gdp-in-the-1990s/\">fell as a proportion of GDP</a> in her time, and faster as the cold war ended. But that peace dividend needs repaying now we are back in cold (and quite hot) war with Russia, only with the US no longer reliable, nor even a friend.</p><p>The present day “guns v butter” has morphed into a warfare/welfare zero-sum. How dispiriting that Al Carns repeated it on resigning last week as armed forces minister. “There is an argument around welfare,” Carns says. “I am a firm believer that it’s about hands up, not a hand out. But we need to help the people who need the most help within the nation but also get the balance right across defence.” Why the juxtaposition? This ex-colonel of the marines would “<a href=\"https://x.com/AlistairCarns/status/2065356645874467188?s=20\">take the country by the scruff of its neck and make it great again</a>” – soldier talk that makes Westminster go weak at the knees.</p><p>Polly Toynbee is a Guardian columnist</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 15:54:35 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/15/right-money-defence-mod-wastefulness-pensioner-triple-lock"
+      },
+      "status": "supported"
+    }
+  ]
+}

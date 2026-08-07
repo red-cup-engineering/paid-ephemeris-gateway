@@ -1,0 +1,69 @@
+{
+  "subject": "uk-attorney-general-tells-department-to-stop-using-x-amid-disinformation-concerns",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK attorney general tells department to stop using X amid disinformation concerns"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Exclusive: Richard Hermer’s office understood to be first in government to restrict use after recent riots</p><p>The attorney general has told his office to no longer post on X, making it the first UK government department to stop using the Elon Musk-owned platform amid increasing worries about its use to incite violence and racism.</p><p>Richard Hermer’s office last posted on X on Friday, and it is understood that officials have been told to no longer use the site, unless for the specific purpose of combatting disinformation there.</p> <a href=\"https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 18:00:09 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/18/uk-attorney-general-tells-staff-stop-using-x-disinformation-concerns"
+      },
+      "status": "supported"
+    }
+  ]
+}

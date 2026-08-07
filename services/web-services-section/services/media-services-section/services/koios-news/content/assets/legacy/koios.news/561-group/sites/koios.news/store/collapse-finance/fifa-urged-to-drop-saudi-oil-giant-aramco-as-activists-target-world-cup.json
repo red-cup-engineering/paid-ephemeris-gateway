@@ -1,0 +1,69 @@
+{
+  "subject": "fifa-urged-to-drop-saudi-oil-giant-aramco-as-activists-target-world-cup",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Fifa urged to drop Saudi oil giant Aramco as activists target World Cup"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Fifa has defended its Aramco sponsorship, saying revenues are reinvested back into football at all levels</p><p>As scorching temperatures beat down on <a href=\"https://www.theguardian.com/football/world-cup-2026\">World Cup</a> soccer games across North America, climate activists – including former and current professional athletes – are calling for Fifa and other professional sporting organizations to cut ties with the oil and gas industry.</p><p>“Sport, especially football, has the power to influence and inspire billions of people,” said David Wheeler, an English former professional footballer, who supports the campaign. “Fifa should be harnessing that power to do good.”</p> <a href=\"https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:30:30 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/19/activists-world-cup-fifa-aramco-oil-partnership"
+      },
+      "status": "supported"
+    }
+  ]
+}

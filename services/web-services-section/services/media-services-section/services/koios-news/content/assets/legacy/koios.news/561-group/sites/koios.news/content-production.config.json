@@ -1,0 +1,657 @@
+{
+  "name": "koios.news",
+  "port": 18809,
+  "newscable": {
+    "title": "Koios News Cable",
+    "description": "Koios.News witnessed topic intake: environment, technology, economy, politics, culture, war, and adjacent wires owned by the publication, as IPTC-subject claim-state bundles.",
+    "port": 18809,
+    "domain": "cable.koios.news",
+    "routing": "subfolder",
+    "routingPrefix": "newswires",
+    "wires": [
+      {
+        "name": "environment",
+        "title": "Environment",
+        "description": "Environment coverage — tipping points, crop failure, extreme heat, insurance withdrawal, water scarcity — as provenanced claim-state bundles.",
+        "keyword": "climate change",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/environment/climate-crisis/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://insideclimatenews.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://grist.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.carbonbrief.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.nature.com/nclimate.rss",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "economy",
+        "title": "Economy",
+        "description": "Economy coverage — stranded assets, climate disasters and sovereign debt, de-dollarization, farmland and water rights — as provenanced claim-state bundles.",
+        "keyword": "economy and finance",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/uk/business/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/business/economics/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+            "max": 10
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.nber.org/rss/new.xml",
+            "max": 10
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.theblock.co/rss.xml",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "politics",
+        "title": "Politics",
+        "description": "Politics coverage — climate migration, disaster response cuts, resource nationalism, state capacity failure — as provenanced claim-state bundles.",
+        "keyword": "politics and government",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/world/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.aljazeera.com/xml/rss/all.xml",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://feeds.npr.org/1014/rss.xml",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "technology",
+        "title": "Technology",
+        "description": "Technology coverage — data center water use, AI grid demand, semiconductor fragility, satellite outages — as provenanced claim-state bundles.",
+        "keyword": "technology",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/technology/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://feeds.arstechnica.com/arstechnica/index",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.theregister.com/headlines.atom",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.theregister.com/software/ai_ml/headlines.atom",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://rss.arxiv.org/rss/cs.AI",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://spectrum.ieee.org/rss/fulltext",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "degrowth",
+        "title": "Degrowth",
+        "description": "Degrowth and post-growth coverage — planned economic contraction, sufficiency, wellbeing economies, localization, and the limits-to-growth tradition — as provenanced claim-state bundles.",
+        "keyword": "degrowth",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.resilience.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://unevenearth.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://rwer.wordpress.com/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.localfutures.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://solar.lowtechmagazine.com/posts/index.xml",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "decolonization",
+        "title": "Decolonization",
+        "description": "Decolonization coverage — climate reparations, extraction and the global south, Indigenous land and sovereignty, sovereign debt, and neocolonial trade — as provenanced claim-state bundles.",
+        "keyword": "decolonization",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://africasacountry.com/feed",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.blackagendareport.com/rss.xml",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.culturalsurvival.org/rss.xml",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://ictnews.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.opendemocracy.net/en/rss/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://theconversation.com/global/articles.atom",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "war",
+        "title": "War",
+        "description": "Conflict, extremism, and geopolitical coverage — political violence, terrorism and radicalization, accelerationism, open-source conflict investigation, and war — as provenanced claim-state bundles.",
+        "keyword": "political violence",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.isdglobal.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://gnet-research.org/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.bellingcat.com/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.crisisgroup.org/rss.xml",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://warontherocks.com/feed/",
+            "max": 12
+          }
+        ]
+      },
+      {
+        "name": "culture",
+        "title": "Culture",
+        "description": "Arts, culture, entertainment and media coverage — institutions, creative labor, platforms, heritage, and the cultural life of a society under change.",
+        "keyword": "arts and culture",
+        "sources": [
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/culture/rss",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://hyperallergic.com/feed/",
+            "max": 12
+          },
+          {
+            "adapter": "rss",
+            "url": "https://www.theguardian.com/books/rss",
+            "max": 12
+          }
+        ]
+      }
+    ]
+  },
+  "properties": [
+    {
+      "name": "koios.news",
+      "contentDir": "content/posts",
+      "dataDir": "data",
+      "runsFile": "mill-runs.jsonl",
+      "author": "Nik Koios",
+      "termKey": "koios",
+      "demand": {
+        "property": "sc-domain:koios.news",
+        "days": 28
+      },
+      "voice": {
+        "persona": [
+          "You are Nik Koios, Editor-in-Chief of Koios.News, a collapse-aware news publication.",
+          "Your frame: climate breakdown is the upstream cause of the other macro crises; no event is isolated;",
+          "collapse is a dynamically compounding emergent phenomenon, not a series of escalating crises.",
+          "Your voice: grounded, specific, humane; confident-but-comfortable opinionation; concise; educational;",
+          "one or two examples per point, never ten; never breathless, never prophetic."
+        ],
+        "laws": [
+          "read the event through the collapse frame; no section treats it as isolated"
+        ]
+      },
+      "seeds": [
+        {
+          "beat": "environment",
+          "term": "climate tipping points",
+          "priority": 8
+        },
+        {
+          "beat": "environment",
+          "term": "crop failure and food prices",
+          "priority": 8
+        },
+        {
+          "beat": "environment",
+          "term": "urban water scarcity",
+          "priority": 7
+        },
+        {
+          "beat": "environment",
+          "term": "insurance climate risk withdrawal",
+          "priority": 9
+        },
+        {
+          "beat": "environment",
+          "term": "extreme heat and infrastructure",
+          "priority": 7
+        },
+        {
+          "beat": "technology",
+          "term": "data center water use",
+          "priority": 8
+        },
+        {
+          "beat": "technology",
+          "term": "AI demand on the grid",
+          "priority": 8
+        },
+        {
+          "beat": "technology",
+          "term": "AI data center power demand",
+          "priority": 9
+        },
+        {
+          "beat": "technology",
+          "term": "AI infrastructure energy use",
+          "priority": 8
+        },
+        {
+          "beat": "technology",
+          "term": "AI labor displacement",
+          "priority": 6
+        },
+        {
+          "beat": "technology",
+          "term": "AI policy and state capacity",
+          "priority": 6
+        },
+        {
+          "beat": "technology",
+          "term": "semiconductor supply chain fragility",
+          "priority": 6
+        },
+        {
+          "beat": "technology",
+          "term": "satellite internet outage",
+          "priority": 5
+        },
+        {
+          "beat": "economy",
+          "term": "climate stranded assets",
+          "priority": 7
+        },
+        {
+          "beat": "economy",
+          "term": "AI capital expenditure bubble",
+          "priority": 7
+        },
+        {
+          "beat": "economy",
+          "term": "AI infrastructure debt",
+          "priority": 6
+        },
+        {
+          "beat": "economy",
+          "term": "crypto mining energy demand",
+          "priority": 7
+        },
+        {
+          "beat": "economy",
+          "term": "stablecoin dollar demand",
+          "priority": 6
+        },
+        {
+          "beat": "economy",
+          "term": "crypto liquidity crisis",
+          "priority": 6
+        },
+        {
+          "beat": "economy",
+          "term": "cost of living climate shocks",
+          "priority": 7
+        },
+        {
+          "beat": "economy",
+          "term": "climate disasters and sovereign debt",
+          "priority": 7
+        },
+        {
+          "beat": "economy",
+          "term": "de-dollarization of commodity trade",
+          "priority": 6
+        },
+        {
+          "beat": "economy",
+          "term": "farmland and water rights",
+          "priority": 6
+        },
+        {
+          "beat": "politics",
+          "term": "climate migration and border policy",
+          "priority": 8
+        },
+        {
+          "beat": "politics",
+          "term": "AI regulation geopolitics",
+          "priority": 6
+        },
+        {
+          "beat": "politics",
+          "term": "crypto campaign finance",
+          "priority": 5
+        },
+        {
+          "beat": "politics",
+          "term": "data center permitting fights",
+          "priority": 6
+        },
+        {
+          "beat": "politics",
+          "term": "disaster response funding cuts",
+          "priority": 7
+        },
+        {
+          "beat": "politics",
+          "term": "resource nationalism",
+          "priority": 7
+        },
+        {
+          "beat": "politics",
+          "term": "state capacity failure",
+          "priority": 6
+        },
+        {
+          "beat": "degrowth",
+          "term": "degrowth",
+          "priority": 8
+        },
+        {
+          "beat": "degrowth",
+          "term": "post-growth economics",
+          "priority": 7
+        },
+        {
+          "beat": "degrowth",
+          "term": "limits to growth",
+          "priority": 7
+        },
+        {
+          "beat": "degrowth",
+          "term": "wellbeing economy",
+          "priority": 6
+        },
+        {
+          "beat": "degrowth",
+          "term": "sufficiency and consumption",
+          "priority": 6
+        },
+        {
+          "beat": "degrowth",
+          "term": "localization and resilience",
+          "priority": 6
+        },
+        {
+          "beat": "decolonization",
+          "term": "decolonization",
+          "priority": 8
+        },
+        {
+          "beat": "decolonization",
+          "term": "climate reparations",
+          "priority": 8
+        },
+        {
+          "beat": "decolonization",
+          "term": "extraction and the global south",
+          "priority": 7
+        },
+        {
+          "beat": "decolonization",
+          "term": "indigenous land rights",
+          "priority": 7
+        },
+        {
+          "beat": "decolonization",
+          "term": "sovereign debt and the global south",
+          "priority": 7
+        },
+        {
+          "beat": "decolonization",
+          "term": "neocolonial trade",
+          "priority": 6
+        },
+        {
+          "beat": "war",
+          "term": "neo-Nazi accelerationism",
+          "priority": 8
+        },
+        {
+          "beat": "war",
+          "term": "online radicalization",
+          "priority": 8
+        },
+        {
+          "beat": "war",
+          "term": "terrorism and extremism",
+          "priority": 7
+        },
+        {
+          "beat": "war",
+          "term": "great replacement conspiracy",
+          "priority": 7
+        },
+        {
+          "beat": "war",
+          "term": "stochastic terrorism",
+          "priority": 6
+        },
+        {
+          "beat": "war",
+          "term": "geopolitical conflict escalation",
+          "priority": 7
+        },
+        {
+          "beat": "war",
+          "term": "disinformation and war",
+          "priority": 6
+        },
+        {
+          "beat": "war",
+          "term": "state fragility and armed conflict",
+          "priority": 7
+        },
+        {
+          "beat": "culture",
+          "term": "cultural institutions funding",
+          "priority": 6
+        },
+        {
+          "beat": "culture",
+          "term": "streaming and creative labor",
+          "priority": 6
+        },
+        {
+          "beat": "culture",
+          "term": "heritage and museums",
+          "priority": 5
+        }
+      ],
+      "beatSources": {
+        "environment": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/environment/",
+            "max": 36
+          }
+        ],
+        "technology": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/technology/",
+            "max": 36
+          }
+        ],
+        "economy": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/economy/",
+            "max": 24
+          }
+        ],
+        "politics": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/politics/",
+            "max": 24
+          }
+        ],
+        "degrowth": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/degrowth/",
+            "max": 24
+          }
+        ],
+        "decolonization": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/decolonization/",
+            "max": 24
+          }
+        ],
+        "war": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/war/",
+            "max": 24
+          }
+        ],
+        "culture": [
+          {
+            "adapter": "newswire",
+            "url": "http://127.0.0.1:18809/newswires/culture/",
+            "max": 24
+          }
+        ]
+      },
+      "beatCategory": {
+        "environment": "Environment",
+        "technology": "Technology",
+        "economy": "Economy",
+        "politics": "Politics",
+        "degrowth": "Degrowth",
+        "decolonization": "Decolonization",
+        "war": "War",
+        "culture": "Culture"
+      },
+      "genericTermWords": [
+        "climate",
+        "collapse",
+        "breakdown",
+        "crisis",
+        "2025",
+        "2026",
+        "global"
+      ],
+      "provider": "nim",
+      "model": "qwen/qwen3.5-397b-a17b",
+      "maxTokens": 3000,
+      "gateModel": "fable"
+    }
+  ]
+}

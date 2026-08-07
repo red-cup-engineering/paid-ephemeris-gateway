@@ -1,0 +1,13 @@
+{
+  "name": "@rsc-quiescent/software-work-rectification-assay-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/detect-rectifications.mjs",
+  "dependencies": {
+    "@rsc-quiescent/software-work-witness-service": "1.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

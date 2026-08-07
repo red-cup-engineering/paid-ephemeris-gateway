@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "organizing/knowledge-vault/listing",
+  "title": "Listing",
+  "description": "list's codomain: the immediate entries of a vault directory  -  the confined frontier read at the filesystem grain (browse reads the same step at the proof-tree grain). $id is the bare package-rooted descent path.",
+  "type": "object",
+  "required": ["kind", "path", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "organizing.knowledge-vault.listing" },
+    "path": { "type": "string", "description": "the addressed path, relative to the vault root" },
+    "entries": { "type": "array", "items": { "$ref": "#/$defs/ListEntry" }, "description": "the immediate entries, sorted by name" }
+  },
+  "$defs": {
+    "ListEntry": {
+      "type": "object",
+      "required": ["name", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "kind": { "enum": ["directory", "file", "other"] }
+      }
+    }
+  }
+}

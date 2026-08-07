@@ -1,0 +1,24 @@
+{
+  "name": "@koios-news/web-source-acquisition",
+  "version": "0.0.3",
+  "private": true,
+  "type": "module",
+  "description": "Separately hireable public-Web source acquisition that returns bounded source text and exact retrieval custody without writing a customer's corpus.",
+  "bin": {
+    "solicit-service": "./src/contract-public-web-source.mjs",
+    "invoke-service": "./src/contract-public-web-source.mjs",
+    "solicit-source-discovery": "./src/contract-public-source-discovery.mjs",
+    "invoke-source-discovery": "./src/contract-public-source-discovery.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/witness-journal-network.mjs && node --check src/contract-public-web-source.mjs && node --check src/contract-public-source-discovery.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@lenticule-science/witness-journal-rdf-projection-service": "1.0.3",
+    "@red-cup-engineering/category-reference-index-service": "1.0.2",
+    "@red-cup-engineering/immutable-content-custody-service": "1.0.1",
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2"
+  }
+}

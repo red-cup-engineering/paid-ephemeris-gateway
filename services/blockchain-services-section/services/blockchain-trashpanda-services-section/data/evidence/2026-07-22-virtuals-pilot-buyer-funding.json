@@ -1,0 +1,24 @@
+{
+  "type": "BlockchainTrashpandaPilotWorkingCapitalTransferEvidence",
+  "recordedAt": "2026-07-22T18:55:32.940Z",
+  "network": "eip155:8453",
+  "token": {
+    "symbol": "USDC",
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "decimals": 6
+  },
+  "source": "eip155:8453:0x32886f6f361c1d570255c2762967a2e41d0e9b1a",
+  "destination": "eip155:8453:0x987bc9a5c75ed0eda174bf4470df2c3e755ed7eb",
+  "amountUsdcBaseUnits": "10000",
+  "amountUsdc": "0.01",
+  "transaction": "0x1eb40235c91c5d9c3e6c867c6b6d5eb4556ca0adf6b183b5f9008490d24f768f",
+  "blockNumber": "48978588",
+  "buyerBalanceAfterUsdcBaseUnits": "10000",
+  "classification": {
+    "workingCapital": true,
+    "valueCaptured": false,
+    "revenue": false,
+    "customerDemand": false,
+    "pricingEvidence": false
+  }
+}

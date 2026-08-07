@@ -1,0 +1,69 @@
+{
+  "subject": "titan-sub-design-flaws-and-company-groupthink-central-to-catastrophe-report-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Titan sub: design flaws and company groupthink central to catastrophe, report finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Canadian officials find structural defects in material used for hull and say firm failed to fully test ‘novel’ design</p><p>Canadian safety officials <a href=\"https://www.tsb.gc.ca/eng/rapports-reports/marine/2023/m23a0169/m23a0169.html\">have issued a damning report</a> on the catastrophic final voyage of the Titan submersible, finding that the US company behind the expedition was overcome by “groupthink” and “confirmation bias” and failed to understand the profound risks confronting their largely untested craft.</p><p>The 6.7-metre (22ft) carbon fibre submersible dipped below the surface of the Atlantic Ocean in June 2023 en route to the wreckage of the Titanic ocean liner. But nearly two hours after it departed with five passengers, communications went dark. The disappearance prompted a frantic international search, with Canada and the US <a href=\"https://www.theguardian.com/world/2023/jun/21/how-dangerous-the-ocean-can-be-canadian-city-rallies-for-titan-rescue\">marshalling all available resources</a>.</p> <a href=\"https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 18:24:06 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/17/titan-sub-design-flaws-company-groupthink-report"
+      },
+      "status": "supported"
+    }
+  ]
+}

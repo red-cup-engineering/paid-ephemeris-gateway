@@ -1,0 +1,69 @@
+{
+  "subject": "what-does-care-really-mean-in-agroecology",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "What does ‘care’ really mean in agroecology?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/what-does-care-really-mean-in-agroecology/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-12/what-does-care-really-mean-in-agroecology/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/what-does-care-really-mean-in-agroecology/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "So much talk about the importance of ‘care’ in agroecology, but what does it mean? Anouk Dijkman’s ‘Matrix of Care’ offers a clear way to see how domestic, community and more‑than‑human care practices connect, and why they matter for agroecological change."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/what-does-care-really-mean-in-agroecology/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 08:00:04 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/what-does-care-really-mean-in-agroecology/"
+      },
+      "status": "supported"
+    }
+  ]
+}

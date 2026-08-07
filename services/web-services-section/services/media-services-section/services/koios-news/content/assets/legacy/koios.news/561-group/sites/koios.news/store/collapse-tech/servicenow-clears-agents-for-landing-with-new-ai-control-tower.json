@@ -1,0 +1,69 @@
+{
+  "subject": "servicenow-clears-agents-for-landing-with-new-ai-control-tower",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "ServiceNow clears agents for landing with new AI control tower"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/servicenow-adds-agent-kill-switches-to-ai-control-tower/5228579"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/05/05/servicenow-adds-agent-kill-switches-to-ai-control-tower/5228579"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/servicenow-adds-agent-kill-switches-to-ai-control-tower/5228579"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "ServiceNow announced an expansion of its AI Control Tower, transforming what began last year as a governance dashboard into what the company now describes as a command center for managing AI assets across an entire enterprise, including those running outside ServiceNow's own platform. The updated AI Control Tower, shipping as part of ServiceNow's Australia platform release, now operates across five areas: discovery, observation, governance, security, and measurement. The company said that this is its answer to AI agent sprawl, as enterprises have deployed more AI than they can account for and the tools to govern it have not kept pace. “What we launched last year gave customers a governance layer, but what we're shipping this year goes significantly deeper, evolving from visibility and management into a full enterprise AI command center,” Nenshad Bardoliwalla, group vice president of AI products at ServiceNow told reporters during a media briefing ahead of the company’s annual product show, Knowledge 26. “Our AI control tower ensures every AI system asset and identity is compliant, secure, and aligned with your strategy.” The AI Control Tower now reaches beyond ServiceNow's own platform with 30 new enterprise connectors that span all three major hyperscalers, Amazon Web Services, Google Cloud, and Microsoft Azure, along with enterprise applications such as SAP, Oracle, and Workday. The system can now discover AI assets, models, agents, prompts, and datasets running across an organization's full technology estate, not just those deployed on ServiceNow. “With our Veza integration, we're bringing patented access graph technology into the AI control tower, extending identity access governance to hyperscaler AI environments and every connected device, every agent, every model, every action has scope permissions, least privilege enforcement and auditable identity chains,” Bardoliwalla said. Bardoliwalla walked through a demo in which the AI Control Tower detected a prompt injection attack on a pricing agent. The system identified malicious instructions hidden inside order payloads, mapped the blast radius of affected systems using access graph technology from Veza, and presented a kill switch to disable the compromised agent, without human intervention. \"You need a system that senses, decides and acts on its own, that can scale with your AI portfolio, not your head count,\" said Bardoliwalla. Two recent acquisitions underpin the security architecture. ServiceNow announced in December it would acquire Veza, which contributes an access graph that maps every identity and access path across systems whether it belongs to humans, machines, or AI agents. It also knows which entities have create, read, update, and delete-level permissions. ServiceNow said the access graph currently maps over 30 billion fine-grained permissions. When a vendor pushes a new version of a model or agent, the platform detects permission changes and automatically triggers a re-scoping workflow. Traceloop, which ServiceNow acquired in March, provides deep AI observability inside the Control Tower by tracking every LLM call that is running in the system. The integration delivers continuous runtime monitoring with live alerts, replacing what ServiceNow described as the periodic manual audits most enterprises still rely on. Teams can watch how agents reason, where they make decisions, and when to course-correct. ServiceNow also addressed the cost side of the AI equation. Control Tower now includes cost tracking and ROI dashboards to give finance teams visibility into model spend. The measurements track token consumption across providers such as OpenAI, Anthropic, and Google so customers can predict costs and tie spending to business outcomes. ServiceNow said it uses the AI Control Tower internally to manage over 1,600 AI assets and tracked half a billion dollars in cumulative AI value from internal use cases in 2025. \"The number one question every CFO is asking is, where's the value?\" said Bardoliwalla during the briefing. He added that runaway model spend ranks among the biggest pain points enterprises currently face as they scale AI deployments. Alongside the Control Tower expansion, ServiceNow announced Action Fabric, a mechanism that opens the company's full workflow engine to external AI agents. Through a generally available MCP server, agents built on Claude, Copilot, or custom platforms can now trigger governed enterprise actions — not just read and write data, but execute the flows, playbooks, approval chains, and catalog requests that ServiceNow customers have built over years. Anthropic is the first design partner for Action Fabric. The integration connects Claude directly to ServiceNow's governed system of action. \"The gap between knowing what needs to happen and making it happen is where productivity dies,\" said Boris Cherny, head of Claude Code at Anthropic said in a statement. \"Connecting Claude Cowork to ServiceNow's system of action closes that gap with enterprise execution, directly in the flow of work.\" Every action routed through Action Fabric runs through the AI Control Tower, so it carries identity verification, permission scoping, and a full audit trail. The MCP server is included in every Now Assist and AI Native SKU, with additional features planned for the second half of 2026."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/servicenow-adds-agent-kill-switches-to-ai-control-tower/5228579"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 05 May 2026 19:00:10 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/servicenow-adds-agent-kill-switches-to-ai-control-tower/5228579"
+      },
+      "status": "supported"
+    }
+  ]
+}

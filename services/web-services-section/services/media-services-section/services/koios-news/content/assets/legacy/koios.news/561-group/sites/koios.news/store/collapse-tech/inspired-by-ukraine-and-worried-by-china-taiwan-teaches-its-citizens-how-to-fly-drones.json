@@ -1,0 +1,69 @@
+{
+  "subject": "inspired-by-ukraine-and-worried-by-china-taiwan-teaches-its-citizens-how-to-fly-drones",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Inspired by Ukraine, and worried by China: Taiwan teaches its citizens how to fly drones"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Ordinary Taiwanese, young and old, are joining courses to learn how to fly drones amid looming China military threat</p><p>In a small, crowded room in Taipei, Pan Chien-chin is trying to keep a drone hovering steadily. Imagining himself flying a plane, he gently nudges controller joysticks to guide the insect-like device as it hums through the air.</p><p>Cheers break out as Pan, who has never flown a drone before, steers it around a rectangular course marked by traffic cones without crashing. Around him are about two dozen fellow trainees, all signed up for the same course: Taiwan’s first civil defence drone training programme.</p> <a href=\"https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 01:14:15 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/18/taiwan-citizens-learn-fly-pilot-drones-courses-china"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "java-s-project-valhalla-finally-lands-a-preview-in-jdk-28",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Java's Project Valhalla finally lands a preview in JDK 28"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/15/javas-project-valhalla-finally-lands-a-preview-in-jdk-28/5255557"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/devops/2026/06/15/javas-project-valhalla-finally-lands-a-preview-in-jdk-28/5255557"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/15/javas-project-valhalla-finally-lands-a-preview-in-jdk-28/5255557"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Oracle software engineer Lois Foltan has confirmed that Java Enhancement Proposal 401 for Value Classes and Objects – part of Project Valhalla – will be integrated into the OpenJDK mainline early next month, targeting JDK 28. Previews of JEP 401 have so far been available only in early-access builds. The current JDK (Java Development Kit) is 26, with JDK 27 expected in September and JDK 28 in March 2027. The next long-term support version is likely to be JDK 29 in September 2027. Foltan said it was an \"extremely large change\", such that other OpenJDK committers are asked to avoid large commits in order to help a successful integration. The pull request for the first preview of JEP 401 adds more than 197,000 lines of code in 1,816 changed files. Created in August 20222, JEP 401 tackle a longstanding Java limitation: aside from a small number of primitives including int, char, byte and double, all types in the language are reference types. The JEP introduces \"value objects\" – class instances that lack object identity and are distinguished solely by the values of their fields. A few examples illustrate the problem JEP 401 is trying to solve. Java's LocalDate class stores date values, but every instance gets its own unique reference, so even if two instances represent the same data, comparing them with ==returns false, as they're different objects in memory. LocalDate provides an \"equals\" method instead.. Another example, even more confusing example is Integer, which wraps an int to provide convenience methods like toString(). Internally, Integer caches instances for values below 128, so two Integer objects with the same small value can compare equal with == but for larger values, == always returns false even when the underlying values match. Due to this quirk, Java editors generally warn against using == with Integer, a pitfall JEP 401 describes as \"unwanted complexity.\" JEP 401 will migrate some JDK classes such as Integer to value classes, and the number of migrated classes is likely to increase gradually. Developers will also be able to create their own value classes. One of the goals of JEP 401 is to give freedom to the JVM (Java virtual machine) to store value objects in ways that maximize performance. The memory footprint of reference types is greater than for reference types, and they must be dereferenced to obtain their values. Iterating over value types is more efficient. Project Valhalla has been so long in the making, thanks to the complexity of the changes, that some onlookers have joked about getting to Valhalla itself (a realm in the afterlife in Norse mythology) before the project is delivered. Oracle's Java Language Architect Brian Goetz said this is \"just the first part of Valhalla\" and even after the preview is delivered, \"the 'but they'll never deliver it' crowd' will quickly switch gears into 'but they haven't delivered the most important part' soon enough.'\" Goetz said \"there are many things that force us to treat objects with reference semantics. JEP 401 knocks down the first level of these, by taking identity off the table, which exposes a lot of new optimizations, especially for smaller objects. But fully treating objects with value semantics requires giving up more: nullity and atomicity-safety-under-race (ASUR). Lots of languages have, or are working on, ways to get there, (such as C# structs.) \"The main challenge is how to package it in the user model so that it doesn't fight with our own preconceived notions of object integrity and encapsulation; classes are, for better and worse, a very effective abstraction barrier.\" He said that Valhalla will introduce deliberate breaking changes to Java, such as that \"code that synchronizes on Integer objects now fails with an exception.\" Goetz added JEP 401 will still likely be in preview in the next LTS release of the JDK. \"Hoping for it to exit preview for 29 seems … optimistic. Vector API should be able to exit incubation when it rebases on the underlying VM primitives from Valhalla ... don’t hope for a shorter-than-usual preview window.\" ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/15/javas-project-valhalla-finally-lands-a-preview-in-jdk-28/5255557"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 19:15:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/15/javas-project-valhalla-finally-lands-a-preview-in-jdk-28/5255557"
+      },
+      "status": "supported"
+    }
+  ]
+}

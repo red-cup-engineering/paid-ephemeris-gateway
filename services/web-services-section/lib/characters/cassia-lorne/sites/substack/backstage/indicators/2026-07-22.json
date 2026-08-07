@@ -1,0 +1,82 @@
+{
+  "date": "2026-07-22",
+  "chartTime": "2026-07-22T16:00:00Z",
+  "moon": {
+    "placement": {
+      "sign": {
+        "index": 7,
+        "name": "Scorpio",
+        "glyph": "♏",
+        "element": "water",
+        "modality": "fixed",
+        "rulerClassical": "Mars"
+      },
+      "degreeInSign": 13.445449070932227
+    },
+    "lunation": {
+      "elongation": 103.57300405494061,
+      "phase": "first quarter",
+      "illuminatedFraction": 0.6173420649878341,
+      "trend": "waxing"
+    }
+  },
+  "motion": {
+    "kind": "ingress",
+    "ingress": {
+      "body": "sun",
+      "time": "2026-07-22T19:13:32Z",
+      "signTo": {
+        "index": 4,
+        "name": "Leo",
+        "glyph": "♌",
+        "element": "fire",
+        "modality": "fixed",
+        "rulerClassical": "Sun"
+      },
+      "signFrom": {
+        "index": 3,
+        "name": "Cancer",
+        "glyph": "♋",
+        "element": "water",
+        "modality": "cardinal",
+        "rulerClassical": "Moon"
+      },
+      "direction": "direct"
+    }
+  },
+  "tarot": {
+    "spread": "single card",
+    "date": "2026-07-22",
+    "positions": [
+      {
+        "position": "the day",
+        "card": {
+          "arcana": "major",
+          "number": 17,
+          "name": "The Star"
+        },
+        "orientation": "upright"
+      }
+    ],
+    "provenance": {
+      "method": "xmur3+mulberry32 fisher-yates, orientation by next uniform < 1/2",
+      "seed": "cartomantia:2026-07-22"
+    }
+  },
+  "numerology": {
+    "date": "2026-07-22",
+    "steps": [
+      21,
+      3
+    ],
+    "value": 3,
+    "kind": "simple"
+  },
+  "signals": [
+    {
+      "kind": "elemental-signature",
+      "text": "fire and air share the lead, 3 placements each",
+      "synthesizer": "element census over the chart's sign placements"
+    }
+  ]
+}

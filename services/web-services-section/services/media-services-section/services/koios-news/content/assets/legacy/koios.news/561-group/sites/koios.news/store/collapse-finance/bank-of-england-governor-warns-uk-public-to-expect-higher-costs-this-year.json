@@ -1,0 +1,69 @@
+{
+  "subject": "bank-of-england-governor-warns-uk-public-to-expect-higher-costs-this-year",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Bank of England governor warns UK public to expect higher costs this year"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Andrew Bailey says ‘inflationary pressure in pipeline’ despite US and Iran signing initial peace deal as interest rates kept on hold</p><p>The governor of the Bank of England has warned consumers to expect higher costs this year as a result of the conflict in the Middle East, despite falling oil prices as the US and Iran signing an initial peace deal.</p><p>Speaking after the Bank kept interest rates on hold at 3.75%, Andrew Bailey said there was “still some inflationary pressure in the pipeline” after the conflict pushed up energy prices.</p> <a href=\"https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:23:28 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/18/interest-rates-bank-of-england-hold-keep-iran"
+      },
+      "status": "supported"
+    }
+  ]
+}

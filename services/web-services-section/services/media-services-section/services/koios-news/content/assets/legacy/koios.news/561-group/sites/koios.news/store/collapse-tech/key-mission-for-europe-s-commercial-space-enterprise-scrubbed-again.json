@@ -1,0 +1,69 @@
+{
+  "subject": "key-mission-for-europe-s-commercial-space-enterprise-scrubbed-again",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Key mission for Europe's commercial space enterprise scrubbed again"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/key-mission-for-europes-commercial-space-enterprise-scrubbed-again/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/space/2026/06/key-mission-for-europes-commercial-space-enterprise-scrubbed-again/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/key-mission-for-europes-commercial-space-enterprise-scrubbed-again/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Isar Aerospace still commands top position among a new generation of European rocket startups, but the company's efforts to launch a critical test flight of its Spectrum rocket continue to encounter roadblocks. The latest delay came Monday, when Isar scrubbed a launch attempt after \"detecting off nominal behavior in the vehicle's fluid systems,\" according to a social media post. \"The teams are analyzing the new data to isolate the root cause.\" The two-stage, 92-foot-tall (28-meter) Spectrum rocket was awaiting liftoff from Andøya Spaceport in northern Norway. It was the fourth time in five months that Isar Aerospace, headquartered near Munich, Germany, had reached a target launch date for the second test flight of the Spectrum launch vehicle. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/key-mission-for-europes-commercial-space-enterprise-scrubbed-again/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 23:40:38 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/key-mission-for-europes-commercial-space-enterprise-scrubbed-again/"
+      },
+      "status": "supported"
+    }
+  ]
+}

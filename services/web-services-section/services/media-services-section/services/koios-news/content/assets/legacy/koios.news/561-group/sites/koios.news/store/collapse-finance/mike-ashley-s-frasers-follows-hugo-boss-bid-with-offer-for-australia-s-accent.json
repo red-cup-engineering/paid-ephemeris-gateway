@@ -1,0 +1,69 @@
+{
+  "subject": "mike-ashley-s-frasers-follows-hugo-boss-bid-with-offer-for-australia-s-accent",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Mike Ashley’s Frasers follows Hugo Boss bid with offer for Australia’s Accent"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>UK billionaire’s fashion group offers £166m for takeover of 77.1% of shares in shoe firm it does not already own</p><p>The retail billionaire Mike Ashley has launched his second takeover bid in a week, attempting to snap up the Australian footwear business Accent Group days after announcing a tilt at Hugo Boss.</p><p>Ashley’s Frasers Group, which already owns the biggest single stake in Accent at 22.9%, said it would offer 65 Australian cents (34p) a share for the remainder of the business, at the same level as its closing price on Friday.</p> <a href=\"https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 08:02:05 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/mike-ashley-frasers-hugo-boss-australias-accent-takeover"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "vice-president-jd-vance-becomes-the-face-of-america-s-negotiations-with-iran",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Vice President JD Vance becomes the face of America's negotiations with Iran"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863142/vice-president-jd-vance-becomes-the-face-of-americas-negotiations-with-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5863142/vice-president-jd-vance-becomes-the-face-of-americas-negotiations-with-iran"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863142/vice-president-jd-vance-becomes-the-face-of-americas-negotiations-with-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Vice President JD Vance is becoming the face of the next phase of negotiations with Iran."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863142/vice-president-jd-vance-becomes-the-face-of-americas-negotiations-with-iran"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 04:51:21 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863142/vice-president-jd-vance-becomes-the-face-of-americas-negotiations-with-iran"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "provider-authored-service-contract",
+  "id": "koios-news-service-section/licensed-editorial-state/v1",
+  "provider": "koios-news-service-section",
+  "service": "form a source-bound licensed editorial state before prose is commissioned",
+  "admission": "ActivityStreams Offer<ServiceSolicitation> addressed to the provider, followed by Accept<ServiceContract> carrying the exact provider offer",
+  "preconditions": [
+    "the demand names one assignment and carries its admitted research packet",
+    "the assignment source URLs are a subset of the packet source URLs",
+    "the demand carries the publication's genre law and publication-policy digests plus the exact genre evidence budget",
+    "the customer accepts the zero-price offer and its exact demand digest"
+  ],
+  "postconditions": [
+    "the provider returns source-bound assertions and a licensed plan, or a typed refusal before writer inference",
+    "the provider measures how much prose the admitted assertions can sustain and refuses an underfunded genre before writer inference",
+    "every planned passage cites one or more admitted source assertions",
+    "demand, angle, and beat remain editorial pressure and are never promoted to source evidence",
+    "the provider writes only its own receipt and never writes the customer's corpus or ledger",
+    "the customer independently admits or refuses the returned state"
+  ],
+  "price": {
+    "amount": 0,
+    "currency": "USD",
+    "settlement": "provider receipt"
+  }
+}

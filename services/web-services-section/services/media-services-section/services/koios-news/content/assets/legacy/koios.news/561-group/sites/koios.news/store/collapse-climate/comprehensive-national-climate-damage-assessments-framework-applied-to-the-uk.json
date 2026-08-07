@@ -1,0 +1,69 @@
+{
+  "subject": "comprehensive-national-climate-damage-assessments-framework-applied-to-the-uk",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Comprehensive national climate damage assessments framework applied to the UK"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02665-2"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nature.com/articles/s41558-026-02665-2"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02665-2"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Nature Climate Change, Published online: 19 June 2026; doi:10.1038/s41558-026-02665-2 The economic impact of climate change has been widely acknowledged, yet current assessments remain fragmented and uncertain. Researchers develop a comprehensive channel-specific framework, apply it to the UK and show that the potential welfare loss could be much larger than previous estimates."
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02665-2"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-19"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02665-2"
+      },
+      "status": "supported"
+    }
+  ]
+}

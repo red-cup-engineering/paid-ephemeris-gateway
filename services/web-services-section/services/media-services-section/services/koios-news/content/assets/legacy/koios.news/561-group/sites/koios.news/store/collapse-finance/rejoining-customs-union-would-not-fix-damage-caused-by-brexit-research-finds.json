@@ -1,0 +1,69 @@
+{
+  "subject": "rejoining-customs-union-would-not-fix-damage-caused-by-brexit-research-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rejoining customs union would not fix damage caused by Brexit, research finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Exclusive: Economists find Brexit caused 12% depression in UK exports, most of which is due to leaving single market</p><p>Brexit has depressed UK exports to the EU by 12%, and rejoining the customs union would undo only a fraction of the damage, research shared with the Guardian shows.</p><p>With the UK’s future relationship with the bloc likely to feature prominently in a potential Labour leadership contest, the economists John Springford and Anton Spisak, of the Centre for European Reform, <a href=\"https://www.cer.eu/insights/cost-brexit-ten-years-impact-leaving-customs-union-and-single-market-uk-trade\">provide fresh evidence of the damage</a> caused by exiting.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 04:00:02 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/brexit-customs-union-exports-single-market-research"
+      },
+      "status": "supported"
+    }
+  ]
+}

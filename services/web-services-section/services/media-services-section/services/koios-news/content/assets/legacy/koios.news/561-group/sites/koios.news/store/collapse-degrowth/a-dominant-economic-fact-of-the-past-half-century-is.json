@@ -1,0 +1,69 @@
+{
+  "subject": "a-dominant-economic-fact-of-the-past-half-century-is",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "A dominant economic fact of the past half century is . . . ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/04/a-dominant-economic-fact-of-the-past-half-century-is/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/04/a-dominant-economic-fact-of-the-past-half-century-is/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/04/a-dominant-economic-fact-of-the-past-half-century-is/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Steve Roth and Dick Bezemer"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/04/a-dominant-economic-fact-of-the-past-half-century-is/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 04 Jun 2026 20:55:06 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/04/a-dominant-economic-fact-of-the-past-half-century-is/"
+      },
+      "status": "supported"
+    }
+  ]
+}

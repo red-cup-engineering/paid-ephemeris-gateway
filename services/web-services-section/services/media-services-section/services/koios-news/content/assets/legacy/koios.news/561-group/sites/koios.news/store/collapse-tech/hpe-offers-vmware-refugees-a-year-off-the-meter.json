@@ -1,0 +1,69 @@
+{
+  "subject": "hpe-offers-vmware-refugees-a-year-off-the-meter",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "HPE offers VMware refugees a year off the meter"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/15/hpe-offers-vmware-refugees-a-year-off-the-meter/5255460"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/virtualization/2026/06/15/hpe-offers-vmware-refugees-a-year-off-the-meter/5255460"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/15/hpe-offers-vmware-refugees-a-year-off-the-meter/5255460"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "HPE is taking advantage of VMware's expensive licensing changes by offering customers free use of its own VM Essentials product for a year, plus a $1 license for its Zerto data protection product to help ease migrations. The jolly green giant announced the cheapies at the Partner Growth Summit staged alongside its HPE Discover event in Las Vegas, and framed them as a migration assistance program intended to arm channel partners who want to help customers reduce their financial risk when migrating virtualization platforms. \"One of the big things we see is that as customers are going through this journey on transforming their operating model, you end up with double expenses and so we're really pleased to announce the program around Morpheus and platform migration,\" said EVP and CTO Fidelma Russo. \"We are announcing that as a customer goes through this transformation with HPE Morpheus VM Essentials, you don't pay for the first year of licenses. You will get Zerto migration licenses during that period to help you move, and so what this does is it helps mitigate the double-bubble cost problem that customers see as they are looking to migrate from one platform to another.\" Neither Russo nor HPE mentioned VMware as part of their pitch for this migration assistance program, but it seems pretty clear where it is aimed. At its last Discover event in Barcelona, HPE talked about customers seeing license fees for virtualization skyrocketing and claimed that it was able to provide \"a fully integrated enterprise-grade alternative\" with Morpheus and OpsRamp management tools, plus Zerto disaster recovery software. A survey recently found that half of VMware users plan to reduce their use of the virtualization pioneer's products by 2028. Since being acquired by Broadcom, VMware license costs have increased by 800 to 1,500 percent for some customers. VMware also ended partner programs that many service providers relied on. HPE says it is introducing VM Essentials for Partner IT to help providers transition their virtualized business applications. This will see it provide VM Essentials software licenses free of charge for three years, with partners paying only support costs, to the 600 partners who gain Private Cloud with Virtualization competency by the end of the year. The company is also extending its channel-only model to cover HPE Private Cloud PC3000 (formerly HPE Private Cloud Business Edition), HPE SimpliVity PC1000, and HPE Zerto software from July 1. HPE said this follows the success of selling Morpheus VM Essentials through a channel-only route to market. Also at the Partner Growth Summit, the IT biz will disclose that it is unifying the HPE and Juniper Networks partner programs under its Partner Ready Vantage umbrella. The aim is to have a single, global program for partners to offer services across networking, cloud, and AI. This change will take effect from November 1, after which partners will operate under one program with a simplified structure, aligned incentives, and a consistent engagement model, while existing investments are protected, or so HPE claims. The company also says it will help cloud service providers build and operate differentiated private cloud services with CloudOps Software and the backing of HPE Partner Ready Vantage. \"Partners want a simpler way to engage and a bigger opportunity to grow,\" said Simon Ewington, HPE's SVP for Worldwide Channel and Partner Ecosystem. ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/15/hpe-offers-vmware-refugees-a-year-off-the-meter/5255460"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 20:30:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/15/hpe-offers-vmware-refugees-a-year-off-the-meter/5255460"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "organizing/knowledge-vault/frontier",
+  "title": "Frontier",
+  "description": "browse's codomain: the one-step generated frontier of a vault topic  -  the proof-tree nodes its node generates (its immediate object/morphism/joint children). The proof-tree reading of `attend` (choosing a fiber and reading what it generates in one step). $id is the bare package-rooted descent path.",
+  "type": "object",
+  "required": ["kind", "topic", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "organizing.knowledge-vault.frontier" },
+    "topic": { "type": "string", "description": "the topic whose frontier was generated (empty string = the vault root)" },
+    "nodes": { "type": "array", "items": { "$ref": "#/$defs/VaultNode" }, "description": "the generated frontier: the vault nodes the topic generates in one step" }
+  },
+  "$defs": {
+    "VaultNode": {
+      "type": "object",
+      "required": ["kind", "address", "slug", "role", "hasDocument"],
+      "additionalProperties": false,
+      "description": "a resolved vault node (the carrier organizing/knowledge-vault/node, kept structurally here so the frontier is self-typing).",
+      "properties": {
+        "kind": { "const": "organizing.knowledge-vault.node" },
+        "address": { "type": "string" },
+        "slug": { "type": "string" },
+        "role": { "enum": ["morphism", "object", "joint"] },
+        "hasDocument": { "type": "boolean" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

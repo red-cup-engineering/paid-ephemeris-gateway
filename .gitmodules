@@ -1,0 +1,27 @@
+[submodule "services/web-services-section/services/web2-services-section/discord-services-section/turntide-islands"]
+	path = services/web-services-section/services/web2-services-section/discord-services-section/turntide-islands
+	url = https://github.com/emsenn/2025-12-15-turntide-islands.git
+[submodule "services/web-services-section/services/media-services-section/services/koios-news/sites/experimental.koios.news"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/sites/experimental.koios.news
+	url = https://github.com/emsenn/experimental.koios.news.git
+[submodule "services/web-services-section/services/media-services-section/services/koios-news/sites/koios.news"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/sites/koios.news
+	url = https://github.com/emsenn/koios-news.git
+[submodule "services/web-services-section/services/web3-services-section/defi-services-section"]
+	path = services/web-services-section/services/web3-services-section/defi-services-section
+	url = https://github.com/emsenn/defi-services-section.git
+[submodule "services/web-services-section/services/web3-services-section/agrodao"]
+	path = services/web-services-section/services/web3-services-section/agrodao
+	url = https://github.com/emsenn/agrodao.git
+[submodule "services/web-services-section/services/web3-services-section/hive-services-section/services/aagaard"]
+	path = services/web-services-section/services/web3-services-section/hive-services-section/services/aagaard
+	url = https://github.com/emsenn/aagaard.git
+[submodule "services/web-services-section/services/gaming-services-section/services/farstone-services-section"]
+	path = services/web-services-section/services/gaming-services-section/services/farstone-services-section
+	url = https://github.com/emsenn/farstone-services-section.git
+[submodule "services/web-services-section/services/gaming-services-section/services/aletheon-services-section"]
+	path = services/web-services-section/services/gaming-services-section/services/aletheon-services-section
+	url = https://github.com/emsenn/aletheon-services-section.git
+[submodule "services/web-services-section/services/media-services-section/services/koios-news/services/newscable-source-broker"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/services/newscable-source-broker
+	url = https://github.com/causeway-services/newscable-source-broker.git

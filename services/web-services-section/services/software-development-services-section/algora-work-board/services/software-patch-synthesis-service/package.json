@@ -1,0 +1,22 @@
+{
+  "name": "@rsc-quiescent/software-patch-synthesis-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/solve-bounty.mjs",
+    "./explore": "./src/explore-and-solve.mjs",
+    "./inference-client": "./src/inference-client.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/a2a-agent-card-discovery-service": "1.0.1",
+    "@red-cup-engineering/github-services-section": "1.0.0",
+    "@red-cup-engineering/inference-work-lot-service": "4.0.1",
+    "@red-cup-engineering/software-edit-language-service": "1.0.0",
+    "@rsc-quiescent/repository-material-observation-service": "3.0.0",
+    "@rsc-quiescent/software-static-verification-service": "1.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

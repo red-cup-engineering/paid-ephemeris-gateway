@@ -1,0 +1,69 @@
+{
+  "subject": "toronto-police-link-dozens-of-shootings-to-multilayered-gun-for-hire-network",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Toronto police link dozens of shootings to ‘multilayered’ gun-for-hire network"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Young adults and teens are being recruited through apps like Telegram and paid to carry out attacks, officials say</p><p>Police investigators in Toronto have said that dozens of shootings – including one at the US consulate in March – are linked to a “multilayered” gun-for-hire network that is also responsible for attacks on synagogues around Canada’s largest city.</p><p>Toronto’s police chief, Myron Demkiw, told reporters on Tuesday that young adults and teenagers are being recruited through encrypted messaging apps such as Signal, Telegram and WhatsApp by “bad actors” and paid by the networks to carry out the attacks. Shooters are required to film their attacks in order to get paid.</p> <a href=\"https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 17:47:30 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/toronto-police-shootings-gun-for-hire-network"
+      },
+      "status": "supported"
+    }
+  ]
+}

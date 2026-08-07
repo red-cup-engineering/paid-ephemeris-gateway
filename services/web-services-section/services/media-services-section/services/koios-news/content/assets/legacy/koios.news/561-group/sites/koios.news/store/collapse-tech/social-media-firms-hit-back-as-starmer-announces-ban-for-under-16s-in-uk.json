@@ -1,0 +1,69 @@
+{
+  "subject": "social-media-firms-hit-back-as-starmer-announces-ban-for-under-16s-in-uk",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Social media firms hit back as Starmer announces ban for under-16s in UK"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Meta, YouTube and Snapchat say ban, which would stop children using their platforms, will drive them to ‘less safe services’</p><ul><li><p><a href=\"https://www.theguardian.com/uk-news/2026/jun/15/uk-under-16s-social-media-ban-how-will-it-work\">How will the ban work?</a></p></li><li><p><a href=\"https://www.theguardian.com/world/2026/jun/10/parents-uk-how-feel-about-potential-under-16s-social-media-ban\">UK parents: how do you feel about the ban?</a></p></li></ul><p>Britain’s plans to ban social media for under-16s will push teenagers towards more harmful platforms, the world’s biggest technology companies have said as ministers push to enact the new restrictions by next spring.</p><p>Meta, YouTube and Snapchat have all criticised the ban, which was announced by Keir Starmer on Monday and would stop younger teenagers from using their services.</p> <a href=\"https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 11:02:51 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/media/2026/jun/15/social-media-ban-uk-under-16-starmer"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "temperate-local-extinctions-from-climate-change-are-outpacing-tropical-extinctions",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Temperate local extinctions from climate change are outpacing tropical extinctions"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02669-y"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nature.com/articles/s41558-026-02669-y"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02669-y"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Nature Climate Change, Published online: 18 June 2026; doi:10.1038/s41558-026-02669-y The authors analyse global-scale resurvey data for 5,151 species to reveal the sensitivity of tropical versus temperate species to climate change. They show significantly higher frequencies of local extinction in temperate species than in tropical species, linked to faster warming at high latitudes."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02669-y"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-18"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02669-y"
+      },
+      "status": "supported"
+    }
+  ]
+}

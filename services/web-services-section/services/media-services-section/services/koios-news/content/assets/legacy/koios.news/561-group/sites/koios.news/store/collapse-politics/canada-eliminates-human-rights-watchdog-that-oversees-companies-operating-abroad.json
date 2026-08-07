@@ -1,0 +1,69 @@
+{
+  "subject": "canada-eliminates-human-rights-watchdog-that-oversees-companies-operating-abroad",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Canada eliminates human rights watchdog that oversees companies operating abroad"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Mark Carney says Canadian Ombudsperson for Responsible Enterprise office hasn’t been ‘effective’ since its 2019 setup</p><p>Canada is eliminating a watchdog that investigates alleged human rights violations committed by Canadian companies operating abroad, after Mark Carney said the office hadn’t been “effective” since it was set up in 2019.</p><p>The move comes as Canada faces criticism from Donald Trump’s administration over its “unacceptable” efforts to combat forced labour.</p> <a href=\"https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:36:55 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/canada-eliminates-human-rights-watchdog-companies-abroad"
+      },
+      "status": "supported"
+    }
+  ]
+}

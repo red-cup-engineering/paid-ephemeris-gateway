@@ -1,0 +1,69 @@
+{
+  "subject": "the-ai-bubble",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The AI Bubble"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/10/the-ai-bubble/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/10/the-ai-bubble/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/10/the-ai-bubble/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Dean Baker The Lay of the Land The US economy has had two major bubbles in the last three decades. There are signs that we are in the midst of a third. In the late 1990s there was a tech bubble, driven to a large extent by excitement over the potential of the Internet. […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/10/the-ai-bubble/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 10 Jun 2026 13:57:55 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/10/the-ai-bubble/"
+      },
+      "status": "supported"
+    }
+  ]
+}

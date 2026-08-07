@@ -1,0 +1,69 @@
+{
+  "subject": "it-s-going-to-be-extremely-hot-workers-imperiled-as-sweltering-world-cup-temperatures-are-forecast",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘It’s going to be extremely hot’: workers imperiled as sweltering World Cup temperatures are forecast"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>It could top 90F in several cities hosting World Cup games – and workers could pay the price with their health</p><p>As the <a href=\"https://www.theguardian.com/football/world-cup-2026\">World Cup</a> kicks off, labor advocates and scholars warn that the workers making the tournament possible could face serious heat-related risks.</p><p>“It’s going to be extremely hot, and you just cannot leave people unprotected or you’re going to deal with a lot of injuries,” said Jonathan Alingu, co-executive director of Central Florida Jobs With Justice, which has been calling for worker protections at the Miami games. “Or, God forbid, something even worse.”</p> <a href=\"https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 10:00:41 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/14/world-cup-heat-workers"
+      },
+      "status": "supported"
+    }
+  ]
+}

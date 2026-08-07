@@ -1,0 +1,17 @@
+{
+  "settlement": "web-source-acquisition",
+  "owns": [
+    "public source retrieval policy",
+    "public source discovery policy and grounding-metadata custody",
+    "provider offers and receipts",
+    "provider-local retrieval evidence",
+    "typed source obstructions"
+  ],
+  "doesNotOwn": [
+    "customer assignments",
+    "customer source admission",
+    "journalistic truth or publication warrant",
+    "customer corpus",
+    "publication or delivery authority"
+  ]
+}

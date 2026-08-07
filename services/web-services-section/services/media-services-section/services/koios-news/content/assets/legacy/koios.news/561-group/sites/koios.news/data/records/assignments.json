@@ -1,0 +1,28 @@
+[
+  {
+    "kind": "koios.newsroom.assignment",
+    "assignmentId": "editing-revision-acurite-delays-app-migration-due-to-user-concerns-95448b3d",
+    "term": "revision: acurite-delays-app-migration-due-to-user-concerns-over",
+    "beat": "editing",
+    "createdAt": "2026-06-19T12:05:06.891Z",
+    "priority": 82,
+    "summary": "Revise \"AcuRite Delays App Migration Due to User Concerns Over New App's Shortfalls, Including Data Center Water Use\" from the content-quality revision backlog.",
+    "angle": "internal-linking (no-internal-links, priority 82): Add one warranted same-site link where a paragraph already names the target topic; use the internal-link placement queue when it offers a conservative patch.\nreference-enrichment (thin-references, priority 78): Add at least one additional relevant CSL reference from a distinct, high-quality source before further syndication or promotion.\nseo-revision (seo-term-overuse, priority 76): Rewrite repeated SEO phrases into natural entity, pronoun, and synonym variation while preserving first-paragraph and H2 topical placement.\nstructure (malformed-h2-heading, priority 74): Split long H2 lines into short section headings followed by normal paragraphs; headings should label the section, not carry the whole claim.\ncitation-cleanup (uncited-bibliography, priority 66): Tie each important claim to a body citation or inline source link so the bibliography is not detached from the prose.",
+    "sourceUrls": [
+      "https://koios.news/posts/acurite-delays-app-migration-due-to-user-concerns-over"
+    ],
+    "status": "assigned"
+  },
+  {
+    "kind": "koios.newsroom.assignment",
+    "assignmentId": "editing-source-cycle-repair-ai-capital-expenditure-bubble-b034c41b",
+    "term": "source-cycle repair: ai-capital-expenditure-bubble",
+    "beat": "editing",
+    "createdAt": "2026-06-19T14:55:17.376Z",
+    "priority": 92,
+    "summary": "Repair source-cycle candidate \"ai-capital-expenditure-bubble\" from collapse-finance for \"AI capital expenditure bubble\".",
+    "angle": "Original beat: collapse-finance\nOriginal demand term: AI capital expenditure bubble\nCandidate state: missing\nsource-alignment (unsupported-demand, priority 92): Repair the intake path or choose a demand row with witnessed local wire evidence before spending model calls. Evidence: no witnessed intake for beat collapse-finance (http://127.0.0.1:18809/newswires/collapse-finance/: fetch failed)\nKeep intake sources and published CSL references distinct. Repair work must not reintroduce article-level sources frontmatter.",
+    "sourceUrls": [],
+    "status": "assigned"
+  }
+]

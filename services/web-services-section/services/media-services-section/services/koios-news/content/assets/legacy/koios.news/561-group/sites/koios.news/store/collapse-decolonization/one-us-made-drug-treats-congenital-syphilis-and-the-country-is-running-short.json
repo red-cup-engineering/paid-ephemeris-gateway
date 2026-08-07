@@ -1,0 +1,69 @@
+{
+  "subject": "one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "One US-made drug treats congenital syphilis, and the country is running short"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/news/one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "This story was originally published by Stateline. Nada Hassanein Stateline The United States has a shortage of the only first-line medication recommended for pregnant women with syphilis to prevent passing it to their baby, even as congenital syphilis rates have been skyrocketing. Last July, drug manufacturer Pfizer issued a voluntary recall of brand name Bicillin L-A, or penicillin G benzathine — a long-acting injectable of the antibiotic — warning of particulates, or foreign material, in some batches. The U.S. Food and Drug Administration says supplies won’t return to normal until December 2027. In the United States, there’s only one manufacturing plant that makes this injectable penicillin, run by Pfizer’s subsidiary, King Pharmaceuticals, in Michigan. The FDA has allowed the temporary importation of an alternative, Lentocilin, from Portugal. But because Lentocilin isn’t a permanent solution, and penicillin is difficult and complex to manufacture, experts are concerned that the shortage will worsen infection rates and the disparities associated with congenital syphilis, which occurs when the infection is passed on to developing fetuses and newborns. State health departments told Stateline they are guiding providers to prioritize the medication for pregnant patients with syphilis and their babies, and are connecting patients with the drugs if clinics lack them. Bicillin L-A has seen intermittent shortages throughout the past decade, said Elizabeth Finley, interim executive director of the National Coalition of STD Directors. In one&nbsp; survey&nbsp; of health departments across 13 states during a 2023 shortage, the group found widespread challenges in getting the drug in order to treat pregnant patients. But last year’s recall has created “a shortage that is more significant than we’ve experienced in the past,” Finley said. Some health centers lost their entire stock of Bicillin in the recall, Finley and others told Stateline.&nbsp;The drug has no generic alternative. Congenital syphilis can have devastating, irreversible effects. Babies born to women with syphilis can be stillborn or die as a newborn. The infection also can cause serious complications in babies, such as bone deformities, deafness or blindness. “The biggest fear with the Bicillin shortages has always been that somebody could not get treatment before delivery,” Finley said. “There’s really no length of exposure to syphilis that is safe for a fetus.” Indigenous babies have had the highest rates in recent years, disproportionate to their share of the population, followed by Black babies. “It’s really a tragedy, because it’s totally preventable,” said infectious disease physician Dr. Kelly Johnson, medical director of the California Prevention Training Center at the University of California, San Francisco. The center offers training and consultation to medical providers in Arizona, Hawaii, New Mexico and Nevada, as well as in California, where congenital syphilis cases rose almost fivefold over the past decade. Under the recall, California had to return nearly 20 percent of its Bicillin L-A stock. In recent years, congenital syphilis cases have more than tripled, with nearly 4,000 cases nationwide in 2024 alone — the highest number reported in a single year in three decades. A federal report showed lack of timely testing or proper treatment contributed to 90 percent of the nation’s cases. Black and Indigenous women disproportionately lack access to prenatal care, where they could get tested and treated for syphilis. Almost 90 percent of South Dakota congenital syphilis cases between 2020 and 2023 were in Native American babies, despite Native Americans making up just 11 percent of the state’s population. National and state guidelines instruct providers and health departments to prioritize pregnant syphilis patients for their remaining stocks of Bicillin L-A. Non-pregnant syphilis patients can take the antibiotic doxycycline, although that drug’s regimen — two pills a day for up to four weeks — can be harder for patients to adhere to, experts say. “It’s much more difficult as a clinician or as a public health person to know if people actually complete their (doxycycline) treatment,” Johnson said. Experts say it’s unclear whether the shortages have been contributing to the rise in congenital syphilis cases. “But I suspect it certainly could make it worse,” Johnson said. “The longer this goes on, the harder that it’s going to be.” In South Dakota, which had the highest rates in the nation, cases decreased slightly last year, from 40 in 2024, to 37 in 2025. This year as of April, only one case has been reported, though data for congenital syphilis can lag. Mississippi has seen a gradual drop in cases over the past couple of years, said Dr. Tami Brooks, medical director of the state’s health department. Mississippi and other state health departments told Stateline they connect patients with Bicillin or Lentocilin when a health care center reports it has a pregnant patient but no supply. Bicillin L-A can also be used for other infections, such as strep throat. Dr. Tanya Fitts, immediate past president of the American Academy of Pediatrics’ Mississippi chapter, said one of her patients had suffered a rare complication of strep throat. For the past five years, the now 18-year-old has had to take daily oral penicillin to keep symptoms at bay, instead of the recommended monthly Bicillin L-A injection, Fitts said. “We haven’t been able to order it for many, many years,” Fitts said, adding that the price of the drug outpaced what her clinic was getting paid from insurance companies. In a statement to Stateline, Pfizer said demand for Bicillin L-A is exceeding supply, though it said health providers may request the drug for a pregnant syphilis patient. The company did not answer Stateline’s questions regarding details of the recall nor the manufacturing process, saying it doesn’t disclose details about product supply chain. If a drug is expensive but has limited use, manufacturers don’t have a lot of financial incentives to make it, said infectious diseases clinical pharmacist Katherine Yang, a professor at the University of California, San Francisco’s School of Pharmacy. “The more niche a drug is, the less likely it is to have multiple manufacturers and generic products once it is off patent,” Yang said. “It does speak to the vulnerability of our drug supply chain, when there are very limited manufacturers.” Bicillin L-A is typically sold by the 10-dose box, even if a clinic only needs a few doses — costing thousands of dollars, said family medicine physician Dr. Megan O’Connell, of the Cherokee Nation. She’s the chief public health officer of the Great Plains Tribal Leaders Health Board, which offers epidemiological support, care and advocacy for 18 tribes across Iowa, North and South Dakota, and Nebraska. Patrick Fonge, pharmacy director at the Navajo Health Foundation’s Sage Memorial Hospital in rural Arizona, told Stateline wholesalers have increased prices. “(Bicillin L-A) is not available in the market, but some vendors, some distributors, do have it in their warehouses and then now triple the price or quadruple the price to make profit,” Fonge said. According to one wholesaler, the average wholesale price for Bicillin at the 1.2mu concentration showed about $4,870 for a 10-dose box, he said. “We don’t have extra (in our) budget for Bicillin.” Fonge puts in orders for the Lentocilin instead, through the federal Indian Health Service, which pays for the medication. “It’s clear to us that a single U.S. manufacturer that makes this drug in a singular factory is a challenge,” said Finley, of the National Coalition of STD Directors. “We’re talking about the U.S. not being able to make the drug penicillin. Which is ridiculous.” The post One US-made drug treats congenital syphilis, and the country is running short appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/one-us-made-drug-treats-congenital-syphilis-and-the-country-is-running-short/"
+      },
+      "status": "supported"
+    }
+  ]
+}

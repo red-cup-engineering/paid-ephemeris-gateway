@@ -1,0 +1,69 @@
+{
+  "subject": "hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5-500-years-ago",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Hunter-gatherers in Siberia died of a plague outbreak 5,500 years ago"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/science/2026/06/hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5500-years-ago/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/science/2026/06/hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5500-years-ago/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/science/2026/06/hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5500-years-ago/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Plague swept through groups of hunter-gatherers in southeastern Siberia 5,500 years ago, leaving dozens dead in its wake—with DNA from Yersinia pestis bacteria still trapped inside their teeth. University of Oxford ancient DNA researcher Ruairidh Macleod and his colleagues recently sequenced the telltale bacterial DNA in teeth from plague victims at four ancient cemeteries in the area around Russia’s Lake Baikal. The tragedy that befell these communities is now the earliest known plague outbreak, courtesy of the oldest strain of Y. pestis ever sequenced. Unearthing a new backstory for the plague Until recently, scientists who study the evolution of diseases have held two fairly solid ideas about the origins of plague, the disease caused by Yersinia pestis bacteria. It's a scourge so awful that it has gone down in history as not just a plague but the plague. The first idea is that the earliest strains didn't have the right genetic traits to be really lethal. And the second is that the plague first began menacing humans when the first farmers settled in densely packed towns alongside rats and domestic animals. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/science/2026/06/hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5500-years-ago/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 15:04:40 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/science/2026/06/hunter-gatherers-in-siberia-died-of-a-plague-outbreak-5500-years-ago/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "this-major-makerfield-victory-has-made-it-inevitable-it-s-now-time-for-keir-starmer-to-step-aside-neal-lawson",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "This major Makerfield victory has made it inevitable: it’s now time for Keir Starmer to step aside | Neal Lawson"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Andy Burnham’s positive vision has struck a powerful blow to Reform – but the PM risks diminishing the impact by clinging on in No 10</p><ul><li><p>Neal Lawson is director of the cross-party campaign organisation Compass</p></li></ul><p>That tingle of emotion you felt when you awoke today? That is the long-lost feeling of progressive hope. That it comes from Makerfield is all the more remarkable. Reform has been defeated in a seat that it should have won at a canter – trailing Labour, even when its voteshare is combined with <a href=\"https://www.theguardian.com/politics/live/2026/jun/18/makerfield-byelection-keir-starmer-andy-burnham-robert-kenyon-labour-leadership-reform-aberdeen-arbroath-uk-politics-latest-news-updates?page=with%3Ablock-6a34ab468f087fb1fe061ccf#block-6a34ab468f087fb1fe061ccf\">that of Restore</a>. It finished second there in the 2024 election and it recently won all of the council seats. If Reform had faced any other politician, <a href=\"https://www.theguardian.com/politics/2026/may/26/carol-vorderman-demands-apology-reform-candidate-robert-kenyon\">its candidate, Robert Kenyon,</a> would be heading to Westminster.</p><p>But Reform was up against Andy Burnham, probably the only Labour candidate who could have held Makerfield. He is the only candidate for the party’s leadership who can defeat Reform, and the causes of Reform, and bring in a new era of progressive government. To say there was a lot riding on Makerfield would be a <a href=\"https://www.theguardian.com/politics/2026/jun/18/why-is-there-so-much-interest-in-a-byelection-in-north-west-england\">massive understatement</a>.</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:08:46 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/makerfield-byelection-victory-keir-starmer-andy-burnham-reform"
+      },
+      "status": "supported"
+    }
+  ]
+}

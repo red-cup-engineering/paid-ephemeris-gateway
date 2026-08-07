@@ -1,0 +1,69 @@
+{
+  "subject": "burnham-brings-in-top-economists-before-possible-leadership-run",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Burnham brings in top economists before possible leadership run"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Labour mayor giving advisory roles to ex-Bank of England economist and others seen as attempt to reassure markets</p><ul><li><p><a href=\"https://www.theguardian.com/politics/live/2026/jun/18/makerfield-byelection-keir-starmer-andy-burnham-robert-kenyon-labour-leadership-reform-aberdeen-arbroath-uk-politics-latest-news-updates\">Makerfield byelection – latest updates</a></p></li></ul><p>Three economic heavyweights have been brought in to advise Andy Burnham as he attempts to reassure the markets before his return to parliament and possible <a href=\"https://www.theguardian.com/politics/2026/jun/17/how-quickly-could-andy-burnham-become-the-uks-prime-minister\">challenge to Keir Starmer</a>.</p><p>Burnham is understood to be getting advice from Andy Haldane, a former Bank of England chief economist, as well as Richard Hughes, a former chair of the Office for Budget Responsibility and Jim O’Neill, a crossbench peer and former Treasury minister who worked on George Osborne’s “Northern Powerhouse”.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 03:42:57 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/andy-burnham-top-economists-possible-leadership-run"
+      },
+      "status": "supported"
+    }
+  ]
+}

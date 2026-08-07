@@ -1,0 +1,82 @@
+{
+  "name": "@emsenn/computing-with-http",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HTTP computing primitives: protocol codecs for headers, cookies, negotiation, SSE, WebSocket frames, ESI, and multipart bodies.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm run rebuild",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./app": {
+      "types": "./dist/app/index.d.mts",
+      "import": "./dist/app/index.mjs"
+    },
+    "./codecs": {
+      "types": "./dist/codecs/index.d.mts",
+      "import": "./dist/codecs/index.mjs"
+    },
+    "./codecs/http": {
+      "types": "./dist/codecs/http/index.d.mts",
+      "import": "./dist/codecs/http/index.mjs"
+    },
+    "./codecs/cookie": {
+      "types": "./dist/codecs/cookie/index.d.mts",
+      "import": "./dist/codecs/cookie/index.mjs"
+    },
+    "./codecs/negotiation": {
+      "types": "./dist/codecs/negotiation/index.d.mts",
+      "import": "./dist/codecs/negotiation/index.mjs"
+    },
+    "./codecs/sse": {
+      "types": "./dist/codecs/sse/index.d.mts",
+      "import": "./dist/codecs/sse/index.mjs"
+    },
+    "./codecs/ws": {
+      "types": "./dist/codecs/ws/index.d.mts",
+      "import": "./dist/codecs/ws/index.mjs"
+    },
+    "./codecs/esi": {
+      "types": "./dist/codecs/esi/index.d.mts",
+      "import": "./dist/codecs/esi/index.mjs"
+    },
+    "./codecs/multipart": {
+      "types": "./dist/codecs/multipart/index.d.mts",
+      "import": "./dist/codecs/multipart/index.mjs"
+    },
+    "./codecs/compression": {
+      "types": "./dist/codecs/compression/index.d.mts",
+      "import": "./dist/codecs/compression/index.mjs"
+    },
+    "./codecs/mcp": {
+      "types": "./dist/codecs/mcp/index.d.mts",
+      "import": "./dist/codecs/mcp/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.4.1",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.61.0"
+  },
+  "sideEffects": false
+}

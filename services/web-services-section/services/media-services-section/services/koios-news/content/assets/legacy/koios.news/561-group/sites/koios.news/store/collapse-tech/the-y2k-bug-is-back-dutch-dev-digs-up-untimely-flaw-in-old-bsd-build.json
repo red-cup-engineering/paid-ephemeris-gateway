@@ -1,0 +1,69 @@
+{
+  "subject": "the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Y2K bug is back! Dutch dev digs up untimely flaw in old BSD build"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build/5255645"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/offbeat/2026/06/15/the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build/5255645"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build/5255645"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "It’s been more than a quarter century since the Y2K bug threatened to disrupt the not-so-modern world, and while the patching efforts of global IT heroes prevented a millennial mess, the problem persists as a Dutch dev just found a new instance of the numeric nightmare. While working on an emulator for the venerable Programmed Data Processor (PDP) series of “minicomputer” systems manufactured between the 1950s and 1990s, Folkert van Heusden spotted an unpatched Y2K bug in the Network Time Protocol daemon in BSD 2.11. To be fair, it’s not like van Heusden stumbled onto a potentially devastating issue that’s simply waiting to cause chaos: Not only was the bug specific to the PDP-11/70, a system that entered service in 1975, but it also requires a Precision Standard Time, Inc.(PSTI) receiver manufactured by defunct hardware maker Traconex used to pick up time signals broadcast by short wave radio stations managed by the US National Institute of Standards and Technology. Even at that point, the bug won't instantly break network time, as a would-be attacker must take several steps to configure the ancient mahicnes in a way that causes the error. Van Heusden’s writeup explains how to trigger the flaw. “I'm writing a PDP emulator,” van Heusden told The Register in an email. “I'm also very much interested in time keeping on computers. That combined, I dove into the NTP-implementation on the PDP. When adding emulation for the PSTI-device, I suddenly noticed 19126 for the year.” Unsurprisingly, when the PSTI receiver actually produces the correct output, the system throws an error that the time offset between the PDP emulator and the emulated PSTI device is a bit “excessive.” Only by 17,000 years, give or take a couple centuries. Luckily, van Heusden has coded a fix that’ll bring the times back in sync, eliminating what may be one of the few remaining Y2K bugs still floating around in the wild - after all, when’s the last time you heard of a forgotten (or, in this case, overlooked due to technological obsolescence) Y2K bug being patched? If you want to tinker with a 50-year old emulated system running a 35-year old operating system, the good news is that the PDP and its 16-but CPU ran at 5MHz and needed just 4 MB main memory - a spec that van Heusden’s PDP-11/70 emulator can easily run on modest hardware like a Raspberry Pi Pico, and it’s available on GitHub. Just be sure you patch that Y2K bug if you plan to tinker with time keeping. ® Correction: A previous version of this article referred to the developer as Danish rather than Duch."
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build/5255645"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:30:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/the-y2k-bug-is-back-dutch-dev-digs-up-untimely-flaw-in-old-bsd-build/5255645"
+      },
+      "status": "supported"
+    }
+  ]
+}

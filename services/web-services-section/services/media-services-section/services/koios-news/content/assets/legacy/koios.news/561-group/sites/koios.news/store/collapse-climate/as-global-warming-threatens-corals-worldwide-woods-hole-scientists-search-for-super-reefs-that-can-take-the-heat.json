@@ -1,0 +1,69 @@
+{
+  "subject": "as-global-warming-threatens-corals-worldwide-woods-hole-scientists-search-for-super-reefs-that-can-take-the-heat",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "As Global Warming Threatens Corals Worldwide, Woods Hole Scientists Search for ‘Super Reefs’ That Can Take the Heat"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/scientists-search-for-heat-resilient-reefs/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/14062026/scientists-search-for-heat-resilient-reefs/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/scientists-search-for-heat-resilient-reefs/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "If protected, researchers say these coral strongholds may help repopulate more degraded reefs across the Central Pacific. By Teresa Tomassoni MAJURO, Marshall Islands—Perched on the bow of an aluminum landing craft, Anne Cohen gazed a few yards ahead of the vessel toward a yellow robot gliding across the emerald Majuro lagoon.&nbsp;"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/scientists-search-for-heat-resilient-reefs/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 09:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/14062026/scientists-search-for-heat-resilient-reefs/"
+      },
+      "status": "supported"
+    }
+  ]
+}

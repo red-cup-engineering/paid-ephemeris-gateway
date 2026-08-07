@@ -1,0 +1,29 @@
+{
+  "name": "@rsc-quiescent/algora-work-board-conductor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "algora-run-loop": "scripts/run-loop.mjs"
+  },
+  "exports": {
+    ".": "./src/orchestrator.mjs",
+    "./planner": "./src/planner.mjs"
+  },
+  "dependencies": {
+    "@rsc-quiescent/algora-opportunity-observation-service": "1.0.0",
+    "@red-cup-engineering/github-services-section": "1.0.0",
+    "@rsc-quiescent/software-execution-adjudication-service": "1.0.0",
+    "@rsc-quiescent/software-patch-synthesis-service": "1.0.0",
+    "@rsc-quiescent/software-sandbox-execution-service": "1.0.0",
+    "@red-cup-engineering/software-solve-loop-service": "1.0.0",
+    "@rsc-quiescent/software-work-allocation-service": "1.0.0",
+    "@rsc-quiescent/software-work-qualification-assay-service": "1.0.0",
+    "@rsc-quiescent/software-work-rectification-assay-service": "1.0.0",
+    "@rsc-quiescent/software-work-risk-assay-service": "1.0.0",
+    "@rsc-quiescent/software-work-witness-service": "1.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

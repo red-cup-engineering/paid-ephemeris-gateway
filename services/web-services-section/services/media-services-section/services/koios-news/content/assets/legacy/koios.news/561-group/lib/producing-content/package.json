@@ -1,0 +1,72 @@
+{
+  "name": "@emsenn/producing-content",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Producing content: the content domain (@emsenn/content, the WHAT) organized through @emsenn/organizing into cultivated, witnessed, distributable content. The package root is the fused producing-content surface; facet subpaths expose farm and mill modules while the category tree is being cut.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "content-farm": "./dist/scripts/farm.mjs",
+    "content-demand-pull": "./dist/scripts/demand-pull.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "farm": "pnpm run build && node dist/scripts/farm.mjs",
+    "prepack": "pnpm run rebuild",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./content-farm": {
+      "types": "./dist/content-farm/index.d.mts",
+      "import": "./dist/content-farm/index.mjs"
+    },
+    "./content-mill": {
+      "types": "./dist/content-mill/index.d.mts",
+      "import": "./dist/content-mill/index.mjs"
+    },
+    "./organizing-a-content-farm": {
+      "types": "./dist/organizing-a-content-farm/index.d.mts",
+      "import": "./dist/organizing-a-content-farm/index.mjs"
+    },
+    "./organizing-a-content-mill": {
+      "types": "./dist/organizing-a-content-mill/index.d.mts",
+      "import": "./dist/organizing-a-content-mill/index.mjs"
+    },
+    "./organizing-a-newswire": {
+      "types": "./dist/organizing-a-newswire/index.d.mts",
+      "import": "./dist/organizing-a-newswire/index.mjs"
+    },
+    "./organizing-a-newscable": {
+      "types": "./dist/organizing-a-newscable/index.d.mts",
+      "import": "./dist/organizing-a-newscable/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/content": "workspace:*",
+    "@emsenn/communicating": "workspace:*",
+    "@emsenn/organizing": "workspace:*",
+    "@emsenn/relating": "workspace:*",
+    "@sinclair/typebox": "^0.34.41"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

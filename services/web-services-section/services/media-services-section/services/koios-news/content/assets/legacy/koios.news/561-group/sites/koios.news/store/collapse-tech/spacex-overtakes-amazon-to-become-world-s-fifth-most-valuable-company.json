@@ -1,0 +1,69 @@
+{
+  "subject": "spacex-overtakes-amazon-to-become-world-s-fifth-most-valuable-company",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "SpaceX overtakes Amazon to become world’s fifth most valuable company"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Elon Musk’s firm briefly reached $2.97tn valuation days after its IPO following purchase of AI coding startup Cursor</p><p>SpaceX has overtaken Amazon to become the world’s fifth most valuable company days after its <a href=\"https://www.theguardian.com/science/2026/jun/12/spacex-stock-price-ipo-spcx\">stock market debut</a>.</p><p>The milestone came as Elon Musk’s company agreed to buy the startup behind the AI-powered coding app Cursor for $60bn (£44bn), in an attempt to capitalise on the technology’s success as a coding tool.</p> <a href=\"https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 18:37:43 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/science/2026/jun/16/spacex-ai-coding-anysphere-cursor-amazon-market-valuation-xai"
+      },
+      "status": "supported"
+    }
+  ]
+}

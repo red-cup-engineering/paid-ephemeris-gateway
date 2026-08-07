@@ -1,0 +1,69 @@
+{
+  "subject": "uk-plans-to-tackle-ai-harms-would-bypass-democratic-process-experts-warn",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK plans to tackle AI harms would bypass democratic process, experts warn"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/uk-online-safety-act-ai-harms-government-labour-grok-elon-musk/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/en/uk-online-safety-act-ai-harms-government-labour-grok-elon-musk/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/uk-online-safety-act-ai-harms-government-labour-grok-elon-musk/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The UK is seeking to grant ministers wide-ranging new powers to rewrite significant portions of the Online Safety Act through amendments tucked into two unrelated bills, a move that experts warn could bypass normal parliamentary scrutiny. The proposed changes would allow ministers to amend the act by adding as much as a third to the regulatory regime using so-called Henry VIII clauses , limiting Parliament to a simple yes-or-no vote on an unforeseeable number of new rules, rather than full debate or amendment. The change would allow the central government to limit detailed parliamentary scrutiny and amend the act more quickly. “It’s basically [introducing] a third of the Online Safety Act,” and gives ministers power to add as many unforeseen new rules as they want, said Essex University law professor Lorna Woods, legal adviser to the Online Safety Act Network. In March, the government proposed edits to the Crime and Policing Bill and the Children's Wellbeing and Schools Bill that would enable these changes. The move comes after admissions by the UK’s communications regulator Ofcom that it didn’t have the power to address Elon Musk’s chatbot Grok’s deepfake scandal (when the tool was used to create non-consensual sexualised images primarily of women and children), due to limitations in how the Online Safety Act laws apply to chatbots. The UK government announced it would “move fast to shut a legal loophole and force all AI chatbot providers to abide by illegal content duties in the Online Safety Act.” The amendments also come ahead of decisive UK local council elections and at a moment when the Labour government is “under a huge amount of pressure” to deliver, said Owen Bennett, former head of international online safety at Ofcom, the UK’s communications regulator. “In general, there’s a sense of, ‘we need to go farther and faster.’” The proposed changes have been criticised for their potential consequences, including granting unfettered power to current and future governments to change what was already a highly contested and long-fought-for act. There are also worries that limiting parliamentary debate will weaken the democratic legitimacy of the regime, potentially making it easier for tech companies to challenge rules or lobby ministers directly rather than engage with Parliament. This proposed amendment also comes amidst the perception that the UK government is eager to attract Big Tech investment while simultaneously exerting greater executive control over tech regulation. The UK’s Online Safety Act, passed into law in 2023, is the result of years of negotiations and revisions, and has long been criticised as complex and internally inconsistent. The Act is “a bit like Frankenstein,” said Javier Ruiz Diaz, technology and human rights lead at Amnesty International UK and former policy director at digital rights nonprofit Open Rights Group. “It became this really complicated system” that “no one really is happy with,” he said, describing it as “a bit of a mess” with various bills and addendums “bolted on” over time. Still, experts say that complexity reflects years of negotiation, something they argue is undermined by the new shortcut approach. “The concept underpinning the Online Safety Act … [is that it] gives you the house and then the furniture can be put in later,” said Catherine Allen, founder of immersive technology research and consultancy Limina Immersive. As new technology emerges, these can be addressed through amendments to the act, she said. At around 300 pages , the act has been characterised as the most wide-ranging effort by a Western government to regulate online safety, amidst a wide variety of efforts by governments to regulate, according to a survey of online safety regulations globally conducted by the NYU Stern Center for Business and Human Rights. Changes from a ‘desperate’ government Now the government has proposed amendments that could change a significant proportion of the Online Safety Act, in ways that are currently unpredictable, say experts. The mechanism is indirect: rather than amending the OSA directly, the government has inserted provisions into unrelated legislation. The change – the inclusion of Henry VIII clauses in both bills – would allow ministers to change legislation without allowing Parliament to amend the proposals. In these cases, now, Parliament would only be able to say yes or no to any new rules, without any discussion of the merits or downsides. So while technically some “parliamentary supervision remains, … it is extremely limited,” said Elena Abrusci, senior lecturer in law at Brunel University, in an email to Tech Policy Press. “To be fair… this is not dramatically a new approach,” she said, referring to how the act already provided for the possibility for ministers and the secretary of state to expand on the offences under its scope through secondary legislation. “What is new is the specific focus on AI-generated content.” “Changing one act with another act is actually kind of normal,” said Woods. The problem is using these wide-ranging powers to do it, she said. The Crime and Policing Bill, introduced early last year by the Labour government, is a broad bill introduced to enforce the government’s Safer Streets initiative , which broadly aims to increase confidence in policing and reduce violent crime. While the bill expands policing powers by covering a wide swathe of topics, from violence against women and children and knife crime (and attracting criticism for its regulations, including banning face coverings at protests), it also has implications for the tech sector by dealing with online safety, fraud and data , such as removing criminal images online. The amendment to the bill would give senior government ministers the “power to amend [any provision of the Online Safety Act] in relation to illegal AI-generated content.” The Children’s Wellbeing and School Bill, introduced by the Department of Education in 2024, aims to improve educational standards and online safety for children. The suggested amendment would give ministers the ability to change or add to any piece of legislation regarding restricting children’s access to the internet. Since the UK’s Online Safety Act was launched almost three years ago, there have been 28 investigations into 92 services, according to regulator Ofcom in 2025 . One measure, which required platforms to implement age verification measures to view pornographic content, was implemented last summer and received widespread backlash , including criticism from US politicians such as vice president JD Vance about how it would restrict US tech companies. Experts acknowledged the need for speed, with caution. Online threats “are emerging at extraordinary speed,” said Elena Martellozzo, lecturer in criminology at Middlesex University, whose research has focused on online sexual abuse. While “those powers should never really be handed out lightly … these amendments aren’t necessarily a blank cheque, they are tied to specific harms,” she said. The risks of speed While there is support for the policy ideas behind the changes, the notion of giving wide-ranging power to ministers to amend the act is worrying, say critics. The proposed changes feel like a “desperate” response to get ahead, said Ruiz Diaz. “As much as everyone wants to see children protected,” rushing to make changes is “generally not a good idea,” he said. “The moment you start shortcutting the process, you leave holes for companies to exploit that.” That concern goes to the heart of criticisms of the change: that trading the democratic process for speed could ultimately weaken the enforceability of the regime. The government could have felt pressured to quickly make these changes due to current debates about the Online Safety Act, including a push from the House of Lords for a social media ban , said Woods. The other option would have been to announce a strategy in the King’s Speech, a document that announces the government’s legislative and policy agenda, but this could have already been full, said Woods. One of the problems with these changes, said Woods, is also that the scope of the two bills is limited and could yield rules that are “warped” and limited themselves. For example, to get a new rule about chatbots to fit into the scope of the Crime and Policing Bill, it would need to relate to illegal activity–but the problems with chatbots are wider and involve mental health and addiction. “So you end up with a partial solution,” she said. Other concerns raised have included making it easier for the tech companies to challenge the government’s decisions and cite the lack of standard parliamentary consideration, as well as making it easier for Big Tech to lobby a few ministers rather than many more MPs. The concerns around these new powers are also partly about public perception. “My big concern is what this actually says about online safety regulation in the UK and the message it sends internationally,” said Bennett. Although the act has been controversial, its success and survival depend on the fact that the government can say it was brought into being by public opinion, he said. “You lose that when you start going down the route of giving power to the minister of the day to amend the Act. That sets a worrying precedent for trust.” The problem with these changes, said Woods, is that the scope is limited. More broadly, these changes also fit in with a pattern of the government using its “powers to direct regulators,” said Ruiz Diaz. They come amidst concerns in the UK and globally that too much executive control is being exerted on tech regulation. In the UK, the government has been perceived as pressuring its competition watchdog to make pro-business decisions, and recently appointed an ex-Big Tech executive to lead it, sparking much criticism about conflicts of interest, both real and perceived. While these amendments to regulate Big Tech initially don't seem to square with the government’s light-touch regulation with the Competition and Markets Authority, this dissonance makes sense, said Bennett. While Big Tech companies see online safety as a cost of doing business, “when it comes to competition and antitrust, there’s money at stake,” he said. Companies “take that way more seriously. They aren’t willing to concede any ground.” Abrusci’s hope is that institutions, including Ofcom and the Equality and Human Rights Commission, step in to “oversee the protection of fundamental rights and ensure that [the] government does not overstep their powers.” But she worries that these new “very broad powers…may impede proper accountability.” This piece was originally published at Tech Policy Press. Jade-Ruyu Yan is a UK reporting fellow at openDemocracy and Tech Policy Press. The government is seeking powers to allow ministers to rewrite significant portions of the Online Safety Act"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/uk-online-safety-act-ai-harms-government-labour-grok-elon-musk/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 10 Apr 2026 10:59:46 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/uk-online-safety-act-ai-harms-government-labour-grok-elon-musk/"
+      },
+      "status": "supported"
+    }
+  ]
+}

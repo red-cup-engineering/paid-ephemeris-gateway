@@ -1,0 +1,69 @@
+{
+  "subject": "rock-chalk-algeria",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rock Chalk Algeria"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/rock-chalk-algeria"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/rock-chalk-algeria"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/rock-chalk-algeria"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "There’s an obnoxiously cute love story brewing between the Algerian men’s national team and the city of Lawrence, Kansas — where the Fennecs have set up camp — and the footballing world is lapping it up. Like every good romantic comedy, the charm of the tale lies in the absurdity. On the surface, Algeria and Lawrence have very little in common. Algeria is a Mediterranean country whose population is concentrated along its coastline; Kansas is a landlocked Midwestern state best known for its vast prairie land. The distance between them is more than 8,000 kilometers, which is roughly a fifth of the world’s circumference. The two communities share no common language, religion, or cuisine. And yet, somehow, the World Cup has spun its tender web and made darlings of an unlikely pair who will now be forever linked. If we can call this a marriage, then it is an arranged one. Algeria chose Lawrence without really knowing it. As with every World Cup, FIFA provided a list of host city options for the 48 participating nations. Algeria selected a college town just outside Kansas City, where they are scheduled to play their group stage matches against Argentina and Austria. “Once Algeria got drawn into Group J and we saw they had a couple of matches in Kansas City, we knew there was a good chance they’d be coming here. It was super, duper exciting,” laughs Aya Andalsi, a 26-year-old daughter of Algerian immigrants whose family has been in Kansas since 1990. As soon as she learned the Algerian delegation had chosen Lawrence as their base camp, Andalsi began preparing. “We already had a good Algerian community here of about a couple of thousand or so. We have coffee shops that show football matches and host music gigs, we have grocery stores and a bakery.” “Everyone put everything into it to make sure that leading up to the World Cup, everything is presentable. I genuinely think that as a smaller city, people were not expecting this kind of publicity at all, and alhamdulillah , there has been no negativity.” In addition to the local Algerian community, Kansas University’s athletic department also rolled out the red carpet for Riyad Mahrez and his band of brothers. On Wednesday, the university organized a tour of the facilities and filmed a playful video of the professional footballers trying their hand at basketball and American football, set to Rachid Taha’s cover of “Rock the Casbah.” Predictably, it went viral. Thanks for stopping by, Team Algeria! 🇩🇿 pic.twitter.com/OSyxUbLcBX — Kansas Jayhawks (@KUAthletics) June 11, 2026 The culmination of the love affair came on Thursday afternoon at an open training session, when thousands of fans poured enthusiastically into Rock Chalk Park. “Rock Chalk Algeria!” hollered one Kansan in a swashbuckling Midwestern drawl. The University marching band opened proceedings with a rendition of Kassaman, the Algerian national anthem written by revolutionaries during the War of Independence. Stars like Mahrez and Manchester City’s Rayan Aït-Nouri made time to pose for dozens of selfies. After the low-intensity session, Algeria organized a mini-camp for local children. World Cup teams have mandated “community sessions” that are mainly exclusive ticketed events. Algeria’s community session was a real one, where the community was invited and now, children in the KC metro get to say they’ve played with international soccer stars. pic.twitter.com/IUYeES8gA1 — PJ Green (@ByPJGreen) June 12, 2026 “They made an effort to ask the kids their names, signed autographs, kicked the ball around with them,” says PJ Green, a reporter for the Kansas City Star. “You even saw the assistant manager [Davide Morandi] giving a free coaching lesson.” For Green, part of what explains this unlikely kinship is precisely that Algeria did not choose to base themselves in Kansas City proper, as England, the Netherlands, and Argentina did. Instead, they chose Lawrence, a college town that quiets considerably in summer. The team’s arrival triggered a reciprocity of warmth precisely because the city was hungry for it. “People here are very welcoming. They really do like people coming in from the outside and embracing their culture. If you do that, they welcome you back and try even harder to show you everything the place has to offer,” Green says. “The city of Lawrence just made it a real priority to embrace Algeria. Go past City Hall, and there are Algerian flags flying. Local businesses, bars, even Walmart and McDonald’s have signs up for Algeria. They’re all in.” The Algeria-Lawrence love affair has not yet broken into the mainstream conversation surrounding the tournament, but as a digital subplot, it is understandably gaining considerable traction. Against the backdrop of refused visas and bureaucratic hostility that has cast a shadow over how the United States has treated African nations at this World Cup, a marching band playing the Algerian national anthem in the Kansas heartland feels like a corrective. It is a welcome reminder of what this tournament is actually supposed to be about. At its best, the World Cup is a popular festival. It is the people of Lawrence, Kansas, deciding that if the world is coming to their doorstep, they are going to meet it with open arms. That spirit cannot be packaged for commercial purposes by FIFA or poisoned by the vindictive politics that have surrounded elements of this edition of the tournament. It simply happens, organically and beautifully, in places like Rock Chalk Park."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/rock-chalk-algeria"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-15T16:32:51.888123Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/rock-chalk-algeria"
+      },
+      "status": "supported"
+    }
+  ]
+}

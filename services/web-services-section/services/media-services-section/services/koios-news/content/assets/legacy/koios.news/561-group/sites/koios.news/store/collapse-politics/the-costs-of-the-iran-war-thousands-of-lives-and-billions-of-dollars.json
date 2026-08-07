@@ -1,0 +1,69 @@
+{
+  "subject": "the-costs-of-the-iran-war-thousands-of-lives-and-billions-of-dollars",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Costs of the Iran War: Thousands of Lives and Billions of Dollars"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/iran-war-costs-deaths.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/iran-war-costs-deaths.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/iran-war-costs-deaths.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The human toll and economic costs mounted rapidly after the United States and Israel attacked Iran on Feb. 28."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/iran-war-costs-deaths.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 09:04:22 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/iran-war-costs-deaths.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

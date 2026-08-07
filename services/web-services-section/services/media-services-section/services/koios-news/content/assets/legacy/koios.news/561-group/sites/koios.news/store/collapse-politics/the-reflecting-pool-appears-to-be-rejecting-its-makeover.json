@@ -1,0 +1,69 @@
+{
+  "subject": "the-reflecting-pool-appears-to-be-rejecting-its-makeover",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Reflecting Pool Appears to Be Rejecting Its Makeover"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/reflecting-pool-paint-algae.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/reflecting-pool-paint-algae.html"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/reflecting-pool-paint-algae.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "As National Park Service crews try to clean the algae that turned the water bright green, another problem has developed: The “American flag blue” coating is coming off."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/reflecting-pool-paint-algae.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 02:23:24 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/reflecting-pool-paint-algae.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

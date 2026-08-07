@@ -1,0 +1,69 @@
+{
+  "subject": "federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Federal judge rules EPA illegally cut climate justice grants, including $20 million for tribe in Nevada"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/news/federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "This story was originally published by Nevada Current. Jeniffer Solis Nevada Current A South Carolina federal judge ruled last week that the Trump administration’s termination of hundreds of environmental justice grants was illegal, a decision that could impact $20 million in federal funding rescinded from the Walker River Paiute Tribe in Nevada.&nbsp; The Environmental Protection Agency’s decision to terminate the $2.8 billion Environmental and Climate Justice Block Grant Program was “arbitrary and capricious and unlawful,” U.S. District Judge Richard Mark Gergel wrote in an order Thursday, June 11. The federal climate program was&nbsp; terminated in May 2025 &nbsp;following two executive orders issued by President Donald Trump targeting funding for&nbsp; renewable energy&nbsp; and&nbsp; diversity, equity and inclusion &nbsp;efforts at the federal level. In Nevada, the program’s termination eliminated a $20 million EPA grant that would have funded a&nbsp; multi-year climate resiliency plan &nbsp;to deliver water, energy, and food infrastructure to about 1,200 tribal members who live on the Walker River Reservation.&nbsp; The funding would have weatherized and increased energy efficiency and climate resiliency for 150 homes – about 30 percent of all existing homes on the reservation. In the ruling, the judge wrote that the Trump administration’s decision to terminate a grant program authorized by Congress under the 2022 Inflation Reduction Act “for policy reasons” was a violation of the Administrative Procedure Act, which governs the process by which federal agencies develop and issue rules. In practice, that means a federal agency does not have unilateral authority to refuse to spend congressionally mandated funds due to policy disagreement with Congress.&nbsp; However, the judge stopped short of ordering the agency to resume the program. Restoring the program following its dismantlement last spring “would presumably require ordering EPA to rehire” staff charged with administering the program, said the judge, calling such an order “impractical.”&nbsp; The judge wrote that plaintiffs “are of course free to pursue their claims for alleged unlawful termination of their grants in the” Court of Federal Claims, which hears monetary claims against the U.S. government. The judge also denied a request to extend the program’s September deadline for awarding grant funds. The ruling is in response to a March 2025 lawsuit filed by the Southern Environmental Law Center and the Public Rights Project on behalf of several cities and nonprofits. A spokesperson for the law center said it’s too soon to know how the ruling will impact individual grant recipients, but that they are watching for how EPA responds. A spokesperson with the EPA said the agency “is reviewing the decision.” The Nevada Clean Energy Fund — a nonprofit bank that would have administered the $20 million EPA grant awarded to the Walker River Paiute Tribe&nbsp; — is not a part of the lawsuit, but said they are following the case and its impact on Nevada. “The ruling was really good for the Nevada Clean Energy Fund, and for the program in general,” said Asheesh Bhalla, the general council for the bank. “The court stated very clearly and directly that the federal government’s termination of the ECJ block grant program was illegal. They said that very directly.”&nbsp; “The court held that the executive branch had no authority to unilaterally refuse to administer those funds,” he continued. “We commend the court on their decision and look forward to the federal government complying with the court’s order.” Bhalla said the ruling gave those impacted by grant terminations a path to recover withheld funds in the Court of Federal Claims, while also simultaneously allowing them to challenge the legality of agency-wide policies in federal district court under the Administrative Procedure Act. “The court here clearly said that there are administrative claims, there are constitutional claims, and there are monetary claims,” Bhalla said. Kirsten Stasio, the CEO of the Nevada Clean Energy Fund, said that while the judgement “isn’t unlocking funds for us right now” it was a legal validation that “communities in Nevada and across the US that were meant to benefit from these funds shouldn’t have been cut off from them.” The loss of funding was a blow to underserved frontline communities in Nevada facing the impacts of climate change. Part of the $20 million EPA grant awarded to the Walker River Paiute Tribe was earmarked for a planned water infrastructure project that would improve water quality and allow more than a hundred homes to be built at higher elevations further from the river, which periodically floods to dangerous levels.&nbsp; The funding would have also covered the remaining cost of the tribe’s planned Community Resilience and Food Storage Hub – a fully electric and solar powered building with battery storage that could increase food and medication security while sheltering the reservations’ most vulnerable residents from growing weather emergencies and rolling blackouts. The post Federal judge rules EPA illegally cut climate justice grants, including $20 million for tribe in Nevada appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 00:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/federal-judge-rules-epa-illegally-cut-climate-justice-grants-including-20-million-for-tribe-in-nevada/"
+      },
+      "status": "supported"
+    }
+  ]
+}

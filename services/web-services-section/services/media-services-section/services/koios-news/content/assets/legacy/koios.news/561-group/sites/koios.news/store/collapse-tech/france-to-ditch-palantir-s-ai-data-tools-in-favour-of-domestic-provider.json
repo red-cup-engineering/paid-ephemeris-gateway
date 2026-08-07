@@ -1,0 +1,69 @@
+{
+  "subject": "france-to-ditch-palantir-s-ai-data-tools-in-favour-of-domestic-provider",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "France to ditch Palantir’s AI data tools in favour of domestic provider"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Move to ChapsVision is to avoid ‘strategic dependencies’, says PM amid concern about reliance on US-controlled tools</p><p>France’s domestic intelligence service is to ditch AI data tools from the US tech company Palantir in favour of a domestic provider in an effort to avoid “strategic dependency”, the prime minister, Sébastien Lecornu, has said.</p><p>“We must use our own AI models; we cannot accept new strategic dependencies in ‌the digital sphere,” Lecornu posted on social media. “We cannot rely on tools developed by foreign powers. France must have its own tools.”</p> <a href=\"https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 17:08:21 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+      },
+      "status": "supported"
+    }
+  ]
+}

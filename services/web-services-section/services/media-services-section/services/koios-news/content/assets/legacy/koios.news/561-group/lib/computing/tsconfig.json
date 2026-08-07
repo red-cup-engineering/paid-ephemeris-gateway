@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@emsenn/gaming": ["../gaming/src/index.mts"],
+      "@emsenn/gaming/structuring": ["../gaming/src/structuring/index.mts"],
+      "@emsenn/gaming/encoding": ["../gaming/src/encoding/index.mts"],
+      "@emsenn/gaming/running": ["../gaming/src/running/index.mts"]
+    }
+  },
+  "include": ["src/**/*.mts"]
+}

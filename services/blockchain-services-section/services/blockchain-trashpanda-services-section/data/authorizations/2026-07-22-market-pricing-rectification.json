@@ -1,0 +1,24 @@
+{
+  "type": "BlockchainTrashpandaMarketPricingRectification",
+  "authorizedBy": "union-leader",
+  "authorizedOn": "2026-07-22",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "supersedesInterpretation": "production pricing waits for or learns from conversion at the one-cent pilot price",
+  "pricingEvidence": [
+    "current comparable market prices",
+    "attributable delivery and channel costs",
+    "the product's relative scope and buyer value"
+  ],
+  "pilotPurpose": [
+    "verify separate operator-wallet control",
+    "verify service-only ACP lifecycle and settlement",
+    "verify deterministic receipt delivery",
+    "verify one-job exhaustion, delisting, and shutdown"
+  ],
+  "pilotDemandExcludedFromPricing": true,
+  "timing": {
+    "marketAppraisal": "immediate and independent of pilot terminal state",
+    "productionPublication": "after the previously authorized one-job pilot reaches a terminal state"
+  },
+  "sourceText": "Evidence is current market prices and our own costs; the pilot is not a price test."
+}

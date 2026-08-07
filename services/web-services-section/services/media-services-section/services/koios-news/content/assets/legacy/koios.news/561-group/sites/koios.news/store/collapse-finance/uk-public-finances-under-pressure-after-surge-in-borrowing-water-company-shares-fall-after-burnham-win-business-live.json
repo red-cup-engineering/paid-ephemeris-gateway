@@ -1,0 +1,69 @@
+{
+  "subject": "uk-public-finances-under-pressure-after-surge-in-borrowing-water-company-shares-fall-after-burnham-win-business-live",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK public finances under pressure after surge in borrowing; water company shares fall after Burnham win – business live"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>UK budget deficit is running higher than forecast; borrowing costs rise after Makerfield by-election as US-Iran talks are called off</p><p><strong>Shares in UK water companies are dropping in early trading, as Andy Burnham’s by-election win raises the prospect of nationalisation.</strong></p><p><strong>United Utilities</strong>, which provides water and wastewater services in the North West of England, are down 1.3%.</p><p>“When Andy says he wants the public to have control over ‘the essentials of life’, we should believe him. He is completely serious.”</p> <a href=\"https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:48:31 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    }
+  ]
+}

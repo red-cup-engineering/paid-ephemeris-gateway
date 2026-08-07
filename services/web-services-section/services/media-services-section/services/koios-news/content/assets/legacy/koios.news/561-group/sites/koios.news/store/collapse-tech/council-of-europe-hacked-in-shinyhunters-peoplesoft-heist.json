@@ -1,0 +1,69 @@
+{
+  "subject": "council-of-europe-hacked-in-shinyhunters-peoplesoft-heist",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Council of Europe hacked in ShinyHunters' PeopleSoft heist"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/cyber-crime/2026/06/15/council-of-europe-hacked-in-shinyhunters-peoplesoft-heist/5255757"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/cyber-crime/2026/06/15/council-of-europe-hacked-in-shinyhunters-peoplesoft-heist/5255757"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/cyber-crime/2026/06/15/council-of-europe-hacked-in-shinyhunters-peoplesoft-heist/5255757"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "ShinyHunters claims to have breached the Council of Europe and stolen more than 297 GB of data after exploiting a zero-day flaw in Oracle PeopleSoft and abusing that hole to hack more than 100 organizations. According to a post on the extortion crew’s data-leak site, the 429,000 pilfered files contain HR and payroll records, payslips, purchase-order records, CVs, and employees’ salary, banking, tax, and medical records. A Council of Europe spokesperson told The Register that it is “currently investigating the matter and assessing the situation,” but declined to comment further. A spokesperson for the cybercrime group told us that the Council is yet another victim of the Oracle PeopleSoft heist. Oracle has yet to respond to The Register’s inquiries, and it's unclear if the vulnerability, tracked as CVE-2026-35273, has been patched. ShinyHunters previously told us that the gang exploited the CVE to compromise more than 100 organizations across 300 vulnerable instances, and that these victims included the University of Nottingham. Last week, the crims listed the UK uni on their leak site, then dumped data belonging to around 454,600 current and former students, including personal and academic records. Meanwhile, a Google threat report published late last week noted malicious activity, “consistent with the exploitation of CVE-2026-35273,” between May 27 and June 9, and said that its incident responders notified more than 100 global orgs “whose IP addresses correlated with potentially vulnerable endpoints.\" Most of these are US-based organizations, and 68 percent operated within the higher education sector. This latest heist follows another ShinyHunters intrusion targeting data belonging to university and K-12 students, teachers, and staff. In mid-May, ed-tech giant Instructure said it “reached an agreement” - this is corporate-speak for “paid the ransom demand” - with the data theft and extortion crew after ShinyHunters breached its Canvas digital learning platform and accessed data tied to 275 million students, teachers, and staff. In March, ShinyHunters claimed it stole data from K-12 software provider Infinite Campus as part of a broader wave of Salesforce-related intrusions. The ed tech company did not pay up, and the group subsequently published data they claim was stolen from Infinite Campus, including 137,000 individuals’ email addresses along with names, phone numbers, physical addresses and support tickets. Infinite Campus, in its data breach notification, said that the leaked files largely consisted of “names and contact information for school staff\" and that “the majority is directory information commonly found on school websites.” ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/cyber-crime/2026/06/15/council-of-europe-hacked-in-shinyhunters-peoplesoft-heist/5255757"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 19:44:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/cyber-crime/2026/06/15/council-of-europe-hacked-in-shinyhunters-peoplesoft-heist/5255757"
+      },
+      "status": "supported"
+    }
+  ]
+}

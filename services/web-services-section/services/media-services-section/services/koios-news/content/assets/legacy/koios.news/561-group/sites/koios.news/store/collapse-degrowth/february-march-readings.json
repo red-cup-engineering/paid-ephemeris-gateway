@@ -1,0 +1,69 @@
+{
+  "subject": "february-march-readings",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "February & March readings"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/04/february-march-readings-2/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://unevenearth.org/2023/04/february-march-readings-2/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/04/february-march-readings-2/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A damaged home in the Sheikh Maqsoud neighborhood of Aleppo.&nbsp; (Mauricio Centurion) via The Nation Once a month, we put together a list of stories we’ve been reading: news you might’ve missed or crucial conversations going on around the web. We focus on environmental justice, radical municipalism, new politics, political theory, and resources for action and education. We try to include articles that have been published recently but will last, that are relatively light and inspiring, and are from corners of the web that don’t always get the light of day. This will also be a space to keep you up to date with news about what’s happening at Uneven Earth. February was short, so we decided to do a combined February-March newsletter – and it’s a good one! We collected stories on Syria, Turkey & Rojava, the Cop City movement in Atlanta, and false climate solutions; a critique of Elon Musk’s Twitter; a discussion of the sustainability of bicycles; and a reflection on the importance of redefining ‘abundance’, to name a few. We also included a climate action toolkit for tired people, because that’s most of us in this vast capitalist hellscape. If you find these lists useful, you can support us by sharing them on social media and with your friends and family! A small note that the articles linked in this newsletter do not represent the views of Uneven Earth. When reading, please keep in mind that we don’t have capacity to do further research on the authors or publishers! Uneven Earth updates Stories of permafrost | A call to look beyond permanence Lützerath bleibt! | At the edge of the 1.5°C frontier Top 5 articles to read Climate in 2023: escalation and backlash How to meet the climate crisis? Redefine ‘abundance.’ Why the Global South can’t go green Transportation geography . How much lithium do we really need? Automation isn’t the cause of unemployment — capitalism just can’t generate enough jobs News you might’ve missed Scientists deliver ‘final warning’ on climate crisis: act now or it’s too late How Big Tech rewrote the nation’s first cell phone repair law Rapidly melting Antarctic ice could affect oceans ‘for centuries’ Zimbabweans outraged by Al Jazeera exposé on gold smuggling elite Climate, ice sheets & sea level: the news is not good The $20m flip: The story of the largest land grab in the Brazilian Amazon From arrests to apology: Government ‘sorry’ it violated Sami human rights . And the background to this story: Norway must stop violating Indigenous rights Where we’re at: analysis Musk is remaking Twitter into a climate denier sanctuary Debt and ecological crises . A series of briefings looking at financial mechanisms that (in theory) support climate action and biodiversity conservation in the midst of a new debt crisis. World should focus on phasing down developed world oil and gas over developing world coal&nbsp; The climate case for rationing Electric vehicles alone won’t take us to a decarbonized future The road to a fossil fuel non-proliferation treaty Imagining an economy for Nunavut beyond extraction Global struggles Letter from Paris I live near the East Palestine chemical spill. Officials who say we’re safe are lying Is Rojava a socialist utopia? Year of war in Ukraine left developing nations picking up pieces Sámi rights must not be sacrificed for green energy goals of Europe Syria, Turkey, and Rojava The earthquake has left Syrian Kurds even more under siege Women’s movement in Bakur and Rojava has made historic advances for the rights of women Why Turkey was ill-prepared for the Kahramanmaras earthquake Defend the Atlanta Forest The historical roots of the Stop Cop City movement The future of American environmental protests may be unfolding in a forest outside Atlanta Atlanta: Police shooting of activist fuels ‘Cop City’ controversy Cities and radical municipalism On bicycles: The night that changed San Francisco cycling forever . Biggest barrier to biking is a fear of cars . And Can we make bicycles sustainable again? ‘Like we don’t exist’: Indigenous fear Indonesia new capital plan&nbsp; Citizens’ assemblies: are they the future of democracy? Food politics The next deadly pandemic is just a forest clearing away Big Food is betting on regenerative agriculture to thwart climate change Phosphorus saved our way of life—and now threatens to end it Vertical farms tried to grow lettuce indoors. Now many are failing Just think about it… What it really takes to save the planet &nbsp; Labour of love On lichen as design What if Indigenous women ran controlled burns? We must stop treating India’s grasslands as wastelands Why are crypto fans obsessed with micronations and seasteading? The technocratic socialism of Otto Neurath From bowling alone to posting alone Economists’ obsession with “efficiency” is just an endorsement of greed Film photography isn’t just expensive – it’s bad for the planet, too Climate frauds Our climate strategy must combat the technofixes-plus-markets fraud The Living Forest Declaration and the Carbon Market Shell Game Carbon removals: The danger of desperation Theory Marxism for the age of climate emergency Economic growth is fuelling climate change – a new book proposes ‘degrowth communism’ as the solution A greener Marx? Kohei Saito on connecting communism with the climate crisis Degrowth Degrowth: Everything you need to know How degrowth can help reduce global conflict Economic growth is not a magic wand for ending poverty Degrowth or debunk: Do degrowth proponents have a strategy? The future is degrowth – An interview with Aaron Vansintjan Sci-fi, art and storytelling An education through Earthsea . Ursula Le Guin’s fiction explored the ultimate fantasy—of self-discovery and the power that comes with it. Why ‘Children of Men’ remains relevant with each passing year Food and resistance in Palestinian cinema &nbsp; ‘A different perspective’: the journalist reporting the Amazon through fresh eyes &nbsp; Resources Climate action for tired people – A toolkit and quiz for parents and others Scholarly resources on race and nature Want to receive this as a newsletter in your inbox? Subscribe here . The post February & March readings first appeared on Uneven Earth ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/04/february-march-readings-2/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 02 Apr 2023 19:03:33 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/04/february-march-readings-2/"
+      },
+      "status": "supported"
+    }
+  ]
+}

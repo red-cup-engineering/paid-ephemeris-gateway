@@ -1,0 +1,69 @@
+{
+  "subject": "inside-hegseth-s-war-on-diversity-and-blocked-promotions-of-women-and-black-officers",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Inside Hegseth’s War on Diversity and Blocked Promotions of Women and Black Officers"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/hegseth-navy-blocked-promotions-diversity.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/hegseth-navy-blocked-promotions-diversity.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/hegseth-navy-blocked-promotions-diversity.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A Black admiral fixed one of the Navy’s worst messes. Mr. Hegseth blocked his promotion anyway."
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/hegseth-navy-blocked-promotions-diversity.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 14:25:52 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/hegseth-navy-blocked-promotions-diversity.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "name": "@emsenn/koios.news",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Koios.News — a collapse-aware news publication, served: pages, feeds, sitemaps, NewsArticle JSON-LD, ad slots, and a privacy-light view counter over its content store.",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "verify": "pnpm run check",
+    "rebuild": "pnpm run clean && pnpm run build",
+    "serve": "pnpm run build && node dist/server.mjs",
+    "serve:newsroom": "pnpm run build && node dist/newsroom-server.mjs",
+    "serve:cable": "pnpm run build && node dist/cable-server.mjs",
+    "cable:ingest": "pnpm run build && node dist/cable-ingest.mjs",
+    "source:cycle": "pnpm run build && node dist/source-cycle.mjs",
+    "source:submit": "pnpm run build && node dist/submit-source.mjs",
+    "discover": "pnpm run build && node dist/discover.mjs",
+    "deploy:probe": "node scripts/deploy-probe.mjs",
+    "mill": "content-farm",
+    "demand:pull": "pnpm --filter @emsenn/content-production... run build && content-demand-pull --property=sc-domain:koios.news --out=data/records/search-console.json",
+    "desk:enqueue": "pnpm run build && node dist/desk.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./content": {
+      "types": "./dist/content.d.mts",
+      "import": "./dist/content.mjs"
+    },
+    "./server": {
+      "types": "./dist/server.d.mts",
+      "import": "./dist/server.mjs"
+    },
+    "./newsroom": {
+      "types": "./dist/newsroom-site.d.mts",
+      "import": "./dist/newsroom-site.mjs"
+    },
+    "./newsroom/departments": {
+      "types": "./dist/newsroom/departments.d.mts",
+      "import": "./dist/newsroom/departments.mjs"
+    },
+    "./administrating": {
+      "types": "./dist/administrating/index.d.mts",
+      "import": "./dist/administrating/index.mjs"
+    },
+    "./administrating/developing": {
+      "types": "./dist/administrating/developing/index.d.mts",
+      "import": "./dist/administrating/developing/index.mjs"
+    },
+    "./researching": {
+      "types": "./dist/researching/index.d.mts",
+      "import": "./dist/researching/index.mjs"
+    },
+    "./researching/sourcing": {
+      "types": "./dist/researching/sourcing/index.d.mts",
+      "import": "./dist/researching/sourcing/index.mjs"
+    },
+    "./researching/writing": {
+      "types": "./dist/researching/writing/index.d.mts",
+      "import": "./dist/researching/writing/index.mjs"
+    },
+    "./researching/writing/manuscripts": {
+      "types": "./dist/researching/writing/manuscripts.d.mts",
+      "import": "./dist/researching/writing/manuscripts.mjs"
+    },
+    "./researching/writing/assignments": {
+      "types": "./dist/researching/writing/assignments.d.mts",
+      "import": "./dist/researching/writing/assignments.mjs"
+    },
+    "./researching/writing/editing": {
+      "types": "./dist/researching/writing/editing/index.d.mts",
+      "import": "./dist/researching/writing/editing/index.mjs"
+    },
+    "./researching/writing/editing/standards": {
+      "types": "./dist/researching/writing/editing/standards.d.mts",
+      "import": "./dist/researching/writing/editing/standards.mjs"
+    },
+    "./researching/writing/editing/publishing": {
+      "types": "./dist/researching/writing/editing/publishing/index.d.mts",
+      "import": "./dist/researching/writing/editing/publishing/index.mjs"
+    },
+    "./researching/writing/editing/publishing/managing": {
+      "types": "./dist/researching/writing/editing/publishing/managing/index.d.mts",
+      "import": "./dist/researching/writing/editing/publishing/managing/index.mjs"
+    },
+    "./cable": {
+      "types": "./dist/cable-app.d.mts",
+      "import": "./dist/cable-app.mjs"
+    },
+    "./package.json": "./package.json",
+    "./desk": {
+      "types": "./dist/desk.d.mts",
+      "import": "./dist/desk.mjs"
+    }
+  },
+  "dependencies": {
+    "@emsenn/content-production": "workspace:*",
+    "@emsenn/content": "workspace:*",
+    "@emsenn/communicating": "workspace:*",
+    "@emsenn/computing-with-the-web": "workspace:*",
+    "@emsenn/http-server": "workspace:*",
+    "@emsenn/relating": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

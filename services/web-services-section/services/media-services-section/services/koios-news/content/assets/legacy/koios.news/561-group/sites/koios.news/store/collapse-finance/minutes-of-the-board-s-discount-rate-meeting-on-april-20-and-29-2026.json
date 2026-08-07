@@ -1,0 +1,69 @@
+{
+  "subject": "minutes-of-the-board-s-discount-rate-meeting-on-april-20-and-29-2026",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Minutes of the Board's discount rate meeting on April 20 and 29, 2026"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Minutes of the Board's discount rate meeting on April 20 and 29, 2026"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 26 May 2026 18:00:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm"
+      },
+      "status": "supported"
+    }
+  ]
+}

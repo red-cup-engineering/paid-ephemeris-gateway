@@ -1,0 +1,69 @@
+{
+  "subject": "starbucks-korea-to-temporarily-shut-all-stores-for-history-lesson-after-bungled-coffee-promotion",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Starbucks Korea to temporarily shut all stores for history lesson after bungled coffee promotion"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>The closures, so employees can watch a recorded lecture, will cost the company an estimated 2.1bn won ($1.4m) in sales</p><p>Starbucks Korea will simultaneously close all its stores for a mandatory history lesson, after a disastrous promotion that evoked memories of a pro-democracy massacre <a href=\"https://www.theguardian.com/world/2026/jun/06/starbucks-south-korea-tank-day-promotion-blunder\">sparked public and political backlash</a>.</p><p>More than 2,000 stores will temporarily close at 3pm on 22 June, the company said, so staff can watch recorded lectures on modern Korean history and engage in “social sensitivity” training. The half-day closures will cost Starbucks an estimated 2.1bn won ($1.4m) in lost sales, according to data firm IGAWorks.</p> <a href=\"https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 03:07:36 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/16/starbucks-korea-shut-all-stores-tank-day-promotion"
+      },
+      "status": "supported"
+    }
+  ]
+}

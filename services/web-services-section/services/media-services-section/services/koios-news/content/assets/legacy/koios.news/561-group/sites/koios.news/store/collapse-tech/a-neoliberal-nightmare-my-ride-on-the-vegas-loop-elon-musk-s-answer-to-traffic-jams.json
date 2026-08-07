@@ -1,0 +1,69 @@
+{
+  "subject": "a-neoliberal-nightmare-my-ride-on-the-vegas-loop-elon-musk-s-answer-to-traffic-jams",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘A neoliberal nightmare’: my ride on the Vegas Loop – Elon Musk’s answer to traffic jams"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Ten years ago, after complaining that traffic was ‘driving him nuts’, Musk’s Boring Company began building underground tunnels to ease congestion on the roads. Did he overpromise and underdeliver?</p><p>It’s another blindingly bright day in Las Vegas but I’m 30ft underground and strapped in for a rocket ride to the future. Actually, it’s a Tesla ride to the future, and not a self-driving one. And it’s pretty slow – my driver tells me the speed limit down here is 30mph. It’s also pretty short: the journey is over in a matter of minutes. In fact, the Vegas Loop is a pretty underwhelming experience: a brief trundle down a white-walled tunnel only slightly larger than the vehicle itself, lined by strips of LEDs that change colour every few seconds, in an attempt to inject some Vegas glitz. I’d been hoping to ask other Loop-riders what they made of the experience, but … there aren’t any. I’m the only person here.</p><p>This is not the futuristic transport solution Elon Musk originally promised. When he <a href=\"https://www.youtube.com/watch?v=zIwLWfaAg-8\">first announced</a> this innovative technology in 2017, it was accompanied by sci-fi visuals showing a car pulling over from the street traffic on to an elevator platform, which then descended into a network of tunnels and whizzed along on an “electric skate” at 200km/h (124mph). “There’s no real limit to how many levels of tunnel you can have … so you can alleviate any arbitrary level of urban congestion,” Musk said. A few months earlier, with characteristic edgelordly nonchalance, Musk had <a href=\"https://x.com/elonmusk/status/810108760010043392\">announced on Twitter</a>: “Traffic is driving me nuts. Am going to build a tunnel boring machine and just start digging …” Followed shortly after by: “I am actually going to do this.” He did, and he named it <a href=\"https://www.boringcompany.com/\">the Boring Company</a>.</p> <a href=\"https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 10:53:15 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/17/neoliberal-nightmare-my-ride-on-vegas-loop-elon-musk-answer-to-traffic-jams"
+      },
+      "status": "supported"
+    }
+  ]
+}

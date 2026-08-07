@@ -1,0 +1,69 @@
+{
+  "subject": "the-climate-change-culprits-not-addressed-by-global-policy",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Climate Change Culprits Not Addressed by Global Policy"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/12062026/global-warming-overlooked-pollutants/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/12062026/global-warming-overlooked-pollutants/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/12062026/global-warming-overlooked-pollutants/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A new paper suggests that 15 percent of global warming comes from overlooked pollutants. By Nina Sablan Record-high global temperatures aren’t driven only by well-known greenhouse gas culprits."
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/12062026/global-warming-overlooked-pollutants/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 22:58:18 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/12062026/global-warming-overlooked-pollutants/"
+      },
+      "status": "supported"
+    }
+  ]
+}

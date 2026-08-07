@@ -1,0 +1,69 @@
+{
+  "subject": "green-economy-hits-10-trillion-in-market-value",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Green Economy Hits $10 Trillion in Market Value"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/green-economy-hits-10-trillion-in-market-value/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/19062026/green-economy-hits-10-trillion-in-market-value/"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/green-economy-hits-10-trillion-in-market-value/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "If the green economy—defined as the group of companies heavily involved in environmental business—were its own industry, it would be the third-largest in the world. By Ajani Stella The group of companies that derive significant revenue from environmental solutions, known as the green economy, has topped $10 trillion in market value, a new report found."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/green-economy-hits-10-trillion-in-market-value/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:55:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/green-economy-hits-10-trillion-in-market-value/"
+      },
+      "status": "supported"
+    }
+  ]
+}

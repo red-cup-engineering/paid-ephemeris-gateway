@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-13",
+  "verdicts": [
+    {
+      "gate": "word-range",
+      "verdict": "clear",
+      "evidence": []
+    },
+    {
+      "gate": "flowing-paragraphs",
+      "verdict": "clear",
+      "evidence": []
+    },
+    {
+      "gate": "cite-sources-of-symbols",
+      "verdict": "clear",
+      "evidence": []
+    },
+    {
+      "gate": "no-claim-of-foreknowledge",
+      "verdict": "clear",
+      "evidence": []
+    },
+    {
+      "gate": "no-prescription",
+      "verdict": "clear",
+      "evidence": []
+    }
+  ],
+  "outcome": "publish",
+  "_provenance": {
+    "writer": "claude (in-session, produce-a-routine-read skill)",
+    "indicators": "HAND-CAST, not ephemeris — the divine:indicators stage is unrunnable (workspace unwired). Moon waning gibbous in Aquarius; Venus trine Saturn; The Hermit upright; numerology 3 (2026-07-13 → 21 → 3); Psalm 25:1-10.",
+    "gate-judge": "applied by hand against src/gates.ts logic (verified: word count 706, no header/list lines, all 9 required needles present, no unquoted foreknowledge/prescription regex hits)",
+    "note": "outcome 'publish' means the DRAFT clears the gates; it is NOT projected to content/ (house rule: content/ is pipeline-only). Left in backstage/drafts/ for the pipeline to reuse and project once install is fixed or rebuilt off metroplat."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "nutanix-s-tech-day-london-2026-offers-infrastructure-insights",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Nutanix's Tech Day London 2026 offers infrastructure insights"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/nutanixs-tech-day-london-2026-offers-infrastructure-insights/5258635"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/systems/2026/06/19/nutanixs-tech-day-london-2026-offers-infrastructure-insights/5258635"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/nutanixs-tech-day-london-2026-offers-infrastructure-insights/5258635"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Your hybrid estate has grown more complicated since the last refresh cycle. Some workloads run in the public cloud, others never left the rack, and a few sit stuck in transition because nobody wants to be the person who broke the database. Add AI to the pile and the platform questions only get harder. Nutanix Tech Day is a half-day event designed to help the people who have to deal with increasingly complex infrastructure. Date: Wednesday, June 24, 2026 Time: 12pm to 6pm BST Place: Prospero House, Southbank, London Registration is free and includes lunch, refreshments, and time set aside for networking. What you'll learn The agenda runs through the headline announcements and key takeaways from Nutanix .NEXT Chicago 2026. Then you’ll get technical sessions on disaster recovery, data sovereignty, hybrid multicloud management, operational automation, and enterprise AI use cases that have shifted from slideware into production budgets. The tracks split so you can pick the sessions aligned to your priorities and skip the rest. If you have ever sat through a vendor day waiting for the one talk relevant to your stack, try this instead. Customer sessions are especially worth turning up for. The Bunker and London Gatwick Airport will walk attendees through what they have done with Nutanix in production, and talking to people who run the platform day to day is the cheapest form of due diligence you will find. Who it's for This event is for infrastructure engineers, technical architects, systems administrators, and cloud professionals. Security and compliance leads have reason to attend too, given the disaster recovery and data sovereignty material on the agenda. Why attend in person? The event puts you in a room with peers tackling the same problems and with the engineers who have run these platforms in production, the kind of conversation that rarely transfers to a video call. You can put questions directly to Nutanix specialists in an interactive setting, which tends to be the part of these days that justifies the train fare. The 12pm start gives you half a day out of the office to meet some interesting people, lunch included, and a working list of things to try when you get back. The tote bag is optional. Sponsored by Nutanix."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/nutanixs-tech-day-london-2026-offers-infrastructure-insights/5258635"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 10:00:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/nutanixs-tech-day-london-2026-offers-infrastructure-insights/5258635"
+      },
+      "status": "supported"
+    }
+  ]
+}

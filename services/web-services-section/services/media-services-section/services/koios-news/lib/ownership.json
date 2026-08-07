@@ -1,0 +1,18 @@
+{
+  "kind": "ownership-law-shadow",
+  "node": "koios-news-service-section",
+  "owners": [
+    "rsc-quiescent"
+  ],
+  "effective-law": {
+    "direct-contracting": true,
+    "owner-gateway-required": false,
+    "rules": [
+      "this service section owns its news-domain laws, executable service contracts, provider records, admission, and refusal",
+      "a publication owns its masthead, voice, beat portfolio, corpus admission, publication approval, public artifacts, advertising, and delivery authority",
+      "the service section returns values and receipts and never writes a customer publication's corpus or ledger",
+      "reader demand selects attention and never supplies factual warrant",
+      "no licensed editorial state may create a factual commitment absent from its admitted source evidence"
+    ]
+  }
+}

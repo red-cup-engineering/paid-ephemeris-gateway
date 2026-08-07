@@ -1,0 +1,69 @@
+{
+  "subject": "james-bruggers-who-brought-passion-and-kindness-to-environmental-reporting-dies-at-68",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "James Bruggers, Who Brought Passion and Kindness to Environmental Reporting, Dies at 68"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/environmental-journalism-watchdog-james-bruggers-dies-at-68/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/19062026/environmental-journalism-watchdog-james-bruggers-dies-at-68/"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/environmental-journalism-watchdog-james-bruggers-dies-at-68/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Bruggers was known to colleagues as a dogged reporter and a generous coworker, and to sources as an honest watchdog. By Nicholas Kusnetz James Bruggers, whose decades of dogged reporting shined a light on polluting corporations, inadequate regulations and the people who fought against them for environmental justice, died Tuesday at a hospital in Louisville, Kentucky. He was 68."
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/environmental-journalism-watchdog-james-bruggers-dies-at-68/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 09:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:36.146Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/19062026/environmental-journalism-watchdog-james-bruggers-dies-at-68/"
+      },
+      "status": "supported"
+    }
+  ]
+}

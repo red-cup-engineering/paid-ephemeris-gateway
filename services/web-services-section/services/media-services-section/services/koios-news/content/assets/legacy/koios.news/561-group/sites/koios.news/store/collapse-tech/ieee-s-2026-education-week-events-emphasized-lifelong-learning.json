@@ -1,0 +1,69 @@
+{
+  "subject": "ieee-s-2026-education-week-events-emphasized-lifelong-learning",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "IEEE’s 2026 Education Week Events Emphasized Lifelong Learning"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ieee-education-week"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://spectrum.ieee.org/ieee-education-week"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ieee-education-week"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The rapid evolution of the global engineering landscape requires continuous education. For one week in April, the IEEE community focuses on its educational frameworks. IEEE Education Week , which just concluded its fifth year, provided a comprehensive overview of the resources available to professionals and students. From 11 to 19 April, the organization supplied a variety of live and virtual events , online resources , and promotions that champion the cycle of lifelong learning. IEEE President Mary Ellen Randall kicked off the week with the keynote: “Inspiring Tomorrow’s Innovators: How IEEE Educational Resources Can Open Pathways Into STEM.” The event served as a central point for programs that run throughout the year. “Education Week allows different units to share resources with members and the public, covering everything from preuniversity programs to advanced professional training,” says Jamie Moesch , managing director of IEEE Educational Activities . Coordination across the organization The event relied on the cooperation of 120 IEEE partners. Involved organizational units included the IEEE Communications Society , the IEEE Education Society , and chapters and sections from around the world, including in Brazil , Colombia , and India . They produced 114 events, 23 resources, and 11 special offers. “These collaborations help members remain current in a changing technological environment,” says Timothy Kurzweg , vice president of IEEE Educational Activities . “The goal is to provide accessible tools that assist members in both their own professional development and their efforts to mentor new engineers.” “The week allows different units to share resources with members and the public, covering everything from preuniversity programs to advanced professional training.” —Jamie Moesch, managing director of IEEE Educational Activities The participation metrics reflect a broad geographic interest. The IEEE Education Week website recorded more than 4,770 visitors, with primary engagement coming from India, Nigeria, and the United States. Nearly 240 digital badges were issued to people who completed educational quizzes. To encourage participation, organizers enlisted 72 volunteer ambassadors to promote the week’s activities across their local networks and share key resources on social media. Available educational tools Here are a few of the virtual events held during Education Week—most of which are available on demand: Celebrating Excellence: The EPICS in IEEE Contributor Awards and Service Learning Showcase. Classroom to Startup: Uniting Academia and Industry. IEEE’s Role in Shaping AI-Ready Engineering Education Globally. Leveraging IEEE Standards to Enhance Engineering Service Learning Projects (EPICS in IEEE). Mastering the Modern Job Market: The Power of IEEE Microcredentials. TryEngineering Volunteers Making an Impact in STEM. The Education Week website highlights resources and offers shared by IEEE organizational units, including: A half-off discount for members on IEEE e-learning courses. The catalog covers such topics as computing, power and energy, and telecommunications. IEEE Communications Society on-demand webinars. Learn the latest trends and innovations. IEEE Women in Engineering career-focused, upskill, and reskill webinars. The presentations cover a variety of topics including agentic AI, leadership, and robots. IEEE Innovation at Work. The e-newsletter covers emerging technologies, education, and training for technical professionals. IEEE Learning Network. Hundreds of continuing education courses , all in one place. IEEE TryEngineering lesson plans. The easy-to-use, engaging activities and plans help teach engineering concepts to preuniversity students. IEEE TryEngineering collections. The lesson plans and multimedia resources, developed with partners and IEEE technical societies, are designed to introduce technical topics and deepen student understanding. Individuals who were unable to attend the live sessions can find the archived content on the IEEE Education Week website. The website also accepts donations for education-related funds managed by the IEEE Foundation . Updates and technical resources continue to be shared through the #EducationAtIEEE hashtag on social media channels. Planning for IEEE Education Week 2027, scheduled for 3 to 11 April, is underway."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ieee-education-week"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 18:00:02 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/ieee-education-week"
+      },
+      "status": "supported"
+    }
+  ]
+}

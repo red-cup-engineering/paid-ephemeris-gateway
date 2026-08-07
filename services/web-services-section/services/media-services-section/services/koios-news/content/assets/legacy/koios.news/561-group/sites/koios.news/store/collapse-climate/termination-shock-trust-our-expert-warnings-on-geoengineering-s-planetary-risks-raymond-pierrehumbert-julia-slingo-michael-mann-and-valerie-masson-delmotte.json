@@ -1,0 +1,69 @@
+{
+  "subject": "termination-shock-trust-our-expert-warnings-on-geoengineering-s-planetary-risks-raymond-pierrehumbert-julia-slingo-michael-mann-and-valerie-masson-delmotte",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘Termination shock’: trust our expert warnings on geoengineering’s planetary risks | Raymond Pierrehumbert, Julia Slingo, Michael Mann and Valerie Masson-Delmotte"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Do we really want to play dice with our planet?</p><p>A series in the Guardian recently declared “it’s <a href=\"https://www.theguardian.com/commentisfree/series/it-s-time-to-talk-about-geoengineering\">time to talk</a> about geoengineering.” So let’s talk about it. And let us start with some simple truths about this cluster of techno-optimistic “quick fixes” which purport to somehow offset our slow progress towards zeroing out planet-warming carbon emissions.</p><p><a href=\"https://www.theguardian.com/commentisfree/2021/apr/22/climate-crisis-emergency-earth-day\">Solar geoengineering proposals</a> – reducing sunlight – have received the most attention, but a host of desperate schemes have been proposed in an effort to “fix” the disruption of climate caused by the growing burden of carbon dioxide human activities add to the atmosphere.</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 10:00:30 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.074Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/19/solar-geoengineering-risk-to-planet-earth"
+      },
+      "status": "supported"
+    }
+  ]
+}

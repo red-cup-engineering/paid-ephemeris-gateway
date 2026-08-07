@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relating/articulating/utterance",
+  "title": "UtteranceCarrier",
+  "description": "The base admission carrier: a token and a claim, each carrying a Mark.",
+  "type": "object",
+  "required": ["kind", "token", "claim"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "utterance.carrier" },
+    "token": { "$ref": "#/$defs/Token" },
+    "claim": { "$ref": "#/$defs/Claim" }
+  },
+  "$defs": {
+    "Mark": {
+      "type": "object",
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": { "const": "utterance.mark" },
+        "value": {}
+      }
+    },
+    "Token": {
+      "type": "object",
+      "required": ["kind", "hand", "mark"],
+      "properties": {
+        "kind": { "const": "utterance.token" },
+        "hand": { "const": "left" },
+        "mark": { "$ref": "#/$defs/Mark" }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "required": ["kind", "hand", "mark"],
+      "properties": {
+        "kind": { "const": "utterance.claim" },
+        "hand": { "const": "right" },
+        "mark": { "$ref": "#/$defs/Mark" }
+      }
+    }
+  }
+}

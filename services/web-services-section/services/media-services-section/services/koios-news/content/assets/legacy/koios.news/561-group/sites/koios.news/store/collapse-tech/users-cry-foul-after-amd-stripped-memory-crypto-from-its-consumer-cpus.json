@@ -1,0 +1,69 @@
+{
+  "subject": "users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Users cry foul after AMD stripped memory crypto from its consumer CPUs"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A decade ago, AMD added a protection to its high-end CPUs to protect them against cold boot attacks and other types of physical exploits that siphon sensitive data out of the connected memory chips. Short for Transparent Secure Memory Encryption, TSME encrypts the entire contents stored in memory, making the data useless to physical attackers. Over time, AMD added TSME to lower-end processors, including the consumer version of its Ryzen chips, a CPU that costs less than the Pro version. Over the years, users of these lower-end chips have gotten used to the added security. Recently and without warning or notice, this lower-end line of AMD chips suddenly dropped the protection, and did so in a way that was impossible to detect on Windows machines and required a fair amount of technical work when using Linux. Now you see it, now you don't AMD has yet to say why TSME worked on these CPUs, or even to confirm the change. AMD declined to answer questions sent by email other than to say TSME \"is a security feature only applied to PRO CPUs as part of AMD PRO Technologies.\" The statement is the first known time the chipmaker has explicitly made this restriction public. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 17:55:46 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/"
+      },
+      "status": "supported"
+    }
+  ]
+}

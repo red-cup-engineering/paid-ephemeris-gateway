@@ -1,0 +1,69 @@
+{
+  "subject": "nasa-asks-northrop-grumman-to-stop-working-on-lunar-halo-module",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "NASA asks Northrop Grumman to stop working on lunar HALO module"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/nasas-1-1-billion-gateway-habitation-module-is-unlikely-to-be-used-for-something-else/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/space/2026/06/nasas-1-1-billion-gateway-habitation-module-is-unlikely-to-be-used-for-something-else/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/nasas-1-1-billion-gateway-habitation-module-is-unlikely-to-be-used-for-something-else/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Three months ago, during a flashy event at its Washington, DC, headquarters, NASA announced that it was shifting the focus of its lunar plans from an orbital space station to a Moon base on the surface. As part of this, officials said work would be paused on the Lunar Gateway planned to orbit the Moon. Of the two elements that were furthest along, NASA also revealed that one of them—the Power and Propulsion Element— would be repurposed to serve as a core module for a nuclear-electric propulsion demonstration in deep space. Less was said about the fate of the other major component, the Habitation and Logistics Outpost (HALO). This is the large pressurized module, 6.1 meters long, in which visiting astronauts would spend the majority of their time when visiting the Lunar Gateway. NASA has awarded contracts worth $1.1 billion to Northrop Grumman to design, build, and integrate the habitation module with the Power and Propulsion Element. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/nasas-1-1-billion-gateway-habitation-module-is-unlikely-to-be-used-for-something-else/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 20:49:55 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/nasas-1-1-billion-gateway-habitation-module-is-unlikely-to-be-used-for-something-else/"
+      },
+      "status": "supported"
+    }
+  ]
+}

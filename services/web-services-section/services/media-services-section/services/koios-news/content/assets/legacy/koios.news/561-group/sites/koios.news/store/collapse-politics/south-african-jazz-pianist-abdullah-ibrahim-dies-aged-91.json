@@ -1,0 +1,69 @@
+{
+  "subject": "south-african-jazz-pianist-abdullah-ibrahim-dies-aged-91",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "South African jazz pianist Abdullah Ibrahim dies aged 91"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>The accomplished musician, who recorded over 70 albums in his career, died peacefully in Germany after a short illness</p><p>The South African jazz composer and pianist Abdullah Ibrahim has died at the age of 91.</p><p>His family announced his death in a statement released on Monday.</p> <a href=\"https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 17:03:14 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/music/2026/jun/15/pianist-abdullah-ibrahim-dies"
+      },
+      "status": "supported"
+    }
+  ]
+}

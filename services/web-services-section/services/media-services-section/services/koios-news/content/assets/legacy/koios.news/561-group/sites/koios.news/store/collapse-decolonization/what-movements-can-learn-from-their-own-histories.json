@@ -1,0 +1,69 @@
+{
+  "subject": "what-movements-can-learn-from-their-own-histories",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "What movements can learn from their own histories"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/nana-darkoa-sekyiamah-movements-history-learning/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/en/nana-darkoa-sekyiamah-movements-history-learning/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/nana-darkoa-sekyiamah-movements-history-learning/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "At a moment of intensifying backlash against rights and bodily autonomy globally, movements are being forced to adapt fast – often with little space to reflect on what is actually working. Much of the media that covers activism still flattens that work into individual stories or neat 'wins', even as organisers themselves push back on those framings. This Q&A is part of openDemocracy’s effort to do something different: to treat movements not just as subjects of coverage, but as sources of knowledge – and to surface the practical thinking behind how organisers are navigating risk, building power and learning across contexts in real time. Nana Darkoa Sekyiamah is an African feminist writer and activist, and author of Seeking Sexual Freedom . She is also an award winning podcaster, and curates festivals focused on African sexualities. She is passionate about co-creating community spaces where African women document and share their experiences of sex, sexuality and pleasure, building a collective archive in contexts where these conversations are often silenced. Here, she reflects on what it means to organise through what she calls an 'interruption' – and how movements can draw on longer histories of resistance to shape what comes next. What does it mean, in practice, to learn from the past when organising today? In my new book, I draw on the concept of Sankofa – an Akan principle from Ghana, where I’m from. It’s something I’ve always known, and it translates loosely as ‘go back and get it’, or learning from the past to inform the future. For me, that is the foundation for how I think about liberation, memory, and what movements need to build on. In practice terms, Sankofa is an act of decolonial reclamation. We must know our histories so that we can actively build on the foundations laid by previous generations of activists to ensure we aren’t constantly reinventing the wheel. For me, as a writer, building an archive is a political act. It counters the colonial erasure that tries to tell us we have no history of resistance. By documenting our lives, we ensure that future movements have a floor to stand on, rather than a void to fill. In the extract, you describe the current moment as an 'interruption' rooted in colonial histories. How should movements think about that legacy in how they organise and frame their work? If we view the colonial project as a permanent state, our organizing becomes defensive. But when we name it as an 'Interruption’, we reclaim the timeline. Movements should frame their work as a continuation of a much older, eons-long story of African agency and bodily autonomy. This shifts the goal from 'protesting the state' to 'reimagining our realities and futures.' It also allows us to organize from a place of infinite possibility. This was the most depressing part of my research to be honest. The colonial mindset came with very puritanical ideas about sex, the body, and the role of women in society. In many cases it displaced more expansive practices. In Senegal for instance, I learnt about the Xarxar (pronounced ‘hah’) where, ahead of wedding ceremonies, traditional griots led chants where people sang about what they wanted their lovers to do with them. This was intentionally done so people could learn about sex before getting married. Today, Xarxars are criticized as unIslamic, and even when they still happen, they take place after the formal marriage has taken place. In general, it has become a much milder version than the traditional risqué and spirited ceremony. In places where speaking about sex or sexuality carries real risk, what have you seen that helps people navigate that in practice? When your very existence and identity carries risk, the act of being 'fully human' is an act of defiance. I’ve also seen movements move beyond mere identity and association toward deep community care. This means building support networks that provide not just solidarity, but physical, legal, and digital protection. It’s about creating 'liberated zones' where we can speak our truths safely while we work to shift the broader landscape. I also do this personally in community with others through the sex positive festivals I have co-organised in Ghana, Kenya and soon Benin. It's a daily practice. I was raised as a Christian, and with that came a fear of African traditional religions (ATRs) which I was taught through popular culture - and negative portrayals on screen in particular - were demonic. What I only came to realize recently, and have confirmed through my research, is how ATRs have always held space for more complexity when it comes to gender and sexuality. Across the book, you move between very different contexts on the Continent. What feels shared across struggles, and what doesn’t always translate across countries or movements? The shared thread is tireless creativity, and the ability to pivot from street protests against finance bills in Kenya or Galamasey (illegal mining) in Ghana and festivals to intimate, subversive spaces like speakeasies. However, we must still confront the colonial infrastructure that still divides us, like the language barriers between Anglophone and Francophone Africa. I recently travelled with a feminist friend from Ghana to Benin, and she was deeply moved by hearing Ewe all around her on the journey, including through Togo, the country through which we transited. This was yet another reminder that our existing borders are artificial, and our indigenous and existing connections predate and will outlast those interruptions. Our movements must actively work to dismantle these artificial silos. In the face of growing backlash against rights and bodily autonomy, what has kept you going – and what moments of resistance or change have stayed with you? What keeps me going is seeing the 'interruption' being actively pushed back. The fact that trans people in Benin have successfully navigated the state to change gender markers on national IDs is a monumental win. It proves that even within systems designed to exclude us, we are finding cracks. I write about this in Seeking Sexual Freedom because we need to celebrate these moments of tangible change. They are proof that the future we are building is already here."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/nana-darkoa-sekyiamah-movements-history-learning/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 21 Apr 2026 06:03:49 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/nana-darkoa-sekyiamah-movements-history-learning/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "in-a-new-york-district-a-fight-for-the-future-of-the-left",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "In a New York district, a fight for the future of the left"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5857161/in-a-new-york-district-a-fight-for-the-future-of-the-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5857161/in-a-new-york-district-a-fight-for-the-future-of-the-left"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5857161/in-a-new-york-district-a-fight-for-the-future-of-the-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Rep. Nydia Velázquez's retirement has opened up a competitive primary in a New York City Congressional district. The race to replace her is a proxy battle about the future of the Democratic Party."
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5857161/in-a-new-york-district-a-fight-for-the-future-of-the-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 17:25:12 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5857161/in-a-new-york-district-a-fight-for-the-future-of-the-left"
+      },
+      "status": "supported"
+    }
+  ]
+}

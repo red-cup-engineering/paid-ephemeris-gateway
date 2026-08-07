@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@emsenn/computing": ["src/index.mts"],
+      "@emsenn/computing/encoding": ["src/encoding/index.mts"]
+    }
+  },
+  "include": ["scripts/**/*.mts"]
+}

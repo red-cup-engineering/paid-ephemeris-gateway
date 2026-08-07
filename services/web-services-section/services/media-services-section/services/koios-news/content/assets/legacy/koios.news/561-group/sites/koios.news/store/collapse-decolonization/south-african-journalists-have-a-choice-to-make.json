@@ -1,0 +1,69 @@
+{
+  "subject": "south-african-journalists-have-a-choice-to-make",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "South African journalists have a choice to make"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/south-african-journalists-have-a-choice-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/south-african-journalists-have-a-choice-to-make"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/south-african-journalists-have-a-choice-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "In May, Leanne Manas, a UNHCR Goodwill Ambassador and the anchor of SABC’s Morning Live — South Africa’s public broadcaster’s flagship morning television show — interviewed International Relations Minister Ronald Lamola. “We cannot deny that we have a huge problem when it comes to people that are undocumented here residing in South Africa,” she said. Manas was not quoting Jacinta Ngobese-Zuma, the leader of March on March — an anti-migrant vigilante organization that has organized marches calling for the removal of undocumented foreigners — nor was she reading from a March on March memorandum. And that is the problem. Across South African radio and television, a pattern of anti-immigration framing has become the norm, baked into questions before guests have a chance to answer. Using phrases like “we cannot deny” rather than “evidence suggests” shows the assumption embedded in the question — that the presence of foreign nationals is a problem to be managed rather than a symptom of the failures of this state. Even the word “foreigner,” used casually by media practitioners and government communicators alike, quietly builds the architecture of a takeover narrative before a single allegation has been made. If we as journalists fail to realize this, we become part of the xenophobic infrastructure built by Ngobese-Zuma. The United Nations provides language guidelines for journalists , which include referring to migrant children as “children on the move” rather than adopting dehumanizing language. These tools exist because words chosen by journalists and government communicators determine whether a conversation unites or divides. “We cannot deny” shuts down disagreement before it can form, manufacturing consensus between interviewer and minister before the viewer has been given a single piece of evidence. No statistics on the relationship between migration and service delivery, no distinction drawn between the presence of undocumented people and the cause of the state’s structural failures. The premise that undocumented people are a problem is declared self-evident, and the interview proceeds from there. The guest is not being asked to defend a claim. They are being asked to agree with one. This matters because language is not neutral. When a trusted anchor on the public broadcaster describes undocumented people as a “huge problem” on morning television, that framing does not stay in the studio. It becomes the lexicon of the person watching at home, confirmation that what they already suspected has been validated by someone in authority. These people are the problem. Their presence is the crisis. Their removal is the solution . Journalism did not invent xenophobia in South Africa, but journalism can and does provide it with a respectable address. Scholars Sarah Chiumbu and Dumisani Moyo , writing on South African media, found that while the media brought awareness to xenophobic violence, it simultaneously used narrative frames that justified the exclusion of foreigners by entrenching a perception of insiders and outsiders. They argue it is the media that has reinforced fears of a national takeover, and found that the failure to distinguish between asylum seekers, refugees, and documented migrants — treating everyone not from South Africa as an outsider — created the perception that the country prioritizes other nationalities over its own citizens. South Africans do have real concerns and real socioeconomic problems. Schools are overcrowded, clinics are overwhelmed, and housing is under impossible strain. We have legitimate anger. If journalists were to follow the evidence rather than the sentiment and ask what is the cause of these conditions, the answer points not to foreign nationals but to decades of neglect and corruption at every level of government. When 300 Ghanaian nationals left South Africa following the recent violence against them, Julius Malema — leader of the Economic Freedom Fighters, South Africa’s third-largest party — asked how many of those 300 jobs were then filled by South Africans. Responsible journalism would have asked it first. South African journalists are not ignorant of this. On 702, Johannesburg’s leading talk radio station, host Aubrey Masango recently referenced Rwanda and the Second World War — naming what radio does when it abandons its responsibility to truth in a moment of social volatility. He said a radio voice carries a butterfly effect that cannot be undone. But this xenophobic framing has become so woven into how this story is told that even journalists who know its history reproduce it. This is a structural problem that requires a structural response. Not every broadcaster has abdicated this responsibility equally. 702’s Clement Manyathela has pushed back, pointing out that the Constitution guarantees health-care access regardless of documentation status, when the national treasurer of March on March called for that access to be removed. But even here, the factual claims that undocumented migrants are receiving specialist health-care and educational grants ahead of South African citizens were allowed to pass unchallenged. A claim does not need a xenophobic host to become part of the public record. It only needs a space where the question “But where is your evidence for that?” is never asked. A march is coming on June 30 — organized by March on March and allied formations, calling for the mass removal of undocumented migrants. Their leaders have said there will be no violence. Perhaps. But there will be cameras and microphones. Anchors will ask guests whether people have a right to express their frustration. According to the Constitution, the answer is yes. But that is not the only question. The question that journalism must also ask is what happens to the people on the other side of that frustration. What happens to the Zimbabwean family in the flat above the march route? What happens to the child born in South Africa to parents the law has not yet decided what to do with? Journalism is not required to be sympathetic to undocumented migrants or to take a political position on immigration policy. It is required to be accurate, to verify claims before amplifying them, and to distinguish between a community’s genuine suffering and the manufactured explanation for that suffering. The SABC carries a public mandate, and private broadcasters carry a code which exists because South Africans understand, from experience, what media can do when it abandons its responsibility to truth in service of a story that feels good, sounds right, and confirms what people already want to believe. Leanne Manas knows what displacement looks like. She has sat in refugee camps and looked into the faces of the people the rest of the world prefers not to see. Despite that, while interviewing a minister, she could not resist the gravity of the frame. We know how much shifting needs to be done, and it cannot wait until June 30. When the cameras roll or the microphone begins recording, South African journalists will have a choice to make. Not about immigration. About what journalism is for."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/south-african-journalists-have-a-choice-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-12T18:42:54.195148Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/south-african-journalists-have-a-choice-to-make"
+      },
+      "status": "supported"
+    }
+  ]
+}

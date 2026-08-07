@@ -1,0 +1,69 @@
+{
+  "subject": "black-agenda-radio-june-12-2026",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Black Agenda Radio June 12, 2026"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-radio-june-12-2026-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/black-agenda-radio-june-12-2026-0"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-radio-june-12-2026-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Black Agenda Radio June 12, 2026</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-12T07:27:01+05:30\" title=\"Friday, June 12, 2026 - 07:27\" class=\"datetime\">Fri, 06/12/2026 - 07:27</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay; encrypted-media\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2337672293%3Fsecret_token%3Ds-RvFnDH1INQE&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\"></iframe></p> <div style=\"color:#cccccc;font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-size:10px;font-weight:100;line-break:anywhere;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:normal;\"><a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733\" title=\"Black Agenda Radio\" target=\"_blank\">Black Agenda Radio</a> · <a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733/black-agenda-radio-june-12/s-RvFnDH1INQE\" title=\"Black Agenda Radio June 12, 2026\" target=\"_blank\">Black Agenda Radio June 12, 2026</a></div> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>In this week’s segment, we discuss the Delaney Hall immigration jail in New Jersey. Detainees have been on hunger strike in protest of inhumane conditions, and protests and arrests have taken place at that site. Delaney Hall exemplifies the contradictions of the U.S. hosting the World Cup, with the New York/New Jersey stadium located near this corporate-run prison. But we begin with a discussion of the World Cup and the restrictions on athletes, fans, and officials who have been banned from entering the U.S., even before matches begin. The actions of the U.S. and FIFA make the case that the 2026 World Cup should not be hosted by the U.S. and that the U.S. itself ought to be boycotted.&nbsp;</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Human Rights\">Human Rights</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/People Centered Human Rights\">People Centered Human Rights</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/FIFA\">FIFA</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/soccer\">soccer</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/football\">football</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/imperialism\">imperialism</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Genocide\">Genocide</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Delaney Hall\">Delaney Hall</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Immigration and Customs Enforcement\">Immigration and Customs Enforcement</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-radio-june-12-2026-0"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 01:57:01 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-radio-june-12-2026-0"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "america-250-we-are-here-estamos-aqui",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "America 250: “We Are Here/Estamos Aquí”"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.culturalsurvival.org/node/15286"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.culturalsurvival.org/node/15286"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.culturalsurvival.org/node/15286"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span>America 250: “We Are Here/Estamos Aquí”</span> <div class=\"field field--name-field-webinar-image field--type-image field--label-above\"> <div class=\"field__label\">webinar image</div> <div class=\"field__item\"> <img loading=\"lazy\" src=\"https://www.culturalsurvival.org/sites/default/files/2026-06/We%20are%20here%20-%20Webinar%20%285%29.png\" alt=\"img\" class=\"img-responsive\"> </div> </div> <span><span>agnes</span></span> <span><time datetime=\"2026-06-17T13:37:16-04:00\" title=\"Wednesday, June 17, 2026 - 13:37\">Wed, 06/17/2026 - 13:37</time> </span> <div class=\"field field--name-field-we field--type-link field--label-above\"> <div class=\"field__label\">Webinar Link</div> <div class=\"field__item\"><a href=\"https://www.youtube.com/watch?v=jJoz8Zq-RGE\">https://www.youtube.com/watch?v=jJoz8Zq-RGE</a></div> </div> <div class=\"field field--name-field-webinar-date field--type-datetime field--label-above\"> <div class=\"field__label\">webinar date</div> <div class=\"field__item\"><time datetime=\"2026-06-17T17:37:16Z\">Wed, 06/17/2026 - 13:37</time> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.culturalsurvival.org/node/15286"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 17:37:16 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.culturalsurvival.org/node/15286"
+      },
+      "status": "supported"
+    }
+  ]
+}

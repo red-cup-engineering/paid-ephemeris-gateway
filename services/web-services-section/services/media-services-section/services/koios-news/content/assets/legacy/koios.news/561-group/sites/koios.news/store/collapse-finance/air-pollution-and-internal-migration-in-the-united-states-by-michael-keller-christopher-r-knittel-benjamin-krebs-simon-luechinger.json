@@ -1,0 +1,69 @@
+{
+  "subject": "air-pollution-and-internal-migration-in-the-united-states-by-michael-keller-christopher-r-knittel-benjamin-krebs-simon-luechinger",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Air Pollution and Internal Migration in the United States -- by Michael Keller, Christopher R. Knittel, Benjamin Krebs, Simon Luechinger"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35317#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nber.org/papers/w35317#fromrss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35317#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "We estimate the effect of PM₂.₅ pollution on migration between commuting zones in the United States from 2005-2019. To account for the correlation between origin and destination commuting zones’ pollution levels and potential endogeneity, we estimate a dyadic migration model and isolate permanent changes in origin and destination pollution emanating from distant coal-fired power plants. Annual panel and long-difference estimates indicate that air pollution plays a key role in relocation decisions. For the typical commuting zone, an isolated average 2005-2019 PM₂.₅ concentration decrease of 3.85 μg/m³ would avert out-migration and increase in-migration, totaling 2 percent of the population annually."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35317#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35317#fromrss"
+      },
+      "status": "supported"
+    }
+  ]
+}

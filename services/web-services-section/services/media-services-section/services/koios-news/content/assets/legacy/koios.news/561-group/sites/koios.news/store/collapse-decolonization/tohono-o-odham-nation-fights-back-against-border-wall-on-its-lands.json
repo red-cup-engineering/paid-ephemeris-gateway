@@ -1,0 +1,69 @@
+{
+  "subject": "tohono-o-odham-nation-fights-back-against-border-wall-on-its-lands",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Tohono O’odham Nation fights back against border wall on its lands"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/southwest-bureau/tohono-oodham-nation-fights-back-against-border-wall-on-its-lands/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/news/southwest-bureau/tohono-oodham-nation-fights-back-against-border-wall-on-its-lands/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/southwest-bureau/tohono-oodham-nation-fights-back-against-border-wall-on-its-lands/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Daniel Herrera Carbajal ICT The Tohono O’odham Nation has filed a lawsuit against the U.S. Department of Homeland Security over its plans to construct a border wall on the tribe’s lands. The suit was filed Tuesday as DHS plans to award contracts in the coming weeks to construct the border wall, according to a press release from Tohono O’odham. “We do not believe, and we know that Customs and Border Protection has no legal authority to take any of our reservation land nor use it without permission,” said Tohono O’odham Chairman Verlon M. Jose in a speech Wednesday at a National Congress of American Indians event in Memphis, Tennessee. About 62 miles of the Tohono O’odham Nations land are contiguous with the US-Mexico border.&nbsp; “To build these walls, (Customs and Border Protection) will have to diminish the size of the Tohono O’odham Nation. … There is no good reason to steal even more tribal land or destroy tribal land” Jose said. The Tohono O’odham Nation has said building a wall on its reservation would be illegal and DHS and other contracting personnel who enter the nation would be trespassing. The tribe’s ancestral homelands lie adjacent but on opposite sides of the US-Mexico border. The Gadsden Purchase of 1854 divided the nation’s lands and separated families. According to the Tohono O’odham Nation, there are more than 3,000 enrolled members who live in the tribe’s ancestral lands in the Mexican state of Sonora. “The United States-Mexican border was drawn through the heart of our traditional territory, making it more difficult for us to visit our families, our cemeteries, our sacred places, our ceremonies,” Jose said. The Tohono O’odham Nation has strongly opposed the construction of a border wall on its lands while strongly supporting border-security measures. The tribal nation spends millions of dollars a year on border security and has its own tactical patrol unit under the US Immigration and Customs Enforcement Agency called the “Shadow Wolves” – an all-Native patrol unit whose mission is to delay, disrupt and interdict illicit trafficking, according to ICE. “We believe in border security, to protect our people and to protect the United States,” Jose said. The post Tohono O’odham Nation fights back against border wall on its lands appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/southwest-bureau/tohono-oodham-nation-fights-back-against-border-wall-on-its-lands/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 18:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/southwest-bureau/tohono-oodham-nation-fights-back-against-border-wall-on-its-lands/"
+      },
+      "status": "supported"
+    }
+  ]
+}

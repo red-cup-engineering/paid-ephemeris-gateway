@@ -1,0 +1,69 @@
+{
+  "subject": "they-re-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "They're leaving Congress and have nothing to lose. That could spell trouble for Trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/theyre-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5850389/theyre-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/theyre-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/theyre-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:48:41 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/theyre-leaving-congress-and-have-nothing-to-lose-that-could-spell-trouble-for-trump"
+      },
+      "status": "supported"
+    }
+  ]
+}

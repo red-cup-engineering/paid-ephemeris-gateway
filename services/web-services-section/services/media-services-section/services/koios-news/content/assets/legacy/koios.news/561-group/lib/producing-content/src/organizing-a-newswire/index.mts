@@ -1,0 +1,48 @@
+/**
+ * organizing-a-newswire - the single-wire facet.
+ *
+ * A newswire is one provenanced claim stream with its own store, masthead,
+ * item projection, production writes, and web-free surfaces. Newscables bundle
+ * these wires; they do not own the wire state.
+ */
+export {
+  addDays,
+  assertedNow,
+  auditOf,
+  claimLine,
+  computesClaim,
+  createNewswire,
+  freshnessOf,
+  htmlPage,
+  itemSummary,
+  itemTitle,
+  loadWireBundles,
+  projectItem,
+  propositionText,
+  publishedOf,
+  readBundleFile,
+  reportWrite,
+  resolveDate,
+  sortReverseChronological,
+  updatedOf,
+  wireSurfaceUrls,
+  writeBundleIfAbsent,
+  type ComputedClaimInput,
+  type NewscableSiteConfig,
+  type Newswire,
+  type NewswireAuthor,
+  type NewswireBlock,
+  type NewswireConfig,
+  type NewswireDefinition,
+  type NewswireDescription,
+  type NewswireOptions,
+  type RenderDocument,
+  type RenderLink,
+  type StoredBundle,
+  type WireAuditEntry,
+  type WireCorrection,
+  type WireItem,
+  type WireSurface,
+  type WireSurfaceUrls,
+  type WriteOutcome,
+} from "../cable/index.mjs";

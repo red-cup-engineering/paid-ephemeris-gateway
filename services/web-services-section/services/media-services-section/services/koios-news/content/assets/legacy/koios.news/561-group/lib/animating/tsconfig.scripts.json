@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@emsenn/animating": ["src/index.mts"],
+      "@emsenn/animating/scripts": ["scripts/api.mts"]
+    }
+  },
+  "include": ["scripts/**/*.mts"]
+}

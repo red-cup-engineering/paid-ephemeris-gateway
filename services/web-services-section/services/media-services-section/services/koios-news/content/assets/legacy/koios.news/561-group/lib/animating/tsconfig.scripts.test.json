@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.scripts.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": ".tmp/test-dist"
+  },
+  "include": ["scripts/**/*.mts"]
+}

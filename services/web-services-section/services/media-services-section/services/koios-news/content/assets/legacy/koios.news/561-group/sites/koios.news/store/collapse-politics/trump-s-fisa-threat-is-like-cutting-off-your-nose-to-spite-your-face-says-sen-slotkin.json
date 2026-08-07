@@ -1,0 +1,69 @@
+{
+  "subject": "trump-s-fisa-threat-is-like-cutting-off-your-nose-to-spite-your-face-says-sen-slotkin",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Trump's FISA threat is like 'cutting off your nose to spite your face,' says Sen. Slotkin"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861734/slotkin-trump-pulte-intelligence-chief-confirmation-hearing"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5861734/slotkin-trump-pulte-intelligence-chief-confirmation-hearing"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861734/slotkin-trump-pulte-intelligence-chief-confirmation-hearing"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Sen. Elissa Slotkin, D-Mich., says Trump's threat to block FISA reauthorization is like \"cutting off your nose to spite your face.\" (Image credit: Alex Wong)"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861734/slotkin-trump-pulte-intelligence-chief-confirmation-hearing"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 06:51:07 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5861734/slotkin-trump-pulte-intelligence-chief-confirmation-hearing"
+      },
+      "status": "supported"
+    }
+  ]
+}

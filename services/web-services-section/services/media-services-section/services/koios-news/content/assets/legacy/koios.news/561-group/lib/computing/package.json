@@ -1,0 +1,66 @@
+{
+  "name": "@emsenn/computing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Computing — the theory of computing made operational, downstream of gaming. The corpus theorem: CGS IS the theory of computing. Where @emsenn/gaming carries the CGS structures, this package makes CGS operate: categorifying builds the executable *-autonomous category, cartesianizing builds the Kleisli sub-CCC, restricting realizes paradigm subcategory membership, operating runs the settled-information->observation->arena->strategy->move computer, and encoding carries the representation boundary.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit && tsc -p tsconfig.scripts.json --noEmit",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.scripts.build.json && chmod +x dist/scripts/*.mjs",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "bin": {
+    "compute": "./dist/scripts/compute.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./categorifying": {
+      "types": "./dist/categorifying/index.d.mts",
+      "import": "./dist/categorifying/index.mjs"
+    },
+    "./diagramming": {
+      "types": "./dist/diagramming/index.d.mts",
+      "import": "./dist/diagramming/index.mjs"
+    },
+    "./cartesianizing": {
+      "types": "./dist/cartesianizing/index.d.mts",
+      "import": "./dist/cartesianizing/index.mjs"
+    },
+    "./restricting": {
+      "types": "./dist/restricting/index.d.mts",
+      "import": "./dist/restricting/index.mjs"
+    },
+    "./operating": {
+      "types": "./dist/operating/index.d.mts",
+      "import": "./dist/operating/index.mjs"
+    },
+    "./encoding": {
+      "types": "./dist/encoding/index.d.mts",
+      "import": "./dist/encoding/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/animating": "workspace:*",
+    "@emsenn/gaming": "workspace:*",
+    "@emsenn/relating": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

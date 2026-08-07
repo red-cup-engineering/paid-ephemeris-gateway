@@ -1,0 +1,69 @@
+{
+  "subject": "kicking-out-migrants-won-t-create-jobs",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Kicking out migrants won’t create jobs"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/kicking-out-migrants-wont-create-jobs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/kicking-out-migrants-wont-create-jobs"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/kicking-out-migrants-wont-create-jobs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "South Africans commemorated two significant events in May: Africa Day and Workers’ Day. These moments normally evoke political reflection on the importance of African unity and workers’ solidarity in challenging racialized capitalism over decades. Yet this year’s reflections were marred by Afrophobic and tribalist attacks on black African working-class migrants. The leaders and supporters of this movement argue that Black African migrants are primarily responsible for the country’s perennial unemployment, crime, and low-quality public service problems. These claims seek to justify violence and discriminatory stereotypes loaded with colonial racist assumptions. Furthermore, these organizations have not provided any evidence to substantiate their claims, particularly regarding employment and labor absorption across various economic sectors. There is consensus that the country’s socioeconomic inequality continues to disproportionately affect Black working-class individuals, households, and communities. Statistics South Africa (Stats SA) household and labor force surveys point to racialized and gendered disparities in employment as well as household expenditure. But it is entirely erroneous to attribute and reduce the structural socioeconomic challenges cited above to increased migration. What is more concerning is the essentialist, Afrophobic logic that underpins these claims, which narrows systemic economic problems to individual or group identity. The unsubstantiated sweeping generalizations should be questioned on the following empirical and political grounds. First, South Africa has a structural unemployment problem that is not primarily caused by increased labor migration. The research evidence on the country’s persistent labor market inequalities and unemployment points to different core causes. Sectors that have historically employed large sections of the black working class have declined since the late 1980s. Deindustrialization, trade liberalization, deregulated financial markets, and reduced state intervention all contributed to structural weaknesses in high labor-absorbing sectors such as manufacturing, textiles, and agro-food system value chains. This trend directly impacts employment figures and needs to be reversed. Several civil society organizations, research institutes, and the labor movement have proposed policy solutions to increase employment through various industrial and macroeconomic policies. The second flaw in the claims about employment relates to the nature of South Africa’s labor market. Research indicates that the country has a multilayered labor market structure in which workers have differentiated wages, employment security, and industrial relations rights. The workforce is divided into two main groups: a small group of workers with standard employment status and rights, and the majority who occupy precarious jobs with minimal labor protections. This context makes it easier for employers to dismiss workers or exploit them through labor market flexibility. The job losses recorded in several sectors and communities — not migration — are related to these trends. Additionally, migrant workers constitute a small portion of the overall employed workforce. Most surveys conducted by both state and non-state research organizations indicate that migrant workers constitute less than 10 percent of the overall labor force. The discussion needs to be further disaggregated into sector-specific trends so that citizens and policymakers can obtain a clear, evidence-based picture. Reports from organizations such as the African Centre for Migration &amp; Society and the Migrating for Work Research Consortium found that non-South African migrant employees typically hold precarious and low-paying jobs. These facts challenge the sweeping generalizations about employment articulated in the context of the recent violent attacks. The third and final shortcoming in this shift towards heightened anti-migrant mobilization is its state-centrism. There are minimal efforts to hold private actors and businesses accountable for creating labor market super-exploitation. Most of the frustration about exclusion from labor markets is directed toward black African migrants or state authorities. Yet there are cases where both large and small private businesses continue to hire migrant workers in exploitative labor conditions. The state-centric emphasis in these movements overlooks this trend and redirects the core causes onto marginalized migrant workers and the government. Most South Africans agree that breaking labor laws and regulations is fundamentally wrong. But the policy solutions to address this circumvention of labor law must be evidence-based and directed toward the core institutions causing the crisis. More importantly, the country needs labor market and macroeconomic policy reforms that substantially increase employment. These alternative policy proposals are articulated in many formal policy submissions by the labor movement and civil society. The main propositions include: strengthening labor rights implementation; protecting high labor-absorbing sectors; reducing trade liberalization; demand-led fiscal policy frameworks; and reducing concentrated market structures across the economy."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/kicking-out-migrants-wont-create-jobs"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-14T19:22:38.244771Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/kicking-out-migrants-wont-create-jobs"
+      },
+      "status": "supported"
+    }
+  ]
+}

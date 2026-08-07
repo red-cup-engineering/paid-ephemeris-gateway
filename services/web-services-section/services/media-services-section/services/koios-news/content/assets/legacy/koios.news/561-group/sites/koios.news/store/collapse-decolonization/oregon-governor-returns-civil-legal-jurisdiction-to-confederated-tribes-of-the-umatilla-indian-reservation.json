@@ -1,0 +1,69 @@
+{
+  "subject": "oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Oregon Governor returns civil legal jurisdiction to Confederated Tribes of the Umatilla Indian Reservation"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/news/oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Nika Bartoo-Smith Underscore Native News + ICT In November 2025, the Confederated Tribes of the Umatilla Indian Reservation, or CTUIR, requested the return of sole legal jurisdiction on civil matters on tribal lands. In late May, Gov. Tina Kotek signed a proclamation accepting the request and committing to petition the U.S. Department of the Interior to accept the decision. “I was incredibly grateful, although I think that it’s something that we’ve had since time immemorial, our connection to stewarding these lands and these waters, and our unwritten laws have always allowed us to manage ourselves,” Corinne Sams, a board of trustees member at large for CTUIR and the vice chair of the Law and Order Committee, told Underscore Native News + ICT. If the U.S. Department of the Interior approves the request, it will undo a 73-year federal policy that required CTUIR to share jurisdiction with the state of Oregon on civil cases on tribal land.&nbsp;&nbsp; This stems from a federal law called Public Law 83-280, or PL-280, enacted by Congress in 1953 and requiring certain states, including Oregon and Washington, to take over criminal jurisdiction and civil jurisdiction on tribal lands. As a result, state law enforcement was able to operate on tribal lands without consent from the tribe for criminal cases. The law authorized state law enforcement to operate on tribal lands and prosecute crimes that involved tribal citizens in state courts. In civil cases, it gave the Oregon courts power to hear private civil disputes that happened on tribal lands.&nbsp; In Oregon, the Confederated Tribes of the Warm Springs was excluded in this law. PL-280 is rooted in the Termination Era of federal Indian policy. It passed just a year prior to the Western Oregon Indian Termination Act of 1954, which “terminated” the federally recognized status of almost all tribes within Oregon. A 1968 amendment to PL-280 did require consent from the tribe for any new state assumption of jurisdiction and also opened up the possibility that a tribe could request retrocession, though Oregon lacked a process to carry out the request. In the 1980s, the state retroceded criminal jurisdiction to the Confederated Tribes of the Umatilla Indian Reservation. “Since the early 1980s, the CTUIR has exercised our criminal jurisdiction on our reservation by way of retrocession,” said CTUIR Board of Trustees Chair N. Kathryn Brigham in a press release. “Four decades later, the state, under Gov. Tina Kotek, is retroceding civil jurisdiction back to the CTUIR, and we are extremely happy that it has come to fruition.” In March 2025,&nbsp; a bill passed &nbsp;the Oregon Senate that established a clear process for the retrocession of PL-280. CTUIR is the first Native nation in Oregon to request the retrocession.&nbsp; “As Indian people, we’re some of the most policed individuals in the nation, and follow unwritten law, tribal law, federal law, state law, county law, and municipal law. So, for us to have the full ability and the full jurisdiction to govern ourselves is a huge win, and it’s incredibly heartwarming, because several of my predecessors did this work for many decades, trying to get a clear path through the Oregon legislature for us to retrocede,” Sams said.&nbsp; This story is co-published by&nbsp; Underscore Native News &nbsp;and&nbsp; ICT , a news partnership that covers Indigenous communities in the Pacific Northwest. The post Oregon Governor returns civil legal jurisdiction to Confederated Tribes of the Umatilla Indian Reservation appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 10:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/news/oregon-governor-returns-civil-legal-jurisdiction-to-confederated-tribes-of-the-umatilla-indian-reservation/"
+      },
+      "status": "supported"
+    }
+  ]
+}

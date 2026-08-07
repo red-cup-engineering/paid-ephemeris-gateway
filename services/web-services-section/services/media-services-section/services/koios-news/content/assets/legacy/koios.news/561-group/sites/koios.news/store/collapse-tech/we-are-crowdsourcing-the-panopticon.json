@@ -1,0 +1,69 @@
+{
+  "subject": "we-are-crowdsourcing-the-panopticon",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "We Are Crowdsourcing the Panopticon"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/unintended-consequences-video-surveillance"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://spectrum.ieee.org/unintended-consequences-video-surveillance"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/unintended-consequences-video-surveillance"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A man raises his phone as police move into a crowd. The video is shaky, loud, immediate. Within minutes, it is online. Within hours, it is everywhere. This is how accountability works now. Something happens, someone records it, and that footage can show what really happened, sometimes contradicting official accounts. It can empower citizens and create consequences for officials. But the footage’s life cycle does not end there. In recent months, civil liberties groups have warned that adding facial recognition to consumer smart glasses could turn everyday recording into something more troubling: real-time facial identification . It reflects a broader shift already underway, where images and videos captured for one purpose can later be searched , matched, and used for another. An ouroboros is an ancient Egyptian symbol, a snake or dragon eating its own tail. As I began to see patterns in my broader research on surveillance corporatism and governance lag, I began using the term “surveillance ouroboros” to describe this recursive pattern of observations intended to hold power accountable becoming new input for the same surveillance infrastructure. Facial recognition changes accountability During the George Floyd protests in 2020, people filmed police in real time. Phones were pointed at officers, not at each other. The goal was simple: to show what the state was doing. That footage spread quickly and became part of a much larger pool of public data. At the same time, reporting from outlets including The New York Times and BuzzFeed News showed that law enforcement agencies were using facial-recognition tools, including systems built by Clearview AI. Those systems were built from billions of images scraped from across the internet, including publicly available photos and videos. The basic approach is now routine: People record the state, or anything else (as in the January 6 attack on the U.S. Capitol), and the state compiles that footage and data into a searchable environment, which may later be used to identify some of the same people who made the footage. Facial-recognition systems used by law enforcement are increasingly outpacing the legal safeguards. A 2023 Government Accountability Office review found that federal law enforcement agencies continued to expand their use of facial-recognition systems for criminal investigations despite ongoing concerns around training, privacy protections, civil-liberties safeguards, and oversight. Earlier GAO findings showed that agencies had conducted roughly 60,000 facial-recognition searches before formal training requirements were put in place for personnel using the systems. The American Civil Liberties Union and other groups have warned that these tools could be used to identify people from images shared online, including protest-related footage. Concerns about facial recognition led some U.S. states and cities , including San Francisco and Boston, to restrict or ban government use of the technology, while federal agencies have continued to face scrutiny over how such systems are tested, deployed, and audited. A 2024 analysis published in Internet Policy Review warned that facial-recognition systems used by law enforcement are increasingly outpacing the legal safeguards meant to govern them, creating growing tensions around data protection, oversight, and proportional use. The spy network that built itself Surveillance used to require infrastructure. Cameras had to be installed, and data had to be collected deliberately. That is no longer the case. People carry cameras everywhere. They record constantly and upload in real time. Events are documented from multiple angles without planning or coordination. The cumulative result is a continuous stream of usable data: faces, locations, timestamps, and interactions. The Internet of Things (IoT) also waits all around us, gathering information and releasing it when people least expect it, as Andrew Guthrie Ferguson describes in a recent excerpt of his book Your Data Will Be Used Against You . RELATED: “Sensorveillance” Turns Ordinary Life Into Evidence Similar dynamics are emerging globally. A recent analysis in the International Journal of Law and Information Technology examined how facial-recognition systems in China and Japan are expanding faster than the legal frameworks governing them. Reporting by The Guardian described the limited legal protections around the rapid deployment of AI-assisted surveillance infrastructure across parts of Africa. There used to be a clear distinction between surveillance and accountability. Surveillance meant the powerful watching the people; authorities tended not to share their imagery except under duress or a court order and usually after a long delay. Accountability meant the people watching the powerful and often publishing imagery immediately to head off or counteract official mischief. That distinction no longer holds . The same footage can serve both roles. A recording meant to expose misconduct can later be used to identify someone else entirely. Surveillance ouroboros is not a future risk. It is already here. This dynamic persists because people still need to record. In many places, it is one of the only tools available when formal accountability breaks down. When oversight institutions weaken or fail, public documentation becomes a substitute. In that environment, people turn to visibility. But that visibility comes with a cost. The more people that document, the more data that exists. The more data that exists, the easier it is to search, match, and store. Every video feeds the ouroboros. People are not feeding the system because they trust it. They are feeding it because the alternative is silence. Most of the people in these videos are not the focus. They are in the background, passing by or standing nearby. But that distinction does not matter once the footage enters a system. Today’s facial recognition can identify even a face that passed through the corner of a frame. Someone who did nothing can still become part of a dataset without ever knowing it. As recognition systems improve, older footage becomes more useful—and invasive. No single decision created this outcome. It emerged gradually through more cameras, better recognition, larger datasets, and easier integration. Each step made sense on its own. Together, they changed what recording means. Public recording is still necessary. Without it, many forms of abuse would remain hidden. But recording is no longer just exposure. It is also contribution. If you published imagery or video last year, you may already have contributed to a system you have never seen but the ouroboros has. Surveillance ouroboros is not a future risk. It is already here. Every time someone presses publish, they are doing two things at once. They are exposing power, and they are helping build the system that the powerful will later use to track the less powerful."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/unintended-consequences-video-surveillance"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 10 Jun 2026 13:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://spectrum.ieee.org/unintended-consequences-video-surveillance"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Waymo hits the brakes after robotaxis keep missing the signs for freeway construction zones"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones/5258951"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/offbeat/2026/06/19/waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones/5258951"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones/5258951"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Waymo is recalling nearly 4,000 robotaxis after its vehicles repeatedly failed to recognize freeway construction zones, in some cases driving past closure signs or between cones marking closed lanes. A total of 3,871 vehicles equipped with Waymo’s fifth-generation Automated Driving System (ADS) are affected, and the interim workaround is to restrict freeway driving until a fix is available. Six events were logged in Phoenix, Arizona, in April, during which vehicles drove past ramp-closure signs into pre-planned freeway construction zones. The response of Waymo's Field Safety Committee was to implement freeway driving restrictions. There were seven incidents in May in the San Francisco Bay Area, where vehicles drove between cones designating a lane closure. According to the Safety Recall Report, this was \"due to the ADS inappropriately prioritizing the avoidance of other freeway hazards and/or failing to recognize the construction zone.\" The response was further freeway driving restrictions until the company could get to the bottom of the problem. On June 8, Waymo's Safety Board decided to conduct a recall. Vehicles not capable of driverless operation on freeways are not affected and have not been recalled. The recall comes a month after Waymo disclosed that flooding could confuse its vehicles on high-speed roads, prompting another software fix. Waymo's vehicles operate in several US cities and have recently been sighted on the streets of London, albeit with a human ready to take control if needed. Waymo has issued several vehicle recalls over the years. There was the 2023 truck collision and a prang involving a pole in 2024. Neither was particularly serious, but did little to bolster public confidence. In January 2026, a Waymo vehicle struck a child near an elementary school. According to the US National Highway Traffic Safety Administration (NHTSA) [PDF], \"the child ran across the street from behind a double-parked SUV towards the school and was struck by the Waymo AV. Waymo reported that the child sustained minor injuries.\" According to Waymo, its vehicles cover more than four million fully autonomous miles each week and have logged more than 170 million in total. The company says the Waymo ADS was involved in \"92 percent fewer crashes that cause serious or fatal injuries than human drivers in the same driving conditions.\" ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones/5258951"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:03:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/19/waymo-hits-the-brakes-after-robotaxis-keep-missing-the-signs-for-freeway-construction-zones/5258951"
+      },
+      "status": "supported"
+    }
+  ]
+}

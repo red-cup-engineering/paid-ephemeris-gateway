@@ -1,0 +1,69 @@
+{
+  "subject": "bcachefs-exits-experimental-status-in-new-performance-release",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Bcachefs exits experimental status in new 'performance release'"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/19/bcachefs-exits-experimental-status-in-new-performance-release/5258801"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/06/19/bcachefs-exits-experimental-status-in-new-performance-release/5258801"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/19/bcachefs-exits-experimental-status-in-new-performance-release/5258801"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "bcachefs boss Kent Overstreet has announced version 1.38.6 of the Linux filesystem, dubbing it “the performance release” and declaring the project is no longer experimental. The new code is ostensibly a relatively modest point release, but is noteworthy as it’s only the second release this year that project leader Kent Overstreet has described on his Patreon blog. His latest post reveals he no longer considers the filesystem experimental. \"Consider this the belated official announcement :)\" he wrote, noting that he dropped the experimental tag some unspecified time ago. Overstreet's last blog post was a very brief mention of the release of version 1.37 back in mid-March, and this was rather overshadowed by his announcement soon afterwards that his AI coding assistant PoC was conscious – and female. Although the bcachefs Git repo is sufficiently busy that it’s hard to track progress, the repo for the accompanying bcachfs-tools is much more readable. Starting with January’s 1.35.0 it shows 18 releases so far this year. So, strictly speaking, the version number applies to the accompanying utilities rather than the filesystem module itself. However, a peek into the Debian APT repository shows that kernel DKMS module has a matching version number, and neither the blog post about the release nor the changelog distinguishes between them. According to said changelog, this version bumps the number of devices in a filesystem to 255, and contains fixes for half a dozen bugs. More significantly, it also identifies another six performance optimizations. The Reconcile operation – previously called “rebalance” – is now faster and more parallel. Erasure coding (which Register sister site Blocks & Files explains) is “in use and seems to be working quite well”. The post refers to the handbook, bcachefs Principles of Operation [PDF], which has been updated since we last looked – the current revision is from April. There’s also a handy Getting Started guide. Overstreet notes that all the major distributions he’s checked now enable kernel Rust support, and he says that work has already started at converting the filesystem and tools into Rust: \"The bcachefs userspace code has already been converted to Rust, and that work has included safe Rust interfaces for the core btree iterator API and quite a bit of utility code. The next release will pull these bindings into the DKMS module, and we’ll start to convert core code.\" That’s a long-term project, though. In the Phoronix forums, Overstreet explains a little more about the task. In one comment, he says: I don’t know how long it’ll take for it to be fully Rust - e.g. converting the journal to safe Rust will be… interesting. But it should be ~50% Rust this year, maybe in the next few months depending on how it goes with deploying a mixed C/Rust DKMS module. We were also pleasantly surprised to see him expressing considerable skepticism towards AI-authored code contributions in the discussion: I’m definitely not against AIs, but I am starting to see the lazy patch submissions/bug reports where someone clearly is just asking an LLM to do all the work, and that’s not ok. We find the performance comparisons in the Patreon post interesting because in places they’re slower than XFS… On the Epyc 9454 I’ve been testing on, 48 Zen4 cores, 1.38.6 is pushing 16.5 GB/sec through dbench 48 clients - vs. 16 GB/sec for XFS. And later: Testing 4k random writes with fio, bcachefs is now hitting 700k iops on this hardware, vs. 1 million for XFS. Overstreet explains that bcachefs is doing much more work here than XFS, but for us, these values feel more plausible simply because he’s not claiming vastly superior results. As an interesting side-note, in the course of researching this article, we also discovered an experimental Linux NAS OS based around bcachefs, which rejoices in the name of NASty. If you want to experiment with bcachefs without getting down and dirty and building the OS by hand, this could be a good way to do it. We are still sad that the personality clash between Overstreet and Torvalds resulted in bcachefs being booted out of the Linux kernel. However big its main developer’s ego may be, bcachefs is a very promising project, and we hope that one day it may get merged again… Perhaps as the kernel’s first filesystem implemented in Rust. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/19/bcachefs-exits-experimental-status-in-new-performance-release/5258801"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:47:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/19/bcachefs-exits-experimental-status-in-new-performance-release/5258801"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "public-web-source-acquisition-contract",
+  "id": "web-source-acquisition/public-source-text/v1",
+  "provider": "urn:ame:web-source-acquisition",
+  "service": "retrieve bounded text from customer-declared public Web sources for internal journalistic research",
+  "preconditions": [
+    "the customer supplies one to eight exact public HTTP or HTTPS URLs",
+    "the customer declares journalistic-source-research as the purpose",
+    "the demand fixes byte and returned-text ceilings",
+    "no credential, cookie, browser session, or customer filesystem authority is conveyed"
+  ],
+  "postconditions": [
+    "every acquired result binds its requested URL, final public URL, response bytes digest, extracted text digest, acquisition instant, and bounded text",
+    "individual retrieval failures are returned as typed obstruction values",
+    "the provider records its own offer, delivery, network request count, byte count, and zero-price service receipt",
+    "the provider writes no customer corpus or publication state"
+  ],
+  "prohibitions": [
+    "no private, loopback, link-local, or otherwise non-public network target",
+    "no paywall, authentication, robots challenge, or technical access-control circumvention",
+    "no inference of copyright license, republication rights, truth, independence, or journalistic warrant from public accessibility",
+    "no generated summary or model-authored claim",
+    "no ambient Web search or URL discovery"
+  ],
+  "price": {
+    "amount": 0,
+    "currency": "USD",
+    "note": "The current carrier uses customer-available public networking; requests and bytes remain measured even at zero monetary price."
+  }
+}

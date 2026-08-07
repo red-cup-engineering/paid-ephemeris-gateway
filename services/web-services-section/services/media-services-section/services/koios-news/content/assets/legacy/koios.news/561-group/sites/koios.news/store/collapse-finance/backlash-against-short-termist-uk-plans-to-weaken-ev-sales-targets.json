@@ -1,0 +1,69 @@
+{
+  "subject": "backlash-against-short-termist-uk-plans-to-weaken-ev-sales-targets",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Backlash against ‘short-termist’ UK plans to weaken EV sales targets"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Charging industry and electric vehicle manufacturers say measure could cost jobs and harm UK automotive sector </p><p>The UK government’s plans to <a href=\"https://www.theguardian.com/business/2026/jun/14/uk-poised-water-down-2030-ev-sales-targets-industry-union-pressure\">further weaken electric car targets</a> have provoked a furious backlash from the charging industry and the electric car brand Polestar, which would lose out from the changes.</p><p>The government is expected to dilute rules known as the zero emission vehicle (ZEV) mandate. Government sources have said it will reduce a target for pure electric cars from 80% of all sales by 2030 to 50%.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 16:05:57 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/environment/2026/jun/15/backlash-uk-plans-weaken-ev-sales-targets-electric-vehicle-manufacturers-automotive-sector"
+      },
+      "status": "supported"
+    }
+  ]
+}

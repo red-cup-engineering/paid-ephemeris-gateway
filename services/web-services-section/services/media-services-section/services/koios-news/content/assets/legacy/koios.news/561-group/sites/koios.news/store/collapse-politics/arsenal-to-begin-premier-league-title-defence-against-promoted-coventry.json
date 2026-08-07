@@ -1,0 +1,69 @@
+{
+  "subject": "arsenal-to-begin-premier-league-title-defence-against-promoted-coventry",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Arsenal to begin Premier League title defence against promoted Coventry"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/arsenal-to-begin-premier-league-title-defence-against-promoted-coventry?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/sports/2026/6/19/arsenal-to-begin-premier-league-title-defence-against-promoted-coventry?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/arsenal-to-begin-premier-league-title-defence-against-promoted-coventry?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The first match of the 2026-27 season sees the top-flight champions face the second-tier Championship winners."
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/arsenal-to-begin-premier-league-title-defence-against-promoted-coventry?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 10:50:44 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.784Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/sports/2026/6/19/arsenal-to-begin-premier-league-title-defence-against-promoted-coventry?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

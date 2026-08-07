@@ -1,0 +1,69 @@
+{
+  "subject": "continuities-in-exclusion",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Continuities in exclusion"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/continuities-in-exclusion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/continuities-in-exclusion"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/continuities-in-exclusion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "“Everyone will be welcome in Canada, Mexico, and the United States for the FIFA World Cup next year.” Those were the words of FIFA President Gianni Infantino following a meeting of the 54 Confederation of African Football (CAF) member association presidents in Nairobi, Kenya, last year. For anyone paying attention, it is clear that Infantino’s words were hollow, especially when it comes to the United States. The latest evidence of this was the recent refusal, with no explanation, of the US government to allow entry to Somali referee Omar Artan, one of seven African referees selected to officiate at the 2026 World Cup, when he arrived May 7 to Miami International Airport en route to the World Cup referee’s base camp. Despite Artan having the proper visa and paperwork, FIFA’s response — that the organization “is not involved in host country immigration processes, including visa adjudications, and has been informed by authorities that Mr. Artan’s status will not be changed at present” — was predictably weak. For those who study the history of the United States’ sporting relationship with Africa, the unequal treatment and exclusion of an African sportsperson from a sporting event hosted by the United States is not surprising. While Africans, from Kenyan runners to Nigerian hoopers to Somali footballers , have found opportunities and built community through participation in US-based sport, threads of exclusion and separation run deep in the history of the United States’ relationship with African and African-descended sportspeople. African athletes and athletes from the diaspora have long been subject to discursive, regulatory, and legal efforts to exclude them from the larger US sporting community. Instances of exclusion and outright racism provide some of the clearest examples. In 2009, when Meb Keflezighi — an Eritrean-born runner who moved to the United States at 12, competed through US schools and colleges, became a citizen in 1998, and won a silver medal at the 2000 Olympics — became the first US runner to win the New York Marathon in over a quarter of a century, a number of commentators argued that his Eritrean birth disqualified him from being counted as an American. At other times, African athletes have been confronted with outright racist slurs in the middle of US-based competitions. In 1970, while racing in the 1,500 meters of the Martin Luther King International Freedom Games in Philadelphia, famed Kenyan middle-distance runner Kipchoge Keino was repeatedly called a “black monkey” by fans in the stands. While these two examples stand out, as Munene Mwaniki has demonstrated , even when accepted into mainstream sports, Black African athletes in the United States have often been subject to overt and covert forms of racism and ostracism. Another instructive example comes from the early 1970s, when the Howard University men’s football (soccer) team — made up exclusively of African and Afro-Caribbean players at one of the United States’ most prominent historically Black universities — had their 1971 NCAA Division I national championship title vacated after several players were accused of violating the NCAA’s amateur status. Following the decision, the team’s coach, Trinidadian Lincoln “Tiger” Phillips, did not hold back, telling a group of NCAA officials and fellow coaches that the team’s African and Black roster made it a target. “I would say that the NCAA,” Phillips said flatly, “is guilty of practicing racism.” Three years later, the Howard team, with many of the same players and coaches, gained redemption and won the 1974 title by defeating defending champion, and all-white roster, St. Louis University in quadruple overtime. In a similar way, in the 1960s and 1970s, as African athletes — including Nigeria’s Chris Ohiri (Harvard University), Ethiopia’s Sebsibe Mamo (Colby College), and Kenya’s Stephen Machooka (Cornell University), Robert Ouko , and Julius Sang (both at North Carolina Central University) — began competing and excelling in American intercollegiate track and field, some US college coaches argued that African runners were abusing the US intercollegiate system by unfairly crowding out their US counterparts. Conveniently forgotten was the fact that African athletes were better competitors and often excelled not only on the track but in the classroom as well . Perhaps the clearest and most well-known case of how sport was used to exclude and segregate African-descended people from mainstream US sport and society comes from baseball. One of the oldest professional sports in the United States and often referred to as the national pastime, Black players were excluded from mainstream professional baseball for over half a century between the 1880s and late 1940s. Despite the formation of a successful all-Black baseball ecosystem in the Negro Leagues , some Black teams operated under demeaning, racist, and anti-African names such as the Ethiopian Clowns and the Zulu Cannibal Giants , while also taking part in minstrel-like performances in order to support themselves financially. While these examples are instructive, they are by no means outliers. As Maher Mezahi recently wrote on this site, there have been countless others from the Global South deprived of the opportunity to realize their dreams of participating in sporting competitions in the United States. Indeed, in addition to Artan, just in this year’s World Cup, footballers and team staff from Morocco, Cameroon, Iraq, Iran, and Haiti have had their travel itinerary disrupted or their entry barred, while countless fans from nations on the Trump administration’s no-entry list have had their dreams of attending the tournament dashed because of exclusionary policies and overpriced tickets. When placed within the larger historical context of the unequal application of fairness and equality towards African and African-descended athletes in US sport, the betrayal of Omar Artan and the ongoing exclusions at the 2026 World Cup are an opportunity to highlight the remarkable power of sport to simplify the world and demonstrate in clear terms the deep historical roots of the current US administration’s racist and exclusionary policies. Sport, no matter how big the tournament or how popular the game, should not be allowed to wash away this history."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/continuities-in-exclusion"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-15T14:46:22.631581Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/continuities-in-exclusion"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "fox-s-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Fox’s $22B Roku acquisition aims to expand its reach into smart TVs, advertising"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/foxs-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/gadgets/2026/06/foxs-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/foxs-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Fox Corporation has agreed to buy Roku Inc. for $160 per share, an approximate enterprise value of $22 billion, the firms announced today. The acquisition would unite Fox’s broadcast channels, including Fox, Fox News, Fox Business, and FS1, as well as its streaming businesses, including Tubi, a free ad-supported streaming television (FAST) platform that Fox bought in 2020, with Roku’s own FAST service, The Roku Channel, and Roku’s streaming hardware business, including its streaming sticks and smart TVs. Roku says it has 100 million households using its platform. The most valuable part of Roku’s business isn't its hardware, which lost $19.1 million in the quarter ending March 31, 2026, but its the operating system (Roku OS) and advertising business. In that same quarter, Roku’s advertising and subscriptions business posted a gross profit of $584.1 million, with the advertising business pulling in $371 million in revenue. The COVID-19 pandemic helped Roku become profitable in 2021, but the company didn’t see annual profitability again until 2025 . Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/foxs-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:29:47 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/gadgets/2026/06/foxs-22b-roku-acquisition-aims-to-expand-its-reach-into-smart-tvs-advertising/"
+      },
+      "status": "supported"
+    }
+  ]
+}

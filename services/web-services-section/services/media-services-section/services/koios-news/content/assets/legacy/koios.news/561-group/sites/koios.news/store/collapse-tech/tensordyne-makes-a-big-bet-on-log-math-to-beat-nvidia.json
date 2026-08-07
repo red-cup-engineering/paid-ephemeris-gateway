@@ -1,0 +1,69 @@
+{
+  "subject": "tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Tensordyne makes a big bet on log math to beat Nvidia"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/5258662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/5258662"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/5258662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "AI infrastructure startup Tensordyne has taped out its first commercial accelerator, with fabrication on TSMC’s 3nm process already underway. Developed in collaboration with Juniper Networks and Broadcom, Tensordyne’s systems promise higher throughput and lower power consumption than GPUs. It claims to achieve this using an unorthodox approach to mathematics that uses logarithms — which you might recall from high school arithmetic — to make matrix multiplication heavy AI workloads less computationally intensive to run. In conventional computing, addition is cheap, multiplication is expensive. Logarithms flip this on its head. Using logs, multiplication essentially becomes an additional problem. a*b becomes log(a) + log(b). The trick is converting those values to logs and back again efficiently. There are a couple of ways of dealing with this. One of the easier options would have been to use a look up table (LUT). However, Tensordyne cofounder Gilles Backhus tells El Reg that relying on LUTs would have been too large to be practical. Instead, the company uses a heuristic, specifically the Mitchell approximation, to estimate log and antilog for each value. This is still an approximation and on its own introduces too much error to be tenable. To overcome this, Backhus tells us Tensordyne has implemented a section-wise correction mechanism in hardware that delivers accuracy equivalent to that of FP16. However, it’s worth noting that Napier will also support FP8 and 4-bit block floating datatypes. In effect, Tensordyne claims to have built a chip in which the multiply accumulate (MAC) unit works without actually doing multiplication in the conventional sense. The result is a chip that delivers power efficiency significantly greater than what you’d see on modern GPUs. Or at least that’s the claim. Tensordyne says its rack systems will spit out up to 17x more tokens per watt and achieve 13x higher throughput than Nvidia’s Blackwell systems. Dissecting Napier Tensordyne’s first commercial chip, Napier, boasts many of the same specs you’d have seen from a high-end GPU just a couple years ago. The accelerator boasts a 300-watt nominal TDP, 144 GB of HBM3e spread across four stacks, 4.7 TB/s of memory bandwidth, and up to 2.1 petaFLOPS of dense FP8 performance. This makes it roughly comparable to Nvidia’s H200 accelerators announced in 2023 while using nearly 60 percent less power. Having said that, max achieved FLOPS often fall far short of peak FLOPS, so take that comparison with a grain of salt. We won’t know how Napier actually compares to Nvidia or AMD’s latest generation of GPUs until it arrives next year. Backhus tells us that Tensordyne is leaning heavily on the scalability of its accelerators rather than individual performance. Each chip features roughly a terabyte of interconnect bandwidth allowing for rack scale deployments of up to 72 accelerators per pod. The TDN72 Tensordyne's system, codenamed the TDN72, consists of eight air-cooled compute blades each with a single 10-core Intel Xeon-D host CPU and nine Napier accelerators. These chips are interconnected by a high-speed interconnect fabric topology reminiscent of the one used by Nvidia’s GB200 NVL72 rack systems. Each chip connects to six proprietary fabric switch blades developed by Tensordyne’s networking partner Juniper, located at the back of the system, in an all-to-all fabric. Despite some similarities to Nvidia’s NVL72 racks, Tensordyne’s TDN72 will be much much smaller and won’t require liquid cooling, which should make it easier to deploy in older brownfield datacenters. According to Backhus, up to four 30kW TDN72 systems can be packed into an — admittedly large — 52U rack. That works out to 608 petaFLOPS in a 120kW footprint, or about 1.68x more dense FP8 compute per rack than Nvidia’s GB200 NVL72. That doesn’t take into consideration the fact that Nvidia’s kit supports NVFP4 acceleration while Napier is limited to FP4 weights. But again, don’t read too much into that comparison. Peak FLOPS are not representative of real world performance. Tensordyne’s TDN72 launches next year, and it’ll be competing against Nvidia’s next-gen Vera Rubin and Vera Rubin Ultra systems, which will no doubt be a stiffer fight, especially when software compatibility is taken into consideration. Software promises Since building its first prototype silicon a few years ago, the company has gone to great lengths to keep its software platform as simple, and easy for customers to deploy, as possible. For example, the prototype lacked the error correction found in its Napier chips, and would have required users to use quantization-aware training to adapt their models to run accurately on the hardware — not exactly feasible for those looking to run trillion-parameter models. The software has also matured such that the hardware’s compiler can convert existing models to run directly on its latest hardware, an approach we’ve seen from other chip startups like Tenstorrent. For inference, Tensordyne has developed its own proprietary serving platform, as well as a runtime environment that Backhus says will allow customers to use their preferred inference servers, such as vLLM. PyTorch support is under development. Before the chip has even shipped, the company is making some bold performance claims. Backhus expects the chips to deliver upwards of 1,000 tokens a second, and that’s without relying on multi-token prediction or other forms of speculative decoding to boost token generation. Tensordyne’s platform has certainly attracted the attention of neocloud providers like Cirrascale and BlueSky Compute, both of which have expressed interest in deploying the company’s hardware when available. But, as we’ve seen with AMD and others, software can make or break a chipmaker. With Napier slated for release in Q2 or Q3 of 2027, Tensordyne won’t have long to get things right. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/5258662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 17:30:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.491Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/5258662"
+      },
+      "status": "supported"
+    }
+  ]
+}

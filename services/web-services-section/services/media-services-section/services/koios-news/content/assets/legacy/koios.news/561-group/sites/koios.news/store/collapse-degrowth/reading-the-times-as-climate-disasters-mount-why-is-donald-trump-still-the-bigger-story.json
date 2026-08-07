@@ -1,0 +1,69 @@
+{
+  "subject": "reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Reading the Times: As climate disasters mount, why is Donald Trump still the bigger story?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-17/reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A buried report on the costliest wildfire season in history raises a larger question: why does political theatre command so much more attention than the escalating climate crisis reshaping our future?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 08:00:15 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-17/reading-the-times-as-climate-disasters-mount-why-is-donald-trump-still-the-bigger-story/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "iran-venezuela-ukraine-greenland-and-the-u-s-heist-of-the-world-s-oil-and-gas-supply",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Iran, Venezuela, Ukraine, Greenland, and the U.S. Heist of the World's Oil and Gas Supply"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/iran-venezuela-ukraine-greenland-and-us-heist-worlds-oil-and-gas-supply"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/iran-venezuela-ukraine-greenland-and-us-heist-worlds-oil-and-gas-supply"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/iran-venezuela-ukraine-greenland-and-us-heist-worlds-oil-and-gas-supply"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Iran, Venezuela, Ukraine, Greenland, and the U.S. Heist of the World's Oil and Gas Supply</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2122\" hreflang=\"en\">Richard Medhurst</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-05T02:09:11+05:30\" title=\"Friday, June 5, 2026 - 02:09\" class=\"datetime\">Fri, 06/05/2026 - 02:09</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/R7ppB_9j4GM?si=8n9K7fa0gSU_wwyz\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p><a href=\"https://www.youtube.com/@RichardMedhurst\" rel=\"nofollow\">Richard Medhurst</a> discusses his latest investigative reporting, <a href=\"https://richardmedhurst.substack.com/p/the-petrogas-dollar-the-secret-us\" rel=\"nofollow\">“The Petrogas-Dollar: The Secret US Strategy Behind the Iran War,\"</a> an analysis of the latest iteration of U.S. hegemony. The U.S. is waging wars in order to control the world's supply of energy and to defeat multipolarity.</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Iran\">Iran</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/natural gas\">natural gas</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Petro-gas dollar\">Petro-gas dollar</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/West Asia\">West Asia</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Middle East\">Middle East</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/energy\">energy</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Multipolarity\">Multipolarity</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/iran-venezuela-ukraine-greenland-and-us-heist-worlds-oil-and-gas-supply"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 04 Jun 2026 20:39:11 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/iran-venezuela-ukraine-greenland-and-us-heist-worlds-oil-and-gas-supply"
+      },
+      "status": "supported"
+    }
+  ]
+}

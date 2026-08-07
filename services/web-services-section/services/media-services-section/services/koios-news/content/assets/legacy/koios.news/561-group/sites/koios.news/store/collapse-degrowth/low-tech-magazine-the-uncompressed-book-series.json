@@ -1,0 +1,69 @@
+{
+  "subject": "low-tech-magazine-the-uncompressed-book-series",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Low-tech Magazine: The Uncompressed Book Series"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<div class=\"article-img \"> <figure data-imgstate=\"dither\"> <img src=\"https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/images/dithers/uncompressed-volumes-14_dithered.png\" alt='Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil.' loading=\"lazy\"/></figure> <figcaption class=\"caption\"> Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil. </figcaption> </div> </div> <p>Between 2019 and 2021, Low-tech Magazine published three books containing selections of articles from the website, spanning 14 years (2007-2021). In 2024, we launched the <a href=\"https://solar.lowtechmagazine.com/2025/03/the-compressed-book-edition/\">&ldquo;compressed edition&rdquo;</a>, which squeezes the article catalog of the three-volume book series into just one book of 620 pages.</p> <p>We did this by switching to a smaller font size, downsizing most images, and opting for a two-column layout. I rewrote some articles, especially older ones, resulting not only in fewer pages but also in better articles.</p> <p>This revised edition of the original, &ldquo;uncompressed&rdquo; series is based on the edits made for the compressed edition. However, we increased the font and image sizes and returned to a one-column layout for improved reading comfort.</p> <p>The book design is a collaborative effort by Laia Comellas, Marie Verdeil, and Johanna Gratzer. Marie Verdeil made the covers, Vaiva Vinskaitė did the typesetting.</p> <div class=\"article-img \"> <figure data-imgstate=\"dither\"> <img src=\"https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/images/dithers/uncompressed-volumes-10_dithered.png\" alt='Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil.' loading=\"lazy\"/></figure> <figcaption class=\"caption\"> Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil. </figcaption> </div> </div> <div class=\"article-img \"> <figure data-imgstate=\"dither\"> <img src=\"https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/images/dithers/uncompressed-volumes-4_dithered.png\" alt='Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil.' loading=\"lazy\"/></figure> <figcaption class=\"caption\"> Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil. </figcaption> </div> </div> <div class=\"article-img \"> <figure data-imgstate=\"dither\"> <img src=\"https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/images/dithers/uncompressed-volumes-15_dithered.png\" alt='Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil.' loading=\"lazy\"/></figure> <figcaption class=\"caption\"> Image: The redesigned and revised chronological book edition. Photo: Marie Verdeil. </figcaption> </div> </div> <p>The books are available in paperback and hardcover:</p> <h3 id=\"paperbacks\">Paperbacks:</h3> <ul> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-i-2007-2012/paperback/product-m25864q.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume I (2007-2012)</a></li> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-ii-2012-2018/paperback/product-zmwgz9k.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume II (2012-2018)</a></li> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-iii-2018-2021/paperback/product-45jp6yy.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume III (2018-2021)</a></li> </ul> <h3 id=\"hardcovers\">Hardcovers:</h3> <ul> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-i-2007-2012-hardcover/hardcover/product-w4w2z2j.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume I (2007-2012)</a></li> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-ii-2012-2018-hardcover/hardcover/product-m26g4ey.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume II (2012-2018)</a></li> <li><a href=\"https://www.lulu.com/shop/kris-de-decker/low-tech-magazine-volume-iii-2018-2021-hardcover/hardcover/product-je6m989.html?page=1&amp;pageSize=4\">Low-tech Magazine Volume III (2018-2021)</a></li> </ul> <h2 id=\"volume-iv-2022-2026\">Volume IV (2022-2026)</h2> <p>We&rsquo;re also working on the final edits for Volume IV (2022-2026), expected to launch in May.</p> <p><a href=\"https://patreon.com/lowtechmagazine\">Patrons</a> have free access to all ebooks, and early access to print books at a reduced price. They also receive exclusive content, which includes previews of new building projects and behind-the-scenes news.</p> <p>Our books are also <a href=\"https://payhip.com/LOWTECHMAGAZINE\">available as epubs</a>. However, the chronological series is still based on the original book edition. We temporary lowered their price and will launch the new versions in a couple of months.</p>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 30 Mar 2026 00:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://solar.lowtechmagazine.com/2026/03/low-tech-magazine-the-uncompressed-book-series/"
+      },
+      "status": "supported"
+    }
+  ]
+}

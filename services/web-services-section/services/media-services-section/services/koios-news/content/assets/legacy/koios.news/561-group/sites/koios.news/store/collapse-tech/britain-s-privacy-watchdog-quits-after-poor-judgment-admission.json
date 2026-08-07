@@ -1,0 +1,69 @@
+{
+  "subject": "britain-s-privacy-watchdog-quits-after-poor-judgment-admission",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Britain's privacy watchdog quits after 'poor judgment' admission"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "John Edwards has resigned as Britain's information commissioner, saying his position had become \"untenable\" following an investigation into conduct he admits caused offense. Edwards announced his departure in a statement posted to LinkedIn on Friday, bringing an abrupt end to a saga that has engulfed the UK's data protection watchdog for months. Edwards said he had informed technology minister Ian Murray of his resignation from the roles of Information Commissioner and chair of the Information Commission, effective immediately. \"Since February of this year I have been the subject of an investigation,\" Edwards wrote. \"While I have not agreed with how that investigation has been conducted, I accept that my position has become untenable.\" He added that there had been occasions where he exercised \"poor judgement\" and made attempts at humor that were \"inappropriate and caused offence.\" \"It is for this reason that I have decided that it is appropriate that I resign from my position,\" he wrote. \"I do not wish to be a distraction to the ICO's important work.\" The resignation comes just over a week after the Information Commissioner's Office announced that an independent workplace probe had concluded there was \"a case to answer,\" prompting the regulator to strip Edwards of his remaining responsibilities while the process continued. At the time, neither the ICO nor the Department for Science, Innovation and Technology (DSIT) disclosed the nature of the allegations. The probe first surfaced publicly in April, when the ICO confirmed Edwards had voluntarily stepped back from his duties on February 26 while an independent investigation into \"HR matters\" was carried out. Edwards' resignation statement sheds slightly more light on what prompted the investigation. He accepts that some of his conduct caused offense, but offers no details about the incidents in question or the investigation's findings. The former New Zealand privacy commissioner spent much of his statement reflecting on the challenges facing regulators, including AI governance, online safety, and international cooperation. He also praised ICO staff and said he remained committed to the principles that had guided his professional life. Notably, Edwards has disabled comments on the resignation post, and his profile now carries LinkedIn's green \"Open to Work\" banner, a reminder that even Britain's former privacy regulator eventually can end up marketing himself on LinkedIn. Questions remain for both the ICO and the Department for Science, Innovation and Technology (DSIT). Neither has yet explained the conduct that triggered the investigation, whether the investigation's findings will be published, or how the process reached the point where the UK's top privacy regulator concluded he could no longer remain in office. A spokesperson at DSIT told The Register: \"John Edwards has resigned from the post of Information Commissioner and Chair of the Information Commission with immediate effect. This follows an independent investigation that took place regarding allegations made against him. “The government expects the highest standards of conduct from all senior leaders in public life. Mr Edwards has acknowledged that his conduct fell below these standards.\" The ICO told us: \"As a Crown appointee and accountable to Parliament, Mr Edwards submitted his resignation to the Department for Science, Innovation and Technology.\" For now, deputy commissioner and chief executive Paul Arnold continues to carry out the commissioner's statutory responsibilities while the government works out what comes next. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 13:14:34 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Obama Presidential Center dedication: A nod to a past era in politics and future hopes"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5855020/obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5855020/obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5855020/obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "All living former presidents gathered for the dedication of the Obama presidential center in Chicago. It was a star studded event that harkened back to a more-optimistic era in American politics."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5855020/obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:51:32 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5855020/obama-presidential-center-dedication-a-nod-to-a-past-era-in-politics-and-future-hopes"
+      },
+      "status": "supported"
+    }
+  ]
+}

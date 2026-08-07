@@ -1,0 +1,69 @@
+{
+  "subject": "january-readings",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "January readings"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/02/january-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://unevenearth.org/2023/02/january-readings-4/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/02/january-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Photo: Jesse Pratt López via Vice Once a month, we put together a list of stories we’ve been reading: news you might’ve missed or crucial conversations going on around the web. We focus on environmental justice, radical municipalism, new politics, political theory, and resources for action and education. We try to include articles that have been published recently but will last, that are relatively light and inspiring, and are from corners of the web that don’t always get the light of day. This will also be a space to keep you up to date with news about what’s happening at Uneven Earth. Belated new year’s greetings and welcome to our first newsletter of 2023! This time, you’ll be able to read up on biodiversity and colonialist conservation; the battle to save Germany’s Lützerath from being swallowed by a coal mine; the ‘Cop City’ protests in Atlanta, Georgia to save the South River Forest; nuclear fusion; why fake meat is just another food fad; psychedelics and climate activism; international struggles for justice; and so many other important topics. If you find these lists useful, you can support us by sharing them on social media and with your friends and family! A small note that the articles linked in this newsletter do not represent the views of Uneven Earth. When reading, please keep in mind that we don’t have capacity to do further research on the authors or publishers! Top 5 articles to read Beyond Meat (BYND), Impossible Foods burgers are just another food fad ‘We’ll fight until the end’: a journey through the centre of Peru’s uprising Another uprising is in the making in Tunisia Canada birthed a mining industry in Chinese-occupied Tibet We are ‘greening’ ourselves to extinction News you might’ve missed How Ghana, Africa’s rising star, ended up in economic turmoil OpenAI used Kenyan workers on less than $2 per hour to make ChatGPT less toxic Death in the marshes: environmental calamity hits Iraq’s unique wetlands Sweden’s shameless pursuit of ”green minerals” generate a conflict with the Sami people Where we’re at: analysis Contesting cannibal capitalism . Nancy Fraser on the destructive nature of our system. Paying for an overheating Earth . The euphoria over the creation of a loss-and-damage fund was well justified, but the struggle is far from over. The labor of land . In order to better resist contemporary, neocolonial accumulation, we need to historicize land grabs in Africa. Ecomodernism on its own terms Biodiversity and colonialist conservation The world is losing its biological complexity The collapse of insects ‘We used to have everything’: Western conservation models threaten Indigenous rights, says new report Why 30×30 would be the worst possible outcome of COP15 Harriet Friedmann reviews George Monbiot’s Regenesis Decolonizing nature: How “wilderness” dispossesses Indigenous People Global struggles Fighting Amazon’s neo-colonialism in Cape Town An unsolved murder amid Costa Rica’s Indigenous land disputes Inside the battle to save the sacred peyote ceremony: ‘We’re in dire straits’ What we are saying is freedom, not the veil&nbsp; Turkey is starving the Rojava revolution Mennonites deforest Peruvian Amazon, encroach on Indigenous lands Land conflicts targeting Indigenous communities intensify in Northern Guatemala ‘How are we going to live?’ Families dispossessed of their land to make way for Total’s Congo offsetting project Lützerath, Germany HSBC’s secretive loan to a coal company bulldozing a village &nbsp; Beating, kicking, tearing down houses – how police, RWE, and the German state are causing climate catastrophe in the German Rhineland Cop City in Atlanta, Georgia Activists occupying the woods to block ‘Cop City’ face terrorism charges Documents show how 19 ‘Cop City’ activists got charged with terrorism ‘Assassinated in cold blood’: activist killed protesting Georgia’s ‘Cop City’ Stop Cop City! Revisiting degrowth & permanent ecological conflict Cities and radical municipalism Luisa Cáceres: Commune-building in urban Venezuela Why knowing your neighbors could save you in the next climate disaster Tiny Free Stores & Libraries of Everything: Steps towards a post-capitalist future ‘You’re not welcome’: Mexico City residents decry Airbnb Greener cities promote social and climate inequalities: 28-city study Zimbabwe plans a new city for the rich as Harare decays Barcelona offers free transit to residents who ditch their cars &nbsp; Fusion Fusion net gain is manufactured ignorance Nuclear fusion: Don’t believe the hype! Clean energy or weapons? What the ‘breakthrough’ in nuclear fusion really means Fusion power may run out of fuel before it even gets started Just think about it… The 1 percent are many times worse than the rainforest wreckers How much should inequality be reduced? Reliance on hi-tech solutions to climate crisis perpetuates racism, says UN official On nuclear energy The hidden underwater forests that could help tackle the climate crisis BlackRock says we’re all doomed. It’s being optimistic Casteism and climate change: a deadly combination in South Asia Tripping for the planet: Psychedelics and climate activism Degrowth All we are saying is give degrowth a chance . A decade ago, a container shipping worker had an epiphany, and it caused him to question the very basis of his business. Degrowth can work — here’s how science can help Degrowth will be fun! Sci-fi, art and storytelling The definitive climate fiction reading list – 20 books to explore cli-fi Resources Comic: The corporate capture of food systems &nbsp; Want to receive this as a newsletter in your inbox? Subscribe here . The post January readings first appeared on Uneven Earth ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/02/january-readings-4/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 05 Feb 2023 20:34:05 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://unevenearth.org/2023/02/january-readings-4/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "inside-trump-s-stock-trading-surge",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Inside Trump’s Stock Trading Surge"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/inside-trumps-stock-trading-surge.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/2026/06/19/us/politics/inside-trumps-stock-trading-surge.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/inside-trumps-stock-trading-surge.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Documents show the president outsourced trading decisions to brokers. But bucking tradition, his assets are not in a blind trust, exposing him to concerns about conflicts."
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/inside-trumps-stock-trading-surge.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:58:02 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/2026/06/19/us/politics/inside-trumps-stock-trading-surge.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@rsc-quiescent/software-work-witness-service",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/outcome-ledger.mjs",
+    "./compute-cost": "./src/compute-cost.mjs",
+    "./hashing": "./src/hashing.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/inference-work-lot-service": "4.0.1",
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

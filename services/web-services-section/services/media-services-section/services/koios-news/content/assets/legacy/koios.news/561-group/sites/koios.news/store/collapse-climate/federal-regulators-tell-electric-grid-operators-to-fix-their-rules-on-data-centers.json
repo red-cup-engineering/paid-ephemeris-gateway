@@ -1,0 +1,69 @@
+{
+  "subject": "federal-regulators-tell-electric-grid-operators-to-fix-their-rules-on-data-centers",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Federal Regulators Tell Electric Grid Operators to Fix Their Rules on Data Centers"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The Federal Energy Regulatory Commission stops short of fulfilling the Trump administration’s wishes but puts regional grid operators on a “short leash.” By Lisa Sorg, Charles Paullin The nation’s electric grid is stressed out.&nbsp;"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:11:43 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/"
+      },
+      "status": "supported"
+    }
+  ]
+}

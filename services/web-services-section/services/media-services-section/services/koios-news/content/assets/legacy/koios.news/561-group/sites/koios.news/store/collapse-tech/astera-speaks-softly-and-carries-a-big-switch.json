@@ -1,0 +1,69 @@
+{
+  "subject": "astera-speaks-softly-and-carries-a-big-switch",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Astera speaks softly and carries a big switch"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/astera-speaks-softly-and-carries-a-big-switch/5219859"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/05/05/astera-speaks-softly-and-carries-a-big-switch/5219859"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/astera-speaks-softly-and-carries-a-big-switch/5219859"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Astera Labs unveiled an alternative to Nvidia's NVSwitch for building rack-scale AI systems on Tuesday, claiming it will work with nearly any accelerator. The AI fabric switch, codenamed Scorpio X, crams 320 lanes of PCIe 6.0 connectivity into a single ASIC with 5.12 TB/s of bidirectional bandwidth. Historically, PCIe switches have been used in a variety of applications including scale-out compute fabrics. CPUs alone either didn't offer enough or fast enough lanes for all the GPUs, NICs, and storage required. So, rather than hanging everything off the CPU, a PCIe switch, often built into the NIC, was used to connect everything together. Astera contends that with a big enough switch, PCIe is a viable alternative to interconnects like NVLink, in the scale-up fabrics used to make dozens or more GPUs behave more like a single large one without needing to redesign their accelerators. However, Astera hasn't just built a bigger PCIe switch. Scorpio is equipped with many of the same in-network compute capabilities as Nvidia's NVSwitch, which help to accelerate collective communications. These communications are especially important for generative AI inference. Large language models have become rather chatty from a network standpoint as mixture-of-experts (MoE) architectures have caught on. MoE models are composed of multiple sub-models called experts. For each token generated, a different selection of experts, potentially running on different GPUs, may be used. By moving collective communications to the switch, the GPUs spend less time waiting for the network to catch up and more time churning out tokens. Astera has gone so far as to develop a multicast operation optimized for MoE inference that it calls Hypercast. \"One of the limitations of the standard multicast is the number of groups you can actually support, as well as the dynamic nature of needing to change those groups on the fly for mixture-of-experts models,\" Ahmad Danesh, AVP of product management at Astera, told El Reg. Where Scorpio fits in the scale-up ecosystem While there are clear benefits to using PCIe as a chip-to-chip interconnect, Scorpio isn't exactly a replacement for Nvidia's NVSwitch chips. NVSwitch 6, announced at CES in January, offers nearly 3x the bandwidth at 14.4 TB/s. However, Astera doesn't need to compete with NVSwitch directly. In fact, Astera announced plans to extend support for NVLink Fusion, Nvidia's attempt to open its high-speed interconnect to the broader ecosystem, last spring. Instead, Scorpio is being positioned more as a vendor agnostic alternative. Technologies like NVLink Fusion or the emerging UALink protocol are gaining traction, but chips need to be designed around them. PCIe works with just about anything because it's already used to get data in and out of the accelerators. For example, if you wanted to stitch together 32 or more Nvidia RTX Pro 6000 Server cards, you'd need a PCIe switch, since those GPUs don't support NVLink at all. PCIe also makes it easier to mix and match chips for disaggregated inference architectures, like we've seen with Nvidia and Groq, AWS and Cerebras, or Intel and SambaNova. These architectures involve using one accelerator for compute heavy prefill operations and another for bandwidth intensive decode operations. For this to work, the chips have to be connected to one another. Many AI chip builders are doing this over Ethernet, but PCIe would be more direct. Alongside its Scorpio X family of chips, Astera is also expanding its Scorpio P-series switches with models ranging from 32 to 320 lanes of PCIe connectivity. All of these switches work with its COSMOS management suite, a hardware monitoring platform designed to help track down and resolve issues across the network fabric. Astera's refreshed Scorpio switches are currently sampling with production expected to ramp in the second half of 2026. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/astera-speaks-softly-and-carries-a-big-switch/5219859"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 05 May 2026 22:05:07 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/astera-speaks-softly-and-carries-a-big-switch/5219859"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "enterprise-ownership",
+  "enterprise": "newswire-editorial-production",
+  "owns": [
+    "prose commissions",
+    "inference route procurement from LISS",
+    "provider-side production offers, refusals, and exchange records"
+  ],
+  "doesNotOwn": [
+    "a customer's assignment ledger or corpus",
+    "source admission or editorial authority",
+    "manuscript serialization",
+    "editorial acceptance, publication, deployment, or correction"
+  ]
+}

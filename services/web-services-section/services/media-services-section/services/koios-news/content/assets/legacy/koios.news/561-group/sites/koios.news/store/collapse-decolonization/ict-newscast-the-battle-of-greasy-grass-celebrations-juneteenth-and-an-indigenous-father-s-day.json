@@ -1,0 +1,69 @@
+{
+  "subject": "ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-father-s-day",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "ICT NEWSCAST: The Battle of Greasy Grass Celebrations, Juneteenth and an Indigenous Father’s Day"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/newscasts/ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-fathers-day/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://ictnews.org/newscasts/ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-fathers-day/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/newscasts/ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-fathers-day/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The ICT Newscast for Friday, June 19, 2026, covers the Battle of Greasy Grass, Tribal leadership training, Juneteenth and Fathers Day. Check out the ICT Newscast on YouTube for this episode and more. 150 Years Later: Remembering the Battle of Greasy Grass AKA Little Bighorn This month marks the 150th anniversary of the Battle of Little Bighorn, where Lakota, Cheyenne and Arapaho warriors defeated the U.S. Cavalry killing commander, Lt. Colonel George Custer. Custer, who had ties to the Confederacy during the Civil War, became one of the frontier era’s most reviled figures and was known for vicious racist attacks toward Native Americans, including women and children. For many Indigenous people, the battle is known as the Battle of Greasy Grass, a defining moment of resistance and proud victory against a man, and a system, that had long sought their destruction. Tribal nations will be holding celebrations to commemorate the win. Tribal Leadership Conference Builds Future Indigenous Leaders The Tribal Leadership Conference (TLC) gathered tribal leaders for the third year this month to tackle community issues including economic development and water rights. Beyond connecting established leaders, TLC focuses on building the next generation — offering networking and training for those looking to step into leadership roles. Coordinator Natori Naylor, a Harvard Business School alumna, created the conference after experiencing firsthand the barriers young people face entering tribal leadership — and is working to make that path easier for those who follow. Juneteenth and the Freedmen: Slavery Descendants of the Five Tribes This Juneteenth, we’re examining a lesser-known chapter of history, the five tribal nations that practiced slavery: the Cherokee, Chickasaw, Choctaw, Seminole and Muscogee Creek. The descendants of those enslaved by these nations are known as the Freedmen, many of whom are also tribal members. Membership rules vary by nation, making the process of confirming ancestry complex. University of Pittsburgh Professor Alaina Roberts and Cherokee Freedmen community liaison Melissa Payne break down how to research and verify Freedmen descent and why that identity still matters today. Indigenous Father and Son Perform Across the World Chickasaw classical composer Jarod Tate reflects on being a parent this Father’s Day and his son returns the tribute, sharing how his father has shaped his life and inspired him. The duo has performed together at the Kennedy Center and on stages around the world. Jarod calls his son a “world citizen,” who has eclipsed him by not only taking up music but dancing ballet as well. View previous ICT broadcasts here every week for the latest news from around Indian Country. Keywords: Native American news 2026, Indigenous news, Native American news today, Tribal news, First Nations news, Native American representation, Native American Entertainment, Native Entertainers, Native American artist, Native artists, Indigenous artists, Indigenous, Community, Culture, Identity, Native, Traditional, Heritage, Land, Music, Art, Battle of Little Big Horn, Battle of Greasy Grass, Custer’s Last Stand, American History, America250, Juneteenth, Black History, Afroindigneous, Afro-Indigenous, Black Seminoles, Afro-Indigenous History. The post ICT NEWSCAST: The Battle of Greasy Grass Celebrations, Juneteenth and an Indigenous Father’s Day appeared first on ICT ."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/newscasts/ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-fathers-day/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 22:17:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://ictnews.org/newscasts/ict-newscast-the-battle-of-greasy-grass-celebrations-juneteenth-and-an-indigenous-fathers-day/"
+      },
+      "status": "supported"
+    }
+  ]
+}

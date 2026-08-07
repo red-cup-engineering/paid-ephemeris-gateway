@@ -1,0 +1,69 @@
+{
+  "subject": "the-rise-of-the-luxury-barbecue-the-uk-s-new-outdoor-cooking-obsession",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The rise of the luxury barbecue: the UK’s new outdoor cooking obsession"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:24:59.403Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:24:59.403Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Sales of high-end barbecues are booming as hotter and longer summers increase appetite for alfresco dining</p><p>Burned sausages, limp salads and undercooked chicken legs you live to regret; the British barbecue has historically been a sorry affair. But a slew of fancy equipment the price of a secondhand car is revolutionising the grilling game.</p><p>Over the past few years, the £1,000-plus barbecue has soared in popularity. The Big Green Egg, a pioneer of the premium outdoor cooking movement, has recorded 1m visits to its UK website so far this year. Its classic model retails at £1,495.</p> <a href=\"https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:24:59.403Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:00:35 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:24:59.403Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/19/luxury-barbecue-outdoor-cooking-uk-summer"
+      },
+      "status": "supported"
+    }
+  ]
+}

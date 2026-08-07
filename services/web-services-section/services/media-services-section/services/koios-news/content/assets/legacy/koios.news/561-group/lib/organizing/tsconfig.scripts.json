@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "paths": {}
+  },
+  "include": ["scripts/**/*.mts"],
+  "exclude": ["scripts/**/*.test.mts"]
+}

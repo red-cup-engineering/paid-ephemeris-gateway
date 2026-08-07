@@ -1,0 +1,69 @@
+{
+  "subject": "rent-regulation-and-the-housing-crisis-for-black-new-yorkers",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Rent Regulation and the Housing Crisis for Black New Yorkers"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/rent-regulation-and-housing-crisis-black-new-yorkers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/rent-regulation-and-housing-crisis-black-new-yorkers"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/rent-regulation-and-housing-crisis-black-new-yorkers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Rent Regulation and the Housing Crisis for Black New Yorkers</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-19T06:01:12+05:30\" title=\"Friday, June 19, 2026 - 06:01\" class=\"datetime\">Fri, 06/19/2026 - 06:01</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/owe2Y4zQd10?si=0kmjv-qdxLgHeFJa\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>Many apartments in New York City are protected by rent regulations which determine how much rent can be charged and how much increases, if any, can be. These regulations are under constant attack by landlords, who even withhold nearly 60,000 apartments off the market in hopes of ending rent regulations with a court decision. <a href=\"https://www.leahfrombklyn.com/\" rel=\"nofollow\">Leah Goodridge</a> is a New York City-based attorney, housing advocate, writer, and member of the City Planning Commission. She discusses this issue, which impacts working and low-income New Yorkers, Black people in particular, and why the end of regulations would be devastating.</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/US Politics\">US Politics</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/housing\">housing</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/affordable housing\">affordable housing</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Rent\">Rent</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/New York City\">New York City</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/landlords\">landlords</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/rent-regulation-and-housing-crisis-black-new-yorkers"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:31:12 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/rent-regulation-and-housing-crisis-black-new-yorkers"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "demining-the-strait-of-hormuz",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Demining the Strait of Hormuz"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/video/us/politics/100000010969459/iran-strait-hormuz-mines-shipping.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nytimes.com/video/us/politics/100000010969459/iran-strait-hormuz-mines-shipping.html"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/video/us/politics/100000010969459/iran-strait-hormuz-mines-shipping.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Our reporter John Ismay, who served as a Navy explosive ordnance disposal officer and deep-sea diver for eight years, explains why mines in the Strait of Hormuz may outlast the war."
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/video/us/politics/100000010969459/iran-strait-hormuz-mines-shipping.html"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:17:51 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:49.293Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.nytimes.com/video/us/politics/100000010969459/iran-strait-hormuz-mines-shipping.html"
+      },
+      "status": "supported"
+    }
+  ]
+}

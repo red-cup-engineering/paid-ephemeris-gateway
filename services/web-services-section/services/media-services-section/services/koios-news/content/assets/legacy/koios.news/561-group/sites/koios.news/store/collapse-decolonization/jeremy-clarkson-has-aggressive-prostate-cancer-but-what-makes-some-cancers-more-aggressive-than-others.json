@@ -1,0 +1,69 @@
+{
+  "subject": "jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Jeremy Clarkson has aggressive prostate cancer. But what makes some cancers more aggressive than others?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others-285584"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://theconversation.com/jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others-285584"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others-285584"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<figure><img src=\"https://images.theconversation.com/files/742609/original/file-20260618-71-g5w3hk.jpg?ixlib=rb-4.1.0&amp;rect=3%2C0%2C2992%2C1995&amp;q=45&amp;auto=format&amp;w=1050&amp;h=700&amp;fit=crop\" /><figcaption><span class=\"caption\">Jeremy Clarkson revealed his prostate cancer diagnosis this week in the latest season of Clarkson&#39;s Farm.</span> <span class=\"attribution\"><a class=\"source\" href=\"https://press.amazonmgmstudios.com/us/en\">Amazon MGM Studios</a></span></figcaption></figure><p>UK media celebrity Jeremy Clarkson this week revealed he has been diagnosed with an <a href=\"https://www.bbc.com/news/articles/cqj14q700rko\">aggressive form of prostate cancer</a>. </p> <p>He told his co-stars about the diagnosis on air during the latest season of <a href=\"https://www.imdb.com/title/tt10541088/\">Clarkson’s Farm</a>. At the time of filming, he said he didn’t know whether he would be back for another season. However, he said the cancer had been caught early and he was receiving treatment.</p> <p>Clarkson specifically noted his cancer was “aggressive”.</p> <p>So what does this actually mean? And what makes some cancers more aggressive than others?</p> <p></p> <h2>What is an aggressive cancer?</h2> <p>When doctors and scientists refer to a cancer being aggressive, they mean it’s fast-growing.</p> <p>This is the definition authorities, such as the <a href=\"https://www.cancer.gov/publications/dictionaries/cancer-terms/def/aggressive\">National Cancer Institute</a> in the United States or the <a href=\"https://www.cancervic.org.au/glossary/definition.aspx?id=aggressive\">Cancer Council Victoria</a> in Australia, use. </p> <p>Cancers occur when your body’s cells acquire <a href=\"https://doi.org/10.64628/AA.syhk47jyy\">DNA mutations that alter their behaviour</a>. For instance, certain mutations might lead cells to evade death or divide uncontrollably. Mutations can also affect how fast this division occurs.</p> <p>For instance, DNA mutations leading to excessive production of the <a href=\"https://doi.org/10.1038/s41571-021-00549-2\">MYC protein</a> allow cells to grow and divide more rapidly. Dividing quickly and uncontrollably is the simplest measure of cancer aggression. </p> <p>As the name suggests, aggressive cancers are quite dangerous. The speed at which they can develop and grow means they are more likely to be diagnosed only once they have reached a more advanced stage and <a href=\"https://doi.org/10.64628/AA.sm9q5mdrn\">spread to other parts of the body</a>. </p> <p>Sadly, once cancers have spread and are considered “advanced”, they are very difficult to treat. </p> <p>However, if an aggressive cancer is caught early, there are usually treatment options.</p> <hr> <p> <em> <strong> Read more: <a href=\"https://theconversation.com/what-is-a-cancer-gene-how-genetic-mutations-lead-to-cancer-276272\">What is a ‘cancer gene’? How genetic mutations lead to cancer</a> </strong> </em> </p> <hr> <h2>How about treatment?</h2> <p>Sometimes, the aggressiveness of a cancer can be exploited as a weakness and used against it.</p> <p>For example, <a href=\"https://www.cancerresearchuk.org/about-cancer/treatment/chemotherapy/how-chemotherapy-works\">chemotherapy works by damaging DNA</a>. When cells divide, if their DNA is also damaged, they die. But as cancer cells grow faster than most other cells in our body, the chemotherapy essentially destroys the cancer cells first. Therefore, fast-growing cancer cells can be more susceptible to chemotherapy.</p> <p>A good example is the blood cancer known as <a href=\"https://www.leukaemia.org.au/types-of-blood-cancer/lymphoma/non-hodgkin-lymphoma/burkitt-lymphoma/\">Burkitt lymphoma</a>. Burkitt lymphomas generally express abnormally high levels of MYC protein, making them highly aggressive.</p> <p>Most Burkitt lymphoma patients (<a href=\"https://doi.org/10.1182/blood.2019004099\">64–85%</a>) can be cured with intensive chemotherapy. This was also one of the first cancer types to be cured by <a href=\"https://doi.org/10.1002/1097-0142(1967)20:5%3C756::AID-CNCR2820200530%3E3.0.CO;2-P\">chemotherapy alone</a>, back in the 1960s. </p> <p></p> <h2>Why are some cancers more aggressive than others?</h2> <p>Every cancer is different. Different genetic mutations drive different abnormal behaviours, and these behaviours are linked to the cancer’s aggressiveness. And, for every part of the body, there can be dozens of different sub-types of cancer. </p> <p>However, many cancers share certain characteristics, meaning we can make some generalisations. </p> <p>For example, <a href=\"https://doi.org/10.4081/oncol.2016.294\">pancreatic cancers</a> and a sub-type of breast cancer known as “<a href=\"https://www.breastcancertrials.org.au/triple-negative-breast-cancer/\">triple-negative</a>” are highly aggressive. They grow rapidly and have limited treatment options.</p> <p>But there are always new treatments being developed for many aggressive cancers once thought untreatable.</p> <p>One example is the <a href=\"https://doi.org/10.64628/AAI.yr459rqxr\">development of a new drug</a> that targets the cancer-promoting protein, KRAS. In clinical trials, this drug nearly doubled the survival of people with aggressive pancreatic cancers.</p> <hr> <p> <em> <strong> Read more: <a href=\"https://theconversation.com/breakthrough-drug-nearly-doubles-survival-with-advanced-pancreatic-cancer-an-oncologist-explains-how-daraxonrasib-overcame-an-undruggable-disease-283647\">Breakthrough drug nearly doubles survival with advanced pancreatic cancer – an oncologist explains how daraxonrasib overcame an ‘undruggable’ disease</a> </strong> </em> </p> <hr> <h2>How about Clarkson’s cancer?</h2> <p>It is impossible to speculate about Clarkson’s case without more information. Most prostate cancers are not considered aggressive, and people can live for <a href=\"https://www.prostate.org.au/testing-and-diagnosis/grading-genetics/stages-of-prostate-cancer/\">many years</a> with slower growing, non-spreading, low-risk forms. </p> <p>For more aggressive forms, the prognosis often <a href=\"https://www.cancercouncil.com.au/prostate-cancer/diagnosis/staging-prognosis/\">depends on how early the cancer is detected</a>. Prostate cancer is more common in men over the age of 50, but <a href=\"https://www.cancer.org.au/cancer-information/screening-tests-and-treatments/early-detection-and-screening/early-detection-of-prostate-cancer\">symptoms are not always apparent early, and screening techniques are imperfect</a>. </p> <p>If you are concerned about your cancer risk, it’s best to see your doctor for personal advice.</p><img src=\"https://counter.theconversation.com/content/285584/count.gif\" alt=\"The Conversation\" width=\"1\" height=\"1\" /> <p class=\"fine-print\"><em><span>Sarah Diepstraten receives funding from the National Health and Medical Research Council, Cure Cancer Australia and My Room Children&#39;s Cancer Charity.</span></em></p><p class=\"fine-print\"><em><span>John (Eddie) La Marca receives funding from Cancer Council Victoria. He is affiliated with the Olivia Newton-John Cancer Research Institute and the Walter and Eliza Hall Institute of Medical Research.</span></em></p>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others-285584"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-18T06:22:15Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/jeremy-clarkson-has-aggressive-prostate-cancer-but-what-makes-some-cancers-more-aggressive-than-others-285584"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "say-what-new-insults-to-use-in-2026-fiona-katauskas",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Say what?! New insults to use in 2026 | Fiona Katauskas"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>The news is providing a lot of material to work with</p><ul><li><p><strong>See more of </strong><a href=\"https://www.theguardian.com/profile/fiona-katauskas\"><strong>Fiona Katauskas’s cartoons here</strong></a></p></li></ul> <a href=\"https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:00:37 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/picture/2026/jun/20/say-what-new-insults-to-use-in-2026"
+      },
+      "status": "supported"
+    }
+  ]
+}

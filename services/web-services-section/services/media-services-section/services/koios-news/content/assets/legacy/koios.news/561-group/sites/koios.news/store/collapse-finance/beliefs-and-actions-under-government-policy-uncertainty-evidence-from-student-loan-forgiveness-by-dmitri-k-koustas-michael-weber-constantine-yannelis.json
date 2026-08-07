@@ -1,0 +1,69 @@
+{
+  "subject": "beliefs-and-actions-under-government-policy-uncertainty-evidence-from-student-loan-forgiveness-by-dmitri-k-koustas-michael-weber-constantine-yannelis",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Beliefs and Actions under Government Policy Uncertainty: Evidence from Student Loan Forgiveness -- by Dmitri K. Koustas, Michael Weber, Constantine Yannelis"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35319#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nber.org/papers/w35319#fromrss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35319#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "How does uncertainty about future government policy affect households’ beliefs and subsequent borrowing, spending and debt payment behavior? We study these questions through the lens of student loan forgiveness in the United States, which following electoral promises, was announced in 2022 but never implemented due to judicial rulings. We conduct a customized information provision experiment embedded in a survey eliciting real-time beliefs about future debt forgiveness and repayment, which we link to credit bureau data, employment verification data, and nondurables consumption. Eligible borrowers who are more optimistic about forgiveness reduce payments on student loans by \\$40 per month and increase non-durable spending by $100 per month. We also find some evidence optimistic borrowers may postpone durable spending waiting for uncertainty to resolve. Borrowers optimistic about future payment pauses make fewer payments on their student loans, reduce payment by $40 per month and are 7.5 percentage points more likely to be delinquent after payments resume. A quantification exercise finds welfare losses from incorrect beliefs can exceed 43 percent of the initial loan balance. Our results provide micro-evidence on the role of policy uncertainty in household decision-making, and have implications for government announcements and commitment policy."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35319#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35319#fromrss"
+      },
+      "status": "supported"
+    }
+  ]
+}

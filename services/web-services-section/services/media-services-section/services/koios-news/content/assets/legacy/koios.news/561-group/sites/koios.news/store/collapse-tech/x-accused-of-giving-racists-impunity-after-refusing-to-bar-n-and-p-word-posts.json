@@ -1,0 +1,69 @@
+{
+  "subject": "x-accused-of-giving-racists-impunity-after-refusing-to-bar-n-and-p-word-posts",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "X accused of giving racists ‘impunity’ after refusing to bar N- and P-word posts"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Site takes no action over hate posts against UK politicians including Kemi Badenoch, Shabana Mahmood and Zia Yusuf</p><p>X has refused to take down dozens of social media posts reported as “hate, abuse or harassment” in which prominent UK politicians, including Kemi Badenoch, have been racially abused.</p><p>In May, researchers from the social inclusion thinktank British Future reported 30 posts from this year in which the <a href=\"https://www.theguardian.com/politics/kemi-badenoch\">Conservative party leader</a> was called the N-word. In each case the researchers used the platform’s “hate, abuse or harassment” reporting option. X refused to act in the majority of cases, despite repeated requests.</p> <a href=\"https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 07:00:36 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/14/x-racists-impunity-hate-posts"
+      },
+      "status": "supported"
+    }
+  ]
+}

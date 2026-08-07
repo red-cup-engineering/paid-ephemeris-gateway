@@ -1,0 +1,69 @@
+{
+  "subject": "ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "IBM asks DBAs to trust AI to act on their behalf"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf/5228662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/05/05/ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf/5228662"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf/5228662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "IBM has added support for Google Vertex AI and Intel Gaudi to boost the AI-based management of its stalwart Db2 database. With the update to its Db2 Genius Hub, launched earlier this year, Big Blue is now promising an automated database management system that acts on behalf of DBAs within certain guardrails. The new release promises to integrate Db2 data with Google Cloud’s fully managed AI platform, Vertex AI, to help customers build, deploy, and scale machine learning models. IBM has also integrated AI accelerator Intel Gaudi with the promise of an improved price-to-performance ratio for large-scale AI deployments. The two updates build on existing support for Amazon Bedrock and IBM watsonx.ai, while also adding Microsoft Azure AI Foundry, as Big Blue pushes toward more autonomous database operations. Launched in the 1980s, Db2 has become a database of choice for applications that need to be both big and dependable. Banks make up nearly 43 percent of its users, among them American Express, Bank of America, Citibank, and Deutsche Bank. These are not the kind of DBAs to take undue risk with their systems, but Big Blue now swears some routine tasks can be left to AI. Announced in March, Db2 Genius Hub can cut management costs by 25 percent, manual intervention by 30 percent, and time to resolution by 35 percent, IBM said. As always, vendor claims should be taken with a grain of salt. The latest additions mean it can allow AI to manage well-bounded tasks while keeping human judgment “at the core,” the company said. “With this release, AI agents in Db2 Genius Hub can propose and execute database operations with user approval. That means teams can move more directly from diagnosis to action without giving up control of what happens in production,” said Miran Badzak, IBM Software director for databases, in a blog. Speaking to IBM, industry analyst Sanjeev Mohan said that advances in GenAI coding showed that automation would come to DBAs sooner rather than later. “This is the first step where it is proactively doing monitoring, root cause analysis, it's soon going into making recommendations and autonomously executing a task,” said the former Gartner analyst. “We want the DBAs to be upskilled; they should be sitting with business decision makers. A decision maker says, ‘I need to run a new campaign, massive campaign … and it's going to blow up the database’. The DBA can be responsible for the business success, because Genius Hub can take care of all the nitty gritty, nuanced, heavy lifting of the database. We can get the DBAs into that room,” Mohan said. After more than 40 years of existence, Db2 has come a long way in the last five. Back in late 2021, Db2u - IBM’s containerized Db2 deployment - was described as only available via containers on Red Hat OpenShift. Other recent announcements include a partnership with PostgreSQL-like distributed database provider CockroachDB in a bid to help modernize mission-critical applications reliant on mainframe hardware. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf/5228662"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 05 May 2026 19:29:10 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/05/ibm-asks-dbas-to-trust-ai-to-act-on-their-behalf/5228662"
+      },
+      "status": "supported"
+    }
+  ]
+}

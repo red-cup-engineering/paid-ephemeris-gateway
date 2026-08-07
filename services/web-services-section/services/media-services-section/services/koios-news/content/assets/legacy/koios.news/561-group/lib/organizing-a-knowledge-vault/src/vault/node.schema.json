@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "organizing/knowledge-vault/node",
+  "title": "VaultNode",
+  "description": "locate's codomain (and the element of browse's frontier): one node of the vault proof tree. The meaningful proof path (slugs only, joints elided), its own slug, its role (morphism = a gerund, object = a codomain, joint = a `content/` holder), and whether the canonical `slug/slug.md` document is present. The optional title/description/tags are read from the document's frontmatter through the markdown codec. This is `attend`'s structural shadow  -  a vault node reached by navigating the namespace, not a settled meme. $id is the bare package-rooted descent path.",
+  "type": "object",
+  "required": ["kind", "address", "slug", "role", "hasDocument"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "organizing.knowledge-vault.node" },
+    "address": { "type": "string", "description": "the meaningful proof path (slugs only, joints elided), e.g. \"mark/utterance\"" },
+    "slug": { "type": "string", "description": "the node's own slug (basename of its directory)" },
+    "role": { "enum": ["morphism", "object", "joint"], "description": "morphism (a gerund), object (a codomain), or joint (a `content/` holder)" },
+    "hasDocument": { "type": "boolean", "description": "whether the canonical `slug/slug.md` document is present" },
+    "title": { "type": "string", "description": "the node's title, from frontmatter (when documented)" },
+    "description": { "type": "string", "description": "the node's description, from frontmatter (when documented)" },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "the node's tags, from frontmatter (when documented)" }
+  }
+}

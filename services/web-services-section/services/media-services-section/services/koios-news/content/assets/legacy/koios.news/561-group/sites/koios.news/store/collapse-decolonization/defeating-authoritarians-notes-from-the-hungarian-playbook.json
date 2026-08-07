@@ -1,0 +1,69 @@
+{
+  "subject": "defeating-authoritarians-notes-from-the-hungarian-playbook",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Defeating authoritarians: Notes from the Hungarian playbook"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/hungary-election-orban-defeat-peter-magyar-win-lessons-progressives/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/en/hungary-election-orban-defeat-peter-magyar-win-lessons-progressives/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/hungary-election-orban-defeat-peter-magyar-win-lessons-progressives/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "As the dust settles on last week’s Hungarian election, which saw Viktor Orbán and his Fidesz party wiped out in a landslide win by centre-right candidate Péter Magyar, some onlookers are left puzzled. What changed? Hungarians, including many Fidesz voters, have long known of the Orbán regime’s corruption and anti-democratic measures, which were backed by both Donald Trump in the US and Vladimir Putin in Russia. Was Magyar just in the right place at the right time, or is there something deeper at play? And what can progressive forces around the world learn from him? We know that it was not primarily – or not only – propaganda that kept millions wedded to Fidesz for so long. This is clear from a recent interview given to an independent media outlet (Partizán) in which a Fidesz politician explains that she had been scandalised by the enrichment of Orbán’s close circle and the cases of abuse within child protection services that had come to light – she just did not believe these were intrinsic to the workings of Fidesz. So if Fidesz politicians and voters alike were often aware of these issues, what kept them supporting the party for so long? For many, there was no good alternative. Although former opposition parties have long called out Orbán’s oligarchic regime, they fundamentally accepted his terms of the game by letting Fidesz take control of the national identity discourse while they claimed the opposite, the international(ist) position, as their own. In doing so, opposition politicians largely spoke the language of a relatively small group of urban progressives, emphasising liberalism, Europeanism, and free markets. This not only distanced them from more nation-minded rural voters, but also put them in a near-constant defensive state because they had to continuously rebut Fidesz’s charges that they were serving ‘foreign interests’. In the end, they were unable to come up with a competing counter narrative. Magyar, in contrast, reclaimed national symbols that Fidesz had monopolised, allowing him to speak the language of many more Hungarians, uniting the progressive anti-Orbán camp with huge numbers of rural voters. Most importantly, he broke with a decades-long dividing line in Hungarian politics, that between the liberal and national-conservative camps. These blocs were formed after the regime change in 1989 and alternately held power until 2010. But by the late 2000s, unemployment, economic instability, and the mismanagement of economic crises by the left-liberal coalition government led to this bloc’s massive loss of legitimacy. This gave Orbán a significant boost in 2010 as he sought to provide an alternative path focusing, at least rhetorically, on Hungarians taking control of their own country, politically as well as economically. While this turned out to mean mostly the Fidesz-friendly oligarchy, the message resonated with millions of people who had been slapped in the face by the realities of neoliberal capitalism and liberal democracy. The left-liberal block could not rebuild itself during the 2010s and the early 2020s because it did not understand why Orbán had come to power in the first place. It did not present much of an alternative to pre-2010 liberal politics, which most people did not want anything to do with. Magyar, on the other hand, came up with a new narrative. He has told voters that Orbán does not have a monopoly over the national discourse and that while his promises and goals had essentially been good, corruption and greed had made him betray his own people. His rise to victory is also partly luck, though. First, Magyar’s history as a Fidesz loyalist meant he understood the party’s tactics for dealing with opponents. He was able to avoid falling into the traps Fidesz tried to lure him into throughout the election campaign. Second, he came onto the political scene in February 2024 after the relatively prosperous 2010s had given way to economic stagnation. When a scandal broke out over the Fidesz-linked president having given clemency to a man who had helped cover up paedophilia in a state-run children’s home, Magyar seized the moment. He galvanised mass anger and dissatisfaction into a broad, heterogeneous political movement. He was able to address a formerly very passive group of voters, among them young people as well as middle-aged women and small business owners who had become key to political organising across the country. It remains unclear what Magyar’s offer consists of, though. He has campaigned on democratic restoration, investment in healthcare, education and infrastructure, as well as ending propaganda and corruption – but he has also pledged to keep various elements of Fidesz’s politics. This may have been a political necessity as he faced off Europe’s most well-funded propaganda machine, but it is unrealistic, and has set him up to fail. Magyar cannot channel the same resources towards well-off families through state-supported loans that Fidesz has, while also delivering on his vows to increase support for the poorest. This is particularly true given the country’s budget is in ruins. His Tisza party will eventually have to make choices, and reliance on expert knowledge, which Magyar has repeatedly emphasised, cannot replace a unifying political ideology. Whatever comes next, though, this is a historic moment for Hungarian democracy: voter turnout has never been higher, and no party has ever received as many votes as Tisza in the country’s democratic history. A 16-year-old autocratic and oligarchic regime will now be forced to step down. Tens of thousands of formerly passive citizens had joined politics in the last two years, which is a massive resource for Hungary’s future democracy. Young people in the country now have a reference point for what mass collective action, organising, and political change might look like, an experience which might prove decisive for their generation’s future. It’s important that they – we – don’t see this moment as the ‘new end of history’, though. The narrative of a ‘return’ to liberal democracy is dubious as we cannot erase the rise of right-wing and far-right forces, nor the reasons behind their success. In the end, Orbán’s defeat was in part caused by him losing touch with Hungarian society as domestic concerns were overshadowed by his international ambitions. Magyar stepped up to be the new ‘voice of the people’, and his victory is instructive for left-wing, liberal and centrist forces alike, not just in Hungary but beyond: above all, voters want politicians to listen to their lived experiences and narration of their own lives, in their own words, not get stuck in echo chambers. Dalma Vatai is a sociologist and journalist based in Budapest. She covers domestic politics, social issues, and feminist topics."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/hungary-election-orban-defeat-peter-magyar-win-lessons-progressives/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 16 Apr 2026 13:38:38 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/hungary-election-orban-defeat-peter-magyar-win-lessons-progressives/"
+      },
+      "status": "supported"
+    }
+  ]
+}

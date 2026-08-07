@@ -1,0 +1,69 @@
+{
+  "subject": "amoc-collapse-could-change-europe-s-climate-10x-faster-than-expected-we-aren-t-ready-penny-holliday-femke-de-jong-and-sjoerd-groeskamp",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Amoc collapse could change Europe’s climate 10x faster than expected. We aren’t ready | Penny Holliday, Femke de Jong and Sjoerd Groeskamp"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>The system of ocean current that moves heat in the Atlantic Ocean plays a key role in regulating climate. Today’s monitoring of it may be discontinued</p><p>Imagine we detect a large asteroid heading straight for Earth. We are able to intervene and prevent disaster, but instead we cut the funding needed to track it. A few million dollars, it was argued, was too expensive to have a chance to save society.</p><p>While this scenario isn’t real, the metaphor is alarmingly accurate. In Europe, we spend €1bn to monitor space for asteroids, even if the actual risk of a civilisation-ending asteroid strike is <a href=\"https://science.nasa.gov/solar-system/asteroids/facts/#:~:text=It%20is%20highly%20unlikely%20that%20an%20asteroid,NASA's%20Jet%20Propulsion%20Laboratory%20in%20Southern%20California.\">close to zero</a>.</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sun, 14 Jun 2026 10:00:40 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/14/amoc-collapse-europe-climate"
+      },
+      "status": "supported"
+    }
+  ]
+}

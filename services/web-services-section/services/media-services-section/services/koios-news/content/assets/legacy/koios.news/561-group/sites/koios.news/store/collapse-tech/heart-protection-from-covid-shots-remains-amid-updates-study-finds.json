@@ -1,0 +1,69 @@
+{
+  "subject": "heart-protection-from-covid-shots-remains-amid-updates-study-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Heart protection from COVID shots remains amid updates, study finds"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/covid-vaccines-still-protect-against-heart-problems-large-study-finds/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/health/2026/06/covid-vaccines-still-protect-against-heart-problems-large-study-finds/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/covid-vaccines-still-protect-against-heart-problems-large-study-finds/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Although most Americans have eschewed seasonal COVID-19 vaccines, the updated shots continue to show significant protection against cardiovascular disease, especially for those over age 75 and those with underlying medical conditions. That's according to a new study that pulled data from more than 1 million patients in a US Department of Veterans Affairs (VA) health system. The finding builds on previous data showing that the vaccines significantly lower the risk of COVID-19-associated cardiovascular risks, particularly heart attacks and strokes. But it wasn't a given that the benefit would hold up over time—as the virus evolved, the vaccines were updated, population-level immunity increased from previous infection and vaccination, and risk of severe outcomes fell. The new study, published in JAMA Internal Medicine, found that the 2024–2025 COVID-19 vaccine continued to protect against COVID-19-associated \"major adverse cardiovascular events\" (MACE), which include cardiovascular death, heart attack, stroke, and hospitalization for heart failure. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/covid-vaccines-still-protect-against-heart-problems-large-study-finds/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 21:04:26 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/health/2026/06/covid-vaccines-still-protect-against-heart-problems-large-study-finds/"
+      },
+      "status": "supported"
+    }
+  ]
+}

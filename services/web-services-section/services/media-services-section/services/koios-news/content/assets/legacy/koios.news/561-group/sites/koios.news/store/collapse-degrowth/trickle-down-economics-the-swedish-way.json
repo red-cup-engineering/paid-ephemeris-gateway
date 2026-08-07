@@ -1,0 +1,69 @@
+{
+  "subject": "trickle-down-economics-the-swedish-way",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Trickle-down economics, the Swedish way"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/03/trickle-down-economics-the-swedish-way/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/03/trickle-down-economics-the-swedish-way/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/03/trickle-down-economics-the-swedish-way/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Lars Syll The leader of the Swedish Liberal Party, Simona Mohamsson, announced last week that she wants to turn Sweden into a tax haven and double the number of billionaires by 2037. According to Mohamsson, “we still have high taxes in Sweden, and clearly that hinders people who want to be able to roll […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/03/trickle-down-economics-the-swedish-way/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 03 Jun 2026 11:50:22 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/03/trickle-down-economics-the-swedish-way/"
+      },
+      "status": "supported"
+    }
+  ]
+}

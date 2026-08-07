@@ -1,0 +1,69 @@
+{
+  "subject": "the-sea-took-everything-away-how-nigeria-s-happy-city-is-disappearing-beneath-the-waves",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘The sea took everything away’: how Nigeria’s ‘Happy City’ is disappearing beneath the waves"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>More than half of Ayetoro – a Christian utopia founded in the 1940s – has been lost to the ocean, and its remaining people are running out of options</p><p>In the early hours of 15 February 2019, the Atlantic Ocean came for Arowo Victoria’s livelihood. The 60-year-old retired midwife was asleep when neighbours began banging on her door, shouting that the sea had started covering buildings along the nearby coastline.</p><p>By the time she got to her small shop, she discovered that the Atlantic had already swept it away, destroying the business she had built with borrowed money after retirement.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 08:00:01 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/environment/2026/jun/18/the-sea-took-everything-away-how-nigerias-happy-city-is-disappearing-beneath-the-waves"
+      },
+      "status": "supported"
+    }
+  ]
+}

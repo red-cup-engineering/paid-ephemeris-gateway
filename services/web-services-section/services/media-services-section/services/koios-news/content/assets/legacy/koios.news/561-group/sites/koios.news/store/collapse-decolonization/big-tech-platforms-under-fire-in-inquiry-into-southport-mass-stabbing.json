@@ -1,0 +1,69 @@
+{
+  "subject": "big-tech-platforms-under-fire-in-inquiry-into-southport-mass-stabbing",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Big Tech platforms under fire in inquiry into Southport mass stabbing"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/southport-murders-amazon-x-big-tech-criticised-age-verification-content-moderation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/en/southport-murders-amazon-x-big-tech-criticised-age-verification-content-moderation/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/southport-murders-amazon-x-big-tech-criticised-age-verification-content-moderation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "In July 2024, a 17-year-old stabbed 13 people, killing three girls, in a dance studio in Southport, in the north-west of England. Fueled by misinformation about the incident in the aftermath, rioters clashed with police and attacked a local mosque. Anti-immigration protests and riots spread across the UK in the days that followed. On Monday, the UK government released the first phase of its inquiry report examining the event. While the report says that the “perpetrator’s responsibility is absolute” – he pled guilty and was sentenced to life imprisonment – it considers a range of other factors and failings that surrounded the event and its aftermath. That includes the role of the internet and tech platforms, including, in particular, X and Amazon. Social media and online content The report looks deeply at the events that preceded the attack, including a timeline of the attacker’s social media use and consumption of violent material on platforms such as YouTube before the stabbings. It addresses what it calls the “inaction” of his parents, who described noticing and worrying about their son’s weapons and behaviour. It details how the assailant looked at violent content at school, including information about sexual violence, torture, wars and bombings, and was referred to the UK’s counter-terrorism unit, with no effective results. “I remain concerned that individual schools may lack the technical knowledge to assess whether they have appropriate filtering systems in place,” noted the chair of the inquiry. The report notes that while his school blocked his access to the internet, the perpetrator attempted to override it, which was not reported to the unit. There was “little curiosity around how he was spending his time” from those around him, according to the report, even as age-verification and other restrictions on his online activity appeared to fail. The report names Elon Musk’s X as a platform implicated with furthering the tragedy, and notes that “X has shown no signs of any self-critical reflection” of how its policies contributed to these events, including its age verification processes. The report says that X was not as cooperative with the inquiry as other platforms, refusing to provide posts associated with the attacker’s account. “X did not show the same ready willingness to co-operate with the Inquiry as almost all other organisations and Core Participants,” notes the report. After the stabbings, the UK’s home secretary and secretary of state for its Department for Science, Innovation and Technology wrote a letter to platforms, including X, asking them to take harmful materials accessed by the perpetrator, such as an al-Qaida training manual and the video of the stabbing, down. TikTok and Meta complied and expressed condolences, while X did neither, stating that the “content reported has not been found to be in violation of the X Terms of Service.” The report acknowledges that “UK law currently permits it to act in this way.” The report includes the fact that the perpetrator viewed a video of a high-profile stabbing on X, a video that the platform refused to take down . The report notes that he would have been able to view this video due to weak age verification restrictions at the time, which only required a user to voluntarily enter their date of birth. Although he was able to bypass Instagram’s age-verification measures, “there is no evidence” that he was able to view similarly violent content, according to the report. In the days that followed, X also came under fire along with other social media platforms for facilitating the spread of misinformation that led to riots after the attack, including claims that the perpetrator was Muslim and a migrant, neither of which was true. Researchers at the time noted that X’s recommendation algorithms helped amplify posts spreading misinformation. The stabbings came less than two years after X dismantled its Trust and Safety advisory group following its acquisition at the end of 2022 by Musk. The platform’s methods of self-regulation were described as too slow to stop the spread of misinformation. “X clearly has a different understanding of what its corporate responsibilities are,” said Owen Bennett, former head of international online safety at Ofcom, the UK’s communications regulator. This “should be a cause for concern for Ofcom and the UK government,” he told Tech Policy Press. While the report’s “focus on legal but harmful content is important, … the fundamental issue with X is its platform design,” wrote Amnesty’s head of big tech accountability, Alia Al Ghussain, over email. The UK’s Online Safety Act and other regulatory frameworks “need to be robustly enforced to mitigate the effects of this design, and to ensure that there is meaningful accountability,” said Al Ghussain. “This includes addressing the remaining gaps in current legislation to enable the UK government to hold X accountable for harms stemming from its algorithmic design.” The report makes a case for more effective filtering in schools, and suggests an extension, such as through an amendment, to the Online Safety Act to safeguard against age-inappropriate content to children and prevent the viewing of violent content. It acknowledges the argument that the Act should be given “time to take effect before considering the introduction of new or amended legislative requirements,” but expresses concerns about VPNs and recommends age verification for VPNs. Amazon and the “arsenal” of weapons The report examines how the perpetrator was able to accumulate an “arsenal” of weapons, and his ability to purchase the items he intended to use as weapons – from knives to the ingredients for poison – from online retailers including Amazon. It notes that while Amazon’s policies restrict children from making purchases, “there was and is no age verification process when opening an Amazon account.” “It is concerning that someone with that [violent] mindset was able to browse such dangerous items and … purchase items that could be used as weapons without any age restriction,” notes the report. The report recommends that Amazon improve its age verification, including taking offline steps such as training its drivers around age-verified deliveries, as well as mandatory reporting and information sharing from knife vendors for suspicious behaviour. The report also urges a police investigation into another online vendor for allegedly failing to carry out age verification in the sale of machetes and knives. It also recommends that senior coroners and statutory inquiries should be given greater access to the social media accounts of perpetrators who are deceased. Tech Policy Press sought comment from X and Amazon, but received no reply at the time of publication. “Vindication” for the Online Safety Act? The report is a “vindication” for the policies of Online Safety Act, a wide-ranging effort to regulate online platforms that was launched at the end of 2023, according to Bennett. Although the Act had been launched at the time of the stabbings, it was still being put into force. This case shows the need at the time for regulation of age-inappropriate material, said Bennett, calling the platforms’ self-declaration measures at time “woefully ineffective.” “While the [Online Safety Act] couldn't have prevented this tragedy from occurring, its importance and relevance has been vindicated,” said Bennett. “It is unrealistic to expect regulation to make this impossible for those that are determined to access such material,” wrote Henry Tuck, senior director of digital policy at the Institute for Strategic Dialogue, over email. The report did not address how the perpetrator originally encountered violent material: “was this through unwanted exposure on a mainstream platform, or did he actively seek it out?” said Tuck. “Rather than preventing all means of accessing such content, a more realistic expectation from regulation would be to significantly reduce the risks of incidental exposure to illegal and harmful content.” The report’s second phase, which is slated to be released next year, will deal more heavily with the influence of the internet and social media and the efficacy of existing laws. This piece was originally published on Tech Policy Press. Jade-Ruyu Yan is a UK reporting fellow at openDemocracy and Tech Policy Press."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/southport-murders-amazon-x-big-tech-criticised-age-verification-content-moderation/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 17 Apr 2026 16:01:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/southport-murders-amazon-x-big-tech-criticised-age-verification-content-moderation/"
+      },
+      "status": "supported"
+    }
+  ]
+}

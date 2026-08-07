@@ -1,0 +1,69 @@
+{
+  "subject": "black-agenda-report-june-5-2026",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Black Agenda Report June 5, 2026"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-5-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/black-agenda-report-june-5-2026"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-5-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Black Agenda Report June 5, 2026</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-05T07:46:00+05:30\" title=\"Friday, June 5, 2026 - 07:46\" class=\"datetime\">Fri, 06/05/2026 - 07:46</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay; encrypted-media\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2333482598%3Fsecret_token%3Ds-C8mUBcPEusz&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\"></iframe></p> <div style=\"color:#cccccc;font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-size:10px;font-weight:100;line-break:anywhere;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:normal;\"><a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733\" title=\"Black Agenda Radio\" target=\"_blank\">Black Agenda Radio</a> · <a style=\"color:#cccccc;text-decoration:none;\" href=\"https://soundcloud.com/user-92939733/black-agenda-report-june-5/s-C8mUBcPEusz\" title=\"Black Agenda Report June 5, 2026\" target=\"_blank\">Black Agenda Report June 5, 2026</a></div> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>In this week’s segment, we discuss the US effort to control the world’s oil and gas supplies in Venezuela, Iran, and other nations, and to disrupt and steal supplies going to and from Russia and China. But we begin with a discussion of why the FIFA World Cup should not be hosted by the United States and why the US itself should be subjected to an international boycott.</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/FIFA\">FIFA</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/World Cup\">World Cup</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/People Centered Human Rights\">People Centered Human Rights</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Colombia\">Colombia</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Iran\">Iran</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Venezuela\">Venezuela</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/natural gas\">natural gas</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/imperialism\">imperialism</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/West Asia\">West Asia</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Petro-gas dollar\">Petro-gas dollar</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-5-2026"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 05 Jun 2026 02:16:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/black-agenda-report-june-5-2026"
+      },
+      "status": "supported"
+    }
+  ]
+}

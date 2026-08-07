@@ -1,0 +1,69 @@
+{
+  "subject": "users-claimed-they-d-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Users claimed they’d never seen a spell checker and panicked at the sight of red squiggles"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/users-claimed-theyd-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles/5257476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/personal-tech/2026/06/19/users-claimed-theyd-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles/5257476"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/users-claimed-theyd-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles/5257476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "ON CALL Welcome to another edition of On Call, The Register’s reader-contributed Friday column in which you share your stories of troublesome tech support incidents. This week, meet a reader we’ll Regomize as “Cooper” who told us that his employer uses an MS Word document to record incoming orders. “It includes a table with two columns: the left column contains a description of the data to be entered in the right column - things like product, SKU, quantity, customer name,” Cooper explained. “Our sales team uses it to record new orders, then our fulfillment team reviews, validates, and submits for delivery.” Cooper knows this is an archaic approach, but his employer has used this document for ages and doesn’t want to change. “This means we do a lot of educating on the process,” Cooper told On Call. That effort worked well enough for years, but Cooper’s company recently hired a new person called “Mitch” to review the forms before sending them to the fulfillment team. “One day, Mitch comes to me absolutely flustered by an issue a colleague was having with the form,” Cooper told On Call. Because the form is just a form – all users need to do is fill in the blanks – Cooper found the request strange but did the right thing and dug into the issue. Mitch’s complaint centered on the fact that the text in some forms was underlined in red – evidence Word’s built-in spell checker at work. “I don't understand the red lines, what do I do?” Mitch asked Cooper, adding a plaintive and panicked request to “Please HELP!!!” Cooper told On Call the chap who filled in the form was in his 60s, so ignorance of how Word works is plausible and perhaps understandable. But Mitch was in his 40s and his ignorance seemed inexcusable. “My answer was fairly blunt and straightforward: I told Mitch this is just how MS Word works, and that an SKU is not a normal word in the dictionary so the spell checker was bound to kick in. “You can tell the seller to ignore it, or they can turn off the spell checker,” he added. Have you been asked to support tech you think it’s safe to assume everyone already understands? If so, click here to send On Call an email so we can share your story on a future Friday. The On Call mailbag is a little light at the moment, so new submissions are very welcome! ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/users-claimed-theyd-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles/5257476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:28:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/personal-tech/2026/06/19/users-claimed-theyd-never-seen-a-spell-checker-and-panicked-at-the-sight-of-red-squiggles/5257476"
+      },
+      "status": "supported"
+    }
+  ]
+}

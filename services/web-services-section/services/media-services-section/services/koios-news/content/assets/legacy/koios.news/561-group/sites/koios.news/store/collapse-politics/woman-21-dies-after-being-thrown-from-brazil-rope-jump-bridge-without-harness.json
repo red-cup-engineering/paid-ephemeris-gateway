@@ -1,0 +1,69 @@
+{
+  "subject": "woman-21-dies-after-being-thrown-from-brazil-rope-jump-bridge-without-harness",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Woman, 21, dies after being thrown from Brazil rope jump bridge without harness"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Instructors hurled Maria Eduarda Rodrigues de Freitas into 40-metre abyss without attaching safety equipment</p><p>A 21-year-old woman who died when two rope-jumping instructors threw her from a bridge without first harnessing her to security equipment has been buried in <a href=\"https://www.theguardian.com/world/brazil\">Brazil</a>’s São Paulo state.</p><p>Maria Eduarda Rodrigues de Freitas was rope jumping on Saturday at Ponte do Esqueleto, an abandoned bridge in the municipality of Limeira where tourists practise extreme sports. The young woman, who aspired to become a physical education teacher, had asked to be launched from the bridge airplane-style, with two instructors hoisting her above their shoulders as she spread out her arms.</p> <a href=\"https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 17:19:45 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/brazil-rope-jump-bridge-woman-dies"
+      },
+      "status": "supported"
+    }
+  ]
+}

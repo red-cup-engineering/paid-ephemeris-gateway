@@ -1,0 +1,31 @@
+{
+  "name": "@koios-news/koios-news-service-section",
+  "version": "0.0.3",
+  "private": true,
+  "type": "module",
+  "description": "News-domain settlement services for warrant-preserving publications.",
+  "bin": {
+    "describe-service": "./src/service-section.mjs",
+    "settle-message": "./src/service-section.mjs",
+    "solicit-admissible-research-packet": "./src/contract-admissible-research-packet.mjs",
+    "invoke-admissible-research-packet": "./src/contract-admissible-research-packet.mjs",
+    "solicit-licensed-editorial-state": "./src/contract-licensed-editorial-state.mjs",
+    "invoke-licensed-editorial-state": "./src/contract-licensed-editorial-state.mjs",
+    "settle-mathematics-research-delivery": "./src/contract-mathematics-research-intake.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/contract-licensed-editorial-state.mjs && node --check src/contract-admissible-research-packet.mjs && node --check src/contract-mathematics-research-intake.mjs && node --check src/service-section.mjs",
+    "describe": "node src/service-section.mjs describe",
+    "settle": "node src/service-section.mjs settle-message",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/witness-journal-entry-service": "0.1.4",
+    "@red-cup-engineering/witness-journal-log-service": "0.1.4"
+  },
+  "overrides": {
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2"
+  }
+}

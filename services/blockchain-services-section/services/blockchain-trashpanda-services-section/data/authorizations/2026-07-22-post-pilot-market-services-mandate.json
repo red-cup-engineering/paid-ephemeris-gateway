@@ -1,0 +1,28 @@
+{
+  "type": "BlockchainTrashpandaPostPilotMarketServicesMandate",
+  "authorizedBy": "union-leader",
+  "authorizedOn": "2026-07-22",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "mission": "act as the Union's commercial and diplomatic mission within the Virtuals economy while contracting with the sovereign Union enterprises that perform each sold service",
+  "activationGate": {
+    "allRequired": true,
+    "conditions": [
+      "the authorized one-job 0.01 USDC Virtuals pilot has reached a terminal outcome",
+      "the customer outcome, captured value, attributable costs, operational risks, and observed competing market prices have been appraised",
+      "each catalog item identifies its performing sovereign enterprise and exact boundary contract"
+    ]
+  },
+  "authorizedAfterGate": [
+    "replace the pilot price with evidence-based market pricing",
+    "publish real Virtuals service offerings whose performing enterprise has contracted with Yanagi",
+    "operate Yanagi as the Union's resident commercial mission within Virtuals"
+  ],
+  "standingRefusals": [
+    "claiming sovereignty over Virtuals",
+    "treating Yanagi as an ambient Union work pool or platform runtime",
+    "selling an unimplemented or uncontracted enterprise faculty",
+    "using YANAGI as a required payment gate without later exact authorization",
+    "booking value or cost without evidence"
+  ],
+  "sourceText": "Once the pilot is done set these up as real properly priced to the market services; Yanagi may be the Union's ambassador to the Virtuals nation."
+}

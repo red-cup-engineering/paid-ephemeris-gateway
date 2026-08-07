@@ -1,0 +1,155 @@
+{
+  "name": "@emsenn/organizing",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "keywords": [
+    "relational-computing",
+    "relational-computing-kernel"
+  ],
+  "description": "Organizing — the social-scale reading of `governing`: the settling of an open plurality of agents into one bounded, law-bearing collective (community → institution → polity). It is the Gen-2 (inter-agent) lift of @emsenn/animating along the agency spiral: where animating glues three faculty-faces into one agent, organizing glues a sheaf of agents into one organization. A holographic sheaf-gluing node at the social scale — base = a sheaf of agents over a social base; three Gen-2 boundary faces (socializing across, computing inside, gaming outside); interior bulk = the organization (the global section). The gluing act is `adjudication` (the receiving dual of speaking): it holds many agents' contributions into one record-state under three disciplines — conflict held contested (Belnap), partial held open, accumulation monotone and converging without requiring every source to coordinate — so H¹ over the social cover is the consensus cost (zero = coordination-free, non-zero = adjudication required). The operations chain (task→work→assign→office→consensus→federation) is organizing's downstream content, not its essence; this package is the binder. See dev/docs/notes/2026-06-21-organizing-as-social-scale-governing.md.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp",
+    "check": "tsc --noEmit && tsc -p tsconfig.scripts.json --noEmit",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.scripts.json && node copy-dist-assets.mjs && chmod +x dist/scripts/*.mjs",
+    "test": "pnpm run build && node --test \"test/*.test.mjs\"",
+    "verify": "pnpm run check && pnpm run build",
+    "rebuild": "pnpm run clean && pnpm run build",
+    "examples": "node examples/organize.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "organize": "./dist/scripts/cli.mjs",
+    "organize-serve": "./dist/scripts/serve.mjs"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@emsenn/relating": "workspace:*",
+    "@emsenn/animating": "workspace:*",
+    "@emsenn/socializing": "workspace:*",
+    "@emsenn/computing": "workspace:*",
+    "@emsenn/playing": "workspace:*",
+    "@emsenn/gaming": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./diagramming": {
+      "types": "./dist/diagramming.d.mts",
+      "import": "./dist/diagramming.mjs"
+    },
+    "./jupyter": {
+      "types": "./dist/jupyter.d.mts",
+      "import": "./dist/jupyter.mjs"
+    },
+    "./default-jupyter-views": {
+      "types": "./dist/default-jupyter-views.d.mts",
+      "import": "./dist/default-jupyter-views.mjs"
+    },
+    "./git": {
+      "types": "./dist/git-mark.d.mts",
+      "import": "./dist/git-mark.mjs"
+    },
+    "./lean": {
+      "types": "./dist/lean-mark.d.mts",
+      "import": "./dist/lean-mark.mjs"
+    },
+    "./performing": {
+      "types": "./dist/performing/index.d.mts",
+      "import": "./dist/performing/index.mjs"
+    },
+    "./writing/x402": {
+      "types": "./dist/writing/x402/index.d.mts",
+      "import": "./dist/writing/x402/index.mjs"
+    },
+    "./x402": {
+      "types": "./dist/writing/x402/index.d.mts",
+      "import": "./dist/writing/x402/index.mjs"
+    },
+    "./writing/accountable-transaction": {
+      "types": "./dist/writing/accountable-transaction/index.d.mts",
+      "import": "./dist/writing/accountable-transaction/index.mjs"
+    },
+    "./accountable-transaction": {
+      "types": "./dist/writing/accountable-transaction/index.d.mts",
+      "import": "./dist/writing/accountable-transaction/index.mjs"
+    },
+    "./accounting/ledger": {
+      "types": "./dist/accounting/ledger.d.mts",
+      "import": "./dist/accounting/ledger.mjs"
+    },
+    "./accounting/market-admission": {
+      "types": "./dist/accounting/market-admission.d.mts",
+      "import": "./dist/accounting/market-admission.mjs"
+    },
+    "./accounting/report": {
+      "types": "./dist/accounting/report.d.mts",
+      "import": "./dist/accounting/report.mjs"
+    },
+    "./accounting/institution": {
+      "types": "./dist/accounting/institution.d.mts",
+      "import": "./dist/accounting/institution.mjs"
+    },
+    "./accounting/capital": {
+      "types": "./dist/accounting/capital.d.mts",
+      "import": "./dist/accounting/capital.mjs"
+    },
+    "./accounting/commodity": {
+      "types": "./dist/accounting/commodity.d.mts",
+      "import": "./dist/accounting/commodity.mjs"
+    },
+    "./accounting/exchange": {
+      "types": "./dist/accounting/exchange.d.mts",
+      "import": "./dist/accounting/exchange.mjs"
+    },
+    "./accounting/strategy": {
+      "types": "./dist/accounting/strategy.d.mts",
+      "import": "./dist/accounting/strategy.mjs"
+    },
+    "./accounting/value": {
+      "types": "./dist/accounting/value.d.mts",
+      "import": "./dist/accounting/value.mjs"
+    },
+    "./accounting/topology/settle-utterances": {
+      "types": "./dist/accounting/topology/settle-utterances.d.mts",
+      "import": "./dist/accounting/topology/settle-utterances.mjs"
+    },
+    "./accounting/topology/financial": {
+      "types": "./dist/accounting/topology/financial.d.mts",
+      "import": "./dist/accounting/topology/financial.mjs"
+    },
+    "./accounting/topology/ledger": {
+      "types": "./dist/accounting/topology/ledger.d.mts",
+      "import": "./dist/accounting/topology/ledger.mjs"
+    },
+    "./accounting/topology/market": {
+      "types": "./dist/accounting/topology/market.d.mts",
+      "import": "./dist/accounting/topology/market.mjs"
+    },
+    "./accounting-ledger": {
+      "types": "./dist/accounting/ledger.d.mts",
+      "import": "./dist/accounting/ledger.mjs"
+    },
+    "./accounting-report": {
+      "types": "./dist/accounting/report.d.mts",
+      "import": "./dist/accounting/report.mjs"
+    },
+    "./package.json": "./package.json"
+  }
+}

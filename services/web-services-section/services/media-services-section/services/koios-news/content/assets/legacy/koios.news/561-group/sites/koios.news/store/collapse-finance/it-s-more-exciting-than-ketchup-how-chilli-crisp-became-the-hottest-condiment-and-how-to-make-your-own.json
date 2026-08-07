@@ -1,0 +1,69 @@
+{
+  "subject": "it-s-more-exciting-than-ketchup-how-chilli-crisp-became-the-hottest-condiment-and-how-to-make-your-own",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "‘It’s more exciting than ketchup!’ How chilli crisp became the hottest condiment – and how to make your own"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>This crunchy, spicy wonder has made a fortune for its Chinese creator – and inspired hundreds of British-Asian versions. Time to get tasting …</p><p>Walk down the specialist aisle in most British supermarkets and you will find a red jar with the kindly face of a middle-aged Chinese woman staring back at you. Branded Lao Gan Ma, meaning “old godmother”, these jars contain chilli crisp – a spicy, crunchy and moreish umami condiment that has made <a href=\"https://www.theguardian.com/world/2022/nov/05/chinas-hottest-woman-the-driving-force-behind-crunchy-chilli-sensation-lao-gan-ma\">made hundreds of millions</a> for Tao Huabi, the woman on the label. Doused over steaming dumplings, fried eggs, noodles and even ice-cream, Lao Gan Ma’s chilli crisp has become a social media sensation in recent years and has spawned a thriving cottage industry of independent chilli crisp producers in the UK.</p><p>“It’s such a convenient shortcut to flavour when you use it as a condiment,” says Fuchsia Dunlop, an expert in Chinese cuisine. “Every Asian cuisine has a form of chilli oil, but China and Lao Gan Ma invented chilli crisp and now the western world is more interested in authentic flavours, thanks partly to social media.” People, she says, want to have their own taste of that authenticity. “It’s far more exciting than a bottle of ketchup!”</p> <a href=\"https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 13:00:25 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/food/2026/jun/15/chilli-crisp-hottest-condiment-how-to-make"
+      },
+      "status": "supported"
+    }
+  ]
+}

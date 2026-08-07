@@ -1,0 +1,69 @@
+{
+  "subject": "venice-s-new-mayor-seeks-to-raise-day-tripper-fee-to-up-to-50",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Venice’s new mayor seeks to raise day-tripper fee to up to €50"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Simone Venturini says proposal aimed at discouraging arrivals in ‘periods of heightened tourist pressure’</p><p>Venice’s new mayor has said he hopes to raise a controversial entrance fee for day-trippers to the lagoon city to as much as €50 (£43).</p><p>Simone Venturini, the rightwing former tourism councillor who was elected as mayor in late May, said the proposal was aimed at further discouraging arrivals “during periods of heightened tourist pressure”.</p> <a href=\"https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:36:12 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:45.959Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/venice-entry-fee-rise-day-trippers-new-mayor-simone-venturini"
+      },
+      "status": "supported"
+    }
+  ]
+}

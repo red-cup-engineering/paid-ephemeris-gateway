@@ -1,0 +1,69 @@
+{
+  "subject": "citrix-now-lets-you-run-virtual-desktops-like-a-cost-conscious-private-equityeer",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Citrix now lets you run virtual desktops like a cost-conscious private equityeer"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/18/citrixs-daas-flex-aims-to-delay-pricey-pc-upgrades/5258476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/virtualization/2026/06/18/citrixs-daas-flex-aims-to-delay-pricey-pc-upgrades/5258476"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/18/citrixs-daas-flex-aims-to-delay-pricey-pc-upgrades/5258476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Your next work PC could live in the cloud. A couple of years ago, the Cloud Software Group – the private-equity-owned vendor that mashed up Citrix with Tibco – built a tool to analyze the ideal desktop environment for its users, a cost-control exercise aimed at ensuring it wasn’t spending big on under-utilized endpoints. Last month, the company productized the result and put it on sale under the name “Citrix DaaS Flex.” The product is effectively a front for Citrix’s existing portfolio of desktop-as-a-service (DaaS) and application publishing tools. Deploying Flex starts with an assessment of an organization’s endpoint fleet, which general manager for the company’s DaaS portfolio Shawn Bass told The Register often includes many inappropriate machines. Bass believes that few organizations have the data to understand which cloudy PC instance types are appropriate for their users, or experience running fleets of hosted PCs, so they end up paying too much for virtual machines that have far more performance than some users require. Others, he said, end up with bill shock if they sign up for consumption-based pricing. Some use virtual PCs when they can easily get by with a hosted managed browser locked into certain SaaS sites and published apps. Once Citrix figures out what your users need, it suggests “personas” – a collection of templates that suit different users. Bass said that organizations often need three personas – one each for task workers, knowledge workers, and power users. A persona could involve a full cloud PC, a managed browser, or just access to published apps. Whatever the recommendation, Citrix goes and makes it all happen. Users don’t see the company’s products; they just get to consume endpoints. Citrix runs the virtual PCs in Azure. Citrix charges for Flex using a system of credits. It might price a virtual PC for a power user at 60 credits a month, for example. After assessing users’ endpoint needs, Citrix will propose a credit budget, and a deal spanning three or more years and billed monthly. Users can hold back some credits to take into account seasonal usage spikes – Bass suggested retailers who add staff for Christmas shopping might plan to use more credits for a couple of months a year, without exceeding the total credits available over the life of a contract. Citrix budgets for virtual PCs to run between 10 and 14 hours a day. If users burn the midnight oil and incur extra Azure costs, that’s Citrix’s problem. Bass told us that Citrix plans to bring Flex into other hyperscale clouds and is also looking to make it work with on-prem platforms. The Reg suspects that will mean long-time partners like Nutanix get a look-in. A version for the channel is also in the works. When we cover virtual desktops, readers often note that accessing a cloudy PC requires an actual PC, or another device, and suggest that’s wasteful. Bass thinks the times may now suit DaaS, because the high price of memory means PC fleet refreshes are more expensive. Cloudy desktops, he thinks, therefore represent an upgrade path. Of course, he would say that because Citrix offers its own lightweight OS – eLux from Unicon – tailored to remote access and which comfortably runs on old PCs. Bass said customer interest in that offering is rising. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/18/citrixs-daas-flex-aims-to-delay-pricey-pc-upgrades/5258476"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 18:59:51 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/virtualization/2026/06/18/citrixs-daas-flex-aims-to-delay-pricey-pc-upgrades/5258476"
+      },
+      "status": "supported"
+    }
+  ]
+}

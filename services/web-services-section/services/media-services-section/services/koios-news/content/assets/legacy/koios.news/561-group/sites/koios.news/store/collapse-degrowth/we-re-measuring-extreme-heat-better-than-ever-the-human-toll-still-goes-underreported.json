@@ -1,0 +1,69 @@
+{
+  "subject": "we-re-measuring-extreme-heat-better-than-ever-the-human-toll-still-goes-underreported",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "We’re measuring extreme heat better than ever. The human toll still goes underreported"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/were-measuring-heat-better-than-ever-the-human-toll-still-goes-underreported/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-12/were-measuring-heat-better-than-ever-the-human-toll-still-goes-underreported/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/were-measuring-heat-better-than-ever-the-human-toll-still-goes-underreported/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Heat warning tools have become more sophisticated, yet public attention is still focused on record temperatures rather than the social conditions that turn heat into illness or even death. Why social risk, not temperature alone, should be at the center of how we report on extreme heat."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/were-measuring-heat-better-than-ever-the-human-toll-still-goes-underreported/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 08:00:13 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-12/were-measuring-heat-better-than-ever-the-human-toll-still-goes-underreported/"
+      },
+      "status": "supported"
+    }
+  ]
+}

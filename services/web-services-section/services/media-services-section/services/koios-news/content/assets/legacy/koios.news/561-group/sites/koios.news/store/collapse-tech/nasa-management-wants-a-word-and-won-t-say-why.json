@@ -1,0 +1,69 @@
+{
+  "subject": "nasa-management-wants-a-word-and-won-t-say-why",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "NASA management wants a word and won't say why"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/15/nasa-management-wants-a-word-and-wont-say-why/5255702"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/science/2026/06/15/nasa-management-wants-a-word-and-wont-say-why/5255702"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/15/nasa-management-wants-a-word-and-wont-say-why/5255702"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "We've all seen it: an unexpected management meeting that turns up in your calendar. It could mean HR wants a quiet and perhaps terminal word, or, in the case of NASA, something altogether different. During a chat with Space.com, NASA astronaut Bob Hines explained that the meeting was engineered to ensure all five Artemis III astronauts would be in the same room together and introduced face-to-face. The process space NASA uses to select astronauts has long been shrouded in mystery. The first American man in space, Alan Shepard, recalled in Light This Candle that his assignment to the Mercury 7 – the first batch of NASA astronauts – came from a caller who said, \"We'd like you to join us. Are you still willing to volunteer?\" Shepard later learned he would be the first American man in space during a meeting with fellow astronauts Gus Grissom and John Glenn, plus the Director of the Space Task Group, Bob Gilruth. Gilruth said, \"Alan Shepard will make the first suborbital flight.\" Several factors went into that decision, including the seven Mercury astronauts rating their peers. In his memoir, Riding Rockets, Space Shuttle astronaut Mike Mullane recalled receiving a summons, along with four crewmates, to the office of then Director of Flight Operations, George Abbey. In that meeting, Abbey apparently asked: \"We've been looking at the mission manifest, and think it's time to assign some more crews. I was wondering if you would be interested in STS-41D?\" The whys and wherefores were unimportant. The astronauts were just delighted to get an assignment. These days, an unannounced management meeting with invitees a person might not normally see on a request is apparently how things are done. How those invitees are picked, however, remains a little opaque. With luck, NASA has sorted out the Outlook problem that bedeviled Artemis II, in which an astronaut plaintively told controllers, \"I have two Outlooks, and neither one of those is working.\" Artemis III is, after all, set to be a very complicated mission, and, if all goes to plan, the crew will have fewer than 18 months to train. That is considerably less than the three years the Artemis II crew spent preparing for their mission to the Moon. The crew of four – three NASA astronauts and one European Space Agency astronaut (with Bob Hines as back-up) – will ideally rendezvous with two commercial spacecraft to check out docking operations and, in the case of Blue Origin, enter the vehicle. All this will take place in Low Earth Orbit as a precursor to the Artemis IV mission, which NASA expects will land humans on the Moon for the first time since the final Apollo mission in 1972. The meeting reportedly happened two weeks before the public announcement of the crew, and NASA's chief astronaut, Scott Tingle, told the group, \"Look around. This is your Artemis 3 crew.\" Hines told Space.com, \"That was a really, really cool way to find out.\" Certainly better than being presented with a pink slip by HR and a box to pack your possessions. ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/15/nasa-management-wants-a-word-and-wont-say-why/5255702"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 18:15:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/15/nasa-management-wants-a-word-and-wont-say-why/5255702"
+      },
+      "status": "supported"
+    }
+  ]
+}

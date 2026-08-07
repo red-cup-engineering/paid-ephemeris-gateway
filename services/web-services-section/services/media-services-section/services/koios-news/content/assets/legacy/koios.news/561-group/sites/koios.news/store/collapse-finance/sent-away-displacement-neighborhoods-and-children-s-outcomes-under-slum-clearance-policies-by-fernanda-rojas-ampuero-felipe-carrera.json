@@ -1,0 +1,69 @@
+{
+  "subject": "sent-away-displacement-neighborhoods-and-children-s-outcomes-under-slum-clearance-policies-by-fernanda-rojas-ampuero-felipe-carrera",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Sent Away: Displacement, Neighborhoods, and Children’s Outcomes under Slum Clearance Policies -- by Fernanda Rojas-Ampuero, Felipe Carrera"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35318#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nber.org/papers/w35318#fromrss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35318#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "We examine the difference between two policies that target urban slums, relocation versus redevelopment on-site, on children’s future outcomes. We use evidence from a slum clearance program in Chile between 1979 and 1984, where two-thirds of slum-dwelling families were relocated to housing projects on the city’s periphery, and one-third received housing through on-site redevelopment at their original locations. We find that 40 years post-policy, displaced children receive 0.62 fewer years of schooling, earn 10.2% less, experience higher labor informality, and live in higher poverty areas compared to non-displaced children. Relocation to lower-opportunity areas and disruption of social networks explain the negative displacement effects."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35318#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35318#fromrss"
+      },
+      "status": "supported"
+    }
+  ]
+}

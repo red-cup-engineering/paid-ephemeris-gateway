@@ -1,0 +1,69 @@
+{
+  "subject": "uk-borrowing-surges-over-forecasts-in-may-as-government-spending-rises-business-live",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK borrowing surges over forecasts in May as government spending rises – business live"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Rolling coverage of the latest economic and financial news</p><p>Chief Secretary to the Treasury <strong>Lucy</strong> <strong>Rigby</strong> has pinned the blame for the rise in borrowing on the Middle Est crisis, saying:</p><p>“Inflation has held steady and unemployment has fallen this week, but the war in the Middle East has clearly had an impact on economies around the world.</p><p>“We have the right economic plan to deal with these challenges – protecting families and businesses from rising costs, while cutting borrowing at a faster rate than any other G7 economy.”</p><p>“Retail sales volumes rose 3.2% year-on-year, helped by the hottest UK May day on record and a late bank holiday. But, if you look at the three-month trend, sales are up just 0.4%, pointing to a heat-driven spike rather than a turning point.”</p><p>“Department stores and online drove the lift. For non-store retailers they saw a 6.1% monthly rise, the largest since February 2025, taking online share to 28.8%. That channel shift is being reinforced by a structural one: our <a href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/europes-agentic-commerce-moment-decision-influence-is-here-execution-is-coming\" title=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/europes-agentic-commerce-moment-decision-influence-is-here-execution-is-coming\">European research</a> shows 38% of consumers now use AI to decide what to buy, with 63% to compare brands, prices and reviews.”</p> <a href=\"https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 07:12:50 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/live/2026/jun/19/uk-borrowing-surges-over-forecasts-in-may-spending-pound-bonds-borrowing-latest-news-updates"
+      },
+      "status": "supported"
+    }
+  ]
+}

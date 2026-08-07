@@ -1,0 +1,69 @@
+{
+  "subject": "the-best-power-banks-and-battery-packs-in-the-uk-for-reliable-charging-on-the-go-tested",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The best power banks and battery packs in the UK for reliable charging on the go, tested"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Forever running out of juice? Top up your battery-powered devices with our expert picks, from tiny smartphone chargers to super speedy models</p><p>• <a href=\"https://www.theguardian.com/technology/article/2025/feb/13/best-apple-iphone\"><strong>The best iPhones: which Apple smartphone is right for you</strong></a></p><p>It’s disempowering when your smartphone, laptop or other important gadget runs out of battery. With the flash of a graphic or a plaintive bleep, we lose a way to entertain ourselves, get things done, stay in touch or even get home safely. There’s a time and a place for a digital detox – but what is the time, and where am I?</p><p>Carrying a power bank is your ticket out of electronic oblivion. These pocket-sized cuboids plug into compatible devices and charge them, often via assorted connections, including USB-C and USB-A. Most power banks are made for charging smartphones and smaller gadgets, such as fitness trackers and earbuds, but some models can also charge power-hungrier laptops and large portable speakers.</p><p><strong>Best power bank overall:</strong><br> Belkin BoostCharge Pro 3-port 20k</p><p><strong>Best budget power bank:</strong> <br> Belkin BoostCharge 10k with integrated cable</p> <a href=\"https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 16:00:15 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2025/apr/10/best-power-banks-portable-chargers-battery-uk"
+      },
+      "status": "supported"
+    }
+  ]
+}

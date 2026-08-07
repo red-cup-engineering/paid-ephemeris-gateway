@@ -1,0 +1,69 @@
+{
+  "subject": "a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "A Guide to Staying Human – Part 3: Why mindfulness matters when the world is breaking down"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-15/a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "In this week’s Frankly, Nate offers the third episode in his series on staying human, this time focused on presence. Nate shares a personal reflection on presence and its importance in a reality where we are constantly living in anticipation of the future."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 08:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/a-guide-to-staying-human-part-3-why-mindfulness-matters-when-the-world-is-breaking-down/"
+      },
+      "status": "supported"
+    }
+  ]
+}

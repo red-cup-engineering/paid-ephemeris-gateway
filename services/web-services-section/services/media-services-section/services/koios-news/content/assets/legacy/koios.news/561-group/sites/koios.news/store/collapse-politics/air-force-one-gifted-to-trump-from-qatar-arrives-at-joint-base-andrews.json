@@ -1,0 +1,69 @@
+{
+  "subject": "air-force-one-gifted-to-trump-from-qatar-arrives-at-joint-base-andrews",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Air Force One, gifted to Trump from Qatar, arrives at Joint Base Andrews"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864503/air-force-one-trump-qatar"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5864503/air-force-one-trump-qatar"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864503/air-force-one-trump-qatar"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The luxury Boeing 747, initially valued at $400 million, arrived ahead of schedule on Friday. The jet caused controversy as one of the biggest foreign gifts ever received by the U.S. government. (Image credit: Alex Wong )"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864503/air-force-one-trump-qatar"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 17:01:21 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-20T06:25:00.363Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864503/air-force-one-trump-qatar"
+      },
+      "status": "supported"
+    }
+  ]
+}

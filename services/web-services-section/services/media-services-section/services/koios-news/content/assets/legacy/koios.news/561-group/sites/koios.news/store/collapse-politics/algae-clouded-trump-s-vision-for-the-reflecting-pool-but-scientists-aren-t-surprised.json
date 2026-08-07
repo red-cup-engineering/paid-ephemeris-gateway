@@ -1,0 +1,69 @@
+{
+  "subject": "algae-clouded-trump-s-vision-for-the-reflecting-pool-but-scientists-aren-t-surprised",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Algae clouded Trump's vision for the Reflecting Pool. But scientists aren't surprised"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The shallow, sunny waters of the reflecting pool are an ideal incubator for algae growth in the summertime. Experts say the recent renovation may have helped accelerate it. (Image credit: Chip Somodevilla)"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:43:05 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump"
+      },
+      "status": "supported"
+    }
+  ]
+}

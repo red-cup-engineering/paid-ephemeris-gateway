@@ -1,0 +1,69 @@
+{
+  "subject": "nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "NASA payload to ride commercial Mars orbiter from rocket biz yet to reach orbit"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit/5258341"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/science/2026/06/18/nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit/5258341"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit/5258341"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "It might not yet have reached Earth orbit, but Relativity Space has announced plans for a mission to Mars carrying a NASA payload. The mission, dubbed Aeolus and scheduled for 2028, will launch a Mars orbiter carrying four NASA-built instruments. Relativity Space will supply the rocket, spacecraft, and cruise operations, while NASA will deal with the payload. The four instruments comprise a Doppler wind and temperature-sounder, a thermal limb sounder, a surface radiometric sensor package, and a wide-field context camera. NASA will support instrument operations for at least one Martian year, while Relativity Space will maintain the spacecraft. NASA's Ames Research Center will be responsible for designing, building, and integrating the payload. Data collected by Aeolus will be used to improve models of dust, winds, temperature, and seasonal atmospheric behavior. It will also, according to NASA, \"generate the detailed environmental knowledge required to reduce risk for future crewed and uncrewed landings. These measurements will directly inform entry, descent, and landing systems and support safer, more predictable mission planning for astronauts.\" NASA's Mars Odyssey and Mars Reconnaissance Orbiter already have spent decades orbiting Mars. Its MAVEN spacecraft was declared unrecoverable after controllers lost touch with the vehicle at the end of 2025. The Mars Sample Return mission, slated to recover samples deposited by NASA's Perseverance rover, is unlikely to reach the red planet any time soon. NASA boss Jared Isaacman said: \"Public-private partnerships like this are a force multiplier for science,\" extolling the virtues of \"pairing NASA's world‑class instruments with commercial innovation and investment,\" but the mission is a risky endeavor. Relativity Space has yet to get into Earth orbit, let alone beyond. Its first rocket, the mostly 3D-printed Terran 1, experienced a problem during its second stage burn, although it did manage to pass the 100 km Kármán line and reach space. The company has been working on Terran R since 2023, a medium-to-heavy-lift reusable rocket. The first launch of the vehicle might take place this year. NASA has increased commercial involvement in its missions in recent years. The agency's lunar ambitions lean heavily on vendors such as SpaceX and Blue Origin, and the upcoming Swift rescue mission, a high-risk, high-reward attempt to boost the orbit of an observatory, is being undertaken by Katalyst Space. The approach has, however, attracted criticism from some NASA veterans, one of whom expressed concern to The Register that the thoroughness that defined the missions of the 1970s might not be such a priority in the future. That said, the agency's budget is also not what it was. Increasing risk by doing more with less evokes the ghosts of the '90s and the \"faster, better, cheaper\" management philosophy at NASA that did not work so well. Although NASA did not say so in its post, the Aeolus mission requires unproven rocket and spacecraft technology, and a commercial vendor who hasn't even reached orbit yet. The potential rewards are considerable, but a failure could prove unpalatable. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit/5258341"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:25:15 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/nasa-payload-to-ride-commercial-mars-orbiter-from-rocket-biz-yet-to-reach-orbit/5258341"
+      },
+      "status": "supported"
+    }
+  ]
+}

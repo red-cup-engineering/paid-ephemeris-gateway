@@ -1,0 +1,19 @@
+{
+  "id": "blockchain-trashpanda",
+  "name": "Blockchain Trashpanda",
+  "kind": "incubating",
+  "faces": "Base wallet agents and operators that need to know whether an unsigned transaction obeys their own declared policy before signing",
+  "bundle": "pre-sign-transaction-policy-conformance",
+  "package": "@rsc-quiescent/blockchain-trashpanda",
+  "roster": "content/offices",
+  "contracts": [
+    "formation-value-adjustment",
+    "pre-sign-transaction-policy-conformance"
+  ],
+  "x-provenance": {
+    "recorded-by": "codex/leader-authorized-formation",
+    "recorded-on": "2026-07-22",
+    "allocation": "urn:emsenn:allocation:blockchain-trashpanda-formation-market-pilot-2026-07-22",
+    "state": "incubating-until-external-customer-evidence"
+  }
+}

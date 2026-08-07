@@ -1,0 +1,69 @@
+{
+  "subject": "bedtime-blues-london-killing-off-nightlife-as-uk-city-with-strictest-licensing-rules",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Bedtime blues: London ‘killing off nightlife’ as UK city with strictest licensing rules"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Manchester, Birmingham and Leeds are experiencing after-hours boom as a result of more lenient rules</p><p>London has the earliest council-mandated bedtime of any other city in the UK as a result of policies in nightlife districts that oppose any new bar or restaurant opening past 11pm.</p><p>These strict restrictions on pubs and bars are “killing off nightlife” in the capital, experts have said, while other cities including Manchester, Birmingham and Leeds are experiencing an after-hours boom because they have more lenient rules.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 20 Jun 2026 07:00:02 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:11.357Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/20/london-killing-off-nightlife-uk-city-earliest-council-bedtime"
+      },
+      "status": "supported"
+    }
+  ]
+}

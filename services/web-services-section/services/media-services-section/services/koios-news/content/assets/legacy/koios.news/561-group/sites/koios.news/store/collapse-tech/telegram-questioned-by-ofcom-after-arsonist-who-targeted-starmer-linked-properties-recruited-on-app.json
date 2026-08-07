@@ -1,0 +1,69 @@
+{
+  "subject": "telegram-questioned-by-ofcom-after-arsonist-who-targeted-starmer-linked-properties-recruited-on-app",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Telegram questioned by Ofcom after arsonist who targeted Starmer-linked properties recruited on app"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Exclusive: Telegram urged to clarify how it detects illegal incitement after attacks were coordinated using app</p><p>Telegram is facing questions from Ofcom over how it detects and prevents illegal incitement after a Ukrainian man was found guilty of carrying out arson attacks on a car and property associated with Keir Starmer.</p><p>A spokesperson for the regulator said it had contacted the messaging app “to seek further clarification” because the arsonist had been directed on Telegram <a href=\"https://www.theguardian.com/uk-news/2026/jun/15/two-men-found-guilty-over-arson-attacks-linked-to-keir-starmer\">by a handler linked to Russia</a>.</p> <a href=\"https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 06:00:26 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.604Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/technology/2026/jun/19/telegram-ofcom-arsonist-starmer-linked-properties"
+      },
+      "status": "supported"
+    }
+  ]
+}

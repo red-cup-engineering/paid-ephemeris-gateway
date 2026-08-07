@@ -1,0 +1,69 @@
+{
+  "subject": "vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Vercel debuts eve open source agent framework, tries to fix shadow AI with Passport"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/19/vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport/5258726"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/devops/2026/06/19/vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport/5258726"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/19/vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport/5258726"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Vercel introduced an open source agent framework called eve at its Ship event in London this week, along with other new features including Passport, an attempt to put employee apps created with AI under enterprise control. Agents are dominating the AI conversation currently, and in particular custom agents. Agent frameworks that simplify coding already exist, though eve has a few notable characteristics. The coding languages are TypeScript and Markdown, and an agent is a directory with files that define the instructions and skills, the model provider, the tools, the authentication, the channels, and the schedule. Agents are sandboxed on isolated VMs by default. The framework also includes a simple testing tool that exercises the agent and evaluates the result. Code is on GitHub under the Apache 2.0 license. There are plenty of existing agent frameworks, but Vercel CTO Malte Ubl told us that with eve, simplicity is a feature, with users able to take a \"fill in the blanks\" approach. \"The life cycle of the agent is completely orchestrated by the framework, and as a developer or builder you have to put things in the right places, but then everything magically works,\" Ubl said. \"It's a system where you don't have to understand every little bit about what sandboxes are and how to compact context windows… All these things are quite complex; you don't have to understand any of it.\" Agents built with eve deploy to Vercel by default, using the same command that works for web applications: vercel deploy. That said, the company says it is not tied to its platform. \"We are 100 percent committed to making it work everywhere,\" Ubl told us, though an early user has already raised an issue about it requiring a Vercel login even when set to use a different model provider; it is early days and this may be a bug. Providers for LLMs and sandboxes are configurable. An eve project also runs locally with: npx eve dev. What LLM does eve use? \"You can connect any model that AI SDK connects to, which is all the models,\" Ubl said, where the AI SDK is a Vercel SDK. There is also an option to use Vercel's AI Gateway, which has a single endpoint for multiple model providers and can improve reliability by switching to another model if one fails. The company also previewed Enterprise Apps and Agents, which have four components. Vercel Connect replaces static secret credentials with short-lived tokens accessed by OAuth or an API. Vercel Passport uses OpenID Connect to put all the applications and AI agents in a team behind an identity provider such as Okta or Microsoft Entra. Enterprise Managed Users uses directory sync to enable Vercel in a team to be managed by the organization's identity system. Finally, Bring Your Own Cloud (BYOC) lets organizations use Vercel's platform running on AWS infrastructure provisioned by the customer. According to Vercel, Passport was a highly requested feature because of the number of employees who create applications hosted by Vercel but outside the control of the organization. A typical scenario is that an employee builds an application with AI assistance, and the AI agent defaults to using the Next.js React-based framework and Vercel hosting. It is a variety of shadow IT – or shadow AI – where staff create vibe-coded applications using company data but outside the organization's IT policy or control. Vercel itself is an AWS customer so its platform should work well using BYOC, but there are some trade-offs, Ubl said. One is that \"we don't allow your compute to assume AWS roles… If you are really deep in the AWS IM [Identity Management] security system, then Vercel doesn't give this to you,\" he told us, \"but we do always issue an OIDC token for every invocation of the compute, so you can use that to configure your AWS policies.\" Second, with BYOC, \"we become a management vendor,\" Ubl said, which means giving Vercel access to that part of the customer's AWS infrastructure. All Vercel deployments are immutable, which means \"every time you push to Git you get a new infrastructure from scratch,\" Ubl told us. He considers this ideal for AI agents. Other aspects of the platform have also been optimized for agents. \"We try to be close to what the agents do,\" he said. A common critique of Vercel is that since it runs on AWS, using Vercel means paying a premium for hosting that would be cheaper when purchased directly. According to Ubl, that premium is mitigated by Vercel's efficient use of those resources, \"especially at low scale, and especially compared to Lambda,\" the AWS serverless platform. Vercel said last year that it cut its Lambda costs by up to 95 percent by reusing idle instances. Ubl claimed AWS customers need \"more than 35 percent utilization to match Vercel's price.\" Another Vercel competitor is Cloudflare, which, unlike Vercel, hosts on its own datacenters and has an efficient serverless platform using Workers, based on V8 isolates, a feature of the V8 JavaScript engine used by Google Chrome and the open source Chromium project. Ubl said that whereas Cloudflare Workers are unique to Cloudflare, Vercel \"is a more normal platform, we don't run some bespoke runtime that we create ourselves, we just run Node.js or Python or PHP and it runs on a VM (virtual machine)… We offer standard PostgreSQL, VPC peering, AWS, S3 and not bespoke.\" This is a bit of a war of words. Cloudflare engineering director Steve Faulkner in February described the Next.js tooling, sponsored by Vercel, as \"entirely bespoke.\" Since then the situation has improved, with an Adapter API that is stable in Next.js 16.2, meaning other providers no longer need to reverse-engineer the build output, but adapters for AWS and Cloudflare are still under development, with completion expected by the end of 2026. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/19/vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport/5258726"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 14:35:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/devops/2026/06/19/vercel-debuts-eve-open-source-agent-framework-tries-to-fix-shadow-ai-with-passport/5258726"
+      },
+      "status": "supported"
+    }
+  ]
+}

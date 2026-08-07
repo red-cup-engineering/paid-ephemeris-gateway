@@ -1,0 +1,69 @@
+{
+  "subject": "krugman-on-trump-s-80th-birthday-party",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Krugman on Trump’s 80th birthday party"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/16/krugman-on-trumps-80th-birthday-party/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/16/krugman-on-trumps-80th-birthday-party/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/16/krugman-on-trumps-80th-birthday-party/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Paul Krugman’s blog On Sunday Donald Trump celebrated his 80th birthday with a cage match on the White House lawn. The match and the events that surrounded it — especially the press conference with UFC fighters, shown above, held on the steps of the Lincoln Memorial — were a desecration of America’s capital, whose […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/16/krugman-on-trumps-80th-birthday-party/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 16:35:52 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/16/krugman-on-trumps-80th-birthday-party/"
+      },
+      "status": "supported"
+    }
+  ]
+}

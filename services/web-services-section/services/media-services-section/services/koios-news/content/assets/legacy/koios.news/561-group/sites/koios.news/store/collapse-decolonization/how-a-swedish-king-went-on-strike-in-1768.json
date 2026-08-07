@@ -1,0 +1,69 @@
+{
+  "subject": "how-a-swedish-king-went-on-strike-in-1768",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "How a Swedish king went on strike in 1768"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/how-a-swedish-king-went-on-strike-in-1768-281196"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://theconversation.com/how-a-swedish-king-went-on-strike-in-1768-281196"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/how-a-swedish-king-went-on-strike-in-1768-281196"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<figure><img src=\"https://images.theconversation.com/files/740681/original/file-20260609-57-amz0xh.jpg?ixlib=rb-4.1.0&amp;rect=0%2C345%2C1914%2C1276&amp;q=45&amp;auto=format&amp;w=1050&amp;h=700&amp;fit=crop\" /><figcaption><span class=\"caption\">Adolf Fredrik by Antoine Pesne</span> <span class=\"attribution\"><a class=\"source\" href=\"https://commons.wikimedia.org/w/index.php?curid=52111865\">Nationalmuseum/Wikimedia</a></span></figcaption></figure><p>In 1768, towards the end of the period of Swedish history known as <em>Frihetstiden</em>, the Age of Liberty, King <a href=\"https://www.britannica.com/biography/Adolf-Frederick\">Adolf Frederick</a> threatened to abdicate unless an extraordinary session of the Riksdag, the Swedish parliament, was immediately convened. The immediate issue concerned a new financial plan, but the king hoped that the parliamentary session would also lead to constitutional changes to strengthen his power.</p> <p>The 16-member strong Council of the Realm, over which the king presided, was given three days to summon the Riksdag. Meanwhile, the king would not partake in any decision-making. In other words, he went on strike. </p> <p>As I show in my new book, <a href=\"https://www.manchesterhive.com/display/9789198740448/9789198740448.00009.xml#head-1-8\">Monarchy in the Age of Liberty: Royal power and public life in eighteenth-century Sweden</a>, this moment in Swedish political history poses an interesting question: does a monarchy need a monarch? The country at the time was a kingdom, yet it effectively had a republican form of government. In the events that followed the king’s ultimatum, his councillors even attempted to replace him with a signature stamp. It is one of the many paradoxes of this era that such a measure be taken not in opposition to the monarchy but in order to preserve its very essence. </p> <h2>A political revolution</h2> <p>Sweden’s Age of Liberty was ushered in by the death of King <a href=\"https://www.britannica.com/biography/Charles-XII\">Charles XII</a> during the siege of Fredrikshald, in Norway, in 1718. From 1680, Sweden had been ruled as an absolute monarchy. Now, fatigued by 18 years of continuous warfare, the four estates of the Swedish Riksdag decided to <a href=\"https://www.manchesterhive.com/display/9789198740448/9789198740448.00009.xml#head-1-1\">curtail the king’s executive powers</a>. As formulated in the Instruments of Government, the Accession Charters and the Royal Elections Acts of 1719 and 1720, the Council of the Realm was now to oversee the monarch’s decision-making, and, in turn, answer to the Riksdag.</p> <p>In Protestant Sweden, <a href=\"https://lucris.lub.lu.se/ws/portalfiles/portal/208386634/Nordin_Press_Freedom_250_Years.pdf\">social theory</a> was grounded in equal measure in ancient political thinking and Lutheran ideas. Central to this was Martin Luther’s so-called doctrine of the three estates, which held that society was composed of the teaching estate (the clergy), the defending estate (the nobility) and the nourishing estate (the commoners) and that all three were needed for societal balance and harmony to be achieved. </p> <figure class=\"align-center \"> <img alt=\"A drawing of a symbolic edifice topped with a royal crown\" src=\"https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;fit=clip\" srcset=\"https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=600&amp;h=431&amp;fit=crop&amp;dpr=1 600w, https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=30&amp;auto=format&amp;w=600&amp;h=431&amp;fit=crop&amp;dpr=2 1200w, https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=15&amp;auto=format&amp;w=600&amp;h=431&amp;fit=crop&amp;dpr=3 1800w, https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;h=542&amp;fit=crop&amp;dpr=1 754w, https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=30&amp;auto=format&amp;w=754&amp;h=542&amp;fit=crop&amp;dpr=2 1508w, https://images.theconversation.com/files/741090/original/file-20260610-63-jl4he3.jpg?ixlib=rb-4.1.0&amp;q=15&amp;auto=format&amp;w=754&amp;h=542&amp;fit=crop&amp;dpr=3 2262w\" sizes=\"(min-width: 1466px) 754px, (max-width: 599px) 100vw, (min-width: 600px) 600px, 237px\"> <figcaption> <span class=\"caption\">A 17th-century illustration of the balance between the estates and the crown by Schering Rosenhane.</span> <span class=\"attribution\"><a class=\"source\" href=\"https://libris.kb.se/4ngq5h0g212jqv2#it\">Kungliga biblioteket/The National Library of Sweden.</a></span> </figcaption> </figure> <p>The monarch stood above all laws — it was the essence of his majesty. As such, he was the only figure considered to be free from self-interest and therefore able to maintain this social balance. Thus, despite his practical duties having been made redundant, his symbolic importance was incontrovertible.</p> <p>Upon the death of Charles XII in 1718, his sister, Ulrika Eleonora, briefly succeeded to the throne before abdicating after just over a year in favour of her husband, <a href=\"https://www.britannica.com/biography/Frederick-I-king-of-Sweden\">Frederick I</a>, who ruled until 1751. </p> <p>As king, Frederick I soon lost interest in his rather insignificant duties and, drawing inspiration from absolutist France, had a name stamp made. This was ostensibly to save himself the trouble of signing a large number of circulars. But the stamp also came to serve as a political instrument. </p> <p>In certain circumstances, the council could even issue government decrees without the king’s signature. But the councillors considered this inappropriate as it revealed to the outside world when they were in disagreement with the king. On such occasions, the signature stamp became a practical alternative. </p> <p>The signature stamp also meant the councillors could no longer delay decisions by citing the king’s refusal to sign a document. Unlike the king, the council had to answer to the Riksdag for its actions and be held to parliamentary accountability.</p> <p>In the Swedish public’s imagination, this replacement of the king’s personal signature with a stamp is the ultimate symbol of the monarch’s powerlessness. But how it was actually used demonstrates that the king’s signature was considered indispensable for lending dignity and authority to government decisions. </p> <figure class=\"align-center \"> <img alt=\"A metal signature stamp with a print of the signature on paper\" src=\"https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;fit=clip\" srcset=\"https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=600&amp;h=437&amp;fit=crop&amp;dpr=1 600w, https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=30&amp;auto=format&amp;w=600&amp;h=437&amp;fit=crop&amp;dpr=2 1200w, https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=15&amp;auto=format&amp;w=600&amp;h=437&amp;fit=crop&amp;dpr=3 1800w, https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;h=549&amp;fit=crop&amp;dpr=1 754w, https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=30&amp;auto=format&amp;w=754&amp;h=549&amp;fit=crop&amp;dpr=2 1508w, https://images.theconversation.com/files/740686/original/file-20260609-57-k37dz6.jpg?ixlib=rb-4.1.0&amp;q=15&amp;auto=format&amp;w=754&amp;h=549&amp;fit=crop&amp;dpr=3 2262w\" sizes=\"(min-width: 1466px) 754px, (max-width: 599px) 100vw, (min-width: 600px) 600px, 237px\"> <figcaption> <span class=\"caption\">King Adolf Frederick’s signature stamp.</span> <span class=\"attribution\"><a class=\"source\" href=\"https://digitaltmuseum.se/011013840170/stampel-med-adolf-fredriks-namnteckning-1750-tal-under-den-svenska-frihetstiden\">Nordiska museet</a>, <a class=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND</a></span> </figcaption> </figure> <h2>Constitutional crisis</h2> <p>The crown’s symbolic importance was most clearly demonstrated by Frederick I’s successor, Adolf Frederick, when he went on strike in 1768. This constitutional crisis was partly a conflict between the two opposing parties, the Caps and the Hats, concerning issues in which the king played only a peripheral role. The parties’ views differed on foreign alliances, economic policy and, increasingly, civil and political rights, but they agreed on the king’s constitutionally restricted position. However, none of them hesitated to use the king as a tool when it suited their own purposes.</p> <p>The council was controlled by the Caps. In response to the king’s threat, the councillors attempted to govern by means of the signature stamp.</p> <p>In return, the central government agencies, which were dominated by Hat sympathisers, refused to comply with any decisions bearing only the king’s duplicated signature. They insisted that the form of government rested on the majesty of the king, the authority of the council and the liberty of the people, that is, their civil and political rights. If any of these elements were missing, the balance was disrupted and the impartiality of government decisions could be called into question. </p> <p>The civil servants’ refusal to comply with decisions bearing a stamped signature brought the state apparatus to a standstill. The Riksdag was convened, just as the king had demanded. </p> <p>The outcome was decided by the strong position of the Hats in the government agencies. However, once the extraordinary session of the Riksdag was convened, the king gained no support whatsoever for his constitutional proposals. Even though the signature stamp was taken out of use and the king’s symbolic authority reaffirmed, his actual political influence diminished even further. </p> <p>In my research I show that this episode highlights a typical pattern of the Age of Liberty. The court was supported by the opposition party for only as long as it remained in opposition. As an ally against the government, the monarch was important in shaping opinion and providing influence. For the government, conversely, he was an unpredictable asset. </p> <p>This observation can also be generalised. In early modern times, power was based on authority from above. By tradition, the monarchy represented a divine order that demanded unconditional submission. </p> <p>As countries such as Sweden and the United Kingdom began to shift away from absolutism and towards a more representative form of government, the monarch continued to symbolise governmental impartiality in spite of sharp partisan divisions. The notion that the people, with their passions and their self-interest, were too unpredictable to rule a state, endured. During this transitional phase, a monarch was needed who symbolically stood above all special interests and treated all his subjects with the same paternal care.</p><img src=\"https://counter.theconversation.com/content/281196/count.gif\" alt=\"The Conversation\" width=\"1\" height=\"1\" /> <p class=\"fine-print\"><em><span>Jonas Nordin has received funding for this reserach from Vetenskapsrådet/The Swedish Research Council.</span></em></p>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/how-a-swedish-king-went-on-strike-in-1768-281196"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-18T15:01:03Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://theconversation.com/how-a-swedish-king-went-on-strike-in-1768-281196"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "heathrow-third-runway-gdp-yield-may-be-90-less-than-previous-estimates",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Heathrow third runway GDP yield may be 90% less than previous estimates"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:50.406Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:50.406Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Department for Transport analysis suggests tiny economic boost would be outweighed by up to £62.5bn in trade-offs</p><p>The economic boost from a Heathrow third runway could be a tiny fraction of previous estimates, government analysis shows, while the overall trade-off from the bigger airport could set the UK back by as much as £62.5bn.</p><p>As ministers promised to speed up expansion of the London airport in the name of economic growth, documents prepared by the Department for Transport said the runway was expected to boost GDP by only up to 0.05% – 90% less than the 0.5% previously stated.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:50.406Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:26:25 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:50.406Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/uk-news/2026/jun/19/heathrow-third-runway-boost-gdp-less-than-stated"
+      },
+      "status": "supported"
+    }
+  ]
+}

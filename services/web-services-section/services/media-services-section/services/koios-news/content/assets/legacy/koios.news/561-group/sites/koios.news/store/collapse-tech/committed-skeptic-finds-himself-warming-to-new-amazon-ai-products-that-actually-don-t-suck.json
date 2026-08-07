@@ -1,0 +1,69 @@
+{
+  "subject": "committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-don-t-suck",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Committed skeptic finds himself warming to new Amazon AI products that actually don't suck"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-dont-suck/5258414"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/06/18/committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-dont-suck/5258414"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-dont-suck/5258414"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "If you live long enough, you'll wake up one day and find that you're living in a world you no longer understand. Lately there are things happening with AI in a couple of disparate parts of Amazon that brought that lesson home in a big way. The first is that, late last year, they acquired Bee, an AI wearable that is distressingly, upsettingly good. The second, which I want to talk about today as I fly back from AWS's NYC Summit, is Quick Desktop. The best way to describe this is \"Enterprise OpenClaw in a polished app.\" Yes, I know this sounds like I'm being blackmailed. Read on. You work at Amazon, right? Amazon has spent the last three years breathlessly telling us that they're a leader in AI, then shipping products which make it clear that they're unsure what leadership looks like. They've spent far longer building user interfaces that carry a design aesthetic of \"complete crap.\" Even Amazon's website, where you buy everything from underpants to chainsaws to dog food to more underpants, is not a well-designed interface; we've all just learned to live with it. The single good interface to come from Bezos and Coo was the Kindle e-reader: push a button, the page turns. And then they removed the buttons. So yes; \"We're launching a desktop AI assistant\" is the exact opposite of encouraging coming from these folks. It started like you'd expect. You pop over to the download page and grab the download. On a Mac it's half a gigabyte because of course it is; this is totally normal and fine in 2026. Install it, fire it up, and ... wait a bit. It has to think, and gather its wherewithal before it can get to work. And then the hits start coming. I had talked to people who have used this and raved about it. The problem here is that all of these people work at Amazon, and the current state of the product reflects that. They have a single identity provider they use internally; external users see a confusing array of offerings, each with its own byzantine flows. The feeling is not dissimilar to waking up in the middle of a hedge maze, with no idea how you got there, and discovering that someone just set it on fire. At one point during my time using Quick Desktop, I was logged out and had to log back in. After guessing seven different identity providers, I gave up and emailed the service team for help with this. After some back and forth, I was able to get back in. (GitHub! Future Corey, if you find yourself in this situation, you authenticated via GitHub!) It's clear that the people building this service aren't living the external user experience. It's why I maintain that Amazon's internal AWS account management tool is the service that I hate the most; it separates the people building AWS from the customers using it. At the moment, other similar challenges show up. You'd never have more than one email account from the same provider, right? (Google Workspace in my case, provided it hasn't been deprecated by the time this article goes to print.) You'd never have business conversations via iMessage, or Signal, or LinkedIn DMs, or any number of other services, right? The point isn't the snark; it's that Quick Desktop only knows about the channels its connectors deign to support. Every deal I've ever closed in a LinkedIn DM, every favor traded over Signal, every \"hey, quick question\" that arrived via iMessage is simply invisible to it — but it makes its confident little suggestions anyway, blissfully unaware that a good chunk of my professional life happens in places it can't see. Here's a free hint to the product team: do you think I mentioned the Bee in the opening of this article because I'm making a fashion statement? And then it starts to work… Once you prove yourself worthy by getting Quick Desktop set up, it ... sits there without doing much. It has a chatbot interface, which surely you've never seen before in an app, backed by a personality I'll call \"Uninspiring Accountant.\" What was the point? And then things start to happen. Your activity feed starts surfacing things from your email. From Slack. From your calendar. I don't know about the rest of you, but my email inbox is where tasks and hope go to die. Slowly but surely, Quick Desktop starts making suggestions, surfacing things that you should handle, proposing email drafts (ugh, in such a bland corporate voice; I hope this email finds you before I do), and giving you quick links to the various apps where these things live so you can see the context it's surfacing. I went in skeptical, partly because I'd already cobbled together a janky version of this for myself by pointing Claude Code at a pile of APIs, so I had a decent sense of what these things miss. And that's when I became a Quick Desktop convert: it flagged an email buried forty messages deep in my inbox that I'd mentally filed under \"dealt with\" - but very much was not. My own inbox had given up on me like everyone who's ever tried to love me, but Quick Desktop hadn't. This is an Amazon product, and it's pretty clear that they expect you to work with Quick Desktop the way they reportedly work with their own employees: by beating them into compliance. Their own custom connectors and (lack of) extensibility system make it pretty clear that there's a corporate IT department somewhere that's configuring and getting this set up for folks. I freely admit that's not my use case; I'm testing this by myself, not sharing it with my colleagues. But the product is improving. Today, it doesn't really sync data or state between multiple machines; we're still waiting for Amazon to discover this whole \"cloud\" thing. That's almost certainly going to change in the near future. Along with the just-announced AWS Context approach, once you have a team of people using it, the shared knowledge graph it can build about your entire organization promises to be a significant boon. The part where I trust Amazon That same knowledge graph is also a massive security treasure trove: every deal, every org-chart grudge, every \"please don't forward this,\" every \"how do I do the basic functions of my job\" chat sessions, lives in one queryable place. Handing that to a vendor terrifies me. It should terrify you. And yet Amazon is one of a vanishingly small number of companies I'd trust with it. I want to acknowledge how strange it is that I just wrote that. I have spent a decade as a professional thorn in this company's side. I have a financial incentive, a personal brand, and frankly a temperament that all point toward not trusting AWS with so much as my lunch order. But credit where it's due: whatever else they get wrong, Amazon takes security and data privacy deadly seriously, and they have the scars and the org structure to prove it. I have lived through this multiple times, and I've seen what AWS does when security competes with other pressures. The list of companies I'd let build a map this detailed of my business is damn short, and most of the names on it are not the ones building these products. They have the security chops, but they have a completely different massive marketing problem. How do you get customers to try this out when you've incinerated your credibility in this space like it's your engineering team's token budget? \"For once we have a product that is not shite,\" while honest, is probably going to be tricky to get through AWS corporate comms. Would I use it myself? I am Reader, I pay cash money for this. Everything I've said above about its sharp edges are true, and I've barely gotten started. I have three pages, ten slides, and one interpretive dance full of \"here's why the product sucks\" feedback I'll be giving to their product team, who are going to be astounded when I bust into their office uninvited. But I'm not throwing stones from the sidelines on this: \"I am a paying customer, and I want this thing I pay you for to be better than it is, so you will listen to every goddamned word I have to say\" is a powerful message, and one that's particularly resonant to Amazonians. I can see a world in which I roll this out to the rest of the company. My Claude Code contraption is interesting and in some ways more capable, but it scales precisely as far as \"grumpy former sysadmin with a penchant for the CLI\" and not one inch further. Our team would justifiably revolt if I tried to inflict it upon them. The hell of it is, the only thing that Amazon has to do to get Quick Desktop to beat my Frankenstein setup is \"let Quick configure itself.\" Yes, there are problems with that approach; I leave them to Amazon to sort through. And so... I don't entirely know what to do with myself in a world where suddenly Amazon is shipping desirable AI products that I'm happy to pay for. First the Bee wearable and now this. That's two data points, and for a company whose AI track record reads like a list of things to apologize for, two data points is alarmingly close to a trend. Their biggest problem is going to lie in outrunning their own shadow, and changing their own nature. I used to be confident they couldn't. I'm less confident now, and I'm not sure how I feel about that. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-dont-suck/5258414"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 19:30:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/18/committed-skeptic-finds-himself-warming-to-new-amazon-ai-products-that-actually-dont-suck/5258414"
+      },
+      "status": "supported"
+    }
+  ]
+}

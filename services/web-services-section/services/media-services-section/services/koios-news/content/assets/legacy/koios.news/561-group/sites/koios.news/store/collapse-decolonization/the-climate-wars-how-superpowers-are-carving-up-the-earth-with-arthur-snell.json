@@ -1,0 +1,69 @@
+{
+  "subject": "the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Climate Wars: How Superpowers Are Carving Up the Earth | With Arthur Snell"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/podcasts/the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/podcasts/the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/podcasts/the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The climate crisis is changing the way nations think about food, energy, resources, war and peace. Melting ice caps are opening up new trade routes fought over by the world's great powers, conflicts are waged over food and mineral resources, shifting climates are fuelling migration – and Donald Trump says it's all just a scam. Join Arthur Snell as he discusses his new book Elemental: the new geography of climate change and how we survive it . Spanning conflict in the Sahel, Russia's war in Ukraine, the US coveting Greenland, NEOM in Saudi Arabia, and China's energy push, Snell explores how the climate crisis is now in every part of our politics. But while there is much to concern us here, there's hope too. The world faces various futures, and it can adapt and respond to the realities of a changing climate. Buy Elemental: The New Geography of Climate Change and How We Survive it https://uk.bookshop.org/a/8711/9781035412945 👉 Stay informed. Sign up for the openDemocracy newsletter: https://www.opendemocracy.net/en/newsletters/ ✊ Support our work. In Solidarity is openDemocracy’s podcast about people, power, and politics. We rely on listeners like you to keep our independent journalism free. Donate today: https://www.openDemocracy.net/donate/ Chapters: 00:00 Introduction 01:20 The Petro-State Panic: Iran, Saudi Arabia, and the End of Oil 03:32 The Sahel Crisis: Climate Migration and Fragile States 08:24 Uranium & Mercenaries: Russia vs. France in Africa 10:25 The Arctic: Melting Ice, Shipping Routes, and Donald Trump 16:21 Ukraine: Why Putin is Weaponizing Food and Farmland 21:35 China’s Monopoly & Russia's Future as an \"Economic Colony\" 28:18 The Surprising Winners: Morocco, Interconnectors, and Climate Hope 32:41 Outro Credits: Presented by Sian Norris Audio engineering by James Battershill Theme song ‘Odyssey’ performed by Edward Abela"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/podcasts/the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 24 Apr 2026 09:49:23 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/podcasts/the-climate-wars-how-superpowers-are-carving-up-the-earth-with-arthur-snell/"
+      },
+      "status": "supported"
+    }
+  ]
+}

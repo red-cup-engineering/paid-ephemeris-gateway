@@ -1,0 +1,69 @@
+{
+  "subject": "move-the-games-take-the-fifa-world-cup-out-of-the-u-s-and-boycott-the-host-country-itself",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "\"Move the Games\": Take the FIFA World Cup Out of the U.S. and Boycott the Host Country Itself"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/move-games-take-fifa-world-cup-out-us-and-boycott-host-country-itself"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/move-games-take-fifa-world-cup-out-us-and-boycott-host-country-itself"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/move-games-take-fifa-world-cup-out-us-and-boycott-host-country-itself"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\"> \"Move the Games\": Take the FIFA World Cup Out of the U.S. and Boycott the Host Country Itself</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/1443\" hreflang=\"en\">​​​​​​​ Ajamu Baraka, BAR editor and columnist</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-05T07:39:21+05:30\" title=\"Friday, June 5, 2026 - 07:39\" class=\"datetime\">Fri, 06/05/2026 - 07:39</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/p8rT_-qsj4E?si=NdvexJv4xggnNl-6\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>Ajamu Baraka is a Black Agenda Report contributing editor and Director of the <a href=\"https://peoplescenteredhumanrights.com/\" rel=\"nofollow\">North-South Project for People(s)-Centered Human Rights</a>. &nbsp;The North-South Project is among the organizations calling for a boycott of the World Cup and a boycott of the U.S. He also discusses the Colombian presidential election and its implications for the region and for the world.&nbsp;<br>&nbsp;</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/international sports\">international sports</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/FIFA\">FIFA</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/World Cup\">World Cup</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/boycott\">boycott</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Colombia\">Colombia</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Latin America\">Latin America</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/People Centered Human Rights\">People Centered Human Rights</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/move-games-take-fifa-world-cup-out-us-and-boycott-host-country-itself"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 05 Jun 2026 02:09:21 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/move-games-take-fifa-world-cup-out-us-and-boycott-host-country-itself"
+      },
+      "status": "supported"
+    }
+  ]
+}

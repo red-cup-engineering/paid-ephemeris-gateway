@@ -1,0 +1,69 @@
+{
+  "subject": "cdc-to-tap-107m-in-emergency-funding-for-ebola-response-in-drc-and-uganda",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "CDC to tap $107m in emergency funding for Ebola response in DRC and Uganda"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Number of people infected now tops 1,000 though health officials say the global risk remains low</p><ul><li><p><a href=\"https://www.theguardian.com/news/2026/feb/17/sign-up-for-the-breaking-news-us-email-to-get-newsletter-alerts-direct-to-your-inbox?utm_medium=ACQUISITIONS_STANDFIRST&amp;utm_campaign=BN22326&amp;utm_content=signup&amp;utm_term=standfirst&amp;utm_source=GUARDIAN_WEB\">Sign up for the Breaking News US newsletter email</a><em> </em></p></li></ul><p>The Centers for Disease Control and Prevention (CDC) will tap $107m in emergency funding for <a href=\"https://www.theguardian.com/world/ebola\">Ebola</a> outbreak response in the Democratic Republic of the Congo (<a href=\"https://www.theguardian.com/world/congo\">DRC</a>) and <a href=\"https://www.theguardian.com/world/uganda\">Uganda</a>, officials said on Thursday.</p><p>The continued Ebola outbreak in the DRC comes as Canada, <a href=\"https://www.theguardian.com/world/mexico\">Mexico</a> and the US jointly host the Fifa <a href=\"https://www.theguardian.com/football/world-cup-football\">World Cup</a>, attracting visitors from around the world. The officials said the outbreak, now the third largest on record, required “strong immediate support”, but that the global risk remained low.</p> <a href=\"https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 18:55:09 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.347Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/18/cdc-emergency-ebola-funding"
+      },
+      "status": "supported"
+    }
+  ]
+}

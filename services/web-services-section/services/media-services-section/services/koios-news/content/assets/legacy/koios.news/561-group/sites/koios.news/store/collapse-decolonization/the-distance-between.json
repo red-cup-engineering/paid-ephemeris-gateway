@@ -1,0 +1,69 @@
+{
+  "subject": "the-distance-between",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The distance between"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-distance-between"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/the-distance-between"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-distance-between"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Long-distance running has a rich tradition in South Africa. Every year, thousands of South Africans and international athletes line up to compete in storied races like the Comrades Marathon — an 89 km ultramarathon between Durban and Pietermaritzburg, one of the oldest and largest ultramarathons in the world — and the Two Oceans Marathon, a 56km race run along the Cape Peninsula. Now, the Sanlam Cape Town Marathon is joining that prestigious list. In 2021, Abbott World Marathon Majors (AWMM) selected the race as an official candidate. Following the successful May 24, 2026, race, the marathon passed its final evaluation stage. On June 10, AWMM welcomed Cape Town as the newest of its eight World Marathon Majors — the first on the African continent. The race’s acceptance signals Africa’s arrival on the world stage of marathoning. But the decision poses more questions about the limits of both Cape Town and, more broadly, South Africa, as Africa’s representatives. Throughout 2026, waves of anti-immigrant sentiment and violence have swept through South Africa, with mobs targeting African foreign nationals . African nations have since responded, with Ghana, Zimbabwe, Malawi, and Nigeria evacuating some of their citizens from South Africa. Most recently, frustration spread across the continent and reverberated at the World Cup, where fans from across Africa openly cheered Mexico against South Africa’s Bafana Bafana in the opening match. The Sanlam Cape Town Marathon and its acceptance as a Major unfolds against this tense backdrop — a celebration of African distance running in a country whose relationship with the African continent remains strained. The race itself had a complicated path to earning Major status. Unlike past years, this year’s marathon took place in May, following the surprising cancellation 90 minutes before the start in October 2025. Cape Town’s notorious southeasterly winds — known locally as the Cape Doctor — forced the race organizers to act, citing runners’ safety. As consolation, all of the 2025 entrants were guaranteed a spot at either the 2026 or 2027 renditions of the race. As an additional incentive, Abbott offered its 2026 participants a preliminary star , which they upgraded to an official AWMM star following the race’s acceptance as a Major. Other highlights included the race’s African-led elite athlete lineup and the breaking of three out of four course records. The most recognizable runner, Kenya’s Eliud Kipchoge, has two Olympic gold medals and 11 Major titles. He finished the race in 16th place while Ethiopia’s Huseyidin Mohamed Esa took the crown in a course record . On the women’s side, Ethiopian Dera Dida ran to victory. The wheelchair division was dominated by David Weir of Great Britain and Manuela Schär of Switzerland, both of whom broke the course records . Yet the significance of the race extends beyond elite results. The story of the marathon’s success also brings to light debates about Cape Town’s place within South Africa and Africa more broadly. Cape Town’s road toward Major status highlights a tension at the heart of the city itself: repeatedly criticized for viewing itself as exceptional relative to the rest of South Africa and the continent, yet now marketing itself to the global community as a proudly African city. That sense of exceptionalism has often coexisted with hostility toward African migrants . And yet the race itself made a compelling case for Africa to host a World Marathon Major, given that the world’s best distance runners hail from the continent. Kipchoge himself mentioned that he had never raced a marathon in Africa. That changed on May 24, when Kipchoge ran the Cape Town Marathon to launch “Eliud’s Running World” tour, a project to run a marathon on each of the seven continents while raising money for the Eliud Kipchoge Foundation. He was intentional in his decision to begin the journey in Cape Town, stating , “I’m proud to begin our world tour in Africa and to run my first-ever marathon on home soil.” The push for a South African event on the elite marathoning stage also showcases the progress the country has made since 1994. Global anti-apartheid activists once leveraged sport as an economic and cultural weapon meant to isolate the white minority regime. South Africa became an international pariah and served an Olympic ban that stretched from 1964 to 1992. Within the running community, the Comrades Marathon’s history shows one way South Africa sought to reform apartheid and potentially reverse the boycott. In 1975, the race first allowed Black athletes to enter. And yet, desegregated internal sport was a mere marketing tool meant to convince the international community of South Africa’s progress, even as apartheid persisted. Activists were unconvinced, and the global sporting boycott remained in place despite these cosmetic shifts. Yet, in a post-1994 world, the political meaning of sport shifted. South Africa has repeatedly used global sport to signal its political and social transformation. South African sporting unity was perhaps most iconically captured in the image of Nelson Mandela handing the 1995 Rugby World Cup trophy to Springbok captain François Pienaar — a moment that became one of the defining symbols of national reconciliation in post-apartheid South Africa. Today, Pienaar is a co-founder and director of the Sanlam Cape Town Marathon. He eagerly welcomed Kipchoge to the May 2026 race. Another defining moment in both South African sport and running occurred just a year after the 1995 Rugby World Cup. Josiah Thugwane, a mineworker who had only taken up running a few years earlier, won the marathon gold medal at the 1996 Atlanta Olympics. He became the first Black South African to earn an individual Olympic gold medal. That internationally acclaimed victory epitomized both South Africa’s return from cultural and economic isolation and its efforts at domestic reconciliation. In 2026, the Sanlam Cape Town Marathon’s goal of bringing the global running community to South Africa suggests a wider effort to place not only individual athletes but also the African continent at the center. There is something paradoxical about the fact that Africa’s first World Marathon Major comes from a nation whose xenophobic violence prompted diplomatic action from Ghana and Nigeria that same week. The marathon’s arrival on the world stage does not resolve that tension, but it does give Cape Town and South Africa as a whole the opportunity to champion both Africa’s running success and South Africa’s connections to the continent. Whether Pretoria’s political leaders will match the marathon’s ambitions with meaningful action toward the continent remains an open question."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-distance-between"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-17T16:14:58.559169Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-distance-between"
+      },
+      "status": "supported"
+    }
+  ]
+}

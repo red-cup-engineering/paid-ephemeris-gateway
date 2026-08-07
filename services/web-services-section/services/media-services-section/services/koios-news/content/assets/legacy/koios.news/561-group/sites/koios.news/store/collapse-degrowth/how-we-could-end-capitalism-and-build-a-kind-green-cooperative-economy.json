@@ -1,0 +1,69 @@
+{
+  "subject": "how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "How we could end capitalism – and build a kind, green, cooperative economy"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-16/how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "In this essay, author Guy Dauncey argues that we can dismantle capitalism without abandoning markets, replacing it with a democratic, cooperative economy that reins in finance and puts people and nature first."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 08:00:31 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-16/how-we-could-end-capitalism-and-build-a-kind-green-cooperative-economy/"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Neuromorphic computing may one day offer AI a power-saving brainwave"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave/5258316"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/science/2026/06/18/neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave/5258316"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave/5258316"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Brain-inspired computing may one day help curb AI's ballooning energy demands, but don't expect it to replace today's datacenter hardware any time soon, UK politicans have been told. Speaking to MPs this week, University of York professor Martin Trefzer said neuromorphic and other bio-inspired systems could improve efficiency by borrowing ideas from biological brains, where memory and processing are integrated rather than split across separate components. Analysis from last year shows AI is the biggest driver pushing global datacenter electricity use to more than double by 2030 to around 945 terawatt-hours (TWh), slightly more than the entire electricity consumption of Japan. \"Data movement is probably one of the fundamental things we can learn from the brain. We don't have a memory bank on one computer and a [processor] on the other; it's all one system, and that is underpinning the efficiency,\" Trefzer told the House of Commons Science, Innovation and Technology Committee. At the same time, the brain \"is not a rigid computer that is kind of clocked in a digital system.\" \"This is motivating us to really build computing systems that are adaptable, to make them more robust, and to potentially adapt them to be more efficient in certain circumstances,\" Trefzer said. However, given the complexity of the as-yet-experimental computing model, it could be a long time before it proves its worth as a replacement for mature computing systems. \"It is always pitched against a very mature technology like LLMs running in datacenters, but suffering from all the energy and sustainability problems,\" he said. The only way experimental technologies like neuromorphic computing – which takes inspiration from the brain – could have a practical impact in the short term is through specific applications alongside conventional computing to make it more efficient. \"A wearable device, let's say a hearing aid, for example: you currently have these devices that are built on a digital substrate. We train models offline, but you could imagine a neuromorphic substrate that is susceptible to sound, that has modalities that allow it to function in a more brain-inspired computational manner. Then you could push functionality out of the digital system into, in this case, a sensor. This is where there is significant potential to be much more energy efficient, by orders of magnitude,\" Trefzer said. The short-term impact will be in identifying use cases for hybrid integration that work with current technology to optimize it. Also speaking to the committee, University of Manchester physics professor Caterina Doglioni said these advantages need to be offset against the energy and carbon cost of putting more devices on the edge, but there could be a threshold over which a new model is more efficient. \"I hate to be the person that breaks it, but you have to think about how much it costs you and the environment to build these devices, but one can reach a break-even point where ultimately it is doing a better job on environmental sustainability, but that needs the studies,\" she said. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave/5258316"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:01:33 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/science/2026/06/18/neuromorphic-computing-may-one-day-offer-ai-a-power-saving-brainwave/5258316"
+      },
+      "status": "supported"
+    }
+  ]
+}

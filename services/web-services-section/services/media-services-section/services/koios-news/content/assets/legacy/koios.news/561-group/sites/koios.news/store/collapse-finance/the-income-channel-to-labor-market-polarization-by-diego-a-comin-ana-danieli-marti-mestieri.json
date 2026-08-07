@@ -1,0 +1,69 @@
+{
+  "subject": "the-income-channel-to-labor-market-polarization-by-diego-a-comin-ana-danieli-marti-mestieri",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Income Channel to Labor-Market Polarization -- by Diego A. Comin, Ana Danieli, Martí Mestieri"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35315#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nber.org/papers/w35315#fromrss"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35315#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "We study labor-market polarization by developing a framework with heterogeneous consumers, non-homothetic preferences, and endogenous labor supply a la Roy (1951). Because income-elastic sectors are intensive in high- and low-skilled occupations, shocks that raise either the average or the dispersion of income across households shift relative labor demand toward these occupations, generating an income channel to polarization. We quantify this channel by comparing the effect of shocks that affect the distribution of household income in our model and in a version with homothetic preferences in which the income distribution does not affect sectoral composition. The income channel is sizable: it explains 42% and 210% of the increases in the relative wages of high- and low-skill workers observed between 1980 and 2016, and 26% and 51% of the increase in their hours-worked shares. A quarter of its effect operates through income dispersion, highlighting the importance of departing from representative-consumer frameworks in non-homothetic environments."
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35315#fromrss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": ""
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.nber.org/papers/w35315#fromrss"
+      },
+      "status": "supported"
+    }
+  ]
+}

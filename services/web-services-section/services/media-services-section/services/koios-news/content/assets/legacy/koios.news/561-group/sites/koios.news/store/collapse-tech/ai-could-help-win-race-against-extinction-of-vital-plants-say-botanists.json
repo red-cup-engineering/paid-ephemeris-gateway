@@ -1,0 +1,69 @@
+{
+  "subject": "ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "AI could help win ‘race against extinction’ of vital plants, say botanists"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Tech is helping to identify and save new specimens and could open ‘genomic goldmine’ of fungi data</p><p>The rise of AI and digitisation could be a turning point in the “race against extinction” faced by botanists trying to identify and save vital plants before they vanish, according to a major <a href=\"https://www.kew.org/science/state-of-the-worlds-plants-and-fungi\">report</a> from Royal Botanic Gardens, Kew.</p><p>New technology is enabling scientists to track how flowering times have shifted by weeks around the world, rapidly identify new specimens and even get crucial genetic data from 180-year-old fungus specimens, potentially opening a “genomic goldmine”. Digitisation and online access to millions of specimens that were until now only accessible in archives is also producing new insights, especially in the global south.</p> <a href=\"https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 06:00:48 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/environment/2026/jun/16/ai-could-help-win-race-against-extinction-of-vital-plants-say-botanists"
+      },
+      "status": "supported"
+    }
+  ]
+}

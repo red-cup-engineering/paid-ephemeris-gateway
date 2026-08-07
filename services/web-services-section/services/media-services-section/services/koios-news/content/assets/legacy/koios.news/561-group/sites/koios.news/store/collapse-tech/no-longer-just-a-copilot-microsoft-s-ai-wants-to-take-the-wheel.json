@@ -1,0 +1,69 @@
+{
+  "subject": "no-longer-just-a-copilot-microsoft-s-ai-wants-to-take-the-wheel",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "No longer just a Copilot, Microsoft's AI wants to take the wheel"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Move over, Copilot: Microsoft is introducing a new category of agentic AI called \"Autopilot,\" starting with Scout, its first agent. And it doesn't take much guessing to understand how Microsoft expects these things to operate: By constantly watching your every move and taking action in the background to ostensibly streamline your workday. Microsoft announced Autopilot, and the first Autopilot agent, Scout, at Microsoft Build on Tuesday, describing it and other future Autopilots as “always-on agents that work autonomously,” stay active in the background to “understand how work gets done across your apps and systems,” and can “take action without needing to be prompted each time.” Scout, for example, can be interacted with in Teams when one feels the need, but outside of instances when users need to query it directly, it’s always there. “It operates across cloud, desktop, and web, connecting to Teams, Outlook, OneDrive, and SharePoint, and to the data that powers your day, including chats, email, calendar, and contacts,” Omar Shahine, corporate VP of Microsoft Scout, wrote in the announcement. Autopilot agents supposedly have their own identities, according to Shahine, and are able to act autonomously within the constraints organizations set on their activities (access controls can be set by organizations). Per Shahine, letting Autopilots operate on autopilot “creates a more durable way to keep work in motion so it continues even when your attention is elsewhere.” Say, for example, you need to schedule a meeting: Scout can handle scheduling on its own while accounting for time zones; it can flag meetings it considers particularly important for its users and generate materials it believes users need to prepare before the scheduled time. Scout can also identify looming deadlines and block off time on a user’s calendar so that they can work on a particular project, “spot risks, like stalled decisions,” and basically act like a work nanny that schedules your day by being hyper-aware of every single little thing that needs to get done. Hopefully, your new Microsoft nannybot is more reliable than its Copilot predecessor, whose outputs Microsoft itself warns may not always be accurate. Get ready for a Claw-shaped hole in your environment “Microsoft Scout is built with enterprise-grade security and controls so it can be trusted in your organization from day one,” Shahine noted in the release, followed immediately by noting that it’s powered by OpenClaw, not exactly a platform with a stellar security reputation or record of not making bad decisions on behalf of users. Microsoft claims that Scout and whatever future Autopilot agents it releases are bound to an Entra identity that allows their activity within an enterprise environment to be attributed to a particular person’s Scout agent, and notes that it acts within the confines of access controls set by the organization, but it’s not clear what other protections against common AI exploits are included. As we’ve noted before, it's often surprisingly easy to manipulate AI agents into behaving in ways their operators never intended, and malicious webpages can inject prompts that trick them into leaking sensitive information; in both cases, those sorts of attacks can be launched without any direct user interaction. We asked Microsoft for more details on the security aspect of Autopilots and Scout, but didn’t hear back before the deadline. It’s also worth noting that Microsoft Scout is in very limited access, with only a “select group of customers” getting access to the preview, along with organizations participating in the Frontier program, which grants them early access to Copilot and other Microsoft AI features. One more caveat, too: Frontier enrollees can only get access to the Scout preview if they’re GitHub Copilot subscribers. GitHub Copilot recently shifted to a usage-based billing model that has seen bills skyrocket, so expect those Microsoft bills to rise if you choose to give it a shot, too. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 03 Jun 2026 18:49:15 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Two men jailed for arson attacks on property linked to UK prime minister"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.aljazeera.com/news/2026/6/19/two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister?traffic_source=rss"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The Ukrainian-born men with alleged links to Russia targeted property associated with Keir Starmer in May 2025."
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister?traffic_source=rss"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 16:04:41 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T17:21:51.348Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.aljazeera.com/news/2026/6/19/two-men-jailed-for-arson-attacks-on-property-linked-to-uk-prime-minister?traffic_source=rss"
+      },
+      "status": "supported"
+    }
+  ]
+}

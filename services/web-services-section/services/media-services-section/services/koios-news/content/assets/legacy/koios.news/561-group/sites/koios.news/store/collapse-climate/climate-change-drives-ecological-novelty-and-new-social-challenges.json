@@ -1,0 +1,69 @@
+{
+  "subject": "climate-change-drives-ecological-novelty-and-new-social-challenges",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Climate change drives ecological novelty and new social challenges"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02672-3"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.nature.com/articles/s41558-026-02672-3"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02672-3"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Nature Climate Change, Published online: 19 June 2026; doi:10.1038/s41558-026-02672-3 Ecosystems are changing rapidly because of climate change, and this will have increasing social effects around the globe. We suggest that common social responses to rising novelty are often counterproductive, and we advocate for strategies that also allow for acceptance and adaptation to changes in nature."
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02672-3"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-19"
+      },
+      "time": {
+        "asserted": "2026-06-19T15:30:47.744Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.nature.com/articles/s41558-026-02672-3"
+      },
+      "status": "supported"
+    }
+  ]
+}

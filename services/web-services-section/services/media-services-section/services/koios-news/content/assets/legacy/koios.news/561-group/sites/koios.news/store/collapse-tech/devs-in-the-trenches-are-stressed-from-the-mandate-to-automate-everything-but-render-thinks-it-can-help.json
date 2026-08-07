@@ -1,0 +1,69 @@
+{
+  "subject": "devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Devs in the trenches are stressed from the mandate to automate everything, but Render thinks it can help"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/19/devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help/5258595"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/ai-and-ml/2026/06/19/devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help/5258595"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/19/devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help/5258595"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "On Thursday during a developer event held at San Francisco's St. Regis Hotel, the marketing stack failed. Literally. During an AI agent workflow demo on the fourth floor balcony, the wind toppled a tower of three cardboard promotional display cubes. One of these – maybe three or four feet per side – fell over the edge of the balcony and plummeted onto Minna Street below. Concerned staff rushed to the edge of the parapet and peered over. Evidently satisfied that no one had been injured, they proceeded to dismantle the other stack of boxes, just to be safe – an uncommon level of caution in the context of AI-assisted software development. Consider the incident a metaphor for the chaos created by the tech industry's frantic rush to automate whatever can be automated with machine learning models and associated tools. The event, Localhost, was put on by hosting biz Render as a confab for devs building software for the \"AI-native web.\" But many attendees expressed uncertainty about the rapid pace of change in the industry. As one CTO attendee remarked, not realizing he was in earshot of a reporter, \"How're we going to do this? I don't fucking know. That's what I have to figure out.\" The CTO said he was looking for engineers to hire, the very thing major tech companies have been dumping to balance capex costs. Rohan Chavan, who recently earned his master’s degree in computer engineering from Virginia Tech, shared a similar sentiment. \"Every other day,\" he told The Register in an interview, \"there's some new term. A week or two ago, it was harness engineering. Now it's loop engineering.\" Chavan said he found the current state of play both exciting and frustrating. He's looking for a job in AI security and estimated that about 30 percent of his class of around 120 has been hired so far. It's very difficult, he said, to build deep knowledge when things are changing so fast and there's so much to learn. Localhost, the company's first user conference in its eight years of existence, aims to help with that by evangelizing the company's technical stack. Some promotion might just be useful. As the aforementioned CTO confided to one of Render's staff, enterprise customers expect to hear that services run on AWS, Azure, or maybe Google Cloud. \"They don't expect to hear Render,\" he lamented. Nonetheless, Render is doing rather well, according to founder and CEO Anurag Goel, who opened the afternoon's presentations with the requisite recitation of metrics – 400,000 developers joining every month, 10 million live services, 200 billion monthly requests. \"All of these numbers are growing very rapidly,\" he said. \"But behind these numbers, we're also seeing a big change in how applications are evolving to use infrastructure.\" Until a few years ago, he said, infrastructure was relatively static. You deployed an application and the various elements – databases, APIs, caches, and so on – stayed pretty much the same. AI apps, he contends, are fundamentally different. \"They are dynamic applications that go beyond existing infrastructure patterns,\" Goel explained. \"Now, in addition to you defining your application statically, the applications themselves are provisioning their own infrastructure resources.\" As an example, he described how the resources required by a research agent can vary from question to question. One user query might require lightweight web scripting. Another might require a headless browser and 128 GB of RAM to process a dataset. And the duration of such tasks can also vary significantly. \"What we're learning is that any request can trigger hundreds or thousands of different tasks in ways that your code can never really know in advance,\" he said. This doesn't work on serverless platforms, Goel contends, because of platform limitations that cap execution time, memory, storage, and application size. Render's answer to this technical challenge is what Goel calls application-defined compute. It allows applications to run workloads without pre-provisioning. \"Instead of pre-defining the infrastructure for your application, you allow the application to define what it needs at runtime with the right guardrails,\" he explained. With any luck, Render's guardrails will prevent a pummeling by promotional props better than those at the St. Regis. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/19/devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help/5258595"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 12:15:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/ai-and-ml/2026/06/19/devs-in-the-trenches-are-stressed-from-the-mandate-to-automate-everything-but-render-thinks-it-can-help/5258595"
+      },
+      "status": "supported"
+    }
+  ]
+}

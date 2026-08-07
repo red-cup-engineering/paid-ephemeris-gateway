@@ -1,0 +1,14 @@
+{
+  "type": "YanagiRecoveryOwnershipCustodyMigrationEvidence",
+  "recoveryIdentity": "eip155:8453:0x224c08a8526751887a83e2711b167f890c6d078d",
+  "custodyProvider": "urn:ame:ethereum-services-section",
+  "keystoreFormat": "ethereum-secret-storage-v3",
+  "keystoreSha256": "sha256:78b48ed6556012dc395deb67d17ad69ab33acb4646c9ec54ac6c3ab4d66dade8",
+  "plaintextSourceVariable": "YANAGI_WALLET",
+  "plaintextSourceRetired": true,
+  "runtimeUseAuthorized": false,
+  "mnemonicRecorded": false,
+  "privateKeyRecorded": false,
+  "recoveryWalletUsedForCommercialRuntime": false,
+  "recordedAt": "2026-07-22T18:30:17.379Z"
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Bernie Sanders unveils $7 trillion plan to give Americans control of AI industry"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Bernie Sanders has unveiled an aggressive plan to transfer trillions from leading AI firms to the public, and, to the likely horror of AI firms, it goes even further than expected to give Americans more control over the AI industry. Sanders shared a summary of his legislation with AP News . If passed, the law would create a sovereign wealth fund “financed through a one-time 50 percent tax on the stock of the largest AI companies,” AP News reported. Any AI firm that does $200 million in annual AI sales would be subject to the tax, as would any new firm once it reaches that revenue level. In total, Sanders estimated the fund could be worth $7 trillion, generating “hundreds of billions of dollars annually in direct payments to Americans and programs such as health care, education and housing,” AP News reported. Each American would likely receive more than $1,000 annually in 5 percent annual dividends, Sanders estimated. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 17:02:49 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/"
+      },
+      "status": "supported"
+    }
+  ]
+}

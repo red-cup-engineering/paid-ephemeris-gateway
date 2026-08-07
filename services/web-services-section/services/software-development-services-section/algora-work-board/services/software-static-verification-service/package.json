@@ -1,0 +1,10 @@
+{
+  "name": "@rsc-quiescent/software-static-verification-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/static-check.mjs",
+  "scripts": {
+    "test": "node --test"
+  }
+}

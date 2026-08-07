@@ -1,0 +1,69 @@
+{
+  "subject": "new-issue-of-rwer-113",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "new issue of RWER – #113"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/26/new-issue-of-rwer-113/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/05/26/new-issue-of-rwer-113/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/26/new-issue-of-rwer-113/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "real-world economics review issue 113download whole issue Entropy and Economics:A bioeconomic perspective on economic development and sustainability 2Luigi Capoani, Margarita Shnaider and Martina Griseri Do we need our needs? 28Andri W. Stahel How invisible capital gains drive extreme U.S wealth concentration 39Steve Roth and Dirk Bezemer The systematic extraction of global resources under […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/26/new-issue-of-rwer-113/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 26 May 2026 12:41:58 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/05/26/new-issue-of-rwer-113/"
+      },
+      "status": "supported"
+    }
+  ]
+}

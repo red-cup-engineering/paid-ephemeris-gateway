@@ -1,0 +1,69 @@
+{
+  "subject": "u-s-strike-on-an-alleged-drug-boat-kills-3-in-the-eastern-pacific-ocean",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "U.S. strike on an alleged drug boat kills 3 in the eastern Pacific Ocean"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864084/us-strike-alleged-drug-boat-kills-3-eastern-pacific-ocean"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/19/nx-s1-5864084/us-strike-alleged-drug-boat-kills-3-eastern-pacific-ocean"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864084/us-strike-alleged-drug-boat-kills-3-eastern-pacific-ocean"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The latest attack brings the number of people who have been killed in boat strikes by the U.S. military to at least 211 since the Trump administration began targeting those it calls \"narcoterrorists\" in early September. (Image credit: Jacquelyn Martin)"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864084/us-strike-alleged-drug-boat-kills-3-eastern-pacific-ocean"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 03:13:13 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/19/nx-s1-5864084/us-strike-alleged-drug-boat-kills-3-eastern-pacific-ocean"
+      },
+      "status": "supported"
+    }
+  ]
+}

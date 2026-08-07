@@ -1,0 +1,69 @@
+{
+  "subject": "over-reliance-on-chatbots-can-diminish-critical-thinking-skills-study-finds",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Over-reliance on chatbots can diminish critical-thinking skills, study finds"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Depending on AI can also potentially decrease the ability to discern misinformation, research says</p><p>A new study from the Massachusetts Institute of Technology is the latest research to find that relying too much on chatbots can diminish critical-thinking skills, and potentially decrease our ability to discern misinformation for ourselves.</p><p>As AI tools are becoming more sophisticated and accessible, manipulated images and misleading headlines are becoming more common. AI can be part of the solution, and has proved useful in helping users identify fake content – but there’s a cost to using it this way, the new research suggests. An over-dependence on AI to help figure out what’s real on the internet can lead to trouble making those judgments.</p> <a href=\"https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 11:00:32 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills"
+      },
+      "status": "supported"
+    }
+  ]
+}

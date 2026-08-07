@@ -1,0 +1,69 @@
+{
+  "subject": "kde-plasma-6-7-brings-the-x11-era-to-a-close",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "KDE Plasma 6.7 brings the X11 era to a close"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/kde-plasma-67-brings-the-x11-era-to-a-close/5258247"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/os-platforms/2026/06/18/kde-plasma-67-brings-the-x11-era-to-a-close/5258247"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/kde-plasma-67-brings-the-x11-era-to-a-close/5258247"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The latest version of the KDE desktop - Plasma 6.7.0 - has arrived, bringing several shiny new functions – some of which have been a long time coming – and features the return of the popular Oxygen theme from KDE 4. Since the KDE 6 “megarelease” two and a half years ago, the project's developers have been very busy. Fresh Plasma releases have come thick and fast. It's fewer than six months since the release of KDE Plasma 6.6.0 back in February. This rate of change matters, as a massive implementation change is coming: as the team announced in November last year, the plan is that KDE Plasma 6.8 will be Wayland-only. That means that this new release is the last to support X11. From some time early next year, KDE Plasma will be “Wayland or no way.” There are already functional differences between Plasma on X11 and Plasma on Wayland, as the Dedoimedo blog described when reviewing Kubuntu 26.04 last month. (Dedoimedo is written by Igor Ljubuncic, who we interviewed at the 2023 Ubuntu Summit.) X11 holdouts need not feel entirely abandoned as there’s a new fork of the X11-capable version of the desktop, called SonicDE. The project’s self-description says: \"We aim to preserve and improve the X11-specific aspects of KDE since they announced they are going Wayland-only in KDE Plasma 6.8. SonicDE currently consists of the customized KWin/X11 sonic-win window manager and compositor, Plasma Workspace components, the Silver theme, an SDDM theme, and some support libraries.\" SonicDE joins at least two existing forks of older versions of KDE: the Trinity desktop environment, based on the last version of KDE 3, and MiDesktop, which we mentioned recently, based on the last version of KDE 1. (If there are any others out there that we’ve missed, do please let us know.) Matching Macs For now, Plasma 6.7 isn’t radically different from the existing Plasma 6.6, but this version has some significant new features. Two of them may be familiar to macOS users. Firstly, while KDE has always supported virtual desktops, in this release, on computers with more than one physical display, each screen can have its own set of virtual desktops. Apple’s macOS does this, and it’s the only way to get a separate global menu bar on each screen. Aside from that, for this vulture, it’s more trouble than it’s worth – but from what we read, many people like it a lot and we think this will be a popular change. Secondly, to type letters with accents (technically, “diacritics”), such as ä or ç or Š, you can now press and hold a key, and a list of alternatives appears. This is how Macs have done it for decades. If you only very occasionally need these characters, it does have the advantage that you avoid having to memorize special shortcuts or combinations. Personally, this Vulture finds it faster to configure and use a Compose key, which KDE supports just fine, but this is a handy change if you only rarely need such things. These aren’t the only changes, of course. Alongside Plasma’s existing System Tray applets, the tray now shows GNOME-style “Background Apps” – commonly found in Flatpak apps. The Overview screen is easier to navigate, and you can now switch virtual desktops by scrolling with your pointing device, or using the PgUp and PgDn keys. The Discover software store makes the Install button more prominent, and sorts installed apps into categories. It’s now easier to switch light and dark mode globally with one click, and there’s better support for hardware detection of lighting brightness. Theme handling is in the middle of a major revamp, in an initiative called Union, which brings management of multiple different types of theme together in one place. Developers carefully modernized the “Oxygen” theme, the default dark look for KDE 4, and did likewise for its lighter equivalent “Air”. If you fancy a change from the now-ubiquitous flat look, it’s available to install, along with matching Horos wallpapers. There are a lot of smaller changes. There’s an option to test your microphone right from the taskbar. When the clock shows multiple timezones, it shows the offset in hours. Windows can be selectively hidden when recording or streaming the desktop. Type-ahead search optionally now works on the desktop itself. The printer status icon shows how many jobs are outstanding. Notifications now glide onscreen rather than fading into view, making them more obvious. There’s better color management, and ICC profiles and HDR are no longer mutually exclusive. GPU handling refinement should now mean both better performance and lower GPU utilization, even on Intel integrated GPUs. The Plasma wiki offers a more complete list, and there’s a complete changelog of everything since 6.6.5. Although the release notes still point to it, it looks to us like the KDE Neon download page is blank and empty. We’ve previously reported on the project’s technologically-innovative demo distro KDE Linux, and that now works well in VirtualBox – complete with documentation on how to do it. It’s already up to Plasma 6.7.80, a pre-release of what will become 6.8. The project dedicated this release to the late Eric Laffoon, a long-time KDE supporter. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/kde-plasma-67-brings-the-x11-era-to-a-close/5258247"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 14:57:26 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/os-platforms/2026/06/18/kde-plasma-67-brings-the-x11-era-to-a-close/5258247"
+      },
+      "status": "supported"
+    }
+  ]
+}

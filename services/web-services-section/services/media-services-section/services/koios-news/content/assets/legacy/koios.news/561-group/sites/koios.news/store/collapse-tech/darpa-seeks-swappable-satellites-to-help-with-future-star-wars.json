@@ -1,0 +1,69 @@
+{
+  "subject": "darpa-seeks-swappable-satellites-to-help-with-future-star-wars",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "DARPA seeks swappable satellites to help with future star wars"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "War may never change, but its domains evolve, and DARPA is looking for ideas to ensure space infrastructure destroyed in future orbital skirmishes can be rapidly replaced. DARPA, on Friday, put out a request for information for an initiative to develop what it’s calling Rapid Reconstitution of Space Capabilities. “Other nations seek to position themselves as leading space powers while undermining the stability and tranquility that allows space to benefit all nations,” DARPA said, suggesting that the US would never dare deploy space weapons that could destabilize the tranquility of Earth orbit. “Space is an increasingly contested environment, presenting a multitude of threats to U.S. space assets,” DARPA added. “Therefore, there is a strategic need to be able to quickly respond to disrupted assets and reconstitute degraded space capabilities.” While we don't know if the US has any weapons in space – we asked but didn't get a response – other countries certainly are striking an aggressive posture. Both Russia and China have reportedly blown up their own defunct satellites in recent years to demonstrate their space warfare capability, and the US Space Force has noticed what appears to be China experimenting with orbital satellite dogfighting maneuvers. The US has also accused Russia of developing anti-satellite weaponry that may or may not involve orbital nukes, leading the US to update its fleet of satellites designed to keep an eye out for potential nuclear launches. “U.S. competitors are implementing a sustained effort to develop a broad range of offensive counterspace capabilities through a variety of anti-satellite (ASAT) weapons, including direct attacks on satellites, jamming and spoofing of signals, and continued cyberattacks on satellite and ground infrastructure,” DARPA noted in Friday’s announcement. Pointing to the 2023 Space Force tactically responsive space exercise Victus Nox, which saw the USSF launch a space vehicle into orbit just 27 hours after getting the word, DARPA said it wants more of the same, but hopefully faster. “DARPA Strategic Technology Office seeks information supporting technical solutions and operational concepts and strategies to enable rapid, responsive, cost-effective reconstitution of any lost or degraded space capabilities resulting from attacks,” DARPA explained, adding that it’s not looking for anything more than ideas at this point, but is willing to entertain anyone in the US with a good idea, be they laboratory or private outfit. According to the announcement, DARPA wants ideas that would get degraded operations restored in “hours to weeks,” and offer the same turnaround time for cases of surging demand as well as asset loss. “Possible solutions could be realized with reconfigurable, software-defined, multifunctional, and multi-mission payloads, as well as proliferated/mesh architectures and rapid on-orbit deployment concepts,” the Pentagon research arm said. “Rapid space capability reconstitution is a complex task,” DARPA added, so don’t expect this research to move anywhere near the speed of DARPA’s eventual rapid reconstitution rockets. Then again, America just minted the world’s first trillionaire, and he’s a space guy – maybe ask him how to launch rockets quickly? Surely his ideas would be grounded in good sense, right?"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 22:17:07 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/offbeat/2026/06/15/darpa-seeks-swappable-satellites-to-help-with-future-star-wars/5255839"
+      },
+      "status": "supported"
+    }
+  ]
+}

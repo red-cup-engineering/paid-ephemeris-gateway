@@ -1,0 +1,69 @@
+{
+  "subject": "the-case-for-labour-to-introduce-a-wealth-tax-has-never-been-stronger-phillip-inman",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The case for Labour to introduce a wealth tax has never been stronger | Phillip Inman"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>A 2% levy on fortunes above £100m – with no exemptions – could begin to reverse decades of rising inequality</p><p>Andy Burnham and Wes Streeting have sought to blunt the Green leader Zack Polanski’s popularity with a hint that a government run by either of them, should they win a Labour leadership race, would favour a tax of some kind on the wealthy.</p><p>With <a href=\"https://www.theguardian.com/business/live/2026/jun/12/spacex-float-us-stock-market-share-elon-musk-trillionaire-largest-ipo-ever-live-news-updates\">SpaceX’s stock market launch</a> on Friday sending Elon Musk’s fortune to the stars, it is clear to most people that the world’s super-rich are running away with the lion’s share of the spoils and there is not much left for anyone else.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Sat, 13 Jun 2026 15:00:16 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/13/labour-introduce-wealth-tax-case-never-been-stronger"
+      },
+      "status": "supported"
+    }
+  ]
+}

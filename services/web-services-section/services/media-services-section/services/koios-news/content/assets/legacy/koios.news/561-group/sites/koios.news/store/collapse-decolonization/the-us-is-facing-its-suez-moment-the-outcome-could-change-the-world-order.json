@@ -1,0 +1,69 @@
+{
+  "subject": "the-us-is-facing-its-suez-moment-the-outcome-could-change-the-world-order",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The US is facing its Suez moment – the outcome could change the world order"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/iran-war-united-states-israel-suez-crisis-donald-trump-change-world-order/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.opendemocracy.net/en/iran-war-united-states-israel-suez-crisis-donald-trump-change-world-order/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/iran-war-united-states-israel-suez-crisis-donald-trump-change-world-order/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "It is now clear that the war against Iran is going badly for Donald Trump. Binyamin Netanyahu and the Israeli Defence Forces (IDF) may be determined to carry on, but Trump is the war leader in deep trouble. So radical is this unexpected outcome that the United States may even be facing its Suez moment, like the one that saw France and the UK lose status in 1956, hastening decolonisation in the 1960s. If so, the effects of the Iran conflict could last for decades, well beyond the immediate conflict, and have impacts that change the current world order – with unpredictable consequences. Consider the past month and a half. Iran’s theocratic leadership had been crippled by assassinations within days of the start of the assault, but leaders were quickly replaced, and the much-anticipated popular uprising simply did not happen. Then, within a week, Trump and his ‘secretary of war’ Pete Hesgeth, claimed that the Iranian Navy had been destroyed, that its missiles and drone stocks would not last long, and whatever was left of the Army, Air Force and the Iranian Republican Guard Corps (IRGC) mattered little. Moreover, they said, there was little risk of Iranian missiles, drones or strike aircraft even being able to evade Israeli or US air defences. Trump trumpeted that the Iranians were so desperate to surrender that the end of the war was only a matter of days away. As it turned out, Trump and Hesgeth were proved wrong in almost every way . The IRGC, especially, has confounded expectations time and time again. Missiles and armed drone stocks have been far larger than expected and fresh supplies of drones are even being made in back-street workshops across the country. Thousands of Iranians have been killed, and billions of dollars of damage have been done, but Iran survives. Furthermore, the conflict reflects a skilfully thought-through military strategy. Targeting has repeatedly focused not on prestige sites, but on the eyes and ears of the Israeli and American military. Early warning radars have been hit not just in Israel but across western Gulf States such as Saudi Arabia, Qatar, the UAE and Oman. Those nations were shocked to be attacked by a presumed friendly state, but were forced to accept that by aiding the US/Israeli war effort by hosting bases, they were seen as potential enemies to Iran. As I wrote last week , the message from Tehran was: You are either with us or against us; there can be no middle way. Hormuz is the clearest sign of how badly the war is going, but another is the lessons having to be learned by the Pentagon, which have come to light in the past few days. It has realised that it cannot fight distant wars if relying on defence systems vulnerable to cheap armed drones. As both Ukraine and Russia are finding, satellite-based detection of missiles, drones, bombers, early warning aircraft, and other weapons of war will be the only way forward in the drone era. Because of this, the Pentagon is rushing to sort and deploy new systems as quickly as it can, having been caught out by Iranian foresight. Another problem for the Pentagon is that the impact of this failed war will be much greater than that of the failed wars in Afghanistan or Iraq. While both those conflicts had initial domestic support after the shock of the 9/11 attacks, the war with Iran was not popular at the start and is even less so now. The Trump White House now faces a war that it cannot win, increasing opposition at home and deepening unpopularity abroad as the world already begins to see rising inflation and the early signs of shortages as a result of the conflict. Unlike the Suez crisis for the UK and France 70 years ago, there isn’t a more powerful figure such as Dwight Eisenhower to order the US and Israel to stop. This time, a decision to end has to come either from within the US itself or from worldwide antagonism to its dominance. In this connection, the Lebanese ceasefire is welcome, given the thousands already killed. It is reported to have stemmed from strong US pressure on Israel, and may be part of a plan to control Netanyahu so that Trump can declare victory and withdraw US forces while he can. If not, and this unwinnable war continues, the alternative will be a US that rapidly loses what remains of its reputation as other power bases, such as China, and a necessarily revitalised Europe without Orbán, move more into focus. Should that happen, there will be too many consequences to draw any sound conclusions. We live in a global economy rooted for the most part in neoliberal market fundamentalism, which is currently experiencing runaway wealth at an intensity not seen for more than a century. Economic and political power is being put in the hands of a few score people with individual wealth that can match that of some states. As the world’s richest country, the US’s weakening on the global stage would present an opportunity to change this economic system. But those ultra-wealthy billionaires, both in the US and elsewhere, will mostly work to ensure the thriving of the economic model that has benefited them so much. They will feed resources into the print and broadcast media, fund hundreds of think tanks across the world and buy political support from corruptible politicians as required. We are in singularly uncertain times, and there is plenty of pessimism around. Even so, such uncertainty about the future means there is scope for truly innovative thinking and acting at an intensity that might not be dreamt of in ‘normal’ times. There are sound responses to all the problems and seeing the need for cooperative action and the ability to recognise wisdom are very good places to start."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/iran-war-united-states-israel-suez-crisis-donald-trump-change-world-order/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 17 Apr 2026 14:11:38 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.opendemocracy.net/en/iran-war-united-states-israel-suez-crisis-donald-trump-change-world-order/"
+      },
+      "status": "supported"
+    }
+  ]
+}

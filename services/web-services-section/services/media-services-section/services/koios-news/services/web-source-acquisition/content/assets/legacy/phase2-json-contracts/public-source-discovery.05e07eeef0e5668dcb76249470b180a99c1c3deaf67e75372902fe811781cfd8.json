@@ -1,0 +1,31 @@
+{
+  "kind": "public-source-discovery-contract",
+  "id": "web-source-acquisition/public-source-discovery/v1",
+  "provider": "urn:ame:web-source-acquisition",
+  "service": "discover public-Web source candidates for one customer-declared journalistic lead through bounded, witnessed search carriers",
+  "preconditions": [
+    "the customer supplies one bounded lead title and optional public lead URL, publication instant, summary, and query hints",
+    "the demand fixes a ceiling of one to eight candidate citations",
+    "the provider may spend at most one Google Search-grounded inference request, one version-pinned Groq Compound Mini basic-search request with only one provider-executed Web Search tool enabled, and one keyless GDELT DOC request; no credential crosses from the customer"
+  ],
+  "postconditions": [
+    "candidate URLs and titles are constructed from provider-authored Google grounding metadata, Groq executed-tool search-result fields, or GDELT DOC article-list fields rather than parsed from model prose",
+    "people-finder, profile-directory, social-profile, encyclopedia, and bare contact-record results are refused before they can count toward a journalistic candidate floor",
+    "the delivery binds the exact demand, search carrier, queries, model or deterministic index route, provider-response digest, candidate list, instant, and resource account",
+    "every candidate remains unwarranted until the customer independently retrieves and admits it",
+    "quota exhaustion, unavailable credentials, carrier errors, and empty grounding are typed refusals",
+    "the provider writes no customer corpus or publication state"
+  ],
+  "prohibitions": [
+    "no model-authored URL extracted from prose or requested serialization",
+    "no inference of truth, source independence, license, or publication warrant from search rank, grounding, or index inclusion",
+    "no ambient publication assignment, retrieval, corpus admission, writing, editing, or release authority",
+    "no representation of an allocation request as zero-cost or external revenue"
+  ],
+  "consideration": {
+    "amount": 1,
+    "unit": "bounded-public-source-discovery-attempt",
+    "monetaryClaim": false,
+    "note": "The provider records consumed Google, Groq Compound/Web Search, and GDELT carrier requests separately. Dollar cost remains unobserved until a provider billing receipt supplies it."
+  }
+}

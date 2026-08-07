@@ -1,0 +1,69 @@
+{
+  "subject": "is-the-u-s-trade-deficit-a-loss-or-a-gain",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Is the U.S. Trade Deficit a Loss or a Gain?"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/02/is-the-u-s-trade-deficit-a-loss-or-a-gain/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/02/is-the-u-s-trade-deficit-a-loss-or-a-gain/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/02/is-the-u-s-trade-deficit-a-loss-or-a-gain/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Xiaoping Gu Is the U.S. Trade Deficit a Loss or a Gain? The U.S. government initiated the trade war based on the “Deficit-as-Loss” narrative. But is this truly the case? Since the total collapse of the Bretton Woods system in the 1970s, the U.S. shifted from a long-term trade surplus to a deficit. Particularly […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/02/is-the-u-s-trade-deficit-a-loss-or-a-gain/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 02 Jun 2026 12:51:42 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/02/is-the-u-s-trade-deficit-a-loss-or-a-gain/"
+      },
+      "status": "supported"
+    }
+  ]
+}

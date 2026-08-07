@@ -1,0 +1,69 @@
+{
+  "subject": "microsoft-discovers-new-lightweight-backdoor-that-steals-cryptocurrency",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Microsoft discovers new lightweight backdoor that steals cryptocurrency"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Microsoft says it has detected new self-propagating malware that spreads through USB drives in search of cryptocurrency credentials, which it then sends to attacker-controlled servers. The company named the worm Crypto Clipper because it monitors the contents of device clipboards for patterns consistent with wallet addresses or seed phrases. When found, the malware also takes five screenshots over a 10-second period. Both the credentials and the screenshots are then sent to the attacker through Tor, a network protocol that provides anonymous routing by sending traffic through redundant nodes so logs can’t capture both the sending and receiving IP addresses. Crypto Clipper establishes the Tor connection by using a SOCKS5 proxy, a network protocol that sends traffic through a proxy server, which then forwards it to its final destination. A lightweight backdoor “The execution of this clipper is notable because it does not depend on a traditional installer or exposed IP-based C2 infrastructure,” Microsoft said Thursday. “Instead, it deploys a portable Tor client, routes traffic through a local SOCKS5 proxy, and blends data theft with remote code execution, turning a financially motivated stealer into a lightweight backdoor.” Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 23:28:52 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+      },
+      "status": "supported"
+    }
+  ]
+}

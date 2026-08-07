@@ -1,0 +1,69 @@
+{
+  "subject": "from-bloomsbury-to-whitehall-new-play-reimagines-life-of-john-maynard-keynes",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "From Bloomsbury to Whitehall: new play reimagines life of John Maynard Keynes"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>The Standard of Living by James Graham traces economist’s influence on British politics and culture</p><p>After exploring <a href=\"https://www.theguardian.com/media/2017/jun/28/ink-review-when-idea-of-a-mission-to-inform-was-burned-by-the-sun\">the rise of Rupert Murdoch</a> and the emergence of Gareth Southgate’s <a href=\"https://www.theguardian.com/tv-and-radio/2026/may/23/dear-england-james-grahams-football-drama-gareth-southgate-joseph-fiennes\">England team</a>, James Graham has turned his attention to one of the most important political figures of the 20th century: John Maynard Keynes.</p><p>His new play, The Standard of Living, directed by Nicholas Hytner and opening at the Haymarket in September, focuses on Keynes’s life from 1917 until his death in 1946 – a period in which he became the founding father of macroeconomics and reshaped government thinking on finance and the role of the arts.</p> <a href=\"https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 09:43:39 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/bloombsbury-whitehall-play-john-maynard-keynes-standard-of-living-james-graham"
+      },
+      "status": "supported"
+    }
+  ]
+}

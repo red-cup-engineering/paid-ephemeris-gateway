@@ -1,0 +1,69 @@
+{
+  "subject": "telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Telegram founder accuses Meta of sabotaging access in India with BGP hijacks"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks/5258866"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/networks/2026/06/19/telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks/5258866"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks/5258866"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The founder of Telegram, Pavel Durov, has suggested Meta might be using its investment in Indian telco Jio to sabotage the messaging service. Durov dropped his theory on X, writing: \"Indian telecom Reliance is sabotaging access to Telegram for millions of users OUTSIDE India (including the UAE) via a rogue method called BGP hijacking.\" Such attacks see miscreants publish inaccurate routing announcements that associate a service with the wrong IP address. Because routers share info with each other using the border gateway protocol (BGP), fake announcements can quickly propagate across the internet. When that happens, netizens can struggle to reach online services. Durov alleged that Reliance's mobile carrier, Jio, had used BGP hijacking to disrupt access to Telegram. \"The sabotage seems intentional, as Reliance has ignored multiple reports,\" he wrote. \"This may be part of a competitive war, as Reliance is partially owned by Meta – the company behind WhatsApp.\" \"The decision to ban Telegram in India looks more like a way to help WhatsApp protect its market share than a legitimate regulatory action that can fix anything,\" he added in another Xeet. Meta has indeed invested in Reliance, to the tune of $5.7 billion – and two weeks ago announced it will use a datacenter operated by the Indian company. Jio has denied misconfiguring any routes. \"Jio continues to operate its network in accordance with global internet routing best practices and the highest standards of reliability, security, and transparency,\" the company said. Durov offered no proof for his theory, but that didn't stop him from suggesting a deeper conspiracy. \"Such abuse of global internet routing is alarming. I wouldn't be surprised if Reliance/WhatsApp were also behind the recent lobbying effort to ban Telegram in India.\" That's a reference to India's decision to block Telegram for six days to prevent scams and other misconduct at the time of a medical studies entrance exam that over two million people will sit. The decision to implement the ban was taken by India's IT ministry, at the urging of the National Testing Agency – an organization that oversees exams. The founder is correct to say that some Indian entities have called for bans and/or tighter regulation of Telegram for reasons including its uncooperative response to requests for assistance from law enforcement, suspicions that the service facilitates content piracy, and its allowance of user anonymity. Indian telcos are also unhappy that services like Telegram – and WhatsApp – provide voice services but aren't governed by the same laws as licensed carriers. Durov's suggestion that Indian authorities have singled out Telegram is therefore hard to sustain. Durov also criticized the exam-time Telegram ban. \"This punishes 150M+ ordinary Telegram users in India – not the insiders who leaked the exam materials.\" he wrote, before observing that the scams and leaks that Indian authorities hoped to prevent would likely move to other apps. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks/5258866"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 15:31:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/networks/2026/06/19/telegram-founder-accuses-meta-of-sabotaging-access-in-india-with-bgp-hijacks/5258866"
+      },
+      "status": "supported"
+    }
+  ]
+}

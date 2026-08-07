@@ -1,0 +1,69 @@
+{
+  "subject": "the-delaney-hall-immigration-jail-u-s-human-rights-abuses-and-the-world-cup",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The Delaney Hall Immigration Jail, U.S. Human Rights Abuses, and the World Cup"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/delaney-hall-immigration-jail-us-human-rights-abuses-and-world-cup"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/delaney-hall-immigration-jail-us-human-rights-abuses-and-world-cup"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/delaney-hall-immigration-jail-us-human-rights-abuses-and-world-cup"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">The Delaney Hall Immigration Jail, U.S. Human Rights Abuses, and the World Cup</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-12T06:24:05+05:30\" title=\"Friday, June 12, 2026 - 06:24\" class=\"datetime\">Fri, 06/12/2026 - 06:24</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/yM5qW4Ns3aU?si=3GkMldaoh-4W4ucV\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>Delaney Hall is an immigration jail located in Newark, New Jersey. It has been the focal point of protests ever since it reopened last year, with detainee escapes, a hunger strike, and further demonstrations. Our guest is Clau O’Brien Moscoso, a Black Agenda Report contributor, member of <a href=\"https://blackallianceforpeace.com/\" rel=\"nofollow\">Black Alliance for Peace</a>, and a community organizer. She joins us from New Jersey to discuss the actions at Delaney Hall, mass deportation abuse, and connections with the call to boycott the World Cup.&nbsp;<br>&nbsp;</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/FIFA\">FIFA</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/World Cup\">World Cup</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/international sports\">international sports</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Human Rights\">Human Rights</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/People Centered Human Rights\">People Centered Human Rights</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Immigration\">Immigration</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Immigration and Customs Enforcement\">Immigration and Customs Enforcement</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/incerceration\">incerceration</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Delaney Hall\">Delaney Hall</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/delaney-hall-immigration-jail-us-human-rights-abuses-and-world-cup"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 12 Jun 2026 00:54:05 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/delaney-hall-immigration-jail-us-human-rights-abuses-and-world-cup"
+      },
+      "status": "supported"
+    }
+  ]
+}

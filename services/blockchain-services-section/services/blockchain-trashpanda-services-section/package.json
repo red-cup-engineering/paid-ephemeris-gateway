@@ -1,0 +1,55 @@
+{
+  "name": "@rsc-quiescent/blockchain-trashpanda-services-section",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Blockchain Trashpanda Services Section: deterministic pre-sign policy conformance, market-action admission, and x402 commercial boundary.",
+  "main": "src/server.mjs",
+  "exports": {
+    ".": "./src/server.mjs",
+    "./market-action-admission": "./src/market-action-admission.mjs",
+    "./x402-service": "./src/x402-service.mjs",
+    "./x402-settlement-witness": "./src/x402-settlement-witness.mjs",
+    "./settlement-witness": "./src/settlement-witness.mjs",
+    "./production-gate": "./src/production-gate.mjs",
+    "./virtuals-commercial-pilot-guard": "./src/virtuals-commercial-pilot-guard.mjs",
+    "./virtuals-commercial-pilot-runtime": "./src/virtuals-commercial-pilot-runtime.mjs",
+    "./virtuals-lite-commercial-pilot": "./src/virtuals-lite-commercial-pilot.mjs",
+    "./virtuals-lite-production": "./src/virtuals-lite-production.mjs",
+    "./virtuals-market-action": "./src/virtuals-market-action.mjs"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "start:deployment": "node src/deployment.mjs",
+    "check": "node --check src/*.mjs && node --check scripts/*.mjs && node --check test/*.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify:production-gate": "node src/production-gate.mjs",
+    "verify:formation": "node src/verify-enterprise-goal.mjs --cell formation && node src/verify-enterprise-goal.mjs --cell governance && node src/verify-enterprise-goal.mjs --cell economics",
+    "verify:production-goal": "node src/verify-production-goal.mjs",
+    "verify:goal": "node src/verify-enterprise-goal.mjs --all",
+    "verify": "npm run check && npm test && npm run verify:formation"
+  },
+  "dependencies": {
+    "@account-kit/infra": "4.84.1",
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/witness-journal-entry-service": "0.1.3",
+    "@red-cup-engineering/witness-journal-log-service": "0.1.3",
+    "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0",
+    "@red-cup-engineering/x402-services-section": "1.3.0",
+    "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",
+    "@virtuals-protocol/acp-node-v2": "0.1.8",
+    "ethers": "6.17.0",
+    "express": "5.2.1",
+    "socket.io-client": "4.8.1"
+  },
+  "overrides": {
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/relation-model-notation-runtime": "8.0.0",
+    "@ethersproject/providers": {
+      "ws": "8.21.1"
+    }
+  }
+}

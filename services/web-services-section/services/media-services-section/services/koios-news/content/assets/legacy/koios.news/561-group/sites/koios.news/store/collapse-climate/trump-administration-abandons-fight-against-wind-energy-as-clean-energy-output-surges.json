@@ -1,0 +1,69 @@
+{
+  "subject": "trump-administration-abandons-fight-against-wind-energy-as-clean-energy-output-surges",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Trump Administration Abandons Fight Against Wind Energy as Clean Energy Output Surges"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/trump-administration-abandons-fight-against-wind-energy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/15062026/trump-administration-abandons-fight-against-wind-energy/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/trump-administration-abandons-fight-against-wind-energy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The clean energy sector is showing resilience despite challenges thrown at it by a hostile White House, a recent report found. A string of legal victories has further dampened the Trump administration’s efforts to halt wind and solar power. By Aman Azhar The Trump administration has abandoned its effort to halt wind energy projects across the United States and dropped its challenge to the court ruling that tossed President Donald Trump’s order freezing federal permitting and leasing for wind projects. States that challenged the order hailed the development as one of the most significant legal victories against the Trump White House’s campaign against the energy transition."
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/trump-administration-abandons-fight-against-wind-energy/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Tue, 16 Jun 2026 00:18:34 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/trump-administration-abandons-fight-against-wind-energy/"
+      },
+      "status": "supported"
+    }
+  ]
+}

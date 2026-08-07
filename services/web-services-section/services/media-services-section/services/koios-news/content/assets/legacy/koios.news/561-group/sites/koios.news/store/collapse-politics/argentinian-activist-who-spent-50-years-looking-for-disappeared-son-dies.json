@@ -1,0 +1,69 @@
+{
+  "subject": "argentinian-activist-who-spent-50-years-looking-for-disappeared-son-dies",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Argentinian activist who spent 50 years looking for disappeared son dies"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Outpouring of public grief for Lidia ‘Taty’ Almeida, leader of group of mothers that has marched every week since 1977</p><p>The human rights activist Lidia “Taty” Almeida – who spent more than half a century searching for her son after he was forcibly disappeared by Argentina’s military junta – has died aged 95, prompting a public outpouring of grief.</p><p>Almeida, 95, was the president of the Mothers of Plaza de Mayo, made up of women who have marched around the square outside Argentina’s presidential palace <a href=\"https://www.theguardian.com/world/2017/apr/28/mothers-plaza-de-mayo-argentina-anniversary\">every Thursday since 1977</a>, demanding the return of children who were disappeared during the country’s 1976-1983 dictatorship.</p> <a href=\"https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 14:20:07 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.668Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.theguardian.com/world/2026/jun/15/argentine-activist-taty-almeida-dies-disappeared"
+      },
+      "status": "supported"
+    }
+  ]
+}

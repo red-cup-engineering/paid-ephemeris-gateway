@@ -1,0 +1,69 @@
+{
+  "subject": "listen-to-manufacturers-and-unions-high-electricity-prices-are-killing-industry-nils-pratley",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Listen to manufacturers and unions: high electricity prices are killing industry | Nils Pratley"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Make UK and TUC are right – ministers need a proper strategy to cut energy costs before there are more closures</p><ul><li><p><a href=\"https://www.theguardian.com/business/2026/jun/15/britain-faces-deindustrialisation-relief-energy-prices-survey-make-uk\">Britain ‘faces deindustrialisation’ without relief from high energy prices</a></p></li></ul><p>The manufacturing lobby group Make UK and the Trades Union Congress have picked a bad moment <a href=\"https://www.theguardian.com/business/2026/jun/15/britain-faces-deindustrialisation-relief-energy-prices-survey-make-uk\">to plead for urgent relief</a> for the nation’s industrial companies from sky-high electricity prices. The cabinet is <a href=\"https://www.theguardian.com/politics/2026/jun/14/cabinet-ministers-asked-to-look-for-cuts-to-fund-uk-defence-spending-increase\">tearing itself apart over defence spending</a>, so even a “one minute to midnight” call for an extra £3bn for manufacturers is likely to be shunted into the long grass until after the likely Labour leadership contest.</p><p>But the two bodies are correct on their main points. The cost of energy in the UK is a heavy drag on business competitiveness. Ministers’ talk about serious industrial revival is wishful thinking while UK companies are paying the highest electricity prices in the G7, including four times as much as US counterparts. High prices also cut across most of the big items on the government’s to-do list – everything from energy transition itself to, indeed, increasing domestic defence production.</p> <a href=\"https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 11:11:33 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/jun/15/manufacturers-unions-electricity-prices-make-uk-tuc"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "endpoints": [
+    {
+      "domain": "koios.news",
+      "serviceName": "koios-news-site",
+      "kind": "proxy",
+      "port": 18802,
+      "script": "serve",
+      "sse": false,
+      "ws": false
+    },
+    {
+      "domain": "newsroom.koios.news",
+      "serviceName": "koios-news-newsroom",
+      "kind": "proxy",
+      "port": 18803,
+      "script": "serve:newsroom",
+      "access": "keyed",
+      "sse": false,
+      "ws": false
+    }
+  ]
+}

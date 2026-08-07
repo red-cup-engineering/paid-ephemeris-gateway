@@ -1,0 +1,69 @@
+{
+  "subject": "the-restoration-of-farms-and-farmers-why-denmark-is-rethinking-industrial-agriculture",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The restoration of farms and farmers: Why Denmark is rethinking industrial agriculture"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/the-restoration-of-farms-and-farmers/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.resilience.org/stories/2026-06-15/the-restoration-of-farms-and-farmers/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/the-restoration-of-farms-and-farmers/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Farmer organisations should stop selling agriculture as just another industry and instead reclaim it as a mission rooted in land stewardship and care for animals and ecosystems. But with many farmers locked into debt and infrastructure that bind them to the current model, meaningful change can’t rest on farmers alone, the responsibility rests with society at large."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/the-restoration-of-farms-and-farmers/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 08:00:49 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://www.resilience.org/stories/2026-06-15/the-restoration-of-farms-and-farmers/"
+      },
+      "status": "supported"
+    }
+  ]
+}

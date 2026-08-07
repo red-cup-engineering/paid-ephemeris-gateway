@@ -1,0 +1,28 @@
+{
+  "kind": "metroplat.contract",
+  "id": "independent-editorial-assessment/editorial-assessment/v1",
+  "precondition": {
+    "id": "exact-editorial-material-received",
+    "description": "A customer supplies exact manuscript bytes, a deterministic standards reading, source and claim evidence, production provenance, and policy digests without filesystem authority."
+  },
+  "move": {
+    "id": "select-bounded-editorial-tool",
+    "description": "The provider contracts LISS for Sonnet inference under one provider-validated output schema. Sonnet writes a prose assessment and selects exactly one of submit_editorial_acceptance, submit_revision_request, or submit_editorial_refusal. The provider returns that selection and its complete upstream result without invoking the customer's tool.",
+    "domain": "editorial-assessment-demand",
+    "codomain": "validated-editorial-tool-selection-or-typed-refusal",
+    "partial": false,
+    "deterministic": false,
+    "effects": ["boundary", "inference", "evidence"]
+  },
+  "postcondition": {
+    "id": "editorial-selection-returned",
+    "description": "The customer receives one schema-validated tool selection bound to the exact manuscript and editorial context, plus prose grounds and provider receipts. Only customer-owned deterministic code may invoke the selected tool and create an editorial judgment."
+  },
+  "constraints": [
+    "the provider never reads or writes customer territory",
+    "free-form prose labels confer no publication authority",
+    "only submit_editorial_acceptance can nominate publication and customer law may still refuse it",
+    "all structured arguments are provider-validated as a bounded tool selection",
+    "provider or resource failure returns obstruction without silent resolicitation"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "understanding-entropy-as-a-constraint-on-economic-processes",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Understanding entropy as a constraint on economic processes"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/15/understanding-entropy-as-a-constraint-on-economic-processes/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://rwer.wordpress.com/2026/06/15/understanding-entropy-as-a-constraint-on-economic-processes/"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/15/understanding-entropy-as-a-constraint-on-economic-processes/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "from Luigi Capoani, Margarita Shnaider, and Martina Griseri and current issue of RWER Since entropy governs the degradation of energy and matter in all physical and biological processes, the economy – like any living system – must operate within the constraints of finite energy and material resources. Rather than presenting new empirical results or applied […]"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/15/understanding-entropy-as-a-constraint-on-economic-processes/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 20:27:57 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:18.168Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-degrowth",
+        "citation": "https://rwer.wordpress.com/2026/06/15/understanding-entropy-as-a-constraint-on-economic-processes/"
+      },
+      "status": "supported"
+    }
+  ]
+}

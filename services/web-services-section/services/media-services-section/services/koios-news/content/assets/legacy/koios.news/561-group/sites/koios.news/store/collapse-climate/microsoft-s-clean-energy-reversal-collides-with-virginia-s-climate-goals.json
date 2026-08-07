@@ -1,0 +1,69 @@
+{
+  "subject": "microsoft-s-clean-energy-reversal-collides-with-virginia-s-climate-goals",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Microsoft’s Clean Energy Reversal Collides With Virginia’s Climate Goals"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/microsoft-backpedals-on-climate-promises/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://insideclimatenews.org/news/15062026/microsoft-backpedals-on-climate-promises/"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/microsoft-backpedals-on-climate-promises/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Amid a data center boom in the state, the tech giant backpedals on a key climate promise. By Charles Paullin One of the world’s most profitable technology companies could be abandoning an ambitious clean-energy goal in Virginia as it races to build electricity-hungry data centers. Several of the company’s facilities are already operating in Virginia, the data center capital of the world , and more are planned, creating a tension with the state’s own climate commitments.&nbsp;"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/microsoft-backpedals-on-climate-promises/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 09:00:00 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.229Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://insideclimatenews.org/news/15062026/microsoft-backpedals-on-climate-promises/"
+      },
+      "status": "supported"
+    }
+  ]
+}

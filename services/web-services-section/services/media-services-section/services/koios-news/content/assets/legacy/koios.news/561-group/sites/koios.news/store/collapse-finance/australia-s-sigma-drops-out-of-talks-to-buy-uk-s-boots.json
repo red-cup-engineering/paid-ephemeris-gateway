@@ -1,0 +1,69 @@
+{
+  "subject": "australia-s-sigma-drops-out-of-talks-to-buy-uk-s-boots",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Australia’s Sigma drops out of talks to buy UK’s Boots"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>End of discussions on takeover estimated at $10bn extends uncertainty for 177-year-old British chain</p><p>The Australian pharmaceutical group Sigma Healthcare has dropped its pursuit of the UK retail chain Boots, abandoning a takeover estimated to be worth $10bn (£7bn).</p><p>Sigma, a wholesaler and retailer, said on Monday that a deal ​to buy the high street pharmacy business – which has 1,800 UK stores – would not meet its strategic ‌and capital investment objectives.</p> <a href=\"https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 06:52:59 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.481Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/business/2026/jun/15/sigma-healthcare-uk-boots-takeover"
+      },
+      "status": "supported"
+    }
+  ]
+}

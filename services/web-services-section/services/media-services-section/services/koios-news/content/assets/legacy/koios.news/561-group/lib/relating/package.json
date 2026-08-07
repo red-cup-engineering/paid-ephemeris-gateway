@@ -1,0 +1,236 @@
+{
+  "name": "@emsenn/relating",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "Relating — paraconsistent, transfinitely-valued linear logic of relations with categorical exports and POSIX-pipeable JSON-resource morphisms.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.scripts.json && chmod +x dist/scripts/*.mjs",
+    "prepack": "npm run rebuild",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "articulate-utterance": "./dist/scripts/articulate-utterance.mjs",
+    "induce-relation": "./dist/scripts/induce-relation.mjs",
+    "relate-relations": "./dist/scripts/relate-relations.mjs",
+    "predicate-articulation-cell": "./dist/scripts/predicate-articulation-cell.mjs",
+    "posit-predication-site": "./dist/scripts/posit-predication-site.mjs",
+    "settle-posit-presheaf": "./dist/scripts/settle-posit-presheaf.mjs",
+    "read-increments-of-settlement-filtration": "./dist/scripts/read-increments-of-settlement-filtration.mjs",
+    "read-firings-of-settlement-filtration": "./dist/scripts/read-firings-of-settlement-filtration.mjs",
+    "read-limit-stages-of-settlement-filtration": "./dist/scripts/read-limit-stages-of-settlement-filtration.mjs",
+    "read-non-scott-firings-of-settlement-filtration": "./dist/scripts/read-non-scott-firings-of-settlement-filtration.mjs",
+    "read-first-cohomology-of-settlement-filtration": "./dist/scripts/read-first-cohomology-of-settlement-filtration.mjs",
+    "read-closure-invariant-of-settlement-filtration": "./dist/scripts/read-closure-invariant-of-settlement-filtration.mjs",
+    "read-graded-gap-of-settlement-filtration": "./dist/scripts/read-graded-gap-of-settlement-filtration.mjs",
+    "read-graded-gap-first-cohomology-rank-identity-of-settlement-filtration": "./dist/scripts/read-graded-gap-first-cohomology-rank-identity-of-settlement-filtration.mjs",
+    "read-classification-of-settlement-filtration": "./dist/scripts/read-classification-of-settlement-filtration.mjs",
+    "read-depth-of-settlement-filtration": "./dist/scripts/read-depth-of-settlement-filtration.mjs",
+    "read-depth-finite-stage-judgment-of-settlement-filtration": "./dist/scripts/read-depth-finite-stage-judgment-of-settlement-filtration.mjs",
+    "read-firing-events-of-settlement-filtration": "./dist/scripts/read-firing-events-of-settlement-filtration.mjs",
+    "read-causal-order-of-settlement-filtration": "./dist/scripts/read-causal-order-of-settlement-filtration.mjs"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./articulating": {
+      "types": "./dist/articulating/index.d.mts",
+      "import": "./dist/articulating/index.mjs"
+    },
+    "./articulating/carriers": {
+      "types": "./dist/articulating/carriers.d.mts",
+      "import": "./dist/articulating/carriers.mjs"
+    },
+    "./articulating/predicating": {
+      "types": "./dist/articulating/predicating/index.d.mts",
+      "import": "./dist/articulating/predicating/index.mjs"
+    },
+    "./articulating/predicating/logic": {
+      "types": "./dist/articulating/predicating/logic.d.mts",
+      "import": "./dist/articulating/predicating/logic.mjs"
+    },
+    "./articulating/predicating/geometry": {
+      "types": "./dist/articulating/predicating/geometry/index.d.mts",
+      "import": "./dist/articulating/predicating/geometry/index.mjs"
+    },
+    "./articulating/predicating/geometry/spatial": {
+      "types": "./dist/articulating/predicating/geometry/spatial/index.d.mts",
+      "import": "./dist/articulating/predicating/geometry/spatial/index.mjs"
+    },
+    "./articulating/predicating/typed-theory": {
+      "types": "./dist/articulating/predicating/typed-theory/index.d.mts",
+      "import": "./dist/articulating/predicating/typed-theory/index.mjs"
+    },
+    "./articulating/predicating/positing": {
+      "types": "./dist/articulating/predicating/positing/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/index.mjs"
+    },
+    "./articulating/predicating/positing/logic": {
+      "types": "./dist/articulating/predicating/positing/logic/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/logic/index.mjs"
+    },
+    "./articulating/predicating/positing/settling": {
+      "types": "./dist/articulating/predicating/positing/settling/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/index.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/index.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/arithmetic": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/arithmetic.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/arithmetic.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/conservation": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/conservation.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/conservation.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/differential": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/differential.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/differential.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/evidence": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/evidence.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/evidence.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/laplacian": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/laplacian.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/laplacian.mjs"
+    },
+    "./articulating/predicating/positing/settling/analysis/spectral": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/spectral.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/spectral.mjs"
+    },
+    "./articulating/predicating/positing/settling/geometry": {
+      "types": "./dist/articulating/predicating/positing/settling/geometry/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/geometry/index.mjs"
+    },
+    "./articulating/predicating/positing/settling/geometry/temporal": {
+      "types": "./dist/articulating/predicating/positing/settling/geometry/temporal.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/geometry/temporal.mjs"
+    },
+    "./analysis": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/index.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/index.mjs"
+    },
+    "./analysis/conservation": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/conservation.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/conservation.mjs"
+    },
+    "./analysis/differential": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/differential.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/differential.mjs"
+    },
+    "./analysis/evidence": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/evidence.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/evidence.mjs"
+    },
+    "./analysis/laplacian": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/laplacian.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/laplacian.mjs"
+    },
+    "./analysis/spectral": {
+      "types": "./dist/articulating/predicating/positing/settling/analysis/spectral.d.mts",
+      "import": "./dist/articulating/predicating/positing/settling/analysis/spectral.mjs"
+    },
+    "./codecs": {
+      "types": "./dist/codecs/index.d.mts",
+      "import": "./dist/codecs/index.mjs"
+    },
+    "./codecs/exact-number": {
+      "types": "./dist/codecs/exact-number.d.mts",
+      "import": "./dist/codecs/exact-number.mjs"
+    },
+    "./codecs/html": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/html/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/html/index.mjs"
+    },
+    "./codecs/xml": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/xml/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/xml/index.mjs"
+    },
+    "./codecs/svg": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/xml/svg/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/xml/svg/index.mjs"
+    },
+    "./geometry": {
+      "types": "./dist/articulating/predicating/geometry/index.d.mts",
+      "import": "./dist/articulating/predicating/geometry/index.mjs"
+    },
+    "./holography": {
+      "types": "./dist/holography/index.d.mts",
+      "import": "./dist/holography/index.mjs"
+    },
+    "./holography/projecting": {
+      "types": "./dist/holography/projecting/index.d.mts",
+      "import": "./dist/holography/projecting/index.mjs"
+    },
+    "./package.json": "./package.json",
+    "./codecs/path": {
+      "types": "./dist/codecs/path/index.d.mts",
+      "import": "./dist/codecs/path/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/html": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/html/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/html/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json/schema": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/schema/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/schema/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json/jsonl": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt/triple": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt/triple/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/eavt/triple/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/datom": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/datom/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/json/jsonl/datom/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/text/markdown": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/text/markdown/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/text/markdown/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/toml": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/toml/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/toml/index.mjs"
+    },
+    "./codecs/path/object/attribute/file/flatfile/serialization/turtle": {
+      "types": "./dist/codecs/path/object/attribute/file/flatfile/serialization/turtle/index.d.mts",
+      "import": "./dist/codecs/path/object/attribute/file/flatfile/serialization/turtle/index.mjs"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "fast-check": "^4.8.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

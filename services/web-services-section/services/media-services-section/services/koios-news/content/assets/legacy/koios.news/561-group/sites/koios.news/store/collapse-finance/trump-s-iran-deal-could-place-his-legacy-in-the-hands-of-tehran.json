@@ -1,0 +1,69 @@
+{
+  "subject": "trump-s-iran-deal-could-place-his-legacy-in-the-hands-of-tehran",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Trump’s Iran deal could place his legacy in the hands of Tehran"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>He lambasted Jimmy Carter during the 1980 hostage crisis; now Trump’s presidency could be similarly blemished</p><p>It began with the fate of hostages.</p><p>Donald Trump’s <a href=\"https://www.brookings.edu/people/thomas-wright/\">first recorded foray into politics </a>was sparked by the 1979 takeover of the US embassy in Tehran, which saw 52 American diplomats held incommunicado for 444 days.</p> <a href=\"https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 08:00:27 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:37.757Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/world/2026/jun/19/trump-iran-deal-legacy"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "the-ocean-has-shielded-us-from-the-worst-of-climate-change-now-it-is-running-a-fever-karina-von-schuckmann",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The ocean has shielded us from the worst of climate change. Now it is running a fever | Karina Von Schuckmann"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Nearly every indicator of climate change is flashing red. But we still hold the tools available to bring the planet back into balance</p><p>The ocean is running a fever. In 2025, the number of days of marine heatwaves – prolonged spells when the sea turns abnormally, dangerously warm – was more than triple what it was in the early 1990s.</p><p>These are not abstract statistics. A severe and persistent marine heatwave bleaches coral reefs, strips away the kelp forests that shelter young fish, empties fishing grounds and – if occurring frequently – can tip whole ecosystems past the point of recovery.</p><p>Karina Von Schuckmann is an IGCC author and senior adviser of Mercator Ocean International</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Wed, 17 Jun 2026 10:00:28 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:53.555Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-climate",
+        "citation": "https://www.theguardian.com/commentisfree/2026/jun/17/ocean-fever-climate-change"
+      },
+      "status": "supported"
+    }
+  ]
+}

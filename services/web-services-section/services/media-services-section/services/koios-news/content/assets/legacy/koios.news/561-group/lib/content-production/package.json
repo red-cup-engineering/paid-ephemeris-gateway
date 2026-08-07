@@ -1,0 +1,63 @@
+{
+  "name": "@emsenn/content-production",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Content Production — content + computing: the content domain (@emsenn/content, the WHAT) run on the computer (@emsenn/computing, the HOW). Two modules: ./content-farm produces/enriches content (witnessed cultivation cycles — demand pull, story selection, drafting via ask, editorial gates, candidate projection, run trace, editorial work deposit, compost over withheld runs; each cycle a run on the computer with provenance articulating → predicating → positing → settling), and ./content-mill forms cultivated content for distribution (a publication's claim sets → feeds, sitemaps, robots, NewsArticle JSON-LD, h-entry bodies, ninjs, and the editorial-gate audit; web-free, returns strings/objects a site mounts on HTTP). Pure logic as scripts (./scripts), no transport — a generic server mounts the scripts over HTTP; koios.news is a parameterized server of this package. Absorbs the news/syndication family (newswire, newscable, newsroom) as that work folds in.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "content-farm": "./dist/scripts/farm.mjs",
+    "content-demand-pull": "./dist/scripts/demand-pull.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "farm": "pnpm run build && node dist/scripts/farm.mjs",
+    "prepack": "pnpm run rebuild",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./computer": {
+      "types": "./dist/computer/index.d.mts",
+      "import": "./dist/computer/index.mjs"
+    },
+    "./content-farm": {
+      "types": "./dist/content-farm/index.d.mts",
+      "import": "./dist/content-farm/index.mjs"
+    },
+    "./content-mill": {
+      "types": "./dist/content-mill/index.d.mts",
+      "import": "./dist/content-mill/index.mjs"
+    },
+    "./cable": {
+      "types": "./dist/cable/index.d.mts",
+      "import": "./dist/cable/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/computing": "workspace:*",
+    "@emsenn/content": "workspace:*",
+    "@emsenn/communicating": "workspace:*",
+    "@emsenn/relating": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false
+}

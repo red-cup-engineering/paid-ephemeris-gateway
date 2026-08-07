@@ -1,0 +1,69 @@
+{
+  "subject": "the-best-4k-wireless-tv-streamers-for-more-choice-with-no-aerial-required",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The best 4K wireless TV streamers for more choice – with no aerial required"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Want to prolong the life of your TV? A wireless TV box could be the answer. Our expert put top devices – from Freely streamers to Sky and Amazon Fire – through their paces</p><p>• <a href=\"https://www.theguardian.com/thefilter/2025/nov/18/do-you-really-need-to-buy-new-tv\"><strong>Do you really need a new TV? Simple ways to upgrade your current setup</strong></a><br></p><p>TV is changing – and so is the way we watch it. Forget that dusty aerial or unsightly satellite dish, you can now stream mainstream channels such as the BBC, ITV and others via Freely, alongside premium services such as Sky Atlantic, over wifi – and it doesn’t need to cost the earth.</p><p>Freely comes from the creators of Freeview and Freesat. It’s backed by the UK’s main public service broadcasters and is supported by a growing list of TV providers. Scroll the Freely programme guide, and you’ll find familiar channels such as Dave, Yesterday and W. To watch them, you just need a wireless TV box and wifi.</p><p><strong>Best Freely TV streamer:<br></strong>Manhattan Aero</p><p><strong>Best budget wireless TV stick:<br></strong>Amazon Fire 4K Max</p> <a href=\"https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 14:00:34 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T14:25:46.980Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theguardian.com/thefilter/2026/jun/19/best-wireless-tv-streaming-devices-tested-uk"
+      },
+      "status": "supported"
+    }
+  ]
+}

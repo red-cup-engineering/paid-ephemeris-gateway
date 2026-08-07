@@ -1,0 +1,69 @@
+{
+  "subject": "racist-mob-attacks-in-britain",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Racist Mob Attacks in Britain"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/racist-mob-attacks-britain"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.blackagendareport.com/racist-mob-attacks-britain"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/racist-mob-attacks-britain"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<span class=\"field field--name-title field--type-string field--label-hidden\">Racist Mob Attacks in Britain</span> <div class=\"field field--name-field-authors field--type-entity-reference field--label-above\"> <div class=\"field__label\">Authors</div> <div class=\"field__items\"> <div class=\"field__item\"><a href=\"https://www.blackagendareport.com/taxonomy/term/2425\" hreflang=\"en\">Black Agenda Radio with Margaret Kimberley</a></div> </div> </div> <span class=\"field field--name-uid field--type-entity-reference field--label-hidden\"><span>bareditors</span></span> <span class=\"field field--name-created field--type-created field--label-hidden\"><time datetime=\"2026-06-19T05:56:54+05:30\" title=\"Friday, June 19, 2026 - 05:56\" class=\"datetime\">Fri, 06/19/2026 - 05:56</time> </span> <div class=\"clearfix text-formatted field field--name-field-embed-link field--type-text-with-summary field--label-hidden field__item\"><p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/CfJ2TSrrio4?si=lydnooqe7MmETf9o\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></p> </div> <div class=\"clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item\"><p>On June 8th, a knife attack in Belfast, Northern Ireland, in the UK, was seen on video. The assailant was an African asylum seeker, and the victim was a local white resident. &nbsp;In the following days, mobs of white men attacked Black and brown migrants, setting fire to their homes, and families fled for their lives. Roger McKenzie is the international editor of the <a href=\"https://morningstaronline.co.uk/\" rel=\"nofollow\">UK-based Morning Star</a>, the only English-language socialist daily newspaper in the world. He joins us from Oxford to discuss this and other racist incidents and what they tell us about politics and racism in Britain.</p> </div> <div class=\"taxonomy__terms__container\"> <div class=\"taxonomy__term\"> <a href=\"https://www.blackagendareport.com/articlelist/International\">International</a> </div> </div> <div class=\"field field--name-tags1 field--type-entity-reference field--label-hidden field--items\"> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/UK\">UK</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/United Kingdom\">United Kingdom</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/Ireland\">Ireland</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/violence\">violence</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/white supremacy\">white supremacy</a> </div> <div class=\"field--item\"> <a href=\"https://www.blackagendareport.com/articles/riots\">riots</a> </div> </div>"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/racist-mob-attacks-britain"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:26:54 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://www.blackagendareport.com/racist-mob-attacks-britain"
+      },
+      "status": "supported"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "subject": "federal-reserve-board-announces-final-rule-that-establishes-data-standards-for-certain-information-collections",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Federal Reserve Board announces final rule that establishes data standards for certain information collections"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Federal Reserve Board announces final rule that establishes data standards for certain information collections"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 11 Jun 2026 15:00:00 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm"
+      },
+      "status": "supported"
+    }
+  ]
+}

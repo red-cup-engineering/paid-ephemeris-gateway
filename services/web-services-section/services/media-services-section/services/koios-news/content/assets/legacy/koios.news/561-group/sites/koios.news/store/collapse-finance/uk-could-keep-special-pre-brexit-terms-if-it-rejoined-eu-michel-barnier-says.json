@@ -1,0 +1,69 @@
+{
+  "subject": "uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "UK could keep special pre-Brexit terms if it rejoined EU, Michel Barnier says"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "<p>Exclusive: Former chief Brexit negotiator says staying out of euro and Schengen area would be ‘perfectly possible’</p><ul><li><p><a href=\"https://www.theguardian.com/world/2026/jun/18/michel-barnier-reflects-on-boris-brexit-and-the-eu-future\">‘Cynical to get power’: Michel Barnier on Boris Johnson, Brexit and the EU’s future</a></p></li></ul><p></p><p>Michel Barnier has said Britain could regain its special terms if it rejoined the EU and claimed it was becoming clearer every day to the British people that they would be stronger in Europe.</p><p>In an interview before the 10th anniversary of the Brexit referendum next week, the EU’s former chief Brexit negotiator said he could not see any obstacle to the UK keeping the pound and remaining outside the passport-free Schengen travel area should the country rejoin.</p> <a href=\"https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says\">Continue reading...</a>"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 18:00:10 GMT"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:54.515Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-finance",
+        "citation": "https://www.theguardian.com/politics/2026/jun/18/uk-could-keep-special-pre-brexit-terms-if-it-rejoined-eu-michel-barnier-says"
+      },
+      "status": "supported"
+    }
+  ]
+}

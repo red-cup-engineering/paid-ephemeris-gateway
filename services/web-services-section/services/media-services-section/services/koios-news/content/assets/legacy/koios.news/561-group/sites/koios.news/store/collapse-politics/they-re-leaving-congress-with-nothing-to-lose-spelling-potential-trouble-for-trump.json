@@ -1,0 +1,69 @@
+{
+  "subject": "they-re-leaving-congress-with-nothing-to-lose-spelling-potential-trouble-for-trump",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "They're leaving Congress with nothing to lose, spelling potential trouble for Trump"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/republicans-yolo-caucus-bill-cassidy-john-cornyn-thom-tillis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.npr.org/2026/06/18/nx-s1-5850389/republicans-yolo-caucus-bill-cassidy-john-cornyn-thom-tillis"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/republicans-yolo-caucus-bill-cassidy-john-cornyn-thom-tillis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "A trio of Senate Republicans are on their way out of Congress. Each has previously drawn President Trump's scorn and now each are seen as newly liberated to complicate his agenda if they choose. (Image credit: Kent Nishimura)"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/republicans-yolo-caucus-bill-cassidy-john-cornyn-thom-tillis"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Thu, 18 Jun 2026 16:48:41 -0400"
+      },
+      "time": {
+        "asserted": "2026-06-19T09:32:39.239Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-politics",
+        "citation": "https://www.npr.org/2026/06/18/nx-s1-5850389/republicans-yolo-caucus-bill-cassidy-john-cornyn-thom-tillis"
+      },
+      "status": "supported"
+    }
+  ]
+}

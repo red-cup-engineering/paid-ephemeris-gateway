@@ -1,0 +1,69 @@
+{
+  "subject": "red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Red Hat gives Ubuntu a bootc up the backside at Canonical shindig"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/15/red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig/5255608"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/06/15/red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig/5255608"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/15/red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig/5255608"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "UBUNTU SUMMIT At a Canonical event, we didn't expect a presentation on using Red Hat's container management tools, but if this is something you might need, it does sound useful. At Ubuntu Summit 26.04, Red Hat Principal Software Engineer Joseph Marrero Corchado presented a talk called Bootc: Use your container knowledge and infrastructure to build and deploy your Ubuntu hosts. Although Ubuntu is very strong in the desktop Linux space, in large corporate server environments, Ubuntu is just another distro among many. This can be a good thing: it is just another Linux distro, and that means that it's perfectly possible to deploy and manage it using existing FOSS tooling. Marrero introduced himself by saying that he works at Red Hat, but personally runs Ubuntu – and has been doing so for long enough that he has some original media from Canonical's ShipIt program, which the company discontinued in 2011. While we were surpised to see a Red Hat engineer presenting a talk at the summit, it's not unprecedented. System76's Pop!_OS distro is based on Ubuntu, but it overlaps with other distros as well. It has its own desktop and eschews Snap for Flatpak – and yet, at the previous Summit, System76 boss Carl Richell presented a talk about it. The year before, the Academy Software Foundation's talk started by telling us that Rocky Linux strongly dominated the SFX industry. Our plan here isn't to recap the entire talk. It's up on YouTube now, and if this is the sort of thing that sounds interesting, it's probably a good use of 42 minutes of your time. bootc grows up We've mentioned the bootc toolchain a few times on The Register. Back in April 2024, we reported that Fedora 40's immutable editions were being rebuilt as bootable containers. Two years and four more Fedora releases later, the toolchain is getting more mature, as we covered in April with Fedora 44, and we linked to Quentin Joly's explainer, Bootc and OSTree: Modernizing Linux System Deployment, which is still one of the best we've read. Now bootc has graduated to the point of being a CNCF incubator project. The new project website has a slightly better explanation: Transactional, in-place operating system updates using OCI/Docker container images. The tools for creating and managing OCI containers are familiar to many sysadmins now, and the idea of bootc is to make it possible to manage complete OS images, either for VMs or for bare metal, using the same tooling. Marrero explained bootc by saying that it lets you perform OS installations and upgrades with OCI containers, which lets you define and ship your customized images of the Ubuntu OS as OCI container images. This allows transactional in-place updates, with rollback. This tech is already in real-world public-facing use: SteamOS uses bootc, and he pointed to the Bootcrew project, which maintains a growing collection of bootc images of different OSes, including Ubuntu, SteamOS, openSUSE, and Debian. What's special about these images is that each one is a container, but with a kernel. So this means that it can run on metal, but you can run (and test) it in continuous integration as well. Ubuntu on bootc is still Ubuntu; it's just a different way to deploy it. Doing it this way is an alternative to Canonical's own Ubuntu-image system, which uses standard Ubuntu and Canonical tools, the apt command, normal repositories, and so on. Instead, bootc uses container tools and container images, and a container registry in place of Ubuntu's apt repositories. Marrero has his own experimental Ubuntu-bootc image on GitHub, whose description says: An Ubuntu 26.04 LTS (\"Resolute Raccoon\") bootable container image with cloud-init and podman built-in, designed for use with bootc and bcvk. (For the record, bcvk is the bootc virtualization kit, which \"helps launch ephemeral VMs from bootc containers, and also create disk images that can be imported into other virtualization frameworks.\") The idea is that this lets you manage and deploy a server, cloud, or desktop OS, along with all its tools and all its applications, from a single central point that you control. This replaces a whole raft of configuration management tools, including local update management, and eliminates the need for tools such as \"Puppet, Chef, or shell automation.\" The images are constructed using composefs – specifically, the Rust-based composefs-rs – which in turn builds on existing and established Linux tools such as overlayfs, the EROFS read-only filesystem, and fsverity for integrity-checking. He noted that some of Ubuntu's metadata initially stopped composefs from working, but he and the Bootcrew team found it and fixed it. He also offers an Ubuntu 26.04 LTS with bootc – Getting Started Guide, which \"walks you through converting an Ubuntu 26.04 LTS VM into a bootc-managed system using composefs. By the end you will have an immutable, image-based Ubuntu system that can be updated atomically via container images.\" He also demonstrated the tech live on stage using a few demonstration images he'd built beforehand. First, he deployed an empty default Ubuntu installation, with no additional tools. Running it under QEMU took just a couple of seconds. Then, by adding another single-line container file layered on top, he added the tmux terminal multiplexer. He also used wget to demonstrate that no web server was running and the VM didn't respond to HTTP requests, then switched the existing VM to a different image with Apache and a demo page installed, which took only about a second to deploy, followed by a VM reboot. He also demonstrated that it really was Ubuntu, that snapd was present and working, and installed LXD to prove the point. The \"bootable containers\" toolchain has visibly matured since we first encountered it, and the demo was quite impressive. This vulture is very happy that he no longer has to run servers for a living, and is positively delighted that he has no use for any of these tools. Even so, it's impressive to see that without all that much work, Ubuntu can be slotted into a very different set of management tools and function quite happily. ®"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/15/red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig/5255608"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 15 Jun 2026 17:54:00 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-16T03:57:41.750Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/06/15/red-hat-gives-ubuntu-a-bootc-up-the-backside-at-canonical-shindig/5255608"
+      },
+      "status": "supported"
+    }
+  ]
+}

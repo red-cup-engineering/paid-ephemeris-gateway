@@ -1,0 +1,69 @@
+{
+  "subject": "a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "A bold satellite rescue mission came together in record time, but will it work?"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://arstechnica.com/space/2026/06/a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work/"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "WALLOPS ISLAND, Virginia—Just 10 months ago, NASA asked three companies if they could do something nobody had done before. Could they build and launch a satellite to save a $500 million astronomy mission at risk of crashing back to Earth? What's more, could they do it in less than a year on a tight budget? Katalyst Space Technologies, a startup founded in 2020, presented the most compelling solution. \"T hey came back with a response that was technically and programmatically plausible, and then we were like, 'Yeah, let’s do it,'\" said Shawn Domagal-Goldman, director of NASA's astrophysics division. That was in August of last year. In September, NASA awarded Katalyst a $30 million contract to build, test, and launch a small satellite to chase down Swift and latch onto it with three robotic arms. Then, Katalyst's Link servicing spacecraft will boost Swift's orbit back to a safe operating altitude, allowing it to resume scientific observations. Easier said than done. Read full article Comments"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work/"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Fri, 19 Jun 2026 00:39:30 +0000"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://arstechnica.com/space/2026/06/a-bold-satellite-rescue-mission-came-together-in-record-time-but-will-it-work/"
+      },
+      "status": "supported"
+    }
+  ]
+}

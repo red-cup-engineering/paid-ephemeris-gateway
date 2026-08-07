@@ -1,0 +1,69 @@
+{
+  "subject": "the-country-they-never-left",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "The country they never left"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-country-they-never-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://africasacountry.com/2026/06/the-country-they-never-left"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-country-they-never-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "The 2026 FIFA Men’s World Cup is going to be the most cosmopolitan tournament in football history. Across the 48 qualified nations, more teams than ever are drawing on players raised beyond their borders, turning the competition into a showcase not only of footballing talent but also of new identities. These increasingly global squads have emerged for different reasons. In some cases, they are the legacy of colonial ties that continue to bind former empires to their diasporas. In others, they are the product of generations of economic migration, with children and grandchildren of expatriates choosing to represent the countries their families left behind. And sometimes, they serve an even deeper purpose: helping to reconnect a nation with people who were scattered across the world by war. Unsurprisingly, this trend is most evident across the Global South. African nations have undoubtedly been among its greatest beneficiaries, while countries such as Curaçao have effectively built their qualification around diaspora talent. Yet some of the tournament’s most compelling stories can be found in the Balkans, where Bosnia and Herzegovina is still grappling with the demographic and emotional legacy of conflict and displacement. Of the 289 players at this World Cup who will represent a country other than the one in which they were born, 17 are part of Bosnia’s squad. Four were born in Germany, three in Sweden, two each in Austria and Serbia, and one in Croatia, Switzerland, Denmark, Slovenia, and the United States, respectively. Few, however, embody the country’s story more completely than Esmir Bajraktarević. The 21-year-old PSV Eindhoven winger carries that legacy in his very surname. It derives from the Turkish word bayrakta — “standard-bearer” — the soldier entrusted with carrying his regiment’s flag into battle and keeping it aloft amid the turmoil of battle. And if we accept George Orwell’s famous provocation in his 1945 essay “The Sporting Spirit” — that football is nothing more than “war minus the shooting” — then the winger born in 2005 has simply answered a centuries-old call to arms. First came the decisive goal against Romania that threw the door open to the playoffs. Then the ice-cold composure from the penalty spot in the winner-takes-all decider against Italy. In the space of just a handful of matches, the 21-year-old has carried an entire nation on his shoulders, raising the Bosnian flag once again and planting it firmly on the grand stage of the 2026 World Cup. Just as one of his ancestors may once have done on the battlefield, Bajraktarević has led his people on their only second World Cup campaign in Bosnia and Herzegovina’s 34-year history as an independent nation. At a time when the rapid rise of the far right across the world is emboldening the secessionist ambitions of Bosnian Serb and Bosnian Croat nationalists, exposing the fragility of the Dayton Accords that brought the Bosnian War to an end in 1995, this achievement carries an even deeper significance. It has reminded the world that this country exists — and that it is home to people who continue to resist for its survival, much like Bajraktarević’s parents, Elmir and Emina, who lived through wartime themselves. Originally from a village near Srebrenica, the — site of the worst atrocity of the genocide perpetrated by Bosnian Serb forces against Bosnia’s Muslim population during the 1990s — they remained in the enclave throughout the war. After the conflict ended, they moved to Switzerland, where they spent a year before emigrating to the United States, where Esmir was born. For Bajraktarević, then, competing at the World Cup in the US will amount to a paradoxical homecoming. Yet, as he has recalled in several interviews, home has always smelled of Bosnian food and echoed with Bosnian songs. “I’ve always felt Bosnian. [ . . . ] Deep down, ever since I was a kid, I always knew that one day I would play for Bosnia,” he told ESPN NL a few months ago. In the same interview, he revisited an old video of himself playing football in the family garden while wearing the shirt of his childhood idol, Edin Džeko — the very same Džeko he would later set up for a goal on his debut against the Netherlands in the 2024–2025 Nations League. Together with Atalanta’s defender Sead Kolašinac, Džeko has become much more than the captain and all-time leading scorer of the national team, with 73 goals in 148 appearances. Today, “Babuka” — a nickname derived from the word for “father” and a reflection of the role he plays within the squad — serves as a mentor to a new generation of talent. There will be 22 teenagers at the World Cup, and three of them are in Bosnia’s squad. Another six players are between 20 and 23 years old, bringing the team’s average age to just 25.9 at the time the final squad was announced. Like Bajraktarević, many of these players were born and raised abroad. For them, answering Bosnia’s call-up represents more than a footballing opportunity; it is the final step in reconnecting with a homeland they inherited before they ever truly knew it. One of the lines in a song by Doppelganger, the Italian-Bosnian rapper behind the World Cup anthem that has become a favorite among many of the players, goes: “I come from a place I will never return to.” It is a sentiment that resonates with much of the Bosnian diaspora. One day, Bajraktarević and many of his teammates may find it difficult to return and build their lives in Bosnia. Playing for the national team, then, becomes a symbolic act of return: a way of reclaiming a country that distance, history, and circumstance have kept just out of reach. All of this makes it even more important for Bosnia to maintain strong ties with these players, who may gradually drift further away from the country over time — especially if the football federation fails to follow and support them. That is because, unlike neighboring Serbia and Croatia, Bosnia cannot rely on elite youth academies such as those of Red Star Belgrade or Hajduk Split, which consistently produce top-level talent for their respective national teams. Like many African countries that lack a strong domestic league, Bosnia must turn to its diaspora, scattered across the globe, to remain competitive. The key difference compared to previous generations in Bosnia lies with the age at which players commit to the national team. Since the arrival of Emir Spahić, technical director and captain of the side that reached Bosnia’s first World Cup in 2014, and Sergej Barbarez, the national team manager and one of the country’s greatest footballing icons, the approach has changed. Bosnian players developing abroad are no longer contacted only after they have already broken through. The average age of recruits has fallen because Spahić and Barbarez, together with the coaching staff and particularly former Rangers defender Saša Papac, now head of scouting, have been working to build a more structured recruitment network. Their goal is to identify the most promising Bosnian-origin talents around the world and reach them before they make a senior appearance for the countries in which they were born and raised. This proactive approach has helped secure commitments from players such as Bajraktarević and Kerim Alajbegović, another potential star who, at just 18 years old and after an outstanding first season in senior football, could have waited for a call-up from Germany. The challenge for recruitment was not necessarily convincing players to represent their parents’ homeland. Bosnian identity is often nurtured within the family, regardless of where people live. What was needed was a clear project, a credible vision that could be presented to both players and their families. That is precisely what Spahić and Barbarez have also provided to Ermin Mahmić, the latest addition to the project. The attacking midfielder, the same age as Bajraktarević, was regarded as one of the brightest prospects in Austria’s Under-21 setup. Yet, on the verge of breaking into the senior national team, he chose to switch his international allegiance to Bosnia. The decision caused considerable frustration within the Austrian Football Association. Mahmić secured the necessary paperwork to represent Bosnia at the World Cup shortly before the start of the team’s training camp and made his debut in the farewell friendly against North Macedonia. Sporting director Peter Schöttel publicly lamented Mahmić’s choice and even called for the introduction of compensation rules for national associations that invest in the development of young players only to see them represent another country at the senior level. Barbarez specifically wanted the match to be played in Sarajevo so that his players could experience the euphoria of a nation that had been waiting twelve years for a moment like this. The national team bid farewell to its supporters in front of a packed Koševo Stadium, with more than 30,000 fans turning the occasion into a celebration of a historic achievement. Since March 31, the day of the game against Italy, the yellow and blue of the Bosnian flag have filled the streets of the capital and cities across the country. National team shirts are on display at every market stall, even those with no connection to football whatsoever. And Bajraktarević is, without question, the surname on everyone’s back. Adults and children alike have become captivated by the young winger. Yet among the youngest supporters, it is not the penalty he converted past Gianluigi Donnarumma that has lingered most vividly in the memory, but rather the audacious extra time rabona cross he attempted with the outcome still hanging in the balance. With that piece of skill — ineffective in that moment, yet also spectacular and full of promise — Bajraktarević seemed to deliver a message to his compatriots. Regardless of the stature of the opponent, challenges must be met with personality, courage, and an unwavering belief in one’s own abilities. And only in this way can the national team, and a people without a regular army and with few weapons to defend their homeland, dare to dream of achieving something special at the World Cup. One in which qualification was richly deserved, yet still wholly unexpected."
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-country-they-never-left"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "2026-06-15T16:33:23.203673Z"
+      },
+      "time": {
+        "asserted": "2026-06-20T08:19:20.341Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-decolonization",
+        "citation": "https://africasacountry.com/2026/06/the-country-they-never-left"
+      },
+      "status": "supported"
+    }
+  ]
+}

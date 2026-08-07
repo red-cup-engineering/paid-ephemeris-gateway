@@ -1,0 +1,69 @@
+{
+  "subject": "microsoft-fixes-vs-code-after-app-gives-copilot-credit-for-human-s-work",
+  "claims": [
+    {
+      "id": "title",
+      "proposition": {
+        "predicate": "title",
+        "object": "Microsoft fixes VS Code after app gives Copilot credit for human's work"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/04/microsoft-fixes-vs-code-after-copilot-credited-human-code/5223936"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "url",
+      "proposition": {
+        "predicate": "url",
+        "object": "https://www.theregister.com/software/2026/05/04/microsoft-fixes-vs-code-after-copilot-credited-human-code/5223936"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/04/microsoft-fixes-vs-code-after-copilot-credited-human-code/5223936"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "summary",
+      "proposition": {
+        "predicate": "summary",
+        "object": "Imagine working your butt off on a project, only to have VS Code put an attribution into your commit that says Copilot helped you, even if it did not. Microsoft has reversed a change that added a default AI attribution notice after user complaints that the bot was claiming credit for human-authored code. The initial change – a pull request – altered VS Code's Git extension to add \"Co-authored-by: Copilot\" to commits that involved some level of AI assistance. This was done in VS Code 1.110 in early March. The settings change was intended to \"[add] the trailer for all AI-generated code, including inline completions.\" But developers said the AI authorship line got added even when not using Microsoft's Copilot AI assistant and when chat features had been disabled. And many expressed dissatisfaction with Microsoft activating the AI notice by default. \"The most concerning part is that I had already checked the commit message before committing,\" wrote one developer in a GitHub community discussion post last week. \"I deleted Copilot's generated English commit message and manually wrote my own commit message instead. However, after the commit was created, the final Git history still contained the Copilot co-author line. \"This means the message I reviewed before committing was not the final content that ended up in Git history, or Copilot/VS Code added co-author metadata after my manual edit. That is unacceptable in a professional development workflow.\" Over the weekend, Dmitriy Vasyura, the VS Code reviewer who initially approved the pull request, apologized in a forum post for approving the change without checking to see how it would be received. \"There was no ill intent by [an] evil corporation, but rather a desire to support functionality that some customers expect of VS Code [with regard to] AI-generated code,\" he wrote. He conceded that the implementation should respect when AI features have been disabled and should not misreport commit authorship. The fix, authored on May 3, is scheduled to appear in VS Code's upcoming 1.119 release. It changes the default setting for appending the Copilot authorship trailer back to opt-in. As Vasyura observed, other AI tools self-report their involvement. Last year, developers using Anthropic's Claude Code raised similar concerns about the AI agent automatically adding \"Co-Authored-By: Claude\" to commits. That remains the default for Claude Code and there are several open issues asking for the attribution line to be disabled by default. OpenAI's Codex started offering attribution by default in February. It can be disabled through the commit_attribution flag in the config.toml file. Software projects have developed their own standards for documenting AI code contributions. The Linux project, for example, requires humans to sign off on code contributions and to have AI assistance recorded in an attribution notice. The Zig project, on the other hand, forbids AI-assisted code submissions. As far as VS Code is concerned, developers mainly want the attribution trailer to be opt-in rather than opt-out – and they're annoyed Microsoft made that change unilaterally. But the inclusion of AI credit in code commits raises some tricky questions. Given that purely AI-generated content may not qualify for copyright protection, having that notice potentially complicates commercial usage of AI tools. When an AI agent has written some code, the question then becomes whether there was sufficient human involvement in the AI-code generation process to qualify for intellectual property protection. And organizations might not have the necessary workflow documentation processes in place to clarify that issue, were it ever to come up in litigation. There are also liability scenarios in which an AI attribution notification could complicate software-related disputes. For example, some insurers have reportedly balked at providing business liability insurance where AI is involved. So documenting AI involvement could give insurers leverage to wash their hands of related claims. What's more, a generic AI attribution notice does not clarify whether the agent wrote 100 percent of the code or whether it performed inconsequential autocompletions. Then there's the general social backlash against AI-generated content. In some circles, AI involvement in creative work is anathema. It's complicated, particularly when different AI systems have different standards for when AI authorship should be noted. VS Code is letting developers opt-in to Copilot attribution trailers; Anthropic and OpenAI have developers opt-out of their notices; and image generation models like Google Nano Banana add AI watermarks automatically, without the option to disable them. Meanwhile, not one commercial AI model credits the human authors who created their training material – unless forced to do so in court. ®"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/04/microsoft-fixes-vs-code-after-copilot-credited-human-code/5223936"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "published",
+      "proposition": {
+        "predicate": "published",
+        "object": "Mon, 04 May 2026 23:13:34 +0200"
+      },
+      "time": {
+        "asserted": "2026-06-19T07:30:55.775Z"
+      },
+      "force": "alleges",
+      "provenance": {
+        "witness": "collapse-tech",
+        "citation": "https://www.theregister.com/software/2026/05/04/microsoft-fixes-vs-code-after-copilot-credited-human-code/5223936"
+      },
+      "status": "supported"
+    }
+  ]
+}

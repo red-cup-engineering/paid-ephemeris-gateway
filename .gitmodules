@@ -25,3 +25,6 @@
 [submodule "services/web-services-section/services/media-services-section/services/koios-news/services/newscable-source-broker"]
 	path = services/web-services-section/services/media-services-section/services/koios-news/services/newscable-source-broker
 	url = https://github.com/causeway-services/newscable-source-broker.git
+[submodule "services/public-web-services-section"]
+	path = services/public-web-services-section
+	url = https://github.com/causeway-services/public-web-services-section.git

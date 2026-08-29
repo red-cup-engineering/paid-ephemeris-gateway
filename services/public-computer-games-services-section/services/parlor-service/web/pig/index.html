@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pig — parlor.561.group</title>
+<meta name="description" content="Pig: hold-or-roll, first to 100. Every decision shows the computed bust probability and expected value of rolling again. Earn-only, no wagering.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/parlor-kernel/seed": "/vendor/parlor-kernel/seed.mjs",
+    "@red-cup-engineering/parlor-kernel/dice": "/vendor/parlor-kernel/dice.mjs",
+    "@red-cup-engineering/parlor-kernel/turns": "/vendor/parlor-kernel/turns.mjs",
+    "@red-cup-engineering/parlor-kernel/board": "/vendor/parlor-kernel/board.mjs",
+    "@red-cup-engineering/parlor-kernel/tally": "/vendor/parlor-kernel/tally.mjs",
+    "@red-cup-engineering/parlor-kernel/odds": "/vendor/parlor-kernel/odds.mjs",
+    "@red-cup-engineering/parlor-kernel/reels": "/vendor/parlor-kernel/reels.mjs",
+    "@red-cup-engineering/parlor-kernel/disclosure": "/vendor/parlor-kernel/disclosure.mjs",
+    "@red-cup-engineering/parlor-kernel/replay": "/vendor/parlor-kernel/replay.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">Pig</span>
+  <nav class="game-nav" aria-label="Parlor games">
+    <a href="../pig/" aria-current="page">Pig</a>
+    <a href="../farkle/">Farkle</a>
+    <a href="../yacht/">Yacht</a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label">—</code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="table-panel">
+    <div class="earn-banner">Practice scorekeeping only. Nothing is staked, nothing is wagered, no currency of any kind enters or leaves.</div>
+
+    <p class="turn-banner" id="turn-banner" aria-live="off">Loading…</p>
+    <div class="dice-row">
+      <button id="die" class="die die--pending" type="button" aria-label="Roll the die" disabled>—</button>
+    </div>
+    <p class="turn-total">Turn total: <span id="turn-total-value">0</span></p>
+
+    <div class="odds-panel" aria-live="polite">
+      <h2>Computed odds — rolling again right now</h2>
+      <div class="odds-grid">
+        <div class="odds-figure"><span class="label">Bust probability (roll a 1)</span><span class="value" id="odds-bust">—</span></div>
+        <div class="odds-figure"><span class="label">Expected pip if you don't bust</span><span class="value" id="odds-continue">—</span></div>
+        <div class="odds-figure"><span class="label">Expected value of rolling again</span><span class="value" id="odds-ev">—</span></div>
+        <div class="odds-figure"><span class="label">Value of holding now</span><span class="value" id="odds-hold">—</span></div>
+      </div>
+    </div>
+
+    <div class="action-row">
+      <button id="btn-roll" class="action-button action-button--primary" type="button">Roll <kbd>R</kbd></button>
+      <button id="btn-hold" class="action-button" type="button">Hold <kbd>H</kbd></button>
+      <button id="btn-new-daily" class="action-button" type="button">Today's game <kbd>T</kbd></button>
+      <button id="btn-new-random" class="action-button" type="button">New random game <kbd>N</kbd></button>
+    </div>
+
+    <div id="status-panel" class="status-panel" aria-live="polite"></div>
+
+    <div class="log-panel">
+      <strong>Log</strong>
+      <ol id="log-list" reversed></ol>
+    </div>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Score</h2>
+    <table class="score-table" id="score-table"><tbody></tbody></table>
+
+    <h2>Rules</h2>
+    <p class="help-panel">Roll a die each turn and add it to your turn total. Roll a 1 and you lose the whole
+      turn total. Hold to bank your turn total and pass the turn. First to <span id="target-value">100</span>
+      wins. <code>bot</code> plays the exact EV sign shown above — beating it means beating the odds knowingly.</p>
+
+    <h2>Keyboard</h2>
+    <p class="help-panel">
+      <kbd>R</kbd> roll · <kbd>H</kbd> hold · <kbd>T</kbd> today's game · <kbd>N</kbd> new random game.
+      Every control is also a plain focusable button — Tab and Enter/Space work throughout.
+    </p>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <span>Rules and odds computed live by <code>@red-cup-engineering/parlor-kernel</code>. Determinism: the same seed always deals the same dice.</span>
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="../js/app-pig.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

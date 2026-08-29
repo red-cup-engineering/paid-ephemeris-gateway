@@ -1,0 +1,27 @@
+{
+  "id": "crucible",
+  "displayName": "Crucible",
+  "description": "A daily-seeded settling puzzle: the day's tangle (a reaction network of claims and bonds) must be brought to zero-H1 settlement by merge/split/rebond/catalyze moves, and every move's energy cost is the real obstruction mathematics (spatial/temporal H1, settling regime) of @lenticule-science/metrologic, not a designer spreadsheet.",
+  "subdomain": "crucible",
+  "entryPoints": {
+    "browser": "/web/index.html"
+  },
+  "seedPolicy": {
+    "kind": "daily-utc"
+  },
+  "intentLog": {
+    "schemaVersion": "crucible-v1"
+  },
+  "status": "playable",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "obstruction-theory",
+    "daily-puzzle",
+    "cohomology",
+    "settling",
+    "waidan",
+    "puzzle"
+  ],
+  "shelf": "Puzzle Den"
+}

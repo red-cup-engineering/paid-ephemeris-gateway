@@ -1,0 +1,3 @@
+# Public Computer Games Services Section
+
+This is Cowrie Games, packaged as `@causeway-services/cowrie-games` — the Causeway Services games label, described in its own `package.json` as "the public shelf of 561 games, free-to-play, earn-only, kind by executable test." Its children are individual game services: `solitaire-service`, `be-not-so-fearful-service`, `durante-services-section`, `stoke-service`, `gambling-trainer-service`, `education-platform-service`, `lantern-service`, `parlor-service`, `okaga-services-section`, `ruinfold-services-section`, `flickering-delve-service`, `onestone-service`, `crucible-service`, `fyreside-services-section`, and `you-are-conscious-service`.

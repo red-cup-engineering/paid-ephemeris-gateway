@@ -1,0 +1,17 @@
+{
+  "_comment": "Spec event-log-append:2026.05.09+event-log-append §6.4 — Audit firing (pass regime). Fixture: a code-survey result with exactly one match at the canonical call site. Test posts these cells to substrate, expects the auditing-codepath-uniqueness rule to fire on the pass branch and produce audit-state: ok.",
+  "survey": {
+    "id": "code-survey:2026-05-09-pass-fixture",
+    "target_pattern": "<root>/<event-log-dir>/<YYYY-MM-DD>.jsonl",
+    "open_mode": "a",
+    "match_locations": [
+      "pyfars.runtime.event_log.EventLog.append"
+    ],
+    "completed_at": "2026-05-09T17:00:00Z"
+  },
+  "expected_cells_after_firing": [
+    {"entity": "event-log-append-call-site", "predicate": "audit-state", "value": "ok", "bilattice": "t"},
+    {"entity": "event-log-append-call-site", "predicate": "last-audited-at", "value": "2026-05-09T17:00:00Z", "bilattice": "t"}
+  ],
+  "expected_findings": []
+}

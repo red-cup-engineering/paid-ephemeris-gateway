@@ -1,0 +1,10 @@
+{
+ "wingId": "orgsample",
+ "dialect": "org",
+ "dialectReason": "explicit override",
+ "degradations": [
+  "No hard-door convention was found in this vault — every door comes from links between notes, promoted from soft to hard.",
+  "This is a minimal v1 org-mode reader: PROPERTY drawers, TODO states, and [[id:...]] org-roam links are not read. See @561-group/vault-compiler's README for the full disclosed scope."
+ ],
+ "sourceDir": "/tmp/claude-1000/-home-emsenn-info/47cac153-3148-4572-abf7-955708e564d4/scratchpad/org-sample"
+}

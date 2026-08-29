@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/work",
+  "$comment": "Something someone does that costs them something and leaves the world different than it would have been. Both halves are load-bearing. If it costs nothing it is play or rest, not work. If the world would have gotten there anyway it is weather, not work — the theory calls the difference natural-history: what happens on its own, for free. Work is what you spend yourself to make happen instead. This is the plain sense and it is also the formal one: a work-act costs strictly more than nothing, and lands somewhere the world was not already headed.",
+  "type": "object",
+  "required": [
+    "name",
+    "from",
+    "to",
+    "cost"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the work is called, as it is said: 'writing a report about the baseline of a micro-enterprise'."
+    },
+    "from": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The state it starts from."
+    },
+    "to": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The state it leaves behind. Must differ from what would have happened anyway — if it does not, nothing was done."
+    },
+    "cost": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What it spends that does not come back — attention, hours, goodwill, money. Strictly more than nothing: work recorded as free is play, rest, or weather wearing a work's name."
+    },
+    "otherwise": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What happens if nobody does it. Worth writing down where it is not obvious, because it is the only thing 'to' can be compared against — and comparing them is how you tell work from weather."
+    },
+    "needs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "What the doer must be able to do for that cost to be the real cost. More capability never makes the same work cost more, so a cost quoted without saying who could pay it is a cost nobody can reproduce."
+    }
+  },
+  "$comment-absences": "No worker: who does it belongs to the relation that assigns it — an office's deontic profile is where the doer enters. Naming the worker here would stop the work from being assignable to anyone else. No done key: whether it happened is something you check, not something the record claims about itself. No duration: cost is what does not come back, and time is one way of saying it, never the thing itself.",
+  "x-source": {
+    "derived-from": "what-is-the-theory-of-work.md — Invariant 1 (counterfactual: without divergence there is no work, only happening) and Invariant 2 (cost: without depletion there is no work, only play or rest)"
+  },
+  "x-provenance": {
+    "recorded-by": "claude/configuration-manager",
+    "recorded-on": "2026-07-15"
+  },
+  "title": "work"
+}

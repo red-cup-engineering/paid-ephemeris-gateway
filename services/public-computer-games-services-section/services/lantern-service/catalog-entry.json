@@ -1,0 +1,30 @@
+{
+  "id": "lantern",
+  "displayName": "Lantern",
+  "description": "A digital garden and knowledge vault, gamified: a wing of your own notes compiles into a walkable map, lit room by room as FSRS-lite spaced repetition keeps each fact fresh in memory.",
+  "subdomain": "lantern",
+  "entryPoints": {
+    "browser": "/",
+    "headless": "src/srs.mts (pure module export: reviewCard(state, grade, now) importable directly, no server needed)"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "seedPolicyNote": "No seed is actually consumed -- SRS state is not seed-derived. 'on-demand' is the closest-fit placeholder; see spec section 1.2's Lantern fit note.",
+  "intentLog": {
+    "schemaVersion": "lantern-v1"
+  },
+  "status": "playable",
+  "statusNote": "No seed, no ledger -- the 'cartridge without an economy' case the spec names explicitly.",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "spaced-repetition",
+    "knowledge-garden",
+    "srs",
+    "fsrs",
+    "study",
+    "digital-garden"
+  ],
+  "shelf": "Study"
+}

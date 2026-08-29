@@ -1,0 +1,8 @@
+# Deliberately NO node_modules/ entry here (unlike the pattern Farstone's own build hit and
+# documented in vendor/@red-cup-engineering/feltos/VENDORED.md): an unanchored `node_modules/`
+# rule matches a directory with that name at ANY depth, which would silently drop
+# node_modules/@red-cup-engineering/{qwzspace,arnold} — real, non-vendored dependencies this
+# deploy needs shipped as-is via a plain `COPY . .` (see Dockerfile) — from the Cloud Run build
+# context, exactly the failure aletheon's own Dockerfile records avoiding the same way.
+.tmp/
+*.log

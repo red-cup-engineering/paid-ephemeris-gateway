@@ -1,0 +1,6 @@
+.gcloudignore
+.git
+.gitignore
+npm-debug.log
+node_modules/.cache
+vendor

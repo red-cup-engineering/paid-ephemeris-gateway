@@ -1,0 +1,575 @@
+{
+  "id": "onestone",
+  "displayName": "TileSlots",
+  "description": "A serious match-3 whose differentiator is the tessellation itself — one tiling-agnostic graph engine playing square, hex, and rhombille boards, climbing toward aperiodic tilings.",
+  "subdomain": "onestone",
+  "configs": [
+    {
+      "id": "1",
+      "displayName": "Square · Level 1",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 30
+      }
+    },
+    {
+      "id": "2",
+      "displayName": "Square · Level 2",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 29
+      }
+    },
+    {
+      "id": "3",
+      "displayName": "Square · Level 3",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 29
+      }
+    },
+    {
+      "id": "4",
+      "displayName": "Square · Level 4",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 28
+      }
+    },
+    {
+      "id": "5",
+      "displayName": "Square · Level 5",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 27
+      }
+    },
+    {
+      "id": "6",
+      "displayName": "Square · Level 6",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 27
+      }
+    },
+    {
+      "id": "7",
+      "displayName": "Square · Level 7",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 26
+      }
+    },
+    {
+      "id": "8",
+      "displayName": "Square · Level 8",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 26
+      }
+    },
+    {
+      "id": "9",
+      "displayName": "Square · Level 9",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 25
+      }
+    },
+    {
+      "id": "10",
+      "displayName": "Square · Level 10",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 24
+      }
+    },
+    {
+      "id": "11",
+      "displayName": "Square · Level 11",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 24
+      }
+    },
+    {
+      "id": "12",
+      "displayName": "Square · Level 12",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 23
+      }
+    },
+    {
+      "id": "13",
+      "displayName": "Square · Level 13",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 22
+      }
+    },
+    {
+      "id": "14",
+      "displayName": "Square · Level 14",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 22
+      }
+    },
+    {
+      "id": "15",
+      "displayName": "Square · Level 15",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 21
+      }
+    },
+    {
+      "id": "16",
+      "displayName": "Square · Level 16",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 21
+      }
+    },
+    {
+      "id": "17",
+      "displayName": "Square · Level 17",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 20
+      }
+    },
+    {
+      "id": "18",
+      "displayName": "Square · Level 18",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 19
+      }
+    },
+    {
+      "id": "19",
+      "displayName": "Square · Level 19",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 19
+      }
+    },
+    {
+      "id": "20",
+      "displayName": "Square · Level 20",
+      "params": {
+        "tiling": "square",
+        "chapter": 0,
+        "moves": 18
+      }
+    },
+    {
+      "id": "21",
+      "displayName": "Hex · Level 1",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 30
+      }
+    },
+    {
+      "id": "22",
+      "displayName": "Hex · Level 2",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 29
+      }
+    },
+    {
+      "id": "23",
+      "displayName": "Hex · Level 3",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 29
+      }
+    },
+    {
+      "id": "24",
+      "displayName": "Hex · Level 4",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 28
+      }
+    },
+    {
+      "id": "25",
+      "displayName": "Hex · Level 5",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 27
+      }
+    },
+    {
+      "id": "26",
+      "displayName": "Hex · Level 6",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 27
+      }
+    },
+    {
+      "id": "27",
+      "displayName": "Hex · Level 7",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 26
+      }
+    },
+    {
+      "id": "28",
+      "displayName": "Hex · Level 8",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 26
+      }
+    },
+    {
+      "id": "29",
+      "displayName": "Hex · Level 9",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 25
+      }
+    },
+    {
+      "id": "30",
+      "displayName": "Hex · Level 10",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 24
+      }
+    },
+    {
+      "id": "31",
+      "displayName": "Hex · Level 11",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 24
+      }
+    },
+    {
+      "id": "32",
+      "displayName": "Hex · Level 12",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 23
+      }
+    },
+    {
+      "id": "33",
+      "displayName": "Hex · Level 13",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 22
+      }
+    },
+    {
+      "id": "34",
+      "displayName": "Hex · Level 14",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 22
+      }
+    },
+    {
+      "id": "35",
+      "displayName": "Hex · Level 15",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 21
+      }
+    },
+    {
+      "id": "36",
+      "displayName": "Hex · Level 16",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 21
+      }
+    },
+    {
+      "id": "37",
+      "displayName": "Hex · Level 17",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 20
+      }
+    },
+    {
+      "id": "38",
+      "displayName": "Hex · Level 18",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 19
+      }
+    },
+    {
+      "id": "39",
+      "displayName": "Hex · Level 19",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 19
+      }
+    },
+    {
+      "id": "40",
+      "displayName": "Hex · Level 20",
+      "params": {
+        "tiling": "hex",
+        "chapter": 1,
+        "moves": 18
+      }
+    },
+    {
+      "id": "41",
+      "displayName": "Rhombille · Level 1",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 30
+      }
+    },
+    {
+      "id": "42",
+      "displayName": "Rhombille · Level 2",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 29
+      }
+    },
+    {
+      "id": "43",
+      "displayName": "Rhombille · Level 3",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 29
+      }
+    },
+    {
+      "id": "44",
+      "displayName": "Rhombille · Level 4",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 28
+      }
+    },
+    {
+      "id": "45",
+      "displayName": "Rhombille · Level 5",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 27
+      }
+    },
+    {
+      "id": "46",
+      "displayName": "Rhombille · Level 6",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 27
+      }
+    },
+    {
+      "id": "47",
+      "displayName": "Rhombille · Level 7",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 26
+      }
+    },
+    {
+      "id": "48",
+      "displayName": "Rhombille · Level 8",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 26
+      }
+    },
+    {
+      "id": "49",
+      "displayName": "Rhombille · Level 9",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 25
+      }
+    },
+    {
+      "id": "50",
+      "displayName": "Rhombille · Level 10",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 24
+      }
+    },
+    {
+      "id": "51",
+      "displayName": "Rhombille · Level 11",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 24
+      }
+    },
+    {
+      "id": "52",
+      "displayName": "Rhombille · Level 12",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 23
+      }
+    },
+    {
+      "id": "53",
+      "displayName": "Rhombille · Level 13",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 22
+      }
+    },
+    {
+      "id": "54",
+      "displayName": "Rhombille · Level 14",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 22
+      }
+    },
+    {
+      "id": "55",
+      "displayName": "Rhombille · Level 15",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 21
+      }
+    },
+    {
+      "id": "56",
+      "displayName": "Rhombille · Level 16",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 21
+      }
+    },
+    {
+      "id": "57",
+      "displayName": "Rhombille · Level 17",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 20
+      }
+    },
+    {
+      "id": "58",
+      "displayName": "Rhombille · Level 18",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 19
+      }
+    },
+    {
+      "id": "59",
+      "displayName": "Rhombille · Level 19",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 19
+      }
+    },
+    {
+      "id": "60",
+      "displayName": "Rhombille · Level 20",
+      "params": {
+        "tiling": "rhombille",
+        "chapter": 2,
+        "moves": 18
+      }
+    }
+  ],
+  "entryPoints": {
+    "browser": "/",
+    "headless": "POST /session, POST /input, GET /stream (JSON-over-HTTP + SSE; no browser required)"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "intentLog": {
+    "schemaVersion": "onestone-cartridge-v1",
+    "schemaRef": "src/cartridge.mts#OnestoneIntent"
+  },
+  "replayVerifier": "src/cartridge.manifest.mts#verify",
+  "keywords": [
+    "match-3",
+    "tessellation",
+    "puzzle",
+    "aperiodic-tiling",
+    "graph-engine"
+  ],
+  "status": "playable",
+  "energy": {
+    "hooksRef": "src/ledger.mts (real double-entry ledger, a documented near-verbatim port of flickering-delve's; not yet wrapped as EnergyHooks)",
+    "accountNamespace": "onestone"
+  },
+  "energyBankWrapped": false,
+  "cartridgeWrapped": true,
+  "shelf": "Puzzle Den"
+}

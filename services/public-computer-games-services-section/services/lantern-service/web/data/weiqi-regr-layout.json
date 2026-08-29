@@ -1,0 +1,600 @@
+{
+ "wingId": "weiqi-regr",
+ "width": 1000,
+ "height": 720,
+ "seed": 2654435769,
+ "iterations": 500,
+ "positions": {
+  "documents/articles/notes/ending-the-game.md": {
+   "x": 642.62,
+   "y": 137.48
+  },
+  "documents/articles/notes/handicap-placement-and-komi-values.md": {
+   "x": 952,
+   "y": 148.49
+  },
+  "documents/articles/notes/how-ranks-work.md": {
+   "x": 952,
+   "y": 256.9
+  },
+  "documents/articles/notes/ko-and-superko.md": {
+   "x": 806.73,
+   "y": 240.35
+  },
+  "documents/articles/notes/komi-and-handicap.md": {
+   "x": 866.95,
+   "y": 251.34
+  },
+  "documents/articles/notes/living-groups-and-eyes.md": {
+   "x": 832.33,
+   "y": 398.47
+  },
+  "documents/articles/notes/obsmetrologia-and-go-strategy.md": {
+   "x": 952,
+   "y": 672
+  },
+  "documents/articles/notes/provenance-policy.md": {
+   "x": 358.7,
+   "y": 504.37
+  },
+  "documents/articles/notes/regression-positions.md": {
+   "x": 396.26,
+   "y": 206.5
+  },
+  "documents/articles/notes/rulesets.md": {
+   "x": 523.37,
+   "y": 154.38
+  },
+  "documents/articles/notes/seki-and-false-eyes.md": {
+   "x": 700.5,
+   "y": 473.81
+  },
+  "documents/articles/notes/weiqi-history.md": {
+   "x": 941.37,
+   "y": 343.87
+  },
+  "documents/articles/notes/weiqi-kernel-constitution.md": {
+   "x": 48,
+   "y": 425.59
+  },
+  "documents/articles/notes/weiqi-learn-constitution.md": {
+   "x": 48,
+   "y": 558.22
+  },
+  "documents/articles/notes/weiqi-lsp-authorization-record.md": {
+   "x": 77.09,
+   "y": 672
+  },
+  "documents/articles/notes/weiqi-lsp-constitution.md": {
+   "x": 106.04,
+   "y": 385.44
+  },
+  "documents/articles/notes/weiqi-market-teardown.md": {
+   "x": 48,
+   "y": 672
+  },
+  "documents/articles/notes/weiqi-overview.md": {
+   "x": 796.41,
+   "y": 308.11
+  },
+  "documents/articles/notes/weiqi-platform-constitution.md": {
+   "x": 48,
+   "y": 489.3
+  },
+  "documents/articles/notes/weiqi-platform-plan.md": {
+   "x": 254.47,
+   "y": 363.65
+  },
+  "documents/articles/notes/weiqi-rulesets.md": {
+   "x": 715.64,
+   "y": 155.47
+  },
+  "glossary/terms/area-scoring.md": {
+   "x": 512.41,
+   "y": 83.44
+  },
+  "glossary/terms/atari.md": {
+   "x": 761.2,
+   "y": 464.97
+  },
+  "glossary/terms/capture.md": {
+   "x": 700.48,
+   "y": 252.43
+  },
+  "glossary/terms/connection.md": {
+   "x": 778.74,
+   "y": 411.71
+  },
+  "glossary/terms/dame.md": {
+   "x": 718.62,
+   "y": 48
+  },
+  "glossary/terms/dead-stones.md": {
+   "x": 478.72,
+   "y": 217.82
+  },
+  "glossary/terms/eye.md": {
+   "x": 604.69,
+   "y": 420.08
+  },
+  "glossary/terms/false-eye.md": {
+   "x": 657.88,
+   "y": 561.15
+  },
+  "glossary/terms/handicap.md": {
+   "x": 856.1,
+   "y": 163.93
+  },
+  "glossary/terms/hoshi.md": {
+   "x": 917.16,
+   "y": 48
+  },
+  "glossary/terms/ko.md": {
+   "x": 621.84,
+   "y": 229.75
+  },
+  "glossary/terms/komi.md": {
+   "x": 774.31,
+   "y": 84.55
+  },
+  "glossary/terms/liberty.md": {
+   "x": 688.99,
+   "y": 347.96
+  },
+  "glossary/terms/life-and-death.md": {
+   "x": 649.88,
+   "y": 393.35
+  },
+  "glossary/terms/pass.md": {
+   "x": 521.58,
+   "y": 48
+  },
+  "glossary/terms/seki.md": {
+   "x": 547.5,
+   "y": 252.63
+  },
+  "glossary/terms/suicide.md": {
+   "x": 483.66,
+   "y": 297.41
+  },
+  "glossary/terms/superko.md": {
+   "x": 585.23,
+   "y": 169.15
+  },
+  "glossary/terms/territory-scoring.md": {
+   "x": 587.23,
+   "y": 66.21
+  },
+  "glossary/terms/territory.md": {
+   "x": 763.67,
+   "y": 175.92
+  },
+  "glossary/topics/weiqi.md": {
+   "x": 640.96,
+   "y": 275.54
+  }
+ },
+ "katas": [
+  {
+   "id": "kata:hall:0",
+   "hallId": "hall:0",
+   "path": [
+    "documents/articles/notes/ending-the-game.md",
+    "documents/articles/notes/living-groups-and-eyes.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:1",
+   "hallId": "hall:1",
+   "path": [
+    "documents/articles/notes/weiqi-platform-plan.md",
+    "documents/articles/notes/regression-positions.md",
+    "documents/articles/notes/rulesets.md",
+    "documents/articles/notes/provenance-policy.md",
+    "documents/articles/notes/weiqi-kernel-constitution.md",
+    "documents/articles/notes/weiqi-platform-constitution.md",
+    "documents/articles/notes/weiqi-lsp-constitution.md",
+    "documents/articles/notes/weiqi-learn-constitution.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:2",
+   "hallId": "hall:2",
+   "path": [
+    "documents/articles/notes/regression-positions.md",
+    "documents/articles/notes/rulesets.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:3",
+   "hallId": "hall:3",
+   "path": [
+    "glossary/terms/superko.md",
+    "glossary/terms/suicide.md",
+    "glossary/terms/area-scoring.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:4",
+   "hallId": "hall:4",
+   "path": [
+    "glossary/terms/atari.md",
+    "glossary/terms/life-and-death.md",
+    "glossary/terms/connection.md",
+    "glossary/terms/handicap.md",
+    "glossary/terms/eye.md",
+    "glossary/terms/seki.md",
+    "glossary/terms/dead-stones.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:5",
+   "hallId": "hall:5",
+   "path": [
+    "glossary/terms/capture.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/territory.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:6",
+   "hallId": "hall:6",
+   "path": [
+    "glossary/terms/seki.md",
+    "glossary/terms/dead-stones.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:7",
+   "hallId": "hall:7",
+   "path": [
+    "glossary/terms/komi.md",
+    "glossary/terms/ko.md",
+    "glossary/terms/superko.md",
+    "glossary/terms/suicide.md",
+    "glossary/terms/pass.md",
+    "glossary/terms/area-scoring.md",
+    "glossary/terms/territory-scoring.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:8",
+   "hallId": "hall:8",
+   "path": [
+    "glossary/terms/superko.md",
+    "glossary/terms/pass.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:9",
+   "hallId": "hall:9",
+   "path": [
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/living-groups-and-eyes.md",
+    "documents/articles/notes/weiqi-overview.md",
+    "documents/articles/notes/weiqi-history.md",
+    "documents/articles/notes/seki-and-false-eyes.md",
+    "documents/articles/notes/ko-and-superko.md",
+    "documents/articles/notes/weiqi-rulesets.md",
+    "documents/articles/notes/handicap-placement-and-komi-values.md",
+    "documents/articles/notes/how-ranks-work.md",
+    "documents/articles/notes/ending-the-game.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:10",
+   "hallId": "hall:10",
+   "path": [
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/living-groups-and-eyes.md",
+    "documents/articles/notes/weiqi-overview.md",
+    "documents/articles/notes/ko-and-superko.md",
+    "documents/articles/notes/ending-the-game.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:11",
+   "hallId": "hall:11",
+   "path": [
+    "glossary/terms/komi.md",
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/ending-the-game.md",
+    "documents/articles/notes/regression-positions.md",
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/superko.md",
+    "glossary/terms/ko.md",
+    "glossary/terms/suicide.md",
+    "documents/articles/notes/weiqi-overview.md",
+    "documents/articles/notes/living-groups-and-eyes.md",
+    "documents/articles/notes/ko-and-superko.md",
+    "glossary/terms/area-scoring.md",
+    "glossary/terms/territory-scoring.md",
+    "glossary/terms/pass.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:12",
+   "hallId": "hall:12",
+   "path": [
+    "glossary/terms/atari.md",
+    "glossary/terms/life-and-death.md",
+    "glossary/terms/connection.md",
+    "glossary/terms/handicap.md",
+    "glossary/terms/eye.md",
+    "glossary/terms/seki.md",
+    "glossary/terms/dead-stones.md",
+    "documents/articles/notes/ending-the-game.md",
+    "documents/articles/notes/living-groups-and-eyes.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:13",
+   "hallId": "hall:13",
+   "path": [
+    "glossary/terms/dame.md",
+    "documents/articles/notes/ending-the-game.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:14",
+   "hallId": "hall:14",
+   "path": [
+    "documents/articles/notes/handicap-placement-and-komi-values.md",
+    "documents/articles/notes/how-ranks-work.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:15",
+   "hallId": "hall:15",
+   "path": [
+    "documents/articles/notes/seki-and-false-eyes.md",
+    "documents/articles/notes/ko-and-superko.md",
+    "documents/articles/notes/weiqi-rulesets.md",
+    "documents/articles/notes/handicap-placement-and-komi-values.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:16",
+   "hallId": "hall:16",
+   "path": [
+    "documents/articles/notes/handicap-placement-and-komi-values.md",
+    "glossary/terms/hoshi.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:17",
+   "hallId": "hall:17",
+   "path": [
+    "documents/articles/notes/ko-and-superko.md",
+    "documents/articles/notes/weiqi-rulesets.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:18",
+   "hallId": "hall:18",
+   "path": [
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/weiqi-history.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:19",
+   "hallId": "hall:19",
+   "path": [
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/weiqi-overview.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:20",
+   "hallId": "hall:20",
+   "path": [
+    "glossary/terms/capture.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/territory.md",
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/weiqi-overview.md",
+    "documents/articles/notes/weiqi-history.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:21",
+   "hallId": "hall:21",
+   "path": [
+    "glossary/terms/handicap.md",
+    "glossary/terms/komi.md",
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/weiqi-history.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:22",
+   "hallId": "hall:22",
+   "path": [
+    "glossary/terms/komi.md",
+    "documents/articles/notes/komi-and-handicap.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:23",
+   "hallId": "hall:23",
+   "path": [
+    "glossary/terms/suicide.md",
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/superko.md",
+    "glossary/terms/area-scoring.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:24",
+   "hallId": "hall:24",
+   "path": [
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/dead-stones.md",
+    "glossary/terms/territory-scoring.md",
+    "glossary/terms/seki.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:25",
+   "hallId": "hall:25",
+   "path": [
+    "glossary/terms/pass.md",
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/superko.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:26",
+   "hallId": "hall:26",
+   "path": [
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/superko.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:27",
+   "hallId": "hall:27",
+   "path": [
+    "documents/articles/notes/rulesets.md",
+    "glossary/terms/territory-scoring.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:28",
+   "hallId": "hall:28",
+   "path": [
+    "glossary/terms/false-eye.md",
+    "documents/articles/notes/seki-and-false-eyes.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:29",
+   "hallId": "hall:29",
+   "path": [
+    "documents/articles/notes/komi-and-handicap.md",
+    "documents/articles/notes/weiqi-overview.md",
+    "documents/articles/notes/weiqi-history.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:30",
+   "hallId": "hall:30",
+   "path": [
+    "documents/articles/notes/weiqi-market-teardown.md",
+    "documents/articles/notes/weiqi-lsp-authorization-record.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:31",
+   "hallId": "hall:31",
+   "path": [
+    "glossary/terms/capture.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/territory.md",
+    "documents/articles/notes/weiqi-overview.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:32",
+   "hallId": "hall:32",
+   "path": [
+    "glossary/terms/capture.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/territory.md",
+    "glossary/terms/hoshi.md",
+    "documents/articles/notes/weiqi-overview.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:33",
+   "hallId": "hall:33",
+   "path": [
+    "glossary/terms/atari.md",
+    "glossary/terms/capture.md",
+    "glossary/terms/dead-stones.md",
+    "glossary/terms/area-scoring.md",
+    "glossary/terms/seki.md",
+    "glossary/terms/superko.md",
+    "glossary/terms/ko.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/connection.md",
+    "glossary/terms/handicap.md",
+    "glossary/terms/komi.md",
+    "glossary/terms/territory.md",
+    "glossary/terms/territory-scoring.md",
+    "glossary/terms/hoshi.md",
+    "glossary/terms/eye.md",
+    "glossary/terms/suicide.md",
+    "glossary/terms/life-and-death.md",
+    "glossary/terms/false-eye.md",
+    "glossary/terms/pass.md",
+    "glossary/terms/dame.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:34",
+   "hallId": "hall:34",
+   "path": [
+    "glossary/terms/capture.md",
+    "glossary/terms/liberty.md",
+    "glossary/terms/territory.md",
+    "glossary/terms/hoshi.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:35",
+   "hallId": "hall:35",
+   "path": [
+    "glossary/terms/dead-stones.md",
+    "glossary/terms/territory-scoring.md",
+    "glossary/terms/seki.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:36",
+   "hallId": "hall:36",
+   "path": [
+    "glossary/terms/handicap.md",
+    "glossary/terms/komi.md"
+   ],
+   "origin": "auto-hall"
+  }
+ ]
+}

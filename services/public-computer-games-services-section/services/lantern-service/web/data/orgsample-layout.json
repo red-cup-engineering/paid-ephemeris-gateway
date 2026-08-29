@@ -1,0 +1,110 @@
+{
+ "wingId": "orgsample",
+ "width": 1000,
+ "height": 720,
+ "seed": 2654435769,
+ "iterations": 500,
+ "positions": {
+  "1st-law-of-thermodynamics.org": {
+   "x": 908.32,
+   "y": 48
+  },
+  "2016-u-s-presidential-election.org": {
+   "x": 952,
+   "y": 588.64
+  },
+  "2021-hedge-fund-contraction.org": {
+   "x": 952,
+   "y": 450.79
+  },
+  "2021-storming-of-the-u-s-capitol.org": {
+   "x": 952,
+   "y": 672
+  },
+  "24-form-tai-chi.org": {
+   "x": 898.66,
+   "y": 672
+  },
+  "404.org": {
+   "x": 769.13,
+   "y": 672
+  },
+  "4f-stress-responses.org": {
+   "x": 601.91,
+   "y": 672
+  },
+  "4thewords-battle.org": {
+   "x": 418.88,
+   "y": 672
+  },
+  "4thewords.org": {
+   "x": 243.27,
+   "y": 672
+  },
+  "6th-mass-extinction.org": {
+   "x": 48,
+   "y": 672
+  },
+  "aaron-rabinowitz.org": {
+   "x": 105.76,
+   "y": 672
+  },
+  "abandon-all-models-and-imagine-the-possibilities.org": {
+   "x": 48,
+   "y": 589.56
+  },
+  "aboriginal-framework.org": {
+   "x": 48,
+   "y": 403.32
+  },
+  "aboriginal-people.org": {
+   "x": 48,
+   "y": 109.16
+  },
+  "aboriginal-perspective.org": {
+   "x": 48,
+   "y": 296.54
+  },
+  "aboriginal-territories-in-cyberspace.org": {
+   "x": 124.29,
+   "y": 48
+  },
+  "aboriginal.org": {
+   "x": 48,
+   "y": 48
+  },
+  "aboriginally-determined-research-creation-network.org": {
+   "x": 218.26,
+   "y": 48
+  },
+  "aboriginally-determining.org": {
+   "x": 48,
+   "y": 201.2
+  },
+  "academic-engineer.org": {
+   "x": 632.93,
+   "y": 48
+  },
+  "academic-scientist.org": {
+   "x": 448.51,
+   "y": 48
+  },
+  "academic-specialization.org": {
+   "x": 792.72,
+   "y": 48
+  },
+  "accelerationism.org": {
+   "x": 952,
+   "y": 149.67
+  },
+  "accent-training.org": {
+   "x": 952,
+   "y": 48
+  },
+  "accent.org": {
+   "x": 952,
+   "y": 295.5
+  }
+ },
+ "katas": []
+}

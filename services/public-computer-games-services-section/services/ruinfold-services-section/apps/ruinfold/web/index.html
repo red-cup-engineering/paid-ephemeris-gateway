@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ruinfold Daily</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0d12'/%3E%3Ctext x='8' y='12' font-size='12' text-anchor='middle' fill='%23e0b84a' font-family='monospace'%3E%40%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/web/css/style.css" />
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">RUINFOLD</a>
+  <nav>
+    <a href="/play">Play today's daily</a>
+    <a href="/watch">Replays</a>
+  </nav>
+</header>
+<main>
+
+  <section class="panel hero">
+    <h1 id="dungeon-name">Loading today's dungeon&hellip;</h1>
+    <p class="sub" id="dungeon-sub"></p>
+    <p>Next daily in <span class="countdown" id="countdown">&mdash;</span> (00:00 UTC)</p>
+    <div class="cta-row">
+      <a class="btn" id="play-today" href="/play">Play today's daily</a>
+      <a class="btn secondary" href="/watch">Watch a replay</a>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Today's leaderboard</h2>
+    <table class="board" id="leaderboard-table">
+      <thead><tr><th>#</th><th>Wanderer</th><th>Score</th><th>Ticks</th><th></th></tr></thead>
+      <tbody id="leaderboard-body"><tr><td colspan="5">Loading&hellip;</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Practice an earlier daily</h2>
+    <p class="sub">Today's seed is one attempt, scored automatically. Every past daily is free, unlimited, unscored practice — see design §1.4.</p>
+    <form id="practice-form" class="cta-row">
+      <input type="date" id="practice-date" />
+      <button type="submit" class="btn secondary">Practice this date</button>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Your wanderer</h2>
+    <p class="sub">Actor id: <code id="actor-id">&mdash;</code> (kept in this browser only — <a href="#" id="reset-identity">start a new one</a>)</p>
+  </section>
+
+</main>
+<footer style="padding:1rem; color:var(--ink-dim); font-size:0.8rem; text-align:center;">
+  Ruinfold Daily — a seeded-daily roguelike. Move-log replay is the anti-cheat: nothing here is trusted but the log.
+</footer>
+<script type="importmap">
+{ "imports": { "#engine/": "/engine/" } }
+</script>
+<script type="module" src="/web/js/app-index.mjs"></script>
+</body>
+</html>

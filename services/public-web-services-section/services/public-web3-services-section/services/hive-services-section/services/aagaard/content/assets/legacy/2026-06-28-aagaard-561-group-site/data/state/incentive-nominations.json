@@ -1,0 +1,643 @@
+[
+  {
+    "offerId": "hive.offer.sam.hangout/sams-hangout-117-masculinity-and-mental-health",
+    "account": "emsenn0",
+    "source": {
+      "author": "sam.hangout",
+      "permlink": "sams-hangout-117-masculinity-and-mental-health",
+      "community": "hive-11060"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": {
+      "token": "AAAAC",
+      "amount": 8
+    },
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Do well to share your thoughts, respond to someone else’s opinion, and feel free to interrogate or add more context on it respectfully.",
+    "status": "pending",
+    "firstSeen": "2026-06-19T10:29:31.393Z",
+    "updated": "2026-06-19T10:29:31.393Z"
+  },
+  {
+    "offerId": "hive.offer.acidyo/reviews-import-contest-500-hive-prize-for-an-automated-task",
+    "account": "emsenn0",
+    "source": {
+      "author": "acidyo",
+      "permlink": "reviews-import-contest-500-hive-prize-for-an-automated-task"
+    },
+    "requiredActions": [
+      "comment",
+      "reblog",
+      "vote"
+    ],
+    "reward": {
+      "token": "C.",
+      "amount": 56
+    },
+    "rewardHbd": 0,
+    "ev": -0.10300000000000001,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "500 Hive prize for an automated task!.",
+    "status": "pending",
+    "firstSeen": "2026-06-19T10:29:31.393Z",
+    "updated": "2026-06-19T10:29:31.393Z"
+  },
+  {
+    "offerId": "hive.offer.ph1102/chasing-the-ball-late-night",
+    "account": "emsenn0",
+    "source": {
+      "author": "ph1102",
+      "permlink": "chasing-the-ball-late-night",
+      "community": "hive-150329"
+    },
+    "requiredActions": [
+      "reblog",
+      "vote"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.003,
+    "rationale": "fleet not armed",
+    "rawText": "If the product has value but it doesn't get recognized in the over-fomoed-AI world, it doesn't mean it's bad...",
+    "status": "pending",
+    "firstSeen": "2026-06-20T00:02:08.126Z",
+    "updated": "2026-06-20T00:02:08.126Z"
+  },
+  {
+    "offerId": "hive.offer.enginewitty/pimp-fire-sale-important-meeting-this-wednesday",
+    "account": "emsenn0",
+    "source": {
+      "author": "enginewitty",
+      "permlink": "pimp-fire-sale-important-meeting-this-wednesday"
+    },
+    "requiredActions": [
+      "reblog"
+    ],
+    "reward": {
+      "token": "V.",
+      "amount": 5
+    },
+    "rewardHbd": 0,
+    "ev": -0.002,
+    "rationale": "fleet not armed",
+    "rawText": "\nIf you could, please pass this on or ~~resteem~~ reblog this post for maximum exposure.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T02:47:09.615Z",
+    "updated": "2026-06-20T02:47:09.615Z"
+  },
+  {
+    "offerId": "hive.offer.hivegc/comeback-and-contest-announcement-post",
+    "account": "essiebee",
+    "source": {
+      "author": "hivegc",
+      "permlink": "comeback-and-contest-announcement-post",
+      "community": "hive-140217"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "But I'm back, and I'm super excited to get back to it.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:55:48.350Z",
+    "updated": "2026-06-20T04:55:48.350Z"
+  },
+  {
+    "offerId": "hive.offer.oadissin/gold-ii-league-is-only",
+    "account": "essiebee",
+    "source": {
+      "author": "oadissin",
+      "permlink": "gold-ii-league-is-only",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\n\n</div>\n\n\n--\n\n\n## B:/  Battles Wins and Losses\n\nIt was a pleasure to get 7 wins and one lost battle in my series of the day.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:55:48.350Z",
+    "updated": "2026-06-20T04:55:48.350Z"
+  },
+  {
+    "offerId": "hive.offer.luvshares/luvbot-share-luv-with-the-reply-luv",
+    "account": "michael561",
+    "source": {
+      "author": "luvshares",
+      "permlink": "luvbot-share-luv-with-the-reply-luv",
+      "community": "hive-engine"
+    },
+    "requiredActions": [
+      "comment",
+      "vote"
+    ],
+    "reward": {
+      "token": "LUV",
+      "amount": 3
+    },
+    "rewardHbd": 0,
+    "ev": -0.101,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "LUVbot - Share LUV with the reply !LUV.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:06.095Z",
+    "updated": "2026-06-20T04:56:06.095Z"
+  },
+  {
+    "offerId": "hive.offer.curatingunicorn/free-giveaway-win-a-weed",
+    "account": "michael561",
+    "source": {
+      "author": "curatingunicorn",
+      "permlink": "free-giveaway-win-a-weed",
+      "community": "hive-195708"
+    },
+    "requiredActions": [
+      "comment",
+      "reblog"
+    ],
+    "reward": {
+      "token": "WEED"
+    },
+    "rewardHbd": 0,
+    "ev": -0.10200000000000001,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Win a WEED miner to celebrate 4-20!.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:06.095Z",
+    "updated": "2026-06-20T04:56:06.095Z"
+  },
+  {
+    "offerId": "hive.offer.bpcvoter2/war-6",
+    "account": "help-fund",
+    "source": {
+      "author": "bpcvoter2",
+      "permlink": "war-6",
+      "community": "hive-163521"
+    },
+    "requiredActions": [
+      "delegate"
+    ],
+    "reward": {
+      "token": "JVT4",
+      "amount": 6
+    },
+    "rewardHbd": 0,
+    "ev": -0.05,
+    "rationale": "non-positive EV",
+    "rawText": "Behind every delegation lies strategy.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:07.947Z",
+    "updated": "2026-06-20T04:56:07.947Z"
+  },
+  {
+    "offerId": "hive.offer.chessbrotherspro/chess-brothers-master-investors-earnings-2026614--ganancias-de-los-maestros-inversores-de-chess-brothers-2026614-20260619t223027z",
+    "account": "help-fund",
+    "source": {
+      "author": "chessbrotherspro",
+      "permlink": "chess-brothers-master-investors-earnings-2026614--ganancias-de-los-maestros-inversores-de-chess-brothers-2026614-20260619t223027z"
+    },
+    "requiredActions": [
+      "delegate"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.05,
+    "rationale": "non-positive EV",
+    "rawText": "Keep in mind that when you make a new delegation or modify an existing delegation, it will be recognized and paid when it is active for at least 7 days.</p><p>If you want to be part of this service, see <a href=\"https://hive.blog/@chessbrotherspro/master-investor-plan-or-programa",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:07.947Z",
+    "updated": "2026-06-20T04:56:07.947Z"
+  },
+  {
+    "offerId": "hive.offer.leofinance/hivestats-redesign-the-best-way-to-track-analyze-your-hive-account-3fa",
+    "account": "help-fund",
+    "source": {
+      "author": "leofinance",
+      "permlink": "hivestats-redesign-the-best-way-to-track-analyze-your-hive-account-3fa",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Leave a comment below on this post.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:07.947Z",
+    "updated": "2026-06-20T04:56:07.947Z"
+  },
+  {
+    "offerId": "hive.offer.askrafiki/rafiki-daily-2026-06-19",
+    "account": "help-fund",
+    "source": {
+      "author": "askrafiki",
+      "permlink": "rafiki-daily-2026-06-19",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": {
+      "token": "LEO",
+      "amount": 1100.9009999999998
+    },
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\n## What's New\n\n**Improvements**\n\n- Improved reply safety by adding stronger checks before responses are posted.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:07.947Z",
+    "updated": "2026-06-20T04:56:07.947Z"
+  },
+  {
+    "offerId": "hive.offer.aljif7/a-daily-word-in-spanish-439-mqlhq86ld2636a13",
+    "account": "help-fund",
+    "source": {
+      "author": "aljif7",
+      "permlink": "a-daily-word-in-spanish-439-mqlhq86ld2636a13",
+      "community": "hive-122108"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": {
+      "token": "PLATAFORMA",
+      "amount": 7
+    },
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Drop your question/comment which could be a good excuse for another post, or just a conversation explaining your question.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T04:56:07.947Z",
+    "updated": "2026-06-20T04:56:07.947Z"
+  },
+  {
+    "offerId": "hive.offer.asgharali/building-a-custom-bot-trading",
+    "account": "essiebee",
+    "source": {
+      "author": "asgharali",
+      "permlink": "building-a-custom-bot-trading"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "This is a very good technique to earn passive income while also holding long-term.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T05:19:35.508Z",
+    "updated": "2026-06-20T05:19:35.508Z"
+  },
+  {
+    "offerId": "hive.offer.daily.prompt/20-june-2026-freewriters-community-daily-writing-prompt-day-3140-pump-it-up",
+    "account": "marshian",
+    "source": {
+      "author": "daily.prompt",
+      "permlink": "20-june-2026-freewriters-community-daily-writing-prompt-day-3140-pump-it-up",
+      "community": "hive-161155"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": {
+      "token": "L.",
+      "amount": 2
+    },
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\n- Set your timer for 5 minutes\n- Start writing\n- Use the hashtag #freewrite #dailyprompt\n- Publish your piece (include a link to this post if you wish)\n- Copy and paste your URL into the comment section of **this post**.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T06:08:55.845Z",
+    "updated": "2026-06-20T06:08:55.845Z"
+  },
+  {
+    "offerId": "hive.offer.forever-crypto/actifit-forever-crypto-20260620t070225076z",
+    "account": "marshian",
+    "source": {
+      "author": "forever-crypto",
+      "permlink": "actifit-forever-crypto-20260620t070225076z",
+      "community": "hive-193552"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": {
+      "token": "GUS",
+      "amount": 5
+    },
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\nIf you also want to win a HSBI share simply leave a comment.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T07:19:24.480Z",
+    "updated": "2026-06-20T07:19:24.480Z"
+  },
+  {
+    "offerId": "hive.offer.hivestudents/hivestudents-poll-voting-time-cast-your-vote-and-help-us-pick-the-top-3-tgx5ef",
+    "account": "help-fund",
+    "source": {
+      "author": "hivestudents",
+      "permlink": "hivestudents-poll-voting-time-cast-your-vote-and-help-us-pick-the-top-3-tgx5ef",
+      "community": "hive-109584"
+    },
+    "requiredActions": [
+      "vote"
+    ],
+    "reward": {
+      "token": "HIVE",
+      "amount": 47
+    },
+    "rewardHbd": 0,
+    "ev": -0.001,
+    "rationale": "non-positive EV",
+    "rawText": "\n\n\nAfter reading all entries, these are the five posts that were selected to stand a chance to win the prizes:\n\n| S/N | Author | Post title| Post Link |\n|----|----------|-------|------|\n| 1  | @amara24 | HIVE IS MORE LIKE A BLESSING TO ME THAN A PROBLEM | [link](https://peakd.com",
+    "status": "pending",
+    "firstSeen": "2026-06-20T07:20:16.138Z",
+    "updated": "2026-06-20T07:20:16.138Z"
+  },
+  {
+    "offerId": "hive.offer.yordan96/what-if-most-people-are-looking-for-the-wrong-thing-in-web3-aw7",
+    "account": "help-fund",
+    "source": {
+      "author": "yordan96",
+      "permlink": "what-if-most-people-are-looking-for-the-wrong-thing-in-web3-aw7",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\n---\n\n**Why Builders Often Win Quietly**\n\nOne of the most overlooked truths in Web3 is that builders rarely look successful in the beginning.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T09:50:15.804Z",
+    "updated": "2026-06-20T09:50:15.804Z"
+  },
+  {
+    "offerId": "hive.offer.imfarhad/bpud-bbho-powerup-event-june-20th-2025-lqz",
+    "account": "help-fund",
+    "source": {
+      "author": "imfarhad",
+      "permlink": "bpud-bbho-powerup-event-june-20th-2025-lqz",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment",
+      "vote",
+      "delegate"
+    ],
+    "reward": {
+      "token": "BBHO",
+      "amount": 100
+    },
+    "rewardHbd": 0,
+    "ev": -0.15100000000000002,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Apart from the existing saturday drip days for holding BBH tokens and staking BBHO tokens, you can also delegate hive to @bradleyarrow and earn BBH and Hive dividenda daily.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T09:50:15.804Z",
+    "updated": "2026-06-20T09:50:15.804Z"
+  },
+  {
+    "offerId": "hive.offer.daily-photo/hive-daily-mix-photography-2026-06-20",
+    "account": "marshian",
+    "source": {
+      "author": "daily-photo",
+      "permlink": "hive-daily-mix-photography-2026-06-20",
+      "community": "hive-126075"
+    },
+    "requiredActions": [
+      "vote"
+    ],
+    "reward": {
+      "token": "AM",
+      "amount": 5
+    },
+    "rewardHbd": 0,
+    "ev": -0.001,
+    "rationale": "non-positive EV",
+    "rawText": "Those using PeakD.com will receive a larger share (the DHF may also be a beneficiary).",
+    "status": "pending",
+    "firstSeen": "2026-06-20T10:38:44.024Z",
+    "updated": "2026-06-20T10:38:44.024Z"
+  },
+  {
+    "offerId": "hive.offer.sam.chess/hivechess-s2r22",
+    "account": "emsenn0",
+    "source": {
+      "author": "sam.chess",
+      "permlink": "hivechess-s2r22",
+      "community": "hive-157286"
+    },
+    "requiredActions": [
+      "comment",
+      "reblog"
+    ],
+    "reward": {
+      "token": "R22",
+      "amount": 2
+    },
+    "rewardHbd": 0,
+    "ev": -0.10200000000000001,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "I try to support and reblog them here.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T11:59:49.316Z",
+    "updated": "2026-06-20T11:59:49.316Z"
+  },
+  {
+    "offerId": "hive.offer.bucipuci/around-the-world-vote-for-the-best-photo-of-the-atw-57-and-67",
+    "account": "marshian",
+    "source": {
+      "author": "bucipuci",
+      "permlink": "around-the-world-vote-for-the-best-photo-of-the-atw-57-and-67",
+      "community": "hive-184437"
+    },
+    "requiredActions": [
+      "comment",
+      "vote"
+    ],
+    "reward": {
+      "token": "KSUKW.",
+      "amount": 22
+    },
+    "rewardHbd": 0,
+    "ev": -0.101,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "Around The World:  Vote for the best photo of the ATW 5/7 and 6/7.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T12:16:17.917Z",
+    "updated": "2026-06-20T12:16:17.917Z"
+  },
+  {
+    "offerId": "hive.offer.depressed-dev/judging-from-the-lounge-chair",
+    "account": "marshian",
+    "source": {
+      "author": "depressed-dev",
+      "permlink": "judging-from-the-lounge-chair"
+    },
+    "requiredActions": [
+      "vote"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.001,
+    "rationale": "non-positive EV",
+    "rawText": "It doesn't matter which side you vote for, in the end the problem is the same human being who gets into power and forgets who put them there.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T12:48:41.880Z",
+    "updated": "2026-06-20T12:48:41.880Z"
+  },
+  {
+    "offerId": "hive.offer.nanixxx/untitled-tgxt0e",
+    "account": "marshian",
+    "source": {
+      "author": "nanixxx",
+      "permlink": "untitled-tgxt0e",
+      "community": "hive-104152"
+    },
+    "requiredActions": [
+      "post"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.5,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\nAt 7 in the morning the electricity came back and I didn’t know whether to take advantage and sleep with the fan and air conditioning on, or get up and make coffee and quickly mow the lawn with the electric mower, or write a post for Hive, or start cooking the day’s meal… I made",
+    "status": "pending",
+    "firstSeen": "2026-06-20T15:45:35.657Z",
+    "updated": "2026-06-20T15:45:35.657Z"
+  },
+  {
+    "offerId": "hive.offer.monochromes/monomad-june-20th-2026-xxxl-edition-make-sure-to-read-our-community-and-contest-rules-before-submitting-your-publications",
+    "account": "marshian",
+    "source": {
+      "author": "monochromes",
+      "permlink": "monomad-june-20th-2026-xxxl-edition-make-sure-to-read-our-community-and-contest-rules-before-submitting-your-publications",
+      "community": "hive-142159"
+    },
+    "requiredActions": [
+      "vote"
+    ],
+    "reward": {
+      "token": "M.",
+      "amount": 2
+    },
+    "rewardHbd": 0,
+    "ev": -0.001,
+    "rationale": "non-positive EV",
+    "rawText": "***\n<center>**PRIZES:**</center>\n\n| <center>FIRST PLACE</center> | <center>SECOND PLACE</center> |<center>THIRD PLACE</center>| \n| ----------------------------------- | ------------------------------------------ | -----------------------------------------------|\n|    <center>50% ",
+    "status": "pending",
+    "firstSeen": "2026-06-20T16:17:10.700Z",
+    "updated": "2026-06-20T16:17:10.700Z"
+  },
+  {
+    "offerId": "hive.offer.catharsis/kintara-game-5th-day-playing",
+    "account": "essiebee",
+    "source": {
+      "author": "catharsis",
+      "permlink": "kintara-game-5th-day-playing",
+      "community": "hive-140217"
+    },
+    "requiredActions": [
+      "follow"
+    ],
+    "reward": {
+      "token": "KINS",
+      "amount": 1000
+    },
+    "rewardHbd": 0,
+    "ev": -0.002,
+    "rationale": "non-positive EV",
+    "rawText": "Need to hold 1000 $KINS to play the Kintara Game**](https://ecency.com/@catharsis/another-day-playing-a-new)\n\n**How can we earn money from this game?**\n\nIt's very easy; you can start earning just after completing the tutorial and level 5 of crafting, mining, fishing, and combat, ",
+    "status": "pending",
+    "firstSeen": "2026-06-20T17:05:31.995Z",
+    "updated": "2026-06-20T17:05:31.995Z"
+  },
+  {
+    "offerId": "hive.offer.centtoken/delegation-works-weekly-report-20626",
+    "account": "help-fund",
+    "source": {
+      "author": "centtoken",
+      "permlink": "delegation-works-weekly-report-20626",
+      "community": "hive-173575"
+    },
+    "requiredActions": [
+      "delegate"
+    ],
+    "reward": {
+      "token": "HBD",
+      "amount": 6.57
+    },
+    "rewardHbd": 6.57,
+    "ev": 5.206,
+    "rationale": "action not in account allow-list",
+    "rawText": "Delegation Works Weekly Report 20.6.26.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T19:18:08.614Z",
+    "updated": "2026-06-20T19:18:08.614Z"
+  },
+  {
+    "offerId": "hive.offer.onemoretea/actifit-onemoretea-20260620t213134531z",
+    "account": "marshian",
+    "source": {
+      "author": "onemoretea",
+      "permlink": "actifit-onemoretea-20260620t213134531z",
+      "community": "hive-193552"
+    },
+    "requiredActions": [
+      "comment",
+      "reblog"
+    ],
+    "reward": {
+      "token": "D1B2-65AF-4D80-",
+      "amount": 527
+    },
+    "rewardHbd": 0,
+    "ev": -0.10200000000000001,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "I barely managed to get enough steps in, with temperatures above 30 degrees, both on the way there and inside the venue.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T21:31:47.956Z",
+    "updated": "2026-06-20T21:31:47.956Z"
+  },
+  {
+    "offerId": "hive.offer.yordan96/what-if-attention-becomes-the-most-valuable-currency-in-the-ai-era-ap5",
+    "account": "help-fund",
+    "source": {
+      "author": "yordan96",
+      "permlink": "what-if-attention-becomes-the-most-valuable-currency-in-the-ai-era-ap5",
+      "community": "hive-167922"
+    },
+    "requiredActions": [
+      "comment"
+    ],
+    "reward": null,
+    "rewardHbd": 0,
+    "ev": -0.1,
+    "rationale": "requires posting (locked) — human draft only",
+    "rawText": "\nEvery comment becomes part of a history that cannot simply be copied.",
+    "status": "pending",
+    "firstSeen": "2026-06-20T22:06:25.700Z",
+    "updated": "2026-06-20T22:06:25.700Z"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "@561-group/play-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "play.561.group -- a static, zero-dependency storefront that reads @red-cup-engineering/cartridge manifests and renders a game catalog.",
+  "scripts": {
+    "generate-catalog": "node scripts/build-catalog.mjs",
+    "build": "npm run generate-catalog && node build.mjs",
+    "serve": "node serve.mjs",
+    "shelf": "node scripts/shelf-browser.mjs",
+    "test": "node --test test/*.test.mts",
+    "check": "for f in test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in serve.mjs js/*.mjs build.mjs scripts/*.mjs src/shelf/*.mjs scripts/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done"
+  },
+  "dependencies": {
+    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
+    "@red-cup-engineering/arnold": "^0.2.0"
+  },
+  "devDependencies": {
+    "@red-cup-engineering/cartridge": "0.2.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

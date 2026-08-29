@@ -1,0 +1,38 @@
+{# pyfars engine systemd-user unit, projected from a service-spec record.
+   Re-run `pyfars install-harness systemd-user` (or `pyfars install`) to refresh
+   after any service-spec edit. Schema: governance/specifications/engine-service-spec.md
+   #}
+{%- set effective_exec_verb = exec_verb -%}
+{%- if pin -%}
+{%- set _parts = exec_verb.split(' ', 1) -%}
+{%- if _parts | length > 1 -%}
+{%- set effective_exec_verb = pin.rstrip('/') ~ '/bin/' ~ _parts[0] ~ ' ' ~ _parts[1] -%}
+{%- else -%}
+{%- set effective_exec_verb = pin.rstrip('/') ~ '/bin/' ~ _parts[0] -%}
+{%- endif -%}
+{%- endif -%}
+[Unit]
+Description={{ title }} ({{ slug }})
+{% if description %}Documentation=text:{{ description | replace('\n', ' ') | truncate(200, true) }}
+{% endif %}After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart={{ effective_exec_verb }}{% for arg in exec_args %} {{ arg }}{% endfor %} {{ substrate_root }}
+{% if env_file %}EnvironmentFile=-{{ env_file }}
+{% endif %}{% if runtime_directory %}RuntimeDirectory={{ runtime_directory }}
+{% endif %}Restart={{ restart_policy }}
+{% if restart_policy != 'never' %}RestartSec={{ restart_delay_seconds }}
+{% endif %}KillSignal={{ halt_signal }}
+TimeoutStopSec={{ halt_timeout_seconds }}
+{% if cpu_quota %}CPUQuota={{ cpu_quota }}
+{% endif %}{% if memory_max %}MemoryMax={{ memory_max }}
+{% endif %}{% if journal_priority %}SyslogLevel={{ journal_priority }}
+{% endif %}
+[Install]
+WantedBy={{ wants_target }}
+
+# Generated at {{ generated_at }} by `{{ generation_command }}`
+# from substrate record: {{ source_path }}
+# polity: {{ polity.title or polity.slug or 'unknown' -}}

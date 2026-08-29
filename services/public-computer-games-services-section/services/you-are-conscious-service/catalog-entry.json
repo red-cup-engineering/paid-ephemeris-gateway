@@ -1,0 +1,28 @@
+{
+  "id": "you-are-conscious",
+  "displayName": "You Are Conscious",
+  "description": "The idleclicker where the widget production graph is Stoke's, and the ladder you climb over it is a consciousness ladder: click makes widget, and each of ten automation tiers is a genuine cognitive capability (memory, pattern, abstraction, self-model, model-of-others, values), taught through a mechanic you operate, never a lecture box. The paperclip joke is told straight and then made to hurt exactly once, honestly, at the self-model tier: the widget metric eats something that matters, and you feel it through systems you already trust.",
+  "subdomain": "you-are-conscious",
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "status": "playable",
+  "statusNote": "Playable in-browser now: three P0s from live play are all fixed and confirmed live — cartridge's node:crypto import breaking every browser, a fresh-save deadlock where no public intent sequence could ever reach tier 2, and a fresh-save clock bug where a brand-new visitor's very first tick was silently computed from the Unix epoch instead of their real moment of first visit (~56 years of phantom offline progress, e.g. 'widget stock: 3.8e23' before ever clicking; fixed in web/js/persistence.mjs — a fresh save's live state is now anchored on its own real, once-stamped createdTs, never the cartridge's fixed epoch anchor). Headless Chromium against the real domain confirms a fresh browser context now starts at widget stock 0.0, with one click producing exactly widget stock 1.0, zero console errors — plus the original walk through the first self-reference moment (a new tier-1 'feedback' intent), the first reflect, and a real tier-2 unlock, also zero console errors, 0-MISS frontdoor-walk. Real offline progress (a genuine prior visit, then a real gap) still pays out exactly as before — only the false epoch-anchored case was ever wrong. Deterministic kernel with property tests (curve monotonicity, offline-progress equivalence), the full ten-tier reducer (src/intents.mts), IF content through the Goodhart crisis and all three post-crisis branches, pedagogy tests naming the mechanic proving each tier's concept, and a working TUFTE-style web face (web/) serving the real kernel to the browser via type-stripped .mts. 188 tests, node --test + check-mts, zero runtime deps beyond @red-cup-engineering/cartridge@0.2.1 and @lenticule-science/metrologic. Known pacing caveat from the playtest still stands, and is now the thing an honest fresh save actually surfaces (previously masked by the epoch bug's runaway numbers): Fast Inspector's exact tuning (edge rate, trust decay lag, taint multiplier, trust floor/recovery) is playtest-shaped, not playtest-verified — DESIGN.md's own open question #2.",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "incremental",
+    "idle-game",
+    "interactive-fiction",
+    "consciousness",
+    "goodharts-law",
+    "pedagogy"
+  ],
+  "shelf": "Puzzle Den",
+  "intentLog": {
+    "schemaVersion": "you-are-conscious-v1"
+  }
+}

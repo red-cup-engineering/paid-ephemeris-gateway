@@ -1,0 +1,28 @@
+{
+  "id": "stoke",
+  "displayName": "Stoke",
+  "description": "The kind incremental: build a real production graph (nodes feed nodes, at rates you choose), and prestige is not an authored curve -- it is the dominant Perron-Frobenius eigenvalue of the production matrix you actually built, computed by real power iteration. No dark patterns structurally: no payments, no ads, no energy system, nothing that regenerates only by waiting.",
+  "subdomain": "stoke",
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "intentLog": {
+    "schemaVersion": "stoke-cartridge-v1"
+  },
+  "status": "playable",
+  "statusNote": "cartridgeWrapped is false here pending independent validation against @red-cup-engineering/cartridge, though stoke-service's own test suite claims a real src/cartridge.mts adoption.",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "incremental",
+    "idle-game",
+    "linear-algebra",
+    "perron-frobenius",
+    "production-graph",
+    "prestige"
+  ],
+  "shelf": "Puzzle Den"
+}

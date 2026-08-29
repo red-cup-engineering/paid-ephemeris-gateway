@@ -1,0 +1,24 @@
+{
+  "type": "BlockchainTrashpandaVirtualsOperatorProvisioningEvidence",
+  "recordedAt": "2026-07-22",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "platform": "Virtuals ACP Lite",
+  "agent": {
+    "id": "44184",
+    "name": "Yanagi",
+    "wallet": "eip155:8453:0x9e1e497e38b776db1a79f0db9dd558bcca8b26fc"
+  },
+  "separation": {
+    "recoveryWallet": "eip155:8453:0x224c08a8526751887a83e2711b167f890c6d078d",
+    "operatorDiffersFromRecovery": true,
+    "recoveryCredentialLoaded": false
+  },
+  "credential": {
+    "creationResponsePersisted": false,
+    "creationApiKeyDiscarded": true,
+    "pilotRegenerationPlan": "short-lived user session regenerates the key directly into the seller process",
+    "atRestPersistence": false,
+    "secretBytesRecorded": false
+  },
+  "authorization": "ni:///sha-256;qmlVGM6Y11-5PjGAAVssSurZgYTGInmrrdhmFbbzpg4"
+}

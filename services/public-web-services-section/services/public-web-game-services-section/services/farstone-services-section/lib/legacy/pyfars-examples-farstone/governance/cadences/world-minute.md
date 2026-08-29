@@ -1,0 +1,18 @@
+---
+description: "The world-minute cadence — the minute-boundary cycle of Farston's simulated world clock."
+keywords: ["governance", "farstone", "polity", "municipal", "council-manager", "prior-art", "cadence"]
+slug: world-minute
+type: cadence
+kind: world
+title: "World-minute"
+sim-seconds-per-cycle: 60
+period-resolution: fixed
+boundary-at: minute-boundary
+status: active
+---
+
+# World-minute
+
+A 60-sim-second cadence.
+Used mostly by fast-cycle records (the ferry's minute-resolution next-departure-at projection).
+No agent currently subscribes; record exists for completeness of the cadence vocabulary.

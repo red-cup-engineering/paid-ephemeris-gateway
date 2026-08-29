@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parlor.561.group</title>
+<meta name="description" content="The parlor shelf: Pig, Farkle, and Yacht (dice), Chutes &amp; Ladders (a board race), and Fair Spin (a practice-only slot machine) — every game shows its computed odds and expected value live. Earn-only, no wagering, kind design.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shelf-chrome.css">
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">The Parlor</span>
+  <span class="spacer"></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main style="max-width: 760px; margin: 0 auto; padding: 1.5rem; flex: 1;">
+  <div class="earn-banner">Practice scorekeeping only, on every game here. Nothing is staked, nothing is
+    wagered, no currency of any kind enters or leaves. Every decision that has a real probability
+    or expected value behind it shows the computed number, live, next to the decision — not
+    behind a click, never asserted without the arithmetic that produced it.</div>
+
+  <p>One shared kernel (<code>@red-cup-engineering/parlor-kernel</code>), games as data plus a thin face.
+    Every game is daily-seeded — <a href="#" id="today-link">today's dice</a> are the same for
+    everyone who plays them today — and every game also offers a fresh random game any time.</p>
+
+  <ul style="list-style: none; padding: 0; display: grid; gap: 0.85rem;">
+    <li style="border:1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+      <h2 style="margin: 0 0 0.35rem;"><a href="pig/">Pig</a></h2>
+      <p style="margin:0; color: var(--ink-dim);">Hold-or-roll, first to 100. The computed bust probability and
+        expected value of rolling again sit next to every decision. Bot opponent plays the exact
+        published math.</p>
+    </li>
+    <li style="border:1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+      <h2 style="margin: 0 0 0.35rem;"><a href="farkle/">Farkle</a></h2>
+      <p style="margin:0; color: var(--ink-dim);">Dice-set scoring, hot dice, and a real chance to bust the whole
+        turn. Same computed-odds treatment; same kind of bot opponent.</p>
+    </li>
+    <li style="border:1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+      <h2 style="margin: 0 0 0.35rem;"><a href="yacht/">Yacht</a></h2>
+      <p style="margin:0; color: var(--ink-dim);">Five dice, three rolls, 12 standard categories. Every category
+        shows its exact score-if-you-commit-now and its exact expected value if you reroll once
+        more, recomputed live after every roll and every hold.</p>
+    </li>
+    <li style="border:1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+      <h2 style="margin: 0 0 0.35rem;"><a href="chutes/">Chutes &amp; Ladders</a></h2>
+      <p style="margin:0; color: var(--ink-dim);">The classic 100-square race as a board-as-graph. 1-4 players,
+        any mix of humans and bots — the bot is a die, not an opponent, since there's no strategy
+        in this game. The exact probability distribution of finish turns updates live as the race
+        runs.</p>
+    </li>
+    <li style="border:1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+      <h2 style="margin: 0 0 0.35rem;"><a href="reels/">Fair Spin</a></h2>
+      <p style="margin:0; color: var(--ink-dim);">A 3-reel practice slot that inverts the genre: computed RTP,
+        per-symbol hit odds, and expected loss per 100 spins are shown permanently on the machine
+        face, never behind a click. Practice bankroll only.</p>
+    </li>
+  </ul>
+</main>
+
+<footer class="site-footer">
+  <span>Every rule and every odds figure on this shelf is computed by <code>@red-cup-engineering/parlor-kernel</code>, not hand-typed.</span>
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+  document.getElementById('today-link').addEventListener('click', (e) => e.preventDefault());
+</script>
+</body>
+</html>

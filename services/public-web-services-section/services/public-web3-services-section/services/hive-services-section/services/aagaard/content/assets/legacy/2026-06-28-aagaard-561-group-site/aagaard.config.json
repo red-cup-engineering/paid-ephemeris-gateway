@@ -1,0 +1,47 @@
+{
+  "_comment": "Operational overlay for the Aagaard fleet. Accounts come from propolis.config.json; this file sets the gates, cadence, and per-account risk envelopes. 'live' is intentionally false: the platform runs, plans, and records but signs nothing until a human arms it (AAGAARD_LIVE=1 or POST /ops/arm). Locked lanes (posting, gaming) can never be enabled here.",
+  "live": false,
+  "_enabledComment": "Armed for VOTING only — the trading lane is intentionally off until separately reviewed/authorized. Add \"trading\" here to re-enable it. (Arming itself is via AAGAARD_LIVE=1 in the deployment env, not this file, so the committed default stays dry-run.)",
+  "enabled": ["voting"],
+  "cadenceSeconds": 900,
+  "accounts": {
+    "sigmund-vexler": {
+      "_comment": "Sandbox: the one account sanctioned for live financial action. Its voting character (alpha-hunter over the whole trending field) is seeded in src/strategy.mts; the optional 'strategy' block below would retune which feeds it watches and how it weights them.",
+      "tradingLive": true,
+      "capHiveMilli": 5000,
+      "capHbdMilli": 5000,
+      "minLiquidHbdMilli": 500,
+      "maxVoteWeightBps": 10000
+    },
+    "_strategyExample": {
+      "_comment": "Per-account voting character override. Copy under a real account name to redirect its votes. 'feeds' chooses the slice of chain it watches (any combination); 'objective' weights how it ranks that field. Omitted fields fall back to the account's seeded character.",
+      "strategy": {
+        "archetype": "community-curator",
+        "feeds": {
+          "mainFeed": false,
+          "ownFeed": true,
+          "communities": ["hive-167922"],
+          "tags": ["photography", "art"],
+          "users": ["emsenn0"],
+          "sort": "created",
+          "perSourceLimit": 12
+        },
+        "objective": {
+          "underrecognition": 1.0,
+          "communityFit": 1.4,
+          "conversation": 0.8,
+          "durability": 0.6,
+          "bridge": 0.3,
+          "quality": 1.0,
+          "cartelAversion": 0.7
+        },
+        "pacing": {
+          "_comment": "How it spends mana: at most maxVotesPerTick per tick, only on opportunities that out-score the field's typical candidate by 'conviction', and never below votingPowerFloorBps voting power (husbanding mana). One good vote per tick, or none.",
+          "maxVotesPerTick": 1,
+          "conviction": 1.5,
+          "votingPowerFloorBps": 8000
+        }
+      }
+    }
+  }
+}

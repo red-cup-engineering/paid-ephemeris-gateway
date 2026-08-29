@@ -1,0 +1,45 @@
+{
+  "name": "@561-group/aletheon",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void — every vital fact is a bilattice cell (⊥ unknown / t real / f destroyed / ⊤ contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the cleaned-up voidmath kernel; the browser renders a streamed view with a from-scratch zero-dependency WebGL2 engine and rederived vec/mat/quat math. Zero dependencies, zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/561-group.git",
+    "directory": "development/experimental/aletheon"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/aletheon-server.mjs",
+    "test": "node tests/math.test.mjs && node tests/world.test.mjs && node tests/net.test.mjs"
+  },
+  "imports": {
+    "#shared/*": "./shared/*",
+    "#world/*": "./server/world/*",
+    "#net/*": "./server/net/*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "561:serve": {
+    "domain": "aletheon.561.group",
+    "kind": "proxy",
+    "port": 18794,
+    "ws": true,
+    "run": {
+      "unit": "aletheon.service",
+      "description": "Aletheon browser 3D MMORPG",
+      "exec": "scripts/aletheon-server.mjs",
+      "env": {
+        "WORLD_LOG": "${dir}/deploy/aletheon-world.jsonl"
+      }
+    }
+  },
+  "dependencies": {
+    "@561-group/math": "workspace:*",
+    "@561-group/qwzspace": "workspace:*"
+  }
+}

@@ -1,0 +1,693 @@
+{
+ "wingId": "ourcontent2",
+ "width": 1000,
+ "height": 720,
+ "seed": 2654435769,
+ "iterations": 500,
+ "positions": {
+  "adr-cartridge-regime-field-proposed.md": {
+   "x": 952,
+   "y": 423.92
+  },
+  "all-games-census.md": {
+   "x": 952,
+   "y": 606.42
+  },
+  "backlog-ledger-2026-08-19.md": {
+   "x": 952,
+   "y": 520.78
+  },
+  "cartridge-and-energy-bank-spec.md": {
+   "x": 952,
+   "y": 672
+  },
+  "deploy-runbook-2026-08-19.md": {
+   "x": 886.69,
+   "y": 672
+  },
+  "estate-inventory-2026-08-19.md": {
+   "x": 932.7,
+   "y": 672
+  },
+  "estate-map-2026-08-19.md": {
+   "x": 820.8,
+   "y": 672
+  },
+  "farstone-qbn-design.md": {
+   "x": 67.55,
+   "y": 672
+  },
+  "fleet-spec-coverage-and-roadmap.md": {
+   "x": 471.2,
+   "y": 672
+  },
+  "gaming-enterprises-vision.md": {
+   "x": 120.48,
+   "y": 672
+  },
+  "house-specification-standard.md": {
+   "x": 314.85,
+   "y": 672
+  },
+  "if-the-studios-survived.md": {
+   "x": 718.71,
+   "y": 672
+  },
+  "naming-the-three-houses.md": {
+   "x": 952,
+   "y": 216.54
+  },
+  "planned/durante.md": {
+   "x": 392.01,
+   "y": 672
+  },
+  "planned/energy-tiling.md": {
+   "x": 200.31,
+   "y": 672
+  },
+  "planned/equivo.md": {
+   "x": 607.93,
+   "y": 672
+  },
+  "planned/extraction-crawler.md": {
+   "x": 48,
+   "y": 672
+  },
+  "planned/farstone.md": {
+   "x": 48,
+   "y": 528.33
+  },
+  "planned/fyreside.md": {
+   "x": 48,
+   "y": 612.03
+  },
+  "planned/gambling-series.md": {
+   "x": 48,
+   "y": 227.55
+  },
+  "planned/gamified-fediverse-client.md": {
+   "x": 48,
+   "y": 329.17
+  },
+  "planned/kind-incremental-idle.md": {
+   "x": 48,
+   "y": 431.61
+  },
+  "planned/mystery-adventure.md": {
+   "x": 48,
+   "y": 133.1
+  },
+  "planned/obsidian-lineage.md": {
+   "x": 101.21,
+   "y": 48
+  },
+  "planned/okaga.md": {
+   "x": 952,
+   "y": 48
+  },
+  "planned/render-substrate.md": {
+   "x": 246.24,
+   "y": 48
+  },
+  "planned/seasons-builder.md": {
+   "x": 164.3,
+   "y": 48
+  },
+  "planned/the-commons.md": {
+   "x": 750.18,
+   "y": 48
+  },
+  "planned/undersea-mud.md": {
+   "x": 897.69,
+   "y": 48
+  },
+  "planned/wheatstone.md": {
+   "x": 550.79,
+   "y": 48
+  },
+  "revivals-anvil-obsidian-mystery.md": {
+   "x": 48,
+   "y": 48
+  },
+  "seasons-builder-design.md": {
+   "x": 654.32,
+   "y": 48
+  },
+  "semioverse-state-and-fediverse-client-feasibility.md": {
+   "x": 341.46,
+   "y": 48
+  },
+  "sierra-lucasarts-lineage-brief.md": {
+   "x": 936.95,
+   "y": 48
+  },
+  "studio-filing-reflection.md": {
+   "x": 62.79,
+   "y": 48
+  },
+  "the-suite-and-the-studio.md": {
+   "x": 833.25,
+   "y": 48
+  },
+  "three-marks-branding.md": {
+   "x": 952,
+   "y": 134.26
+  },
+  "vaultmaze-design.md": {
+   "x": 952,
+   "y": 321.58
+  },
+  "wilder-conceptions-01.md": {
+   "x": 444.75,
+   "y": 48
+  }
+ },
+ "katas": [
+  {
+   "id": "kata:hall:0",
+   "hallId": "hall:0",
+   "path": [
+    "wilder-conceptions-01.md",
+    "the-suite-and-the-studio.md",
+    "sierra-lucasarts-lineage-brief.md",
+    "seasons-builder-design.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/wheatstone.md",
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/fyreside.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md",
+    "planned/durante.md",
+    "if-the-studios-survived.md",
+    "house-specification-standard.md",
+    "gaming-enterprises-vision.md",
+    "fleet-spec-coverage-and-roadmap.md",
+    "farstone-qbn-design.md",
+    "estate-inventory-2026-08-19.md",
+    "estate-map-2026-08-19.md",
+    "deploy-runbook-2026-08-19.md",
+    "cartridge-and-energy-bank-spec.md",
+    "backlog-ledger-2026-08-19.md",
+    "all-games-census.md",
+    "adr-cartridge-regime-field-proposed.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:1",
+   "hallId": "hall:1",
+   "path": [
+    "cartridge-and-energy-bank-spec.md",
+    "adr-cartridge-regime-field-proposed.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:2",
+   "hallId": "hall:2",
+   "path": [
+    "seasons-builder-design.md",
+    "house-specification-standard.md",
+    "fleet-spec-coverage-and-roadmap.md",
+    "farstone-qbn-design.md",
+    "cartridge-and-energy-bank-spec.md",
+    "adr-cartridge-regime-field-proposed.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:3",
+   "hallId": "hall:3",
+   "path": [
+    "wilder-conceptions-01.md",
+    "three-marks-branding.md",
+    "the-suite-and-the-studio.md",
+    "studio-filing-reflection.md",
+    "sierra-lucasarts-lineage-brief.md",
+    "seasons-builder-design.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/wheatstone.md",
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/fyreside.md",
+    "planned/farstone.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md",
+    "planned/durante.md",
+    "naming-the-three-houses.md",
+    "if-the-studios-survived.md",
+    "house-specification-standard.md",
+    "gaming-enterprises-vision.md",
+    "fleet-spec-coverage-and-roadmap.md",
+    "farstone-qbn-design.md",
+    "estate-inventory-2026-08-19.md",
+    "estate-map-2026-08-19.md",
+    "deploy-runbook-2026-08-19.md",
+    "cartridge-and-energy-bank-spec.md",
+    "backlog-ledger-2026-08-19.md",
+    "all-games-census.md",
+    "adr-cartridge-regime-field-proposed.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:4",
+   "hallId": "hall:4",
+   "path": [
+    "planned/obsidian-lineage.md",
+    "adr-cartridge-regime-field-proposed.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:5",
+   "hallId": "hall:5",
+   "path": [
+    "wilder-conceptions-01.md",
+    "the-suite-and-the-studio.md",
+    "sierra-lucasarts-lineage-brief.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/wheatstone.md",
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/fyreside.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md",
+    "planned/durante.md",
+    "if-the-studios-survived.md",
+    "gaming-enterprises-vision.md",
+    "backlog-ledger-2026-08-19.md",
+    "all-games-census.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:6",
+   "hallId": "hall:6",
+   "path": [
+    "estate-inventory-2026-08-19.md",
+    "all-games-census.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:7",
+   "hallId": "hall:7",
+   "path": [
+    "estate-inventory-2026-08-19.md",
+    "estate-map-2026-08-19.md",
+    "all-games-census.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:8",
+   "hallId": "hall:8",
+   "path": [
+    "wilder-conceptions-01.md",
+    "three-marks-branding.md",
+    "the-suite-and-the-studio.md",
+    "studio-filing-reflection.md",
+    "sierra-lucasarts-lineage-brief.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/wheatstone.md",
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/fyreside.md",
+    "planned/farstone.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md",
+    "planned/durante.md",
+    "naming-the-three-houses.md",
+    "if-the-studios-survived.md",
+    "gaming-enterprises-vision.md",
+    "backlog-ledger-2026-08-19.md",
+    "all-games-census.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:9",
+   "hallId": "hall:9",
+   "path": [
+    "wilder-conceptions-01.md",
+    "three-marks-branding.md",
+    "the-suite-and-the-studio.md",
+    "studio-filing-reflection.md",
+    "sierra-lucasarts-lineage-brief.md",
+    "semioverse-state-and-fediverse-client-feasibility.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/wheatstone.md",
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/fyreside.md",
+    "planned/farstone.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md",
+    "planned/durante.md",
+    "naming-the-three-houses.md",
+    "if-the-studios-survived.md",
+    "gaming-enterprises-vision.md",
+    "backlog-ledger-2026-08-19.md",
+    "all-games-census.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:10",
+   "hallId": "hall:10",
+   "path": [
+    "seasons-builder-design.md",
+    "house-specification-standard.md",
+    "fleet-spec-coverage-and-roadmap.md",
+    "cartridge-and-energy-bank-spec.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:11",
+   "hallId": "hall:11",
+   "path": [
+    "gaming-enterprises-vision.md",
+    "cartridge-and-energy-bank-spec.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:12",
+   "hallId": "hall:12",
+   "path": [
+    "estate-inventory-2026-08-19.md",
+    "deploy-runbook-2026-08-19.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:13",
+   "hallId": "hall:13",
+   "path": [
+    "fleet-spec-coverage-and-roadmap.md",
+    "estate-inventory-2026-08-19.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:14",
+   "hallId": "hall:14",
+   "path": [
+    "planned/farstone.md",
+    "farstone-qbn-design.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:15",
+   "hallId": "hall:15",
+   "path": [
+    "planned/mystery-adventure.md",
+    "farstone-qbn-design.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:16",
+   "hallId": "hall:16",
+   "path": [
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/energy-tiling.md",
+    "gaming-enterprises-vision.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:17",
+   "hallId": "hall:17",
+   "path": [
+    "sierra-lucasarts-lineage-brief.md",
+    "if-the-studios-survived.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:18",
+   "hallId": "hall:18",
+   "path": [
+    "three-marks-branding.md",
+    "naming-the-three-houses.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:19",
+   "hallId": "hall:19",
+   "path": [
+    "planned/extraction-crawler.md",
+    "planned/durante.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:20",
+   "hallId": "hall:20",
+   "path": [
+    "planned/wheatstone.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/fyreside.md",
+    "planned/durante.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:21",
+   "hallId": "hall:21",
+   "path": [
+    "planned/wheatstone.md",
+    "planned/render-substrate.md",
+    "planned/okaga.md",
+    "planned/durante.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:22",
+   "hallId": "hall:22",
+   "path": [
+    "planned/render-substrate.md",
+    "planned/durante.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:23",
+   "hallId": "hall:23",
+   "path": [
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:24",
+   "hallId": "hall:24",
+   "path": [
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/seasons-builder.md",
+    "planned/obsidian-lineage.md",
+    "planned/mystery-adventure.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/farstone.md",
+    "planned/extraction-crawler.md",
+    "planned/equivo.md",
+    "planned/energy-tiling.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:25",
+   "hallId": "hall:25",
+   "path": [
+    "planned/undersea-mud.md",
+    "planned/the-commons.md",
+    "planned/kind-incremental-idle.md",
+    "planned/gamified-fediverse-client.md",
+    "planned/gambling-series.md",
+    "planned/energy-tiling.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:26",
+   "hallId": "hall:26",
+   "path": [
+    "planned/render-substrate.md",
+    "planned/extraction-crawler.md",
+    "planned/durante.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:27",
+   "hallId": "hall:27",
+   "path": [
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/extraction-crawler.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:28",
+   "hallId": "hall:28",
+   "path": [
+    "planned/the-commons.md",
+    "planned/gamified-fediverse-client.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:29",
+   "hallId": "hall:29",
+   "path": [
+    "semioverse-state-and-fediverse-client-feasibility.md",
+    "planned/gamified-fediverse-client.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:30",
+   "hallId": "hall:30",
+   "path": [
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/mystery-adventure.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:31",
+   "hallId": "hall:31",
+   "path": [
+    "sierra-lucasarts-lineage-brief.md",
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/mystery-adventure.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:32",
+   "hallId": "hall:32",
+   "path": [
+    "revivals-anvil-obsidian-mystery.md",
+    "planned/obsidian-lineage.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:33",
+   "hallId": "hall:33",
+   "path": [
+    "planned/render-substrate.md",
+    "planned/okaga.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:34",
+   "hallId": "hall:34",
+   "path": [
+    "seasons-builder-design.md",
+    "planned/seasons-builder.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:35",
+   "hallId": "hall:35",
+   "path": [
+    "sierra-lucasarts-lineage-brief.md",
+    "planned/seasons-builder.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:36",
+   "hallId": "hall:36",
+   "path": [
+    "sierra-lucasarts-lineage-brief.md",
+    "seasons-builder-design.md",
+    "planned/seasons-builder.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:37",
+   "hallId": "hall:37",
+   "path": [
+    "wilder-conceptions-01.md",
+    "the-suite-and-the-studio.md"
+   ],
+   "origin": "auto-hall"
+  }
+ ]
+}

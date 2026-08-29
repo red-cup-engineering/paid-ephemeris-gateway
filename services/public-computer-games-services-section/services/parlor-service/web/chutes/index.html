@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chutes &amp; Ladders — parlor.561.group</title>
+<meta name="description" content="The classic 100-square race as a board-as-graph: 1-4 players, any mix of humans and bots — and the bot is a die, not an opponent, because there is no strategy in this game. Watch the exact probability distribution of finish turns update live as the race runs.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/parlor-kernel/seed": "/vendor/parlor-kernel/seed.mjs",
+    "@red-cup-engineering/parlor-kernel/dice": "/vendor/parlor-kernel/dice.mjs",
+    "@red-cup-engineering/parlor-kernel/board": "/vendor/parlor-kernel/board.mjs",
+    "@red-cup-engineering/parlor-kernel/replay": "/vendor/parlor-kernel/replay.mjs",
+    "@red-cup-engineering/cartridge/seed": "/vendor/cartridge/seed.mjs",
+    "@red-cup-engineering/cartridge/replay": "/vendor/cartridge/replay.mjs",
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/cartridge/intent-log.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">Chutes &amp; Ladders</span>
+  <nav class="game-nav" aria-label="Parlor games">
+    <a href="/">All games</a>
+    <a href="/pig/">Pig</a>
+    <a href="/farkle/">Farkle</a>
+    <a href="/yacht/">Yacht</a>
+    <a href="/chutes/" aria-current="page">Chutes &amp; Ladders</a>
+    <a href="/reels/">Fair Spin</a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label">—</code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="table-panel">
+    <div class="earn-banner">No wagering, nothing to win or lose but bragging rights. Pure chance — this game has no decisions in it at all.</div>
+
+    <div id="setup-panel" class="setup-panel">
+      <h2>Start a race</h2>
+      <p>1-4 players, any mix of "You" and "Bot." A bot makes exactly the same move a human does when it's their turn — roll the die, move the piece — because there is nothing else to decide. <strong>The bot is a die with a seating position, not an opponent.</strong></p>
+      <div id="player-rows" class="player-rows"></div>
+      <div class="action-row">
+        <button id="btn-add-player" class="action-button" type="button">+ Add player</button>
+        <button id="btn-remove-player" class="action-button" type="button">− Remove player</button>
+      </div>
+      <div class="action-row">
+        <button id="btn-start-daily" class="action-button action-button--primary" type="button">Start today's race (daily seed)</button>
+        <button id="btn-start-practice" class="action-button" type="button">Start a practice race (fresh seed)</button>
+      </div>
+    </div>
+
+    <div id="race-panel" class="race-panel" hidden>
+      <svg id="board-svg" class="board-svg" aria-label="The 100-square board, with ladders and chutes drawn as lines"></svg>
+      <div id="roll-banner" class="turn-banner" aria-live="off"></div>
+      <div class="action-row">
+        <button id="btn-roll" class="action-button action-button--primary" type="button">Roll</button>
+        <button id="btn-new-race" class="action-button" type="button">New race</button>
+      </div>
+      <p class="help-panel">This button does the exact same thing on every turn, whether it's "You" or a "Bot" rolling — there is no code path anywhere in this game that treats a bot's turn any differently from a human's. That sameness <em>is</em> the game.</p>
+    </div>
+
+    <div id="standings-panel" class="standings-panel" hidden>
+      <h2>Race over</h2>
+      <ol id="standings-list" class="standings-list"></ol>
+    </div>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Live: turns left to finish</h2>
+    <p class="help-panel">The exact probability of finishing on each future turn, for whoever is rolling next — computed fresh, by exact enumeration over the board's own graph, after every roll. Not a simulation.</p>
+    <svg id="distribution-svg" class="distribution-svg" aria-label="Probability distribution of turns remaining to finish"></svg>
+    <div id="distribution-caption" class="distribution-caption"></div>
+    <h2>Players</h2>
+    <ul id="player-status-list" class="player-status-list"></ul>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  Board data (the classic layout's ladders and chutes) lives in <code>src/games/chutes/board.mts</code>; the
+  finish-turn distribution is exact dynamic programming over that same graph, in
+  <code>src/games/chutes/odds.mts</code> — see this service's <code>README.md</code>.
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="../js/app-chutes.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

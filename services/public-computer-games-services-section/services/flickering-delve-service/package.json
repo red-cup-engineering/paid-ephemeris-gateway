@@ -1,0 +1,28 @@
+{
+  "name": "@red-cup-engineering/flickering-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "fizzos",
+    "idle-game",
+    "mud"
+  ],
+  "description": "flickering.561.group — an idle roguelike: descend a procedurally generated cave whose play becomes programmable strategy. Optional micropayments via Stripe or Hive.",
+  "scripts": {
+    "serve": "node src/server.mts",
+    "test": "node --test src/*.test.mts"
+  },
+  "exports": {
+    ".": "./src/server.mts",
+    "./scene": "./src/scene.mts",
+    "./economy": "./src/economy.mts",
+    "./dungeon": "./src/dungeon.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@red-cup-engineering/fizzos": "0.2.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

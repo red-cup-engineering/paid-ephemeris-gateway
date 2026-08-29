@@ -1,0 +1,29 @@
+{
+  "name": "@red-cup-engineering/dcrops-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "dCrops NFT-instance observation (land, seed, season) and pure single-plot action planning (plant / harvest / remove-expired / wait), producing unsigned custom_json intents only.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "exports": {
+    ".": "./src/dcrops.mjs",
+    "./dcrops": {
+      "types": "./src/dcrops.d.ts",
+      "default": "./src/dcrops.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "hive-engine",
+    "dcrops",
+    "sovereign-state-enterprise"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-router-561-group",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-08-04",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    { "pattern": "play.561.group", "custom_domain": true },
+    { "pattern": "crucible.561.group", "custom_domain": true },
+    { "pattern": "solitaire.561.group", "custom_domain": true },
+    { "pattern": "gambling-trainer.561.group", "custom_domain": true },
+    { "pattern": "ruinfold.561.group", "custom_domain": true },
+    { "pattern": "farstone.561.group", "custom_domain": true },
+    { "pattern": "durante.561.group", "custom_domain": true },
+    { "pattern": "aletheon.561.group", "custom_domain": true },
+    { "pattern": "equivo.561.group", "custom_domain": true },
+    { "pattern": "weiqi.561.group", "custom_domain": true },
+    { "pattern": "you-are-conscious.561.group", "custom_domain": true },
+    { "pattern": "stoke.561.group", "custom_domain": true },
+    { "pattern": "parlor.561.group", "custom_domain": true },
+    { "pattern": "tidepool.561.group", "custom_domain": true },
+    { "pattern": "fearful.561.group", "custom_domain": true }
+  ]
+}

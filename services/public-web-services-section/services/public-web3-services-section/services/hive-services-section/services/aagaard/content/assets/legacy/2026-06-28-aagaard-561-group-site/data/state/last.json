@@ -1,0 +1,420 @@
+{
+  "kind": "aagaard.fleet-tick",
+  "ts": "2026-06-20T23:43:40.942Z",
+  "running": true,
+  "live": true,
+  "enabled": [
+    "voting"
+  ],
+  "accounts": [
+    {
+      "account": "emsenn0",
+      "voting": {
+        "currentMana": "1036143749196",
+        "maxMana": "1036143749196",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 0,
+        "strategy": {
+          "archetype": "curator",
+          "disposition": "Curates its own following feed and the main field with a balanced, quality-first eye.",
+          "feeds": [
+            "main",
+            "own-feed"
+          ],
+          "fieldSize": 12,
+          "emphasisHits": 0,
+          "votingPowerBps": 10000,
+          "eligibleCount": 11,
+          "acted": false,
+          "decision": "curator waited — best α*=0.00 below conviction bar 0.00 — waiting for a clearer opportunity"
+        },
+        "radar": {
+          "posts": 12,
+          "mispricingEnergy": 0,
+          "components": 12,
+          "durable": true,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 1.9999999999999998,
+          "decayHalfLife": 0.3465735902799727,
+          "cartelCycles": 398,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "x-rain/the-results-of-contest-87 E[α]=0.00",
+            "detlev/beersaturday-468 E[α]=0.00",
+            "gabrielatravels/campia-libertatii-din-blaj-the-liberty-field-of-blaj-or-lets-travel-together-360 E[α]=0.00",
+            "acidyo/reviews-import-contest-500-hive-prize-for-an-automated-task E[α]=0.00",
+            "oflyhigh/xmnq1 E[α]=0.00"
+          ],
+          "cartelTrailsFlagged": 1
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 4,
+        "nominated": 2,
+        "autoExecuted": 0,
+        "topOffers": [
+          "sam.chess/hivechess-s2r22 EV=-0.102 [comment,reblog]",
+          "acidyo/reviews-import-contest-500-hive-prize-for-an-automated-task EV=-0.103 [comment,reblog,vote]"
+        ]
+      }
+    },
+    {
+      "account": "essiebee",
+      "voting": {
+        "currentMana": "5085739508",
+        "maxMana": "5085739508",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 0,
+        "strategy": {
+          "archetype": "gardener",
+          "disposition": "Tends gaming communities — favours durable, well-discussed posts that keep the board healthy.",
+          "feeds": [
+            "community:hive-140217",
+            "community:hive-13323",
+            "#gaming",
+            "#splinterlands",
+            "#play2earn"
+          ],
+          "fieldSize": 37,
+          "emphasisHits": 28,
+          "votingPowerBps": 10000,
+          "eligibleCount": 25,
+          "acted": false,
+          "decision": "gardener waited — a full vote at 100% power is still dust — Hive Power too low to matter"
+        },
+        "radar": {
+          "posts": 37,
+          "mispricingEnergy": 15.743589743589743,
+          "components": 11,
+          "durable": true,
+          "topSinks": [
+            "bulkathos/summary-of-my-eos-trying",
+            "freed99/my-purchases-of-conclave-arcana",
+            "atnazo/my-staked-sps-still-increases-my-goal-300k-sps",
+            "culebro/legendary-and-golden-cards-are",
+            "rookie2001/or-or-89c391f6a252a"
+          ]
+        },
+        "intelligence": {
+          "fiedler": 0.9999999999999974,
+          "decayHalfLife": 0.6931471805599471,
+          "cartelCycles": 351,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "buzzer11/grab-and-game-mantis-by-exploding-kittens-or-travel-sized E[α]=0.26",
+            "hizik1312/latest-purchase E[α]=0.26",
+            "valentin86/syndicate-protocol-the-strategy-game-that-could-become-hives-next-big-phenomenon E[α]=0.24",
+            "buzzer11/grab-and-game-mantis E[α]=0.23",
+            "culebro/legendary-and-golden-cards-are E[α]=0.18"
+          ],
+          "cartelTrailsFlagged": 2
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 4,
+        "nominated": 2,
+        "autoExecuted": 0,
+        "topOffers": [
+          "catharsis/kintara-game-5th-day-playing EV=-0.002 [follow]",
+          "hivegc/comeback-and-contest-announcement-post EV=-0.100 [comment]"
+        ]
+      }
+    },
+    {
+      "account": "sigmund-vexler",
+      "voting": {
+        "currentMana": "5076218606",
+        "maxMana": "6066992140",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 0,
+        "strategy": {
+          "archetype": "alpha-hunter",
+          "disposition": "Reads the whole trending field as a reward topology and funds the deepest underpriced sinks first.",
+          "feeds": [
+            "main"
+          ],
+          "fieldSize": 18,
+          "emphasisHits": 0,
+          "votingPowerBps": 8366,
+          "eligibleCount": 17,
+          "acted": false,
+          "decision": "alpha-hunter waited — best α*=0.00 below conviction bar 0.00 — waiting for a clearer opportunity"
+        },
+        "radar": {
+          "posts": 18,
+          "mispricingEnergy": 0,
+          "components": 18,
+          "durable": true,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 1.9999999999999998,
+          "decayHalfLife": 0.3465735902799727,
+          "cartelCycles": 398,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "x-rain/the-results-of-contest-87 E[α]=0.00",
+            "detlev/beersaturday-468 E[α]=0.00",
+            "gabrielatravels/campia-libertatii-din-blaj-the-liberty-field-of-blaj-or-lets-travel-together-360 E[α]=0.00",
+            "acidyo/reviews-import-contest-500-hive-prize-for-an-automated-task E[α]=0.00",
+            "oflyhigh/xmnq1 E[α]=0.00"
+          ],
+          "cartelTrailsFlagged": 1
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 5,
+        "nominated": 3,
+        "autoExecuted": 0,
+        "topOffers": [
+          "ph1102/chasing-the-ball-late-night EV=-0.003 [reblog,vote]",
+          "sam.chess/hivechess-s2r22 EV=-0.102 [comment,reblog]",
+          "acidyo/reviews-import-contest-500-hive-prize-for-an-automated-task EV=-0.103 [comment,reblog,vote]"
+        ]
+      }
+    },
+    {
+      "account": "marshian",
+      "voting": {
+        "currentMana": "5955148771",
+        "maxMana": "5955148771",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 0,
+        "strategy": {
+          "archetype": "scout",
+          "disposition": "Ranges tags hunting cross-community bridge posts the reward graph hasn't found yet.",
+          "feeds": [
+            "#gaming",
+            "#art",
+            "#writing",
+            "#photography"
+          ],
+          "fieldSize": 38,
+          "emphasisHits": 3,
+          "votingPowerBps": 10000,
+          "eligibleCount": 25,
+          "acted": false,
+          "decision": "scout waited — a full vote at 100% power is still dust — Hive Power too low to matter"
+        },
+        "radar": {
+          "posts": 38,
+          "mispricingEnergy": 2.666666666666667,
+          "components": 31,
+          "durable": true,
+          "topSinks": [
+            "buzzer11/grab-and-game-mantis-by-exploding-kittens-or-travel-sized",
+            "buzzer11/grab-and-game-mantis"
+          ]
+        },
+        "intelligence": {
+          "fiedler": 0.9999999999999999,
+          "decayHalfLife": 0.6931471805599454,
+          "cartelCycles": 0,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "buzzer11/grab-and-game-mantis-by-exploding-kittens-or-travel-sized E[α]=0.95",
+            "buzzer11/grab-and-game-mantis E[α]=0.83",
+            "godffrey/legendary-skin-unlocked-rate-this E[α]=0.00",
+            "godffrey/weekend-fully-loaded-cash-fragrance E[α]=0.00",
+            "mithrildestiny/thecrazygmcom-your-source-for-open-gaming-content E[α]=0.00"
+          ],
+          "cartelTrailsFlagged": 0
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 3,
+        "nominated": 2,
+        "autoExecuted": 0,
+        "topOffers": [
+          "onemoretea/actifit-onemoretea-20260620t213134531z EV=-0.102 [comment,reblog]",
+          "nanixxx/untitled-tgxt0e EV=-0.500 [post]"
+        ]
+      }
+    },
+    {
+      "account": "michael561",
+      "voting": {
+        "currentMana": "37315965610",
+        "maxMana": "37315965610",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 0,
+        "strategy": {
+          "archetype": "archivist",
+          "disposition": "Follows a few trusted authors and its own feed; conservative, durability- and quality-first.",
+          "feeds": [
+            "own-feed",
+            "blog:@emsenn0"
+          ],
+          "fieldSize": 12,
+          "emphasisHits": 3,
+          "votingPowerBps": 10000,
+          "eligibleCount": 0,
+          "acted": false,
+          "decision": "archivist waited — no eligible candidate in the field"
+        },
+        "radar": {
+          "posts": 12,
+          "mispricingEnergy": 0,
+          "components": 9,
+          "durable": true,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0.9999999999999999,
+          "decayHalfLife": 0.6931471805599454,
+          "cartelCycles": 259,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "curatingunicorn/free-giveaway-win-a-weed E[α]=0.00",
+            "ecotrain/ecotrain-question-of-the-week-57-tie-up-post-share-a-ritual-that-you-perform-or-know-about E[α]=0.00",
+            "sreypov/coconut-milk-baka-bana-chips-a-sweet-and-spicy-ital-snack E[α]=0.00",
+            "luvshares/luvbot-share-luv-with-the-reply-luv E[α]=0.00",
+            "leofinance/introducing-dec-farming-on-cub-finance-or-changes-to-dens-farms-24-hours-left-for-wrapping-cub E[α]=0.00"
+          ],
+          "cartelTrailsFlagged": 0
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 2,
+        "nominated": 2,
+        "autoExecuted": 0,
+        "topOffers": [
+          "luvshares/luvbot-share-luv-with-the-reply-luv EV=-0.101 [comment,vote]",
+          "curatingunicorn/free-giveaway-win-a-weed EV=-0.102 [comment,reblog]"
+        ]
+      }
+    },
+    {
+      "account": "help-fund",
+      "voting": {
+        "currentMana": "8216970932",
+        "maxMana": "8400061186",
+        "votesPlanned": 1,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "errors": 1,
+        "strategy": {
+          "archetype": "patron-steward",
+          "disposition": "Supports the communities it funds — rewards quality and conversation inside them, not the global field.",
+          "feeds": [
+            "community:hive-167922",
+            "community:hive-163521",
+            "#leofinance",
+            "#hive",
+            "#dev"
+          ],
+          "fieldSize": 55,
+          "emphasisHits": 28,
+          "votingPowerBps": 9782,
+          "eligibleCount": 36,
+          "acted": true,
+          "decision": "patron-steward cast 1 vote at 98% power: @dudeontheweb"
+        },
+        "radar": {
+          "posts": 55,
+          "mispricingEnergy": 25.392307692307696,
+          "components": 20,
+          "durable": true,
+          "topSinks": [
+            "dudeontheweb/solohive-updates-bug-fix-and-comments-toggle",
+            "deflation/burn-report-2026-06-20",
+            "sk1920/actifit-sk1920-20260620t215745642z",
+            "sagarkothari88/bc027a7f",
+            "leofinance/inleos-vision-for-hive-open-sourcing-our-tech-and-growth-3xc"
+          ]
+        },
+        "intelligence": {
+          "fiedler": 0.9999999999999974,
+          "decayHalfLife": 0.6931471805599471,
+          "cartelCycles": 700,
+          "bridges": 8,
+          "topByExpectedAlpha": [
+            "dudeontheweb/solohive-updates-bug-fix-and-comments-toggle E[α]=1.87",
+            "sk1920/actifit-sk1920-20260620t215745642z E[α]=0.63",
+            "sagarkothari88/bc027a7f E[α]=0.18",
+            "nabbas0786/keeping-the-momentum-my-second E[α]=0.13",
+            "we-are-ai/leasing-hive-power-apr-821-ckj E[α]=0.10"
+          ],
+          "cartelTrailsFlagged": 1
+        }
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "incentive": {
+        "offersFound": 8,
+        "nominated": 4,
+        "autoExecuted": 0,
+        "topOffers": [
+          "catharsis/kintara-game-5th-day-playing EV=-0.002 [follow]",
+          "bpcvoter2/war-6 EV=-0.050 [delegate]",
+          "leofinance/hivestats-redesign-the-best-way-to-track-analyze-your-hive-account-3fa EV=-0.100 [comment]",
+          "yordan96/what-if-attention-becomes-the-most-valuable-currency-in-the-ai-era-ap5 EV=-0.100 [comment]"
+        ]
+      }
+    }
+  ]
+}

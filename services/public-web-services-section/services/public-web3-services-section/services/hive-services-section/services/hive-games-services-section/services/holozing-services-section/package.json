@@ -1,0 +1,29 @@
+{
+  "name": "@red-cup-engineering/holozing-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Read-only HoloZing pending-reward observation and pure stake-only reward-claim planning; never opens, transfers, or mutates an Alpha Vial NFT.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "exports": {
+    ".": "./src/rewards.mjs",
+    "./rewards": {
+      "types": "./src/rewards.d.ts",
+      "default": "./src/rewards.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "hive-engine",
+    "holozing",
+    "sovereign-state-enterprise"
+  ]
+}

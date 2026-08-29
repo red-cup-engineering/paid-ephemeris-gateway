@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yacht — parlor.561.group</title>
+<meta name="description" content="Yacht: 5 dice, 3 rolls, 12 standard categories. Every category shows its exact score if you commit now and its exact expected value if you reroll once more, computed live. Earn-only, no wagering.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/parlor-kernel/seed": "/vendor/parlor-kernel/seed.mjs",
+    "@red-cup-engineering/parlor-kernel/dice": "/vendor/parlor-kernel/dice.mjs",
+    "@red-cup-engineering/parlor-kernel/turns": "/vendor/parlor-kernel/turns.mjs",
+    "@red-cup-engineering/parlor-kernel/board": "/vendor/parlor-kernel/board.mjs",
+    "@red-cup-engineering/parlor-kernel/tally": "/vendor/parlor-kernel/tally.mjs",
+    "@red-cup-engineering/parlor-kernel/odds": "/vendor/parlor-kernel/odds.mjs",
+    "@red-cup-engineering/parlor-kernel/reels": "/vendor/parlor-kernel/reels.mjs",
+    "@red-cup-engineering/parlor-kernel/disclosure": "/vendor/parlor-kernel/disclosure.mjs",
+    "@red-cup-engineering/parlor-kernel/replay": "/vendor/parlor-kernel/replay.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">Yacht</span>
+  <nav class="game-nav" aria-label="Parlor games">
+    <a href="../pig/">Pig</a>
+    <a href="../farkle/">Farkle</a>
+    <a href="../yacht/" aria-current="page">Yacht</a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label">—</code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="table-panel">
+    <div class="earn-banner">Practice scorekeeping only. Nothing is staked, nothing is wagered, no currency of any kind enters or leaves.</div>
+
+    <p class="turn-banner" id="turn-banner" aria-live="off">Loading…</p>
+    <p id="rolls-note" class="help-panel"></p>
+    <div class="dice-row" id="dice-row" role="group" aria-label="Your five dice — select which to hold before rerolling"></div>
+
+    <div class="action-row">
+      <button id="btn-roll" class="action-button action-button--primary" type="button">Roll <kbd>Space</kbd></button>
+      <button id="btn-new-daily" class="action-button" type="button">Today's game <kbd>T</kbd></button>
+      <button id="btn-new-random" class="action-button" type="button">New random game <kbd>N</kbd></button>
+    </div>
+
+    <div id="status-panel" class="status-panel" aria-live="polite"></div>
+
+    <h2 class="odds-panel-title">Categories — exact score now, and exact expected value if you reroll once more</h2>
+    <div style="overflow-x:auto">
+      <table class="score-table" id="category-table" aria-label="Yacht categories">
+        <thead>
+          <tr><th>Category</th><th class="num">Score now</th><th class="num">Reroll EV</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="log-panel">
+      <strong>Log</strong>
+      <ol id="log-list" reversed></ol>
+    </div>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Totals</h2>
+    <table class="score-table" id="totals-table"><tbody></tbody></table>
+
+    <h2>Rules</h2>
+    <p class="help-panel">Five dice, up to three rolls a turn — hold whichever dice you like between
+      rolls. Score exactly one category per turn, in any order. <span id="category-count">12</span>
+      standard Yacht categories (not 13 — that's Yahtzee's count). Game ends once every player
+      has filled every category; the highest total wins.</p>
+
+    <h2>Keyboard</h2>
+    <p class="help-panel">
+      <kbd>1</kbd>–<kbd>5</kbd> toggle hold on a die · <kbd>Space</kbd> roll ·
+      <kbd>T</kbd> today's game · <kbd>N</kbd> new random game. Tab into the category table and
+      press Enter/Space on a "Score" button to score that category. Every die and control is
+      also a plain focusable button.
+    </p>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <span>Rules and odds computed live by <code>@red-cup-engineering/parlor-kernel</code>. Determinism: the same seed always deals the same dice.</span>
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="../js/app-yacht.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

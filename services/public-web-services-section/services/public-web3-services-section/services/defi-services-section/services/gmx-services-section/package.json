@@ -1,0 +1,11 @@
+{
+  "name": "@red-cup-engineering/gmx-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "GMX protocol integration under DeFi Services Section: reads and, once execution is admitted, trades GMX perpetual positions on Arbitrum, offered through the Internal Market to any settlement holding a priced customer contract.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/gmx-services-section.git"
+  }
+}

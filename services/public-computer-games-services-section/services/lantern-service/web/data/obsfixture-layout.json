@@ -1,0 +1,161 @@
+{
+ "wingId": "obsfixture",
+ "width": 1000,
+ "height": 720,
+ "seed": 2654435769,
+ "iterations": 500,
+ "positions": {
+  "Atomic Habits.md": {
+   "x": 629.33,
+   "y": 375.01
+  },
+  "Book - Atomic Habits.md": {
+   "x": 952,
+   "y": 508.14
+  },
+  "Book - Deep Work.md": {
+   "x": 952,
+   "y": 672
+  },
+  "Daily Notes.md": {
+   "x": 61.05,
+   "y": 416.6
+  },
+  "Overview.md": {
+   "x": 463.99,
+   "y": 672
+  },
+  "Reading List.md": {
+   "x": 740.48,
+   "y": 538.87
+  },
+  "Second Brain.md": {
+   "x": 110.31,
+   "y": 672
+  },
+  "Spaced Repetition.md": {
+   "x": 48,
+   "y": 672
+  },
+  "Weekly Review.md": {
+   "x": 376.22,
+   "y": 265.68
+  },
+  "Welcome.md": {
+   "x": 219.77,
+   "y": 672
+  },
+  "Zettelkasten.md": {
+   "x": 353.31,
+   "y": 594.37
+  },
+  "areas/Finance.md": {
+   "x": 48,
+   "y": 155.61
+  },
+  "areas/Health.md": {
+   "x": 498.27,
+   "y": 48
+  },
+  "areas/Notes.md": {
+   "x": 48,
+   "y": 48
+  },
+  "projects/Notes.md": {
+   "x": 890.41,
+   "y": 48
+  },
+  "projects/Overview.md": {
+   "x": 952,
+   "y": 235.72
+  },
+  "projects/Project Alpha.md": {
+   "x": 673.45,
+   "y": 48
+  },
+  "projects/Project Beta.md": {
+   "x": 952,
+   "y": 48
+  }
+ },
+ "katas": [
+  {
+   "id": "kata:hall:0",
+   "hallId": "hall:0",
+   "path": [
+    "Atomic Habits.md",
+    "Book - Atomic Habits.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:1",
+   "hallId": "hall:1",
+   "path": [
+    "Daily Notes.md",
+    "Weekly Review.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:2",
+   "hallId": "hall:2",
+   "path": [
+    "projects/Overview.md",
+    "Overview.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:3",
+   "hallId": "hall:3",
+   "path": [
+    "Book - Deep Work.md",
+    "Atomic Habits.md",
+    "Book - Atomic Habits.md",
+    "Reading List.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:4",
+   "hallId": "hall:4",
+   "path": [
+    "areas/Notes.md",
+    "areas/Health.md",
+    "areas/Finance.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:5",
+   "hallId": "hall:5",
+   "path": [
+    "projects/Project Alpha.md",
+    "projects/Project Beta.md",
+    "projects/Overview.md",
+    "projects/Notes.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:6",
+   "hallId": "hall:6",
+   "path": [
+    "projects/Project Alpha.md",
+    "projects/Project Beta.md"
+   ],
+   "origin": "auto-hall"
+  },
+  {
+   "id": "kata:hall:7",
+   "hallId": "hall:7",
+   "path": [
+    "Second Brain.md",
+    "Zettelkasten.md",
+    "Spaced Repetition.md"
+   ],
+   "origin": "auto-hall"
+  }
+ ]
+}

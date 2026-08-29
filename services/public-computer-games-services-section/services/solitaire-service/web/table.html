@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solitaire</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <span class="site-title"><a href="index.html">solitaire.561.group</a></span>
+  <span id="variant-name"></span>
+  <span class="spacer"></span>
+  <span id="mode-label" class="theme-toggle" style="color:var(--text-dim)"></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<div class="table-toolbar">
+  <button id="btn-newgame" type="button">New Game</button>
+  <span class="divider"></span>
+  <button id="btn-draw" type="button">Draw</button>
+  <button id="btn-redeal" type="button">Redeal</button>
+  <span class="divider"></span>
+  <button id="btn-undo" type="button">Undo</button>
+  <button id="btn-redo" type="button">Redo</button>
+  <button id="btn-autofinish" type="button">Auto-Finish</button>
+  <span class="divider"></span>
+  <button id="btn-export" type="button">Move Log</button>
+  <button id="btn-help" type="button" aria-label="Keyboard help">? Keys</button>
+  <span id="draw-toggle" hidden><a href="#" class="button-link"></a></span>
+  <span class="status" id="status-text" aria-live="polite"></span>
+</div>
+
+<div id="export-panel" hidden style="padding:0.8rem 1.1rem; background:var(--surface); border-bottom:1px solid var(--border);">
+  <p style="margin:0 0 0.4rem; color:var(--text-dim); font-size:0.85rem;">
+    Move-log export — the same log that backs undo/redo, replayable from the seed alone
+    (<code>replay(seed, variant, log)</code> in <code>src/engine.mts</code>).
+  </p>
+  <textarea id="export-output" class="movelog-output" readonly></textarea>
+  <div style="margin-top:0.5rem;">
+    <button id="btn-download" type="button">Download .json</button>
+  </div>
+</div>
+
+<main style="max-width:none; padding:0;">
+  <div id="board" class="game-board" aria-label="Solitaire table"></div>
+</main>
+
+<div id="win-banner" class="win-banner" hidden>
+  <div class="card-panel">
+    <h2>You won! 🎉</h2>
+    <p id="win-detail" style="color:var(--text-dim)"></p>
+    <div class="row">
+      <button id="btn-win-close" type="button">Keep looking</button>
+      <button id="btn-win-newgame-proxy" type="button" class="primary" onclick="document.getElementById('btn-newgame').click()">New Game</button>
+    </div>
+  </div>
+</div>
+
+<div id="keymap-overlay" class="keymap-overlay" hidden>
+  <div class="keymap-panel">
+    <h2>Keyboard controls</h2>
+    <dl></dl>
+    <button type="button" onclick="document.getElementById('keymap-overlay').hidden = true">Close</button>
+  </div>
+</div>
+
+<script type="module" src="js/app.mjs"></script>
+</body>
+</html>

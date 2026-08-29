@@ -1,0 +1,440 @@
+/* solitaire-service web face — shared stylesheet.
+   Theming lives entirely in custom properties: a new theme is new values here, never a
+   different template or a different set of SVG files (DESIGN.md, "SVG cards, themed via CSS
+   custom properties"). Light palette lives on bare :root; dark values are redefined under a
+   prefers-color-scheme query and again under an explicit [data-theme="dark"] override so a
+   manual toggle always wins over the OS setting. */
+
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #f4f1ea;
+  --felt: #2f6b4f;
+  --felt-dark: #245038;
+  --surface: #ffffff;
+  --surface-2: #ece7db;
+  --text: #1c1a16;
+  --text-dim: #5b564a;
+  --border: #cfc7b4;
+  --accent: #b3541e;
+  --accent-text: #ffffff;
+  --focus-ring: #2f6b4f;
+
+  --card-face: #fffdf8;
+  --card-border: #2a2620;
+  --suit-red: #a3222c;
+  --suit-black: #1c1a16;
+  --card-back-bg: #1f4f8f;
+  --card-back-inset: #2a5fa8;
+  --card-back-lattice: rgba(255, 255, 255, 0.35);
+
+  --legal-target: #3d8b5f;
+  --selected-outline: #d69a2d;
+  --cursor-outline: #2f6b4f;
+
+  --stack-offset-y: 26px;
+  --stack-offset-fan: 30px;
+  --card-w: clamp(52px, 6.4vw, 88px);
+  --card-h: calc(var(--card-w) * 1.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171512;
+    --felt: #16382a;
+    --felt-dark: #0f281e;
+    --surface: #222019;
+    --surface-2: #2b2820;
+    --text: #f1ede2;
+    --text-dim: #b9b2a0;
+    --border: #4a453a;
+    --accent: #e08a4b;
+    --accent-text: #171512;
+    --focus-ring: #6fbf95;
+
+    --card-face: #f4f0e6;
+    --card-border: #14120e;
+    --suit-red: #d5525c;
+    --suit-black: #1c1a16;
+    --card-back-bg: #16345f;
+    --card-back-inset: #204a86;
+    --card-back-lattice: rgba(255, 255, 255, 0.3);
+
+    --legal-target: #6fbf95;
+    --selected-outline: #e8b34a;
+    --cursor-outline: #6fbf95;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #171512;
+  --felt: #16382a;
+  --felt-dark: #0f281e;
+  --surface: #222019;
+  --surface-2: #2b2820;
+  --text: #f1ede2;
+  --text-dim: #b9b2a0;
+  --border: #4a453a;
+  --accent: #e08a4b;
+  --accent-text: #171512;
+  --focus-ring: #6fbf95;
+
+  --card-face: #f4f0e6;
+  --card-border: #14120e;
+  --suit-red: #d5525c;
+  --suit-black: #1c1a16;
+  --card-back-bg: #16345f;
+  --card-back-inset: #204a86;
+  --card-back-lattice: rgba(255, 255, 255, 0.3);
+
+  --legal-target: #6fbf95;
+  --selected-outline: #e8b34a;
+  --cursor-outline: #6fbf95;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  min-height: 100%;
+}
+
+body { overflow-x: hidden; }
+
+a { color: var(--accent); }
+
+h1, h2, h3 { font-weight: 600; line-height: 1.2; }
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5em 0.9em;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: default; }
+button.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+button:focus-visible, [tabindex]:focus-visible, a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------- shared chrome */
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-wrap: wrap;
+}
+.site-header .site-title { font-size: 1.1rem; font-weight: 700; }
+.site-header .site-title a { color: var(--text); text-decoration: none; }
+.site-header nav { display: flex; gap: 0.6rem; margin-left: auto; flex-wrap: wrap; }
+.site-header .spacer { flex: 1; }
+
+.theme-toggle { font-size: 0.85rem; padding: 0.35em 0.6em; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 1.2rem; }
+
+/* ---------------------------------------------------------------- landing page */
+
+.hero { margin-bottom: 1.6rem; }
+.hero p { color: var(--text-dim); max-width: 60ch; }
+
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+.variant-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.variant-card h3 { margin: 0; }
+.variant-card p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
+.variant-card .row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: auto; }
+.variant-card a.button-link, .button-link {
+  display: inline-block;
+  text-decoration: none;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45em 0.8em;
+}
+.variant-card a.button-link.primary, .button-link.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+.daily-card {
+  background: linear-gradient(135deg, var(--felt), var(--felt-dark));
+  color: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+.daily-card h2 { margin: 0 0 0.3rem; }
+.daily-card p { margin: 0 0 0.7rem; opacity: 0.9; }
+.daily-card .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.daily-card select, .seed-form input {
+  font: inherit;
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.seed-form { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin: 1.2rem 0; }
+.seed-form label { color: var(--text-dim); font-size: 0.9rem; }
+.seed-form input[type="text"] { min-width: 14ch; }
+
+/* ---------------------------------------------------------------- table page */
+
+.table-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.6rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.table-toolbar .status { color: var(--text-dim); font-size: 0.88rem; margin-right: auto; }
+.table-toolbar .divider { width: 1px; align-self: stretch; background: var(--border); margin: 0 0.2rem; }
+
+.game-board {
+  background: radial-gradient(ellipse at top, var(--felt), var(--felt-dark));
+  min-height: calc(100vh - 130px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.pile-row {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.pile-row.scrollable {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+}
+.pile-row.spread { justify-content: space-between; }
+
+.pile {
+  position: relative;
+  width: var(--card-w);
+  height: calc(var(--card-h) + var(--stack-offset-y) * 6);
+  flex: 0 0 auto;
+}
+.pile.compact { height: var(--card-h); }
+.pile[data-kind="foundation"], .pile[data-kind="freecell"] { height: var(--card-h); }
+.pile[data-kind="waste"] { height: calc(var(--card-h) + var(--stack-offset-fan) * 2); }
+
+.pile-cursor-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 50;
+}
+.pile.is-cursor .pile-cursor-ring { box-shadow: 0 0 0 3px var(--cursor-outline); border-radius: 10px; }
+.pile.is-legal-target .pile-cursor-ring { box-shadow: 0 0 0 3px var(--legal-target); border-radius: 10px; }
+.pile.is-legal-target.is-cursor .pile-cursor-ring {
+  box-shadow: 0 0 0 3px var(--legal-target), 0 0 0 6px var(--cursor-outline);
+}
+
+.card-slot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--card-w);
+  height: var(--card-h);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+/* Stacking offsets: `render-dom.mjs` sets `--i` per rendered card; how that index turns into a
+   visual offset depends only on the pile's declared `kind` (never its variant/name), matching
+   every other kind-dispatched rule in this codebase. `--tilt` (tableau, face-up cards only) is a
+   deterministic per-card hash of suit+rank, not randomness — see render-dom.mjs's cardTiltDeg. */
+.pile[data-kind="tableau"] .card-slot { transform: translateY(calc(var(--i, 0) * var(--stack-offset-y))) rotate(var(--tilt, 0deg)); }
+.pile[data-kind="waste"] .card-slot { transform: translateX(calc(var(--i, 0) * var(--stack-offset-fan))); }
+.card-slot.is-selected { box-shadow: 0 0 0 3px var(--selected-outline); border-radius: 10px; }
+.card-slot svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
+.card-slot.is-draggable { cursor: grab; }
+.card-slot.is-draggable:hover {
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.3));
+  z-index: 100;
+}
+.pile[data-kind="tableau"] .card-slot.is-draggable:hover {
+  transform: translateY(calc(var(--i, 0) * var(--stack-offset-y) - 5px)) rotate(var(--tilt, 0deg));
+}
+.pile[data-kind="waste"] .card-slot.is-draggable:hover {
+  transform: translateX(calc(var(--i, 0) * var(--stack-offset-fan))) translateY(-5px);
+}
+.pile:not([data-kind="tableau"]):not([data-kind="waste"]) .card-slot.is-draggable:hover {
+  transform: translateY(-5px);
+}
+.card-slot.is-dragging { cursor: grabbing; z-index: 200; transition: none; }
+
+.card-face-bg { fill: var(--card-face); stroke: var(--card-border); stroke-width: 2; }
+.card-index { font-size: 15px; }
+.card-rank-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  text-anchor: start;
+}
+.suit-red .card-rank-text, .suit-red .card-center-glyph, .suit-red path { fill: var(--suit-red); }
+.suit-black .card-rank-text, .suit-black .card-center-glyph, .suit-black path { fill: var(--suit-black); }
+.card-center-glyph { opacity: 0.92; }
+
+.card-back-bg { fill: var(--card-back-bg); stroke: var(--card-border); stroke-width: 2; }
+.card-back-inset { fill: none; stroke: var(--card-back-inset); stroke-width: 2; }
+.card-back-lattice line { stroke: var(--card-back-lattice); stroke-width: 1.5; }
+
+.card-empty-outline { fill: none; stroke: var(--border); stroke-width: 2; stroke-dasharray: 6 7; }
+.card-empty-label { fill: var(--border); font-size: 26px; text-anchor: middle; dominant-baseline: middle; }
+
+.pile-label {
+  position: absolute;
+  top: calc(-1 * 1.3rem);
+  left: 0;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stock-count-badge {
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ---------------------------------------------------------------- win state */
+
+.win-banner {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 500;
+}
+.win-banner[hidden] { display: none; }
+.win-banner .card-panel {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.6rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.win-banner h2 { margin-top: 0; }
+.win-banner .row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 0.9rem; flex-wrap: wrap; }
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(540deg); opacity: 0.9; }
+}
+.confetti-piece {
+  position: fixed;
+  top: 0;
+  width: 8px;
+  height: 14px;
+  z-index: 400;
+  animation: confetti-fall linear forwards;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece { display: none; }
+  .card-slot { transition: none; }
+}
+
+@keyframes board-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.game-board.shake { animation: board-shake 160ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  .game-board.shake { animation: none; }
+}
+
+/* ---------------------------------------------------------------- keymap overlay */
+
+.keymap-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 600;
+}
+.keymap-overlay[hidden] { display: none; }
+.keymap-panel {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 1.4rem 1.8rem;
+  max-width: 40rem;
+  max-height: 80vh;
+  overflow: auto;
+}
+.keymap-panel dl { display: grid; grid-template-columns: auto 1fr; gap: 0.35rem 1rem; margin: 0.8rem 0; }
+.keymap-panel dt {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05em 0.5em;
+  justify-self: start;
+}
+.keymap-panel dd { margin: 0; color: var(--text-dim); }
+
+/* ---------------------------------------------------------------- movelog export */
+
+.movelog-output {
+  width: 100%;
+  min-height: 8rem;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+footer.site-footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  padding: 1.2rem;
+}

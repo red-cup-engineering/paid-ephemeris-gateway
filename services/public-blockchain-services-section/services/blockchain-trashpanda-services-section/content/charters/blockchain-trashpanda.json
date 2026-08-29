@@ -1,0 +1,24 @@
+{
+  "id": "blockchain-trashpanda",
+  "name": "Blockchain Trashpanda",
+  "target": "An agent preparing an unsigned Base transaction receives a deterministic, block-bound, independently replayable clause-by-clause verdict about conformance to its own declared policy before it signs.",
+  "boundary": [
+    "no recovery phrase, private key, credential, or secret input",
+    "no signed transaction input",
+    "no custody, signing, broadcast, or state-changing authority",
+    "no mainnet settlement or real USDC during the formation tranche",
+    "no YANAGI payment gate, buyback, or token utility claim",
+    "no chain other than Base",
+    "no commercial subscription or public launch",
+    "no claim that The Den is a lianqun before independent sovereign members and a voluntary shared-outcome contract exist"
+  ],
+  "allocation": "Exactly one create-only local node and one private remote; at most 16 induction files, 524288 bytes, and 120000 milliseconds; one Base-only deterministic pilot; at most one Base Sepolia x402 proof and one Virtuals sandbox service-only proof; zero external cash, mainnet, real USDC, recovery-phrase runtime use, YANAGI gate, buyback, subscription, multichain scope, custody, broadcast, or Den member, under urn:emsenn:allocation:blockchain-trashpanda-formation-market-pilot-2026-07-22.",
+  "appraisal": "Re-run the seven strategic cells: formation, governance, product, identities, channels, economics, and Den. The pilot must classify every mandatory corpus case as expected, reproduce byte-identical receipts across three replays, measure latency, perform zero forbidden effects, and carry the authorized x402 and Virtuals proof receipts or explicit refusals. Value created and value captured are appraised separately.",
+  "issued-to": "chief-executive-officer",
+  "x-provenance": {
+    "issued-by": "investment-review-board-and-leader",
+    "recorded-on": "2026-07-22",
+    "boardDecision": "ni:///sha-256;D8F_tkxsUXr4BdQPm9irFJZg9542feppt5d-W8kord0",
+    "leaderDecision": "ni:///sha-256;VWfexkzOYIcZyZAmTXfQZVAzLK6dtsDi9wxd5mKL-5U"
+  }
+}

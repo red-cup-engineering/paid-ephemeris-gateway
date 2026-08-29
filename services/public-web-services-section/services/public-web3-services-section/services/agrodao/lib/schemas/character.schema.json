@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/character",
+  "$comment": "A role a body steps into: a character is a role plus a disposition, and the two kinds of body that step in are kept categorically apart — a person is a real human being; a session character is a role a language model steps into. Characters and personnel are disjoint rosters, and that is a categorical claim, not a style preference: recording a session character as personnel would let a record blur the one distinction the whole roster is built to hold. Hardened from the record, not invented: the emsenn character record (lib/emsenn/services/561-group/services/board-of-directors/services/executive-office/lib/characters/emsenn/emsenn.md, 'A real human being, not a session character... that distinction is the most load-bearing one in the record'), the 561-group glossary's disjoint-rosters rule, the characterizing carrier's 'a role plus a chi-nucleus disposition', and the quiescent personae (first-officer, chief-engineer, diviner) that proved the form.",
+  "type": "object",
+  "required": [
+    "name",
+    "kind",
+    "disposition"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the character is called, as it is said: 'Morgan \"emsenn\" Sennhauser', 'Cassia Lorne'."
+    },
+    "kind": {
+      "enum": [
+        "person",
+        "session"
+      ],
+      "$comment": "The most load-bearing distinction in the roster: a person is a real human being; a session character is a role a language model steps into. Nothing downstream may blur these."
+    },
+    "disposition": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The chi-nucleus disposition: how this character characteristically moves — the settled tendency a stranger could recognize across sessions. A role with no disposition is a costume, not a character."
+    },
+    "x-provenance": {
+      "type": "object"
+    }
+  },
+  "$comment-absences": "No holds-offices key: incumbency is the double settlement of recognition and induction, recorded as an incumbency record, and a character that could assert its offices would assert a readout — the office schema refuses a holder key for the same reason, and the seat belongs to neither party's self-record. No model key: which model animates a session character belongs to the act of animating, never to the role. No personnel fields: persons are recorded on the personnel roster; this record is the role, even when a person holds it."
+}

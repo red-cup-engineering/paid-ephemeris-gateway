@@ -1,0 +1,58 @@
+{#- Generated .replit content from PyFARS package harness spec.
+    Source: pyfars.harnesses:replit-config/templates/spec.toml.j2
+    Rendered to: .pyfars/harness-manifests/replit-config.toml
+-#}
+modules = ["python-3.11"]
+[agent]
+expertMode = true
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 30000
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Refresh harnesses"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "SUBSTRATE_HOST=0.0.0.0 SUBSTRATE_PORT=5000 pyfars serve --root ."
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Refresh harnesses"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pyfars install-harness --all"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[nix]
+channel = "stable-25_05"
+packages = ["cargo", "libiconv", "libxcrypt", "openssl", "pkg-config", "rustc"]

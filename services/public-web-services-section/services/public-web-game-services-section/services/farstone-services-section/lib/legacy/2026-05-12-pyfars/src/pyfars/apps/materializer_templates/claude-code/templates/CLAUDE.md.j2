@@ -1,0 +1,115 @@
+<!--
+  GENERATED FILE — do not hand-edit.
+  Regenerate with: {{ generation_command }}
+  Source template: pyfars.harnesses:claude-code-instructions/templates/CLAUDE.md.j2
+  Last generated:  {{ generated_at }}
+-->
+
+# CLAUDE.md — working instructions
+
+You are an agent operating in {{ polity.title or "this polity" }}'s relationality repository{% if ship %} aboard {{ ship.title }}{% endif %}. Read [README.md](README.md) first if you haven't.
+
+{% if charter_path -%}
+The polity's charter lives at [`{{ charter_path }}`]({{ charter_path }}). Everything you do here serves the charter or doesn't belong on the ship.
+{%- endif %}
+
+## What this repository is
+
+The operational substrate of {{ ship.title if ship else (polity.title or "this polity") }}. The repository carries:
+
+- A novel mathematical theory of *predication categories* (bilattice values, predication fibrations, closure 2-monad, four-regime classification).
+- A novel engineering theory of *predicated computing* built on top of it ({% for st in predicated_computing_subtheories %}{{ st.slug }}{% if not loop.last %}, {% endif %}{% endfor %}).
+- An operational layer (command, engineering, science) that runs the ship.
+
+The theories are **novel** — they don't exist in published literature in this form. Treat the corpus as research-active, not as an established textbook.
+
+## How to work here
+
+### Reading
+
+{% for f in fragments("reading") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `reading` — see `prose/orientations/reading/`)*
+{%- endfor %}
+
+### Writing
+
+{% for f in fragments("writing") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `writing` — see `prose/orientations/writing/`)*
+{%- endfor %}
+
+### Editing
+
+{% for f in fragments("editing") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `editing` — see `prose/orientations/editing/`)*
+{%- endfor %}
+
+### Committing
+
+{% for f in fragments("committing") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `committing` — see `prose/orientations/committing/`)*
+{%- endfor %}
+
+### What not to do
+
+{% for f in fragments("what-not-to-do") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `what-not-to-do` — see `prose/orientations/what-not-to-do/`)*
+{%- endfor %}
+
+### Audit-output discipline
+
+{% for f in fragments("audit-output") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `audit-output` — see `prose/orientations/audit-output/`)*
+{%- endfor %}
+
+## Running engine
+
+{% for f in fragments("running-engine") -%}
+{{ f.prose }}
+{% if not loop.last %}
+{% endif %}
+{%- else -%}
+*(no fragments authored for `running-engine` — see `prose/orientations/running-engine/`)*
+{%- endfor %}
+
+## Quick reference — engineering surface
+
+The substrate's engineering surface is decomposed into these sub-theories under [`predicated-computing/`]({{ predicated_computing_root_path }}/):
+
+{% for st in predicated_computing_subtheories -%}
+- [`{{ st.slug }}`]({{ st.path }}) — {{ st.title or st.slug }}
+{% endfor %}
+- The flatfile substrate realization (the `pyfars` package) is the [`flatfile-agentic-resource-system`]({{ flatfile_theory_path }}/) sub-sub-theory under agential-orchestration.
+
+PyFARS is hosted at [github.com/emsenn/pyfars](https://github.com/emsenn/pyfars) and consumed here as a Nix flake input. On a live checkout, run `make install` from the repository root so `pyfars` is available as a normal command.
+
+## Captain
+
+{% if captain -%}
+Captain {{ captain.title or captain.handle or captain.slug }}{% if captain.public_handle %} (`{{ captain.public_handle }}`{% if captain.public_domain %}, [{{ captain.public_domain }}](https://{{ captain.public_domain }}){% endif %}){% endif %}. Decisions you can't make autonomously — substantive engineering trade-offs, research direction, charter interpretation — go to the captain.
+{%- else -%}
+(captain personnel record missing — no holder for `office:command` resolved)
+{%- endif %}

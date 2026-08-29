@@ -1,0 +1,24 @@
+{
+  "name": "@red-cup-engineering/education-platform-service",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "The self-education platform: a corpus-compiler (frontmattered markdown -> concept graph), deterministic FSRS-lite SRS, a pluggable Checker<Spec,Answer> exercise-gate interface, a mastery synthesis, local-first player-state persistence, and earn-only rails hooks stubbed to the flickering-delve PaymentProvider shape -- as one theme-neutral kernel. Equivo (obstruction-measurement mathematics, taught by real computation over @lenticule-science/metrologic) is theme #1, shipped alongside it in themes/equivo.",
+  "scripts": {
+    "check": "node check-mts.mjs src/*.mts themes/equivo/*.mts themes/equivo/registers/*.mts themes/equivo/test/*.test.mts src/*.test.mts web/test/*.test.mts",
+    "test": "node --test src/*.test.mts themes/equivo/test/*.test.mts",
+    "verify": "npm run check && npm test",
+    "build:world": "node themes/equivo/build-world.mts",
+    "build:vendor": "node web/build/sync-vendor.mjs",
+    "build:web": "npm run build:world && npm run build:vendor",
+    "serve": "node web/server.mjs",
+    "test:web": "node --test web/test/*.test.mts",
+    "verify:web": "npm run build:web && npm run test:web"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@lenticule-science/metrologic": "0.1.0"
+  }
+}

@@ -1,0 +1,45 @@
+{%- set src_rel = record.source_path.relative_to(root) -%}
+{%- set display_name = record.title or record.slug -%}
+{%- set short_desc = (record.description or '')|replace('\n', ' ')|trim -%}
+{%- if short_desc|length > 200 -%}
+{%- set short_desc = short_desc[:197] ~ '...' -%}
+{%- endif -%}
+---
+name: {{ display_name }}
+{%- if short_desc %}
+description: {{ short_desc }}
+{%- endif %}
+{%- if record.model %}
+model: {{ record.model }}
+{%- endif %}
+tools:
+{%- if record.skills %}
+{%- for skill in record.skills %}
+  - skill: {{ prefix }}{{ skill }}
+{%- endfor %}
+{%- else %}
+  # No specific skills declared
+{%- endif %}
+---
+
+{% if record.body|trim %}{{ record.body|trim }}
+
+{% endif -%}
+## Agent Details
+
+- **Slug:** {{ record.slug }}
+{%- if record.jurisdiction.read or record.jurisdiction.write %}
+- **Jurisdiction (read):** {{ record.jurisdiction.read | join(', ') if record.jurisdiction.read else '(unscoped)' }}
+- **Jurisdiction (write):** {{ record.jurisdiction.write | join(', ') if record.jurisdiction.write else '(unscoped)' }}
+{%- endif %}
+{%- if record.autonomous %}
+- **Autonomous:** {{ record.autonomous | join(', ') }}
+{%- endif %}
+{%- if record.escalates %}
+- **Escalates:** {{ record.escalates | join(', ') }}
+{%- endif %}
+{%- if record.skills %}
+- **Skills:** {{ record.skills | join(', ') }}
+{%- endif %}
+
+Source: [`{{ src_rel }}`]({{ src_rel }}) — the substrate is the source of truth.

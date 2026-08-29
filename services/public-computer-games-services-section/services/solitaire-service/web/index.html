@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>solitaire.561.group</title>
+<meta name="description" content="Klondike, FreeCell, and Spider — one rules engine, six variants, deterministic seeded deals.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <span class="site-title"><a href="index.html">solitaire.561.group</a></span>
+  <span class="spacer"></span>
+  <button id="btn-theme-landing" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Solitaire</h1>
+    <p>
+      Klondike, FreeCell, and Spider (one, two, or four suits) — all read from the same
+      declarative rules engine. Every deal is a seed: bookmark or share the URL and you get back
+      the exact same cards, on any device, forever. See <code>DESIGN.md</code> in this service
+      for the full rationale.
+    </p>
+  </section>
+
+  <section class="daily-card">
+    <h2>Daily deal</h2>
+    <p>One seed, every player, every day (UTC) — <span id="daily-date"></span>.</p>
+    <div class="row">
+      <select id="daily-variant" aria-label="Daily variant"></select>
+      <a id="daily-play-link" class="button-link primary" href="table.html?variant=klondike-draw1&daily=1">Play today's deal</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Choose a variant</h2>
+    <div id="variant-grid" class="variant-grid"></div>
+  </section>
+
+  <section>
+    <h2>Play a specific seed</h2>
+    <form id="seed-form" class="seed-form">
+      <label for="seed-form-variant">Variant</label>
+      <select id="seed-form-variant" name="variant"></select>
+      <label for="seed-form-seed">Seed</label>
+      <input id="seed-form-seed" name="seed" type="text" placeholder="leave blank for a random deal">
+      <button type="submit" class="primary">Play</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  Zero external dependencies. Rules engine: <code>src/*.mts</code>. Client: <code>web/*</code>.
+</footer>
+
+<script type="module" src="js/landing.mjs"></script>
+<script type="module">
+  // Landing page's theme toggle mirrors table.html's (kept inline since this page has no other
+  // per-page bootstrap concerns worth a shared module for one button).
+  const btn = document.getElementById('btn-theme-landing');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('solitaire-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('solitaire-theme', next); else localStorage.removeItem('solitaire-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

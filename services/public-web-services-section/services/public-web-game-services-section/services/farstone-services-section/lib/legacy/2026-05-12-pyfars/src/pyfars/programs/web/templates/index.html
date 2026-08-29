@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PyFARS — web bridge</title>
+  <style>
+    body { font-family: ui-monospace, Menlo, monospace; max-width: 60rem;
+           margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    h1, h2 { font-family: ui-sans-serif, system-ui, sans-serif; }
+    code, pre { background: #f4f4f5; padding: 0.1em 0.3em; border-radius: 0.2em; }
+    pre { padding: 0.75em; overflow-x: auto; }
+    .dot { display: inline-block; width: 0.6em; height: 0.6em;
+           border-radius: 50%; vertical-align: 0.1em; margin-right: 0.4em; }
+    .running { background: #16a34a; }
+    .down    { background: #dc2626; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    td, th { border-bottom: 1px solid #e4e4e7; padding: 0.4rem 0.6rem;
+             text-align: left; }
+    a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <h1>PyFARS web bridge</h1>
+  <p>Polity root: <code>{{ root }}</code></p>
+
+  <h2>Engine</h2>
+  {% if engine_running %}
+    <p><span class="dot running"></span><strong>Running.</strong></p>
+    <table>
+      <tr><th>root</th><td>{{ engine_state.root or "" }}</td></tr>
+      <tr><th>started_at</th><td>{{ engine_state.started_at or "" }}</td></tr>
+      <tr><th>tick_count</th><td>{{ engine_state.tick_count or 0 }}</td></tr>
+      <tr><th>halted_at</th><td>{{ engine_state.halted_at or "" }}</td></tr>
+    </table>
+  {% else %}
+    <p><span class="dot down"></span><strong>Engine not running.</strong>
+       Start it with <code>pyfars run {{ root }}</code>.</p>
+  {% endif %}
+
+  <h2>API</h2>
+  <p>The web bridge is a thin HTTP proxy over the engine's UDS. Every
+     endpoint is one UDS call.</p>
+  <table>
+    <tr><th>endpoint</th><th>method</th><th>proxies UDS</th></tr>
+    <tr><td><a href="/api/status">/api/status</a></td><td>GET</td>
+        <td><code>/status</code></td></tr>
+    <tr><td><code>/api/cells?subject=...</code></td><td>GET</td>
+        <td><code>/cells</code></td></tr>
+    <tr><td><code>/api/value?s=&amp;p=&amp;o=</code></td><td>GET</td>
+        <td><code>/value</code></td></tr>
+    <tr><td><code>/api/subjects-of-type?types=a,b</code></td><td>GET</td>
+        <td><code>/subjects-of-type</code></td></tr>
+    <tr><td><code>/api/witness</code></td><td>POST</td>
+        <td><code>/witness</code></td></tr>
+    <tr><td><a href="/api/events?n=20">/api/events?n=N</a></td><td>GET</td>
+        <td><code>/events</code></td></tr>
+  </table>
+
+  <p>Browse the full schema at <a href="/docs">/docs</a>.</p>
+</body>
+</html>

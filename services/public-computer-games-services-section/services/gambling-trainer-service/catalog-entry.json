@@ -1,0 +1,47 @@
+{
+  "id": "gambling-trainer",
+  "displayName": "Kelly's Wager",
+  "description": "A daily-seeded, practice-bankroll trainer for expected value, variance, and Kelly-criterion sizing. Every offer is graded against the real Kelly optimum, adversarially-framed traps are labeled honestly by the numbers even when the pitch lies, and every spend is typed on screen as freely reversible, priced, or terminal. Earn-only: no real currency ever enters or leaves.",
+  "subdomain": "gambling-trainer",
+  "configs": [
+    {
+      "id": "novice",
+      "displayName": "Novice — 6 wagers, gentle traps",
+      "params": {
+        "offerCount": 6,
+        "trapRate": 0.3
+      }
+    },
+    {
+      "id": "sharp",
+      "displayName": "Sharp — 10 wagers, frequent traps",
+      "params": {
+        "offerCount": 10,
+        "trapRate": 0.5
+      }
+    }
+  ],
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "daily-utc"
+  },
+  "intentLog": {
+    "schemaVersion": "gambling-trainer-cartridge-v1",
+    "schemaRef": "src/cartridge.mts#WagerIntent"
+  },
+  "replayVerifier": "src/manifest.mts#verify",
+  "keywords": [
+    "kelly-criterion",
+    "bankroll-management",
+    "expected-value",
+    "daily-puzzle",
+    "practice-bankroll"
+  ],
+  "status": "playable",
+  "statusNote": "Practice bankroll only -- no real currency, no energy-bank settlement (see DESIGN.md).",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": true,
+  "shelf": "Card Table"
+}

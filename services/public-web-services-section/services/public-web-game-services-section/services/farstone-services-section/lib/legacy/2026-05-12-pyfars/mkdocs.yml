@@ -1,0 +1,57 @@
+site_name: PyFARS
+site_description: >-
+  Python implementation of FARS — predication computation over unix flatfiles.
+  Substrate, operators, closure-rule system, and runtime scaffolding for a
+  predication-graph-shaped flatfile corpus.
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Overview: PyFARS_Overview.md
+  - API Reference:
+    - api/index.md
+    - Kernel: api/kernel.md
+    - Programs: api/programs.md
+    - SDK: api/sdk.md
+    - Client: api/client.md
+    - CLI: api/cli.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: true
+            show_signature_annotations: true
+            show_root_heading: true
+            show_category_heading: true
+            members_order: source
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - toc:
+      permalink: true

@@ -1,0 +1,220 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@setfilename waggle.info
+@settitle waggle manual
+@documentencoding UTF-8
+@c %**end of header
+
+@copying
+This manual documents @command{waggle}, a zero-dependency Node-to-Hive
+blockchain client.
+
+Copyright @copyright{} 2026 emsenn.
+@end copying
+
+@dircategory Network applications
+@direntry
+* waggle: (waggle).             Zero-dependency Node-to-Hive blockchain client.
+@end direntry
+
+@titlepage
+@title waggle
+@subtitle A zero-dependency Node-to-Hive blockchain client
+@author emsenn
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top waggle
+
+@command{waggle} reads the Hive blockchain and acts on it: it builds, signs,
+and broadcasts transactions using only Node built-ins, with no npm dependency
+tree. Reads need no keys; writes need the relevant Hive private key from the
+environment.
+@end ifnottex
+
+@menu
+* Introduction::        What waggle is.
+* Invocation::          Running the command.
+* Read commands::       Querying the chain (no keys).
+* Write commands::      Building and broadcasting transactions.
+* Utility commands::    Offline helpers.
+* Environment::         The @env{WAGGLE_*} variables.
+* Library::             Using waggle from JavaScript.
+* Security::            Key handling and caveats.
+* Index::               Concept index.
+@end menu
+
+@node Introduction
+@chapter Introduction
+
+@command{waggle} is a from-the-ground-up rederivation of a Hive client that
+takes only Node built-ins as given: @code{node:crypto} for SHA-256,
+RIPEMD-160, and HMAC, and @code{node:https} for transport. base58, the
+secp256k1 curve, and the graphene serializer are hand-rolled. It is named for
+the bees' waggle dance, by which a hive shares where to go.
+
+Reads ask a public Hive node for data and need no keys. Writes build, sign,
+and broadcast a transaction and need the relevant private key, supplied
+through the environment (@pxref{Environment}); waggle never writes keys to
+disk.
+
+@node Invocation
+@chapter Invocation
+
+@example
+waggle @var{command} [@var{arguments}@dots{}]
+waggle help | --help | -h
+@end example
+
+The first argument is a command. With no command, or with @code{help},
+@option{-h}, or @option{--help}, waggle prints a usage summary. Results are
+printed to standard output as pretty-printed JSON, or as a bare string for
+scalar results. Errors go to standard error prefixed with @samp{waggle:}, and
+the exit status is @code{0} on success and non-zero on failure.
+
+@node Read commands
+@chapter Read commands
+
+These query a Hive node and require no keys.
+
+@table @code
+@item globals
+Print the dynamic global properties of the chain.
+@item refblock
+Print the TaPoS reference data: @code{ref_block_num}, @code{ref_block_prefix},
+and the chain head time.
+@item account @var{name}
+Print the account object for @var{name}.
+@item content @var{author} @var{permlink}
+Print a post or comment via @code{condenser_api.get_content}.
+@item post @var{author} @var{permlink}
+Print a post via @code{bridge.get_post}.
+@item ranked @var{sort} [@var{tag}] [@var{limit}]
+Print ranked posts; @var{sort} is @code{trending}, @code{hot},
+@code{created}, and so on.
+@item posts @var{account} [@var{sort}] [@var{limit}]
+Print an account's posts; @var{sort} is @code{blog}, @code{feed},
+@code{posts}, or @code{replies}.
+@item profile @var{account}
+Print an account's social profile.
+@item followers @var{account} [@var{limit}]
+Print the accounts following @var{account}.
+@item following @var{account} [@var{limit}]
+Print the accounts @var{account} follows.
+@item follow-count @var{account}
+Print follower and following counts.
+@item history @var{account} [@var{limit}]
+Print the account's operation history.
+@end table
+
+@node Write commands
+@chapter Write commands
+
+These build, sign, and broadcast a transaction. Social actions use the posting
+key (@env{WAGGLE_POSTING_KEY}); value transfers use the active key
+(@env{WAGGLE_ACTIVE_KEY}).
+
+@table @code
+@item vote @var{author} @var{permlink} [@var{weight}]
+Vote on a post. @var{weight} is in basis points and defaults to @code{10000}
+(100%). Posting key.
+@item unvote @var{author} @var{permlink}
+Remove a vote (weight 0). Posting key.
+@item publish @var{title} @var{body} [@var{tag}]
+Publish a new top-level post. A @var{body} of @samp{-} is read from standard
+input. Posting key.
+@item reply @var{parentAuthor} @var{parentPermlink} @var{body}
+Reply to a post or comment. A @var{body} of @samp{-} is read from standard
+input. Posting key.
+@item transfer @var{to} @var{amount} [@var{memo}]
+Transfer value, e.g.@: @code{"1.000 HIVE"}. The memo is plaintext. Active key.
+@item follow @var{account}
+Follow @var{account}. Posting key.
+@item unfollow @var{account}
+Unfollow @var{account}. Posting key.
+@item reblog @var{author} @var{permlink}
+Reblog a post to your blog. Posting key.
+@item claim
+Claim all pending rewards for the configured account. Posting key.
+@end table
+
+@node Utility commands
+@chapter Utility commands
+
+@table @code
+@item pubkey @var{wif}
+Derive and print the @code{STM} public key for a WIF private key, offline.
+@item whoami
+Print the configured account and the public keys derived from the configured
+private keys.
+@item help
+Print the usage summary.
+@end table
+
+@node Environment
+@chapter Environment
+
+@table @env
+@item WAGGLE_ACCOUNT
+Default account for write commands, and observer for reads that accept one.
+@item WAGGLE_POSTING_KEY
+WIF posting key, used by @code{vote}, @code{publish}, @code{reply},
+@code{follow}, @code{reblog}, and @code{claim}.
+@item WAGGLE_ACTIVE_KEY
+WIF active key, used by @code{transfer}.
+@item WAGGLE_OWNER_KEY
+WIF owner key.
+@item WAGGLE_MEMO_KEY
+WIF memo key.
+@item WAGGLE_NODES
+Comma-separated node base URLs to use instead of the built-in defaults.
+@end table
+
+@node Library
+@chapter Library
+
+Everything the command does is available from JavaScript through the
+@code{Waggle} class. Reads need no keys; writes take the relevant key per role.
+
+@example
+import @{ Waggle @} from "@@561-group/waggle";
+
+const hive = new Waggle();                 // reads, no keys
+const [acct] = await hive.getAccounts(["hiveio"]);
+
+const me = new Waggle(@{                    // writes, posting key
+  account: "alice",
+  keys: @{ posting: process.env.WAGGLE_POSTING_KEY @},
+@});
+await me.vote(@{ author: "bob", permlink: "a-post", weight: 10000 @});
+@end example
+
+The full type surface, with per-method documentation, lives in
+@file{lib/client.d.ts}, and the prose mirror in
+@file{docs/reference/library-api.md}.
+
+@node Security
+@chapter Security
+
+Private keys are read only from the environment and the constructor; waggle
+never writes them to disk, and signing happens locally so the key never leaves
+your machine. Use the least-privileged key for the task: social actions need
+only the posting key, transfers the active key.
+
+A WIF passed as a command-line argument (for example to @code{pubkey}) may be
+recorded in your shell history; prefer the environment for secrets. Transfer
+memos are plaintext on a public chain. The cryptography is hand-rolled and has
+not been independently audited. See @file{SECURITY.md} for the full policy.
+
+@node Index
+@unnumbered Index
+
+@printindex cp
+
+@bye

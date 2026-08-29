@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Play — Ruinfold Daily</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0d12'/%3E%3Ctext x='8' y='12' font-size='12' text-anchor='middle' fill='%23e0b84a' font-family='monospace'%3E%40%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/web/css/style.css" />
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">RUINFOLD</a>
+  <nav>
+    <span id="mode-badge" class="badge">&nbsp;</span>
+    <span id="zone-label" class="sub"></span>
+  </nav>
+</header>
+<main>
+  <div class="play-layout">
+    <div class="stage">
+      <canvas id="stage-canvas" aria-label="dungeon view" role="img"></canvas>
+      <div id="dpad-mount"></div>
+
+      <div class="overlay" id="start-overlay">
+        <div class="card panel">
+          <h2 id="start-title">Ruinfold Daily</h2>
+          <p id="start-desc">Loading today's dungeon&hellip;</p>
+          <div class="cta-row" style="justify-content:center;">
+            <button class="btn" id="start-btn" disabled>Enter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay" id="end-overlay" hidden>
+        <div class="card panel">
+          <h2 id="end-title">Run ended</h2>
+          <p id="end-reason"></p>
+          <div class="score-grid" id="score-grid"></div>
+          <p id="submit-status" class="sub">Submitting&hellip;</p>
+          <div class="cta-row" style="justify-content:center;">
+            <a class="btn" href="/">Back to daily</a>
+            <a class="btn secondary" id="watch-link" href="#" hidden>Watch this run</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hud panel">
+      <div>
+        <div class="hud-row"><span>HP</span><span id="hp-label">&mdash;</span></div>
+        <div class="bar hp"><i id="hp-bar" style="width:0%"></i></div>
+      </div>
+      <div>
+        <div class="hud-row"><span>Stamina</span><span id="sta-label">&mdash;</span></div>
+        <div class="bar stamina"><i id="sta-bar" style="width:0%"></i></div>
+      </div>
+      <div class="hud-row"><span>Level</span><span id="level-label">&mdash;</span></div>
+      <div class="hud-row"><span>Gold</span><span id="gold-label">&mdash;</span></div>
+      <div class="hud-row"><span>Floor</span><span id="floor-label">&mdash;</span></div>
+      <div class="hud-row" id="status-row" hidden><span id="status-label"></span></div>
+
+      <h2 style="margin-bottom:0.3rem;">Abilities (1-4)</h2>
+      <div class="abilities">
+        <button data-ability="heavy" title="Heavy strike">1 Heavy</button>
+        <button data-ability="cleave" title="Cleave all in reach">2 Cleave</button>
+        <button data-ability="bolt" title="Ranged bolt">3 Bolt</button>
+        <button data-ability="second-wind" title="Self-heal">4 Heal</button>
+      </div>
+
+      <h2 style="margin-bottom:0.3rem;">Inventory</h2>
+      <ul class="inventory-list" id="inventory-list"></ul>
+
+      <div class="cta-row">
+        <button class="btn secondary" id="end-run-btn">Bank score &amp; end run</button>
+      </div>
+
+      <div class="log-region" id="log-region" aria-hidden="true"></div>
+    </aside>
+  </div>
+</main>
+<p class="sr-only" id="announcer" role="status" aria-live="polite"></p>
+<script type="importmap">
+{ "imports": { "#engine/": "/engine/" } }
+</script>
+<script type="module" src="/web/js/app-play.mjs"></script>
+</body>
+</html>

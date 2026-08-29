@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "561-group-market-site",
+  "compatibility_date": "2026-08-28",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "market.561.group",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "public"
+  }
+}

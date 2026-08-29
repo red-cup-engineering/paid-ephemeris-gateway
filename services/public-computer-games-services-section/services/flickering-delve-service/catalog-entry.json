@@ -1,0 +1,33 @@
+{
+  "id": "flickering-delve",
+  "displayName": "Flickering Delve",
+  "description": "An idle-roguelike where the real game is writing the standing-order program that plays the descent for you.",
+  "subdomain": "flickering",
+  "entryPoints": {
+    "browser": "/",
+    "headless": "POST /session, POST /input, GET /stream (JSON-over-HTTP + SSE; no browser required)"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "intentLog": {
+    "schemaVersion": "flickering-delve-cartridge-v1"
+  },
+  "keywords": [
+    "idle-roguelike",
+    "fizzos",
+    "procedural-generation",
+    "automation",
+    "lisp",
+    "dungeon-crawler"
+  ],
+  "status": "playable",
+  "energy": {
+    "hooksRef": "src/ledger.mts (real double-entry ledger; not yet wrapped as EnergyHooks)",
+    "accountNamespace": "flickering-delve"
+  },
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "shelf": "Puzzle Den",
+  "statusNote": "Cartridge layer (src/cartridge.mts) was removed as unconsumed; game runs on src/ledger.mts directly. Re-wrap when a real replayVerifier export exists again."
+}

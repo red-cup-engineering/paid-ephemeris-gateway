@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RepositoryMaterialObservationRequest",
+  "type": "object",
+  "required": ["type", "source", "projection", "traversalPolicy"],
+  "properties": {
+    "type": { "const": "RepositoryMaterialObservationRequest" },
+    "source": { "type": "object" },
+    "projection": { "type": "object" },
+    "traversalPolicy": { "type": "object" }
+  }
+}

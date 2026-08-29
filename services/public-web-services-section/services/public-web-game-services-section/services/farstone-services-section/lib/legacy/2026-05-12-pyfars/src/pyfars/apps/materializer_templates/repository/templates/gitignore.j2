@@ -1,0 +1,108 @@
+# GENERATED FILE — do not hand-edit.
+# Regenerate with: {{ generation_command }}
+# Source template: pyfars.harnesses:repository/templates/.gitignore.j2
+# Last generated:  {{ generated_at }}
+
+# Retired pre-metarepo checkout. The live content has been moved into
+# top-level theory/, records/, and tools/ paths.
+civics/
+platforms/
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+
+# Editor swap files.
+*.swp
+*~
+
+# Python caches and virtualenvs.
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.nox/
+.tox/
+*.egg-info/
+.eggs/
+
+# Rust and Node build artifacts.
+**/target/
+node_modules/
+.tooling/
+
+# Generated graphs and indexes.
+knowledge-graph.json
+knowledge-graph.ttl
+entity-index.json
+value-index.json
+records/engineering/records/operations-graph.json
+
+# Hugo generated/build-local output.
+tools/web/publishing/emsenn-net/.hugo_build.lock
+tools/web/publishing/emsenn-net/operations/science/publications/websites/emsenn-net/
+tools/web/publishing/hugo-theme/exampleSite/.hugo_build.lock
+tools/web/publishing/hugo-theme/exampleSite/public/
+
+# SQLite runtime files.
+*.db
+*.db-shm
+*.db-wal
+
+# High-volume runtime/observation state.
+records/command/records/observations/observations.jsonl
+records/command/records/observations/archive/.claude/worktrees/
+records/engineering/records/events/
+
+# Reference source snapshots live in the tools submodule; generated dependency
+# and build directories are ignored inside that submodule.
+
+# Secrets — never tracked
+.secrets
+.secrets~
+.secrets.swp
+.secrets/
+
+# Projected harness outputs — install with `make install`.
+.claude/agents/
+.claude/hooks/
+.claude/settings.json
+.claude/plugins/pyfars-substrate/
+.clinerules/workflows/
+.mcp.json
+
+# OpenClaw — ignore runtime/secrets; track agent identity/memory markdown.
+# (Cannot use blanket .openclaw/ + negation: git won't recurse into ignored dirs.)
+.openclaw/*.json
+.openclaw/*.json.*
+.openclaw/identity/
+.openclaw/devices/
+.openclaw/logs/
+.openclaw/memory/
+.openclaw/flows/
+.openclaw/tasks/
+.openclaw/plugins/
+.openclaw/canvas/
+.openclaw/completions/
+.openclaw/tui/
+.openclaw/workspace/
+.openclaw/workspace-state.json
+.openclaw/agents/*/agent/
+.openclaw/agents/*/sessions/
+.openclaw/agents/*/*.json
+.openclaw/agents/*/*.jsonl
+
+# Note: the orientation harness outputs (CLAUDE.md, AGENTS.md, README.md,
+# replit.md, .gitignore) are NOT gitignored — they must be tracked so that
+# GitHub renders README.md, Claude Code reads CLAUDE.md on first clone, etc.
+# The harness regenerates them; commit the result like any other artifact
+# you want available to consumers cloning the repo.
+
+# Nix build symlinks.
+result
+result-*

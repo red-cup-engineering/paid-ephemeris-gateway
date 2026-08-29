@@ -1,0 +1,896 @@
+{
+ "wingId": "obsfixture",
+ "rooms": [
+  {
+   "id": "Atomic Habits.md",
+   "wingId": "obsfixture",
+   "title": "Atomic Habits",
+   "aliases": [
+    "Atomic Habits Book"
+   ],
+   "kind": "note",
+   "body": "Atomic Habits argues that small, consistent routines compound into large results over time.\n\n1. What is the \"1% better every day\" claim?\n<details><summary>Answer</summary>\nImproving by roughly 1% daily compounds to about 37x over a year.\n</details>\n",
+   "frontmatter": {
+    "title": "Atomic Habits",
+    "aliases": [
+     "Atomic Habits Book"
+    ],
+    "tags": [
+     "books",
+     "habits"
+    ]
+   }
+  },
+  {
+   "id": "Book - Atomic Habits.md",
+   "wingId": "obsfixture",
+   "title": "book - atomic habits",
+   "aliases": [],
+   "kind": "note",
+   "body": "The book behind the [[Atomic Habits]] concept note.\n",
+   "frontmatter": {
+    "tags": [
+     "books",
+     "habits"
+    ]
+   }
+  },
+  {
+   "id": "Book - Deep Work.md",
+   "wingId": "obsfixture",
+   "title": "book - deep work",
+   "aliases": [],
+   "kind": "note",
+   "body": "Deep Work argues for scheduled, distraction-free blocks of focused effort.\n",
+   "frontmatter": {
+    "tags": [
+     "books",
+     "focus"
+    ]
+   }
+  },
+  {
+   "id": "Daily Notes.md",
+   "wingId": "obsfixture",
+   "title": "daily notes",
+   "aliases": [],
+   "kind": "note",
+   "body": "One note per day, for capture. Rolls up into the [[Weekly Review]].\n",
+   "frontmatter": {
+    "tags": [
+     "journal"
+    ]
+   }
+  },
+  {
+   "id": "Overview.md",
+   "wingId": "obsfixture",
+   "title": "overview",
+   "aliases": [],
+   "kind": "note",
+   "body": "Root-level overview note. There is a second, deliberately homonymous \"Overview\" note under\nprojects/ — used to exercise the shortest-unique-path wikilink resolution rule.\n",
+   "frontmatter": {
+    "tags": [
+     "meta"
+    ]
+   }
+  },
+  {
+   "id": "Reading List.md",
+   "wingId": "obsfixture",
+   "title": "reading list",
+   "aliases": [],
+   "kind": "note",
+   "body": "Currently reading: [[Book - Deep Work]] and [[Book - Atomic Habits]].\n",
+   "frontmatter": {
+    "tags": [
+     "books"
+    ]
+   }
+  },
+  {
+   "id": "Second Brain.md",
+   "wingId": "obsfixture",
+   "title": "second brain",
+   "aliases": [
+    "PKM",
+    "Personal Knowledge Management"
+   ],
+   "kind": "note",
+   "body": "A \"second brain\" is an external system for capturing and connecting what you learn, so\nrecall does not depend on unaided memory.\n\n- [[Zettelkasten]] - the atomic-note method this system is built on\n- [[Spaced Repetition]] - how retention is maintained over time\n",
+   "frontmatter": {
+    "aliases": [
+     "PKM",
+     "Personal Knowledge Management"
+    ],
+    "tags": [
+     "productivity",
+     "pkm"
+    ]
+   }
+  },
+  {
+   "id": "Spaced Repetition.md",
+   "wingId": "obsfixture",
+   "title": "spaced repetition",
+   "aliases": [],
+   "kind": "note",
+   "body": "Spaced repetition schedules review just before you would otherwise forget, using a\nforgetting-curve model. Tagged #srs for quick filtering.\n",
+   "frontmatter": {
+    "up": "[[Second Brain]]",
+    "tags": [
+     "pkm",
+     "learning",
+     "srs"
+    ]
+   }
+  },
+  {
+   "id": "Weekly Review.md",
+   "wingId": "obsfixture",
+   "title": "weekly review",
+   "aliases": [],
+   "kind": "note",
+   "body": "A weekly pass back over [[Daily Notes]] and the [[Reading List]].\n\nThis note also links to the ambiguous [[Notes]] target on purpose, to exercise the\nduplicate-basename-at-equal-depth case.\n",
+   "frontmatter": {
+    "tags": [
+     "journal",
+     "review"
+    ]
+   }
+  },
+  {
+   "id": "Welcome.md",
+   "wingId": "obsfixture",
+   "title": "welcome",
+   "aliases": [],
+   "kind": "note",
+   "body": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]\nand [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with\nprojects/Overview.md — the root note, being fewer path segments away, should win).\n\nThis vault also references a note that was deliberately removed from the corpus: [[Leaked]].\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "Zettelkasten.md",
+   "wingId": "obsfixture",
+   "title": "zettelkasten",
+   "aliases": [],
+   "kind": "note",
+   "body": "The Zettelkasten method links small, atomic notes to each other rather than filing them into\na fixed hierarchy.\n\nSee also [[Second Brain]] and [[Atomic Habits|the habits book]] for an applied example.\n",
+   "frontmatter": {
+    "tags": [
+     "pkm",
+     "notes"
+    ]
+   }
+  },
+  {
+   "id": "areas/Finance.md",
+   "wingId": "obsfixture",
+   "title": "finance",
+   "aliases": [],
+   "kind": "note",
+   "body": "Reviewed as part of the [[Weekly Review]].\n",
+   "frontmatter": {
+    "tags": [
+     "finance",
+     "areas"
+    ]
+   }
+  },
+  {
+   "id": "areas/Health.md",
+   "wingId": "obsfixture",
+   "title": "health",
+   "aliases": [],
+   "kind": "note",
+   "body": "Tracks health habits alongside [[Atomic Habits]]. Links to a [[Habit Tracker]] note that does\nnot exist in this vault, on purpose, to exercise the unresolved-link warning.\n",
+   "frontmatter": {
+    "tags": [
+     "health",
+     "areas"
+    ]
+   }
+  },
+  {
+   "id": "areas/Notes.md",
+   "wingId": "obsfixture",
+   "title": "notes",
+   "aliases": [],
+   "kind": "note",
+   "body": "Area-specific scratch notes. Deliberately shares its basename with projects/Notes.md.\n",
+   "frontmatter": {
+    "tags": [
+     "areas"
+    ]
+   }
+  },
+  {
+   "id": "projects/Notes.md",
+   "wingId": "obsfixture",
+   "title": "notes",
+   "aliases": [],
+   "kind": "note",
+   "body": "Project-specific scratch notes. Deliberately shares its basename with areas/Notes.md.\n",
+   "frontmatter": {
+    "tags": [
+     "projects"
+    ]
+   }
+  },
+  {
+   "id": "projects/Overview.md",
+   "wingId": "obsfixture",
+   "title": "overview",
+   "aliases": [],
+   "kind": "note",
+   "body": "Project-level overview note, deliberately homonymous with the root Overview note to exercise\nshortest-unique-path resolution (the root note, at depth 1, should win over this one, at\ndepth 2).\n",
+   "frontmatter": {
+    "tags": [
+     "meta",
+     "projects"
+    ]
+   }
+  },
+  {
+   "id": "projects/Project Alpha.md",
+   "wingId": "obsfixture",
+   "title": "project alpha",
+   "aliases": [],
+   "kind": "note",
+   "body": "Alpha depends on infrastructure shared with [[Project Beta]] and is reviewed in the\n[[Weekly Review]].\n",
+   "frontmatter": {
+    "tags": [
+     "work",
+     "projects"
+    ]
+   }
+  },
+  {
+   "id": "projects/Project Beta.md",
+   "wingId": "obsfixture",
+   "title": "project beta",
+   "aliases": [],
+   "kind": "note",
+   "body": "Beta shares its data model with [[Project Alpha]].\n",
+   "frontmatter": {
+    "tags": [
+     "work",
+     "projects"
+    ]
+   }
+  }
+ ],
+ "doors": [
+  {
+   "from": "Second Brain.md",
+   "to": "Spaced Repetition.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"spaced repetition\" via frontmatter field \"up\""
+  },
+  {
+   "from": "Atomic Habits.md",
+   "to": "Book - Atomic Habits.md",
+   "weight": "hard",
+   "reason": "The book behind the [[Atomic Habits]] concept note."
+  },
+  {
+   "from": "Weekly Review.md",
+   "to": "Daily Notes.md",
+   "weight": "hard",
+   "reason": "One note per day, for capture. Rolls up into the [[Weekly Review]]."
+  },
+  {
+   "from": "Book - Deep Work.md",
+   "to": "Reading List.md",
+   "weight": "hard",
+   "reason": "Currently reading: [[Book - Deep Work]] and [[Book - Atomic Habits]]."
+  },
+  {
+   "from": "Book - Atomic Habits.md",
+   "to": "Reading List.md",
+   "weight": "hard",
+   "reason": "Currently reading: [[Book - Deep Work]] and [[Book - Atomic Habits]]."
+  },
+  {
+   "from": "Zettelkasten.md",
+   "to": "Second Brain.md",
+   "weight": "hard",
+   "reason": "- [[Zettelkasten]] - the atomic-note method this system is built on"
+  },
+  {
+   "from": "Spaced Repetition.md",
+   "to": "Second Brain.md",
+   "weight": "hard",
+   "reason": "- [[Spaced Repetition]] - how retention is maintained over time"
+  },
+  {
+   "from": "Daily Notes.md",
+   "to": "Weekly Review.md",
+   "weight": "hard",
+   "reason": "A weekly pass back over [[Daily Notes]] and the [[Reading List]]."
+  },
+  {
+   "from": "Reading List.md",
+   "to": "Weekly Review.md",
+   "weight": "hard",
+   "reason": "A weekly pass back over [[Daily Notes]] and the [[Reading List]]."
+  },
+  {
+   "from": "Second Brain.md",
+   "to": "Welcome.md",
+   "weight": "hard",
+   "reason": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]"
+  },
+  {
+   "from": "Zettelkasten.md",
+   "to": "Welcome.md",
+   "weight": "hard",
+   "reason": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]"
+  },
+  {
+   "from": "Daily Notes.md",
+   "to": "Welcome.md",
+   "weight": "hard",
+   "reason": "and [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with"
+  },
+  {
+   "from": "Overview.md",
+   "to": "Welcome.md",
+   "weight": "hard",
+   "reason": "and [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with"
+  },
+  {
+   "from": "Second Brain.md",
+   "to": "Zettelkasten.md",
+   "weight": "hard",
+   "reason": "See also [[Second Brain]] and [[Atomic Habits|the habits book]] for an applied example."
+  },
+  {
+   "from": "Atomic Habits.md",
+   "to": "Zettelkasten.md",
+   "weight": "hard",
+   "reason": "See also [[Second Brain]] and [[Atomic Habits|the habits book]] for an applied example."
+  },
+  {
+   "from": "Weekly Review.md",
+   "to": "areas/Finance.md",
+   "weight": "hard",
+   "reason": "Reviewed as part of the [[Weekly Review]]."
+  },
+  {
+   "from": "Atomic Habits.md",
+   "to": "areas/Health.md",
+   "weight": "hard",
+   "reason": "Tracks health habits alongside [[Atomic Habits]]. Links to a [[Habit Tracker]] note that does"
+  },
+  {
+   "from": "projects/Project Beta.md",
+   "to": "projects/Project Alpha.md",
+   "weight": "hard",
+   "reason": "Alpha depends on infrastructure shared with [[Project Beta]] and is reviewed in the"
+  },
+  {
+   "from": "Weekly Review.md",
+   "to": "projects/Project Alpha.md",
+   "weight": "hard",
+   "reason": "[[Weekly Review]]."
+  },
+  {
+   "from": "projects/Project Alpha.md",
+   "to": "projects/Project Beta.md",
+   "weight": "hard",
+   "reason": "Beta shares its data model with [[Project Alpha]]."
+  }
+ ],
+ "halls": [
+  {
+   "id": "hall:0",
+   "intent": [
+    "tags:books",
+    "tags:habits"
+   ],
+   "rooms": [
+    "Atomic Habits.md",
+    "Book - Atomic Habits.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:1",
+   "intent": [
+    "tags:journal"
+   ],
+   "rooms": [
+    "Daily Notes.md",
+    "Weekly Review.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:2",
+   "intent": [
+    "tags:meta"
+   ],
+   "rooms": [
+    "Overview.md",
+    "projects/Overview.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:3",
+   "intent": [
+    "tags:books"
+   ],
+   "rooms": [
+    "Atomic Habits.md",
+    "Book - Atomic Habits.md",
+    "Book - Deep Work.md",
+    "Reading List.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:4",
+   "intent": [
+    "tags:areas"
+   ],
+   "rooms": [
+    "areas/Finance.md",
+    "areas/Health.md",
+    "areas/Notes.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:5",
+   "intent": [
+    "tags:projects"
+   ],
+   "rooms": [
+    "projects/Notes.md",
+    "projects/Overview.md",
+    "projects/Project Alpha.md",
+    "projects/Project Beta.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:6",
+   "intent": [
+    "tags:projects",
+    "tags:work"
+   ],
+   "rooms": [
+    "projects/Project Alpha.md",
+    "projects/Project Beta.md"
+   ],
+   "stable": false
+  },
+  {
+   "id": "hall:7",
+   "intent": [
+    "tags:pkm"
+   ],
+   "rooms": [
+    "Second Brain.md",
+    "Spaced Repetition.md",
+    "Zettelkasten.md"
+   ],
+   "stable": false
+  }
+ ],
+ "cards": [
+  {
+   "id": "Atomic Habits.md#cloze#0",
+   "roomId": "Atomic Habits.md",
+   "kind": "cloze",
+   "front": "___ argues that small, consistent routines compound into large results over time.",
+   "back": "Atomic Habits",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Atomic Habits.md#term-from-def#1",
+   "roomId": "Atomic Habits.md",
+   "kind": "term-from-def",
+   "front": "Atomic Habits argues that small, consistent routines compound into large results over time. Which term is this?",
+   "back": "Atomic Habits",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Book - Atomic Habits.md#dependency#0",
+   "roomId": "Book - Atomic Habits.md",
+   "kind": "dependency",
+   "front": "Why does book - atomic habits depend on Atomic Habits?",
+   "back": "The book behind the [[Atomic Habits]] concept note.",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Book - Atomic Habits.md#teaches#1",
+   "roomId": "Book - Atomic Habits.md",
+   "kind": "teaches",
+   "front": "Name one thing taught by book - atomic habits.",
+   "back": "book - atomic habits",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Book - Deep Work.md#teaches#0",
+   "roomId": "Book - Deep Work.md",
+   "kind": "teaches",
+   "front": "Name one thing taught by book - deep work.",
+   "back": "book - deep work",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Daily Notes.md#dependency#0",
+   "roomId": "Daily Notes.md",
+   "kind": "dependency",
+   "front": "Why does daily notes depend on weekly review?",
+   "back": "One note per day, for capture. Rolls up into the [[Weekly Review]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Daily Notes.md#teaches#1",
+   "roomId": "Daily Notes.md",
+   "kind": "teaches",
+   "front": "Name one thing taught by daily notes.",
+   "back": "daily notes",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Overview.md#cloze#0",
+   "roomId": "Overview.md",
+   "kind": "cloze",
+   "front": "Root-level ___ note. There is a second, deliberately homonymous \"Overview\" note under\nprojects/ — used to exercise the shortest-unique-path wikilink resolution rule.",
+   "back": "overview",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Overview.md#term-from-def#1",
+   "roomId": "Overview.md",
+   "kind": "term-from-def",
+   "front": "Root-level overview note. There is a second, deliberately homonymous \"Overview\" note under\nprojects/ — used to exercise the shortest-unique-path wikilink resolution rule. Which term is this?",
+   "back": "overview",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Reading List.md#dependency#0",
+   "roomId": "Reading List.md",
+   "kind": "dependency",
+   "front": "Why does reading list depend on book - deep work?",
+   "back": "Currently reading: [[Book - Deep Work]] and [[Book - Atomic Habits]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Reading List.md#dependency#1",
+   "roomId": "Reading List.md",
+   "kind": "dependency",
+   "front": "Why does reading list depend on book - atomic habits?",
+   "back": "Currently reading: [[Book - Deep Work]] and [[Book - Atomic Habits]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Second Brain.md#dependency#0",
+   "roomId": "Second Brain.md",
+   "kind": "dependency",
+   "front": "Why does second brain depend on zettelkasten?",
+   "back": "- [[Zettelkasten]] - the atomic-note method this system is built on",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Second Brain.md#dependency#1",
+   "roomId": "Second Brain.md",
+   "kind": "dependency",
+   "front": "Why does second brain depend on spaced repetition?",
+   "back": "- [[Spaced Repetition]] - how retention is maintained over time",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Second Brain.md#cloze#2",
+   "roomId": "Second Brain.md",
+   "kind": "cloze",
+   "front": "A \"___\" is an external system for capturing and connecting what you learn, so\nrecall does not depend on unaided memory.",
+   "back": "second brain",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Second Brain.md#term-from-def#3",
+   "roomId": "Second Brain.md",
+   "kind": "term-from-def",
+   "front": "A \"second brain\" is an external system for capturing and connecting what you learn, so\nrecall does not depend on unaided memory. Which term is this?",
+   "back": "second brain",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Spaced Repetition.md#dependency#0",
+   "roomId": "Spaced Repetition.md",
+   "kind": "dependency",
+   "front": "Why does spaced repetition depend on second brain?",
+   "back": "declared as a prerequisite of \"spaced repetition\" via frontmatter field \"up\"",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Spaced Repetition.md#cloze#1",
+   "roomId": "Spaced Repetition.md",
+   "kind": "cloze",
+   "front": "___ schedules review just before you would otherwise forget, using a\nforgetting-curve model. Tagged #srs for quick filtering.",
+   "back": "spaced repetition",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Spaced Repetition.md#term-from-def#2",
+   "roomId": "Spaced Repetition.md",
+   "kind": "term-from-def",
+   "front": "Spaced repetition schedules review just before you would otherwise forget, using a\nforgetting-curve model. Tagged #srs for quick filtering. Which term is this?",
+   "back": "spaced repetition",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Weekly Review.md#dependency#0",
+   "roomId": "Weekly Review.md",
+   "kind": "dependency",
+   "front": "Why does weekly review depend on daily notes?",
+   "back": "A weekly pass back over [[Daily Notes]] and the [[Reading List]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Weekly Review.md#dependency#1",
+   "roomId": "Weekly Review.md",
+   "kind": "dependency",
+   "front": "Why does weekly review depend on reading list?",
+   "back": "A weekly pass back over [[Daily Notes]] and the [[Reading List]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#dependency#0",
+   "roomId": "Welcome.md",
+   "kind": "dependency",
+   "front": "Why does welcome depend on second brain?",
+   "back": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#dependency#1",
+   "roomId": "Welcome.md",
+   "kind": "dependency",
+   "front": "Why does welcome depend on zettelkasten?",
+   "back": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#dependency#2",
+   "roomId": "Welcome.md",
+   "kind": "dependency",
+   "front": "Why does welcome depend on daily notes?",
+   "back": "and [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#dependency#3",
+   "roomId": "Welcome.md",
+   "kind": "dependency",
+   "front": "Why does welcome depend on overview?",
+   "back": "and [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#cloze#4",
+   "roomId": "Welcome.md",
+   "kind": "cloze",
+   "front": "___ to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]\nand [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with\nprojects/Overview.md — the root note, being fewer path segments away, should win).",
+   "back": "welcome",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Welcome.md#term-from-def#5",
+   "roomId": "Welcome.md",
+   "kind": "term-from-def",
+   "front": "Welcome to this vault. Start with [[Second Brain]], then branch into [[Zettelkasten#Origins]]\nand [[Daily Notes]]. See also the vault [[Overview]] (deliberately homonymous with\nprojects/Overview.md — the root note, being fewer path segments away, should win). Which term is this?",
+   "back": "welcome",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Zettelkasten.md#dependency#0",
+   "roomId": "Zettelkasten.md",
+   "kind": "dependency",
+   "front": "Why does zettelkasten depend on second brain?",
+   "back": "See also [[Second Brain]] and [[Atomic Habits|the habits book]] for an applied example.",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Zettelkasten.md#dependency#1",
+   "roomId": "Zettelkasten.md",
+   "kind": "dependency",
+   "front": "Why does zettelkasten depend on Atomic Habits?",
+   "back": "See also [[Second Brain]] and [[Atomic Habits|the habits book]] for an applied example.",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Zettelkasten.md#cloze#2",
+   "roomId": "Zettelkasten.md",
+   "kind": "cloze",
+   "front": "The ___ method links small, atomic notes to each other rather than filing them into\na fixed hierarchy.",
+   "back": "zettelkasten",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "Zettelkasten.md#term-from-def#3",
+   "roomId": "Zettelkasten.md",
+   "kind": "term-from-def",
+   "front": "The Zettelkasten method links small, atomic notes to each other rather than filing them into\na fixed hierarchy. Which term is this?",
+   "back": "zettelkasten",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Finance.md#dependency#0",
+   "roomId": "areas/Finance.md",
+   "kind": "dependency",
+   "front": "Why does finance depend on weekly review?",
+   "back": "Reviewed as part of the [[Weekly Review]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Finance.md#teaches#1",
+   "roomId": "areas/Finance.md",
+   "kind": "teaches",
+   "front": "Name one thing taught by finance.",
+   "back": "finance",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Health.md#dependency#0",
+   "roomId": "areas/Health.md",
+   "kind": "dependency",
+   "front": "Why does health depend on Atomic Habits?",
+   "back": "Tracks health habits alongside [[Atomic Habits]]. Links to a [[Habit Tracker]] note that does",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Health.md#cloze#1",
+   "roomId": "areas/Health.md",
+   "kind": "cloze",
+   "front": "Tracks ___ habits alongside [[Atomic Habits]]. Links to a [[Habit Tracker]] note that does\nnot exist in this vault, on purpose, to exercise the unresolved-link warning.",
+   "back": "health",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Health.md#term-from-def#2",
+   "roomId": "areas/Health.md",
+   "kind": "term-from-def",
+   "front": "Tracks health habits alongside [[Atomic Habits]]. Links to a [[Habit Tracker]] note that does\nnot exist in this vault, on purpose, to exercise the unresolved-link warning. Which term is this?",
+   "back": "health",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Notes.md#cloze#0",
+   "roomId": "areas/Notes.md",
+   "kind": "cloze",
+   "front": "Area-specific scratch ___. Deliberately shares its basename with projects/Notes.md.",
+   "back": "notes",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "areas/Notes.md#term-from-def#1",
+   "roomId": "areas/Notes.md",
+   "kind": "term-from-def",
+   "front": "Area-specific scratch notes. Deliberately shares its basename with projects/Notes.md. Which term is this?",
+   "back": "notes",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Notes.md#cloze#0",
+   "roomId": "projects/Notes.md",
+   "kind": "cloze",
+   "front": "Project-specific scratch ___. Deliberately shares its basename with areas/Notes.md.",
+   "back": "notes",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Notes.md#term-from-def#1",
+   "roomId": "projects/Notes.md",
+   "kind": "term-from-def",
+   "front": "Project-specific scratch notes. Deliberately shares its basename with areas/Notes.md. Which term is this?",
+   "back": "notes",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Overview.md#cloze#0",
+   "roomId": "projects/Overview.md",
+   "kind": "cloze",
+   "front": "Project-level ___ note, deliberately homonymous with the root Overview note to exercise\nshortest-unique-path resolution (the root note, at depth 1, should win over this one, at\ndepth 2).",
+   "back": "overview",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Overview.md#term-from-def#1",
+   "roomId": "projects/Overview.md",
+   "kind": "term-from-def",
+   "front": "Project-level overview note, deliberately homonymous with the root Overview note to exercise\nshortest-unique-path resolution (the root note, at depth 1, should win over this one, at\ndepth 2). Which term is this?",
+   "back": "overview",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Project Alpha.md#dependency#0",
+   "roomId": "projects/Project Alpha.md",
+   "kind": "dependency",
+   "front": "Why does project alpha depend on project beta?",
+   "back": "Alpha depends on infrastructure shared with [[Project Beta]] and is reviewed in the",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Project Alpha.md#dependency#1",
+   "roomId": "projects/Project Alpha.md",
+   "kind": "dependency",
+   "front": "Why does project alpha depend on weekly review?",
+   "back": "[[Weekly Review]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Project Beta.md#dependency#0",
+   "roomId": "projects/Project Beta.md",
+   "kind": "dependency",
+   "front": "Why does project beta depend on project alpha?",
+   "back": "Beta shares its data model with [[Project Alpha]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "projects/Project Beta.md#teaches#1",
+   "roomId": "projects/Project Beta.md",
+   "kind": "teaches",
+   "front": "Name one thing taught by project beta.",
+   "back": "project beta",
+   "stability": 0,
+   "difficulty": 5
+  }
+ ],
+ "warnings": [
+  "Weekly Review.md: body link \"Notes\" matches multiple rooms: areas/Notes.md, projects/Notes.md",
+  "Welcome.md: body link to \"Leaked\" does not resolve to any room in this wing",
+  "areas/Health.md: body link to \"Habit Tracker\" does not resolve to any room in this wing"
+ ]
+}

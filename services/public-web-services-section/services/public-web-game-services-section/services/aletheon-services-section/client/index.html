@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Aletheon — a realm settled out of the Void</title>
+  <link rel="stylesheet" href="/client/ui/hud.css" />
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <!-- HUD overlay (filled in by ui/hud.mjs) -->
+  <div id="hud" hidden>
+    <div id="vitals">
+      <div class="charge" id="charge">t</div>
+      <div class="bars">
+        <div class="name" id="me-name">wanderer</div>
+        <div class="bar"><div class="fill" id="hp-fill"></div><span id="hp-text"></span></div>
+        <!-- [marks] the player's conserved marks + the settle hint -->
+        <div id="marks" class="marks"></div>
+        <!-- [tide] the world's settledness (1 − void-tension): the arrow of time toward calm -->
+        <div id="settledness" class="settledness"></div>
+        <!-- [economy] the player's total worth (marks + fiber richness of held items); I opens it -->
+        <div id="worth" class="worth"></div>
+      </div>
+    </div>
+
+    <div id="target" hidden>
+      <div class="charge" id="t-charge">t</div>
+      <div class="bars">
+        <div class="name" id="t-name"></div>
+        <div class="bar small"><div class="fill" id="t-fill"></div></div>
+      </div>
+    </div>
+
+    <canvas id="minimap" width="180" height="180"></canvas>
+
+    <div id="log"></div>
+
+    <div id="hotbar">
+      <div class="slot" data-k="1"><kbd>LMB</kbd><span>Strike</span></div>
+      <div class="slot" data-k="2"><kbd>Space</kbd><span>Strike</span></div>
+      <div class="slot" data-k="3"><kbd>Enter</kbd><span>Chat</span></div>
+      <div class="slot" data-k="4"><kbd>F</kbd><span>Settle</span></div>
+    </div>
+
+    <!-- the Four Illocutionary Forces — speak the bilattice (filled/coloured by ui/hud.mjs) -->
+    <div id="forces" aria-label="speak a force"></div>
+
+    <!-- [powers] the K₄ gauge as player powers — Z Reflect · X Banish · R Reveal · B Bind -->
+    <div id="powers" aria-label="use a power"></div>
+
+    <form id="chat-form" autocomplete="off">
+      <input id="chat-input" maxlength="200" placeholder="say something to the realm…" />
+    </form>
+
+    <!-- [economy] the inventory panel — held items + each item's fiber-richness value (toggled with I) -->
+    <div id="inventory" hidden>
+      <h2>Inventory</h2>
+      <p class="inv-sub">Items ARE value: worth is fiber richness, not a stamped number. <kbd>I</kbd> to close.</p>
+      <ul id="inv-items"></ul>
+      <div id="inv-worth" class="inv-worth"></div>
+    </div>
+
+    <!-- [economy] the minimal trade prompt — propose/accept a fiber-exchange with a nearby player -->
+    <div id="trade-prompt" hidden>
+      <div id="trade-body"></div>
+    </div>
+
+    <!-- [dispute] the Parley panel — a two-sided ludics contest: two stances (glyphs), the move
+         log's last outcome, the FLOW meter (four-glyph histogram), the DEEP-PLAY ⊤-count, and the
+         four illocutionary forces as the moves (1–4). P opens against the nearest hostile foe. -->
+    <div id="parley" hidden>
+      <h2>Parley <span class="pf-sub">— out-argue, do not slay (P)</span></h2>
+      <div id="parley-body"></div>
+      <div id="parley-forces" aria-label="play a force"></div>
+    </div>
+
+    <!-- [claims] the Claim Altar panel — stake EVIDENCE into a player-authored claim cell, settled by
+         the real kernel. The settled glyph (bilattice colour), the pos/neg evidence bars, and the
+         four illocutionary forces as stakes. Shown when you stand by an altar; K stakes the focused
+         force (assert→t sanctuary · deny→f · contest→⊤ eruption · abstain→retract your last stake). -->
+    <div id="claim" hidden>
+      <h2>Claim Altar <span class="cl-sub">— author the world (K)</span></h2>
+      <div id="claim-body"></div>
+      <div id="claim-forces" aria-label="stake a force"></div>
+    </div>
+
+    <!-- Codex of the Four Ways (toggled with C; filled in by ui/hud.mjs) -->
+    <div id="codex" hidden>
+      <h2>The Codex of the Four Ways</h2>
+      <p class="codex-sub">Witness each light of the bilattice by living it. <kbd>C</kbd> to close.</p>
+      <div id="codex-cards"></div>
+    </div>
+
+    <div id="legend">
+      <b>world-truth</b>
+      <span><i class="g t">t</i> alive</span>
+      <span><i class="g f">f</i> slain</span>
+      <span><i class="g top">⊤</i> Anomaly</span>
+      <span><i class="g bot">⊥</i> unknown</span>
+    </div>
+  </div>
+
+  <!-- start gate -->
+  <div id="gate">
+    <div class="panel">
+      <h1>ALETHEON</h1>
+      <p class="sub">a realm being settled out of the Void</p>
+      <p class="lore">
+        Every fact here is a bilattice cell. The land you have not yet seen is <b>⊥</b>, unknown.
+        What you affirm becomes <b>t</b>, real. What is struck down past bearing settles to <b>f</b>.
+        And what is at once alive and slain holds as <b>⊤</b> — a contradiction the world keeps as a
+        situation, and lets walk as a Corrupted Anomaly. Stay near the heart; the rings grow strange.
+      </p>
+      <form id="gate-form">
+        <input id="name-input" maxlength="24" placeholder="your name" value="" />
+        <button type="submit">Step out of the Void</button>
+      </form>
+      <p class="controls"><b>WASD</b> move · <b>mouse</b> look · <b>LMB / Space</b> strike · <b>1–4</b> speak a force · <b>Z X R B</b> powers · <b>F</b> settle · <b>P</b> parley · <b>K</b> claim at an altar · <b>I</b> inventory · <b>T</b> trade · <b>Enter</b> chat · <b>V</b> 3D / 2D view · <b>C</b> codex</p>
+      <p id="gate-status"></p>
+    </div>
+  </div>
+
+  <script type="module" src="/client/main.mjs"></script>
+</body>
+</html>

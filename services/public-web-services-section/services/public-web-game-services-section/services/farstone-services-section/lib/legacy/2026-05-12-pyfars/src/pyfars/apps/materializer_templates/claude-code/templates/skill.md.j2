@@ -1,0 +1,27 @@
+{%- set src_rel = record.source_path.relative_to(root) if record.source_path else record.slug -%}
+{%- set title = record.title or record.name or record.slug -%}
+{%- set raw_desc = record.description or title -%}
+{%- if not raw_desc -%}
+{%- for line in record.body.splitlines() -%}
+{%- if line.strip() and not line.startswith('#') and not raw_desc -%}
+{%- set raw_desc = line.strip() -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- set short_desc = (raw_desc | replace('\n', ' ') | trim) -%}
+{%- if short_desc | length > 360 -%}
+{%- set short_desc = short_desc[:357] | trim ~ '...' -%}
+{%- endif -%}
+{%- set short_desc = short_desc | replace('"', "'") -%}
+---
+name: {{ record.slug }}
+description: "{{ short_desc }}"
+---
+
+# {{ title }}
+
+PyFARS substrate skill, projected by `pyfars install-harness claude-code`. Source of truth: [`{{ src_rel }}`]({{ src_rel }}).
+
+---
+
+{{ record.body | trim }}

@@ -1,0 +1,29 @@
+{
+  "name": "@red-cup-engineering/dcity-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Read-only dCity recovery pricing: exact-arithmetic quoting of the closed dCity token's live SIM/SWAP.HIVE Hive-Engine pool exit, leaving CITY NFT custody untouched.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "exports": {
+    ".": "./src/recovery.mjs",
+    "./recovery": {
+      "types": "./src/recovery.d.ts",
+      "default": "./src/recovery.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "hive-engine",
+    "dcity",
+    "sovereign-state-enterprise"
+  ]
+}

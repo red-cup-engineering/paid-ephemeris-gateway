@@ -9,8 +9,8 @@ import { pathToFileURL } from "node:url";
 
 const HOST = "cold-red-gate";
 const ACCOUNTS = Object.freeze({
-  "sigmund-vexler": Object.freeze({ keySentinel: "cold-red-gate:sigmund-vexler/active", keyFile: "/home/emsenn/info/lib/emsenn/services/561-group/services/561-group-services-section/services/561-group-engineering-services-section/services/561-group-computer-services-section/services/computer-machine-services-section/services/persistent-computer-machine-services-section/services/bare-cedar-fog-services-section/data/runtime/config/blockchain/hive/sigmund-vexler/active.wif" }),
-  michael561: Object.freeze({ keySentinel: "cold-red-gate:michael561/active", keyFile: "/home/emsenn/info/lib/emsenn/services/561-group/services/561-group-services-section/services/561-group-engineering-services-section/services/561-group-computer-services-section/services/computer-machine-services-section/services/persistent-computer-machine-services-section/services/bare-cedar-fog-services-section/data/runtime/config/blockchain/hive/michael561/active.wif" }),
+  "sigmund-vexler": Object.freeze({ keySentinel: "cold-red-gate:sigmund-vexler/active", keyFile: "/home/emsenn/info/lib/emsenn/services/561-group/services/561-group-services-section/services/561-group-engineering-services-section/services/561-group-computer-engineering-services-section/services/computer-machine-services-section/services/persistent-computer-machine-services-section/services/bare-cedar-fog-services-section/data/runtime/config/blockchain/hive/sigmund-vexler/active.wif" }),
+  michael561: Object.freeze({ keySentinel: "cold-red-gate:michael561/active", keyFile: "/home/emsenn/info/lib/emsenn/services/561-group/services/561-group-services-section/services/561-group-engineering-services-section/services/561-group-computer-engineering-services-section/services/computer-machine-services-section/services/persistent-computer-machine-services-section/services/bare-cedar-fog-services-section/data/runtime/config/blockchain/hive/michael561/active.wif" }),
 });
 const MAX_INPUT = 100_000_000n; // 1.00000000 SWAP.HIVE
 const MIN_PROFIT = 100_000n; // 0.00100000 SWAP.HIVE

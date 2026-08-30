@@ -13,7 +13,7 @@
 // A charge is `{ value: [pos, neg], evidence: [posWitnesses, negWitnesses] }` (booleans + lossless
 // witness lists), the shape every kernel charge op consumes and returns.
 
-// CHARGE value-algebra and the four-regime DESCENT both live in @561-group/math now,
+// CHARGE value-algebra and the four-regime DESCENT both live in @lenticule-science/metrologic now,
 // as named exports of grouped modules (formerly per-script defaults in the sibling kernel).
 export {
   joinKnowledge,
@@ -23,6 +23,6 @@ export {
   conflate, // [powers] K₄ gauge's other unary
   present,
   isTop,
-} from "@561-group/math/bilattice/charge";
+} from "@lenticule-science/metrologic/bilattice/charge";
 
-export { articulate, predicate, posit, settle } from "@561-group/math/bilattice/descent";
+export { articulate, predicate, posit, settle } from "@lenticule-science/metrologic/bilattice/descent";

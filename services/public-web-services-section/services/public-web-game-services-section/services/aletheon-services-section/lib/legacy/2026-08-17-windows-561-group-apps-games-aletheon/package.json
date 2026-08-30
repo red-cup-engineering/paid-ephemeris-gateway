@@ -2,7 +2,7 @@
   "name": "@561-group/aletheon",
   "version": "0.0.1",
   "type": "module",
-  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void — every vital fact is a bilattice cell (⊥ unknown / t real / f destroyed / ⊤ contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the cleaned-up voidmath kernel; the browser renders a streamed view with a from-scratch zero-dependency WebGL2 engine and rederived vec/mat/quat math. Zero dependencies, zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
+  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void \u2014 every vital fact is a bilattice cell (\u22a5 unknown / t real / f destroyed / \u22a4 contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the cleaned-up voidmath kernel; the browser renders a streamed view with a from-scratch zero-dependency WebGL2 engine and rederived vec/mat/quat math. Zero dependencies, zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emsenn/561-group.git",
@@ -39,7 +39,7 @@
     }
   },
   "dependencies": {
-    "@561-group/math": "workspace:*",
+    "@lenticule-science/metrologic": "0.1.1",
     "@561-group/qwzspace": "workspace:*"
   }
 }

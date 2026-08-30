@@ -1,6 +1,7 @@
 {
   "name": "@emsenn/aagaard",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "description": "Aagaard wallet-arena operations app; witness-log and notation primitives are now its own (src/core/witness.mts), decoupled from MetroPlat's since-dissolved persistence/notation API.",
   "engines": {

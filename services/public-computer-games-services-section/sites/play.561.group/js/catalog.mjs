@@ -38,7 +38,7 @@ export function statusLabel(status) {
 // Kept in sync by hand (house doctrine: vendor/mirror across service trees, not a live
 // cross-service import) -- update this alongside the router's own route list.
 // (test/honest-links.test.mts checks this set against the router's real routes.)
-export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful']);
+export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful', 'casino']);
 
 export function playUrl(entry) {
   // Respect the manifest's own declared entry point (e.g. crucible's is "/web/index.html", not

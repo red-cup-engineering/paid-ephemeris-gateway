@@ -25,6 +25,7 @@ export const ORIGIN_BY_HOST = new Map([
   ["you-are-conscious.561.group", "you-are-conscious-1019481907460.us-central1.run.app"],
   ["tidepool.561.group", "tidepool-1019481907460.us-central1.run.app"],
   ["fearful.561.group", "be-not-so-fearful-1019481907460.us-central1.run.app"],
+  ["casino.561.group", "casino-1019481907460.us-central1.run.app"],
 ]);
 
 export function upstreamRequestFor(request) {

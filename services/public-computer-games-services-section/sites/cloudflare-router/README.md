@@ -58,6 +58,7 @@ Cloud Run origin:
 | `you-are-conscious.561.group`   | `you-are-conscious-1019481907460.us-central1.run.app` |
 | `stoke.561.group`               | `stoke-1019481907460.us-central1.run.app`            |
 | `parlor.561.group`              | `parlor-1019481907460.us-central1.run.app`           |
+| `casino.561.group`              | `casino-1019481907460.us-central1.run.app`           |
 
 `wrangler.jsonc`'s `routes` array is what actually attaches each
 hostname to this Worker as a Workers Custom Domain (which also

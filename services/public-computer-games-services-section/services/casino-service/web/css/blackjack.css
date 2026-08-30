@@ -1,0 +1,442 @@
+/* blackjack.css — the table felt, cards, chips, and the tasteful CSS-only animation this pass
+   ships (deal slide, flip-to-reveal, a brief celebration glow). Every card/chip is inline SVG
+   from @red-cup-engineering/card-table/svg, themed entirely through the --suit-*/--card-*/
+   --chip-* custom properties defined below — no raster asset anywhere on this page.
+
+   The fx seam: every element a later qwzspace fx pass might want to intercept carries a
+   `data-fx` attribute (see web/js/blackjack.mjs's header for the full contract). Nothing here
+   assumes that layer exists yet — `data-fx` is inert data until something reads it. */
+
+:root {
+  --suit-red: #c23b4f;
+  --suit-black: #1c2420;
+  --card-face: #f4efe2;
+  --card-back-bg: #7a1f2b;
+  --card-back-inset: #5c1620;
+  --card-back-lattice: rgba(212, 175, 55, 0.55);
+  --card-back-diamonds: rgba(212, 175, 55, 0.5);
+  --card-back-plain: rgba(212, 175, 55, 0.6);
+  --chip-body: #163527;
+  --chip-edge-stripe: #d4af37;
+  --chip-inner: #0c1410;
+  --chip-value-text: #f2cf5b;
+  --felt-arc: radial-gradient(ellipse at center, #143323 0%, #0c1f16 65%, #081911 100%);
+}
+
+.masthead-compact {
+  padding: 1.25rem 1rem;
+}
+
+.masthead-compact .masthead-inner {
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.masthead-compact h1 {
+  font-size: 1.6rem;
+}
+
+.back-to-lobby {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-to-lobby:hover {
+  color: var(--gold-bright);
+}
+
+.bj-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.bj-balances {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.house-math-toggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ── the table itself ─────────────────────────────────────────────────────────────────── */
+
+.bj-table {
+  position: relative;
+  border-radius: 16px;
+  padding: 1.5rem 1rem 2rem;
+  background: var(--felt-arc);
+  border: 1px solid var(--felt-border);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+  min-height: 22rem;
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.bj-felt-arc {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 60%;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bj-seat {
+  display: grid;
+  gap: 0.4rem;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bj-seat-label {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bj-hand-total {
+  color: var(--gold-bright);
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.bj-seat-active .bj-seat-label {
+  color: var(--gold-bright);
+}
+
+.bj-seat-active {
+  filter: drop-shadow(0 0 10px rgba(242, 207, 91, 0.35));
+}
+
+.bj-cards {
+  display: flex;
+  gap: -0.5rem;
+  min-height: 5.6rem;
+}
+
+.bj-card {
+  width: 3.4rem;
+  margin-left: -0.9rem;
+  transform-origin: bottom center;
+  animation: bj-deal-in 320ms ease-out backwards;
+}
+
+.bj-card:first-child {
+  margin-left: 0;
+}
+
+.bj-card svg {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+.card-face-svg .card-face-bg {
+  fill: var(--card-face);
+  stroke: rgba(0, 0, 0, 0.4);
+}
+
+.card-face-svg .suit-red .card-rank-text,
+.card-face-svg.suit-red .card-rank-text,
+.card-face-svg.suit-red path,
+.card-face-svg.suit-red .card-center-glyph {
+  fill: var(--suit-red);
+}
+
+.card-face-svg.suit-black .card-rank-text,
+.card-face-svg.suit-black path,
+.card-face-svg.suit-black .card-center-glyph {
+  fill: var(--suit-black);
+}
+
+.card-rank-text {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+.card-back-svg .card-back-bg {
+  fill: var(--card-back-bg);
+  stroke: rgba(0, 0, 0, 0.5);
+}
+
+.card-back-svg .card-back-inset {
+  fill: var(--card-back-inset);
+}
+
+.card-back-lattice line,
+.card-back-diamonds line {
+  stroke: var(--card-back-lattice);
+  stroke-width: 1;
+}
+
+.card-back-plain path {
+  fill: var(--card-back-plain);
+}
+
+@keyframes bj-deal-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) translateX(24px) rotate(8deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0) scale(1);
+  }
+}
+
+/* A card whose face-down back is replaced by a face-up reveal (the dealer's hole card, once
+   settlement flips it) gets a quick flip rather than a plain swap — engine.mts always sends a
+   brand-new element on state changes, so this keys off `data-fx="card-deal"` being re-applied
+   fresh on the very next render, giving every newly-mounted reveal the same little flourish. */
+.bj-card[data-fx='card-deal'] {
+  animation-name: bj-deal-in;
+}
+
+/* ── chips ─────────────────────────────────────────────────────────────────────────────── */
+
+.chip-body {
+  fill: var(--chip-body);
+  stroke: rgba(0, 0, 0, 0.4);
+}
+
+.chip-edge-stripe {
+  fill: none;
+  stroke: var(--chip-edge-stripe);
+  stroke-width: 4;
+  stroke-dasharray: 6 5;
+}
+
+.chip-inner {
+  fill: var(--chip-inner);
+}
+
+.chip-value-text {
+  fill: var(--chip-value-text);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+.bj-hand-bet {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.bj-chip-stack svg,
+.bj-chip-btn svg {
+  width: 2.4rem;
+  display: block;
+}
+
+/* ── outcome banner ────────────────────────────────────────────────────────────────────── */
+
+.bj-outcome {
+  justify-self: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+@keyframes bj-celebrate-pop {
+  0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 rgba(242, 207, 91, 0);
+  }
+  40% {
+    transform: scale(1.08);
+    box-shadow: 0 0 24px rgba(242, 207, 91, 0.55);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(242, 207, 91, 0.2);
+  }
+}
+
+.bj-outcome.bj-celebrate {
+  animation: bj-celebrate-pop 520ms ease-out;
+}
+
+/* Bigger tiers read as bigger — the actual "fireworks" is qwzspace's later job (see the
+   celebrate() seam in blackjack.mjs); this pass only ever offers a proportionally bigger glow. */
+.bj-table[data-fx='table-blackjack'],
+.bj-table[data-fx='table-bigwin'] {
+  animation: bj-table-flash 700ms ease-out;
+}
+
+@keyframes bj-table-flash {
+  0% {
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+  }
+  35% {
+    box-shadow: inset 0 0 90px rgba(242, 207, 91, 0.35);
+  }
+  100% {
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ── controls ──────────────────────────────────────────────────────────────────────────── */
+
+.bj-controls h2 {
+  margin-top: 0;
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.bj-chip-picker {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.bj-chip-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 120ms ease;
+}
+
+.bj-chip-btn:hover {
+  transform: translateY(-3px);
+}
+
+.bj-bet-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bj-bet-readout {
+  color: var(--ink-dim);
+}
+
+.bj-primary-btn {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: #1a1408;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bj-primary-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.bj-action-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.bj-action-row button {
+  background: linear-gradient(180deg, var(--red-bright), var(--red));
+  color: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.bj-action-row button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: none;
+}
+
+/* ── house math panel ──────────────────────────────────────────────────────────────────── */
+
+.bj-house-math {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--felt-border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  max-width: 26rem;
+}
+
+.bj-house-math h3 {
+  margin: 0 0 0.25rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.house-math-sub {
+  margin: 0 0 0.5rem;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+}
+
+.house-math-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.bj-house-math-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.bj-house-math-row dt {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+}
+
+.bj-house-math-row dd {
+  margin: 0;
+  font-weight: bold;
+}
+
+.bj-house-math-best {
+  background: rgba(212, 175, 55, 0.15);
+  outline: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 640px) {
+  .bj-action-row {
+    flex-direction: column;
+  }
+  .bj-action-row button {
+    width: 100%;
+  }
+}

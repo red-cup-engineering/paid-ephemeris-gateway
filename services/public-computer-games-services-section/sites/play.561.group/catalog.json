@@ -1,6 +1,6 @@
 {
   "$schemaNote": "One cartridge-manifest-shaped entry per game, validated against the real, published @red-cup-engineering/cartridge's validateManifest by test/smoke.test.mts (full strict validation when cartridgeWrapped is true, an honest subset check otherwise). A field this catalog can't fill in yet is omitted, never set to null. status, statusNote, repoPath, cartridgeWrapped, energyBankWrapped, and shelf are storefront-only extensions, not part of the manifest spec.",
-  "generated": "2026-08-29",
+  "generated": "2026-08-30",
   "games": [
     {
       "id": "solitaire",
@@ -1066,6 +1066,63 @@
       "cartridgeWrapped": true,
       "shelf": "Puzzle Den",
       "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/be-not-so-fearful-service"
+    },
+    {
+      "id": "casino",
+      "displayName": "Cowrie Casino",
+      "description": "casino.561.group — a real, monetized social casino: tickets-for-play (timed regeneration plus purchasable bundles) spend down into chips, the play currency, with a shared jackpot pool funded by a small rake on every chip wager and an escalating daily bonus. No real-money wagering or payouts, ever — every ticket and chip balance is a @red-cup-engineering/energy-bank double-entry ledger account, auditable live as an hledger journal. Two real games are on the floor: Blackjack (a seeded 6-deck shoe, @red-cup-engineering/card-table, dealer plays a published H17/S17 policy, a live per-decision House Math EV panel) and \"Tideline Treasures\" (the flagship spectacle game — a 5-reel/3-row/20-payline video slot on @red-cup-engineering/parlor-kernel's multi-payline grid math, wilds, scatters, a retriggerable free-spin bonus, and a progressive jackpot fed by the shared pool, rendered with @red-cup-engineering/qwzspace's procedural drawables/particles/celebration layer and scored with @red-cup-engineering/resonator's procedural audio). Every RTP/odds figure either game discloses is computed by exact enumeration or closed-form analysis, never asserted, in each game's own House Math panel. The floor is real-time and social, not just two solo games behind a lobby: a @red-cup-engineering/qwzspace room (src/floor/) tracks live presence (humans by WS session, @red-cup-engineering/cast named agent regulars by persona — a UTC-day-seeded rotation of the eight authored personas, actually playing real chip accounts through the identical BlackjackTable/SlotsTable modules a human's HTTP request calls, via a direct in-process Transport rather than a self-HTTP loopback), a live jackpot ticker, and tiered win broadcasts hooked additively onto both games' own settlement points.",
+      "subdomain": "casino",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "casino-cartridge-v1"
+      },
+      "statusNote": "seedPolicy is on-demand at this top level: the front door (/) is a lobby (session, ticket accrual, daily bonus, bundle store, jackpot pool) linking to two independently-seeded games, each client-seeded per table/machine (src/games/blackjack/manifest.mts and src/games/slots/manifest.mts both declare seedPolicy 'client-supplied') rather than daily — live table/reel games, not a daily puzzle. status is playable, not in-development: the promotion pass (npm run verify clean at 218/218, a local boot with a 200 from /, /blackjack.html, /slots.html, /health, and /floor/summary, then a Cloud Run redeploy re-verified live through casino.561.group) has now happened for both games, which were already fully wired end-to-end: real chip stakes through CasinoEconomy#placeWager/resolveWager, a jackpot rake on every wager, and a live disclosure panel each (blackjack's per-decision EV; Tideline Treasures' exact RTP/per-symbol/jackpot odds). cartridgeWrapped is FALSE at this top level — not because neither game is cartridge-wrapped (both are, thoroughly: src/games/blackjack/manifest.mts#verify and src/games/slots/manifest.mts#verify are each built from nothing but their own engine.mts's createEngine/applyIntent via @red-cup-engineering/cartridge/replay#createVerifier, and each game's own manifest.test.mts replays a real recorded game through it end to end, valid with a stable state hash, and rejects a doctored/illegal intent log) — but because this field covers one service directory with one replayVerifier slot, which cannot honestly point at two separate, unrelated per-game verifiers at once. This is the exact reasoning parlor-service's own top-level entry documents for its five games; adding Tideline Treasures is what makes blackjack's prior single-game exception no longer apply, so this field flipped from true to false in this pass, on purpose, not as a regression. energyBankWrapped stays true: unlike cartridge wrapping (one verifier per engine), economy integration is ONE shared CasinoEconomy facade both games actually go through (src/economy/casino-economy.mts), so a single top-level claim about it stays coherent even with two games on the floor. Tideline Treasures' own reel/paytable math additionally extends @red-cup-engineering/parlor-kernel (its new src/paylines.mjs module, published 0.3.0) additively — parlor-service's own five games (built on the same package, pinned exactly) were re-verified against 0.3.0 and still pass their full suite unmodified. This pass adds the realtime social floor (src/floor/) — a third, DIFFERENT replay contract from cartridgeWrapped's own (a @red-cup-engineering/qwzspace room, not a @red-cup-engineering/cartridge game), so it changes nothing about that field: the floor room's own self-audit is honestly disabled (selfAuditEvery: 0, see src/floor/world.mts's header) because its jackpot-balance field is deliberately live, externally-owned CasinoEconomy state, not a pure fold of the room's own intent log — the identical, already-precedented scope note @red-cup-engineering/qwzspace/lobby documents for its own live member-count reads. status is playable for the floor too: it is real and tested (real cast personas playing real chip accounts through the same BlackjackTable/SlotsTable modules a human's HTTP request calls), and the same promotion pass that cleared both games — this pass — applies to it as well.",
+      "energyBankWrapped": true,
+      "cartridgeWrapped": false,
+      "status": "playable",
+      "energy": {
+        "hooksRef": "src/economy/casino-economy.mts#CasinoEconomy",
+        "accountNamespace": "casino"
+      },
+      "keywords": [
+        "social-casino",
+        "tickets-for-play",
+        "chips",
+        "energy-bank",
+        "double-entry-ledger",
+        "jackpot",
+        "progressive-jackpot",
+        "daily-bonus",
+        "no-real-money-wagering",
+        "spectacle-first",
+        "cowrie-games",
+        "blackjack",
+        "card-table",
+        "house-math",
+        "expected-value",
+        "slots",
+        "video-slot",
+        "wild",
+        "scatter",
+        "free-spins",
+        "qwzspace",
+        "resonator",
+        "parlor-kernel",
+        "realtime-floor",
+        "cast",
+        "agent-players",
+        "websocket",
+        "presence",
+        "live-jackpot-ticker",
+        "win-broadcast"
+      ],
+      "shelf": "Card Table",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/casino-service"
     },
     {
       "id": "equivo",

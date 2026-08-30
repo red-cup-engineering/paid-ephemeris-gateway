@@ -1,0 +1,60 @@
+{
+  "name": "@red-cup-engineering/casino-service-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "social-casino",
+    "tickets-for-play",
+    "chips",
+    "energy-bank",
+    "double-entry-ledger",
+    "jackpot",
+    "daily-bonus",
+    "cartridge",
+    "spectacle-first",
+    "blackjack",
+    "card-table",
+    "house-math",
+    "slots",
+    "video-slot",
+    "wild",
+    "scatter",
+    "free-spins",
+    "progressive-jackpot",
+    "qwzspace",
+    "resonator",
+    "561-group"
+  ],
+  "description": "casino.561.group — Cowrie Casino: a real, monetized social casino. No real-money wagering or payouts, ever; monetization is tickets-for-play (timed regeneration plus purchasable bundles) spending down into chips, the play currency. Every ticket and chip balance is a @red-cup-engineering/energy-bank double-entry ledger account (this is energy-bank's first live integration), auditable as an hledger journal. Blackjack (src/games/blackjack/) is the first real table game: a seeded 6-deck shoe from @red-cup-engineering/card-table, real chip stakes through the same ledger, dealer plays a published H17/S17 policy, and an optional House Math panel discloses the exact expected value of every move against the table's own live shoe. \"Tideline Treasures\" (src/games/slots/) is the flagship spectacle game: a 5-reel/3-row/20-payline video slot on @red-cup-engineering/parlor-kernel's new multi-payline grid math (wilds, scatters, a retriggerable free-spin bonus, a progressive jackpot fed by the house's shared pool), rendered with @red-cup-engineering/qwzspace's procedural drawables/tween/particles/camera/celebration spectacle layer and scored with @red-cup-engineering/resonator's procedural audio — every RTP/odds figure computed by exact enumeration or closed-form analysis, never asserted, and disclosed live in its own House Math panel.",
+  "scripts": {
+    "check": "for f in src/*.mts src/economy/*.mts src/games/blackjack/*.mts src/games/slots/*.mts src/floor/*.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts src/economy/*.test.mts src/games/blackjack/*.test.mts src/games/slots/*.test.mts src/floor/*.test.mts",
+    "verify": "npm run check && npm test",
+    "serve": "node src/server.mts"
+  },
+  "dependencies": {
+    "@red-cup-engineering/card-table": "^0.1.0",
+    "@red-cup-engineering/cartridge": "0.2.1",
+    "@red-cup-engineering/cast": "^0.1.0",
+    "@red-cup-engineering/energy-bank": "^0.3.0",
+    "@red-cup-engineering/parlor-kernel": "^0.3.0",
+    "@red-cup-engineering/qwzspace": "^0.6.0",
+    "@red-cup-engineering/resonator": "^0.2.0"
+  },
+  "exports": {
+    "./economy/config": "./src/economy/config.mts",
+    "./economy/accounts": "./src/economy/accounts.mts",
+    "./economy/accrual": "./src/economy/accrual.mts",
+    "./economy/bundles": "./src/economy/bundles.mts",
+    "./economy/daily-bonus": "./src/economy/daily-bonus.mts",
+    "./economy/jackpot": "./src/economy/jackpot.mts",
+    "./economy/wager": "./src/economy/wager.mts",
+    "./economy/casino-economy": "./src/economy/casino-economy.mts",
+    "./persistence": "./src/persistence.mts",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false
+}

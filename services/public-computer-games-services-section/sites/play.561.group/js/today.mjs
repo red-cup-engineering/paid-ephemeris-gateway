@@ -95,7 +95,7 @@ const DEV_HOST = 'http://localhost:8787';
 
 // Subdomains actually routed to a live Cloud Run service by the Cloudflare worker -- see
 // js/catalog.mjs's identical constant (and its comment) for the source of truth this mirrors.
-export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful']);
+export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful', 'casino']);
 
 // Hand-authored per-strip copy -- the ask, subdomain, and dev path are each game's own
 // storefront-facing description, not derived from catalog.json's more generic description

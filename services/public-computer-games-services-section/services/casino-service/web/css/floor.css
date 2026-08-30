@@ -1,0 +1,157 @@
+/* floor.css — the living floor panel: canvas scene, live jackpot ticker, presence badge, rolling
+   event feed. Shares style.css's dark-felt/gold palette (--felt/--felt-panel/--gold/--ink/etc.) —
+   loaded second in index.html, so it only ever ADDS rules, never overrides the base palette. */
+
+.floor-panel {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.floor-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.floor-panel-head h2 {
+  margin: 0;
+}
+
+.floor-live-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+}
+
+.floor-presence {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.floor-presence-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #3fbf6a;
+  box-shadow: 0 0 6px #3fbf6a;
+  display: inline-block;
+}
+
+.floor-jackpot-line {
+  color: var(--gold-bright);
+  font-weight: bold;
+}
+
+#floor-sound-toggle-btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+#floor-sound-toggle-btn:hover {
+  border-color: var(--gold);
+}
+
+.floor-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem);
+  gap: 0.9rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .floor-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
+#floor-canvas {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 640 / 320;
+  background: radial-gradient(ellipse at center, #0f2318 0%, #08120c 100%);
+  border: 1px solid var(--felt-border);
+  border-radius: 10px;
+  display: block;
+}
+
+#floor-status {
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  min-height: 1.1em;
+  margin-top: 0.4rem;
+}
+
+.floor-feed {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--felt-border);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.floor-feed h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+
+#floor-feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.floor-feed-item {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink-dim);
+}
+
+.floor-feed-sit-down {
+  color: var(--ink);
+}
+
+.floor-feed-chat,
+.floor-feed-dialogue {
+  color: var(--ink);
+  font-style: italic;
+}
+
+.floor-feed-win {
+  color: #7fd48a;
+}
+
+.floor-feed-big-win {
+  color: var(--gold-bright);
+  font-weight: bold;
+}
+
+.floor-feed-jackpot {
+  color: var(--gold-bright);
+  font-weight: bold;
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.floor-feed-leave {
+  color: var(--ink-dim);
+  opacity: 0.75;
+}

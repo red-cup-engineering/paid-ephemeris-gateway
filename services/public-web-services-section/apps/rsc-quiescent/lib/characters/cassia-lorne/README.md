@@ -31,7 +31,7 @@ The gates police prophecy aimed at the reader and the world's contingencies, not
 The divination capital is published as wires at `{astrologia,cartomantia,arithmomantia,lectio,rete-agentium}.filum.
 561.group` (sites/filum.
 561.group, services/newscable).
-The wire is canonical: stage 1 consumes it via `--from-cable <url>` when available, computing locally as the fallback — the same topology code produces both, so the values witness each other.
+The wire is: stage 1 consumes it via `--from-cable <url>` when available, computing locally as the fallback — the same topology code produces both, so the values witness each other.
 
 ## What waits on what
 

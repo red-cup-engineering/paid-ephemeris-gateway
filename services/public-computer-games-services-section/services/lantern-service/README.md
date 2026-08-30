@@ -4,7 +4,7 @@ Digital garden + knowledge vault + spaced repetition, gamified. A directory of f
 markdown ("a wing") compiles into a walkable map: remembering a fact keeps its room lit, and
 forgetting fogs the frontier back — nothing is ever deleted, only temporarily unreachable.
 
-**VaultMaze** is the canonical player-facing name. The package, directory, module names, and
+**VaultMaze** is the player-facing name. The package, directory, module names, and
 `localStorage` key prefix (`lantern:<wing>`) retain the historical `lantern`/`lantern-service`
 identity so existing player saves are never orphaned by a display rename. L-Space consumes this
 as a passage engine rather than a competing vault ontology. See `DESIGN.md` for the full design

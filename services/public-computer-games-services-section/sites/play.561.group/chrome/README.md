@@ -1,6 +1,6 @@
 # shelf-chrome — the shared shelf frame
 
-Canonical source for the small shared UI frame every 561 shelf game wears: the-suite-and-
+source for the small shared UI frame every 561 shelf game wears: the-suite-and-
 the-studio.md §5 directive 1 ("Shelf chrome... the modern card back. Rides the cartridge
 contract; vendored per house doctrine, not live-imported.").
 

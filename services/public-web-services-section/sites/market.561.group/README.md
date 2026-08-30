@@ -22,7 +22,7 @@ or API, not from here — rather than left to race.
 `/market/`, adapted for this origin. That duplication is deliberate and temporary: the apex
 copy is what a reader following an existing link will hit, and this one is what the domain is
 for. Once this site is deployed and the hostname is cleanly owned, the apex path should become
-a redirect here rather than a second copy, so there is one canonical statement of what the
+a redirect here rather than a second copy, so there is one statement of what the
 Group sells and at what price.
 
 Every figure on the page is read from the endpoint's own live `402` challenge rather than

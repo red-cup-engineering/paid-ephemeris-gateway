@@ -16,7 +16,7 @@ The empty extension is a *result of settling*, not a primitive `∅`.
   Taken von Neumann, `n`'s members are `{0,…,n−1}`.
 - the value of `n` is the size of its `t`-extension, read back through the floor's Chu space (`asExtension` / `extensionOf`).
 
-Numbers are interned (one canonical object per value), so equality is object identity.
+Numbers are interned (one object per value), so equality is object identity.
 That interning is a cache over the settled content, not the content.
 
 ## ℤ — the charge's two-sided evidence, read as a difference

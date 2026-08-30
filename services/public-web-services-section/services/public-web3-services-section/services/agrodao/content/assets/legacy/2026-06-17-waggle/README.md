@@ -33,7 +33,7 @@ There *are* mature Node↔Hive libraries (`@hiveio/dhive`, `hive-tx`, `hive-js`)
 Only Node builtins are used: `node:crypto` for SHA-256 / RIPEMD-160 / HMAC, `node:https` for transport.
 Everything else — base58, the secp256k1 curve, the graphene serializer — is hand-rolled.
 
-- **Crypto.** secp256k1 in BigInt: RFC6979 deterministic-k, low-S + the graphene canonical-signature loop, recovery id → the 65-byte compact signature.
+- **Crypto.** secp256k1 in BigInt: RFC6979 deterministic-k, low-S + the graphene signature loop, recovery id → the 65-byte compact signature.
   WIF decode (double-SHA-256 checksum) and `STM…` public keys (RIPEMD-160 checksum).
 - **Serialization.** Graphene little-endian binary: the asset gotcha (symbols go on the wire as the legacy `STEEM`/`SBD`, never `HIVE`/`HBD`), the operation-variant id table (0–49), and the field orders for the operations we broadcast.
 - **Transport / reads.** JSON-RPC 2.0 with node failover, honoring the condenser (positional array) vs bridge (named object) parameter split.
@@ -62,7 +62,7 @@ await me.post({ title: "Hello Hive", body: "# hi\nfrom waggle", tags: ["hive", "
 lib/
   base58.mjs       Bitcoin-alphabet base58 encode/decode
   hash.mjs         sha256 / sha256d / ripemd160 (+ pure-JS fallback) / hmac-sha256
-  secp256k1.mjs    BigInt curve: getPublicKey / sign (canonical, recoverable) / verify / recover
+  secp256k1.mjs    BigInt curve: getPublicKey / sign (, recoverable) / verify / recover
   keys.mjs         PrivateKey (WIF) and PublicKey (STM…) — decode, derive, sign, encode
   serialize.mjs    graphene binary: assets, authorities, the op table, transaction serialization
   transaction.mjs  the chain_id-prefixed signing digest, signTransaction, transactionId
@@ -94,7 +94,7 @@ For contributing and key-safety, see [`CONTRIBUTING.md`](CONTRIBUTING.md), [`AGE
 
 The byte-level specifications the implementation was derived from (provenance, exact constants, flagged uncertainties) live under [`docs/dev/notes/`](docs/dev/notes/):
 
-- [01-crypto-signing-spec.md](docs/dev/notes/01-crypto-signing-spec.md) — WIF, keys, secp256k1, the canonical signature.
+- [01-crypto-signing-spec.md](docs/dev/notes/01-crypto-signing-spec.md) — WIF, keys, secp256k1, the signature.
 - [02-serialization-spec.md](docs/dev/notes/02-serialization-spec.md) — graphene binary, the op table, worked example.
 - [03-rpc-read-spec.md](docs/dev/notes/03-rpc-read-spec.md) — JSON-RPC, node list, the TaPoS derivation, read methods.
 

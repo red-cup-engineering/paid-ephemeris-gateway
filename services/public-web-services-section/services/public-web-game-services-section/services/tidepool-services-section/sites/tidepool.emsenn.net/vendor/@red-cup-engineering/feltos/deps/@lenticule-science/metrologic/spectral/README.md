@@ -22,7 +22,7 @@ location.isPisot(fib);                // → true (one root outside, all conjuga
 
 ### `location` — root-location via the Cayley map + an owned Routh/Sturm count - `mobius` (the Cayley map to the half-plane) - `rightHalfPlaneRoots` (the Routh array as the even/odd Sturm sequence; sign changes = Cauchy index, over ℚ) - `rootLocation` (expanding / contracting / neutral counts — exact in the non-degenerate case) - `isPisot` (one expanding root, none neutral)
 
-The direct unit-circle descent (Schur–Cohn/Jury) degenerates for a monic det-±1 characteristic polynomial (every canonical unimodular substitution), so root-location goes through the half-plane instead, which handles that case cleanly.
+The direct unit-circle descent (Schur–Cohn/Jury) degenerates for a monic det-±1 characteristic polynomial (every unimodular substitution), so root-location goes through the half-plane instead, which handles that case cleanly.
 Pisot / Salem / cyclotomic / Mahler are readings of where the roots sit; the exact split of the degenerate (on-circle) case is still to be derived.
 
 ## Testing

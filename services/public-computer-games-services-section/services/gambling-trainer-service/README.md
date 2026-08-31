@@ -59,7 +59,7 @@ variance. The run-summary panel says this explicitly rather than let the chart i
 - `src/types.mts` — shared vocabulary (`WagerOfferSpec`, `BankrollState`, `WagerIntent`, …).
 - `src/seed.mts` — FNV-1a → mulberry32 deterministic RNG, no clock, no `Math.random()`.
 - `src/kelly.mts`, `src/odds.mts` — vendored, typed ports of
-  `science-services-section/agent-services-section/play-services-section/game-science-services-section/gambling-services-section`'s
+  `science-services-section/philosophy-services-section/relationality-services-section/agency-services-section/services/being-services-section/services/doing-services-section/services/playing-services-section/services/gaming-services-section/services/gambling-services-section`'s
   `kelly.mjs`/`odds.mjs` (published under a different npm scope, and those files aren't exported
   subpaths of the source package — see `src/kelly.mts`'s header). Vendor-parity tests run the
   same fixture cases as the source.

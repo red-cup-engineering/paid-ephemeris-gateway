@@ -1,6 +1,6 @@
 /**
  * `odds` — VENDORED, typed near-verbatim port of
- * `science-services-section/agent-services-section/play-services-section/game-science-services-section/gambling-services-section/src/odds.mjs`.
+ * `science-services-section/philosophy-services-section/relationality-services-section/agency-services-section/being-services-section/doing-services-section/playing-services-section/gaming-services-section/gambling-services-section/src/odds.mjs`.
  * See `kelly.mts`'s header for the full vendoring rationale (wrong npm scope, and the source
  * package's own `exports` map doesn't expose this subpath) — identical reasoning applies here.
  *

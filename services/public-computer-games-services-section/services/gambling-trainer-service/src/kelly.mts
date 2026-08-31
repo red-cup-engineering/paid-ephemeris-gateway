@@ -1,6 +1,6 @@
 /**
  * `kelly` — VENDORED, typed near-verbatim port of
- * `science-services-section/agent-services-section/play-services-section/game-science-services-section/gambling-services-section/src/kelly.mjs`
+ * `science-services-section/philosophy-services-section/relationality-services-section/agency-services-section/being-services-section/doing-services-section/playing-services-section/gaming-services-section/gambling-services-section/src/kelly.mjs`
  * (house library, published to Verdaccio as `@lenticule-science/gambling-services-section`).
  *
  * Why a vendored copy and not a live `npm install`, per the house's vendor-not-import doctrine

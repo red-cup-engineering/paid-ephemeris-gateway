@@ -1,8 +1,8 @@
 # play.561.group
 
-A static, zero-runtime-dependency storefront for the 561 Group games catalog. It reads
-`catalog.json` (one cartridge-manifest-shaped entry per game, per the Cartridge and
-Energy Bank spec) and renders game cards -- no build step, no framework, no CDN. Browser
+A progressively enhanced shelf for the 561 Group games catalog. It reads `catalog.json`
+(one cartridge-manifest-shaped entry per game, per the Cartridge and Energy Bank spec)
+and renders game cards with a static server-rendered baseline -- no framework, no CDN. Browser
 clients and terminal/API clients are both first-class; a game's own JSON/SSE API,
 declared in its manifest's `entryPoints.headless`, is as legitimate an access path as its
 browser page.
@@ -35,7 +35,7 @@ test/            node --test behavioral tests
 ## Install and run
 
 ```
-npm install                 # pulls @561-group/cartridge from Verdaccio (see .npmrc)
+npm install                 # pulls @red-cup-engineering/cartridge from Verdaccio (see .npmrc)
 npm run serve                # http://127.0.0.1:8561/
 node serve.mjs 3000          # or pick a port positionally
 PORT=3000 node serve.mjs     # or via env

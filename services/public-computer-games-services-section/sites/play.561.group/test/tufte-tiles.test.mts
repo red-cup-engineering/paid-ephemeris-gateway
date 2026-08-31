@@ -19,7 +19,14 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeTufteModel, diffTufteProjection } from '@red-cup-engineering/web-tufte-gui-services-section';
-import { catalogEntryToTile, catalogModel } from '../js/catalog.mjs';
+import {
+  catalogEntryToTile,
+  catalogModel,
+  filterEntries,
+  filtersFromSearchParams,
+  filtersToSearchParams,
+  shelfValues,
+} from '../js/catalog.mjs';
 import { computeTodayModel } from '../js/today.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +74,47 @@ test('catalogModel -> normalizeTufteModel produces one uniquely-identified tile 
   const projection = normalizeTufteModel(catalogModel(entries));
   assert.equal(projection.tiles.length, entries.length);
   assert.deepEqual(projection.tiles.map((tile) => tile.id), entries.map((entry) => entry.id));
+});
+
+test('catalog shelf filtering uses only the catalog shelf field and combines with status/search', async () => {
+  const entries = await loadCatalogEntries();
+  const shelf = shelfValues(entries)[0];
+  assert.ok(shelf, 'the real catalog has at least one shelf');
+  const filtered = filterEntries(entries, { shelf, status: 'playable' });
+  assert.ok(filtered.length > 0, 'the chosen real shelf has a playable game');
+  assert.ok(filtered.every((entry) => entry.shelf === shelf && entry.status === 'playable'));
+});
+
+test('catalog filter query state is shareable, normalized against real shelves, and omits inactive filters', async () => {
+  const entries = await loadCatalogEntries();
+  const shelf = shelfValues(entries)[0];
+  const restored = filtersFromSearchParams(
+    new URLSearchParams(`q=card%20table&status=playable&shelf=${encodeURIComponent(shelf)}`),
+    entries,
+  );
+  assert.deepEqual(restored, { term: 'card table', status: 'playable', shelf });
+  assert.equal(
+    filtersToSearchParams(restored).toString(),
+    `q=card+table&status=playable&${new URLSearchParams({ shelf }).toString()}`,
+  );
+  assert.deepEqual(
+    filtersFromSearchParams(new URLSearchParams('q=%20&status=unknown&shelf=not-a-shelf'), entries),
+    { term: '', status: 'all', shelf: 'all' },
+  );
+  assert.equal(filtersToSearchParams({ term: '', status: 'all', shelf: 'all' }).toString(), '');
+});
+
+test('built index.html exposes one accessible shelf option for every catalog shelf', async () => {
+  const [entries, html] = await Promise.all([
+    loadCatalogEntries(),
+    readFile(path.join(ROOT, 'index.html'), 'utf8'),
+  ]);
+  assert.match(html, /<label class="shelf-filter-label" for="shelf-filter">Shelf/);
+  assert.match(html, /<select id="shelf-filter" name="shelf">/);
+  assert.match(html, /<option value="all">All shelves<\/option>/);
+  for (const shelf of shelfValues(entries)) {
+    assert.ok(html.includes(`<option value="${shelf}">${shelf}</option>`), `missing ${shelf} shelf option`);
+  }
 });
 
 test('patch path: mutating one catalog entry changes only that entry\'s tile in the diff -- every other tile produces zero patch', async () => {

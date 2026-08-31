@@ -1,8 +1,8 @@
 {
-  "name": "@561-group/play-561-group",
+  "name": "@causeway-services/play-561-group",
   "version": "0.1.0",
   "type": "module",
-  "description": "play.561.group -- a static, zero-dependency storefront that reads @red-cup-engineering/cartridge manifests and renders a game catalog.",
+  "description": "play.561.group -- Causeway Services' progressively enhanced game shelf, generated from @red-cup-engineering/cartridge manifests.",
   "scripts": {
     "generate-catalog": "node scripts/build-catalog.mjs",
     "build": "npm run generate-catalog && node build.mjs",

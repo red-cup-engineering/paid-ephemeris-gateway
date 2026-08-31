@@ -20,6 +20,7 @@
 //   - initTodayPage() is the browser-only bootstrap.
 
 import { GLYPHS, FALLBACK_GLYPH, EXTERNAL_LINK_ICON } from './glyphs.mjs';
+import { LIVE_SUBDOMAINS } from './live-subdomains.mjs';
 
 export function esc(str) {
   return String(str).replace(/[&<>"']/g, (c) => ({
@@ -92,10 +93,6 @@ export const gamblingTrainerDailySeed = (dateStr, configId) => `gambling-trainer
 // or RUINFOLD_PORT for ruinfold, which also defaults to 8787) -- house convention is one
 // game running locally at a time, so the same base URL works across all four.
 const DEV_HOST = 'http://localhost:8787';
-
-// Subdomains actually routed to a live Cloud Run service by the Cloudflare worker -- see
-// js/catalog.mjs's identical constant (and its comment) for the source of truth this mirrors.
-export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful', 'casino']);
 
 // Hand-authored per-strip copy -- the ask, subdomain, and dev path are each game's own
 // storefront-facing description, not derived from catalog.json's more generic description

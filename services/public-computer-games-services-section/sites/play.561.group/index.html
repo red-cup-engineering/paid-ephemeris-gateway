@@ -51,12 +51,19 @@
         <button type="button" data-status="playable" aria-pressed="false">Playable</button>
         <button type="button" data-status="in-development" aria-pressed="false">In development</button>
       </div>
+      <label class="shelf-filter-label" for="shelf-filter">Shelf
+        <select id="shelf-filter" name="shelf">
+          <option value="all">All shelves</option>
+          <option value="Card Table">Card Table</option><option value="Puzzle Den">Puzzle Den</option><option value="Study">Study</option><option value="Deep">Deep</option><option value="unshelved">unshelved</option>
+        </select>
+      </label>
     </div>
 
     <p class="result-count" id="result-count" aria-live="polite"></p>
 
-    <!-- Rendered by build.mjs from catalog.json via TUFTE's renderTufteFragment; refined
-         client-side (search/filter only, never a data refetch on load) by js/catalog.mjs. -->
+    <!-- Rendered by build.mjs from catalog.json via TUFTE's renderTufteFragment; the
+         static catalog remains useful without JavaScript, while js/catalog.mjs adds
+         shareable search/status/shelf filtering when it is available. -->
     <div class="catalog-grid-wrap" id="catalog-grid" role="region" aria-label="Game catalog"><div class="tufte-grid"><section class="tufte-tile" id="solitaire" data-role="standard" data-lifecycle="present" data-confidence="high" data-side="center" style="--tile-span:4" aria-labelledby="solitaire-title"><header><p class="tufte-eyebrow">Card Table</p><h2 id="solitaire-title">Solitaire</h2></header><div class="tufte-tile-body">
     <div class="card-head">
       <span class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">

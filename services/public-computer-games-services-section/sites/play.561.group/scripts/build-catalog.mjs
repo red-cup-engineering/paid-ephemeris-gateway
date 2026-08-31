@@ -55,7 +55,7 @@ const SEARCH_ROOTS = [
   ),
   path.join(
     REPO_ROOT,
-    'lib/emsenn/services/561-group/services/science-services-section/services/philosophy-services-section/services/relationality-services-section/services/agent-science-services-section/services/agent-services-section/services/play-services-section/services/game-science-services-section/services/board-games-services-section/services/weiqi-services-section',
+    'lib/emsenn/services/561-group/services/science-services-section/services/philosophy-services-section/services/relationality-services-section/services/agency-services-section/services/being-services-section/services/doing-services-section/services/playing-services-section/services/gaming-services-section/services/board-games-services-section/services/weiqi-services-section',
   ),
   path.join(
     REPO_ROOT,

@@ -22,6 +22,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LIVE_SUBDOMAINS } from '../js/live-subdomains.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(HERE, '..');
@@ -68,16 +69,6 @@ async function liveCatalogSubdomains(): Promise<Set<string>> {
   return new Set([...catalog].filter((s) => routedBare.has(s) && !ROUTED_BUT_NOT_LINK_SAFE.has(s)));
 }
 
-/** Extracts a hand-maintained `const LIVE_SUBDOMAINS = new Set([...])` from a storefront JS
- *  module's source text. */
-function extractLiveSubdomains(src: string): Set<string> {
-  const match = src.match(/LIVE_SUBDOMAINS\s*=\s*new Set\(\[([^\]]*)\]\)/);
-  assert.ok(match, 'expected a LIVE_SUBDOMAINS = new Set([...]) constant');
-  const entries = [...(match[1] as string).matchAll(/'([a-z0-9-]+)'/g)].map((m) => m[1] as string);
-  assert.ok(entries.length > 0, 'expected at least one live subdomain');
-  return new Set(entries);
-}
-
 // Routed does not always mean safe to link: a hostname can be routed by the worker before its
 // backing service is actually safe to send a player to (e.g. persistence still on ephemeral
 // local disk, which scale-to-zero would wipe). This set is the mechanism for that case: add a
@@ -87,20 +78,9 @@ function extractLiveSubdomains(src: string): Set<string> {
 // resolves and is playable -- see LIVE_SUBDOMAINS in both catalog.mjs and today.mjs below.)
 const ROUTED_BUT_NOT_LINK_SAFE = new Set<string>([]);
 
-test("catalog.mjs's LIVE_SUBDOMAINS matches exactly this catalog's own subdomains that the Cloudflare worker actually routes, minus any named routed-but-unsafe carve-out", async () => {
+test("Play's LIVE_SUBDOMAINS matches exactly this catalog's own subdomains that the Cloudflare worker actually routes, minus any named routed-but-unsafe carve-out", async () => {
   const expected = await liveCatalogSubdomains();
-
-  const catalogSrc = await readFile(path.join(ROOT, 'js', 'catalog.mjs'), 'utf8');
-  const declared = extractLiveSubdomains(catalogSrc);
-  assert.deepEqual(declared, expected, 'js/catalog.mjs\'s LIVE_SUBDOMAINS has drifted from the router\'s real routes');
-});
-
-test("today.mjs's LIVE_SUBDOMAINS matches exactly this catalog's own subdomains that the Cloudflare worker actually routes, minus any named routed-but-unsafe carve-out", async () => {
-  const expected = await liveCatalogSubdomains();
-
-  const todaySrc = await readFile(path.join(ROOT, 'js', 'today.mjs'), 'utf8');
-  const declared = extractLiveSubdomains(todaySrc);
-  assert.deepEqual(declared, expected, 'js/today.mjs\'s LIVE_SUBDOMAINS has drifted from the router\'s real routes');
+  assert.deepEqual(LIVE_SUBDOMAINS, expected, 'js/live-subdomains.mjs has drifted from the router\'s real routes');
 });
 
 test('every ROUTED_BUT_NOT_LINK_SAFE hostname is genuinely routed right now (the carve-out did not go stale)', async () => {

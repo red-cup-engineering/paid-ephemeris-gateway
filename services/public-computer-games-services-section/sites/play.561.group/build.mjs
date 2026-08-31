@@ -24,7 +24,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderTufteFragment } from '@red-cup-engineering/web-tufte-gui-services-section';
-import { catalogModel } from './js/catalog.mjs';
+import { catalogModel, shelfValues } from './js/catalog.mjs';
 import { computeTodayModel } from './js/today.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -51,7 +51,16 @@ const IMPORT_MAP = `<script type="importmap">
   }
   </script>`;
 
-function indexHtml(gridFragment) {
+function escHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[char]));
+}
+
+function indexHtml(gridFragment, entries = []) {
+  const shelfOptions = shelfValues(entries)
+    .map((shelf) => `<option value="${escHtml(shelf)}">${escHtml(shelf)}</option>`)
+    .join('');
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -94,12 +103,19 @@ function indexHtml(gridFragment) {
         <button type="button" data-status="playable" aria-pressed="false">Playable</button>
         <button type="button" data-status="in-development" aria-pressed="false">In development</button>
       </div>
+      <label class="shelf-filter-label" for="shelf-filter">Shelf
+        <select id="shelf-filter" name="shelf">
+          <option value="all">All shelves</option>
+          ${shelfOptions}
+        </select>
+      </label>
     </div>
 
     <p class="result-count" id="result-count" aria-live="polite"></p>
 
-    <!-- Rendered by build.mjs from catalog.json via TUFTE's renderTufteFragment; refined
-         client-side (search/filter only, never a data refetch on load) by js/catalog.mjs. -->
+    <!-- Rendered by build.mjs from catalog.json via TUFTE's renderTufteFragment; the
+         static catalog remains useful without JavaScript, while js/catalog.mjs adds
+         shareable search/status/shelf filtering when it is available. -->
     <div class="catalog-grid-wrap" id="catalog-grid" role="region" aria-label="Game catalog">${gridFragment}</div>
   </main>
 
@@ -198,7 +214,7 @@ async function build() {
   const entries = Array.isArray(catalog.games) ? catalog.games : [];
 
   const catalogFragment = renderTufteFragment(catalogModel(entries));
-  await writeFile(path.join(ROOT, 'index.html'), indexHtml(catalogFragment));
+  await writeFile(path.join(ROOT, 'index.html'), indexHtml(catalogFragment, entries));
 
   const todayModel = await computeTodayModel(new Date());
   const todayFragment = renderTufteFragment(todayModel);

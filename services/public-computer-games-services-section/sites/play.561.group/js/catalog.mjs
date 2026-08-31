@@ -18,6 +18,7 @@
 //     accidentally trigger a live fetch).
 
 import { GLYPHS, FALLBACK_GLYPH, EXTERNAL_LINK_ICON, TERMINAL_ICON } from './glyphs.mjs';
+import { LIVE_SUBDOMAINS } from './live-subdomains.mjs';
 
 export function esc(str) {
   return String(str).replace(/[&<>"']/g, (c) => ({
@@ -28,17 +29,6 @@ export function esc(str) {
 export function statusLabel(status) {
   return status === 'playable' ? 'Playable' : 'In development';
 }
-
-// Subdomains actually routed to a live Cloud Run service by the Cloudflare worker -- see
-// sites/cloudflare-router/src/index.mjs's `ORIGIN_BY_HOST` for what resolves at
-// *.561.group right now. A catalog entry can be real, tested, and "playable" with a
-// genuine browser entry point while still not being one of these -- a game not yet
-// deployed and routed would otherwise get a "Play at X.561.group" link to a hostname
-// that doesn't resolve.
-// Kept in sync by hand (house doctrine: vendor/mirror across service trees, not a live
-// cross-service import) -- update this alongside the router's own route list.
-// (test/honest-links.test.mts checks this set against the router's real routes.)
-export const LIVE_SUBDOMAINS = new Set(['crucible', 'solitaire', 'gambling-trainer', 'ruinfold', 'durante', 'farstone', 'aletheon', 'weiqi', 'equivo', 'you-are-conscious', 'stoke', 'parlor', 'tidepool', 'fearful', 'casino']);
 
 export function playUrl(entry) {
   // Respect the manifest's own declared entry point (e.g. crucible's is "/web/index.html", not
@@ -131,6 +121,13 @@ export function catalogModel(entries) {
   return { tiles: entries.map(catalogEntryToTile) };
 }
 
+export const STATUS_FILTERS = new Set(['all', 'playable', 'in-development']);
+
+/** The catalog's own shelf names, kept in their first appearance order. */
+export function shelfValues(entries) {
+  return [...new Set(entries.map((entry) => entry.shelf).filter(Boolean))];
+}
+
 export function matchesSearch(entry, term) {
   if (!term) return true;
   const haystack = [
@@ -142,12 +139,38 @@ export function matchesSearch(entry, term) {
   return haystack.includes(term.toLowerCase());
 }
 
-/** Pure: apply the search term + status filter to a catalog.json games array. */
-export function filterEntries(entries, { term = '', status = 'all' } = {}) {
+/** Pure: apply the search term + status + shelf filters to catalog entries. */
+export function filterEntries(entries, { term = '', status = 'all', shelf = 'all' } = {}) {
   return entries.filter((entry) => {
     const statusOk = status === 'all' || entry.status === status;
-    return statusOk && matchesSearch(entry, term);
+    const shelfOk = shelf === 'all' || entry.shelf === shelf;
+    return statusOk && shelfOk && matchesSearch(entry, term);
   });
+}
+
+/** Normalizes URL/UI filter values against the catalog currently in hand. */
+export function normalizeFilters({ term = '', status = 'all', shelf = 'all' } = {}, entries = []) {
+  const normalizedStatus = STATUS_FILTERS.has(status) ? status : 'all';
+  const normalizedShelf = shelf === 'all' || shelfValues(entries).includes(shelf) ? shelf : 'all';
+  return { term: String(term).trim(), status: normalizedStatus, shelf: normalizedShelf };
+}
+
+/** Parses the shareable query form: `?q=…&status=…&shelf=…`. */
+export function filtersFromSearchParams(params, entries) {
+  return normalizeFilters({
+    term: params.get('q') || '',
+    status: params.get('status') || 'all',
+    shelf: params.get('shelf') || 'all',
+  }, entries);
+}
+
+/** Serializes only active filters, keeping the unfiltered shelf URL clean. */
+export function filtersToSearchParams(filters) {
+  const params = new URLSearchParams();
+  if (filters.term) params.set('q', filters.term);
+  if (filters.status && filters.status !== 'all') params.set('status', filters.status);
+  if (filters.shelf && filters.shelf !== 'all') params.set('shelf', filters.shelf);
+  return params;
 }
 
 // ---------------------------------------------------------------------------------------
@@ -158,11 +181,9 @@ function renderEmptyState(gridWrapper) {
   gridWrapper.innerHTML = '<div class="tufte-grid"><p class="empty-state">No games match your filters.</p></div>';
 }
 
-/** Wires up index.html: fetches catalog.json once (needed so search/filter has entry data
- *  to work with -- the grid itself is already correct straight out of build.mjs's SSR, so
- *  this does NOT re-render the unfiltered view on load, only on an actual filter change),
- *  then renders every filtered view through the same catalogModel()/renderTufteFragment()
- *  path SSR used, so CSR and SSR never diverge into two different renderers. */
+/** Wires up index.html's progressively enhanced search/status/shelf controls. The static
+ *  SSR grid remains readable without JavaScript; with JavaScript, the current filter is
+ *  represented in the URL so it can be shared and restored by browser history. */
 export async function initCatalogPage() {
   const gridWrapper = document.getElementById('catalog-grid');
   if (!gridWrapper) return; // not on index.html -- safe no-op import elsewhere
@@ -171,7 +192,10 @@ export async function initCatalogPage() {
 
   const COUNT = document.getElementById('result-count');
   const SEARCH = document.getElementById('search');
+  const SHELF = document.getElementById('shelf-filter');
   const STATUS_BUTTONS = Array.from(document.querySelectorAll('.status-filter button'));
+
+  if (!COUNT || !SEARCH || !SHELF || !STATUS_BUTTONS.length) return;
 
   function render(entries) {
     if (entries.length) {
@@ -185,11 +209,32 @@ export async function initCatalogPage() {
   let allEntries = [];
   let hydrated = false;
 
-  function applyFilters() {
-    const term = SEARCH.value.trim();
+  function selectedFilters() {
     const activeStatus = STATUS_BUTTONS.find((b) => b.getAttribute('aria-pressed') === 'true');
-    const status = activeStatus ? activeStatus.dataset.status : 'all';
-    render(filterEntries(allEntries, { term, status }));
+    return normalizeFilters({
+      term: SEARCH.value,
+      status: activeStatus?.dataset.status || 'all',
+      shelf: SHELF.value,
+    }, allEntries);
+  }
+
+  function applyFilters() {
+    render(filterEntries(allEntries, selectedFilters()));
+  }
+
+  function restoreControlsFromUrl() {
+    const filters = filtersFromSearchParams(new URLSearchParams(window.location.search), allEntries);
+    SEARCH.value = filters.term;
+    SHELF.value = filters.shelf;
+    STATUS_BUTTONS.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.status === filters.status));
+    });
+  }
+
+  function updateUrl(mode) {
+    const query = filtersToSearchParams(selectedFilters()).toString();
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
+    window.history[mode](null, '', nextUrl);
   }
 
   try {
@@ -207,17 +252,33 @@ export async function initCatalogPage() {
       SEARCH.placeholder = `Search unavailable (${err.message})`;
     }
     STATUS_BUTTONS.forEach((btn) => { btn.disabled = true; });
+    SHELF.disabled = true;
     return;
   }
 
   if (!hydrated) return;
 
-  SEARCH.addEventListener('input', applyFilters);
+  restoreControlsFromUrl();
+  applyFilters();
+
+  SEARCH.addEventListener('input', () => {
+    applyFilters();
+    updateUrl('replaceState');
+  });
   STATUS_BUTTONS.forEach((btn) => {
     btn.addEventListener('click', () => {
       STATUS_BUTTONS.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
       applyFilters();
+      updateUrl('pushState');
     });
+  });
+  SHELF.addEventListener('change', () => {
+    applyFilters();
+    updateUrl('pushState');
+  });
+  window.addEventListener('popstate', () => {
+    restoreControlsFromUrl();
+    applyFilters();
   });
 }
 

@@ -183,6 +183,24 @@ main {
   font-size: 0.95rem;
 }
 
+.shelf-filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.shelf-filter-label select {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  color: var(--fg);
+  padding: 0.4rem 0.55rem;
+  font: inherit;
+}
+
 .status-filter {
   display: flex;
   gap: 0.4rem;

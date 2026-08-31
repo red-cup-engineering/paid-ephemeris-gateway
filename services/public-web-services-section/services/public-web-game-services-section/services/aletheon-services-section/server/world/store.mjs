@@ -9,7 +9,7 @@
 
 import { assertRow } from "@561-group/computer/typed-resource-catalog/eavt";
 import eavtAppend from "@561-group/computer/posix-holography/eavt-append";
-import readText from "@561-group/computer/posix-holography/read-text";
+import { readFlatfileText as readText } from "@red-cup-engineering/flatfile";
 import { vital, reading, BOTTOM } from "./value.mjs";
 import { terrainHeight, clampToWorld } from "./spacetime.mjs";
 import { createField } from "./field.mjs"; // [field]

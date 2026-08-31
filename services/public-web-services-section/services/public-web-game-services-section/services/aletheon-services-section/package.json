@@ -52,6 +52,7 @@
   "dependencies": {
     "@561-group/computer": "^0.0.5",
     "@lenticule-science/metrologic": "0.1.0",
+    "@red-cup-engineering/flatfile": "0.1.0",
     "@red-cup-engineering/qwzspace": "0.4.1"
   }
 }

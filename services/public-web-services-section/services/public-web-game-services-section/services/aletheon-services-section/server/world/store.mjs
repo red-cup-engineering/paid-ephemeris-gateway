@@ -7,7 +7,15 @@
 // The journal optionally streams to <root>.jsonl so a crashed world replays from disk; for tests
 // and ephemeral sessions it stays in memory. Either way `append` is the only writer.
 
-import { assertRow } from "@561-group/computer/typed-resource-catalog/eavt";
+import { assertRow } from "@red-cup-engineering/eavt";
+// eavtAppend stays on @561-group/computer/posix-holography/eavt-append: its on-disk line format
+// (jcs(row) plain JSON text) is NOT compatible with @red-cup-engineering/eavt's appendEavt (which
+// writes base64(canonical-CBOR(row)) lines) — this file's own rowsFromLog() below hand-parses each
+// line with JSON.parse, and a live production trace (WORLD_LOG) already holds jcs-format lines.
+// Migrating the writer alone would silently corrupt/orphan every row appended after the switch
+// (rowsFromLog's catch-and-skip would drop them from replay with no error). Queued — see migration
+// report; a real migration here needs a one-time on-disk trace reformat plus rowsFromLog rewritten
+// against eavt's decodeRow/readEavtFile, not a bare import swap.
 import eavtAppend from "@561-group/computer/posix-holography/eavt-append";
 import { readFlatfileText as readText } from "@red-cup-engineering/flatfile";
 import { vital, reading, BOTTOM } from "./value.mjs";

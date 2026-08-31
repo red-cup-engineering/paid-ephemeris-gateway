@@ -24,6 +24,11 @@
 // per staker so ABSTAIN can retract and the SANCTUARY dividend can pay). One mark per stake face.
 
 import { KIND, MARK } from "../../shared/constants.mjs";
+// fold/section stay on @561-group/computer/posix-holography/eavt-substrate: eavt 0.3.0's fold is
+// documented (its own source) as dropping the upstream converse/negative-charge apparatus — "every
+// charge produced here is a positive affirmation" — and this file's CONVERSE map (line below) relies
+// on exactly that apparatus to charge CLAIM_DENY onto CLAIM_PRED's negative face. Verified by testing:
+// swapping this import silently broke 6 claims.test.mjs cases (deny/contest never settled to ⊤).
 import { fold, section } from "@561-group/computer/posix-holography/eavt-substrate";
 import { spawn, settleEntity, append, get } from "./store.mjs";
 import { corrupt } from "./combat.mjs";

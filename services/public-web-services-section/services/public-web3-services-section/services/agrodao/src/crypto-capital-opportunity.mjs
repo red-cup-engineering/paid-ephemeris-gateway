@@ -26,6 +26,15 @@ const ID = /^[a-z][a-z0-9-]{2,79}$/u;
 const CAIP10 = /^eip155:[1-9][0-9]*:0x[0-9a-f]{40}$/u;
 const EVIDENCE_ID = /^(?:ni:\/\/\/sha-256;[A-Za-z0-9_-]{43}|urn:[A-Za-z0-9][A-Za-z0-9:._-]+)$/u;
 const FORBIDDEN_KEY = /^(?:calldata|credential|credentialalias|credentialenvalias|data|envalias|mnemonic|privatekey|rawtransaction|rlp|secret|seed|seedphrase|signature|signedtransaction|transactionrequest)$/iu;
+const MAX_INPUT_DEPTH = 12;
+const MAX_INPUT_NODES = 50_000;
+const MAX_CONTAINER_ENTRIES = 512;
+const MAX_INPUT_STRING_LENGTH = 4_096;
+const MAX_TEXT_LENGTH = 2_048;
+const MAX_QUANTITY_DIGITS = 78;
+const MAX_POSITIONS = 128;
+const MAX_PROPOSALS = 256;
+const MAX_LIST_ENTRIES = 64;
 
 function object(name, value) {
   if (value == null || typeof value !== "object" || Array.isArray(value)) {
@@ -43,8 +52,8 @@ function exactKeys(name, value, keys) {
   }
 }
 
-function text(name, value, pattern = /^.+$/u) {
-  if (typeof value !== "string" || !pattern.test(value)) {
+function text(name, value, pattern = /^.+$/u, maximumLength = MAX_TEXT_LENGTH) {
+  if (typeof value !== "string" || value.length > maximumLength || !pattern.test(value)) {
     throw new TypeError(`${name} is not canonical text`);
   }
   return value;
@@ -56,7 +65,7 @@ function flag(name, value) {
 }
 
 function quantity(name, value) {
-  return BigInt(text(name, value, UINT));
+  return BigInt(text(name, value, UINT, MAX_QUANTITY_DIGITS));
 }
 
 function positive(name, value) {
@@ -86,41 +95,65 @@ function maximum(values) {
   return values.reduce((result, value) => value > result ? value : result);
 }
 
-function sortedUniqueText(name, value, pattern = /^.+$/u) {
-  if (!Array.isArray(value) || value.length === 0) {
-    throw new TypeError(`${name} must be a non-empty array`);
+function boundedArray(name, value, maximumLength) {
+  if (!Array.isArray(value) || value.length === 0 || value.length > maximumLength) {
+    throw new TypeError(`${name} must be a non-empty array with at most ${maximumLength} entries`);
   }
+  return value;
+}
+
+function sortedUniqueText(name, value, pattern = /^.+$/u) {
+  boundedArray(name, value, MAX_LIST_ENTRIES);
   const result = value.map((entry, index) => text(`${name}[${index}]`, entry, pattern));
   if (new Set(result).size !== result.length) throw new TypeError(`${name} must be unique`);
   return result.sort((left, right) => left.localeCompare(right));
 }
 
 function orderedUniqueText(name, value, pattern = /^.+$/u) {
-  if (!Array.isArray(value) || value.length === 0) {
-    throw new TypeError(`${name} must be a non-empty array`);
-  }
+  boundedArray(name, value, MAX_LIST_ENTRIES);
   const result = value.map((entry, index) => text(`${name}[${index}]`, entry, pattern));
   if (new Set(result).size !== result.length) throw new TypeError(`${name} must be unique`);
   return result;
 }
 
-function scan(value, path = "input", seen = new WeakSet()) {
+function scan(
+  value,
+  path = "input",
+  state = { seen: new WeakSet(), nodes: 0 },
+  depth = 0,
+) {
+  state.nodes += 1;
+  if (state.nodes > MAX_INPUT_NODES) throw new TypeError("input is too large");
   if (typeof value === "number" || typeof value === "bigint") {
     throw new TypeError(`${path} must encode every integer as decimal text`);
   }
+  if (typeof value === "string" && value.length > MAX_INPUT_STRING_LENGTH) {
+    throw new TypeError(`${path} is too long`);
+  }
   if (value == null || typeof value !== "object") return;
-  if (seen.has(value)) throw new TypeError(`${path} contains a cycle`);
-  seen.add(value);
+  if (depth > MAX_INPUT_DEPTH) throw new TypeError(`${path} is nested too deeply`);
+  if (state.seen.has(value)) throw new TypeError(`${path} contains a cycle or repeated object reference`);
+  state.seen.add(value);
   if (Array.isArray(value)) {
-    value.forEach((entry, index) => scan(entry, `${path}[${index}]`, seen));
+    if (value.length > MAX_CONTAINER_ENTRIES) throw new TypeError(`${path} has too many entries`);
+    value.forEach((entry, index) => scan(entry, `${path}[${index}]`, state, depth + 1));
     return;
   }
-  for (const [key, entry] of Object.entries(value)) {
+  const entries = Object.entries(value);
+  if (entries.length > MAX_CONTAINER_ENTRIES) throw new TypeError(`${path} has too many entries`);
+  for (const [key, entry] of entries) {
+    if (key.length > MAX_INPUT_STRING_LENGTH) throw new TypeError(`${path} contains an oversized key`);
     if (FORBIDDEN_KEY.test(key.replace(/[^a-z]/giu, ""))) {
       throw new TypeError(`${path}.${key} is credential, secret, or transaction material and is refused`);
     }
-    scan(entry, `${path}.${key}`, seen);
+    scan(entry, `${path}.${key}`, state, depth + 1);
   }
+}
+
+function deepFreeze(value) {
+  if (value == null || typeof value !== "object" || Object.isFrozen(value)) return value;
+  Object.values(value).forEach(deepFreeze);
+  return Object.freeze(value);
 }
 
 function normalizeEvidence(name, raw) {
@@ -308,18 +341,14 @@ export function evaluateCryptoCapitalOpportunities(raw) {
   const evaluatedAt = instant("evaluatedAt", raw.evaluatedAt);
   const horizonDays = positive("horizonDays", raw.horizonDays);
   const mandate = normalizeMandate(raw.mandate);
-  if (!Array.isArray(raw.positions) || raw.positions.length === 0) {
-    throw new TypeError("positions must be a non-empty array");
-  }
+  boundedArray("positions", raw.positions, MAX_POSITIONS);
   const positions = new Map();
   raw.positions.forEach((entry, index) => {
     const position = normalizePosition(entry, index);
     if (positions.has(position.positionId)) throw new TypeError("position IDs must be unique");
     positions.set(position.positionId, position);
   });
-  if (!Array.isArray(raw.proposals) || raw.proposals.length === 0) {
-    throw new TypeError("proposals must be a non-empty array");
-  }
+  boundedArray("proposals", raw.proposals, MAX_PROPOSALS);
   const proposals = raw.proposals.map((entry, index) => normalizeProposal(entry, index, positions));
   if (new Set(proposals.map(({ proposalId }) => proposalId)).size !== proposals.length) {
     throw new TypeError("proposal IDs must be unique");
@@ -480,7 +509,7 @@ export function evaluateCryptoCapitalOpportunities(raw) {
       normalizedInput: serializable(normalizedInput),
     },
   };
-  return Object.freeze({
+  return deepFreeze({
     id: semanticIdentity("agrodao.crypto-capital-opportunity", body),
     ...body,
   });

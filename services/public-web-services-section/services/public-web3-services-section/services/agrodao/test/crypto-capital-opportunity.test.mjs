@@ -295,3 +295,49 @@ test("is deterministic across caller ordering while preserving ordered exit step
     ["withdraw-position", "unwrap-to-base"],
   );
 });
+
+test("bounds caller-controlled resource use before evaluation", () => {
+  const oversizedQuantity = fixture();
+  oversizedQuantity.proposals[0].grossBaseAssetGainUnits = "1".repeat(79);
+  assert.throws(
+    () => evaluateCryptoCapitalOpportunities(oversizedQuantity),
+    /grossBaseAssetGainUnits is not canonical text/u,
+  );
+
+  const oversizedRoute = fixture();
+  oversizedRoute.proposals[0].exit.route = Array.from(
+    { length: 65 },
+    (_, index) => `exit-step-${index}`,
+  );
+  assert.throws(
+    () => evaluateCryptoCapitalOpportunities(oversizedRoute),
+    /exit\.route must be a non-empty array with at most 64 entries/u,
+  );
+
+  const deeplyNested = fixture();
+  let cursor = deeplyNested;
+  for (let depth = 0; depth < 13; depth += 1) {
+    cursor.unexpected = {};
+    cursor = cursor.unexpected;
+  }
+  assert.throws(
+    () => evaluateCryptoCapitalOpportunities(deeplyNested),
+    /nested too deeply/u,
+  );
+});
+
+test("deep-freezes the identified result and replay input", () => {
+  const result = evaluateCryptoCapitalOpportunities(fixture());
+  assert.equal(Object.isFrozen(result), true);
+  assert.equal(Object.isFrozen(result.proposals), true);
+  assert.equal(Object.isFrozen(result.proposals[0].economics), true);
+  assert.equal(Object.isFrozen(result.proposals[0].exit.route), true);
+  assert.equal(Object.isFrozen(result.replay.normalizedInput), true);
+  assert.equal(Object.isFrozen(result.replay.normalizedInput.proposals[0].costs), true);
+  assert.throws(() => {
+    result.proposals[0].economics.netBaseAssetGainUnits = "999999999";
+  }, TypeError);
+  assert.throws(() => {
+    result.replay.normalizedInput.positions.push({});
+  }, TypeError);
+});

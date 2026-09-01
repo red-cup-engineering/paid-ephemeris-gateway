@@ -1,4 +1,4 @@
-import { createCdpJwt } from "../src/cdp-jwt.mjs";
+import { createCdpJwt } from "@red-cup-engineering/x402-services-section/cdp-facilitator";
 
 const CDP_SUPPORTED_URL = "https://api.cdp.coinbase.com/platform/v2/x402/supported";
 

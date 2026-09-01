@@ -46,8 +46,8 @@ npm run dev       # build:web, then wrangler dev -- local preview of the deploye
 ```
 
 `custom_domain: true` in `wrangler.jsonc` attaches `equivo.561.group` and provisions its DNS
-record. `npm run serve` (`web/server.mjs`) remains a plain `node:http` dev/test convenience only;
-it is never what production serves.
+record. `npm run serve` (`web/server.mjs`) remains a thin `node:http` + `sirv` dev/test
+convenience only; it is never what production serves.
 
 ## Layout
 
@@ -62,7 +62,7 @@ themes/equivo/       Equivo's six-type checker registry (real @lenticule-science
                      that compiles fenced ```equivo-exercise``` JSON blocks into exercises, and
                      the content-validation suite that independently re-derives every exercise's
                      correct answer from real math before asserting the checker agrees.
-web/                 the served face: server.mjs (static file server, house pattern), index.html
+web/                 the served face: server.mjs (thin development static server), index.html
                      + css + a small vanilla-JS app, web/js/vendor/** (generated, see below),
                      web/data/equivo-world.json (generated), web/test/** (server smoke tests +
                      a vendor-vs-real checker parity suite).

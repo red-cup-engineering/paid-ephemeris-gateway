@@ -266,6 +266,7 @@ test('serve.mjs serves index.html, catalog.json, css, and js over real HTTP', as
   try {
     const indexRes = await fetchWithRetry(`${base}/`);
     assert.equal(indexRes.status, 200);
+    assert.equal(indexRes.headers.get('cache-control'), 'no-cache');
     assert.match(indexRes.headers.get('content-type') ?? '', /text\/html/);
     const indexBody = await indexRes.text();
     assert.match(indexBody, /play<span class="domain">\.561\.group<\/span>/);

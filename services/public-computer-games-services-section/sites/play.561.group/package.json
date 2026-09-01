@@ -1,5 +1,5 @@
 {
-  "name": "@causeway-services/play-561-group",
+  "name": "@causeway-services/play",
   "version": "0.1.0",
   "type": "module",
   "description": "play.561.group -- Causeway Services' progressively enhanced game shelf, generated from @red-cup-engineering/cartridge manifests.",
@@ -14,9 +14,10 @@
     "dev": "wrangler dev"
   },
   "dependencies": {
-    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
     "@red-cup-engineering/arnold": "^0.2.0",
-    "@red-cup-engineering/games-catalog-storefront": "0.1.0"
+    "@red-cup-engineering/games-catalog-storefront": "0.1.0",
+    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
+    "sirv": "3.0.2"
   },
   "devDependencies": {
     "@red-cup-engineering/cartridge": "0.2.1",

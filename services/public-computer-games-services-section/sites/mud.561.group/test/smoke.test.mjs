@@ -48,6 +48,7 @@ test('serve.mjs serves index.html, catalog.json, catalog-filter.json, and css ov
   try {
     const indexRes = await fetch(`${base}/`);
     assert.equal(indexRes.status, 200);
+    assert.equal(indexRes.headers.get('cache-control'), 'no-cache');
     assert.match((await indexRes.text()), /mud<span class="domain">\.561\.group<\/span>/);
 
     const catalogRes = await fetch(`${base}/catalog.json`);

@@ -18,6 +18,7 @@ before(async () => {
     server.once('error', reject);
     server.listen(0, '127.0.0.1', resolve);
   });
+  await new Promise((resolve) => setImmediate(resolve));
   const { port } = server.address();
   base = `http://127.0.0.1:${port}`;
 });
@@ -36,6 +37,7 @@ test('/index.html serves the real shell page', async () => {
   const res = await fetch(`${base}/index.html`);
   assert.equal(res.status, 200);
   assert.match(res.headers.get('content-type') ?? '', /text\/html/);
+  assert.equal(res.headers.get('cache-control'), 'no-cache');
   const body = await res.text();
   assert.match(body, /Equivo/);
   assert.match(body, /js\/app\.js/);

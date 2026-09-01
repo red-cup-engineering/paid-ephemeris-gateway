@@ -23,7 +23,7 @@ js/today.mjs     renderer for today.html: computes each daily game's seed in the
 js/glyphs.mjs    the shared icon set both renderers draw from
 chrome/          vendored shelf-chrome source other 561 Group games import (this site is
                  its origin, so index.html/today.html use css/style.css directly instead)
-serve.mjs        zero-dependency node:http static file server
+serve.mjs        thin node:http adapter around sirv's static file middleware
 scripts/shelf-browser.mjs
                  a terminal client for the same catalog -- browses and launches games from
                  a terminal instead of a browser tab, over @red-cup-engineering/arnold

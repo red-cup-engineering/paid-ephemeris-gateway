@@ -67,10 +67,10 @@ lesson-author's eyeballs.
 
 ## The web face
 
-`web/server.mjs` is a zero-dependency static file server, `/` real-302-redirects to
+`web/server.mjs` is a thin `node:http` adapter over `sirv`; `/` real-302-redirects to
 `/index.html` (never a same-URL rewrite -- the runbook's own documented sibling bug). Everything
-under `web/` is self-contained after `npm run build:web`; the server never reaches outside its
-own root.
+under `web/` is self-contained after `npm run build:web`; the development server never reaches
+outside its own root.
 
 The browser needs the kernel/theme `.mts` logic and cannot load `.mts` natively. `web/build/
 sync-vendor.mjs` produces `web/js/vendor/**` two ways, both mechanical (not hand-ported, per

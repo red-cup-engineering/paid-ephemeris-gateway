@@ -1,5 +1,5 @@
 {
-  "name": "@causeway-services/mud-561-group",
+  "name": "@causeway-services/mud",
   "version": "0.1.0",
   "type": "module",
   "description": "mud.561.group -- the 561 Group's MUD/graphical-MMO directory, a JSON-parameterized keyword filter over the same play.561.group catalog platform (never a forked copy): live listings, per-game pages, honest web-play links. Player chat network is explicitly out of scope for this pass.",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@red-cup-engineering/games-catalog-storefront": "0.1.0",
-    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1"
+    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
+    "sirv": "3.0.2"
   },
   "devDependencies": {
     "wrangler": "4.123.0"

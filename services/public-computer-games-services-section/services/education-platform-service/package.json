@@ -20,7 +20,8 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@lenticule-science/metrologic": "0.1.0"
+    "@lenticule-science/metrologic": "0.1.0",
+    "sirv": "3.0.2"
   },
   "devDependencies": {
     "wrangler": "4.123.0"

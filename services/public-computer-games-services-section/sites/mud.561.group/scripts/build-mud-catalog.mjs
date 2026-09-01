@@ -10,21 +10,12 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { playUrl } from '@red-cup-engineering/games-catalog-storefront';
+import { entriesWithAnyKeyword, playUrl } from '@red-cup-engineering/games-catalog-storefront';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SITE_ROOT = path.join(HERE, '..');
 const PLAY_CATALOG_PATH = path.join(SITE_ROOT, '..', 'play.561.group', 'catalog.json');
 const FILTER_PATH = path.join(SITE_ROOT, 'catalog-filter.json');
-
-/** Pure: entries whose `keywords` include at least one of `anyOf`, in catalog order. Kept
- *  local (not re-imported from the shared package) only because it is this one line -- the
- *  package's own entriesWithAnyKeyword is the identical implementation, exercised directly
- *  by the shared package's own tests; duplicating the CALL here is not duplicating the RULE. */
-function selectByKeyword(entries, anyOf) {
-  const wanted = new Set(anyOf);
-  return entries.filter((entry) => (entry.keywords || []).some((k) => wanted.has(k)));
-}
 
 /** One real HTTP check of `entry`'s own playUrl(). Never trusts a router table or a catalog
  *  status field -- the whole point of a live probe is to catch exactly this case (routed,
@@ -52,7 +43,7 @@ export async function probeEntry(entry, { fetchImpl = fetch, timeoutMs = 8000, n
  *  produce mud.561.group's own catalog object/JSON. Exported so
  *  test/build-mud-catalog.test.mjs can assert the shape without touching the network or disk. */
 export function assembleMudCatalog({ upstreamEntries, includeIfAnyKeyword, probesById, generatedDate }) {
-  const selected = selectByKeyword(upstreamEntries, includeIfAnyKeyword);
+  const selected = entriesWithAnyKeyword(upstreamEntries, includeIfAnyKeyword);
   const games = selected.map((entry) => ({ ...entry, liveProbe: probesById.get(entry.id) ?? null }));
   const catalog = {
     $schemaNote:
@@ -70,7 +61,7 @@ async function main() {
   ]);
   const upstreamEntries = JSON.parse(upstreamRaw).games ?? [];
   const { includeIfAnyKeyword } = JSON.parse(filterRaw);
-  const selected = selectByKeyword(upstreamEntries, includeIfAnyKeyword);
+  const selected = entriesWithAnyKeyword(upstreamEntries, includeIfAnyKeyword);
 
   const probesById = new Map();
   for (const entry of selected) {

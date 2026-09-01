@@ -76,6 +76,64 @@ function caip10(address) {
   return `${BASE_CAIP2}:${address.toLowerCase()}`;
 }
 
+function delay(milliseconds) {
+  return milliseconds === 0 ? Promise.resolve() : new Promise((resolveDelay) => setTimeout(resolveDelay, milliseconds));
+}
+
+function boundedLaneInteger(name, value, minimum, maximum) {
+  if (!Number.isInteger(value) || value < minimum || value > maximum) {
+    throw new RangeError(`${name} must be an integer from ${minimum} through ${maximum}`);
+  }
+  return value;
+}
+
+/**
+ * One shared public-RPC lane for the complete Moonwell fleet join. Calls are serialized, paced,
+ * and a 429 is retried in place before the next wallet can start. A rejected wallet releases the
+ * lane for the next wallet, so one provider refusal remains one wallet's unknown rather than a
+ * fleet-wide failure. The scheduler is injectable so tests and other runtimes need not sleep.
+ */
+export function createMoonwellRpcLane({
+  rpc = jsonRpc,
+  schedule = delay,
+  initialDelayMs = 250,
+  spacingMs = 150,
+  retryBaseMs = 250,
+  maxAttempts = 5,
+} = {}) {
+  if (typeof rpc !== "function" || typeof schedule !== "function") {
+    throw new TypeError("Moonwell RPC lane requires rpc and schedule functions");
+  }
+  boundedLaneInteger("initialDelayMs", initialDelayMs, 0, 5000);
+  boundedLaneInteger("spacingMs", spacingMs, 0, 5000);
+  boundedLaneInteger("retryBaseMs", retryBaseMs, 1, 5000);
+  boundedLaneInteger("maxAttempts", maxAttempts, 1, 8);
+  let tail = Promise.resolve();
+  let firstRequest = true;
+
+  async function execute(args) {
+    let waitMs = firstRequest ? initialDelayMs : spacingMs;
+    firstRequest = false;
+    for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+      if (waitMs > 0) await schedule(waitMs);
+      try {
+        return await rpc(...args);
+      } catch (error) {
+        const retryable = /\bHTTP 429\b/u.test(String(error?.message ?? error));
+        if (!retryable || attempt + 1 >= maxAttempts) throw error;
+        waitMs = Math.min(5000, retryBaseMs * (2 ** attempt));
+      }
+    }
+    throw new Error("Moonwell RPC lane exhausted its bounded retry loop");
+  }
+
+  return (...args) => {
+    const result = tail.then(() => execute(args), () => execute(args));
+    tail = result.then(() => undefined, () => undefined);
+    return result;
+  };
+}
+
 function boundaryRpc(boundary, rpc) {
   return async (rpcUrl, method, params) => {
     const result = await rpc(rpcUrl, method, params);
@@ -153,7 +211,9 @@ function riskView(subject, account, health, provenance) {
   };
 }
 
-async function joinMoonwellHealth({ report, fleet, observeEnteredMarkets, observeHealth, rpc, healthDependencies }) {
+async function joinMoonwellHealth({
+  report, fleet, observeEnteredMarkets, observeHealth, rpc, rpcSchedule, rpcLaneOptions, healthDependencies,
+}) {
   const base = report.chains.find(({ caip2: chain }) => chain === BASE_CAIP2);
   if (base?.checked !== true || base.provenance === null || base.provenance === undefined) {
     const reason = base?.reason ?? "Base portfolio provenance is unavailable";
@@ -162,7 +222,8 @@ async function joinMoonwellHealth({ report, fleet, observeEnteredMarkets, observ
     }));
   }
   const boundary = base.provenance;
-  const checkedRpc = boundaryRpc(boundary, rpc);
+  const laneRpc = createMoonwellRpcLane({ ...rpcLaneOptions, rpc, schedule: rpcSchedule });
+  const checkedRpc = boundaryRpc(boundary, laneRpc);
   return Promise.all(fleet.wallets.map(async ({ subject, address }) => {
     const account = caip10(address);
     let enteredMarkets;
@@ -219,6 +280,8 @@ export async function observeTreasuryPortfolio({
   observeEnteredMarkets = observeEnteredMarketsAtBoundary,
   observeHealth = observeMoonwellAccountHealth,
   rpc = jsonRpc,
+  rpcSchedule = delay,
+  rpcLaneOptions = {},
   healthDependencies = {},
 } = {}) {
   if (!Number.isFinite(Date.parse(at))) throw new TypeError("treasury portfolio disclosure requires an ISO observation time");
@@ -239,7 +302,7 @@ export async function observeTreasuryPortfolio({
     now: () => new Date(at),
   });
   const moonwellRisk = await joinMoonwellHealth({
-    report, fleet, observeEnteredMarkets, observeHealth, rpc, healthDependencies,
+    report, fleet, observeEnteredMarkets, observeHealth, rpc, rpcSchedule, rpcLaneOptions, healthDependencies,
   });
   const body = {
     type: "TreasuryPortfolioDisclosure",

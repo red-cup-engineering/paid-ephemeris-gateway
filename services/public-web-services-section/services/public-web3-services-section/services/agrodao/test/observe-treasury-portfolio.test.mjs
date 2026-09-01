@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { Interface } from "ethers";
 
 import { publicWalletFleet } from "../src/procure-public-evm-wallet-observation.mjs";
 import { defaultSettlementRoot, observeTreasuryPortfolio } from "../src/observe-treasury-portfolio.mjs";
@@ -158,6 +159,45 @@ test("preserves entered-market and health refusal as unknown", async () => {
   assert.equal(disclosure.moonwellRisk[0].status, "unknown");
   assert.match(disclosure.moonwellRisk[0].reason, /rpc refused/);
   assert.ok(disclosure.moonwellRisk.slice(1).every(({ status, reason }) => status === "unknown" && /health refused/.test(reason)));
+});
+
+test("default entered-market ABI receives bare addresses while disclosure keeps CAIP-10", async () => {
+  const fleet = publicWalletFleet();
+  const boundary = {
+    chain: "base", chainId: 8453, caip2: "eip155:8453", blockNumber: "123", blockTag: "0x7b",
+    blockHash: `0x${"ab".repeat(32)}`, provider: "https://mainnet.base.org", observedAt: AT,
+    requestedFinality: "finalized", finality: "finalized",
+  };
+  const reportPortfolio = async ({ roster }) => ({
+    observedAt: AT,
+    roster,
+    chains: [{
+      chain: "base", caip2: "eip155:8453", checked: true, provenance: boundary,
+      wallets: [], coverage: { walletsObserved: roster.length, complete: true, unchecked: [] },
+    }],
+    coverage: { complete: true, incompleteChains: [] },
+  });
+  const iface = new Interface(["function getAssetsIn(address) view returns (address[])"]);
+  const encodedAddresses = [];
+  const disclosure = await observeTreasuryPortfolio({
+    at: AT,
+    fleet,
+    reportPortfolio,
+    store: { record: async () => {} },
+    rpc: async (_url, method, params) => {
+      assert.equal(method, "eth_call");
+      assert.equal(params[1], boundary.blockTag);
+      const [address] = iface.decodeFunctionData("getAssetsIn", params[0].data);
+      encodedAddresses.push(String(address));
+      return iface.encodeFunctionResult("getAssetsIn", [[]]);
+    },
+    observeHealth: async () => { throw new Error("health must not run for an empty market list"); },
+  });
+
+  assert.equal(encodedAddresses.length, fleet.wallets.length);
+  assert.ok(encodedAddresses.every((address) => /^0x[0-9a-fA-F]{40}$/u.test(address) && !address.includes(":")));
+  assert.ok(disclosure.moonwellRisk.every(({ account, status, factual }) =>
+    /^eip155:8453:0x[0-9a-f]{40}$/u.test(account) && status === "no-entered-markets" && factual === true));
 });
 
 test("default settlement root is the package root, so journal custody appends data/logs once", () => {

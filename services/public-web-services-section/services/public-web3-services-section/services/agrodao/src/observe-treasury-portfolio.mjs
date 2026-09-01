@@ -90,8 +90,11 @@ function boundaryRpc(boundary, rpc) {
   };
 }
 
-async function observeEnteredMarketsAtBoundary({ account, boundary, comptroller, rpc = jsonRpc }) {
-  const data = comptrollerInterface.encodeFunctionData("getAssetsIn", [account]);
+async function observeEnteredMarketsAtBoundary({ address, boundary, comptroller, rpc = jsonRpc }) {
+  // CAIP-10 identifies the account in disclosures. The contract ABI accepts only its bare
+  // address component; keeping these two fields separate prevents identity syntax leaking into
+  // an Ethereum address parameter.
+  const data = comptrollerInterface.encodeFunctionData("getAssetsIn", [address]);
   const result = await rpc(boundary.provider, "eth_call", [{ to: comptroller, data }, boundary.blockTag]);
   return comptrollerInterface.decodeFunctionResult("getAssetsIn", result)[0].map((address) => address.toLowerCase());
 }

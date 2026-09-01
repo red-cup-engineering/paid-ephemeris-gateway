@@ -1,0 +1,67 @@
+/* style — the register: a jaundiced, sodium-institutional palette (design §6). Dark-only by intent
+   (color-scheme: dark) — a backrooms game does not want a light-mode variant; the theme IS the room. */
+:root { color-scheme: dark; }
+html, body {
+  margin: 0; background: #14120a; color: #d8d2b8;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+#app { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 1rem; box-sizing: border-box; }
+
+#hud-top { width: min(94vw, 1024px); display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+#hud-top h1 { font-size: 0.95rem; letter-spacing: 0.2em; text-transform: uppercase; color: #c9b458; margin: 0; }
+#hud-vitals { display: flex; gap: 1.2rem; font-size: 0.8rem; }
+#hud-vitals .stat { display: flex; flex-direction: column; align-items: flex-end; }
+#hud-vitals .label { color: #85805f; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; }
+#hud-vitals .value { color: #e8e0bc; }
+
+.stage {
+  position: relative; border: 2px solid #35301c; box-shadow: 0 0 0 1px #05050280, 0 8px 30px rgba(0,0,0,0.6);
+  width: min(94vw, 1024px);
+}
+canvas#frame {
+  display: block; width: 100%; height: auto; aspect-ratio: 320 / 200; background: #000;
+  image-rendering: pixelated; image-rendering: crisp-edges; cursor: crosshair;
+}
+#crosshair {
+  position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px;
+  border: 1px solid #d8d2b8aa; border-radius: 50%; pointer-events: none;
+}
+#pointer-lock-prompt {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #0a0906d0; text-align: center; padding: 1.5rem; box-sizing: border-box; gap: 0.6rem; font-size: 0.85rem;
+}
+#pointer-lock-prompt kbd { background: #262111; border: 1px solid #4a4326; border-radius: 3px; padding: 0.05rem 0.4rem; }
+#pointer-lock-prompt .warn { color: #e0a23c; max-width: 40em; }
+#pointer-lock-prompt.hidden { display: none; }
+
+#message-banner {
+  position: absolute; top: 10%; left: 50%; transform: translateX(-50%);
+  background: #1c1808e0; border: 1px solid #4a4326; padding: 0.5rem 1rem; font-size: 0.85rem; color: #e8e0bc;
+}
+
+#hud-bottom { width: min(94vw, 1024px); display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem; font-size: 0.75rem; }
+#bestiary, #run-log { border: 1px solid #262111; padding: 0.5rem; min-height: 4rem; max-height: 8rem; overflow-y: auto; color: #a89f78; }
+#bestiary .entry, #run-log .entry { border-bottom: 1px solid #1c1808; padding: 0.15rem 0; }
+
+#settings { width: min(94vw, 1024px); margin-top: 0.6rem; font-size: 0.78rem; }
+#settings-toggle {
+  background: #1c1808; color: #c9b458; border: 1px solid #4a4326; padding: 0.3rem 0.7rem; cursor: pointer;
+  font-family: inherit;
+}
+#settings-panel { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; padding: 0.6rem; border: 1px solid #262111; }
+#settings-panel label { display: flex; align-items: center; gap: 0.5rem; }
+#seed-display { color: #6b6448; font-size: 0.7rem; }
+#keymap-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.3rem; }
+#keymap-list button {
+  background: #1c1808; color: #d8d2b8; border: 1px solid #35301c; padding: 0.25rem 0.4rem;
+  cursor: pointer; font-family: inherit; font-size: 0.72rem; text-align: left;
+}
+#keymap-list button.listening { border-color: #c9b458; color: #c9b458; }
+
+footer { margin-top: 1.2rem; font-size: 0.7rem; color: #6b6448; text-align: center; max-width: 640px; }
+footer a { color: #c9b458; }
+
+/* THE LAW, restated in CSS: no signal here is color-only. A contested/warning state also gets a
+   border or pattern cue, never hue alone — see design §5's accessibility note. */
+.state-danger { border-left: 3px solid #d1483c; padding-left: 0.4rem; }
+.state-contested { border-left: 3px dashed #c9b458; padding-left: 0.4rem; }

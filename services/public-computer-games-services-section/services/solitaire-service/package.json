@@ -1,0 +1,26 @@
+{
+  "name": "@red-cup-engineering/solitaire-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": ["klondike", "freecell", "spider", "yukon", "solitaire", "card-game"],
+  "description": "solitaire.561.group — one rules engine, variant rules as data: Klondike, FreeCell, Spider (1/2/4-suit), Yukon, Forty Thieves, Golf, TriPeaks, and Pyramid all read from the same declarative VariantSpec, with deterministic seeded deals, a solver-certified FreeCell deal generator, and a move-log that doubles as undo/redo and replay source.",
+  "scripts": {
+    "check": "for f in src/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts web/test/*.test.mts",
+    "serve": "node web/server.mjs"
+  },
+  "exports": {
+    "./cards": "./src/cards.mts",
+    "./engine": "./src/engine.mts",
+    "./solver": "./src/solver.mts",
+    "./daily": "./src/daily.mts",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@red-cup-engineering/cartridge": "0.2.0"
+  }
+}

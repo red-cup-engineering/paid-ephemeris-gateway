@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 4500" width="3600" height="4500">
+
+<circle cx="1800" cy="2250" r="1500" fill="none" stroke="#2ba58a" stroke-width="36"/><circle cx="1800" cy="2250" r="1410" fill="none" stroke="#2ba58a" stroke-width="10"/>
+<text x="1800" y="2055" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="200" fill="#111111">PATIENCE</text>
+<text x="1800" y="2285" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="200" fill="#111111">LEVEL:</text>
+<text x="1800" y="2515" text-anchor="middle" font-family="'Arial Black', sans-serif" font-weight="900" font-size="200" fill="#111111">TEACHER</text>
+<text x="1800" y="3490" text-anchor="middle" font-family="Helvetica Neue, sans-serif" font-weight="700" letter-spacing="14" font-size="90" fill="#2ba58a">MAXIMUM, MOSTLY</text>
+</svg>

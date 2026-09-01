@@ -1,0 +1,257 @@
+/* slots.css — "Tideline Treasures" chrome. The scene itself (reels, symbols, particles,
+   celebrations) is entirely canvas — see web/js/slots.mjs — so nothing here draws game content;
+   this file is purely the DOM overlay (balances, controls, panels) around the canvas stage,
+   themed as a coastal counterpoint to blackjack's felt-and-gold: deep tide teal, pearl, and the
+   same gold accent Cowrie Casino's shell palette already uses for its jackpot number, so both
+   games read as one house. */
+
+:root {
+  --tide-deep: #06232a;
+  --tide-mid: #0d3a44;
+  --tide-teal: #2fb8c6;
+  --tide-foam: #d8f5f7;
+  --pearl: #f3e9f7;
+  --coral: #e07a5f;
+}
+
+.slots-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.slots-balances {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slots-toggle-row {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon-toggle-btn {
+  background: rgba(47, 184, 198, 0.12);
+  border: 1px solid var(--tide-teal);
+  color: var(--tide-foam);
+  border-radius: 6px;
+  padding: 0.35rem 0.55rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.icon-toggle-btn:hover {
+  background: rgba(47, 184, 198, 0.25);
+}
+
+.house-math-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ── the stage ─────────────────────────────────────────────────────────────────────────────── */
+
+.slots-stage {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, var(--tide-mid) 0%, var(--tide-deep) 70%, #030f13 100%);
+  border: 1px solid var(--tide-teal);
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.6), 0 0 24px rgba(47, 184, 198, 0.15);
+  display: grid;
+  place-items: center;
+}
+
+#slots-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+.slots-banner {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(6, 35, 42, 0.85);
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── house math ────────────────────────────────────────────────────────────────────────────── */
+
+.slots-house-math {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--tide-teal);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+}
+
+.slots-house-math h3 {
+  margin: 0 0 0.25rem;
+  color: var(--tide-foam);
+  font-size: 0.95rem;
+}
+
+.house-math-sub {
+  margin: 0 0 0.5rem;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+}
+
+.house-math-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.house-math-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(47, 184, 198, 0.06);
+}
+
+.house-math-row dt {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+}
+
+.house-math-row dd {
+  margin: 0;
+  font-weight: bold;
+  color: var(--tide-foam);
+}
+
+/* ── controls ──────────────────────────────────────────────────────────────────────────────── */
+
+.slots-controls {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.slots-bet-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bet-adjust-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--tide-teal);
+  background: rgba(47, 184, 198, 0.15);
+  color: var(--tide-foam);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.bet-adjust-btn:hover {
+  background: rgba(47, 184, 198, 0.3);
+}
+
+.bet-readout {
+  color: var(--ink-dim);
+  min-width: 16rem;
+  text-align: center;
+}
+
+.bet-readout strong {
+  color: var(--gold-bright);
+}
+
+.slots-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slots-primary-btn {
+  background: linear-gradient(180deg, var(--tide-teal), #1a7d88);
+  color: #04181c;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2.4rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(47, 184, 198, 0.4);
+}
+
+.slots-primary-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.autospin-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+}
+
+.autospin-controls select {
+  background: var(--felt-panel);
+  color: var(--ink);
+  border: 1px solid var(--tide-teal);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+}
+
+#autospin-stop-btn {
+  background: var(--coral);
+  color: #2a0e07;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ── paytable ──────────────────────────────────────────────────────────────────────────────── */
+
+.slots-paytable ul {
+  columns: 2;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.slots-paytable p {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .slots-action-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

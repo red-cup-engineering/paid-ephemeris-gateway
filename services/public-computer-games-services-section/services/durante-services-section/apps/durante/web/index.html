@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>durante</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230c0c14'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='%23e5c73c' font-family='monospace'%3E%E2%8A%A4%3C/text%3E%3C/svg%3E" />
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; background: #0a0a10; color: #d8d8e2; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+  body { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 1rem; box-sizing: border-box; }
+  h1 { font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #e5c73c; margin: 0 0 0.6rem; }
+  .stage { position: relative; border: 2px solid #2a2a38; box-shadow: 0 0 0 1px #05050a, 0 8px 30px rgba(0,0,0,0.5); }
+  canvas#frame { display: block; image-rendering: pixelated; image-rendering: crisp-edges; width: min(90vw, 960px); height: auto; aspect-ratio: 240 / 150; background: #000; }
+  .hud { width: min(90vw, 960px); margin-top: 0.75rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem 1rem; font-size: 0.85rem; }
+  .hud .row { display: flex; justify-content: space-between; border-bottom: 1px solid #1c1c26; padding: 0.15rem 0; }
+  .hud .label { color: #8888a0; }
+  .hud .value { color: #e8e8f0; }
+  #hud-message { grid-column: 1 / -1; color: #e5824a; min-height: 1.2em; text-align: center; }
+  .controls { width: min(90vw, 960px); margin-top: 1rem; font-size: 0.8rem; color: #9090a8; line-height: 1.6; }
+  .controls kbd { background: #1c1c26; border: 1px solid #33334a; border-radius: 3px; padding: 0.05rem 0.4rem; color: #d8d8e2; }
+  footer { margin-top: 1.5rem; font-size: 0.72rem; color: #55556a; text-align: center; max-width: 640px; }
+  a { color: #e5c73c; }
+</style>
+</head>
+<body>
+<h1>durante</h1>
+<div class="stage">
+  <canvas id="frame" aria-label="durante 3D view"></canvas>
+</div>
+<div class="hud">
+  <div class="row"><span class="label">health</span><span class="value" id="hud-health">100</span></div>
+  <div class="row"><span class="label">ammo</span><span class="value" id="hud-ammo">40</span></div>
+  <div class="row"><span class="label">demons</span><span class="value" id="hud-demons">—</span></div>
+  <div class="row"><span class="label">census</span><span class="value" id="hud-census">—</span></div>
+  <div class="row"><span class="label">daily</span><span class="value" id="hud-daily">connecting…</span></div>
+  <div id="hud-message"></div>
+</div>
+<div class="controls" id="daily-panel">
+  <div id="daily-status">Fetching today's arena from <code>GET /daily</code>…</div>
+  <pre id="daily-leaderboard" style="white-space:pre-wrap;margin:0.4rem 0 0;"></pre>
+</div>
+<div class="controls">
+  <div><kbd>W</kbd>/<kbd>&uarr;</kbd> forward &nbsp; <kbd>S</kbd>/<kbd>&darr;</kbd> back &nbsp;
+       <kbd>A</kbd>/<kbd>&larr;</kbd> turn left &nbsp; <kbd>D</kbd>/<kbd>&rarr;</kbd> turn right &nbsp;
+       <kbd>Q</kbd>/<kbd>E</kbd> strafe &nbsp; <kbd>Space</kbd> fire</div>
+  <div>Fully keyboard-playable — no mouse or pointer lock required.</div>
+</div>
+<footer>
+  A federated arena (walls two peers disagreed about are contested ⊤ phase gates — you can walk through
+  them), a hitscan weapon whose effect is evidence you fold, and a demon held alive-AND-dead between your
+  first wound and the kill. See <a href="/DESIGN.md">DESIGN.md</a> for the full disclosure.
+</footer>
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/abrash": "/vendor/abrash/index.mjs",
+    "@red-cup-engineering/abrash/world": "/vendor/abrash/world.mjs",
+    "@red-cup-engineering/abrash/federation": "/vendor/abrash/federation.mjs",
+    "@red-cup-engineering/abrash/raycaster": "/vendor/abrash/raycaster.mjs",
+    "@red-cup-engineering/abrash/framebuffer": "/vendor/abrash/framebuffer.mjs",
+    "@red-cup-engineering/abrash/collision": "/vendor/abrash/collision.mjs",
+    "@red-cup-engineering/abrash/engine": "/vendor/abrash/engine.mjs",
+    "@red-cup-engineering/abrash/math": "/vendor/abrash/math.mjs",
+
+    "@561-group/computer/posix-holography/eavt-substrate": "/vendor/@561-group/computer/posix-holography/src/substrate.mjs",
+    "@561-group/computer/typed-resource-catalog/eavt": "/vendor/@561-group/computer/typed-resource-catalog/library/path/library/object/library/attribute/library/file/restricting/library/regular-file/restricting/library/flatfile/restricting/library/json/restricting/library/jsonl/restricting/library/eavt/scripts/eavt.mjs",
+    "#jcs": "/vendor/@561-group/computer/typed-resource-catalog/library/path/library/object/library/attribute/library/file/restricting/library/regular-file/restricting/library/flatfile/restricting/library/json/canonicalizing/scripts/canonicalize.mjs",
+    "@lenticule-science/metrologic/bilattice": "/vendor/@lenticule-science/metrologic/bilattice/src/index.mjs",
+    "@lenticule-science/metrologic/bilattice/charge": "/vendor/@lenticule-science/metrologic/bilattice/src/charge.mjs",
+    "@lenticule-science/metrologic/chu": "/vendor/@lenticule-science/metrologic/chu/src/index.mjs",
+    "@lenticule-science/metrologic/chu/four": "/vendor/@lenticule-science/metrologic/chu/src/four.mjs",
+
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/@red-cup-engineering/cartridge/src/intent-log.mjs",
+    "@red-cup-engineering/cartridge/replay": "/vendor/@red-cup-engineering/cartridge/src/replay.mjs",
+
+    "node:crypto": "/web/node-crypto-shim.mjs"
+  }
+}
+</script>
+<script type="module" src="/web/main.mjs"></script>
+</body>
+</html>

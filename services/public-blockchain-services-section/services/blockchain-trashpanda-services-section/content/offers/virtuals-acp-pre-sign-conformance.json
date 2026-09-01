@@ -1,0 +1,57 @@
+{
+  "type": "VirtualsACPServiceOnlyOfferingDraft",
+  "version": 2,
+  "agent": "Yanagi",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "jobName": "pre_sign_transaction_policy_conformance",
+  "jobDescription": "Evaluate one normalized unsigned Base transaction against the buyer's exact policy at a declared immutable block anchor, returning a deterministic clause-by-clause PASS, FAIL, or ESCALATE receipt before signing.",
+  "pilotPurpose": "Validate one complete operational lifecycle: separate-operator authorization, discovery, purchase, job admission, deterministic execution, delivery, and platform settlement receipt.",
+  "pricingRole": "authorization-fixed operational test fixture only; excluded from market pricing, demand inference, willingness-to-pay inference, and production price formation",
+  "price": {
+    "amount": "0.01",
+    "currency": "USDC",
+    "kind": "fixed-service-fee"
+  },
+  "slaMinutes": 5,
+  "fundTransfer": false,
+  "authorization": "ni:///sha-256;qmlVGM6Y11-5PjGAAVssSurZgYTGInmrrdhmFbbzpg4",
+  "virtualsRegistration": {
+    "name": "pre_sign_transaction_policy_conformance",
+    "description": "Deterministically evaluate one unsigned Base transaction against the buyer's declared policy and immutable block anchor. Returns a replayable clause-by-clause PASS, FAIL, or ESCALATE receipt. Never accepts keys, signatures, custody, or broadcast authority.",
+    "jobFee": 0.01,
+    "jobFeeType": "fixed",
+    "requiredFunds": false,
+    "slaMinutes": 5,
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "request": {
+          "type": "object",
+          "description": "One exact BasePreSignConformanceRequest v1; the runtime applies stricter canonical shape, authority-refusal, and resource limits."
+        }
+      },
+      "required": [
+        "request"
+      ]
+    },
+    "deliverable": "BasePreSignPolicyConformanceReceipt v1 JSON"
+  },
+  "requirements": {
+    "request": "BasePreSignConformanceRequest v1 JSON; no mnemonic, private key, signature, signed transaction, custody, signing, or broadcast grant"
+  },
+  "deliverables": {
+    "receipt": "BasePreSignPolicyConformanceReceipt v1 JSON with content identity, exact engine source identity, per-clause results, verdict, evidence references, and replay instructions",
+    "assurance": "Customer-declared block anchor and evidence are explicitly labeled unverified"
+  },
+  "publicationStatus": "published-and-serving-one-job-pilot",
+  "jobLimit": 1,
+  "broaderLaunch": false,
+  "productionPriceEvidence": "data/evidence/2026-07-22-virtuals-market-pricing.json",
+  "operator": {
+    "virtualsLiteAgentId": "44184",
+    "wallet": "eip155:8453:0x9e1e497e38b776db1a79f0db9dd558bcca8b26fc",
+    "credentialPersistence": "memory-only-after-session-authorized-regeneration"
+  },
+  "withheldBecause": []
+}

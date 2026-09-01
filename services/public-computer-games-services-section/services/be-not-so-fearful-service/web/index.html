@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Be Not So Fearful</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23161307'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='%23c9b458' font-family='monospace'%3E%E2%8A%A4%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+
+  <header id="hud-top">
+    <h1>be not so fearful</h1>
+    <div id="hud-vitals">
+      <span class="stat"><span class="label">tier</span><span class="value" id="hud-tier">1</span></span>
+      <span class="stat"><span class="label">carrying</span><span class="value" id="hud-carrying">0</span></span>
+      <span class="stat"><span class="label">score if banked</span><span class="value" id="hud-score">0</span></span>
+      <span class="stat"><span class="label">time</span><span class="value" id="hud-time">0:00</span></span>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <canvas id="frame" aria-label="be not so fearful 3D view"></canvas>
+    <div id="crosshair" aria-hidden="true"></div>
+    <div id="pointer-lock-prompt">
+      <p>click to enter — mouse looks, WASD moves, <kbd>Space</kbd> jumps, <kbd>Shift</kbd> sprints (louder),
+        <kbd>Ctrl</kbd> crouches (silent), left click fires, right click rocket-jumps, <kbd>E</kbd> picks up /
+        extracts / descends.</p>
+      <p class="warn">WHAT YOU CARRY IS WHAT YOU CAN LOSE. Loot only banks on a deliberate extraction at a
+        beacon — death loses everything still only carried.</p>
+    </div>
+    <div id="message-banner" hidden></div>
+  </div>
+
+  <section id="hud-bottom">
+    <div id="bestiary" aria-label="anomaly bestiary"></div>
+    <div id="run-log" aria-label="run events"></div>
+  </section>
+
+  <section id="settings" aria-label="amenities">
+    <button id="settings-toggle" type="button">amenities</button>
+    <div id="settings-panel" hidden>
+      <label>FOV <input type="range" id="opt-fov" min="60" max="110" value="75" /> <span id="opt-fov-value">75</span></label>
+      <label>Mouse sensitivity <input type="range" id="opt-sens" min="0.05" max="1.2" step="0.01" value="0.35" /> <span id="opt-sens-value">0.35</span></label>
+      <label><input type="checkbox" id="opt-reduced-flash" /> Reduced flash / photosensitivity care</label>
+      <label><input type="checkbox" id="opt-reduced-motion" /> Reduced motion (disable jump/land view-bob)</label>
+      <div id="keymap-list" aria-label="key bindings"></div>
+      <button id="keymap-reset" type="button">reset keybinds to default</button>
+      <div id="seed-display"></div>
+    </div>
+  </section>
+
+  <footer>
+    A backrooms/SCP extraction shooter on <code>@red-cup-engineering/abrash</code>'s real raycaster and
+    collision — the shivering walls ARE its contested-voxel (⊤) mechanic, not decoration. See
+    <a href="/DESIGN.md">DESIGN.md</a> for the full disclosure, including what v1 deliberately cuts.
+  </footer>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/abrash": "/vendor/abrash/index.mjs",
+    "@red-cup-engineering/abrash/world": "/vendor/abrash/world.mjs",
+    "@red-cup-engineering/abrash/federation": "/vendor/abrash/federation.mjs",
+    "@red-cup-engineering/abrash/raycaster": "/vendor/abrash/raycaster.mjs",
+    "@red-cup-engineering/abrash/framebuffer": "/vendor/abrash/framebuffer.mjs",
+    "@red-cup-engineering/abrash/collision": "/vendor/abrash/collision.mjs",
+    "@red-cup-engineering/abrash/engine": "/vendor/abrash/engine.mjs",
+    "@red-cup-engineering/abrash/math": "/vendor/abrash/math.mjs",
+
+    "@561-group/computer/posix-holography/eavt-substrate": "/vendor/@561-group/computer/posix-holography/src/substrate.mjs",
+    "@561-group/computer/typed-resource-catalog/eavt": "/vendor/@561-group/computer/typed-resource-catalog/library/path/library/object/library/attribute/library/file/restricting/library/regular-file/restricting/library/flatfile/restricting/library/json/restricting/library/jsonl/restricting/library/eavt/scripts/eavt.mjs",
+    "#jcs": "/vendor/@561-group/computer/typed-resource-catalog/library/path/library/object/library/attribute/library/file/restricting/library/regular-file/restricting/library/flatfile/restricting/library/json/canonicalizing/scripts/canonicalize.mjs",
+    "@lenticule-science/metrologic/bilattice": "/vendor/@lenticule-science/metrologic/bilattice/src/index.mjs",
+    "@lenticule-science/metrologic/bilattice/charge": "/vendor/@lenticule-science/metrologic/bilattice/src/charge.mjs",
+    "@lenticule-science/metrologic/chu": "/vendor/@lenticule-science/metrologic/chu/src/index.mjs",
+    "@lenticule-science/metrologic/chu/four": "/vendor/@lenticule-science/metrologic/chu/src/four.mjs",
+
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/@red-cup-engineering/cartridge/src/intent-log.mjs",
+    "@red-cup-engineering/cartridge/replay": "/vendor/@red-cup-engineering/cartridge/src/replay.mjs",
+    "@red-cup-engineering/cartridge/seed": "/vendor/@red-cup-engineering/cartridge/src/seed.mjs",
+    "@red-cup-engineering/cartridge/manifest": "/vendor/@red-cup-engineering/cartridge/src/manifest.mjs",
+
+    "node:crypto": "/web/node-crypto-shim.mjs"
+  }
+}
+</script>
+<script type="module" src="/web/js/main.mjs"></script>
+</body>
+</html>

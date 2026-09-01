@@ -1,0 +1,349 @@
+{"a":"baseSymbol","e":"venue:hive-internal","t":"hive-internal","v":"HIVE"}
+{"a":"quoteSymbol","e":"venue:hive-internal","t":"hive-internal","v":"HBD"}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T21:47:02.871Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T21:47:02.871Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T21:47:02.871Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T21:47:02.871Z","v":26}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"BEER"}
+{"a":"quoteSymbol","e":"venue:hive-engine","t":"hive-engine","v":"SWAP.HIVE"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":16269}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"LEO"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.17000147 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.18199063 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.17599605 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":681}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"SIM"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.00004551 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.0000458 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"0.000045655 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":64}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"SWAP.BTC"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"1310087.00188131 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"1320999.99999957 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":"1315543.50094044 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T21:47:02.871Z","v":83}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T22:03:44.846Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T22:03:44.846Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T22:03:44.846Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T22:03:44.846Z","v":3}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"1310087.00189217 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"1320999.99999987 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"1315543.50094602 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":83}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"ARCHON"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.01345 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.01529 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":"0.01437 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:03:44.846Z","v":1280}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T22:06:47.803Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T22:06:47.803Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T22:06:47.803Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T22:06:47.803Z","v":13}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":16269}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"PAL"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.00004202 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.00006188 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.00005195 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":3823}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"INFOWARS"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0.0008 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":"0"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:06:47.803Z","v":0}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T22:22:40.617Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T22:22:40.617Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T22:22:40.617Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T22:22:40.617Z","v":15}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.00004551 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.0000458 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":"0.000045655 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:22:40.617Z","v":64}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T22:39:22.479Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T22:39:22.479Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T22:39:22.479Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T22:39:22.479Z","v":15}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:39:22.479Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:39:22.479Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:39:22.479Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:39:22.479Z","v":16269}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T22:56:09.832Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T22:56:09.832Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T22:56:09.832Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T22:56:09.832Z","v":15}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.00004551 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.0000458 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.000045655 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":64}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.00004202 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.00006188 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":"0.00005195 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T22:56:09.832Z","v":3823}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T23:11:57.606Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T23:11:57.606Z","v":"0.049 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T23:11:57.606Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T23:11:57.606Z","v":0}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T23:28:33.883Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T23:28:33.883Z","v":"0.049 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T23:28:33.883Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T23:28:33.883Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":16269}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"CTP"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.0000155 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.000048 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":"0.00003175 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T23:28:33.883Z","v":10236}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-19T23:45:18.447Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-19T23:45:18.447Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-19T23:45:18.447Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-19T23:45:18.447Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":16269}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"ENGAGE"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.00000001 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.1 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.050000005 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":20000}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.17000175 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.18198991 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":"0.17599583 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-19T23:45:18.447Z","v":681}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T00:01:51.934Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T00:01:51.934Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T00:01:51.934Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T00:01:51.934Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.00000001 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.1 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":"0.050000005 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:01:51.934Z","v":20000}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T00:18:21.047Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T00:18:21.047Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T00:18:21.047Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T00:18:21.047Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.17000208 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.18198973 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":"0.175995905 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:18:21.047Z","v":681}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T00:34:52.067Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T00:34:52.067Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T00:34:52.067Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T00:34:52.067Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:34:52.067Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:34:52.067Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:34:52.067Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:34:52.067Z","v":16269}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T00:51:23.808Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T00:51:23.808Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T00:51:23.808Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T00:51:23.808Z","v":29}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.17000241 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.18198952 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":"0.175995965 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T00:51:23.808Z","v":681}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T01:07:52.291Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T01:07:52.291Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T01:07:52.291Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T01:07:52.291Z","v":2}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"LUV"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:07:52.291Z","v":"0.00012758 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:07:52.291Z","v":"0.008 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:07:52.291Z","v":"0.00406379 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:07:52.291Z","v":19372}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T01:24:21.416Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T01:24:21.416Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T01:24:21.416Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T01:24:21.416Z","v":63}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.00000001 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.1 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":"0.050000005 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:24:21.416Z","v":20000}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T01:40:51.133Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T01:40:51.133Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T01:40:51.133Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T01:40:51.133Z","v":25}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.00004551 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.0000458 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.000045655 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":64}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.01345 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.01529 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":"0.01437 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:40:51.133Z","v":1280}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T01:57:20.637Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T01:57:20.637Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T01:57:20.637Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T01:57:20.637Z","v":17}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"1323320.2038999 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"1334899.99999901 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":"1329110.101949455 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T01:57:20.637Z","v":87}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T02:13:50.887Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T02:13:50.887Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T02:13:50.887Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T02:13:50.887Z","v":15}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":16269}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"PAY"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00000072 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00002699 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.000013855 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":18961}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00004202 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00006188 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":"0.00005195 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:13:50.887Z","v":3823}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T02:30:22.468Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T02:30:22.468Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T02:30:22.468Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T02:30:22.468Z","v":21}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:30:22.468Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:30:22.468Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:30:22.468Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:30:22.468Z","v":16269}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T02:46:53.556Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T02:46:53.556Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T02:46:53.556Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T02:46:53.556Z","v":11}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.0303333 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.01672665 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":16269}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.1700019 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.18198883 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":"0.175995365 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T02:46:53.556Z","v":681}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T03:03:21.439Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T03:03:21.439Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T03:03:21.439Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T03:03:21.439Z","v":18}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T03:19:49.454Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T03:19:49.454Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T03:19:49.454Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T03:19:49.454Z","v":16}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.0299999 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.01655995 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":16232}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"1323320.20389979 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"1334899.99999835 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"1329110.10194907 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":87}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.0000155 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.000048 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":"0.00003175 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:19:49.454Z","v":10236}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T03:36:17.380Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T03:36:17.380Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T03:36:17.380Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T03:36:17.380Z","v":12}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.0299999 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.01655995 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":16232}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"SPORTS"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.00009056 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.00009057 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":"0.000090565 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:36:17.380Z","v":1}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T03:52:45.702Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T03:52:45.702Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T03:52:45.702Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T03:52:45.702Z","v":51}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.0299999 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.01655995 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":16232}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.0008 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":0}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.00000001 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.1 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.050000005 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":20000}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"NEOXAG"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.00078101 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":"0.000790505 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T03:52:45.702Z","v":240}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T04:09:15.841Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T04:09:15.841Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T04:09:15.841Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T04:09:15.841Z","v":15}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.00312 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.0299999 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.01655995 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":16232}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"POB"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.00578 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.00675 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":"0.006265 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T04:09:15.841Z","v":1548}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T04:25:49.115Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T04:25:49.115Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T04:25:49.115Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T04:25:49.115Z","v":21}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T04:42:20.779Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T04:42:20.779Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T04:42:20.779Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T04:42:20.779Z","v":37}
+{"a":"baseSymbol","e":"venue:hive-engine","t":"hive-engine","v":"EDS"}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T04:42:20.779Z","v":"0"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T04:42:20.779Z","v":"0"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T04:42:20.779Z","v":"0"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T04:42:20.779Z","v":0}
+{"a":"bestBid","e":"venue:hive-internal","t":"2026-06-20T04:58:53.366Z","v":"0.05 HBD"}
+{"a":"bestAsk","e":"venue:hive-internal","t":"2026-06-20T04:58:53.366Z","v":"0.05 HBD"}
+{"a":"midpoint","e":"venue:hive-internal","t":"2026-06-20T04:58:53.366Z","v":"0.05 HBD"}
+{"a":"relativeSpreadBps","e":"venue:hive-internal","t":"2026-06-20T04:58:53.366Z","v":-4}
+{"a":"bestBid","e":"venue:hive-engine","t":"2026-06-20T04:58:53.366Z","v":"0.1700018 SWAP.HIVE"}
+{"a":"bestAsk","e":"venue:hive-engine","t":"2026-06-20T04:58:53.366Z","v":"0.18198805 SWAP.HIVE"}
+{"a":"midpoint","e":"venue:hive-engine","t":"2026-06-20T04:58:53.366Z","v":"0.175994925 SWAP.HIVE"}
+{"a":"relativeSpreadBps","e":"venue:hive-engine","t":"2026-06-20T04:58:53.366Z","v":681}

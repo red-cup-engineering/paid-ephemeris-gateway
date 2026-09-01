@@ -1,0 +1,27 @@
+{
+  "id": "ruinfold",
+  "displayName": "Ruinfold",
+  "description": "A seeded-daily roguelike: everyone descends the same keep within a 24-hour UTC window, risking a five-way bilattice death model, for a leaderboard place and a satoshi payout or a gear boon for next week.",
+  "subdomain": "ruinfold",
+  "entryPoints": {
+    "browser": "/play",
+    "headless": "GET /daily[?date=], POST /runs, GET /leaderboard/:date, GET /replay/:runId, GET /boons/:player (JSON-over-HTTP; no browser required)"
+  },
+  "seedPolicy": {
+    "kind": "daily-utc"
+  },
+  "intentLog": {
+    "schemaVersion": "ruinfold-v1"
+  },
+  "status": "playable",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "roguelike",
+    "daily-seed",
+    "bilattice",
+    "dungeon",
+    "leaderboard"
+  ],
+  "shelf": "Deep"
+}

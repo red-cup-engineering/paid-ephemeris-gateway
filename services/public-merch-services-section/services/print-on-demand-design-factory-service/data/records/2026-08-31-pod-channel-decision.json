@@ -1,0 +1,48 @@
+{
+  "type": "PrintOnDemandChannelDecision",
+  "recordedAt": "2026-08-31T19:20:00-05:00",
+  "decidedBy": "session (Claude), founder-ordered gimmick lane, decision made directly per standing rule (decisions not provably harming a human body are the session's to make)",
+  "decision": {
+    "productionSupplier": "Printify",
+    "salesChannel": "Printify Pop-Up Store (Printify's own hosted storefront), shop name \"Fine Print Mercantile\"",
+    "rejected": ["Redbubble (direct)", "TeePublic (direct)", "Printful as supplier", "Etsy as the primary channel"]
+  },
+  "criteria": ["zero upfront cost", "no professional identity requirement beyond individual KYC", "agent-automatable listing pipeline", "where meme/niche text-design buyers actually are"],
+  "evidence": [
+    {
+      "finding": "Printify exposes a documented, authenticated REST API (developers.printify.com) for shops, artwork uploads, product/variant creation, and a two-step publish flow -- true headless automation, no browser scripting.",
+      "source": "developers.printify.com; printify.com/blog/20-listings-1-click-how-the-printify-api-makes-toms-life-easier/; ultrathink.art/blog/printify-api-programmatic-products"
+    },
+    {
+      "finding": "Redbubble has NO official API as of 2026; every automation route (browser extensions, Selenium/webdriver scraping, third-party tools like PodPilot/Flying Upload/MerchGhost) drives the web UI, not a supported contract -- fragile and ToS-risk-bearing, disqualifying it against the agent-automatable-pipeline criterion.",
+      "source": "github.com/jalbrekt85/Redbubble-Bot; automation-docs.lazymerch.com/upload/redbubble; podpilot.space"
+    },
+    {
+      "finding": "TeePublic likewise has no seller-facing API for bulk automation; its upload path is the same browser-driven third-party-tool category as Redbubble.",
+      "source": "merchtitans.com/blog/teepublic-vs-redbubble; earnifyhub.com/blog/redbubble-vs-teepublic.php"
+    },
+    {
+      "finding": "Printify's own Pop-Up Store is free to open (no monthly fee, no setup fee, no listing fee -- you only pay the per-order base cost), requires no separate marketplace seller account, and needs only a one-time Stripe verification (identity, not a business license or professional credential) to receive payouts. This is the single account-plus-identity-action the outcome asked for.",
+      "source": "printify.com/pop-up-store/; podvector.ai/articles/printify/costs-and-charges/printify-pop-up-store-free-full-breakdown-for-pod-sellers"
+    },
+    {
+      "finding": "Etsy remains viable as a second channel later (Printify can push to a connected Etsy shop through the same API), but Etsy itself requires its own seller registration with legal name, address, and SSN/ITIN for Etsy Payments -- a second identity step on top of Printify's, so it is not the leanest path to the stated single-signup outcome. Etsy does NOT require an LLC/EIN/business license for a sole proprietor, so it stays a credible fallback/expansion channel, not the primary.",
+      "source": "help.etsy.com/hc/en-us/articles/360001980067; nifty.ai/post/do-you-need-an-llc-to-sell-on-etsy"
+    },
+    {
+      "finding": "Printify's base costs and product range beat Printful's for margin-sensitive meme/niche SKUs (Printify multi-provider sourcing keeps Bella+Canvas 3001 base cost lower per PodVector's 2026 breakdown), while a common professional pattern is 'Printify to test, Printful to finish premium SKUs' -- irrelevant to a zero-upfront-cost constraint, so Printify wins outright at this stage.",
+      "source": "mydesigns.io/blog/printify-vs-printful/; podvector.ai/articles/printify/costs-and-charges/printify-bella-canvas-3001-base-cost-2025-full-breakdown-for-pod-sellers"
+    },
+    {
+      "finding": "Meme/niche text-design buyers concentrate on exactly the marketplaces already covered by this decision (Etsy searches like 'programmers meme', 'geek memes shirt' return live listing volume; TikTok/tech-meme volume cited at 59.7M posts) -- evergreen relatable-humor sub-niches (coding, cat, gym, teacher, plant-parent humor) outlast single-meme trend risk and are exactly what the corpus targets.",
+      "source": "etsy.com/market/programmers_meme; etsy.com/market/geek_memes_shirt; trendlytic.io/blog/meme-shirts; printify.com/blog/t-shirt-niches/"
+    }
+  ],
+  "pricingResearch": {
+    "shirt": { "printifyBaseCostRangeUsd": "8.77-10.98 (Bella+Canvas 3001, size M, free-plan to premium-plan)", "recommendedRetailUsd": 21.99, "source": "podvector.ai bella-canvas-3001 base cost breakdown" },
+    "mug": { "printifyBaseCostRangeUsd": "5.75-8.25 (11oz ceramic, provider-dependent)", "recommendedRetailUsd": 15.99, "source": "podvector.ai printify mug cost breakdown" },
+    "sticker": { "printifyBaseCostRangeUsd": "1.20-2.80", "recommendedRetailUsd": 4.49, "source": "podvector.ai sticker pricing breakdown" },
+    "payoutFee": "Pop-Up Store checkout runs through Stripe: 2.9% + $0.30 per transaction; no separate Printify or Etsy listing fee in this channel."
+  },
+  "limits": "Retail prices are recommendations set against cited comparables, not measured live sales; no account was created and no price was tested against real buyer conversion. Etsy figures cited for context/fallback only -- Etsy is not the chosen primary channel."
+}

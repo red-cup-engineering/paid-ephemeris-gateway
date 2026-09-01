@@ -1,0 +1,864 @@
+{
+ "wingId": "equivo",
+ "rooms": [
+  {
+   "id": "unit-1-the-descent/00-welcome.md",
+   "wingId": "equivo",
+   "title": "The Descent",
+   "aliases": [],
+   "kind": "overview",
+   "body": "\nEquivo teaches one thing: how to observe equivalence by measuring obstruction. Not as a slogan —\nas a real, four-stage computation you will run by hand, on real scenarios, checked by real code,\nevery single time.\n\n## The four-stage descent\n\nEvery unit in this course walks the same pipeline:\n\n1. **articulate** — witness a raw thing (a claim, an observation, a scenario) into a *potential*:\n   two atoms, distinguished. This is the smallest possible move — pointing at something and\n   pointing at something-said-about-it, and refusing to conflate the two.\n2. **predicate** — relate what you distinguished. The two atoms become a *cell*: subject,\n   predicate, object. This is where a bare pair of things becomes a claim with structure — a\n   relation you can actually check.\n3. **posit** — measure the cell. Assign it a charge from one of four values: **absurd**,\n   **potential**, **active**, **stable**. This is where evidence enters — a charge is never\n   asserted for free, it is read off what the cell has actually been given.\n4. **settle** — let the whole system relax to its fixed point. Individual charges combine,\n   propagate, and settle — the way a stack of local claims either resolves into one coherent\n   picture, or doesn't.\n\nWhat comes out the other end of `settle` is either **equivalent** — everything you distinguished\ncollapses to one consistent reading — or **obstructed** — there's a genuine leftover, a piece that\nrefuses to resolve no matter how you turn it. That leftover has a name: **H¹**, the first\ncohomology. When H¹ is zero, nothing is obstructed. When it isn't, you have found something real:\nnot a mistake, not noise — an actual invariant of the situation that no amount of local patching\nwill make go away.\n\nThis is not a metaphor laid over ordinary quiz questions. Every exercise in this course runs the\nreal functions — `articulate`, `predicate`, `posit`, `settle`, and the cohomology reader that\ncomputes H⁰ and H¹ off an actual graph you built. When you submit an answer, the checker doesn't\ncompare it to an author's pre-written \"correct\" string. It runs the same computation you just\ntried to predict, and compares your answer to what the computation actually returned. If the\ncorpus content is ever wrong, the checker catches it too — there is only one source of truth here,\nand it's the math, not a lesson author's opinion.\n\n## What you'll do in this unit\n\nFive short lessons, each one stage of the descent, each with real graded exercises:\n\n- **Marks and Utterances** — distinguishing (articulate)\n- **Relating Cells** — relating (predicate)\n- **Measuring Charge** — measuring (posit + settle)\n- **Settling Equivalence** — reading H⁰, the equivalence question\n- **Observing Regimes** — reading H¹, the obstruction question\n- **Reading Obstruction** — putting all five stages together\n\nEach lesson locks the next until you clear its exercises — not because the platform is stingy, but\nbecause each stage is genuinely built on the last: you cannot measure a charge you haven't related,\nand you cannot read an obstruction in a relation you haven't settled.\n\nMultiple lenses are available for how this vocabulary is presented — obsmetrologia\n(measurement-first), semiotics (sign-first), and relationality (process-first) all describe this\nsame pipeline in their own terms, each corpus-attested rather than invented for this course. Pick\nwhichever reads most naturally to you; the underlying computation never changes.\n",
+   "frontmatter": {
+    "title": "The Descent",
+    "type": "overview",
+    "keywords": [
+     "equivo",
+     "orientation"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/01-marks-and-utterances.md",
+   "wingId": "equivo",
+   "title": "Marks and Utterances",
+   "aliases": [
+    "distinguishing token from claim"
+   ],
+   "kind": "lesson",
+   "body": "\nThe descent's first move is the smallest one: take a raw scenario and pull two things out of it\nwithout deciding anything else yet. Something is *there* — a token, a mark, a thing pointed at.\nSomething is *said about it* — a claim, a predicate-in-waiting. Keeping those two apart, cleanly,\nis what `articulate` does.\n\n```\narticulate([token, claim])  →  { potential: [token, claim] }\n```\n\nIt is deliberately not doing anything clever. It witnesses the pair — that's the whole operation.\nThe reason this deserves its own stage, rather than being folded into \"relating\" (next lesson), is\nthat conflating a token with the claim made about it is the single most common way an\nequivalence judgment goes wrong later on: you cannot ask \"are these the same?\" honestly until you\nknow which part of what you're looking at is the thing, and which part is the assertion about the\nthing.\n\n**A scenario**: a 3-3 stone is played directly in a corner. The *token* is the stone itself — a\nconcrete move, on the board, right now. The *claim* is what that move asserts: a corner invasion,\nterritory not yet settled. Distinguish them, and you can go on to ask whether the claim is\nwarranted. Conflate them, and every later question about whether the position \"is\" a corner\ninvasion becomes unanswerable, because you never separated the move from the assertion in the\nfirst place.\n\nEvery exercise below runs the real `articulate` function on the scenario's utterance and checks\nyour answer against what it actually returns — not against a pre-written key.\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"distinguish\",\n    \"prompt\": \"A 3-3 stone is played, asserting a corner-invasion. What are the token and the claim, in order?\",\n    \"utterance\": [\"3-3 stone\", \"corner-invasion\"]\n  },\n  {\n    \"kind\": \"distinguish\",\n    \"prompt\": \"A witness takes the stand and asserts the defendant was present. What are the token and the claim, in order?\",\n    \"utterance\": [\"a witness statement\", \"the defendant was present\"]\n  },\n  {\n    \"kind\": \"distinguish\",\n    \"prompt\": \"An unreviewed manuscript is submitted, asserting it has reached peer consensus. What are the token and the claim, in order?\",\n    \"utterance\": [\"an unreviewed manuscript\", \"peer-consensus\"]\n  }\n]\n```\n\nNotice the pattern: in every case, `articulate` hands back exactly the pair you gave it, in order\n— it never reorders, never infers which side is \"really\" the subject. That's intentional. Deciding\nwhich atom plays which role in a relation is the *next* stage's job, not this one's. Getting this\nstage right is entirely about resisting the urge to skip ahead — do not try to judge whether the\nclaim is true yet. That question doesn't even make sense until **Relating Cells**\ngives the claim somewhere to land.\n\nOne preview, before you move on — the next stage in one bite, so you've already seen its shape\nbefore the next lesson names it formally:\n\n```equivo-exercise\n{\n  \"kind\": \"relate\",\n  \"prompt\": \"Preview: a photograph is taken, asserting the bridge was still standing yesterday. Relate this scenario into its cell -- what are the resulting entities and predicates?\",\n  \"utterance\": [\"a photograph\", \"the bridge was still standing yesterday\"]\n}\n```\n",
+   "frontmatter": {
+    "title": "Marks and Utterances",
+    "type": "lesson",
+    "requires": [
+     "00-welcome.md"
+    ],
+    "teaches": [
+     "distinguishing token from claim"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "distinguish"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/02-relating-cells.md",
+   "wingId": "equivo",
+   "title": "Relating Cells",
+   "aliases": [
+    "building a subject/predicate/object cell from a token and a claim"
+   ],
+   "kind": "lesson",
+   "body": "\nNow that a scenario is distinguished into a token and a claim, the second stage gives that pair\nsomewhere to *live*: a **cell**. A cell is a subject/predicate/object triple — the shape every\nrelation in this course is ultimately built from. `predicate` reads the potential you articulated\nand produces the cell-set Φ = E × Π × E: an **entity set** (drawn from the token) and a\n**predicate set** (drawn from the claim).\n\n```\npredicate({ potential: [token, claim] })\n  →  { \"cell-set\": { entity-set: { entities: [token] }, predicate-set: { predicates: [claim] } }, ... }\n```\n\nFor a single bare utterance, this produces exactly one entity and one predicate — the token\nbecomes the entity set's sole member, the claim becomes the predicate set's sole member. That's\nnot a simplification for teaching purposes; it's what the real function does with a single\nscenario. Richer relations (several entities, several claims tying them together) are what the\n**next lesson** starts to measure, and what\n**Settling Equivalence** reads whole graphs of.\n\n**Continuing the corner-invasion scenario**: the 3-3 stone (token) and the corner-invasion claim\ndistinguished last lesson relate into a cell whose entity set is `[\"3-3 stone\"]` and whose\npredicate set is `[\"corner-invasion\"]`. Nothing has been measured yet — you don't yet know whether\nthe claim holds. You've only given it a structural home to be measured *in*.\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"relate\",\n    \"prompt\": \"Relate the 3-3-stone scenario into its cell. What are the resulting entities and predicates?\",\n    \"utterance\": [\"3-3 stone\", \"corner-invasion\"]\n  },\n  {\n    \"kind\": \"relate\",\n    \"prompt\": \"A fossil layer is found, asserting the site predates the eruption. Relate it into its cell: entities and predicates?\",\n    \"utterance\": [\"a fossil layer\", \"the site predates the eruption\"]\n  },\n  {\n    \"kind\": \"relate\",\n    \"prompt\": \"An unrepeated experiment asserts its effect is real. Relate it into its cell: entities and predicates?\",\n    \"utterance\": [\"an unrepeated experiment\", \"the effect is real\"]\n  }\n]\n```\n\nA useful check on your own understanding, not graded here: notice that `predicate` never\nevaluates whether the claim is *warranted* — it only builds the structure a later stage will\nmeasure. A cell can hold a claim that turns out false just as readily as one that turns out true;\nrelating is purely about shape, not verdict. The verdict is next.\n\nA quick review before you go on — the stage before this one, on a fresh scenario, to keep it warm:\n\n```equivo-exercise\n{\n  \"kind\": \"distinguish\",\n  \"prompt\": \"Review: a sworn affidavit asserts the signature is authentic. What are the token and the claim, in order?\",\n  \"utterance\": [\"a sworn affidavit\", \"the signature is authentic\"]\n}\n```\n",
+   "frontmatter": {
+    "title": "Relating Cells",
+    "type": "lesson",
+    "requires": [
+     "01-marks-and-utterances.md"
+    ],
+    "teaches": [
+     "building a subject/predicate/object cell from a token and a claim"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "relate"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md",
+   "wingId": "equivo",
+   "title": "Measuring Charge",
+   "aliases": [
+    "assigning a FOUR-value bilattice charge from evidence"
+   ],
+   "kind": "lesson",
+   "body": "\nA cell exists; now it gets **measured**. `posit` reads the evidence a cell has actually been\ngiven and assigns it a **charge** — one of four values, the bilattice's own vocabulary:\n\n| Charge | Knowledge bit | Truth bit | Meaning |\n|---|---|---|---|\n| **absurd** | false | false | nothing asserted either way |\n| **potential** | true | false | asserted, not yet confirmed |\n| **active** | false | true | confirmed, not yet asserted with a positive witness |\n| **stable** | true | true | asserted *and* confirmed — both bits lit |\n\nThe key discipline here, and the reason this stage is called *measuring* rather than *deciding*:\n`posit` never lets you stamp a value for free. It reads the charge off the evidence the cell\nactually carries — for a single freshly-related cell with exactly one witness (the token itself),\nthat evidence supports **potential**, and nothing more. The claim has been made — that's real, and\nit's what the knowledge bit records. But nothing yet confirms it — no second, independent witness\nhas weighed in — so the truth bit stays unlit. This isn't a limitation of the exercise; it's what\none piece of evidence, honestly measured, actually earns. A single sensor reading, one favorable\nreview, one rumor, one data point — each of these makes a real claim (potential), but none of them\nalone is enough to call the claim confirmed (stable). Confirming a claim takes a second,\nindependent source settling into agreement with the first — which is exactly what\n**Settling Equivalence** starts to measure across *multiple* related\ncells at once, not just one.\n\n`settle` then runs this charge to its fixed point. For a single cell with no other cell to join or\nmeet against, the fixed point is the charge it started at — there's nothing yet for it to settle\n*into*. This is worth predicting correctly precisely because it's tempting to overclaim: seeing\n\"the bridge is structurally sound\" asserted feels like it should count for something stronger than\npotential. The measurement says otherwise, honestly, every time — and the checker below runs the\nreal computation, not a lesson author's intuition about how confident the scenario \"sounds.\"\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"measure\",\n    \"prompt\": \"A single sensor reading claims the bridge is structurally sound. What charge does this cell settle to — as a [knowledge, truth] pair?\",\n    \"utterance\": [\"a single sensor reading\", \"the bridge is structurally sound\"]\n  },\n  {\n    \"kind\": \"measure\",\n    \"prompt\": \"One favorable review claims the paper is correct. What charge does this cell settle to?\",\n    \"utterance\": [\"one favorable review\", \"the paper is correct\"]\n  },\n  {\n    \"kind\": \"measure\",\n    \"prompt\": \"A rumor claims the merger is happening. What charge does this cell settle to?\",\n    \"utterance\": [\"a rumor\", \"the merger is happening\"]\n  },\n  {\n    \"kind\": \"measure\",\n    \"prompt\": \"A single data point claims the trend is real. What charge does this cell settle to?\",\n    \"utterance\": [\"a single data point\", \"the trend is real\"]\n  }\n]\n```\n\nIf you predicted **stable** for any of these, look again at what evidence the cell was actually\ngiven: one witness, asserting, with nothing yet confirming it independently. That gap — between\nwhat feels confirmed and what the measurement actually supports — is the entire reason a\nDuolingo-for-mathematics course exists at all: the discipline is learnable, and it's learnable\nspecifically because the checker never grades on vibes.\n\nA quick review of the previous stage before you move on, relating one more scenario into its cell:\n\n```equivo-exercise\n{\n  \"kind\": \"relate\",\n  \"prompt\": \"Review: a soil sample is taken, asserting the field was flooded last spring. Relate it into its cell -- entities and predicates?\",\n  \"utterance\": [\"a soil sample\", \"the field was flooded last spring\"]\n}\n```\n",
+   "frontmatter": {
+    "title": "Measuring Charge",
+    "type": "lesson",
+    "requires": [
+     "02-relating-cells.md"
+    ],
+    "teaches": [
+     "assigning a FOUR-value bilattice charge from evidence"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "measure"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md",
+   "wingId": "equivo",
+   "title": "Settling Equivalence",
+   "aliases": [
+    "reading H0 (equivalence classes) off a relation's own connectivity"
+   ],
+   "kind": "lesson",
+   "body": "\nEvery relation you've built so far has had one cell. This lesson is where things get genuinely\ninteresting: a **relation** is a whole list of cells — subject/predicate/object triples — and the\nquestion \"are these entities equivalent?\" becomes a question about the *shape* of that list, not\nabout any single cell in isolation.\n\nRead a relation's cells as a directed graph: each cell `(subject, predicate, object)` is an edge\n`subject → object`. From that graph alone, `cohomologyOfRelation` builds the cellular cochain\ncomplex\n\n```\nC⁰ = ℤ^entities  --δ⁰-->  C¹ = ℤ^cells\n```\n\nand reads its cohomology **combinatorially** — no linear algebra, no matrix rank, just\nunion–find over the entities:\n\n- **H⁰** — the 0-cocycles, functions that stay constant on every edge. A function like this is\n  exactly one that's constant on each connected component, so **H⁰'s rank equals the number of\n  connected components**. Rank 1 means the whole relation collapses to one equivalence class —\n  everything really is the same thing, by the relation's own evidence. Rank 2 or more means it\n  splits into that many separate classes.\n- **H¹** — the leftover. Its rank is `|cells| − |entities| + (number of components)`, the first\n  Betti number. A tree-shaped relation (however large) always has H¹ = 0: every edge is exactly\n  as needed to connect its component, nothing more. A relation with a genuine **cycle** — a path\n  that returns to where it started through more than one route — has H¹ ≠ 0: an obstruction, a\n  real leftover that no local patch removes, because it's a structural fact about the graph\n  itself.\n\nThis is the headline computation of the whole course. \"Equivalent\" **is** H⁰ = 1. \"Obstructed\" is\nH¹ ≠ 0. Neither is a metaphor — both are read off a real graph, by a real algorithm, every time.\n\n**Worked example**: the relation `A —equivalent-to→ B`, `B —equivalent-to→ C` is a simple chain —\nthree entities, two edges, one component. H⁰ rank 1 (equivalent), H¹ rank 0 (no cycle, no\nobstruction). Change the second edge to `C —equivalent-to→ D` instead of reusing `B`, and you get\ntwo disjoint pairs — four entities split into two components. H⁰ rank 2: **not** equivalent, by\nthe relation's own structure, regardless of what anyone intended when writing it down.\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"A relates to B, B relates to C (a chain). Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"B\", \"predicate\": \"equivalent-to\", \"object\": \"C\" }\n    ]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"A relates to B, and separately C relates to D. Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"C\", \"predicate\": \"equivalent-to\", \"object\": \"D\" }\n    ]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"Three separate pairs: A-B, C-D, E-F, none touching each other. Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"C\", \"predicate\": \"equivalent-to\", \"object\": \"D\" },\n      { \"subject\": \"E\", \"predicate\": \"equivalent-to\", \"object\": \"F\" }\n    ]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"A hub relates to three separate leaves (a star). Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"hub\", \"predicate\": \"equivalent-to\", \"object\": \"leaf1\" },\n      { \"subject\": \"hub\", \"predicate\": \"equivalent-to\", \"object\": \"leaf2\" },\n      { \"subject\": \"hub\", \"predicate\": \"equivalent-to\", \"object\": \"leaf3\" }\n    ]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"A relates to B, B relates to C, and C relates back to A -- a genuine cycle. Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"B\", \"predicate\": \"equivalent-to\", \"object\": \"C\" },\n      { \"subject\": \"C\", \"predicate\": \"equivalent-to\", \"object\": \"A\" }\n    ]\n  }\n]\n```\n\nA quick review of the previous stage before that last exercise settles in your memory --\nmeasuring one more cell, freshly related:\n\n```equivo-exercise\n{\n  \"kind\": \"measure\",\n  \"prompt\": \"Review: one lab result claims the compound is safe. What charge does this cell settle to?\",\n  \"utterance\": [\"one lab result\", \"the compound is safe\"]\n}\n```\n\nLook closely at the last of the settle exercises once you've cleared it: the cycle **is** one equivalence class\n(H⁰ rank 1 — every entity is still reachable from every other) *and* it carries a nonzero H¹. Being\nequivalent and being obstructed are not opposites — a relation can settle to a single class while\nstill carrying a genuine leftover the class-count alone doesn't see. That distinction is exactly\nwhat **Observing Regimes** makes central.\n",
+   "frontmatter": {
+    "title": "Settling Equivalence",
+    "type": "lesson",
+    "requires": [
+     "03-measuring-charge.md"
+    ],
+    "teaches": [
+     "reading H0 (equivalence classes) off a relation's own connectivity"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "settle"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md",
+   "wingId": "equivo",
+   "title": "Observing Regimes",
+   "aliases": [
+    "classifying a settling's regime and reading whether its H1 vanishes"
+   ],
+   "kind": "lesson",
+   "body": "\nSettling Equivalence read H⁰/H¹ off a *static* relation — a finished graph, all at once. This\nlesson reads a different, complementary structure: a **settling** — a relation as it accumulates\n*over time*, stage by stage, where each stage designates a cumulative set of cells and knowledge\nonly ever grows, never shrinks.\n\nSome stages are ordinary **successor** stages — the next tick after the last one. Some are\n**limit** stages — a stage reached only by taking the union of everything before it, not by a\nsingle predecessor. This distinction is the entire content of this lesson: a cell that first\nappears at a limit stage was not obtainable from *any* finite sub-stage on its own. That's a\ngenuinely different way for something to become true than \"it followed from the previous step,\"\nand the settling's own cohomology tracks the difference exactly.\n\n**The four regimes**, read directly off a settling's firing structure:\n\n- **finite** — no limit stage at all. Everything accumulates by ordinary successor steps. H¹ = 0,\n  always — there's nothing a finite process can leave obstructed in this sense.\n- **scott** — there is a limit stage, but nothing new fires exactly at it (everything the limit\n  stage \"contains\" was already reachable from stages before it — a Scott-continuous closure). Still\n  H¹ = 0: the limit didn't contribute anything the finite stages hadn't already earned.\n  \\[Named for the same limit-preserving\\-functions-are-what-matter idea as domain theory's\n  Scott-continuity — the closure behaves as if the limit were redundant, because here it is.\\]\n- **transfinite** — something genuinely new fires *at* the limit stage itself — a cell reachable\n  from no finite sub-stage. H¹ ≠ 0: each such cell is its own generator of the obstruction, a\n  leftover no successor step could have produced on its own.\n- **aperiodic** — a settling explicitly declared to keep firing cofinally through an *uncountable*\n  sequence of limit stages, never actually stabilizing. H¹ ≠ 0 and never vanishes, by\n  construction — this is the deepest regime the classifier recognizes, one only a declared\n  (not merely observed) cofinal firing pattern reaches.\n\n`classify` reads a settling's **depth** (the last stage anything fires, its closure ordinal) and\nits **regime** (which of the four above). `h1` reads the count of cells that fired *exactly* at a\nlimit stage — the settling's own obstruction, read off its temporal firing structure rather than a\nstatic graph's connectivity (Settling Equivalence's reading and this lesson's reading are two\ndifferent, complementary cohomologies of two different objects — a static relation versus a\ntemporal accumulation — and it's a genuinely interesting fact, not a coincidence, that both are\ncalled H¹).\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling adds one cell per stage with no limit stage at all: {a}, {a,b}, {a,b,c}. What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"b\"] },\n      { \"designated\": [\"a\", \"b\", \"c\"] }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling reaches a limit stage where nothing new fires (everything was already there), then one more successor stage adds a cell: {a}, {a,b}, {a,b} (limit), {a,b,c}. What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"b\"] },\n      { \"designated\": [\"a\", \"b\"], \"limit\": true },\n      { \"designated\": [\"a\", \"b\", \"c\"] }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling's very next stage is a limit stage, and a new cell fires exactly there: {a}, then {a,c} (limit). What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"c\"], \"limit\": true }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling grows normally, then TWO new cells fire simultaneously at a limit stage: {a}, {a,b}, {a,b,c,d} (limit, c and d both first appear here). What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"b\"] },\n      { \"designated\": [\"a\", \"b\", \"c\", \"d\"], \"limit\": true }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling is explicitly declared to keep firing cofinally through an uncountable sequence of limit stages -- {a}, then {a,z} (limit), never stabilizing. What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"z\"], \"limit\": true }\n    ],\n    \"opts\": { \"cofinal\": \"uncountable\" }\n  }\n]\n```\n\nA quick review of the previous, static reading before you move on -- one more relation to settle,\nto keep the H⁰ question sharp alongside this lesson's temporal H¹ question:\n\n```equivo-exercise\n{\n  \"kind\": \"settle\",\n  \"prompt\": \"Review: P relates to Q, and separately R relates to S. Does this settle to one equivalence class?\",\n  \"cells\": [\n    { \"subject\": \"P\", \"predicate\": \"equivalent-to\", \"object\": \"Q\" },\n    { \"subject\": \"R\", \"predicate\": \"equivalent-to\", \"object\": \"S\" }\n  ]\n}\n```\n\nPay particular attention to observe exercise 4 once you've cleared it: two cells firing at the *same*\nlimit stage each count as their own generator — H¹ rank comes out **2**, not 1, even though it's\ntempting to think of \"one limit stage\" as \"one obstruction.\" That's not a rounding quirk; it's the\nfree abelian group on the newly-designated cells, counted exactly. A computation that surprises a\nnaive expectation like this is exactly the kind of evidence that the classifier is really running,\nnot narrating a pre-decided story.\n",
+   "frontmatter": {
+    "title": "Observing Regimes",
+    "type": "lesson",
+    "requires": [
+     "04-settling-equivalence.md"
+    ],
+    "teaches": [
+     "classifying a settling's regime and reading whether its H1 vanishes"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "observe"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "wingId": "equivo",
+   "title": "Reading Obstruction",
+   "aliases": [
+    "putting all five stages of the descent together on new scenarios"
+   ],
+   "kind": "lesson",
+   "body": "\nYou've now run every stage of the descent by hand at least once: articulate a scenario into a\npotential, relate it into a cell, measure the cell's charge, settle a relation and read H⁰ off its\ncomponents, and observe a settling's regime and H¹ off its firing structure. This lesson doesn't\nteach anything new — it asks you to recognize which reading a fresh scenario calls for, and run it\ncorrectly, without the lesson telling you in advance which stage you're in.\n\nThat recognition is the actual skill \"observing equivalence by measuring obstruction\" names. It\nisn't one computation — it's knowing, from a scenario alone, whether the honest next move is to\nmeasure a charge, settle a relation, or classify a regime, and then actually running that\ncomputation rather than guessing at its shape.\n\n**A charge to measure**: a single eyewitness claims the light was red. One witness, one claim —\nyou've seen this shape three times now.\n\n**A relation to settle**: four entities in a straight chain, A through D, each equivalent to the\nnext. No branching, no cycle back.\n\n**A relation to settle, with a twist**: two separate triangles — A/B/C cycling back to A, and,\nindependently, D/E/F cycling back to D. Two disjoint components, each one carrying its own cycle.\n\n**A settling to observe, plain**: four ordinary successor stages, no limit anywhere.\n\n**A settling to observe, with real structure**: a settling that reaches a limit stage where\nnothing fires (a Scott closure — don't be fooled into calling this transfinite just because it\ntouched a limit stage at all), grows one more ordinary step, and *then* fires something new at a\nsecond limit stage.\n\n```equivo-exercise\n[\n  {\n    \"kind\": \"measure\",\n    \"prompt\": \"A single eyewitness claims the light was red. What charge does this cell settle to?\",\n    \"utterance\": [\"a single eyewitness\", \"the light was red\"]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"A-B-C-D in a straight chain, each equivalent to the next. Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"B\", \"predicate\": \"equivalent-to\", \"object\": \"C\" },\n      { \"subject\": \"C\", \"predicate\": \"equivalent-to\", \"object\": \"D\" }\n    ]\n  },\n  {\n    \"kind\": \"settle\",\n    \"prompt\": \"Two separate triangles: A-B-C cycling back to A, and independently D-E-F cycling back to D. Does this settle to one equivalence class?\",\n    \"cells\": [\n      { \"subject\": \"A\", \"predicate\": \"equivalent-to\", \"object\": \"B\" },\n      { \"subject\": \"B\", \"predicate\": \"equivalent-to\", \"object\": \"C\" },\n      { \"subject\": \"C\", \"predicate\": \"equivalent-to\", \"object\": \"A\" },\n      { \"subject\": \"D\", \"predicate\": \"equivalent-to\", \"object\": \"E\" },\n      { \"subject\": \"E\", \"predicate\": \"equivalent-to\", \"object\": \"F\" },\n      { \"subject\": \"F\", \"predicate\": \"equivalent-to\", \"object\": \"D\" }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"Four ordinary successor stages, no limit anywhere: {a}, {a,b}, {a,b,c}, {a,b,c,d}. What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"b\"] },\n      { \"designated\": [\"a\", \"b\", \"c\"] },\n      { \"designated\": [\"a\", \"b\", \"c\", \"d\"] }\n    ]\n  },\n  {\n    \"kind\": \"observe\",\n    \"prompt\": \"A settling reaches a limit stage where nothing fires, takes one more ordinary step, then fires something new at a SECOND limit stage: {a}, {a,b}, {a,b} (limit, nothing new), {a,b,c}, {a,b,c,d} (limit, d is new). What regime, and does H1 vanish?\",\n    \"stages\": [\n      { \"designated\": [\"a\"] },\n      { \"designated\": [\"a\", \"b\"] },\n      { \"designated\": [\"a\", \"b\"], \"limit\": true },\n      { \"designated\": [\"a\", \"b\", \"c\"] },\n      { \"designated\": [\"a\", \"b\", \"c\", \"d\"], \"limit\": true }\n    ]\n  }\n]\n```\n\nThat last exercise is the whole course in one scenario: touching a limit stage is not, by itself,\nan obstruction — the settling passes clean through its first limit with nothing new, exactly as\nthe \"scott\" regime describes, and only the *second* limit, where a genuinely new cell fires, earns\nthe transfinite classification and a nonzero H¹. Equivalence and obstruction are both read off\nwhat actually happened in the structure, never off which stage merely *touched* a limit ordinal.\n\nIf you cleared all five, you've completed a real pass through Equivo's core loop — not once, but\nacross three progressively harder readings of it. The obstruction you measured in the two-triangle\nexercise and the transfinite settling above aren't different phenomena wearing the same name by\ncoincidence: both are genuine leftovers, read off real structure, that no amount of local patching\nresolves. That's what \"obstruction\" means here, every time.\n",
+   "frontmatter": {
+    "title": "Reading Obstruction",
+    "type": "lesson",
+    "requires": [
+     "05-observing-regimes.md"
+    ],
+    "teaches": [
+     "putting all five stages of the descent together on new scenarios"
+    ],
+    "keywords": [
+     "equivo",
+     "descent",
+     "capstone"
+    ],
+    "date-created": "2026-08-20",
+    "authors": [
+     "claude-fable-5"
+    ]
+   },
+   "dateCreated": "2026-08-20"
+  }
+ ],
+ "doors": [
+  {
+   "from": "unit-1-the-descent/00-welcome.md",
+   "to": "unit-1-the-descent/01-marks-and-utterances.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Marks and Utterances\" via frontmatter field \"requires\""
+  },
+  {
+   "from": "unit-1-the-descent/01-marks-and-utterances.md",
+   "to": "unit-1-the-descent/02-relating-cells.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Relating Cells\" via frontmatter field \"requires\""
+  },
+  {
+   "from": "unit-1-the-descent/02-relating-cells.md",
+   "to": "unit-1-the-descent/03-measuring-charge.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Measuring Charge\" via frontmatter field \"requires\""
+  },
+  {
+   "from": "unit-1-the-descent/03-measuring-charge.md",
+   "to": "unit-1-the-descent/04-settling-equivalence.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Settling Equivalence\" via frontmatter field \"requires\""
+  },
+  {
+   "from": "unit-1-the-descent/04-settling-equivalence.md",
+   "to": "unit-1-the-descent/05-observing-regimes.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Observing Regimes\" via frontmatter field \"requires\""
+  },
+  {
+   "from": "unit-1-the-descent/05-observing-regimes.md",
+   "to": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "weight": "hard",
+   "reason": "declared as a prerequisite of \"Reading Obstruction\" via frontmatter field \"requires\""
+  }
+ ],
+ "halls": [
+  {
+   "id": "hall:0",
+   "intent": [
+    "type:lesson"
+   ],
+   "rooms": [
+    "unit-1-the-descent/01-marks-and-utterances.md",
+    "unit-1-the-descent/02-relating-cells.md",
+    "unit-1-the-descent/03-measuring-charge.md",
+    "unit-1-the-descent/04-settling-equivalence.md",
+    "unit-1-the-descent/05-observing-regimes.md",
+    "unit-1-the-descent/06-capstone-reading-obstruction.md"
+   ],
+   "stable": false
+  }
+ ],
+ "exercises": [
+  {
+   "id": "unit-1-the-descent/01-marks-and-utterances.md#distinguish#0",
+   "roomId": "unit-1-the-descent/01-marks-and-utterances.md",
+   "kind": "distinguish",
+   "spec": {
+    "utterance": [
+     "3-3 stone",
+     "corner-invasion"
+    ]
+   },
+   "prompt": "A 3-3 stone is played, asserting a corner-invasion. What are the token and the claim, in order?"
+  },
+  {
+   "id": "unit-1-the-descent/01-marks-and-utterances.md#distinguish#1",
+   "roomId": "unit-1-the-descent/01-marks-and-utterances.md",
+   "kind": "distinguish",
+   "spec": {
+    "utterance": [
+     "a witness statement",
+     "the defendant was present"
+    ]
+   },
+   "prompt": "A witness takes the stand and asserts the defendant was present. What are the token and the claim, in order?"
+  },
+  {
+   "id": "unit-1-the-descent/01-marks-and-utterances.md#distinguish#2",
+   "roomId": "unit-1-the-descent/01-marks-and-utterances.md",
+   "kind": "distinguish",
+   "spec": {
+    "utterance": [
+     "an unreviewed manuscript",
+     "peer-consensus"
+    ]
+   },
+   "prompt": "An unreviewed manuscript is submitted, asserting it has reached peer consensus. What are the token and the claim, in order?"
+  },
+  {
+   "id": "unit-1-the-descent/01-marks-and-utterances.md#relate#0",
+   "roomId": "unit-1-the-descent/01-marks-and-utterances.md",
+   "kind": "relate",
+   "spec": {
+    "utterance": [
+     "a photograph",
+     "the bridge was still standing yesterday"
+    ]
+   },
+   "prompt": "Preview: a photograph is taken, asserting the bridge was still standing yesterday. Relate this scenario into its cell -- what are the resulting entities and predicates?"
+  },
+  {
+   "id": "unit-1-the-descent/02-relating-cells.md#relate#0",
+   "roomId": "unit-1-the-descent/02-relating-cells.md",
+   "kind": "relate",
+   "spec": {
+    "utterance": [
+     "3-3 stone",
+     "corner-invasion"
+    ]
+   },
+   "prompt": "Relate the 3-3-stone scenario into its cell. What are the resulting entities and predicates?"
+  },
+  {
+   "id": "unit-1-the-descent/02-relating-cells.md#relate#1",
+   "roomId": "unit-1-the-descent/02-relating-cells.md",
+   "kind": "relate",
+   "spec": {
+    "utterance": [
+     "a fossil layer",
+     "the site predates the eruption"
+    ]
+   },
+   "prompt": "A fossil layer is found, asserting the site predates the eruption. Relate it into its cell: entities and predicates?"
+  },
+  {
+   "id": "unit-1-the-descent/02-relating-cells.md#relate#2",
+   "roomId": "unit-1-the-descent/02-relating-cells.md",
+   "kind": "relate",
+   "spec": {
+    "utterance": [
+     "an unrepeated experiment",
+     "the effect is real"
+    ]
+   },
+   "prompt": "An unrepeated experiment asserts its effect is real. Relate it into its cell: entities and predicates?"
+  },
+  {
+   "id": "unit-1-the-descent/02-relating-cells.md#distinguish#0",
+   "roomId": "unit-1-the-descent/02-relating-cells.md",
+   "kind": "distinguish",
+   "spec": {
+    "utterance": [
+     "a sworn affidavit",
+     "the signature is authentic"
+    ]
+   },
+   "prompt": "Review: a sworn affidavit asserts the signature is authentic. What are the token and the claim, in order?"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md#measure#0",
+   "roomId": "unit-1-the-descent/03-measuring-charge.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "a single sensor reading",
+     "the bridge is structurally sound"
+    ]
+   },
+   "prompt": "A single sensor reading claims the bridge is structurally sound. What charge does this cell settle to — as a [knowledge, truth] pair?"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md#measure#1",
+   "roomId": "unit-1-the-descent/03-measuring-charge.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "one favorable review",
+     "the paper is correct"
+    ]
+   },
+   "prompt": "One favorable review claims the paper is correct. What charge does this cell settle to?"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md#measure#2",
+   "roomId": "unit-1-the-descent/03-measuring-charge.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "a rumor",
+     "the merger is happening"
+    ]
+   },
+   "prompt": "A rumor claims the merger is happening. What charge does this cell settle to?"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md#measure#3",
+   "roomId": "unit-1-the-descent/03-measuring-charge.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "a single data point",
+     "the trend is real"
+    ]
+   },
+   "prompt": "A single data point claims the trend is real. What charge does this cell settle to?"
+  },
+  {
+   "id": "unit-1-the-descent/03-measuring-charge.md#relate#0",
+   "roomId": "unit-1-the-descent/03-measuring-charge.md",
+   "kind": "relate",
+   "spec": {
+    "utterance": [
+     "a soil sample",
+     "the field was flooded last spring"
+    ]
+   },
+   "prompt": "Review: a soil sample is taken, asserting the field was flooded last spring. Relate it into its cell -- entities and predicates?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#settle#0",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "B",
+      "predicate": "equivalent-to",
+      "object": "C"
+     }
+    ]
+   },
+   "prompt": "A relates to B, B relates to C (a chain). Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#settle#1",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "C",
+      "predicate": "equivalent-to",
+      "object": "D"
+     }
+    ]
+   },
+   "prompt": "A relates to B, and separately C relates to D. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#settle#2",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "C",
+      "predicate": "equivalent-to",
+      "object": "D"
+     },
+     {
+      "subject": "E",
+      "predicate": "equivalent-to",
+      "object": "F"
+     }
+    ]
+   },
+   "prompt": "Three separate pairs: A-B, C-D, E-F, none touching each other. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#settle#3",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "hub",
+      "predicate": "equivalent-to",
+      "object": "leaf1"
+     },
+     {
+      "subject": "hub",
+      "predicate": "equivalent-to",
+      "object": "leaf2"
+     },
+     {
+      "subject": "hub",
+      "predicate": "equivalent-to",
+      "object": "leaf3"
+     }
+    ]
+   },
+   "prompt": "A hub relates to three separate leaves (a star). Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#settle#4",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "B",
+      "predicate": "equivalent-to",
+      "object": "C"
+     },
+     {
+      "subject": "C",
+      "predicate": "equivalent-to",
+      "object": "A"
+     }
+    ]
+   },
+   "prompt": "A relates to B, B relates to C, and C relates back to A -- a genuine cycle. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/04-settling-equivalence.md#measure#0",
+   "roomId": "unit-1-the-descent/04-settling-equivalence.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "one lab result",
+     "the compound is safe"
+    ]
+   },
+   "prompt": "Review: one lab result claims the compound is safe. What charge does this cell settle to?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#observe#0",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c"
+      ]
+     }
+    ]
+   },
+   "prompt": "A settling adds one cell per stage with no limit stage at all: {a}, {a,b}, {a,b,c}. What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#observe#1",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ],
+      "limit": true
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c"
+      ]
+     }
+    ]
+   },
+   "prompt": "A settling reaches a limit stage where nothing new fires (everything was already there), then one more successor stage adds a cell: {a}, {a,b}, {a,b} (limit), {a,b,c}. What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#observe#2",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "c"
+      ],
+      "limit": true
+     }
+    ]
+   },
+   "prompt": "A settling's very next stage is a limit stage, and a new cell fires exactly there: {a}, then {a,c} (limit). What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#observe#3",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c",
+       "d"
+      ],
+      "limit": true
+     }
+    ]
+   },
+   "prompt": "A settling grows normally, then TWO new cells fire simultaneously at a limit stage: {a}, {a,b}, {a,b,c,d} (limit, c and d both first appear here). What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#observe#4",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "z"
+      ],
+      "limit": true
+     }
+    ],
+    "opts": {
+     "cofinal": "uncountable"
+    }
+   },
+   "prompt": "A settling is explicitly declared to keep firing cofinally through an uncountable sequence of limit stages -- {a}, then {a,z} (limit), never stabilizing. What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/05-observing-regimes.md#settle#0",
+   "roomId": "unit-1-the-descent/05-observing-regimes.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "P",
+      "predicate": "equivalent-to",
+      "object": "Q"
+     },
+     {
+      "subject": "R",
+      "predicate": "equivalent-to",
+      "object": "S"
+     }
+    ]
+   },
+   "prompt": "Review: P relates to Q, and separately R relates to S. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md#measure#0",
+   "roomId": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "kind": "measure",
+   "spec": {
+    "utterance": [
+     "a single eyewitness",
+     "the light was red"
+    ]
+   },
+   "prompt": "A single eyewitness claims the light was red. What charge does this cell settle to?"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md#settle#0",
+   "roomId": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "B",
+      "predicate": "equivalent-to",
+      "object": "C"
+     },
+     {
+      "subject": "C",
+      "predicate": "equivalent-to",
+      "object": "D"
+     }
+    ]
+   },
+   "prompt": "A-B-C-D in a straight chain, each equivalent to the next. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md#settle#1",
+   "roomId": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "kind": "settle",
+   "spec": {
+    "cells": [
+     {
+      "subject": "A",
+      "predicate": "equivalent-to",
+      "object": "B"
+     },
+     {
+      "subject": "B",
+      "predicate": "equivalent-to",
+      "object": "C"
+     },
+     {
+      "subject": "C",
+      "predicate": "equivalent-to",
+      "object": "A"
+     },
+     {
+      "subject": "D",
+      "predicate": "equivalent-to",
+      "object": "E"
+     },
+     {
+      "subject": "E",
+      "predicate": "equivalent-to",
+      "object": "F"
+     },
+     {
+      "subject": "F",
+      "predicate": "equivalent-to",
+      "object": "D"
+     }
+    ]
+   },
+   "prompt": "Two separate triangles: A-B-C cycling back to A, and independently D-E-F cycling back to D. Does this settle to one equivalence class?"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md#observe#0",
+   "roomId": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c",
+       "d"
+      ]
+     }
+    ]
+   },
+   "prompt": "Four ordinary successor stages, no limit anywhere: {a}, {a,b}, {a,b,c}, {a,b,c,d}. What regime, and does H1 vanish?"
+  },
+  {
+   "id": "unit-1-the-descent/06-capstone-reading-obstruction.md#observe#1",
+   "roomId": "unit-1-the-descent/06-capstone-reading-obstruction.md",
+   "kind": "observe",
+   "spec": {
+    "stages": [
+     {
+      "designated": [
+       "a"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b"
+      ],
+      "limit": true
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c"
+      ]
+     },
+     {
+      "designated": [
+       "a",
+       "b",
+       "c",
+       "d"
+      ],
+      "limit": true
+     }
+    ]
+   },
+   "prompt": "A settling reaches a limit stage where nothing fires, takes one more ordinary step, then fires something new at a SECOND limit stage: {a}, {a,b}, {a,b} (limit, nothing new), {a,b,c}, {a,b,c,d} (limit, d is new). What regime, and does H1 vanish?"
+  }
+ ],
+ "warnings": []
+}

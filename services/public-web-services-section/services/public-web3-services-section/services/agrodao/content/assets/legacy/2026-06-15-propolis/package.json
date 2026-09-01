@@ -1,0 +1,24 @@
+{
+  "name": "@emsenn/propolis",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Propolis service for Hive account fleet surfaces.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/http-server": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": false
+}

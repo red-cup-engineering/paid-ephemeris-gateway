@@ -1,0 +1,70 @@
+{
+  "name": "@emsenn/waggle",
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "decommissioned",
+    "triage"
+  ],
+  "description": "The Hive+ledger compound app: an offline, codified, multidimensionally-witnessed record of what is in a person's Hive wallet, owning the local key store. Composes @emsenn/computing-with-hive chain reads/writes and organizing accounting record-state.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/waggle.git"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "waggle": "./dist/cli.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf dist .tmp/test-dist",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli.mjs",
+    "prepack": "pnpm run rebuild",
+    "rebuild": "pnpm run clean && pnpm run build"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./keystore": {
+      "types": "./dist/keystore.d.mts",
+      "import": "./dist/keystore.mjs"
+    },
+    "./sync": {
+      "types": "./dist/sync.d.mts",
+      "import": "./dist/sync.mjs"
+    },
+    "./book": {
+      "types": "./dist/book.d.mts",
+      "import": "./dist/book.mjs"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.mts",
+      "import": "./dist/cli.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/computing-with-hive": "0.0.1",
+    "@emsenn/computing-with-ledgers": "0.0.1",
+    "@emsenn/organizing": "0.0.0",
+    "@emsenn/relating": "0.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.1",
+    "eslint": "10.8.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.67.0"
+  },
+  "sideEffects": false
+}

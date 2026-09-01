@@ -1,0 +1,20 @@
+{%- set shim_name = prefix ~ record.pack ~ '-' ~ record.slug -%}
+{%- set base_desc = record.description or 'PyFARS engineering skill (' ~ record.pack ~ ' pack).' -%}
+{%- set fars_desc = ('[FARS:' ~ record.pack ~ '] ' ~ base_desc) | truncate(360, true, '...') | replace('\n', ' ') | replace('"', "'") -%}
+{%- set src_rel = record.source_path.relative_to(root) -%}
+---
+name: {{ shim_name }}
+description: "{{ fars_desc }}"
+---
+
+# {{ shim_name }}
+
+PyFARS engineering skill, installed by `pyfars install-harness {{ harness.name }}` for Codex/ChatGPT. Pack: **{{ record.pack }}**. Source: [`{{ src_rel }}`]({{ src_rel }}).
+
+## Source
+
+The substrate is the source of truth — this shim only exists so Codex/ChatGPT's project-skill auto-discovery can find the skill. Read the original at [`{{ src_rel }}`]({{ src_rel }}) for any updates beyond what's copied below. Skills are invoked through the running engine's API; the `pyfars` CLI itself is lifecycle-only (`run`/`install`/`clean`/`help`).
+
+---
+
+{{ record.body | trim }}

@@ -1,0 +1,3 @@
+# OAuth provider state — live client secrets and issued bearer/refresh tokens.
+# Never commit; these are runtime credentials, not source.
+data/state/oauth/

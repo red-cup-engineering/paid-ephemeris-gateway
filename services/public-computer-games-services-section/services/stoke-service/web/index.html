@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stoke — stoke.561.group</title>
+<meta name="description" content="The kind incremental: build a real production graph, and prestige your dominant Perron-Frobenius eigenvalue — computed by real linear algebra over the graph you actually built, never an authored curve. Every number on screen is tagged computed or authored, never both, never hidden.">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/cartridge/replay": "/vendor/red-cup-engineering-cartridge/replay.mjs",
+    "@red-cup-engineering/cartridge/seed": "/vendor/red-cup-engineering-cartridge/seed.mjs",
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/red-cup-engineering-cartridge/intent-log.mjs",
+    "@red-cup-engineering/cartridge/manifest": "/vendor/red-cup-engineering-cartridge/manifest.mjs",
+    "node:crypto": "/web/js/node-crypto-shim.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <span class="site-title">Stoke</span>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label"></code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme" accesskey="d">🌙 Dark</button>
+</header>
+
+<div id="honesty-banner" class="honesty-banner">
+  No payments, no ads, no energy system, nothing that regenerates only by waiting. Every number
+  below is tagged <span class="badge badge--computed">computed</span> (a direct output of real
+  linear algebra over the production graph you actually built) or
+  <span class="badge badge--authored">authored</span> (a designer-chosen constant or curve) — see
+  <code>DESIGN.md</code> for the full disclosure discipline.
+</div>
+
+<main class="play-main">
+  <section class="graph-section">
+    <h2>Your production graph</h2>
+    <svg id="graph-canvas" class="graph-svg"></svg>
+
+    <h3 id="stocks-heading">Stocks</h3>
+    <ul id="stock-list" class="stock-list" aria-labelledby="stocks-heading"></ul>
+
+    <h3 id="edges-heading">Edges</h3>
+    <ul id="edge-list" class="edge-list" aria-labelledby="edges-heading"></ul>
+  </section>
+
+  <section class="controls-section">
+    <h2>Build &amp; connect</h2>
+    <p class="hint">Every action here spends stock from a node you choose — never a timer, never real money.</p>
+
+    <form id="build-form" class="action-form">
+      <fieldset>
+        <legend>Build a node (costs <span id="build-cost-label"></span>, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="build-label">New node name</label>
+        <input id="build-label" type="text" required maxlength="40" placeholder="e.g. Sawmill" accesskey="b">
+        <label for="build-pay-from">Pay from</label>
+        <select id="build-pay-from"></select>
+        <button type="submit">Build</button>
+      </fieldset>
+    </form>
+
+    <form id="connect-form" class="action-form">
+      <fieldset>
+        <legend>Connect an edge (costs <span id="connect-cost-label"></span>, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="connect-from">From</label>
+        <select id="connect-from"></select>
+        <label for="connect-to">To</label>
+        <select id="connect-to"></select>
+        <label for="connect-pay-from">Pay from</label>
+        <select id="connect-pay-from"></select>
+        <button type="submit" accesskey="c">Connect</button>
+      </fieldset>
+    </form>
+
+    <form id="upgrade-form" class="action-form">
+      <fieldset>
+        <legend>Upgrade an edge (costs <span id="upgrade-cost-label"></span>, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="upgrade-edge">Edge</label>
+        <select id="upgrade-edge"></select>
+        <label for="upgrade-pay-from">Pay from</label>
+        <select id="upgrade-pay-from"></select>
+        <button type="submit" accesskey="u">Upgrade</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Prestige</h2>
+    <div id="prestige-panel" class="prestige-panel" aria-live="polite"></div>
+    <button id="btn-prestige" type="button" class="action-button action-button--terminal" accesskey="p">Prestige (reset, bank lambda + mixture)</button>
+
+    <h2>Replay determinism</h2>
+    <p class="hint">Recomputes your whole run from <code>(seed, intentLog)</code> from scratch and compares its hash against the live state — the same check <code>cartridge.test.mts</code> runs automatically.</p>
+    <button id="btn-verify" type="button" accesskey="v">Verify replay</button>
+    <div id="verify-panel" class="verify-panel" aria-live="polite"></div>
+
+    <h2>Recent events</h2>
+    <ul id="event-log" class="event-log" aria-live="polite"></ul>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  Prestige is the dominant Perron–Frobenius eigenvalue of the production matrix you actually
+  built, computed by real power iteration (<code>src/eigen.mts</code>) — not an authored curve.
+  See <code>DESIGN.md</code> for the full disclosure discipline and the research spike this is
+  built on, and <code>README.md</code> for what's true about this build today.
+</footer>
+
+<script type="module" src="js/app.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('stoke-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('stoke-theme', next); else localStorage.removeItem('stoke-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

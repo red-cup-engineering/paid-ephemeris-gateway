@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "equivo-561-group",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "./web"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    { "pattern": "equivo.561.group", "custom_domain": true }
+  ]
+}

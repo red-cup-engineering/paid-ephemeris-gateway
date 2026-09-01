@@ -1,0 +1,65 @@
+{
+  "name": "@red-cup-engineering/parlor-service-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "pig",
+    "farkle",
+    "yacht",
+    "chutes-and-ladders",
+    "board-race",
+    "slot-machine",
+    "fair-spin",
+    "dice-games",
+    "daily-puzzle",
+    "deterministic-replay",
+    "computed-odds",
+    "earn-only"
+  ],
+  "description": "parlor.561.group — the five-game parlor shelf, one service, built on @red-cup-engineering/parlor-kernel per the mesh-not-monolith doctrine (games as data plus a thin face, not five separate reimplementations). The dice trio: Pig (hold-or-roll, first to 100), Farkle (dice-set scoring, hot dice, bust), and Yacht (5 dice, 3 rolls, 13 categories) — every decision surfaces the kernel's own computed bust odds and expected values, live, not asserted; Pig and Farkle ship a bot opponent that plays the published math. Chutes & Ladders: the classic 100-square race as a board-as-graph (a chute and a ladder are one jump edge), 1-4 players including bots — the bot IS a die, there is no strategy in this game — with the live exact probability distribution of finish turns computed and shown as the race runs. Fair Spin: a 3-reel practice slot that inverts the genre — computed RTP, per-symbol hit odds, and expected loss per 100 spins are shown permanently, never behind a click. Daily-seeded (today's dice/race/spins identical for everyone who hasn't started their own run). Earn-only, no wagering, kind design.",
+  "scripts": {
+    "check": "for f in src/games/*/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/games/*/*.test.mts web/test/*.test.mts",
+    "serve": "node web/server.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/parlor-kernel": "0.2.0",
+    "@red-cup-engineering/cartridge": "0.2.1"
+  },
+  "exports": {
+    "./pig/rules": "./src/games/pig/rules.mts",
+    "./pig/engine": "./src/games/pig/engine.mts",
+    "./pig/cartridge": "./src/games/pig/cartridge.mts",
+    "./pig/manifest": "./src/games/pig/manifest.mts",
+    "./pig/daily": "./src/games/pig/daily.mts",
+    "./pig/bot": "./src/games/pig/bot.mts",
+    "./farkle/rules": "./src/games/farkle/rules.mts",
+    "./farkle/engine": "./src/games/farkle/engine.mts",
+    "./farkle/cartridge": "./src/games/farkle/cartridge.mts",
+    "./farkle/manifest": "./src/games/farkle/manifest.mts",
+    "./farkle/daily": "./src/games/farkle/daily.mts",
+    "./farkle/bot": "./src/games/farkle/bot.mts",
+    "./yacht/rules": "./src/games/yacht/rules.mts",
+    "./yacht/engine": "./src/games/yacht/engine.mts",
+    "./yacht/cartridge": "./src/games/yacht/cartridge.mts",
+    "./yacht/manifest": "./src/games/yacht/manifest.mts",
+    "./yacht/daily": "./src/games/yacht/daily.mts",
+    "./chutes/board": "./src/games/chutes/board.mts",
+    "./chutes/odds": "./src/games/chutes/odds.mts",
+    "./chutes/engine": "./src/games/chutes/engine.mts",
+    "./chutes/cartridge": "./src/games/chutes/cartridge.mts",
+    "./chutes/manifest": "./src/games/chutes/manifest.mts",
+    "./chutes/daily": "./src/games/chutes/daily.mts",
+    "./reels/data": "./src/games/reels/data.mts",
+    "./reels/disclosure": "./src/games/reels/disclosure.mts",
+    "./reels/engine": "./src/games/reels/engine.mts",
+    "./reels/cartridge": "./src/games/reels/cartridge.mts",
+    "./reels/manifest": "./src/games/reels/manifest.mts",
+    "./reels/daily": "./src/games/reels/daily.mts",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false
+}

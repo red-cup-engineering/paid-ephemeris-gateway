@@ -1,0 +1,810 @@
+{
+ "wingId": "orgsample",
+ "rooms": [
+  {
+   "id": "1st-law-of-thermodynamics.org",
+   "wingId": "orgsample",
+   "title": "1st Law of Thermodynamics",
+   "aliases": [],
+   "kind": "note",
+   "body": "The */[[file:1st-law-of-thermodynamics.org][1st Law of Thermodynamics]]/* says that [[file:energy.md][energy]] cannot be [[file:creating.org][created]] or [[file:destroying.org][destroyed]].\n\n* Additional witnessed formulation\n\n#+name: definition\nThe */1st Law of [[file:thermodynamics.org][Thermodynamics]] says that [[file:energy.md][energy]] cannot be [[file:creation.org][created]] or [[file:destruction.org][destroyed]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 12:20"
+  },
+  {
+   "id": "2016-u-s-presidential-election.org",
+   "wingId": "orgsample",
+   "title": "2016 U.S. Presidential Election",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:2016-u-s-presidential-election.org][2016 U.S. Presidential Election]]/* hasn't been defined yet.\n\n* Additional witnessed formulation\n\n#+name: definition\nThe */2016 U.S. Presidential Election/* resulted in the election of [[file:donald-trump.org][Donald Trump]] to the [[file:president-of-the-united-states.org][presidency]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-28 Thu 10:08"
+  },
+  {
+   "id": "2021-hedge-fund-contraction.org",
+   "wingId": "orgsample",
+   "title": "2021 Hedge Fund Contraction",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:2021-hedge-fund-contraction.org][2021 Hedge Fund Contraction]]/* is an event that's happening, as of mid-January, 2021.\n\n* emsenn's story of the 2021 hedge fund contraction\n\n* \nHere's my brief story of it. This is still happening, from my perspective, so I'll add sources and change it as it happens. None of this constitutes financial advice, and I am not a lawyer[fn:: Give away your money and fuck the law.]:\n\n- There's a subcommunity of a Web community that talks about the stock market from the cultural perspective of early 2010s 4chan. It's called /r/WallStreetBets (WSB), on Reddit.\n- In September 2019, /u/DeepFuckingValue (DFV), on WSB, shared that they invested around $50,000 into Gamestop, through long-term equity anticipation securities.[fn:: https://www.reddit.com/r/wallstreetbets/comments/d1g7x0/hey_burry_thanks_a_lot_for_jacking_up_my_cost/]\n  - This was seen as an absolutely ridiculous move.[fn:: https://www.reddit.com/r/wallstreetbets/comments/d1g7x0/hey_burry_thanks_a_lot_for_jacking_up_my_cost/ezlg40l/?utm_source=reddit&utm_medium=web2x&context=3]\n- Every month or so since, DFC would post about holding onto his Gamestop securities.\n- After about 10 months, this led folk to look into /why/ DFV was doing this.\n  - Turns out, Gamestop might've been a pretty decent company:\n    - They had a lot of cash-on-hand\n      - More than enough to pay off their debts, in fact!\n    - And a fair number of solid assets like stores\n- This led to some other users on WSB investing in Gamestop\n- In September 2020, Ryan Cohen, co-founder of Chewy, bought like 13% of Gamestop's shares[fn:: citation wanted?]\n- This led to more folk looking at the stock, asking: If Gamestop is solid, why's it valued so low? ($2-4 a share)\n- In September 2020, short interest in Gamestop was at around 140% of total shares.\n  - What is \"short interest\"\n    - \"Shorting\" is when you borrow a stock from someone who owns it and sell it back on the market, because you expect the price to go down.\n    - Then you buy the stock back at the lower price, and pocket the difference: profit!\n    - (So, 100% of Gamestop's shares were shorted, and then 40% on top of that.)\n      - ...Which... makes no sense: How can you sell more shares than there are shares?\n\t- Especially because 75% of Gamestop's stock is held by passive funds and the board and executives!\n      - You don't!\n      - You wait for the company to go bankrupt, so you don't have to return your shares.\n      - That's what DFV figured out! So they bet against the hedge funds, that Gamestop was a fine company.\n- After people noticed all this, Gamestop stock prices went up, from $4 to $8 to $12 from September until the end of October.\n- Then more people started buying in.\n- Which made the prices go up higher.\n- And more people bought in.\n- Eventually, the shorts are supposed to buy back all these stocks. But.. they can't: there are more shares that need to be purchased than there are in the company.\n- This led to the hedge funds buying up the stocks at any price, which pushed the price up higher[fn:: Oh yeah, and while this is happening, users on WSB continue to buy into many other stocks, all of which have been similarly shorted]\n- Finally, on January 22nd, the gamma squeeze happened\n  - That's a very complicated thing but basically it meant that hedge funds had to resolve the shorts, which meant stock prices went up even higher.\n- On Monday the 25th, a bunch of prominent rich people advocated buying into Gamestop stock.\n- On Wednesday the 27th, Melvin Capital almost went bankrupt, but got bailed out by two other funds\n- On Thursday morning, Robinhood, the retail trading app many WSB users use, cancelled pending buys on Gamestop and Blackberry stock and froze the ability to buy stock.\n  - Many apps followed suite\n  - It was leaked that Robinhood was instructed to freeze it by their owner, a hedge fund... which had bought a bunch of shorts on Gamestop overnight. (Guess they can't help themselves.)\n  - Rich people went on the news to complain\n  - Alexandria Ocasio-Cortez suggested that Robinhood be investigated\n  - A class action lawsuit was opened against Robinhood.\n  - Thomas Peterffy (CEO of Interactive Brokers) admitted to closing retail positions[fn:: https://www.youtube.com/watch?v=_G1syTVGdwo], which is, I'm pretty sure, not legal.\n- On Friday...\n  - Clarity Money is closing[fn:: citation needed]; I'd speculate to free up capital for Goldman-Sachs\n- On Monday...\n  - The war of attrition began:\n    - High-frequency traders\n\n* Additional witnessed formulation\n\n#+name: definition\nThe */2021 Hedge Fund Contraction/* is a financial event that began in the spring of 2021, during which hedge funds were pressured by the markets to close their short positions.\n\nI only followed the opening days, here's my rendition of what went down:\n\nemsenn's version of the 2021 Hedge Fund Contraction\n\nHere's my brief story of it. This is still happening, from my perspective, so I'll add sources and change it as it happens. None of this constitutes financial advice, and I am not a lawyer[fn:: Give away your money and fuck the law.]\n\n- There's a subcommunity of a Web community that talks about the stock market from the cultural perspective of early 2010s 4chan. It's called /r/WallStreetBets (WSB), on Reddit.\n- In September 2019, /u/DeepFuckingValue (DFV), on WSB, shared that they invested around $50,000 into Gamestop, through long-term equity anticipation securities.[fn:: https://www.reddit.com/r/wallstreetbets/comments/d1g7x0/hey_burry_thanks_a_lot_for_jacking_up_my_cost/]\n  - This was seen as an absolutely ridiculous move.[fn:: https://www.reddit.com/r/wallstreetbets/comments/d1g7x0/hey_burry_thanks_a_lot_for_jacking_up_my_cost/ezlg40l/?utm_source=reddit&utm_medium=web2x&context=3]]\n- Every month or so since, DFC would post about holding onto his Gamestop securities.\n- After about 10 months, this led folk to look into why DFV was doing this.\n  - Turns out, Gamestop might've been a pretty decent company:\n    - They had a lot of cash-on-hand\n      - More than enough to pay off their debts, in fact!\n    -And a fair number of solid assets like stores\n- This led to some other users on WSB investing in Gamestop\n- In September 2020, Ryan Cohen, co-founder of Chewy, bought like 13% of Gamestop's shares[fn:: citation wanted?]\n- This led to more folk looking at the stock, asking: If Gamestop is solid, why's it valued so low? ($2-4 a share)\n- In September 2020, short interest in Gamestop was at around 140% of total shares.\n  - What is \"short interest\"\n    - \"Shorting\" is when you borrow a stock from someone who owns it and sell it back on the market, because you expect the price to go down.\n    - Then you buy the stock back at the lower price, and pocket the difference: profit!\n    - (So, 100% of Gamestop's shares were shorted, and then 40% on top of that.)\n      - …Which… makes no sense: How can you sell more shares than there are shares?\n        - Especially because 75% of Gamestop's stock is held by passive funds and the board and executives!\n      - You don't!\n      - You wait for the company to go bankrupt, so you don't have to return your shares.\n      - That's what DFV figured out! So they bet against the hedge funds, that Gamestop was a fine company.\n- After people noticed all this, Gamestop stock prices went up, from $4 to $8 to $12 from September until the end of October.\n- Then more people started buying in.\n- Which made the prices go up higher.\n- And more people bought in.\n- Eventually, the shorts are supposed to buy back all these stocks. But.. they can't: there are more shares that need to be purchased than there are in the company.\n- This led to the hedge funds buying up the stocks at any price, which pushed the price up higher[fn:: Oh yeah, and while this is happening, users on WSB continue to buy into many other stocks, all of which have been similarly shorted.]\n- Finally, on January 22nd, the gamma squeeze happened\n- - That's a very complicated thing but basically it meant that hedge funds had to resolve the shorts, which meant stock prices went up even higher.\n- On Monday the 25th, a bunch of prominent rich people advocated buying into Gamestop stock.\n- On Wednesday the 27th, Melvin Capital almost went bankrupt, but got bailed out by two other funds\n- On Thursday morning, Robinhood, the retail trading app many WSB users use, cancelled pending buys on Gamestop and Blackberry stock and froze the ability to buy stock.\n  - Many apps followed suite\n  - It was leaked that Robinhood was instructed to freeze it by their owner, a hedge fund… which had bought a bunch of shorts on Gamestop overnight. (Guess they can't help themselves.)\n  - Rich people went on the news to complain\n  - Alexandria Ocasio-Cortez suggested that Robinhood be investigated\n  - A class action lawsuit was opened against Robinhood.\n  - Thomas Peterffy (CEO of Interactive Brokers) admitted to closing retail positions[fn:: https://www.youtube.com/watch?v=_G1syTVGdwo], which is, I'm pretty sure, not legal.\n- On Friday…\n  - Clarity Money is closing[fn:: citation needed]; I'd speculate to free up capital for Goldman-Sachs\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-28 Thu 18:28"
+  },
+  {
+   "id": "2021-storming-of-the-u-s-capitol.org",
+   "wingId": "orgsample",
+   "title": "2021 Storming of the U.S. Capitol",
+   "aliases": [],
+   "kind": "note",
+   "body": "#+begin_head\n#+ghe_schema: event-0.1.0\n#+author: emsenn\n#+email: emsenn@emsenn.net\n#+date: [2021-01-07 Thu 09:15]\n#+roam_tags: event\n#+end_head\n\n#+name: definition\nThe */[[file:2021_storming_of_the_u_s_capitol.org][2021 Storming of the U.S. Capitol]]/* was an event on [[file:d/2021-01-06.org][January 6th, 2021]], when supporters of President [[file:donald_j_trump.org][Donald Trump]] [[file:storm.org][stormed]] the [[file:u_s_capitol.org][U.S. Capitol]] while the [[file:u_s_congress.org][Congress]] was in the process of certifying the [[file:electoral_college.org][Electoral College]] to affirm the results of the [[file:2020_u_s_presidential_election.org][2020 U.S. presidential election]].\n\n#+toc: headlines 2\n\n* Supplements\n** Record history\n   :PROPERTIES:\n   :CUSTOM_ID: record-history\n   :END:\n   :LOGBOOK:\n   - Note taken on [2021-01-07 Thu 09:15] \\\\\n      Created from [[file:~/org/s/p/d/2021-01-07.org::*My perspective on yesterday's protests in the U.S.][My perspective on yesterday's protests in the U.S.]]\n\n      \n   :END:\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "24-form-tai-chi.org",
+   "wingId": "orgsample",
+   "title": "24-form-tai-chi",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       218e02be-b4a5-4161-9596-7f71c20ffcc0\n:END:\n#+title: 24-form tai chi\n#+date: [2023-11-08 Wed 16:42]\n#+index: 24-form tai chi\n#+name: definition\n- 24-form tai chi ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]\n\nhttps://www.youtube.com/playlist?list=PLAzIKxB72CMCB1tnuTvM9mB8tUsgw9hCO\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "404.org",
+   "wingId": "orgsample",
+   "title": "404",
+   "aliases": [],
+   "kind": "note",
+   "body": "#+begin_head\n#+author: emsenn\n#+email: emsenn@emsenn.net\n#+date: [2020-12-22 Tue 15:56]\n#+roam_tags: meta\n#+end_head\n/This record serves as the \"record not found\" page when viewing [[file:2026-06-17-emsemioverse-terms-index.md][my digital garden]] through [[file:html.org][HTML]]. To learn about 404 records as a concept, see [[file:html_404.org][HTML 404]]./\n\n*/The resource you have requested does not exist./* Maybe the link you followed was incorrect, or perhaps the requested resource is not publicly accessible. If you believe this to be an error, please [[mailto:emsenn@emsenn.net][contact me]] /(and sorry you couldn't find what you were looking for!)/\n\nFrom here, you might want to use your [[file:web_browser.org][Web browser]] to go back to the previous page.\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "4f-stress-responses.org",
+   "wingId": "orgsample",
+   "title": "4f-stress-responses",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       936dc32c-be50-42b6-a6d5-cf561b85d6af\n:END:\n#+title: 4F stress responses\n#+date: [2023-09-30 Sat 10:31]\n#+index: 4F stress responses\n\n#+name: definition\n- 4F stress responses ::  a [[id:f9529e53-d95d-4305-83c4-a37977a25865][framing]] of [[id:e9d55433-ad62-4aa8-9522-774f341dc022][involuntary stress responses]] that [[id:38936549-28c9-480b-ac9b-6b64c1dde991][people]] may experience in [[id:52237671-48bb-4adc-b33a-707f08b12b64][dangerous]] or [[id:c076104b-7518-4265-8843-084625b28689][threatening situations]]. The 4 \"F\"s are: [[id:06e477ae-a6e5-4e4a-bf70-828bf8a29183][fawning]], [[id:de0fdbd5-38ce-4c5b-9ab5-c82536fe673b][fighting]], [[id:a9be9572-5a61-4edd-b892-17d22242382f][flighting]], [[id:0637eaa7-1f32-4a2a-a72b-5eba9763bfaa][freezing]].\n\n- Mechanism :: [[id:91b83dc0-8e05-47d1-ac97-d6879f163dd9][sympathetic nervous system]]\n\n* Drills: 4F Stress Responses\n\n** Drill: 4F Stress Responses: Definition                             :drill:\n:PROPERTIES:\n:DRILL_CARD_TYPE: hide1cloze\n:END:\nThe [4f stress responses] are a [framing] of [involuntary stress responses]. The 4 \"F\"s are [fighting], [flighting]. [freezing], and [fawning].\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "4thewords-battle.org",
+   "wingId": "orgsample",
+   "title": "4thewords-battle",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       aa9c1b1b-ef1a-4dfb-9eda-89ee095c0e46\n:END:\n#+title: 4theWords battle\n#+date: [2023-11-10 Fri 09:35]\n#+index: 4theWords battle\n#+name: definition\n- 4theWords battle ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "4thewords.org",
+   "wingId": "orgsample",
+   "title": "4thewords",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       94e89742-7efc-461e-b795-05c935ce7596\n:END:\n#+title: 4theWords\n#+date: [2023-11-07 Tue 07:24]\n#+index: 4theWords\n#+name: definition\n- 4theWords ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "6th-mass-extinction.org",
+   "wingId": "orgsample",
+   "title": "6th mass extinction",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:6th-mass-extinction.org][6th mass extinction]]/*\n\n* Additional witnessed formulation\n\n#+title; 6th mass extinction\n#+date: 2021-10-03\n#+index: extinction!mass extinction!6th mass extinction\n#+index: crisis!existential crisis!contemporary existential crises!6th mass extinction\n\n#+name: definition\nThe */6th mass extinction/* is an ongoing [[file:mass-extinction.org][mass extinction]], one of several [[file:contemporary-existential-crises.org][contemporary existential crises]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 08:24"
+  },
+  {
+   "id": "aaron-rabinowitz.org",
+   "wingId": "orgsample",
+   "title": "Aaron Rabinowitz",
+   "aliases": [],
+   "kind": "note",
+   "body": "#+begin_head\n#+author: emsenn\n#+email: emsenn@emsenn.net\n#+date: [2021-01-08 Fri 19:22]\n#+roam_tags: term\n#+end_head\n\n#+name: aaron-rabinowitz-definition\n*/[[file:aaron-rabinowitz][Aaron Rabinowitz]]/* is a [[file:person.org][person]] who, among other things, writes for [[file:the-skeptic.org][The Skeptic]].\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "abandon-all-models-and-imagine-the-possibilities.org",
+   "wingId": "orgsample",
+   "title": "abandon-all-models-and-imagine-the-possibilities",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       8e77a699-62be-4f1a-9a93-fcd5ef0876b8\n:END:\n#+title: \"abandon all models and imagine the possibilities\"\n#+date: [2023-10-04 Wed 10:23]\n#+index: \"abandon all models and imagine the possibilities\"\n#+name: definition\n- \"abandon all models and imagine the possibilities\" ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "aboriginal-framework.org",
+   "wingId": "orgsample",
+   "title": "Aboriginal framework",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginal-framework.org][Aboriginal framework]]/* is a [[file:framework.org][framework]] that is created from an [[file:aboriginal-perspective.org][Aboriginal perspective]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:54"
+  },
+  {
+   "id": "aboriginal-people.org",
+   "wingId": "orgsample",
+   "title": "Aboriginal people",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginal-people.org][Aboriginal people]]/* are [[file:person.org][people]] who are [[file:aboriginal.org][Aboriginal]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:54"
+  },
+  {
+   "id": "aboriginal-perspective.org",
+   "wingId": "orgsample",
+   "title": "Aboriginal perspective",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginal-perspective.org][Aboriginal perspective]]/* is a [[file:perspective.org][perspective]] held by [[file:aboriginal-people.org][Aboriginal people]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:54"
+  },
+  {
+   "id": "aboriginal-territories-in-cyberspace.org",
+   "wingId": "orgsample",
+   "title": "Aboriginal Territories in Cyberspace",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginal-territories-in-cyberspace.org][Aboriginal Territories in Cyberspace]]/* is an [[file:aboriginally-determined-research-creation-network.org][Aboriginally determined research-creation network]] focused on an [[file:indigenous-presence.org][Indigenous presence]] in [[file:cyberspace.org][cyberspace]].\n\nI heard about this from [[file:sifr-anticapitalist-party.org][@sifr@anticapitalist.party]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:49"
+  },
+  {
+   "id": "aboriginal.org",
+   "wingId": "orgsample",
+   "title": "Aboriginal",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginal.org][Aboriginal]]/* (with a capital /A/) is used to refer to the first [[file:human-person.md][human people]] to live in a [[file:place.org][place]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:55"
+  },
+  {
+   "id": "aboriginally-determined-research-creation-network.org",
+   "wingId": "orgsample",
+   "title": "Aboriginally determined research-creation network",
+   "aliases": [],
+   "kind": "note",
+   "body": "An */[[file:aboriginally-determined-research-creation-network.org][aboriginally determined research-creation network]]/* is [[file:research-creation-network.org][research-creation network]] that is [[file:aboriginally-determining.org][Aboriginally determining]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:50"
+  },
+  {
+   "id": "aboriginally-determining.org",
+   "wingId": "orgsample",
+   "title": "Aboriginally determining",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:aboriginally-determining.org][Aboriginally determining]]/* is [[file:determining.org][determining]] something through an [[file:aboriginal-framework.org][Aboriginal framework]].\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-30 Sat 10:53"
+  },
+  {
+   "id": "academic-engineer.org",
+   "wingId": "orgsample",
+   "title": "academic engineer",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:academic-engineer.org][academic engineer]]/* hasn't been defined yet.\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 18:10"
+  },
+  {
+   "id": "academic-scientist.org",
+   "wingId": "orgsample",
+   "title": "academic scientist",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:academic-scientist.org][academic scientist]]/* hasn't been defined yet.\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 18:10"
+  },
+  {
+   "id": "academic-specialization.org",
+   "wingId": "orgsample",
+   "title": "academic specialization",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:academic-specialization.org][academic specialization]]/* hasn't been defined yet.\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 18:11"
+  },
+  {
+   "id": "accelerationism.org",
+   "wingId": "orgsample",
+   "title": "accelerationism",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       dcdf7007-ac2a-42cd-9c05-979f3487f58d\n:END:\n#+title: accelerationism\n#+date: [2023-09-30 Sat 10:17]\n#+index: accelerationism\n#+name: definition\n- accelerationism ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "accent-training.org",
+   "wingId": "orgsample",
+   "title": "accent-training",
+   "aliases": [],
+   "kind": "note",
+   "body": ":PROPERTIES:\n:ID:       0311d759-e9bb-4971-8e67-139d23759400\n:form:     [[id:a1a802c7-32b8-4d24-8f9b-c3192d30bbf4][training]]\n:END:\n#+title: accent training\n#+date [2025-08-12 Tue 07:05]\n#+index: accent!accent training\n#+index: training!accent training\n",
+   "frontmatter": {
+    "tags": []
+   }
+  },
+  {
+   "id": "accent.org",
+   "wingId": "orgsample",
+   "title": "accent",
+   "aliases": [],
+   "kind": "note",
+   "body": "*/[[file:accent.org][accent]]/* hasn't been defined yet.\n",
+   "frontmatter": {
+    "tags": []
+   },
+   "dateCreated": "2021-01-27 Wed 11:17"
+  }
+ ],
+ "doors": [
+  {
+   "from": "aboriginal-perspective.org",
+   "to": "aboriginal-framework.org",
+   "weight": "hard",
+   "reason": "*/[[file:aboriginal-framework.org][Aboriginal framework]]/* is a [[file:framework.org][framework]] that is created from an [[file:aboriginal-perspective.org][Aboriginal perspective]]."
+  },
+  {
+   "from": "aboriginal.org",
+   "to": "aboriginal-people.org",
+   "weight": "hard",
+   "reason": "*/[[file:aboriginal-people.org][Aboriginal people]]/* are [[file:person.org][people]] who are [[file:aboriginal.org][Aboriginal]]."
+  },
+  {
+   "from": "aboriginal-people.org",
+   "to": "aboriginal-perspective.org",
+   "weight": "hard",
+   "reason": "*/[[file:aboriginal-perspective.org][Aboriginal perspective]]/* is a [[file:perspective.org][perspective]] held by [[file:aboriginal-people.org][Aboriginal people]]."
+  },
+  {
+   "from": "aboriginally-determined-research-creation-network.org",
+   "to": "aboriginal-territories-in-cyberspace.org",
+   "weight": "hard",
+   "reason": "*/[[file:aboriginal-territories-in-cyberspace.org][Aboriginal Territories in Cyberspace]]/* is an [[file:aboriginally-determined-research-creation-network.org][Aboriginally determined research-creation network]] focused on an [[file:indigenous-presence.org][Indigenous presence]] in [[file:cyberspace.org][cyberspace]]."
+  },
+  {
+   "from": "aboriginally-determining.org",
+   "to": "aboriginally-determined-research-creation-network.org",
+   "weight": "hard",
+   "reason": "An */[[file:aboriginally-determined-research-creation-network.org][aboriginally determined research-creation network]]/* is [[file:research-creation-network.org][research-creation network]] that is [[file:aboriginally-determining.org][Aboriginally determining]]."
+  },
+  {
+   "from": "aboriginal-framework.org",
+   "to": "aboriginally-determining.org",
+   "weight": "hard",
+   "reason": "*/[[file:aboriginally-determining.org][Aboriginally determining]]/* is [[file:determining.org][determining]] something through an [[file:aboriginal-framework.org][Aboriginal framework]]."
+  }
+ ],
+ "halls": [],
+ "cards": [
+  {
+   "id": "1st-law-of-thermodynamics.org#cloze#0",
+   "roomId": "1st-law-of-thermodynamics.org",
+   "kind": "cloze",
+   "front": "The */[[file:1st-law-of-thermodynamics.org][___]]/* says that [[file:energy.md][energy]] cannot be [[file:creating.org][created]] or [[file:destroying.org][destroyed]].",
+   "back": "1st Law of Thermodynamics",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "1st-law-of-thermodynamics.org#term-from-def#1",
+   "roomId": "1st-law-of-thermodynamics.org",
+   "kind": "term-from-def",
+   "front": "The */[[file:1st-law-of-thermodynamics.org][1st Law of Thermodynamics]]/* says that [[file:energy.md][energy]] cannot be [[file:creating.org][created]] or [[file:destroying.org][destroyed]]. Which term is this?",
+   "back": "1st Law of Thermodynamics",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "2016-u-s-presidential-election.org#cloze#0",
+   "roomId": "2016-u-s-presidential-election.org",
+   "kind": "cloze",
+   "front": "*/[[file:2016-u-s-presidential-election.org][___]]/* hasn't been defined yet.",
+   "back": "2016 U.S. Presidential Election",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "2016-u-s-presidential-election.org#term-from-def#1",
+   "roomId": "2016-u-s-presidential-election.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:2016-u-s-presidential-election.org][2016 U.S. Presidential Election]]/* hasn't been defined yet. Which term is this?",
+   "back": "2016 U.S. Presidential Election",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "2021-hedge-fund-contraction.org#cloze#0",
+   "roomId": "2021-hedge-fund-contraction.org",
+   "kind": "cloze",
+   "front": "*/[[file:2021-hedge-fund-contraction.org][___]]/* is an event that's happening, as of mid-January, 2021.",
+   "back": "2021 Hedge Fund Contraction",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "2021-hedge-fund-contraction.org#term-from-def#1",
+   "roomId": "2021-hedge-fund-contraction.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:2021-hedge-fund-contraction.org][2021 Hedge Fund Contraction]]/* is an event that's happening, as of mid-January, 2021. Which term is this?",
+   "back": "2021 Hedge Fund Contraction",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "2021-storming-of-the-u-s-capitol.org#teaches#0",
+   "roomId": "2021-storming-of-the-u-s-capitol.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by 2021 Storming of the U.S. Capitol.",
+   "back": "2021 Storming of the U.S. Capitol",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "24-form-tai-chi.org#teaches#0",
+   "roomId": "24-form-tai-chi.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by 24-form-tai-chi.",
+   "back": "24-form-tai-chi",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "404.org#cloze#0",
+   "roomId": "404.org",
+   "kind": "cloze",
+   "front": "#+begin_head\n#+author: emsenn\n#+email: emsenn@emsenn.net\n#+date: [2020-12-22 Tue 15:56]\n#+roam_tags: meta\n#+end_head\n/This record serves as the \"record not found\" page when viewing [[file:2026-06-17-emsemioverse-terms-index.md][my digital garden]] through [[file:html.org][HTML]]. To learn about ___ records as a concept, see [[file:html_404.org][HTML 404]]./",
+   "back": "404",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "404.org#term-from-def#1",
+   "roomId": "404.org",
+   "kind": "term-from-def",
+   "front": "#+begin_head\n#+author: emsenn\n#+email: emsenn@emsenn.net\n#+date: [2020-12-22 Tue 15:56]\n#+roam_tags: meta\n#+end_head\n/This record serves as the \"record not found\" page when viewing [[file:2026-06-17-emsemioverse-terms-index.md][my digital garden]] through [[file:html.org][HTML]]. To learn about 404 records as a concept, see [[file:html_404.org][HTML 404]]./ Which term is this?",
+   "back": "404",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "4f-stress-responses.org#teaches#0",
+   "roomId": "4f-stress-responses.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by 4f-stress-responses.",
+   "back": "4f-stress-responses",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "4thewords-battle.org#teaches#0",
+   "roomId": "4thewords-battle.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by 4thewords-battle.",
+   "back": "4thewords-battle",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "4thewords.org#cloze#0",
+   "roomId": "4thewords.org",
+   "kind": "cloze",
+   "front": ":PROPERTIES:\n:ID:       94e89742-7efc-461e-b795-05c935ce7596\n:END:\n#+title: ___\n#+date: [2023-11-07 Tue 07:24]\n#+index: 4theWords\n#+name: definition\n- 4theWords ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]",
+   "back": "4thewords",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "4thewords.org#term-from-def#1",
+   "roomId": "4thewords.org",
+   "kind": "term-from-def",
+   "front": ":PROPERTIES:\n:ID:       94e89742-7efc-461e-b795-05c935ce7596\n:END:\n#+title: 4theWords\n#+date: [2023-11-07 Tue 07:24]\n#+index: 4theWords\n#+name: definition\n- 4theWords ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]] Which term is this?",
+   "back": "4thewords",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "6th-mass-extinction.org#cloze#0",
+   "roomId": "6th-mass-extinction.org",
+   "kind": "cloze",
+   "front": "*/[[file:6th-mass-extinction.org][___]]/*",
+   "back": "6th mass extinction",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "6th-mass-extinction.org#term-from-def#1",
+   "roomId": "6th-mass-extinction.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:6th-mass-extinction.org][6th mass extinction]]/* Which term is this?",
+   "back": "6th mass extinction",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aaron-rabinowitz.org#teaches#0",
+   "roomId": "aaron-rabinowitz.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by Aaron Rabinowitz.",
+   "back": "Aaron Rabinowitz",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "abandon-all-models-and-imagine-the-possibilities.org#teaches#0",
+   "roomId": "abandon-all-models-and-imagine-the-possibilities.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by abandon-all-models-and-imagine-the-possibilities.",
+   "back": "abandon-all-models-and-imagine-the-possibilities",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-framework.org#dependency#0",
+   "roomId": "aboriginal-framework.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginal framework depend on Aboriginal perspective?",
+   "back": "*/[[file:aboriginal-framework.org][Aboriginal framework]]/* is a [[file:framework.org][framework]] that is created from an [[file:aboriginal-perspective.org][Aboriginal perspective]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-framework.org#cloze#1",
+   "roomId": "aboriginal-framework.org",
+   "kind": "cloze",
+   "front": "*/[[file:aboriginal-framework.org][___]]/* is a [[file:framework.org][framework]] that is created from an [[file:aboriginal-perspective.org][Aboriginal perspective]].",
+   "back": "Aboriginal framework",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-framework.org#term-from-def#2",
+   "roomId": "aboriginal-framework.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginal-framework.org][Aboriginal framework]]/* is a [[file:framework.org][framework]] that is created from an [[file:aboriginal-perspective.org][Aboriginal perspective]]. Which term is this?",
+   "back": "Aboriginal framework",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-people.org#dependency#0",
+   "roomId": "aboriginal-people.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginal people depend on Aboriginal?",
+   "back": "*/[[file:aboriginal-people.org][Aboriginal people]]/* are [[file:person.org][people]] who are [[file:aboriginal.org][Aboriginal]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-people.org#cloze#1",
+   "roomId": "aboriginal-people.org",
+   "kind": "cloze",
+   "front": "*/[[file:aboriginal-people.org][___]]/* are [[file:person.org][people]] who are [[file:aboriginal.org][Aboriginal]].",
+   "back": "Aboriginal people",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-people.org#term-from-def#2",
+   "roomId": "aboriginal-people.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginal-people.org][Aboriginal people]]/* are [[file:person.org][people]] who are [[file:aboriginal.org][Aboriginal]]. Which term is this?",
+   "back": "Aboriginal people",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-perspective.org#dependency#0",
+   "roomId": "aboriginal-perspective.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginal perspective depend on Aboriginal people?",
+   "back": "*/[[file:aboriginal-perspective.org][Aboriginal perspective]]/* is a [[file:perspective.org][perspective]] held by [[file:aboriginal-people.org][Aboriginal people]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-perspective.org#cloze#1",
+   "roomId": "aboriginal-perspective.org",
+   "kind": "cloze",
+   "front": "*/[[file:aboriginal-perspective.org][___]]/* is a [[file:perspective.org][perspective]] held by [[file:aboriginal-people.org][Aboriginal people]].",
+   "back": "Aboriginal perspective",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-perspective.org#term-from-def#2",
+   "roomId": "aboriginal-perspective.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginal-perspective.org][Aboriginal perspective]]/* is a [[file:perspective.org][perspective]] held by [[file:aboriginal-people.org][Aboriginal people]]. Which term is this?",
+   "back": "Aboriginal perspective",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-territories-in-cyberspace.org#dependency#0",
+   "roomId": "aboriginal-territories-in-cyberspace.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginal Territories in Cyberspace depend on Aboriginally determined research-creation network?",
+   "back": "*/[[file:aboriginal-territories-in-cyberspace.org][Aboriginal Territories in Cyberspace]]/* is an [[file:aboriginally-determined-research-creation-network.org][Aboriginally determined research-creation network]] focused on an [[file:indigenous-presence.org][Indigenous presence]] in [[file:cyberspace.org][cyberspace]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-territories-in-cyberspace.org#cloze#1",
+   "roomId": "aboriginal-territories-in-cyberspace.org",
+   "kind": "cloze",
+   "front": "*/[[file:aboriginal-territories-in-cyberspace.org][___]]/* is an [[file:aboriginally-determined-research-creation-network.org][Aboriginally determined research-creation network]] focused on an [[file:indigenous-presence.org][Indigenous presence]] in [[file:cyberspace.org][cyberspace]].",
+   "back": "Aboriginal Territories in Cyberspace",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal-territories-in-cyberspace.org#term-from-def#2",
+   "roomId": "aboriginal-territories-in-cyberspace.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginal-territories-in-cyberspace.org][Aboriginal Territories in Cyberspace]]/* is an [[file:aboriginally-determined-research-creation-network.org][Aboriginally determined research-creation network]] focused on an [[file:indigenous-presence.org][Indigenous presence]] in [[file:cyberspace.org][cyberspace]]. Which term is this?",
+   "back": "Aboriginal Territories in Cyberspace",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal.org#cloze#0",
+   "roomId": "aboriginal.org",
+   "kind": "cloze",
+   "front": "*/[[file:___.org][Aboriginal]]/* (with a capital /A/) is used to refer to the first [[file:human-person.md][human people]] to live in a [[file:place.org][place]].",
+   "back": "Aboriginal",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginal.org#term-from-def#1",
+   "roomId": "aboriginal.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginal.org][Aboriginal]]/* (with a capital /A/) is used to refer to the first [[file:human-person.md][human people]] to live in a [[file:place.org][place]]. Which term is this?",
+   "back": "Aboriginal",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determined-research-creation-network.org#dependency#0",
+   "roomId": "aboriginally-determined-research-creation-network.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginally determined research-creation network depend on Aboriginally determining?",
+   "back": "An */[[file:aboriginally-determined-research-creation-network.org][aboriginally determined research-creation network]]/* is [[file:research-creation-network.org][research-creation network]] that is [[file:aboriginally-determining.org][Aboriginally determining]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determined-research-creation-network.org#cloze#1",
+   "roomId": "aboriginally-determined-research-creation-network.org",
+   "kind": "cloze",
+   "front": "An */[[file:aboriginally-determined-research-creation-network.org][___]]/* is [[file:research-creation-network.org][research-creation network]] that is [[file:aboriginally-determining.org][Aboriginally determining]].",
+   "back": "Aboriginally determined research-creation network",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determined-research-creation-network.org#term-from-def#2",
+   "roomId": "aboriginally-determined-research-creation-network.org",
+   "kind": "term-from-def",
+   "front": "An */[[file:aboriginally-determined-research-creation-network.org][aboriginally determined research-creation network]]/* is [[file:research-creation-network.org][research-creation network]] that is [[file:aboriginally-determining.org][Aboriginally determining]]. Which term is this?",
+   "back": "Aboriginally determined research-creation network",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determining.org#dependency#0",
+   "roomId": "aboriginally-determining.org",
+   "kind": "dependency",
+   "front": "Why does Aboriginally determining depend on Aboriginal framework?",
+   "back": "*/[[file:aboriginally-determining.org][Aboriginally determining]]/* is [[file:determining.org][determining]] something through an [[file:aboriginal-framework.org][Aboriginal framework]].",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determining.org#cloze#1",
+   "roomId": "aboriginally-determining.org",
+   "kind": "cloze",
+   "front": "*/[[file:aboriginally-determining.org][___]]/* is [[file:determining.org][determining]] something through an [[file:aboriginal-framework.org][Aboriginal framework]].",
+   "back": "Aboriginally determining",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "aboriginally-determining.org#term-from-def#2",
+   "roomId": "aboriginally-determining.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:aboriginally-determining.org][Aboriginally determining]]/* is [[file:determining.org][determining]] something through an [[file:aboriginal-framework.org][Aboriginal framework]]. Which term is this?",
+   "back": "Aboriginally determining",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-engineer.org#cloze#0",
+   "roomId": "academic-engineer.org",
+   "kind": "cloze",
+   "front": "*/[[file:academic-engineer.org][___]]/* hasn't been defined yet.",
+   "back": "academic engineer",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-engineer.org#term-from-def#1",
+   "roomId": "academic-engineer.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:academic-engineer.org][academic engineer]]/* hasn't been defined yet. Which term is this?",
+   "back": "academic engineer",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-scientist.org#cloze#0",
+   "roomId": "academic-scientist.org",
+   "kind": "cloze",
+   "front": "*/[[file:academic-scientist.org][___]]/* hasn't been defined yet.",
+   "back": "academic scientist",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-scientist.org#term-from-def#1",
+   "roomId": "academic-scientist.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:academic-scientist.org][academic scientist]]/* hasn't been defined yet. Which term is this?",
+   "back": "academic scientist",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-specialization.org#cloze#0",
+   "roomId": "academic-specialization.org",
+   "kind": "cloze",
+   "front": "*/[[file:academic-specialization.org][___]]/* hasn't been defined yet.",
+   "back": "academic specialization",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "academic-specialization.org#term-from-def#1",
+   "roomId": "academic-specialization.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:academic-specialization.org][academic specialization]]/* hasn't been defined yet. Which term is this?",
+   "back": "academic specialization",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "accelerationism.org#cloze#0",
+   "roomId": "accelerationism.org",
+   "kind": "cloze",
+   "front": ":PROPERTIES:\n:ID:       dcdf7007-ac2a-42cd-9c05-979f3487f58d\n:END:\n#+title: ___\n#+date: [2023-09-30 Sat 10:17]\n#+index: accelerationism\n#+name: definition\n- accelerationism ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]]",
+   "back": "accelerationism",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "accelerationism.org#term-from-def#1",
+   "roomId": "accelerationism.org",
+   "kind": "term-from-def",
+   "front": ":PROPERTIES:\n:ID:       dcdf7007-ac2a-42cd-9c05-979f3487f58d\n:END:\n#+title: accelerationism\n#+date: [2023-09-30 Sat 10:17]\n#+index: accelerationism\n#+name: definition\n- accelerationism ::  an [[id:c9701f9a-7cce-428d-8caf-6287abe5a00c][undefined term]] Which term is this?",
+   "back": "accelerationism",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "accent-training.org#teaches#0",
+   "roomId": "accent-training.org",
+   "kind": "teaches",
+   "front": "Name one thing taught by accent-training.",
+   "back": "accent-training",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "accent.org#cloze#0",
+   "roomId": "accent.org",
+   "kind": "cloze",
+   "front": "*/[[file:___.org][accent]]/* hasn't been defined yet.",
+   "back": "accent",
+   "stability": 0,
+   "difficulty": 5
+  },
+  {
+   "id": "accent.org#term-from-def#1",
+   "roomId": "accent.org",
+   "kind": "term-from-def",
+   "front": "*/[[file:accent.org][accent]]/* hasn't been defined yet. Which term is this?",
+   "back": "accent",
+   "stability": 0,
+   "difficulty": 5
+  }
+ ],
+ "warnings": [
+  "1st-law-of-thermodynamics.org: body link to \"creating.org\" does not resolve to any room in this wing",
+  "1st-law-of-thermodynamics.org: body link to \"destroying.org\" does not resolve to any room in this wing",
+  "1st-law-of-thermodynamics.org: body link to \"thermodynamics.org\" does not resolve to any room in this wing",
+  "1st-law-of-thermodynamics.org: body link to \"creation.org\" does not resolve to any room in this wing",
+  "1st-law-of-thermodynamics.org: body link to \"destruction.org\" does not resolve to any room in this wing",
+  "2016-u-s-presidential-election.org: body link to \"donald-trump.org\" does not resolve to any room in this wing",
+  "2016-u-s-presidential-election.org: body link to \"president-of-the-united-states.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"2021_storming_of_the_u_s_capitol.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"d/2021-01-06.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"donald_j_trump.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"storm.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"u_s_capitol.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"u_s_congress.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"electoral_college.org\" does not resolve to any room in this wing",
+  "2021-storming-of-the-u-s-capitol.org: body link to \"2020_u_s_presidential_election.org\" does not resolve to any room in this wing",
+  "404.org: body link to \"html.org\" does not resolve to any room in this wing",
+  "404.org: body link to \"html_404.org\" does not resolve to any room in this wing",
+  "404.org: body link to \"web_browser.org\" does not resolve to any room in this wing",
+  "6th-mass-extinction.org: body link to \"mass-extinction.org\" does not resolve to any room in this wing",
+  "6th-mass-extinction.org: body link to \"contemporary-existential-crises.org\" does not resolve to any room in this wing",
+  "aaron-rabinowitz.org: body link to \"person.org\" does not resolve to any room in this wing",
+  "aaron-rabinowitz.org: body link to \"the-skeptic.org\" does not resolve to any room in this wing",
+  "aboriginal-framework.org: body link to \"framework.org\" does not resolve to any room in this wing",
+  "aboriginal-people.org: body link to \"person.org\" does not resolve to any room in this wing",
+  "aboriginal-perspective.org: body link to \"perspective.org\" does not resolve to any room in this wing",
+  "aboriginal-territories-in-cyberspace.org: body link to \"indigenous-presence.org\" does not resolve to any room in this wing",
+  "aboriginal-territories-in-cyberspace.org: body link to \"cyberspace.org\" does not resolve to any room in this wing",
+  "aboriginal-territories-in-cyberspace.org: body link to \"sifr-anticapitalist-party.org\" does not resolve to any room in this wing",
+  "aboriginal.org: body link to \"place.org\" does not resolve to any room in this wing",
+  "aboriginally-determined-research-creation-network.org: body link to \"research-creation-network.org\" does not resolve to any room in this wing",
+  "aboriginally-determining.org: body link to \"determining.org\" does not resolve to any room in this wing"
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@red-cup-engineering/defi-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "RCEs DeFi Services Section: the parent home for every third-party DeFi protocol integration the Union trades against, starting with GMX, built on blockchain-services-section chain infrastructure rather than duplicating it.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/defi-services-section.git"
+  }
+}

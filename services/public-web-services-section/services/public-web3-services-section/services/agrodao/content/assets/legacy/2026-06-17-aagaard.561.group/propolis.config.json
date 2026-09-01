@@ -1,0 +1,12 @@
+{
+  "name": "aagaard",
+  "keyRoot": "~/.config/blockchain/hive",
+  "accounts": [
+    { "account": "emsenn0" },
+    { "account": "essiebee" },
+    { "account": "sigmund-vexler" },
+    { "account": "marshian" },
+    { "account": "michael561" },
+    { "account": "help-fund" }
+  ]
+}

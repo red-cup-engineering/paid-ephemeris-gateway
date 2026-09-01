@@ -1,0 +1,46 @@
+{
+  "name": "@561-group/ruinfold",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Ruinfold: a browser-based 3D hack-and-slash MMORPG over the tab EAVT world-substrate and the voidmath four-valued bilattice. The world IS its append-only trace, folded (settled) every tick; death is paraconsistent — a slain undead settles its `alive` cell to ⊤ (alive AND slain, a held situation) and rises again. Server is pure Node http (SSE + POST, zero server deps); the 3D client loads three.js in the browser from a CDN import-map.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/561-group.git",
+    "directory": "development/experimental/ruinfold"
+  },
+  "scripts": {
+    "seed": "node server/scripts/seed.mjs",
+    "start": "node server/scripts/ruinfold.mjs",
+    "dev": "node server/scripts/seed.mjs && node server/scripts/ruinfold.mjs",
+    "test": "node tests/prove-combat.mjs && node tests/prove-undeath.mjs && node tests/prove-deaths.mjs && node tests/prove-abilities.mjs && node tests/prove-quests.mjs && node tests/prove-economy.mjs && node tests/prove-systems.mjs"
+  },
+  "imports": {
+    "#substrate": "@561-group/tab/substrate",
+    "#doing": "@561-group/tab/doing",
+    "#changing": "@561-group/tab/changing",
+    "#observing": "@561-group/tab/observing",
+    "#value": "@561-group/tab/being/library/value/scripts/value.mjs",
+    "#engine/*": "./engine/*",
+    "#server/*": "./server/*"
+  },
+  "dependencies": {
+    "@561-group/tab": "0.0.1",
+    "@561-group/fizzos": "0.0.1",
+    "@561-group/qwzspace": "0.0.1"
+  },
+  "561:serve": {
+    "domain": "ruinfold.561.group",
+    "kind": "proxy",
+    "port": 18792,
+    "sse": true,
+    "run": {
+      "unit": "ruinfold.service",
+      "description": "Ruinfold browser 3D MMORPG",
+      "exec": "server/scripts/ruinfold.mjs",
+      "env": {
+        "RUINFOLD_PORT": "18792",
+        "RUINFOLD_HOST": "127.0.0.1"
+      }
+    }
+  }
+}

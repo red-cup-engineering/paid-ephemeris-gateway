@@ -1,0 +1,52 @@
+{
+  "name": "@561-group/waggle",
+  "version": "0.0.1",
+  "license": "Unlicense",
+  "type": "module",
+  "description": "waggle — a zero-dependency Node↔Hive blockchain client, rederived from the ground up. Named for the bees' waggle dance, the social signal by which a hive shares where to go. It speaks Hive's JSON-RPC (condenser positional + bridge named-object), and builds, signs, and broadcasts transactions with hand-rolled secp256k1 (BigInt curve, RFC6979 deterministic-k, low-S + graphene loop, recovery id → 65-byte compact signature) and graphene binary serialization (little-endian, legacy STEEM/SBD asset symbols on the wire, the operation-variant id table). Node builtins only — node:crypto for sha256/ripemd160/hmac, node:https for transport — no npm dependency tree. High-level helpers (post, vote, follow, reblog, transfer, claim) and a CLI sit on top.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/561-group.git",
+    "directory": "apps/interface/waggle"
+  },
+  "bin": {
+    "waggle": "./scripts/waggle.mjs"
+  },
+  "man": "./man/waggle.1",
+  "files": [
+    "scripts",
+    "lib",
+    "man",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "hive",
+    "blockchain",
+    "graphene",
+    "secp256k1",
+    "json-rpc",
+    "zero-dependency",
+    "cli"
+  ],
+  "scripts": {
+    "test": "node tests/_run_tests.mjs",
+    "man": "mandoc -a man/waggle.1"
+  },
+  "types": "./lib/client.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/client.d.ts",
+      "default": "./lib/client.mjs"
+    },
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "imports": {
+    "#harness": "./tests/_harness.mjs",
+    "#lib/*": "./lib/*",
+    "#*": "./*"
+  }
+}

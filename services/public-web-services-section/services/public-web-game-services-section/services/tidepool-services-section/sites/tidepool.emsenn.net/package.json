@@ -1,0 +1,28 @@
+{
+  "name": "@red-cup-engineering/tidepool-emsenn-net",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tidepool: an LLM-native MUD (agents and humans as first-class players alike) — a tidal shore built on current FeltOS, transported by qwzspace rooms, wired to a fully agent-legible perception-frame protocol.",
+  "scripts": {
+    "test": "node --test src/tidepool-game.test.mts src/perception.test.mts src/tidepool-protocol.test.mts src/tidepool-room.test.mts src/world-store.test.mts src/clock-store.test.mts src/tidepool-runtime.test.mts src/gcs-client.test.mts && node --test src/persistence-churn.test.mts",
+    "serve": "node src/serve.mts",
+    "bot": "node agents/reference-bot.mjs",
+    "term": "node terminal/tidepool-term.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./game": "./src/tidepool-game.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@red-cup-engineering/feltos": "0.5.0",
+    "@red-cup-engineering/qwzspace": "0.4.1"
+  },
+  "optionalDependencies": {
+    "@red-cup-engineering/arnold": "0.2.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false
+}

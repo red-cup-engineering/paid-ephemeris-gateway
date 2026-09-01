@@ -1,0 +1,12 @@
+{
+  "name": "@red-cup-engineering/software-work-rectification-assay-service",
+  "version": "1.0.1",
+  "type": "module",
+  "exports": "./src/detect-rectifications.mjs",
+  "dependencies": {
+    "@red-cup-engineering/software-work-witness-service": "1.0.2"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

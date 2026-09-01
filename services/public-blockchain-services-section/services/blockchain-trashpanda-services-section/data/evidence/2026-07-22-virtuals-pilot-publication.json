@@ -1,0 +1,30 @@
+{
+  "type": "BlockchainTrashpandaVirtualsPilotPublicationEvidence",
+  "recordedAt": "2026-07-22T17:39:42Z",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "platform": "Virtuals ACP Lite",
+  "authorization": "ni:///sha-256;qmlVGM6Y11-5PjGAAVssSurZgYTGInmrrdhmFbbzpg4",
+  "agent": {
+    "id": "44184",
+    "name": "Yanagi",
+    "wallet": "eip155:8453:0x9e1e497e38b776db1a79f0db9dd558bcca8b26fc"
+  },
+  "offering": {
+    "name": "pre_sign_transaction_policy_conformance",
+    "price": {
+      "amount": "0.01",
+      "currency": "USDC",
+      "type": "fixed"
+    },
+    "requiredFunds": false,
+    "jobLimit": 1,
+    "broaderLaunch": false
+  },
+  "publication": {
+    "status": "published-and-serving",
+    "runtimeCredentialPersistence": "memory-only",
+    "durablePublicationAttempt": "data/runtime/virtuals-commercial-pilot/offering-publication-attempt.json",
+    "durableJobClaimPresent": false
+  },
+  "secretsRecorded": false
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@561-group/aletheon",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void \u2014 every vital fact is a bilattice cell (\u22a5 unknown / t real / f destroyed / \u22a4 contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the 561-group computer and math substrates; the browser renders a streamed view with a from-scratch WebGL2 engine and rederived vec/mat/quat math. Zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/bare-cedar-fog.git",
+    "directory": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/services/aletheon-services-section"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/aletheon-server.mjs",
+    "test": "node --test"
+  },
+  "imports": {
+    "#shared/*": "./shared/*",
+    "#world/*": "./server/world/*",
+    "#net/*": "./server/net/*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "files": [
+    "client",
+    "server",
+    "shared",
+    "scripts",
+    "tools",
+    "docs",
+    "deploy/README.md",
+    "README.md",
+    "CONSOLIDATION.md"
+  ],
+  "561:serve": {
+    "domain": "aletheon.561.group",
+    "kind": "proxy",
+    "port": 18794,
+    "ws": true,
+    "run": {
+      "unit": "aletheon.service",
+      "description": "Aletheon browser 3D MMORPG",
+      "exec": "scripts/aletheon-server.mjs",
+      "env": {
+        "WORLD_LOG": "${dir}/deploy/aletheon-world.jsonl"
+      }
+    }
+  },
+  "dependencies": {
+    "@561-group/computer": "^0.0.5",
+    "@lenticule-science/metrologic": "0.1.0",
+    "@red-cup-engineering/eavt": "0.4.0",
+    "@red-cup-engineering/flatfile": "0.1.0",
+    "@red-cup-engineering/qwzspace": "0.4.1"
+  }
+}

@@ -1,0 +1,77 @@
+# Example .fars/ledger.toml — transaction-lens configuration.
+#
+# Place a customized copy of this file at <repo>/.fars/ledger.toml.
+# `pyfars ledger` reads it for two things:
+#
+#   1. [bindings]        — how to project each operator's witnesses
+#                          into double-entry postings.
+#   2. [closure-accounts] — which accounts the operations loop must
+#                          drain to zero per commodity (vs. capital
+#                          stocks allowed to accumulate).
+#
+# If this file is absent, FARS falls back to its built-in default
+# bindings (see pyfars.runtime.ledger.DEFAULT_BINDINGS) and applies the
+# strict default for closure: every account in every commodity must
+# close. The strict default exists so unconfigured commodities fail
+# loud rather than silently pass.
+#
+# When this file IS present, the [bindings] table fully replaces the
+# defaults — there is no merge. Write the chart you want.
+
+# ---- bindings ------------------------------------------------------------
+
+[bindings.commit-drafted]
+operator = "commit"
+on = "diff_entities_drafted"
+debit = "assets:knowledge:library"
+credit = "equity:capability"
+commodity = "ARTIFACTS"
+memo = "entity drafted"
+
+[bindings.commit-refined]
+operator = "commit"
+on = "diff_entities_refined"
+debit = "assets:knowledge:library"
+credit = "equity:settlement"
+commodity = "ARTIFACTS"
+memo = "entity refined"
+
+[bindings.commit-task-drafted]
+operator = "commit"
+on = "diff_tasks_drafted"
+debit = "assets:work:tasks-ready"
+credit = "equity:plan"
+commodity = "TASKS"
+memo = "task drafted"
+
+# Add closing-side bindings here once your substrate emits them, e.g.:
+#
+# [bindings.task-completed]
+# operator = "task_complete"   # an operator your harness emits when a
+#                              # task transitions open → done
+# debit = "assets:work:tasks-completed"
+# credit = "assets:work:tasks-ready"
+# commodity = "TASKS"
+# memo = "task completed"
+#
+# Without a matching closing binding, the corresponding closure account
+# (here: assets:work:tasks-ready) will leak in `pyfars ledger balance`.
+
+# ---- closure accounts ---------------------------------------------------
+#
+# Per commodity, list the accounts that MUST net to zero at stationarity.
+# Accounts not listed for a commodity are treated as capital stocks
+# (allowed to accumulate). Omitting a commodity entirely re-enables the
+# strict default (every account must close).
+#
+# The captain decides which accounts belong here based on the chart of
+# accounts under operations/.../accounting/texts/chart-of-accounts.md.
+
+[closure-accounts]
+
+# TASKS: ready-queue should drain. Completed-tasks is a stock.
+TASKS = ["assets:work:tasks-ready"]
+
+# ARTIFACTS: nothing required to close (the library legitimately grows).
+# Capability and settlement are stocks of expended effort.
+ARTIFACTS = []

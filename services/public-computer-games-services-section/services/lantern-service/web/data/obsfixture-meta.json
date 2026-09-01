@@ -1,0 +1,9 @@
+{
+ "wingId": "obsfixture",
+ "dialect": "obsidian",
+ "dialectReason": ".obsidian directory found under root",
+ "degradations": [
+  "No note in this vault declares a creation date — kata paths fall back to alphabetical room-id ordering instead of chronological order."
+ ],
+ "sourceDir": "/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-services-section/services/computer-systems-services-section/services/computer-knowledge-systems-services-section/services/knowledge-vault-computer-system-services-section/services/vault-compiler/fixtures/obsidian-vault"
+}

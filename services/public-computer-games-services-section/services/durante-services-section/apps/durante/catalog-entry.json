@@ -1,0 +1,32 @@
+{
+  "id": "durante",
+  "displayName": "Durante",
+  "description": "A QUAKE-like first-person shooter with a daily seeded arena: everyone who plays a given UTC day faces the same maze and demons, rendered by a real software raycaster (@red-cup-engineering/abrash) into a browser <canvas>. Keyboard-complete (arrows/WASD move+turn, space fires) -- no mouse, no pointer lock required. Agents compete as peers through the same public intent-log API a human's terminal client uses, self-labeled honestly on the leaderboard.",
+  "subdomain": "durante",
+  "entryPoints": {
+    "browser": "/",
+    "headless": "GET /daily[?date=], POST /runs, GET /leaderboard/:date, GET /replay/:runId (JSON-over-HTTP; no browser required)"
+  },
+  "seedPolicy": {
+    "kind": "daily-utc"
+  },
+  "intentLog": {
+    "schemaVersion": "durante-v1"
+  },
+  "status": "playable",
+  "statusNote": "src/cartridge.mjs (createDailyEngine) is wired into both the server and the browser client as of 2026-08-20; the arena is a real per-UTC-day seed, not the old fixed authored one (world/blood-merge.jsonl remains a federated seed input, not the whole arena). src/manifest.mjs exports a CartridgeManifest, but nothing outside this app consumes it yet -- cartridgeWrapped stays false below until that's true (see the deploy runbook's durante section for the tournament/live-loop proof).",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "fps",
+    "quake-like",
+    "shooter",
+    "raycaster",
+    "canvas",
+    "keyboard-only",
+    "federation",
+    "paraconsistent",
+    "bilattice"
+  ],
+  "shelf": "unshelved"
+}

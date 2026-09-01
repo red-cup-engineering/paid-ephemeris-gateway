@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cowrie Casino</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/floor.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <span class="glyph" aria-hidden="true">&#9830;</span>
+      <h1>Cowrie Casino</h1>
+      <span class="glyph" aria-hidden="true">&#9827;</span>
+    </div>
+    <p class="tagline">a Cowrie Games social casino &mdash; play currency only, no real-money wagers or payouts, ever</p>
+  </header>
+
+  <main>
+    <section class="panel" id="identity-panel">
+      <p id="identity-status">Opening a table for you&hellip;</p>
+    </section>
+
+    <section class="panel balances" aria-live="polite">
+      <div class="stat">
+        <span class="stat-label">Tickets</span>
+        <span class="stat-value" id="ticket-balance">&mdash;</span>
+        <span class="stat-cap" id="ticket-cap"></span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Chips</span>
+        <span class="stat-value" id="chip-balance">&mdash;</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Jackpot Pool</span>
+        <span class="stat-value jackpot" id="jackpot-balance">&mdash;</span>
+      </div>
+    </section>
+
+    <section class="panel actions">
+      <button id="claim-tickets-btn" type="button">Claim regenerated tickets</button>
+      <button id="claim-daily-btn" type="button">Claim daily bonus</button>
+      <button id="buy-in-btn" type="button">Buy into a table (1 ticket &rarr; chips)</button>
+      <p class="hint" id="action-message" role="status"></p>
+    </section>
+
+    <section class="panel floor-panel" id="floor-panel">
+      <div class="floor-panel-head">
+        <h2>The floor, live</h2>
+        <div class="floor-live-stats">
+          <span class="floor-presence"><span class="floor-presence-dot" aria-hidden="true"></span> <span id="floor-presence-count">&mdash;</span> here now</span>
+          <span class="floor-jackpot-line">Jackpot: <span id="floor-jackpot-ticker">&mdash;</span></span>
+          <button id="floor-sound-toggle-btn" type="button" aria-pressed="true" aria-label="Toggle floor sound">&#128266;</button>
+        </div>
+      </div>
+      <div class="floor-stage">
+        <div>
+          <canvas id="floor-canvas" width="640" height="320" aria-label="A live view of the casino floor: tables, machines, and who's playing right now"></canvas>
+          <p id="floor-status" role="status"></p>
+        </div>
+        <div class="floor-feed">
+          <h3>On the floor</h3>
+          <ul id="floor-feed-list"><li class="floor-feed-item">The floor is warming up&hellip;</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel games">
+      <h2>On the floor</h2>
+      <ul class="game-list game-list-grid">
+        <li class="game-card">
+          <a href="/blackjack.html" class="game-card-link">
+            <span class="game-card-name">Blackjack</span>
+            <span class="game-card-blurb">6-deck shoe, real chip stakes, an optional House Math panel that shows the exact EV of every move.</span>
+            <span class="game-card-cta">Take a seat &rarr;</span>
+          </a>
+        </li>
+        <li class="game-card game-card-slots">
+          <a href="/slots.html" class="game-card-link">
+            <span class="game-card-badge">Flagship</span>
+            <span class="game-card-name">Tideline Treasures</span>
+            <span class="game-card-blurb">5-reel, 20-line video slot &mdash; wilds, scatters, a retriggerable free-spin bonus, and a shared progressive jackpot. Exact RTP and jackpot odds published live in House Math.</span>
+            <span class="game-card-cta">Spin the reels &rarr;</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel store">
+      <h2>Ticket &amp; Chip Bundles</h2>
+      <ul class="bundle-list" id="bundle-list">
+        <li class="loading">Loading the store&hellip;</li>
+      </ul>
+    </section>
+
+    <section class="panel disclosure">
+      <h2>The house signature</h2>
+      <p>
+        Cowrie Casino discloses its economy on the record: every ticket and chip balance is a
+        double-entry <a href="/audit">energy-bank ledger</a> account, auditable at any time as a
+        portable hledger journal. Once game tables are live here, their odds and RTP will be
+        published the same way &mdash; witnessed, not hidden. No wager or bonus in this casino
+        ever converts to or from real money; tickets and chips are play currency only.
+      </p>
+    </section>
+
+    <section class="panel coming-soon">
+      <h2>What's coming</h2>
+      <p>
+        Blackjack and Tideline Treasures are both real, fully-wired games on the floor &mdash; real
+        chip stakes through the same ledger as everything here, each with its own House Math panel
+        disclosing exact figures on request. The floor above is real too, now: live presence, the
+        cast (named agent regulars who actually play, on real chip accounts through the same table
+        code a human uses), a live jackpot ticker, and win broadcasts, all over one realtime
+        <code>@red-cup-engineering/qwzspace</code> room. More tables, a richer floor scene, and a
+        promotion pass (real balancing and soak-testing beyond this build's own test suite) are
+        later work &mdash; which is why the floor still reads &ldquo;in development.&rdquo;
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cowrie Casino &middot; a Cowrie Games service &middot; part of the 561 Group</p>
+  </footer>
+
+  <script type="module" src="/js/app.mjs"></script>
+  <script type="module" src="/js/floor.mjs"></script>
+</body>
+</html>

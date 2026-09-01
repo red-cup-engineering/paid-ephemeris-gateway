@@ -1,0 +1,29 @@
+{
+  "id": "chief-executive-officer",
+  "name": "chief executive officer",
+  "kind": "office",
+  "normative-structure": "The chief executive officer holds Blockchain Trashpanda's local decision, personnel, and distribution rights; contracts capacity; keeps value-created, value-captured, and cost evidence separate; and answers for the chartered customer outcome without acquiring the wallet owner's, customer's, inducer's, receiver's, or payment channel's authority.",
+  "deontic-profile": {
+    "pre-sign-transaction-policy-conformance": "duty"
+  },
+  "provides-skill": [
+    "operating-blockchain-trashpanda"
+  ],
+  "authority-scope": [
+    "./"
+  ],
+  "jurisdiction": "blockchain-trashpanda",
+  "part-of": "blockchain-trashpanda",
+  "reports-to": [],
+  "theory-basis": [
+    "Rendanheyi self-governing micro-enterprise with decision, personnel, and distribution rights",
+    "office-as-double-settlement and dignitas non moritur",
+    "zero distance to the customer outcome",
+    "the Board-bounded formation wager and symmetric value-adjustment contract"
+  ],
+  "founded": "2026-07-22",
+  "x-provenance": {
+    "recorded-by": "codex/leader-authorized-formation",
+    "recorded-on": "2026-07-22"
+  }
+}

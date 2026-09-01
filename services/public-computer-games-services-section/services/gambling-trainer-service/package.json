@@ -1,0 +1,41 @@
+{
+  "name": "@red-cup-engineering/gambling-trainer-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "kelly-criterion",
+    "bankroll-management",
+    "expected-value",
+    "daily-puzzle",
+    "deterministic-replay",
+    "practice-bankroll"
+  ],
+  "description": "gambling-trainer.561.group — 'Kelly's Wager': a daily-seeded bankroll-survival trainer that teaches expected value, variance, and Kelly sizing by play, against a practice-only bankroll (earn-only; no real currency ever enters or leaves). Every offered wager is graded against the real Kelly optimum, and every spend in the UI is typed on screen as freely-reversible, priced, or terminal, per the house's disclosure discipline.",
+  "scripts": {
+    "check": "for f in src/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts web/test/*.test.mts",
+    "serve": "node web/server.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/cartridge": "0.2.1"
+  },
+  "exports": {
+    "./types": "./src/types.mts",
+    "./seed": "./src/seed.mts",
+    "./kelly": "./src/kelly.mts",
+    "./odds": "./src/odds.mts",
+    "./wagers": "./src/wagers.mts",
+    "./engine": "./src/engine.mts",
+    "./disclosure": "./src/disclosure.mts",
+    "./paths": "./src/paths.mts",
+    "./replay": "./src/replay.mts",
+    "./daily": "./src/daily.mts",
+    "./manifest": "./src/manifest.mts",
+    "./cartridge": "./src/cartridge.mts",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false
+}

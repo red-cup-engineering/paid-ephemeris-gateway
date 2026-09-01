@@ -1,0 +1,84 @@
+{%- set src_rel = record.source_path.relative_to(root) -%}
+{%- set title = record.title or record.slug -%}
+{%- set short_desc = (record.description or ('FARS agent: ' ~ title)) | replace('\n', ' ') | trim -%}
+{%- if short_desc | length > 360 -%}
+{%- set short_desc = short_desc[:357] | trim ~ '...' -%}
+{%- endif -%}
+{%- set short_desc = short_desc | replace('"', "'") -%}
+---
+name: {{ record.slug }}
+description: "{{ short_desc }}"
+{%- if record.model and record.model | lower in ["opus", "sonnet", "haiku"] %}
+model: {{ record.model | lower }}
+{%- endif %}
+---
+
+# {{ title }}
+
+<!-- Projected from `{{ src_rel }}` by `pyfars install-harness claude-code`. Edit the substrate record, not this file. -->
+
+{%- set role_bits = [] -%}
+{%- if record.role -%}
+{%- set _ = role_bits.append('**Role:** ' ~ record.role) -%}
+{%- endif -%}
+{%- if record.reports_to -%}
+{%- set _ = role_bits.append('**Reports to:** ' ~ record.reports_to) -%}
+{%- endif -%}
+{% if role_bits %}
+
+{{ role_bits | join(' · ') }}
+{% endif %}
+{%- if record.duties %}
+
+## Duties
+
+{% for d in record.duties %}- {{ d }}
+{% endfor %}
+{%- endif %}
+{%- if record.powers %}
+
+## Powers
+
+{% for p in record.powers %}- {{ p }}
+{% endfor %}
+{%- endif %}
+{%- if record.skills %}
+
+## Skills
+
+PyFARS skills this agent operates by (each is a record under `governance/skills/`):
+
+{% for s in record.skills %}- `{{ s }}`
+{% endfor %}
+{%- endif %}
+{%- if record.jurisdiction.read or record.jurisdiction.write %}
+
+## Jurisdiction
+
+{%- if record.jurisdiction.read %}
+
+**Read:**
+{% for path in record.jurisdiction.read %}- `{{ path }}`
+{% endfor %}
+{%- endif %}
+{%- if record.jurisdiction.write %}
+
+**Write:**
+{% for path in record.jurisdiction.write %}- `{{ path }}`
+{% endfor %}
+{%- endif %}
+{%- endif %}
+{%- if record.autonomous %}
+
+## Acts autonomously
+
+{% for a in record.autonomous %}- {{ a }}
+{% endfor %}
+{%- endif %}
+{%- if record.escalates %}
+
+## Escalates to captain
+
+{% for e in record.escalates %}- {{ e }}
+{% endfor %}
+{%- endif %}

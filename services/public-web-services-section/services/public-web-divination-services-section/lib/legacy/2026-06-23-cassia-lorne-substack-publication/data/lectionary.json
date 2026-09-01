@@ -1,0 +1,19 @@
+{
+  "_provenance": {
+    "cycle": "Revised Common Lectionary daily readings, Year A, semicontinuous track",
+    "source": "Vanderbilt Divinity Library (lectionary.library.vanderbilt.edu), fetched 2026-06-11",
+    "note": "References are the daily Psalm (Cassia reads the Psalm or Gospel interpretively). Texts quoted only from public-domain translations (KJV), only where transcription is certain."
+  },
+  "2026-06-08": { "cycle": "RCL daily, Year A", "reference": "Psalm 119:41-48" },
+  "2026-06-09": { "cycle": "RCL daily, Year A", "reference": "Psalm 119:41-48" },
+  "2026-06-10": { "cycle": "RCL daily, Year A", "reference": "Matthew 12:1-8" },
+  "2026-06-11": {
+    "cycle": "RCL daily, Year A",
+    "reference": "Psalm 116:1-2",
+    "text": "I love the LORD, because he hath heard my voice and my supplications. Because he hath inclined his ear unto me, therefore will I call upon him as long as I live.",
+    "translation": "KJV"
+  },
+  "2026-06-12": { "cycle": "RCL daily, Year A", "reference": "Psalm 116:1-2, 12-19" },
+  "2026-06-13": { "cycle": "RCL daily, Year A", "reference": "Psalm 116:1-2, 12-19" },
+  "2026-06-14": { "cycle": "RCL daily, Year A", "reference": "Psalm 116:1-2, 12-19" }
+}

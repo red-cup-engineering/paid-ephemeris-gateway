@@ -1,0 +1,840 @@
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T21:47:02.871Z","v":"1185003.752597 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T21:47:02.871Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T21:47:02.871Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T21:47:02.871Z","v":258975915339}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T21:47:02.871Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T21:47:02.871Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T21:47:02.871Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T21:47:02.871Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T21:47:02.871Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T21:47:02.871Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T21:47:02.871Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T21:47:02.871Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T21:47:02.871Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T21:47:02.871Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T21:47:02.871Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T21:47:02.871Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T21:47:02.871Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T21:47:02.871Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T21:47:02.871Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T21:47:02.871Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T21:47:02.871Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T21:47:02.871Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T21:47:02.871Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T21:47:02.871Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T21:47:02.871Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:03:44.846Z","v":"1185003.752597 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:03:44.846Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T22:03:44.846Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T22:03:44.846Z","v":258975915339}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T22:03:44.846Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:03:44.846Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:03:44.846Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T22:03:44.846Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T22:03:44.846Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:03:44.846Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:03:44.846Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T22:03:44.846Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T22:03:44.846Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T22:03:44.846Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T22:03:44.846Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T22:03:44.846Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T22:03:44.846Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T22:03:44.846Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T22:03:44.846Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T22:03:44.846Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T22:03:44.846Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:03:44.846Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:03:44.846Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T22:03:44.846Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T22:03:44.846Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:06:47.803Z","v":"1185003.752597 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:06:47.803Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T22:06:47.803Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T22:06:47.803Z","v":258975915339}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T22:06:47.803Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:06:47.803Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:06:47.803Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T22:06:47.803Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T22:06:47.803Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:06:47.803Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:06:47.803Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T22:06:47.803Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T22:06:47.803Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T22:06:47.803Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T22:06:47.803Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T22:06:47.803Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T22:06:47.803Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T22:06:47.803Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T22:06:47.803Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T22:06:47.803Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T22:06:47.803Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:06:47.803Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:06:47.803Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T22:06:47.803Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T22:06:47.803Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:22:40.617Z","v":"1185003.752597 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:22:40.617Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T22:22:40.617Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T22:22:40.617Z","v":258975915339}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T22:22:40.617Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:22:40.617Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:22:40.617Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T22:22:40.617Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T22:22:40.617Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:22:40.617Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:22:40.617Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T22:22:40.617Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T22:22:40.617Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T22:22:40.617Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T22:22:40.617Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T22:22:40.617Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T22:22:40.617Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T22:22:40.617Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T22:22:40.617Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T22:22:40.617Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T22:22:40.617Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:22:40.617Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:22:40.617Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T22:22:40.617Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T22:22:40.617Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:39:22.479Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:39:22.479Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T22:39:22.479Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T22:39:22.479Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T22:39:22.479Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:39:22.479Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:39:22.479Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T22:39:22.479Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T22:39:22.479Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:39:22.479Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:39:22.479Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T22:39:22.479Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T22:39:22.479Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T22:39:22.479Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T22:39:22.479Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T22:39:22.479Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T22:39:22.479Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T22:39:22.479Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T22:39:22.479Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T22:39:22.479Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T22:39:22.479Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:39:22.479Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:39:22.479Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T22:39:22.479Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T22:39:22.479Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:56:09.832Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:56:09.832Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T22:56:09.832Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T22:56:09.832Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T22:56:09.832Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:56:09.832Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T22:56:09.832Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T22:56:09.832Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T22:56:09.832Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:56:09.832Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T22:56:09.832Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T22:56:09.832Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T22:56:09.832Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T22:56:09.832Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T22:56:09.832Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T22:56:09.832Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T22:56:09.832Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T22:56:09.832Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T22:56:09.832Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T22:56:09.832Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T22:56:09.832Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:56:09.832Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T22:56:09.832Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T22:56:09.832Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T22:56:09.832Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:11:57.606Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:11:57.606Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T23:11:57.606Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T23:11:57.606Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T23:11:57.606Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:11:57.606Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:11:57.606Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T23:11:57.606Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T23:11:57.606Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:11:57.606Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:11:57.606Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T23:11:57.606Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T23:11:57.606Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T23:11:57.606Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T23:11:57.606Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T23:11:57.606Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T23:11:57.606Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T23:11:57.606Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T23:11:57.606Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T23:11:57.606Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T23:11:57.606Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:11:57.606Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:11:57.606Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T23:11:57.606Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T23:11:57.606Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:28:33.883Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:28:33.883Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T23:28:33.883Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T23:28:33.883Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T23:28:33.883Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:28:33.883Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:28:33.883Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T23:28:33.883Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T23:28:33.883Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:28:33.883Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:28:33.883Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T23:28:33.883Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T23:28:33.883Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T23:28:33.883Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T23:28:33.883Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T23:28:33.883Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T23:28:33.883Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T23:28:33.883Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T23:28:33.883Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T23:28:33.883Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T23:28:33.883Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:28:33.883Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:28:33.883Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T23:28:33.883Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T23:28:33.883Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:45:18.447Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:45:18.447Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-19T23:45:18.447Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-19T23:45:18.447Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-19T23:45:18.447Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:45:18.447Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-19T23:45:18.447Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-19T23:45:18.447Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-19T23:45:18.447Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:45:18.447Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-19T23:45:18.447Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-19T23:45:18.447Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-19T23:45:18.447Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-19T23:45:18.447Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-19T23:45:18.447Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-19T23:45:18.447Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-19T23:45:18.447Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-19T23:45:18.447Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-19T23:45:18.447Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-19T23:45:18.447Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-19T23:45:18.447Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:45:18.447Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-19T23:45:18.447Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-19T23:45:18.447Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-19T23:45:18.447Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:01:51.934Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:01:51.934Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T00:01:51.934Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T00:01:51.934Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T00:01:51.934Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:01:51.934Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:01:51.934Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T00:01:51.934Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T00:01:51.934Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:01:51.934Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:01:51.934Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T00:01:51.934Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T00:01:51.934Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T00:01:51.934Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T00:01:51.934Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T00:01:51.934Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T00:01:51.934Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T00:01:51.934Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T00:01:51.934Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T00:01:51.934Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T00:01:51.934Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:01:51.934Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:01:51.934Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T00:01:51.934Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T00:01:51.934Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:18:21.047Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:18:21.047Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T00:18:21.047Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T00:18:21.047Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T00:18:21.047Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:18:21.047Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:18:21.047Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T00:18:21.047Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T00:18:21.047Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:18:21.047Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:18:21.047Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T00:18:21.047Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T00:18:21.047Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T00:18:21.047Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T00:18:21.047Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T00:18:21.047Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T00:18:21.047Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T00:18:21.047Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T00:18:21.047Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T00:18:21.047Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T00:18:21.047Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:18:21.047Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:18:21.047Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T00:18:21.047Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T00:18:21.047Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:34:52.067Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:34:52.067Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T00:34:52.067Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T00:34:52.067Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T00:34:52.067Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:34:52.067Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:34:52.067Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T00:34:52.067Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T00:34:52.067Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:34:52.067Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:34:52.067Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T00:34:52.067Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T00:34:52.067Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T00:34:52.067Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T00:34:52.067Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T00:34:52.067Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T00:34:52.067Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T00:34:52.067Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T00:34:52.067Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T00:34:52.067Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T00:34:52.067Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:34:52.067Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:34:52.067Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T00:34:52.067Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T00:34:52.067Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:51:23.808Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:51:23.808Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T00:51:23.808Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T00:51:23.808Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T00:51:23.808Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:51:23.808Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T00:51:23.808Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T00:51:23.808Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T00:51:23.808Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:51:23.808Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T00:51:23.808Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T00:51:23.808Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T00:51:23.808Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T00:51:23.808Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T00:51:23.808Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T00:51:23.808Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T00:51:23.808Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T00:51:23.808Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T00:51:23.808Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T00:51:23.808Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T00:51:23.808Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:51:23.808Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T00:51:23.808Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T00:51:23.808Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T00:51:23.808Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:07:52.291Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:07:52.291Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T01:07:52.291Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T01:07:52.291Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T01:07:52.291Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:07:52.291Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:07:52.291Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T01:07:52.291Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T01:07:52.291Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:07:52.291Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:07:52.291Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T01:07:52.291Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T01:07:52.291Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T01:07:52.291Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T01:07:52.291Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T01:07:52.291Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T01:07:52.291Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T01:07:52.291Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T01:07:52.291Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T01:07:52.291Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T01:07:52.291Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:07:52.291Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:07:52.291Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T01:07:52.291Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T01:07:52.291Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:24:21.416Z","v":"1185026.464578 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:24:21.416Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T01:24:21.416Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T01:24:21.416Z","v":258981593334}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T01:24:21.416Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:24:21.416Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:24:21.416Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T01:24:21.416Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T01:24:21.416Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:24:21.416Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:24:21.416Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T01:24:21.416Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T01:24:21.416Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T01:24:21.416Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T01:24:21.416Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T01:24:21.416Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T01:24:21.416Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T01:24:21.416Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T01:24:21.416Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T01:24:21.416Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T01:24:21.416Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:24:21.416Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:24:21.416Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T01:24:21.416Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T01:24:21.416Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:40:51.133Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:40:51.133Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T01:40:51.133Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T01:40:51.133Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T01:40:51.133Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:40:51.133Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:40:51.133Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T01:40:51.133Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T01:40:51.133Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:40:51.133Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:40:51.133Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T01:40:51.133Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T01:40:51.133Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T01:40:51.133Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T01:40:51.133Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T01:40:51.133Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T01:40:51.133Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T01:40:51.133Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T01:40:51.133Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T01:40:51.133Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T01:40:51.133Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:40:51.133Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:40:51.133Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T01:40:51.133Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T01:40:51.133Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:57:20.637Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:57:20.637Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T01:57:20.637Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T01:57:20.637Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T01:57:20.637Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:57:20.637Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T01:57:20.637Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T01:57:20.637Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T01:57:20.637Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:57:20.637Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T01:57:20.637Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T01:57:20.637Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T01:57:20.637Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T01:57:20.637Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T01:57:20.637Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T01:57:20.637Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T01:57:20.637Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T01:57:20.637Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T01:57:20.637Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T01:57:20.637Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T01:57:20.637Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:57:20.637Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T01:57:20.637Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T01:57:20.637Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T01:57:20.637Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:13:50.887Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:13:50.887Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T02:13:50.887Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T02:13:50.887Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T02:13:50.887Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:13:50.887Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:13:50.887Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T02:13:50.887Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T02:13:50.887Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:13:50.887Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:13:50.887Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T02:13:50.887Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T02:13:50.887Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T02:13:50.887Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T02:13:50.887Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T02:13:50.887Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T02:13:50.887Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T02:13:50.887Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T02:13:50.887Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T02:13:50.887Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T02:13:50.887Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:13:50.887Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:13:50.887Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T02:13:50.887Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T02:13:50.887Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:30:22.468Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:30:22.468Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T02:30:22.468Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T02:30:22.468Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T02:30:22.468Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:30:22.468Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:30:22.468Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T02:30:22.468Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T02:30:22.468Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:30:22.468Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:30:22.468Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T02:30:22.468Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T02:30:22.468Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T02:30:22.468Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T02:30:22.468Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T02:30:22.468Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T02:30:22.468Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T02:30:22.468Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T02:30:22.468Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T02:30:22.468Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T02:30:22.468Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:30:22.468Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:30:22.468Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T02:30:22.468Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T02:30:22.468Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:46:53.556Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:46:53.556Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T02:46:53.556Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T02:46:53.556Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T02:46:53.556Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:46:53.556Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T02:46:53.556Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T02:46:53.556Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T02:46:53.556Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:46:53.556Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T02:46:53.556Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T02:46:53.556Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T02:46:53.556Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T02:46:53.556Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T02:46:53.556Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T02:46:53.556Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T02:46:53.556Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T02:46:53.556Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T02:46:53.556Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T02:46:53.556Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T02:46:53.556Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:46:53.556Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T02:46:53.556Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T02:46:53.556Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T02:46:53.556Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:03:21.439Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:03:21.439Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T03:03:21.439Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T03:03:21.439Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T03:03:21.439Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:03:21.439Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:03:21.439Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T03:03:21.439Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T03:03:21.439Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:03:21.439Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:03:21.439Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T03:03:21.439Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T03:03:21.439Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T03:03:21.439Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T03:03:21.439Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T03:03:21.439Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T03:03:21.439Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T03:03:21.439Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T03:03:21.439Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T03:03:21.439Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T03:03:21.439Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:03:21.439Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:03:21.439Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T03:03:21.439Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T03:03:21.439Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:19:49.454Z","v":"1185049.176357 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:19:49.454Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T03:19:49.454Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T03:19:49.454Z","v":258987271278}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T03:19:49.454Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:19:49.454Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:19:49.454Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T03:19:49.454Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T03:19:49.454Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:19:49.454Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:19:49.454Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T03:19:49.454Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T03:19:49.454Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T03:19:49.454Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T03:19:49.454Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T03:19:49.454Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T03:19:49.454Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T03:19:49.454Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T03:19:49.454Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T03:19:49.454Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T03:19:49.454Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:19:49.454Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:19:49.454Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T03:19:49.454Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T03:19:49.454Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:36:17.380Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:36:17.380Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T03:36:17.380Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T03:36:17.380Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T03:36:17.380Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:36:17.380Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:36:17.380Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T03:36:17.380Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T03:36:17.380Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:36:17.380Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:36:17.380Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T03:36:17.380Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T03:36:17.380Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T03:36:17.380Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T03:36:17.380Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T03:36:17.380Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T03:36:17.380Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T03:36:17.380Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T03:36:17.380Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T03:36:17.380Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T03:36:17.380Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:36:17.380Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:36:17.380Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T03:36:17.380Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T03:36:17.380Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:52:45.702Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:52:45.702Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T03:52:45.702Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T03:52:45.702Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T03:52:45.702Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:52:45.702Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T03:52:45.702Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T03:52:45.702Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T03:52:45.702Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:52:45.702Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T03:52:45.702Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T03:52:45.702Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T03:52:45.702Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T03:52:45.702Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T03:52:45.702Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T03:52:45.702Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T03:52:45.702Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T03:52:45.702Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T03:52:45.702Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T03:52:45.702Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T03:52:45.702Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:52:45.702Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T03:52:45.702Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T03:52:45.702Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T03:52:45.702Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:09:15.841Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:09:15.841Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T04:09:15.841Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T04:09:15.841Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T04:09:15.841Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:09:15.841Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:09:15.841Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T04:09:15.841Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T04:09:15.841Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:09:15.841Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:09:15.841Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T04:09:15.841Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T04:09:15.841Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T04:09:15.841Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T04:09:15.841Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T04:09:15.841Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T04:09:15.841Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T04:09:15.841Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T04:09:15.841Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T04:09:15.841Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T04:09:15.841Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:09:15.841Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:09:15.841Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T04:09:15.841Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T04:09:15.841Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:25:49.115Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:25:49.115Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T04:25:49.115Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T04:25:49.115Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T04:25:49.115Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:25:49.115Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:25:49.115Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T04:25:49.115Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T04:25:49.115Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:25:49.115Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:25:49.115Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T04:25:49.115Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T04:25:49.115Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T04:25:49.115Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T04:25:49.115Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T04:25:49.115Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T04:25:49.115Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T04:25:49.115Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T04:25:49.115Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T04:25:49.115Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T04:25:49.115Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:25:49.115Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:25:49.115Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T04:25:49.115Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T04:25:49.115Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:42:20.779Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:42:20.779Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T04:42:20.779Z","v":46}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T04:42:20.779Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T04:42:20.779Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:42:20.779Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:42:20.779Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T04:42:20.779Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T04:42:20.779Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:42:20.779Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:42:20.779Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T04:42:20.779Z","v":1364}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T04:42:20.779Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T04:42:20.779Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T04:42:20.779Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T04:42:20.779Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T04:42:20.779Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T04:42:20.779Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T04:42:20.779Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T04:42:20.779Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T04:42:20.779Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:42:20.779Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:42:20.779Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T04:42:20.779Z","v":38}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T04:42:20.779Z","v":2100015296}
+{"a":"vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:58:53.366Z","v":"1185075.132477 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:58:53.366Z","v":"149100.091241 VESTS"}
+{"a":"received_vesting_shares","e":"account:emsenn0","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:emsenn0","t":"2026-06-20T04:58:53.366Z","v":8814}
+{"a":"downvote_power","e":"account:emsenn0","t":"2026-06-20T04:58:53.366Z","v":258993760309}
+{"a":"vesting_shares","e":"account:essiebee","t":"2026-06-20T04:58:53.366Z","v":"2397.171594 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:58:53.366Z","v":"2353.587226 VESTS"}
+{"a":"received_vesting_shares","e":"account:essiebee","t":"2026-06-20T04:58:53.366Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:essiebee","t":"2026-06-20T04:58:53.366Z","v":0}
+{"a":"downvote_power","e":"account:essiebee","t":"2026-06-20T04:58:53.366Z","v":1271434877}
+{"a":"vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:58:53.366Z","v":"1199.072037 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:sigmund-vexler","t":"2026-06-20T04:58:53.366Z","v":"4867.920103 VESTS"}
+{"a":"voting_power","e":"account:sigmund-vexler","t":"2026-06-20T04:58:53.366Z","v":9799}
+{"a":"downvote_power","e":"account:sigmund-vexler","t":"2026-06-20T04:58:53.366Z","v":1516748035}
+{"a":"vesting_shares","e":"account:marshian","t":"2026-06-20T04:58:53.366Z","v":"912.993631 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:marshian","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:marshian","t":"2026-06-20T04:58:53.366Z","v":"5042.155140 VESTS"}
+{"a":"voting_power","e":"account:marshian","t":"2026-06-20T04:58:53.366Z","v":2006}
+{"a":"downvote_power","e":"account:marshian","t":"2026-06-20T04:58:53.366Z","v":1488787192}
+{"a":"vesting_shares","e":"account:michael561","t":"2026-06-20T04:58:53.366Z","v":"294468.685181 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:michael561","t":"2026-06-20T04:58:53.366Z","v":"257152.719571 VESTS"}
+{"a":"received_vesting_shares","e":"account:michael561","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"voting_power","e":"account:michael561","t":"2026-06-20T04:58:53.366Z","v":41}
+{"a":"downvote_power","e":"account:michael561","t":"2026-06-20T04:58:53.366Z","v":9328991402}
+{"a":"vesting_shares","e":"account:help-fund","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"delegated_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:58:53.366Z","v":"0.000000 VESTS"}
+{"a":"received_vesting_shares","e":"account:help-fund","t":"2026-06-20T04:58:53.366Z","v":"8400.061186 VESTS"}
+{"a":"voting_power","e":"account:help-fund","t":"2026-06-20T04:58:53.366Z","v":8814}
+{"a":"downvote_power","e":"account:help-fund","t":"2026-06-20T04:58:53.366Z","v":2100015296}

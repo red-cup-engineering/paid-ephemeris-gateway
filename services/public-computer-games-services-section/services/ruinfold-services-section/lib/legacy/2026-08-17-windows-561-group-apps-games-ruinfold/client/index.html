@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruinfold</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #d8d4cc; --ink-bright: #efe9dd; --panel: rgba(14,14,20,0.92); --edge: #34343f;
+        --hp: #d24a33; --st: #4fb07e; --xp: #5a86d6; --gold: #e7c86a; --top: #e6e08a; --curse: #d6a6f0;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #07070b; color: var(--ink);
+        font-family: ui-monospace, "SF Mono", Menlo, monospace; user-select: none; }
+      #view { display: block; width: 100vw; height: 100vh; }
+      /* UI overlay layer: pointer-events pass through except on interactive children */
+      #ui { position: fixed; inset: 0; pointer-events: none; z-index: 2; }
+      #ui > * { pointer-events: auto; }
+      .mount { position: fixed; }
+      #hud { top: 12px; left: 12px; pointer-events: none; }
+      #target-frame { top: 12px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+      #party { top: 120px; left: 12px; pointer-events: none; }
+      #event-banner { top: 64px; left: 50%; transform: translateX(-50%); pointer-events: none; text-align: center; }
+      #quest-tracker { top: 150px; right: 12px; pointer-events: none; text-align: right; font-size: 12px; text-shadow: 0 1px 2px #000; }
+      #minimap { top: 12px; right: 12px; }
+      #actionbar { bottom: 16px; left: 50%; transform: translateX(-50%); }
+      #chat { bottom: 16px; left: 16px; width: 340px; }
+      #panels { inset: 0; pointer-events: none; }
+      #toast { bottom: 110px; left: 50%; transform: translateX(-50%); font-size: 14px; opacity: 0;
+        transition: opacity .2s; text-shadow: 0 2px 6px #000; pointer-events: none; }
+      #hint { bottom: 16px; right: 16px; font-size: 11px; opacity: .55; text-align: right; max-width: 34ch;
+        pointer-events: none; text-shadow: 0 1px 2px #000; }
+      .btn { background: #17171f; color: var(--ink); border: 1px solid var(--edge); border-radius: 6px;
+        padding: 5px 11px; font: inherit; font-size: 12px; cursor: pointer; }
+      .btn:hover { background: #24242f; border-color: #5a5a6a; }
+      .btn:disabled { opacity: .4; cursor: default; }
+      #death { position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+        background: rgba(4,4,8,.74); backdrop-filter: blur(2px); z-index: 20; }
+      #death .card { text-align: center; }
+      #death h1 { font-size: 36px; margin: 0 0 6px; letter-spacing: .08em; color: #cdc6b8; }
+      #death p { opacity: .7; margin: 0 0 18px; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="ui">
+      <div class="mount" id="hud"></div>
+      <div class="mount" id="target-frame"></div>
+      <div class="mount" id="party"></div>
+      <div class="mount" id="event-banner"></div>
+      <div class="mount" id="quest-tracker"></div>
+      <div class="mount" id="minimap"></div>
+      <div class="mount" id="actionbar"></div>
+      <div class="mount" id="chat"></div>
+      <div class="mount" id="panels"></div>
+      <div class="mount" id="toast"></div>
+      <div class="mount" id="hint">WASD / click ground — move · click foe — attack · 1–4 abilities · Tab — target · I bag · C sheet · F talk · G grab · E exit · Enter chat</div>
+      <div id="death"><div class="card"><h1 id="death-title">You Fall</h1><p id="death-text"></p><button class="btn" id="respawn-btn">Enter the Light → the Gate</button></div></div>
+    </div>
+    <script type="module" src="./main.mjs"></script>
+  </body>
+</html>

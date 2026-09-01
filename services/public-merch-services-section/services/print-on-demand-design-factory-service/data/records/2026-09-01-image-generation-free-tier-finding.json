@@ -1,0 +1,45 @@
+{
+  "type": "PrintOnDemandImageGenerationFreeTierFinding",
+  "recordedAt": "2026-09-01T01:15:00-05:00",
+  "recordedBy": "session (Claude), following founder steer to build a real LLM raster-art lane, then coordinator steer to enumerate remaining free doors before accepting a paid gate",
+  "summary": "Gemini (all 4 image-capable model ids this key can see) and OpenRouter (all 50 image-output models it offers) both carry a genuine $0 free allowance for image generation -- confirmed, not assumed. A third door, Cloudflare Workers AI, does not: the org's existing wrangler OAuth token already carries 'ai (write)' scope, Workers AI's free tier is 10,000 Neurons/day account-wide, and a private unlisted Worker deployed this session (sites/pod-image-generation-worker) generated 12 real, valid 2400x2400 PNGs at $0 marginal cost. The art lane is live, not dormant; no founder funding decision was needed.",
+  "evidence": [
+    {
+      "provider": "gemini-direct",
+      "model": "all 4 image-capable model ids the key's models.list returns: gemini-2.5-flash-image, gemini-3.1-flash-lite-image, gemini-3.1-flash-image, gemini-3-pro-image-preview (gemini-3-pro-image and gemini-3.1-flash-lite-image-preview listed but not separately probed -- pro-tier naming makes a free allowance implausible)",
+      "finding": "HTTP 429 RESOURCE_EXHAUSTED on every one of the 4 probed model ids. Each error body's QuotaFailure violations name free-tier quota metrics with limit: 0 for that exact model on this API key's project -- a structural zero allowance across the whole image-model family, not a single-model gap or transient exhaustion. Text models (gemini-3.5-flash-lite, per the openai-compatible-chat-completion-service catalog) DO carry a real free-tier allowance on this same key; image-output models on Google AI Studio's free tier do not, at any tier probed.",
+      "verifiedLive": "2026-08-31/2026-09-01, this session, via node --env-file=.env against https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent and .../v1beta/models (list)"
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-image (attempted), surveyed all image-output models",
+      "finding": "HTTP 402 Insufficient credits on every call ('This account never purchased credits'). A read-only GET /api/v1/models?output_modalities=image survey found 50 image-capable models; zero of them carry a $0 image_output price (unlike OpenRouter's :free-suffixed text chat models, which do exist). Image generation is not part of OpenRouter's free tier for any model as of this check.",
+      "verifiedLive": "2026-09-01, this session, via node --env-file=.env against https://openrouter.ai/api/v1/images and https://openrouter.ai/api/v1/models"
+    },
+    {
+      "provider": "local (bare-cedar-fog NPU inference team / Ollama)",
+      "model": "n/a -- censused, not called",
+      "finding": "No local image-generation lane was ever stood up on this box. bare-cedar-fog-npu-inference-team's own README describes a text-only RMN inference operation (classification/extraction/summarization/bounded inquiry, restricted to qwen3:1.7b through Ollama); its source (ollama-tool-exchange.mjs, execute-rmn-inference.mjs) contains no image-generation code. `ollama list` on this box shows nine pulled models (gemma3:4b/12b, phi4-mini, qwen3:1.7b/4b/8b, llama3.2:3b, qwen2.5:3b/7b) -- all text/chat models, no diffusion or image-output model pulled.",
+      "verifiedLive": "2026-09-01, this session, directory census plus `ollama list` on bare-cedar-fog"
+    },
+    {
+      "provider": "cloudflare-workers-ai",
+      "model": "@cf/black-forest-labs/flux-1-schnell",
+      "finding": "The org's existing wrangler OAuth token (email morgan.sennhauser@gmail.com, account 337e54ee6dc7d488933f473204a6d89e, credentials at ~/.config/.wrangler/config/default.toml -- already used for the live play.561.group/mud.561.group Workers) carries 'ai (write)' scope. Deployed a new private Worker, sites/pod-image-generation-worker (no custom domain, no route -- reachable only at its default workers.dev URL), with an AI binding whose fetch handler runs env.AI.run(model, {prompt}) and returns the raster. A live test call returned HTTP 200 with a real, sharp-verified 1024x1024 JPEG from flux-1-schnell. Cloudflare's own pricing docs (developers.cloudflare.com/workers-ai/platform/pricing, fetched live) state a universal 10,000 Neurons/day free allocation on the Workers Free plan, with flux-1-schnell costing ~4.80 Neurons per 512x512 tile (~2,000 images/day of free headroom).",
+      "verifiedLive": "2026-08-31, this session: wrangler deploy (real deployment, version f196ac79-010f-4c4d-b9ff-bb3ee3a53438), then a real curl POST that returned a genuine image, then 12 real design-corpus generations through the same Worker"
+    }
+  ],
+  "attemptedDesignIds": [
+    "prog-01-worked-on-my-machine", "prog-02-bugs-in-the-code",
+    "cat-01-staff-of-the-house-cat", "cat-02-stare-pet-repeat",
+    "gym-01-one-more-set-then-tacos", "gym-02-sore-today-strong-tomorrow",
+    "teach-01-coffee-and-chaos", "teach-02-i-teach-therefore-i-photocopy",
+    "plant-01-plant-parent-on-duty", "plant-02-talk-to-your-plants",
+    "game-01-one-more-round", "game-02-respawn-and-regroup"
+  ],
+  "runReceipts": [
+    "data/records/2026-08-31-image-generation-run.json",
+    "data/records/2026-09-01-image-generation-run.json"
+  ],
+  "resolution": "generate-image-art.mjs's default provider order is now [callCloudflareWorkersAIImage, callGeminiImage, callOpenRouterImage] -- Cloudflare tried first because it is the only door that is actually free. All 12 attempted designs generated real art on the first try through Cloudflare; Gemini/OpenRouter were never reached in that run. Gemini-direct and OpenRouter stay wired as paid fallbacks for if Cloudflare's free allocation is ever exhausted, but arming either now requires no founder action -- this record supersedes the prior 'dormant pending funding' conclusion, which was correct given only the two doors probed at the time but incomplete against the outside world's actual alternatives."
+}

@@ -1,0 +1,41 @@
+{#-
+  Renders the `hooks` block of `.claude/settings.json` from substrate
+  hook records. Groups by event then by matcher so two hooks on the
+  same event but different matchers render as distinct buckets. The
+  generic installer's `merge-json` mode merges this object's
+  `hooks` key into the existing settings.json, preserving any other
+  keys the user owns.
+-#}
+{%- set events = {} -%}
+{%- for h in hooks -%}
+  {%- if h.event not in events -%}
+    {%- set _ = events.update({h.event: {}}) -%}
+  {%- endif -%}
+  {%- if h.matcher not in events[h.event] -%}
+    {%- set _ = events[h.event].update({h.matcher: []}) -%}
+  {%- endif -%}
+  {%- set _ = events[h.event][h.matcher].append(h) -%}
+{%- endfor -%}
+{
+  "hooks": {
+    {%- for event, matchers in events.items() %}
+    "{{ event }}": [
+      {%- for matcher, hs in matchers.items() %}
+      {
+        {%- if matcher != ".*" %}
+        "matcher": "{{ matcher }}",
+        {%- endif %}
+        "hooks": [
+          {%- for h in hs %}
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/_pyfars-dispatch.sh hook:{{ h.slug }}"
+          }{% if not loop.last %},{% endif %}
+          {%- endfor %}
+        ]
+      }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  }
+}

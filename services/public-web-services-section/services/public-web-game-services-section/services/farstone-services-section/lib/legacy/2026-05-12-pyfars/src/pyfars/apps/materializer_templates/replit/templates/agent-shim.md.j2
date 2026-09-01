@@ -1,0 +1,47 @@
+{%- set shim_name = 'agent-' ~ record.slug -%}
+{%- set title = record.title or record.slug -%}
+{%- set raw_desc = (record.description or 'Take on the role of ' ~ title ~ '.') | replace('\n', ' ') -%}
+{%- set fars_desc = ('[FARS:agent] Take on the role of ' ~ title ~ '. ' ~ raw_desc) | truncate(360, true, '...') | replace('"', "'") -%}
+{%- set src_rel = record.source_path.relative_to(root) -%}
+{%- macro bullets(items) -%}
+{%- if items -%}
+{%- for item in items -%}
+  - {{ item }}
+{% endfor -%}
+{%- else -%}
+  (none declared)
+{% endif -%}
+{%- endmacro -%}
+---
+name: {{ shim_name }}
+description: "{{ fars_desc }}"
+---
+
+# {{ shim_name }} — take on the role of {{ title }}
+
+Installed by `pyfars install-harness {{ harness.name }}` for Replit Agent.
+
+This skill exists so that when the captain says *"you are a {{ record.slug }}"* (or otherwise summons this role), the role's contract is discoverable through the same skill channel as everything else. Source-of-truth agent record: [`{{ src_rel }}`]({{ src_rel }}).
+
+## Role contract
+
+**Serves:**
+{{ bullets(record.serves) }}
+**Duties:**
+{{ bullets(record.duties) }}
+**Powers:**
+{{ bullets(record.powers) }}
+**Privileges:**
+{{ bullets(record.privileges) }}
+**Immunities (things you must not do):**
+{{ bullets(record.immunities) }}
+**Skills you should invoke when acting in this role:**
+{{ bullets(record.skills) }}
+**Autonomous (do without asking):**
+{{ bullets(record.autonomous) }}
+**Escalates (do not do without confirming):**
+{{ bullets(record.escalates) }}
+
+## Full agent record (verbatim)
+
+The substrate is the source of truth — read [`{{ src_rel }}`]({{ src_rel }}) for the role's body, charter bindings, jurisdiction, and any role-specific guidance the frontmatter doesn't cover.

@@ -1,0 +1,38 @@
+{
+  "name": "@red-cup-engineering/stoke-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "idle-game",
+    "incremental",
+    "perron-frobenius",
+    "kind-incremental",
+    "honest-numbers"
+  ],
+  "description": "stoke.561.group — the kind incremental: the player builds a real production graph, and prestige is not an authored curve, it is the dominant Perron-Frobenius eigenvalue of the player's actual production matrix, computed by real math (@lenticule-science/metrologic), with the prestige loadout literally the eigenvector. Every displayed number is tagged computed-from-your-graph or designed-flavor; no number is ever both.",
+  "scripts": {
+    "serve": "node web/server.mjs",
+    "check": "for f in src/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts web/test/*.test.mts"
+  },
+  "exports": {
+    "./graph": "./src/graph.mts",
+    "./eigen": "./src/eigen.mts",
+    "./tick": "./src/tick.mts",
+    "./prestige": "./src/prestige.mts",
+    "./intents": "./src/intents.mts",
+    "./provenance": "./src/provenance.mts",
+    "./state": "./src/state.mts",
+    "./cartridge": "./src/cartridge.mts",
+    "./cartridge.manifest": "./src/cartridge.manifest.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@red-cup-engineering/cartridge": "0.2.1",
+    "@lenticule-science/metrologic": "0.1.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,10 @@
+# Spec: event-log-append:2026.05.09+event-log-append §6.1 — Canonical-call-site uniqueness
+# Fixture for grep-based canonical-call-site uniqueness check.
+#
+# Expected output of:
+#   grep -rn "path.open(" pyfars/src/ --include="*.py" | grep -E "['\"]a['\"]" | grep -E "jsonl|event[_-]log"
+#
+# under a conformant pyfars instance. Exactly ONE match expected — in event_log.py's append() method.
+# Test asserts: this fixture's content equals the actual grep output (modulo absolute path prefix).
+
+src/pyfars/runtime/event_log.py:103:        with path.open("a", encoding="utf-8") as f:

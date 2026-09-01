@@ -1,0 +1,3 @@
+# generated world traces (the world is the log; the log is data, not source)
+deploy/*.jsonl
+*.world.jsonl

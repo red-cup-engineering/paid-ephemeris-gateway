@@ -1,0 +1,47 @@
+[project]
+name = "farstone"
+version = "2026.05.11"
+description = "Farstone, an island polity packaged as a PyFARS application."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyfars",
+]
+
+[project.scripts]
+farstone = "farstone.cli:main"
+farstone-engine = "farstone.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+pyfars = { git = "ssh://git@github.com/emsenn/pyfars", branch = "main" }
+
+[tool.uv.extra-build-dependencies]
+pyfars = ["setuptools"]
+pypredcalc = ["setuptools"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/farstone"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"_index.md" = "farstone/corpus/_index.md"
+"README.md" = "farstone/corpus/README.md"
+"governance" = "farstone/corpus/governance"
+"objects" = "farstone/corpus/objects"
+"operations" = "farstone/corpus/operations"
+"work" = "farstone/corpus/work"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/README.md",
+    "/_index.md",
+    "/governance",
+    "/objects",
+    "/operations",
+    "/work",
+    "/src",
+    "/pyproject.toml",
+]

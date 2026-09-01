@@ -8,12 +8,13 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { createEngine } from "@red-cup-engineering/feltos/engine";
+import { closeMudHttpServer, listenMudHttpServer } from "@red-cup-engineering/feltos/http";
 import { TIDEPOOL_GAME } from "./tidepool-game.mts";
 import { createTidepoolRoom } from "./tidepool-room.mts";
 import { openWorldStore, resolveWorldBackend } from "./world-store.mts";
 import { openClockStore } from "./clock-store.mts";
 import { createWorldRuntime } from "./tidepool-runtime.mts";
-import { closeTidepoolHttpServer, createTidepoolHttpServer, listenTidepoolHttpServer } from "./http-wiring.mts";
+import { createTidepoolHttpServer } from "./http-wiring.mts";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env["PORT"] ?? process.env["FELTOS_PORT"] ?? 18830);
@@ -57,7 +58,7 @@ const httpServer = createTidepoolHttpServer(room, runtime, {
   webRoot,
   metrics: () => ({ tick: room.tickNow(), members: room.members().size }),
 });
-const { origin } = await listenTidepoolHttpServer(httpServer, { host, port });
+const { origin } = await listenMudHttpServer(httpServer, { host, port });
 
 const saveTimer = store === null ? null : setInterval(() => {
   void runtime.flushNow().catch((error) => process.stderr.write(`Tidepool backstop save failed: ${String(error)}\n`));
@@ -70,7 +71,7 @@ async function close(): Promise<void> {
   if (saveTimer !== null) clearInterval(saveTimer);
   room.destroy();
   if (store !== null) await runtime.flushNow();
-  await closeTidepoolHttpServer(httpServer);
+  await closeMudHttpServer(httpServer);
 }
 for (const signal of ["SIGINT", "SIGTERM"] as const) {
   process.once(signal, () => {

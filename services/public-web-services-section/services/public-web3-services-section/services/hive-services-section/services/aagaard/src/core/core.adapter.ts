@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 
+import { recordSettlementRecord } from "@red-cup-engineering/witness-journal-document-service";
 
 import {
   tm,
@@ -584,6 +585,8 @@ export interface FleetTickReadout {
 export interface StateStore {
   readonly root: string;
   readonly dataDir: string;
+  readonly witnessJournalAgent?: string;
+  readonly witnessJournalRequired: boolean;
 }
 
 export interface WalletChainState {
@@ -2004,16 +2007,25 @@ export function planGaming(wallet: WalletActor, at = new Date().toISOString(), s
   });
 }
 
-export function ensureStore(root: string): StateStore {
+export function ensureStore(root: string, {
+  witnessJournalAgent = process.env["WITNESS_JOURNAL_RDF_AGENT"], witnessJournalRequired = false,
+}: {
+  readonly witnessJournalAgent?: string;
+  readonly witnessJournalRequired?: boolean;
+} = {}): StateStore {
   const store = {
     root,
     dataDir: path.join(root, "data"),
+    witnessJournalRequired,
+    ...(witnessJournalAgent?.trim() ? { witnessJournalAgent: witnessJournalAgent.trim() } : {}),
   };
   mkdirSync(store.dataDir, { recursive: true });
   return Object.freeze(store);
 }
 
 const FLEET_TICK_CATEGORY = "aagaard.fleet-tick";
+const AAGAARD_ACTOR = "urn:ame:aagaard";
+const AAGAARD_SETTLEMENT = "eip155:31337:0xb0dfc2eb77fb622c93f791071c66b039a7ae428d";
 const LOCKED_DRAFT_CATEGORY = "aagaard.locked-draft";
 const SUBSTRATE_CATEGORY = "aagaard.substrate-snapshot";
 const INCENTIVE_CATEGORY = "aagaard.incentive-nomination-event";
@@ -2029,7 +2041,15 @@ async function recordOwned(_store: StateStore, _category: string, _recordedAt: s
 }
 
 export async function recordFleetTick(store: StateStore, readout: FleetTickReadout): Promise<void> {
-  await recordOwned(store, FLEET_TICK_CATEGORY, readout.ts, readout);
+  if (!store.witnessJournalAgent) {
+    if (store.witnessJournalRequired) {
+      throw new Error("WITNESS_JOURNAL_RDF_AGENT must bind Aagaard's fleet-tick journal");
+    }
+    return;
+  }
+  await recordSettlementRecord({ agentUrl: store.witnessJournalAgent,
+    settlement: AAGAARD_SETTLEMENT, actor: AAGAARD_ACTOR,
+    category: FLEET_TICK_CATEGORY, recordedAt: readout.ts, record: readout });
 }
 
 export function readLastReadout(store: StateStore): FleetTickReadout | null {

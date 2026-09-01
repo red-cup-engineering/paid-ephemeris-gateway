@@ -41,7 +41,7 @@ import {
 
 const appRoot = path.resolve(fileURLToPath(import.meta.url), "../..");
 const config = loadAagaardConfig({ configPath: path.join(appRoot, "aagaard.config.json") });
-const store = ensureStore(appRoot);
+const store = ensureStore(appRoot, { witnessJournalRequired: true });
 const hive = config.hive.enabled ? createHiveClient(config.hive) : undefined;
 const hiveEngine = config.hiveEngine.enabled ? createHiveEngineClient(config.hiveEngine) : undefined;
 const broadcastCommand = process.env["AAGAARD_BROADCAST_COMMAND"]?.trim() ?? "";

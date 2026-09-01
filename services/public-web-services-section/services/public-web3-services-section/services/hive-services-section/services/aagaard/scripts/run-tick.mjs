@@ -20,7 +20,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.join(HERE, "..");
 
 const config = loadAagaardConfig({ configPath: path.join(appRoot, "aagaard.config.json") });
-const store = ensureStore(appRoot);
+const store = ensureStore(appRoot, { witnessJournalRequired: true });
 const hive = config.hive.enabled ? createHiveClient(config.hive) : undefined;
 const hiveEngine = config.hiveEngine.enabled ? createHiveEngineClient(config.hiveEngine) : undefined;
 

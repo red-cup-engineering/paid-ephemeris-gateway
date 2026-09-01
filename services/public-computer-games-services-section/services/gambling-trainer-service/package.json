@@ -12,7 +12,7 @@
   ],
   "description": "gambling-trainer.561.group — 'Kelly's Wager': a daily-seeded bankroll-survival trainer that teaches expected value, variance, and Kelly sizing by play, against a practice-only bankroll (earn-only; no real currency ever enters or leaves). Every offered wager is graded against the real Kelly optimum, and every spend in the UI is typed on screen as freely-reversible, priced, or terminal, per the house's disclosure discipline.",
   "scripts": {
-    "check": "for f in src/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts web/test/*.test.mts",
     "serve": "node web/server.mjs"
   },
@@ -37,5 +37,8 @@
   "engines": {
     "node": ">=24"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
 }

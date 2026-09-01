@@ -18,13 +18,13 @@
   ],
   "description": "parlor.561.group — the five-game parlor shelf, one service, built on @red-cup-engineering/parlor-kernel per the mesh-not-monolith doctrine (games as data plus a thin face, not five separate reimplementations). The dice trio: Pig (hold-or-roll, first to 100), Farkle (dice-set scoring, hot dice, bust), and Yacht (5 dice, 3 rolls, 13 categories) — every decision surfaces the kernel's own computed bust odds and expected values, live, not asserted; Pig and Farkle ship a bot opponent that plays the published math. Chutes & Ladders: the classic 100-square race as a board-as-graph (a chute and a ladder are one jump edge), 1-4 players including bots — the bot IS a die, there is no strategy in this game — with the live exact probability distribution of finish turns computed and shown as the race runs. Fair Spin: a 3-reel practice slot that inverts the genre — computed RTP, per-symbol hit odds, and expected loss per 100 spins are shown permanently, never behind a click. Daily-seeded (today's dice/race/spins identical for everyone who hasn't started their own run). Earn-only, no wagering, kind design.",
   "scripts": {
-    "check": "for f in src/games/*/*.mts web/test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/games/*/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/games/*/*.test.mts web/test/*.test.mts",
     "serve": "node web/server.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/parlor-kernel": "0.2.0",
-    "@red-cup-engineering/cartridge": "0.2.1"
+    "@red-cup-engineering/cartridge": "0.2.1",
+    "@red-cup-engineering/parlor-kernel": "0.2.0"
   },
   "exports": {
     "./pig/rules": "./src/games/pig/rules.mts",
@@ -61,5 +61,8 @@
   "engines": {
     "node": ">=24"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
 }

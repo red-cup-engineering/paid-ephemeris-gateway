@@ -4,8 +4,18 @@
   "type": "module",
   "description": "be-not-so-fearful (display name: fearful.561.group) — a backrooms/SCP-inspired extraction shooter on @red-cup-engineering/abrash: OG-Wolfenstein-grade raycast graphics, Quake-grade momentum physics (bunnyhop speed gain, rocket-jump verticality) as a BNSF-owned movement kernel composing abrash's real collision.move, liminal seeded levels with abrash's own contested-wall (⊤) shiver as the dread mechanic, anomalies with learnable behavior contracts, and an extraction economy (banked loot survives death, unbanked loot does not) recorded as a @red-cup-engineering/cartridge intent log for replay verification.",
   "keywords": [
-    "game", "fps", "extraction-shooter", "backrooms", "scp", "quake-like",
-    "raycaster", "momentum", "bunnyhop", "rocket-jump", "561-group", "browser"
+    "game",
+    "fps",
+    "extraction-shooter",
+    "backrooms",
+    "scp",
+    "quake-like",
+    "raycaster",
+    "momentum",
+    "bunnyhop",
+    "rocket-jump",
+    "561-group",
+    "browser"
   ],
   "engines": {
     "node": ">=24"
@@ -16,9 +26,12 @@
     "@red-cup-engineering/cartridge": "0.2.0"
   },
   "scripts": {
-    "check": "for f in src/*.mts src/anomalies/*.mts src/ext/*.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in src/*.mjs src/server/*.mjs web/*.mjs web/js/*.mjs agents/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/anomalies/*.mts src/ext/*.mts && for f in src/*.mjs src/server/*.mjs web/*.mjs web/js/*.mjs agents/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts src/anomalies/*.test.mts src/ext/*.test.mts",
     "start": "node src/server.mjs",
     "serve": "node src/server.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
   }
 }

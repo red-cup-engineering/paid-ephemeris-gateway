@@ -4,12 +4,12 @@
   "wallets": [
     {
       "subject": "urn:ame:wallet:yanagi",
-      "aliases": ["YANAGI_WALLET"],
+      "aliases": ["MAIN_WALLET"],
       "address": "0x224C08A8526751887a83e2711B167f890c6D078d"
     },
     {
       "subject": "urn:ame:wallet:sigmund",
-      "aliases": ["SIGMUND_WALLET"],
+      "aliases": ["ANOTHER_WALLET"],
       "address": "0x32886F6F361C1d570255c2762967A2e41D0E9B1a"
     },
     {

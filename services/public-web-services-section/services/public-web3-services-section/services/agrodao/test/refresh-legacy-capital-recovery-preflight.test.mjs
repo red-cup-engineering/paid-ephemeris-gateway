@@ -32,8 +32,10 @@ function record(recordedAt, candidates, dispositions = {}) {
 
 function fleet() {
   return { wallets: [
-    { aliases: ["SIGMUND_WALLET"], address: "0x32886F6F361C1d570255c2762967A2e41D0E9B1a" },
-    { aliases: ["YANAGI_WALLET"], address: "0x224C08A8526751887a83e2711B167f890c6D078d" },
+    { subject: "urn:ame:wallet:sigmund", aliases: ["ANOTHER_WALLET"],
+      address: "0x32886F6F361C1d570255c2762967A2e41D0E9B1a" },
+    { subject: "urn:ame:wallet:yanagi", aliases: ["MAIN_WALLET"],
+      address: "0x224C08A8526751887a83e2711B167f890c6D078d" },
   ], chains: [{ caip2: "eip155:8453", transferIndexerKind: "blockscout-current-holdings",
     transferIndexerRelayUrl: "https://r.jina.ai/http://base.blockscout.com/api/v2/" }],
   authority: { observationOnly: true, signerMaterialPresent: false } };

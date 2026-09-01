@@ -115,9 +115,9 @@ test("AGRODAO procures and records Yanagi's read-only public GMX observation", a
 });
 
 test("provider child environment strips wallet and signer secrets", () => {
-  const child = sanitizedProviderEnvironment({ YANAGI_WALLET: "secret", OTHER_MNEMONIC: "secret", PRIVATE_KEY: "secret", SAFE_PUBLIC_SETTING: "kept" });
-  assert.equal(child.YANAGI_WALLET, undefined);
-  assert.equal(child.OTHER_MNEMONIC, undefined);
+  const child = sanitizedProviderEnvironment({ MAIN_WALLET: "secret", ANOTHER_WALLET: "secret", PRIVATE_KEY: "secret", SAFE_PUBLIC_SETTING: "kept" });
+  assert.equal(child.MAIN_WALLET, undefined);
+  assert.equal(child.ANOTHER_WALLET, undefined);
   assert.equal(child.PRIVATE_KEY, undefined);
   assert.equal(child.SAFE_PUBLIC_SETTING, undefined);
 });

@@ -82,9 +82,9 @@ function blockscoutAddresses(urls, expectedHost) {
 }
 
 function walletAddress(fleet, wallet) {
-  const entry = fleet.wallets.find((candidate) => Array.isArray(candidate.aliases)
-    && candidate.aliases.includes(`${wallet}_WALLET`));
-  if (entry == null || !ADDRESS.test(entry.address ?? "")) throw new TypeError(`fleet lacks ${wallet}_WALLET public address`);
+  const subject = `urn:ame:wallet:${wallet.toLowerCase()}`;
+  const entry = fleet.wallets.find((candidate) => candidate.subject === subject);
+  if (entry == null || !ADDRESS.test(entry.address ?? "")) throw new TypeError(`fleet lacks ${subject} public address`);
   return entry.address;
 }
 

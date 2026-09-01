@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "@lenticule-science/metrologic": "0.1.0",
-    "@red-cup-engineering/cartridge": "0.2.1"
+    "@red-cup-engineering/cartridge": "0.2.1",
+    "sirv": "3.0.2"
   },
   "engines": {
     "node": ">=24"

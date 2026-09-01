@@ -2,14 +2,6 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createServer } from "../server.mjs";
 
-/** Some sandboxed test environments take a brief moment after a `listen()` callback fires before
- *  a fresh loopback port is actually reachable from the outside (observed directly: identical
- *  ports that fail immediately after `listen()`'s callback succeed a few hundred ms later, and
- *  succeed immediately when hard-coded rather than freshly assigned) — a sandbox-networking
- *  artifact, not anything this server does wrong. Poll briefly rather than trusting the
- *  `listening` event alone, so this test is robust in that environment without being flaky or
- *  slow anywhere else (a healthy environment succeeds on the first attempt, no delay incurred).
- */
 async function waitUntilReachable(base: string, attempts = 20, delayMs = 50): Promise<void> {
   for (let i = 0; i < attempts; i++) {
     try {
@@ -52,6 +44,27 @@ test("GET /web/index.html serves the real document", async () => {
   });
 });
 
+test("ordinary static files preserve ETag revalidation, cache policy, ranges, and methods", async () => {
+  await withServer(async (base) => {
+    const first = await fetch(`${base}/web/index.html`);
+    assert.equal(first.status, 200);
+    assert.equal(first.headers.get("cache-control"), "no-cache");
+    const etag = first.headers.get("etag");
+    assert.ok(etag);
+
+    const revalidated = await fetch(`${base}/web/index.html`, { headers: { "If-None-Match": etag } });
+    assert.equal(revalidated.status, 304);
+    assert.equal(await revalidated.text(), "");
+    const full = new Uint8Array(await (await fetch(`${base}/web/css/style.css`)).arrayBuffer());
+    const ranged = await fetch(`${base}/web/css/style.css`, { headers: { Range: "bytes=0-9" } });
+    assert.equal(ranged.status, 206);
+    assert.equal(ranged.headers.get("accept-ranges"), "bytes");
+    assert.equal(ranged.headers.get("content-range"), `bytes 0-9/${full.byteLength}`);
+    assert.deepEqual(new Uint8Array(await ranged.arrayBuffer()), full.slice(0, 10));
+    assert.equal((await fetch(`${base}/web/index.html`, { method: "POST" })).status, 200);
+  });
+});
+
 test("GET /src/graph.mts serves stripped, valid JavaScript (no TypeScript syntax survives)", async () => {
   await withServer(async (base) => {
     const res = await fetch(`${base}/src/graph.mts`);
@@ -84,7 +97,7 @@ test("GET /api/manifest returns the real CartridgeManifest as JSON, matching car
 
 test("a path-traversal attempt is rejected, not served", async () => {
   await withServer(async (base) => {
-    const res = await fetch(`${base}/../../../../etc/passwd`);
+    const res = await fetch(`${base}/..%2f..%2f..%2f..%2fetc%2fpasswd`);
     assert.notEqual(res.status, 200);
   });
 });

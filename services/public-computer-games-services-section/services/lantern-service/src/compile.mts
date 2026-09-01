@@ -7,7 +7,8 @@
 import { readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseFrontmatter, asList } from './frontmatter.mts';
+import { readMarkdownFrontmatter } from '@red-cup-engineering/read-markdown-frontmatter-service';
+import { asList } from './frontmatter-values.mts';
 import { computeHalls, type FcaObject } from './fca.mts';
 import { withStability } from './stability.mts';
 import { generateCardsForRoom } from './cards.mts';
@@ -15,6 +16,7 @@ import {
   DEFAULT_ATTRIBUTE_FIELDS,
   DEFAULT_EXCLUDE_FIELDS,
   type Door,
+  type FrontmatterData,
   type Hall,
   type Room,
   type RoomId,
@@ -82,7 +84,13 @@ function isArchival(data: Record<string, string | string[]>): boolean {
 
 function buildRoom(wingId: string, root: string, absPath: string): Room | null {
   const raw = readFileSync(absPath, 'utf8');
-  const { data, body } = parseFrontmatter(raw);
+  const parsed = readMarkdownFrontmatter(raw, {
+    frontmatterFormats: ['yaml'],
+    absentFrontmatter: 'empty',
+    yamlProjection: 'flat-string-lists',
+  });
+  const data = parsed.frontmatter as FrontmatterData;
+  const body = parsed.body;
   if (isArchival(data)) return null;
 
   const id = toRoomId(root, absPath);

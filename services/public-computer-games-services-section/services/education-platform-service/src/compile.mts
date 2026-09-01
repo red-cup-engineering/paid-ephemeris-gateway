@@ -15,7 +15,8 @@
 import { readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseFrontmatter, asList } from './frontmatter.mts';
+import { readMarkdownFrontmatter } from '@red-cup-engineering/read-markdown-frontmatter-service';
+import { asList } from './frontmatter-values.mts';
 import { computeHalls, type FcaObject } from './fca.mts';
 import { withStability } from './stability.mts';
 import {
@@ -23,6 +24,7 @@ import {
   DEFAULT_EXCLUDE_FIELDS,
   type CompiledExercise,
   type Door,
+  type FrontmatterData,
   type Hall,
   type Room,
   type RoomId,
@@ -79,7 +81,13 @@ function basenameOf(roomId: RoomId): string {
 
 function buildRoom(wingId: string, root: string, absPath: string): Room {
   const raw = readFileSync(absPath, 'utf8');
-  const { data, body } = parseFrontmatter(raw);
+  const parsed = readMarkdownFrontmatter(raw, {
+    frontmatterFormats: ['yaml'],
+    absentFrontmatter: 'empty',
+    yamlProjection: 'flat-string-lists',
+  });
+  const data = parsed.frontmatter as FrontmatterData;
+  const body = parsed.body;
 
   const id = toRoomId(root, absPath);
   const titleRaw = data['title'];

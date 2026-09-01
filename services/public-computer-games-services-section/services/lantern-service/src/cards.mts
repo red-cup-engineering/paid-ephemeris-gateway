@@ -5,7 +5,7 @@
  * `teaches` fallback used only to pad a room that produced fewer than two cards.
  */
 import type { CardKind, Door, ReviewCard, Room } from './types.mts';
-import { asList } from './frontmatter.mts';
+import { asList } from './frontmatter-values.mts';
 
 const NEW_CARD_STABILITY = 0; // seeded properly by srs.reviewCard on the gate-pass; placeholder pre-first-review
 const NEW_CARD_DIFFICULTY = 5; // neutral placeholder, overwritten on first review

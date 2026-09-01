@@ -9,18 +9,19 @@
     "serve": "node serve.mjs",
     "shelf": "node scripts/shelf-browser.mjs",
     "test": "node --test test/*.test.mts",
-    "check": "for f in test/*.test.mts; do [ -e \"$f\" ] || continue; node check-mts.mjs \"$f\" || exit 1; done && for f in serve.mjs js/*.mjs build.mjs scripts/*.mjs src/shelf/*.mjs scripts/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext test/*.test.mts && for f in serve.mjs js/*.mjs build.mjs scripts/*.mjs src/shelf/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev"
   },
   "dependencies": {
     "@red-cup-engineering/arnold": "^0.2.0",
+    "@red-cup-engineering/cartridge": "0.2.1",
     "@red-cup-engineering/games-catalog-storefront": "0.1.0",
     "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
     "sirv": "3.0.2"
   },
   "devDependencies": {
-    "@red-cup-engineering/cartridge": "0.2.1",
+    "typescript": "5.9.3",
     "wrangler": "4.123.0"
   },
   "engines": {

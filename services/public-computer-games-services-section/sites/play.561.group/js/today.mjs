@@ -1,39 +1,19 @@
-// play.561.group -- today.html renderer. Every strip's seed is computed live from a real UTC
-// calendar date; each game's own daily-seed function is ported faithfully (header naming its
-// real source file, per house vendoring doctrine) rather than live-imported cross-service.
-// Only daily-utc games get a strip (test/smoke.test.mts enforces the match to catalog.json).
-// Split like js/catalog.mjs: everything above initTodayPage() is pure/Node-safe (build.mjs
-// server-renders with it); initTodayPage() is the browser-only bootstrap, which always
-// recomputes against the visitor's real "now" so nobody sees a stale build's date baked in.
+// Pure daily-strip projection followed by the browser-only page bootstrap.
 
-import { GLYPHS, FALLBACK_GLYPH, EXTERNAL_LINK_ICON } from '@red-cup-engineering/games-catalog-storefront';
+import { esc, GLYPHS, FALLBACK_GLYPH, EXTERNAL_LINK_ICON } from '@red-cup-engineering/games-catalog-storefront';
+import { utcDateString, dailySeed } from '@red-cup-engineering/cartridge/seed';
 import { LIVE_SUBDOMAINS } from './live-subdomains.mjs';
 
-export function esc(str) {
-  return String(str).replace(/[&<>"']/g, (c) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  }[c]));
-}
+export { esc, utcDateString };
 
-/** `YYYY-MM-DD` for `date`'s UTC calendar day -- the same timezone-independent formatter
- *  every game's own `utcDateString`/`todayUTC` uses (solitaire-service/src/daily.mts,
- *  crucible-service/src/daily.mts, ruinfold's src/server/dates.mts#formatUTCDate). */
-export function utcDateString(date) {
-  const y = date.getUTCFullYear();
-  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const d = String(date.getUTCDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
-
-// ---- ruinfold: dailySeed + buildDaily's floor count -----------------------------------------
-// Ported from apps/ruinfold/src/engine/{daily.mts,prng.mts,dungeon.mts}. dailySeed hashes
-// `ruinfold-daily:<date>` with SHA-256 and reads the first 4 bytes big-endian (daily.mts);
-// mulberry32 + the first intBetween(rng,0,3) draw reproduce dungeon.mts's floorCount exactly.
-// No other draw from this rng is replicated -- only the one value shown here.
-export async function ruinfoldDailySeedHex(dateStr) {
-  const bytes = new TextEncoder().encode(`ruinfold-daily:${dateStr}`);
+async function hashedDailySeed(gameId, dateStr) {
+  const bytes = new TextEncoder().encode(`${gameId}-daily:${dateStr}`);
   const digest = await crypto.subtle.digest('SHA-256', bytes);
-  const n = new DataView(digest).getUint32(0, false);
+  return new DataView(digest).getUint32(0, false);
+}
+
+export async function ruinfoldDailySeedHex(dateStr) {
+  const n = await hashedDailySeed('ruinfold', dateStr);
   return { hex: `0x${n.toString(16).padStart(8, '0')}`, seedInt: n };
 }
 
@@ -53,38 +33,17 @@ export function ruinfoldFloorCount(seedInt) {
   return 4 + Math.floor(rng() * 4); // intBetween(rng, 0, 3), dungeon.mts's first draw
 }
 
-// ---- durante: dailySeed (identical shape to ruinfold's own, different namespace) --------------
-// Ported from apps/durante/src/daily.mjs verbatim: SHA-256 of "durante-daily:<date>", first 4
-// bytes read big-endian as the 32-bit seed. Unlike ruinfold's floor count, durante's daily strip
-// shows only the seed itself -- deriving the demon count/maze shape here would mean porting
-// daily-arena.mjs's full recursive-backtracker generator, real work with no storefront payoff
-// (the strip's job is "prove today's seed is real and the same for everyone", not preview the maze).
 export async function duranteDailySeedHex(dateStr) {
-  const bytes = new TextEncoder().encode(`durante-daily:${dateStr}`);
-  const digest = await crypto.subtle.digest('SHA-256', bytes);
-  const n = new DataView(digest).getUint32(0, false);
+  const n = await hashedDailySeed('durante', dateStr);
   return `0x${n.toString(16).padStart(8, '0')}`;
 }
 
-// ---- crucible / solitaire / gambling-trainer: plain string seeds ------------------------------
-// These three never hash anything at this layer -- the composed string itself IS the seed,
-// handed downstream to each game's own hashSeed+mulberry32 pipeline. Ported from
-// crucible-service/src/daily.mts, solitaire-service/src/daily.mts, and
-// gambling-trainer-service/src/daily.mts (itself a thin wrapper over
-// @red-cup-engineering/cartridge/seed's dailySeed(gameId, date, configId)).
-export const crucibleDailySeed = (dateStr) => `crucible-daily:${dateStr}`;
-export const solitaireDailySeed = (dateStr, variantId) => `solitaire-daily:${variantId}:${dateStr}`;
-export const gamblingTrainerDailySeed = (dateStr, configId) => `gambling-trainer-daily:${configId}:${dateStr}`;
+export const crucibleDailySeed = (dateStr) => dailySeed('crucible', dateStr);
+export const solitaireDailySeed = (dateStr, variantId) => dailySeed('solitaire', dateStr, variantId);
+export const gamblingTrainerDailySeed = (dateStr, configId) => dailySeed('gambling-trainer', dateStr, configId);
 
-// DEV_HOST: every game's own server.mts/server.mjs defaults to the same local port (8787,
-// or RUINFOLD_PORT for ruinfold, which also defaults to 8787) -- house convention is one
-// game running locally at a time, so the same base URL works across all four.
 const DEV_HOST = 'http://localhost:8787';
 
-// Hand-authored per-strip copy -- the ask, subdomain, and dev path are each game's own
-// storefront-facing description, not derived from catalog.json's more generic description
-// field. Kept here, not in catalog.json, because this copy is specific to "today's ritual"
-// framing, distinct from the catalog card's own description.
 const STRIP_DEFS = [
   { id: 'ruinfold', name: 'Ruinfold', subdomain: 'ruinfold', subdomainPath: '/play', devPath: '/play' },
   { id: 'crucible', name: 'Crucible', subdomain: 'crucible', subdomainPath: '/web/index.html', devPath: '/web/index.html' },
@@ -93,8 +52,6 @@ const STRIP_DEFS = [
   { id: 'durante', name: 'Durante', subdomain: 'durante', subdomainPath: '/', devPath: '/' },
 ];
 
-/** Today's ask copy per strip -- separated from STRIP_DEFS above only because ruinfold's ask
- *  is dynamic (it names today's real floor count); every other strip's ask is static. */
 function askFor(id, { floors }) {
   switch (id) {
     case 'ruinfold':
@@ -112,11 +69,6 @@ function askFor(id, { floors }) {
   }
 }
 
-/** Pure: every daily-utc strip's full data (name, ask, seed label/value, routing) for one
- *  real UTC date. Node-safe (crypto.subtle is a real Node global) -- called both by
- *  build.mjs with the real build-time date and by initTodayPage() with the visitor's own
- *  `new Date()`, so SSR and CSR are two calls to the exact same function, never two
- *  different implementations of the same math. */
 export async function computeTodayStrips(date) {
   const dateStr = utcDateString(date);
   const { hex: ruinfoldSeed, seedInt } = await ruinfoldDailySeedHex(dateStr);
@@ -136,8 +88,6 @@ export async function computeTodayStrips(date) {
   });
 }
 
-/** One strip's tile body -- glyph, "Live daily" badge, ask copy, seed, play/dev links.
- *  No title/heading: TUFTE's own tile header renders `tile.title` (see todayEntryToTile). */
 function todayStripBodyHtml(strip) {
   const glyph = GLYPHS[strip.id] || FALLBACK_GLYPH;
   const isLive = LIVE_SUBDOMAINS.has(strip.subdomain);
@@ -158,17 +108,6 @@ function todayStripBodyHtml(strip) {
   `;
 }
 
-/** Storefront-owned shaping: one computed strip -> one TUFTE tile.
- *
- *  role: 'rail' for every strip -- today's strips are genuinely one-per-row today
- *  (the previous flex-column .strip-list), so role=rail's grid-column:span 12 reproduces
- *  that exactly. A real, page-level fact reused consistently, not per-tile theater.
- *
- *  confidence: the same LIVE_SUBDOMAINS.has(subdomain) rule catalog.mjs's canPlayLive
- *  uses -- one confidence rule, two pages.
- *
- *  lifecycle: always 'present' -- a strip only exists at all for a shipped daily-utc game;
- *  nothing about a rendered strip is "imminent". */
 function todayEntryToTile(strip) {
   return {
     id: strip.id,
@@ -180,23 +119,11 @@ function todayEntryToTile(strip) {
   };
 }
 
-/** Pure: the full TUFTE model for today.html, for one real UTC date. */
 export async function computeTodayModel(date) {
   const strips = await computeTodayStrips(date);
   return { tiles: strips.map(todayEntryToTile) };
 }
 
-// ---------------------------------------------------------------------------------------
-// Browser-only bootstrap below this line. Nothing above here touches `document`.
-// ---------------------------------------------------------------------------------------
-
-/** Wires up today.html: renders the real, current-UTC-date model on load (replacing
- *  whatever build.mjs server-rendered for the build-time date -- correct even if the page
- *  was deployed on a previous UTC day), then wires the "Check for updates" button to
- *  re-fetch catalog.json, recompute, diff against the last-rendered projection, and patch
- *  only the tiles that actually changed. No setInterval, no background timer -- every diff
- *  here is computed in direct response to either the one-time load or an explicit click,
- *  never a poll. */
 export async function initTodayPage() {
   const gridWrapper = document.getElementById('today-list');
   if (!gridWrapper) return; // not on today.html -- safe no-op import elsewhere

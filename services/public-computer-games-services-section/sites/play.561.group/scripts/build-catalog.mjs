@@ -24,7 +24,7 @@
 // Import `buildCatalog()` (as test/catalog-generation.test.mts does) to get
 // the assembled object/JSON without writing anything.
 
-import { readdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { glob, readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -92,24 +92,10 @@ const ORDER = [
 
 async function findManifests(root) {
   const found = [];
-  async function walk(dir) {
-    let entries;
-    try {
-      entries = await readdir(dir, { withFileTypes: true });
-    } catch (err) {
-      if (err.code === 'ENOENT') return; // a search root that doesn't exist yet is fine
-      throw err;
-    }
-    for (const entry of entries) {
-      if (entry.isDirectory()) {
-        if (SKIP_DIR_NAMES.has(entry.name)) continue;
-        await walk(path.join(dir, entry.name));
-      } else if (entry.isFile() && entry.name === MANIFEST_FILENAME) {
-        found.push(path.join(dir, entry.name));
-      }
-    }
-  }
-  await walk(root);
+  for await (const relativePath of glob(`**/${MANIFEST_FILENAME}`, {
+    cwd: root,
+    exclude: [...SKIP_DIR_NAMES].map((name) => `**/${name}/**`),
+  })) found.push(path.join(root, relativePath));
   return found;
 }
 

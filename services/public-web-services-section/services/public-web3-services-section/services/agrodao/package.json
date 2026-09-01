@@ -1,7 +1,13 @@
 {
   "name": "@red-cup-engineering/agrodao",
-  "version": "0.14.2",
+  "version": "0.15.1",
   "type": "module",
+  "files": [
+    "src",
+    "scripts",
+    "content/config/capability-providers.json",
+    "content/observations/public-accounts/*.json"
+  ],
   "bin": {
     "backtest-obsmetrologia-causal-sheaf": "./scripts/backtest-obsmetrologia-causal-sheaf.mjs",
     "backtest-obsmetrologia-curvature-release": "./scripts/backtest-obsmetrologia-curvature-release.mjs",
@@ -20,7 +26,7 @@
     "procure-public-evm-wallet-observation": "./src/procure-public-evm-wallet-observation.mjs"
   },
   "scripts": {
-    "test": "node --test test/procure-hive-fleet-observation.test.mjs test/procure-public-evm-wallet-observation.test.mjs test/procure-fixed-block-contract-identities.test.mjs test/orchestrate-legacy-recovery-evidence-window.test.mjs test/obsmetrologia-causal-sheaf-backtest.test.mjs test/obsmetrologia-curvature-release-backtest.test.mjs test/obsmetrologia-causal-transport-backtest.test.mjs test/cross-wallet-deleverage-assay.test.mjs test/wallet-segregated-deleverage-intent.test.mjs test/governance-right-action-admission.test.mjs test/legacy-capital-recovery-assay.test.mjs test/legacy-capital-recovery-preflight.test.mjs test/refresh-legacy-capital-recovery-preflight.test.mjs test/legacy-recovery-contract-fingerprint-observation.test.mjs test/nonfungible-position-exposure-assay.test.mjs test/attributed-wallet-forensic-interpretation.test.mjs test/crypto-capital-opportunity.test.mjs",
+    "test": "node --test test/procure-hive-fleet-observation.test.mjs test/procure-public-evm-wallet-observation.test.mjs test/observe-treasury-portfolio.test.mjs test/procure-fixed-block-contract-identities.test.mjs test/orchestrate-legacy-recovery-evidence-window.test.mjs test/obsmetrologia-causal-sheaf-backtest.test.mjs test/obsmetrologia-curvature-release-backtest.test.mjs test/obsmetrologia-causal-transport-backtest.test.mjs test/cross-wallet-deleverage-assay.test.mjs test/wallet-segregated-deleverage-intent.test.mjs test/governance-right-action-admission.test.mjs test/legacy-capital-recovery-assay.test.mjs test/legacy-capital-recovery-preflight.test.mjs test/refresh-legacy-capital-recovery-preflight.test.mjs test/legacy-recovery-contract-fingerprint-observation.test.mjs test/nonfungible-position-exposure-assay.test.mjs test/attributed-wallet-forensic-interpretation.test.mjs test/crypto-capital-opportunity.test.mjs",
     "check:beefy-recovery": "node --check src/procure-fixed-fork-beefy-vault-exits.mjs && node --check src/fixed-fork-beefy-recovery-economics.mjs && node --check test/procure-fixed-fork-beefy-vault-exits.test.mjs && node --check test/fixed-fork-beefy-recovery-economics.test.mjs",
     "test:beefy-recovery": "node --test test/procure-fixed-fork-beefy-vault-exits.test.mjs test/fixed-fork-beefy-recovery-economics.test.mjs",
     "check:hive-capital": "node --check src/hive-capital-allocation.mjs && node --check test/hive-capital-allocation.test.mjs",
@@ -46,15 +52,17 @@
     "./attributed-wallet-forensic-interpretation": "./src/attributed-wallet-forensic-interpretation.mjs",
     "./hive-capital-allocation": "./src/hive-capital-allocation.mjs",
     "./src/hive-capital-allocation.mjs": "./src/hive-capital-allocation.mjs",
+    "./treasury-portfolio-observation": "./src/observe-treasury-portfolio.mjs",
     "./crypto-capital-opportunity": "./src/crypto-capital-opportunity.mjs"
   },
   "dependencies": {
     "@red-cup-engineering/ethereum-services-section": "0.7.5",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
+    "@red-cup-engineering/treasury-observation-service": "0.2.0",
+    "@red-cup-engineering/witness-journal-document-service": "1.0.1",
     "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
-    "@red-cup-engineering/witness-journal-log-service": "0.1.6",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1"
+    "@red-cup-engineering/witness-journal-log-service": "0.1.6"
   },
   "keywords": [
     "web3",

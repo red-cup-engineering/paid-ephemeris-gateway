@@ -3,15 +3,21 @@ import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
 import { querySettlementRecords, recordSettlementRecord } from "@red-cup-engineering/witness-journal-document-service";
 import { startWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-document-service/test-provider";
 
+import { run as runAagaard } from "../../hive-services-section/services/aagaard/src/contract-fleet-observation.mjs";
 import { providerPath, runProcurement } from "../src/procure-hive-fleet-observation.mjs";
 
 const AT = "2026-07-18T21:30:00.000Z";
 const AAGAARD = "urn:ame:aagaard";
 const AAGAARD_ACCOUNT = "eip155:31337:0xb0dfc2eb77fb622c93f791071c66b039a7ae428d";
+const AAGAARD_PROVIDER_PATH = fileURLToPath(new URL(
+  "../../hive-services-section/services/aagaard/src/contract-fleet-observation.mjs",
+  import.meta.url,
+));
 let witnessJournal;
 test.before(async () => { witnessJournal = await startWitnessJournalProviderProcess(); });
 test.after(async () => { await witnessJournal.close(); });
@@ -25,18 +31,19 @@ function tick() {
 
 async function fixture(t) {
   const root = mkdtempSync(join(tmpdir(), "agrodao-procurement-test-"));
-  const buyerRoot = join(root, "buyer"); const sellerRoot = join(root, "seller");
+  const buyerRoot = join(root, "buyer");
   t.after(() => rmSync(root, { recursive: true, force: true }));
   await recordSettlementRecord({ agentUrl: witnessJournal.agentCardUrl, settlement: AAGAARD_ACCOUNT,
     actor: AAGAARD, category: "aagaard.fleet-tick", recordedAt: tick().ts, record: tick() });
-  const env = { AGRODAO_DATA_ROOT: buyerRoot, AAGAARD_CONTRACT_DATA_ROOT: sellerRoot, WITNESS_JOURNAL_RDF_AGENT: witnessJournal.agentCardUrl };
-  return { buyerRoot, sellerRoot, env };
+  const env = { AGRODAO_DATA_ROOT: buyerRoot, AAGAARD_PROVIDER_PATH,
+    WITNESS_JOURNAL_RDF_AGENT: witnessJournal.agentCardUrl };
+  return { buyerRoot, env };
 }
 
-test("AGRODAO procures Aagaard's exact-law observation into its own WitnessJournal history", async (t) => {
+test("AGRODAO procures Aagaard's provider-authored observation into its own history", async (t) => {
   const value = await fixture(t);
   assert.match(providerPath(value.env), /aagaard\/src\/contract-fleet-observation\.mjs$/);
-  const trade = await runProcurement(AT, value.env);
+  const trade = await runProcurement(AT, value.env, runAagaard);
   assert.equal(trade.ok, true);
   assert.deepEqual(trade.acceptance.object.capability.allowedActions, ["invoke-service", "provider-local-witness-journal-evidence"]);
   assert.equal(trade.result.object.receipt.assetSettlementClaimed, false);
@@ -47,16 +54,17 @@ test("AGRODAO procures Aagaard's exact-law observation into its own WitnessJourn
   assert.equal(trade.completion.customerOutcome, trade.disclosure.id);
   assert.equal(trade.completion.assetSettlementClaimed, false);
 
-  assert.equal((await querySettlementRecords("agrodao.treasury-position-disclosure")).length, 1);
-  assert.equal((await querySettlementRecords("agrodao.fleet-observation-procurement-completion")).length, 1);
-  assert.equal((await querySettlementRecords("aagaard.fleet-observation-exchange")).length, 1);
-  assert.equal((await querySettlementRecords("aagaard.fleet-observation-receipt")).length, 1);
+  const records = (category) => querySettlementRecords(category, { agentUrl: witnessJournal.agentCardUrl });
+  assert.equal((await records("aagaard.fleet-observation-exchange")).length, 1);
+  assert.equal((await records("aagaard.fleet-observation-receipt")).length, 1);
   for (const forbidden of ["books", "quotes", "witness-bit-lots", "transactions"]) {
-    assert.equal((await querySettlementRecords(forbidden)).length, 0);
-    assert.equal((await querySettlementRecords(forbidden)).length, 0);
+    assert.equal((await records(forbidden)).length, 0);
   }
 });
 
 test("AGRODAO fails closed without the contracted witness-journal RDF provider", async () => {
-  await assert.rejects(() => runProcurement(AT, { AGRODAO_DATA_ROOT: "/tmp/agrodao-no-witness-journal" }), /WITNESS_JOURNAL_RDF_AGENT/);
+  await assert.rejects(() => runProcurement(AT, {
+    AGRODAO_DATA_ROOT: "/tmp/agrodao-no-witness-journal",
+    AAGAARD_PROVIDER_PATH,
+  }, runAagaard), /WITNESS_JOURNAL_RDF_AGENT/);
 });

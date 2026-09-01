@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "node:child_process";
-import { existsSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,16 +18,17 @@ const EFFECTS = ["invoke-service", "provider-local-witness-journal-evidence"];
 
 export function digest(value) { return semanticId("agrodao.hive-fleet-observation", value); }
 function identify(body) { return { id: digest(body), ...body }; }
-function contentValid(value) { const { id: _id, ...body } = value ?? {}; return value?.id === digest(body); }
+function providerDigest(value) { return semanticId("aagaard.hive-fleet-observation", value); }
+function providerContentValid(value) { const { id: _id, ...body } = value ?? {}; return value?.id === providerDigest(body); }
 function arg(flag) { const index = process.argv.indexOf(flag); return index < 0 ? undefined : process.argv[index + 1]; }
 function instant() { return arg("--now") ?? new Date().toISOString(); }
 function dataRoot(env = process.env) { return resolve(env.AGRODAO_DATA_ROOT ?? join(NODE_ROOT, "data")); }
 
 export function providerPath(env = process.env) {
-  if (env.AAGAARD_PROVIDER_PATH) return resolve(env.AAGAARD_PROVIDER_PATH);
-  const sibling = resolve(NODE_ROOT, "../aagaard/src/contract-fleet-observation.mjs");
-  if (existsSync(sibling)) return sibling;
-  throw new Error("Aagaard's provider-owned fleet-observation boundary is unavailable");
+  if (!env.AAGAARD_PROVIDER_PATH) {
+    throw new Error("AAGAARD_PROVIDER_PATH must explicitly bind Aagaard's fleet-observation provider");
+  }
+  return resolve(env.AAGAARD_PROVIDER_PATH);
 }
 
 function settlementStore(env) {
@@ -86,11 +86,12 @@ export async function runProcurement(at = new Date().toISOString(), env = proces
   const offer = await transport(solicitation, "solicit-service", at, env);
   await record(store, "agrodao.fleet-observation-provider-response", offer, at);
   if (offer?.type !== "Offer" || offer.actor !== PROVIDER || offer.target !== CUSTOMER
-      || !contentValid(offer) || offer.object?.type !== "ExecutableServiceOffer") {
+      || !providerContentValid(offer) || offer.object?.type !== "ExecutableServiceOffer") {
     const refusal = await recordRefusal(store, solicitation, offer, at);
     return { ok: false, solicitation, providerResponse: offer, refusal };
   }
-  if (offer.object.requestDigest !== digest(request) || offer.object.termsDigest !== digest(offer.object.terms)) throw new Error("Aagaard's offer is not bound to AGRODAO's exact request and normalized terms");
+  if (offer.object.requestDigest !== providerDigest(request)
+      || offer.object.termsDigest !== providerDigest(offer.object.terms)) throw new Error("Aagaard's offer is not bound to AGRODAO's exact request and normalized terms");
   if (offer.object.terms.assetPaymentRequired !== false) throw new Error("unpriced observation law cannot be accepted with an asset-payment term");
 
   const acceptance = identify({ "@context": CONTEXT, type: "Accept", actor: CUSTOMER, target: PROVIDER,
@@ -104,13 +105,13 @@ export async function runProcurement(at = new Date().toISOString(), env = proces
   const result = await transport(acceptance, "invoke-service", at, env);
   await record(store, "agrodao.fleet-observation-provider-result", result, at);
   if (result?.type !== "Accept" || result.actor !== PROVIDER || result.target !== CUSTOMER
-      || !contentValid(result)
+      || !providerContentValid(result)
       || result.object?.type !== "HiveFleetCustodyObservationResult") {
     const refusal = await recordRefusal(store, acceptance, result, at);
     return { ok: false, solicitation, offer, acceptance, providerResponse: result, refusal };
   }
   const { exchange, receipt } = result.object;
-  if (!contentValid(exchange) || !contentValid(receipt) || receipt.customer !== CUSTOMER || receipt.provider !== PROVIDER
+  if (!providerContentValid(exchange) || !providerContentValid(receipt) || receipt.customer !== CUSTOMER || receipt.provider !== PROVIDER
       || receipt.fulfillment !== exchange.id || receipt.assetSettlementClaimed !== false) throw new Error("Aagaard receipt does not bind this exact unpriced fulfillment and these sovereign parties");
 
   const disclosure = disclosureFrom(result, at);

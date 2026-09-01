@@ -6,9 +6,10 @@ import test from "node:test";
 
 import { querySettlementRecords } from "@red-cup-engineering/witness-journal-document-service";
 import { startWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-document-service/test-provider";
+import { logPathFor, readEntriesAtPath } from "@red-cup-engineering/witness-journal-log-service";
 
 import { observePublicWallet, run as runProvider } from "@red-cup-engineering/ethereum-services-section/public-wallet-observation";
-import { configuredRuntimeEnvironment, publicAccount, publicWalletFleet, runLedgerProcurement, runProcurement, sanitizedProviderEnvironment } from "../src/procure-public-evm-wallet-observation.mjs";
+import { configuredRuntimeEnvironment, providerPath, publicAccount, publicWalletFleet, runLedgerProcurement, runProcurement, sanitizedProviderEnvironment } from "../src/procure-public-evm-wallet-observation.mjs";
 
 const AT = "2026-07-21T18:30:00.000Z";
 
@@ -33,6 +34,8 @@ function fixtureFetch() {
 test("the customer binds its exact public account and wallet fleet", () => {
   assert.equal(publicAccount(), "eip155:42161:0x224C08A8526751887a83e2711B167f890c6D078d");
   assert.equal(publicWalletFleet().wallets.length, 10);
+  const path = providerPath({});
+  assert.match(path, /node_modules\/@red-cup-engineering\/ethereum-services-section\/src\/contract-public-wallet-observation\.mjs$/u);
 });
 
 test("the operator runtime binds the hired public WitnessJournal provider without weakening explicit library refusal", () => {
@@ -78,7 +81,8 @@ test("AGRODAO procures and records a bounded Base and Arbitrum wallet-fleet ledg
     return { ok: true, text: async () => `Title: \n\nURL Source: public fixture\n\nMarkdown Content:\n${JSON.stringify(body)}` };
   };
   const observer = (request, at) => observePublicWallet(request, at, { rpc, fetchImpl, contractConcurrency: 2 });
-  const transport = (activity, operation, at, providerEnv) => runProvider(activity, operation, at, providerEnv, observer);
+  const transport = (activity, operation, at, providerEnv) => runProvider(activity, operation, at, providerEnv, observer,
+    { agentUrl: providerEnv.WITNESS_JOURNAL_RDF_AGENT });
   const trade = await runLedgerProcurement(AT, env, transport);
   assert.equal(trade.ok, true);
   assert.equal(trade.disclosure.scope, "public-evm-ledger");
@@ -88,8 +92,10 @@ test("AGRODAO procures and records a bounded Base and Arbitrum wallet-fleet ledg
   assert.equal(trade.disclosure.activeAccountCount, 1);
   assert.equal(trade.disclosure.positions.find((position) => position.contracts.length > 0).contracts[0].current.rawBalance, "42");
   assert.equal(trade.disclosure.decisionBoundary.chainMutation, false);
-  assert.equal((await querySettlementRecords("agrodao.public-evm-ledger-procurement-completion")).length, 1);
-  assert.equal((await querySettlementRecords("ethereum-services.public-wallet-observation-receipt")).length, 1);
+  assert.equal(readEntriesAtPath(logPathFor(buyerRoot, "agrodao.settlement-records", AT))
+    .filter(({ a }) => a === "settlement:record:agrodao.public-evm-ledger-procurement-completion").length, 1);
+  assert.equal((await querySettlementRecords("ethereum-services.public-wallet-observation-receipt",
+    { agentUrl: witnessJournal.agentCardUrl })).length, 1);
 });
 
 test("AGRODAO procures and records Yanagi's read-only public GMX observation", async (t) => {
@@ -98,7 +104,8 @@ test("AGRODAO procures and records Yanagi's read-only public GMX observation", a
   const witnessJournal = await startWitnessJournalProviderProcess(); t.after(async () => witnessJournal.close());
   const env = { AGRODAO_DATA_ROOT: buyerRoot, ETHEREUM_OBSERVATION_DATA_ROOT: providerRoot, WITNESS_JOURNAL_RDF_AGENT: witnessJournal.agentCardUrl };
   const observer = (request, at) => observePublicWallet(request, at, { fetchJson: fixtureFetch() });
-  const transport = (activity, operation, at, providerEnv) => runProvider(activity, operation, at, providerEnv, observer);
+  const transport = (activity, operation, at, providerEnv) => runProvider(activity, operation, at, providerEnv, observer,
+    { agentUrl: providerEnv.WITNESS_JOURNAL_RDF_AGENT });
   const trade = await runProcurement(AT, env, transport);
   assert.equal(trade.ok, true);
   assert.equal(trade.disclosure.subject, "urn:ame:yanagi");
@@ -110,8 +117,10 @@ test("AGRODAO procures and records Yanagi's read-only public GMX observation", a
   assert.equal(trade.disclosure.decisionBoundary.transactionAssembled, false);
   assert.equal(trade.disclosure.decisionBoundary.signatureRequested, false);
   assert.equal(trade.completion.chainMutation, false);
-  assert.equal((await querySettlementRecords("agrodao.public-evm-observation-procurement-completion")).length, 1);
-  assert.equal((await querySettlementRecords("ethereum-services.public-wallet-observation-receipt")).length, 1);
+  assert.equal(readEntriesAtPath(logPathFor(buyerRoot, "agrodao.settlement-records", AT))
+    .filter(({ a }) => a === "settlement:record:agrodao.public-evm-observation-procurement-completion").length, 1);
+  assert.equal((await querySettlementRecords("ethereum-services.public-wallet-observation-receipt",
+    { agentUrl: witnessJournal.agentCardUrl })).length, 1);
 });
 
 test("provider child environment strips wallet and signer secrets", () => {

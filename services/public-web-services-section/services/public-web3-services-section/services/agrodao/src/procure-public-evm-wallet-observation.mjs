@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
+import { digest as ethereumProviderDigest, run as runEthereumProvider } from "@red-cup-engineering/ethereum-services-section/public-wallet-observation";
 const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 const semanticId = semanticIdentity;
-const ethereumObservationId = semanticIdentity;
 import { createSettlementStore } from "./settlement-witness.mjs";
 
 
@@ -23,7 +22,7 @@ const PROVIDERS_PATH = new URL("../content/config/capability-providers.json", im
 
 export function digest(value) { return semanticId("agrodao.public-evm-wallet-observation", value); }
 function identify(body) { return { id: digest(body), ...body }; }
-function contentValid(value) { const { id: _id, ...body } = value ?? {}; return value?.id === digest(body); }
+function providerContentValid(value) { const { id: _id, ...body } = value ?? {}; return value?.id === ethereumProviderDigest(body); }
 function arg(flag) { const index = process.argv.indexOf(flag); return index < 0 ? undefined : process.argv[index + 1]; }
 function instant() { return arg("--now") ?? new Date().toISOString(); }
 function dataRoot(env = process.env) { return resolve(env.AGRODAO_DATA_ROOT ?? join(NODE_ROOT, "data")); }
@@ -92,8 +91,8 @@ export function publicWalletFleet() {
 
 export function providerPath(env = process.env) {
   if (env.ETHEREUM_OBSERVATION_PROVIDER_PATH) return resolve(env.ETHEREUM_OBSERVATION_PROVIDER_PATH);
-  const sibling = resolve(NODE_ROOT, "../../../red-cup-engineering/services/blockchain-services-section/services/ethereum-services-section/src/contract-public-wallet-observation.mjs");
-  if (existsSync(sibling)) return sibling;
+  const installed = fileURLToPath(import.meta.resolve("@red-cup-engineering/ethereum-services-section/public-wallet-observation"));
+  if (existsSync(installed)) return installed;
   throw new Error("Ethereum Services Section public-wallet observation boundary is unavailable");
 }
 export function sanitizedProviderEnvironment(env) {
@@ -102,14 +101,12 @@ export function sanitizedProviderEnvironment(env) {
     "WITNESS_JOURNAL_RDF_AGENT", "ETHEREUM_OBSERVATION_DATA_ROOT"]) if (source[name] != null) child[name] = source[name];
   return child;
 }
-function crossBoundary(activity, operation, at, env) {
-  const provider = providerPath(env);
-  const result = spawnSync(process.execPath, [provider, "--provider-cli", "--operation", operation, "--now", at], {
-    input: JSON.stringify(activity), encoding: "utf8", timeout: 240_000, env: sanitizedProviderEnvironment(env), cwd: dirname(provider),
+async function crossBoundary(activity, operation, at, env) {
+  providerPath(env);
+  const providerEnvironment = sanitizedProviderEnvironment(env);
+  return runEthereumProvider(activity, operation, at, providerEnvironment, undefined, {
+    agentUrl: providerEnvironment.WITNESS_JOURNAL_RDF_AGENT,
   });
-  if (!result.stdout) throw new Error(`Ethereum provider returned no ActivityStreams value (status=${result.status ?? "none"}, signal=${result.signal ?? "none"}, error=${result.error?.message ?? "none"}): ${(result.stderr ?? "").trim()}`);
-  try { return JSON.parse(result.stdout); }
-  catch { throw new Error(`Ethereum provider returned invalid ActivityStreams JSON: ${result.stdout.slice(0, 300)}`); }
 }
 
 function gmxDisclosureFrom(result, at) {
@@ -180,10 +177,13 @@ async function procure(request, disclosureBuilder, category, at, env, transport)
   await record(store, `${category}-solicitation`, solicitation, at);
   const offer = await transport(solicitation, "solicit-service", at, env); await record(store, `${category}-provider-response`, offer, at);
   if (offer?.type !== "Offer" || offer.actor !== PROVIDER || offer.target !== CUSTOMER
-      || !contentValid(offer) || offer.object?.type !== "ExecutableServiceOffer") {
+      || !providerContentValid(offer) || offer.object?.type !== "ExecutableServiceOffer") {
     const refusal = await recordRefusal(store, solicitation, offer, at, `${category}-refusal`); return { ok: false, solicitation, providerResponse: offer, refusal };
   }
-  if (offer.object.requestDigest !== digest(request) || offer.object.termsDigest !== digest(offer.object.terms)) throw new Error("provider offer is not bound to AGRODAO's exact request and normalized terms");
+  if (offer.object.requestDigest !== ethereumProviderDigest(request)
+      || offer.object.termsDigest !== ethereumProviderDigest(offer.object.terms)) {
+    throw new Error("provider offer is not bound to the provider's exact request and normalized terms");
+  }
   if (offer.object.terms.assetPaymentRequired !== false || offer.object.terms.legalAcceptancePerformed !== false || offer.object.terms.transactionAuthorityGranted !== false || offer.object.terms.credentialAccessGranted !== false) throw new Error("read-only observation offer contains prohibited authority or consideration");
   const acceptance = identify({ "@context": CONTEXT, type: "Accept", actor: CUSTOMER, target: PROVIDER,
     object: { type: "ServiceContract",
@@ -193,11 +193,11 @@ async function procure(request, disclosureBuilder, category, at, env, transport)
   await record(store, `${category}-invocation`, acceptance, at);
   const result = await transport(acceptance, "invoke-service", at, env); await record(store, `${category}-provider-result`, result, at);
   if (result?.type !== "Accept" || result.actor !== PROVIDER || result.target !== CUSTOMER
-      || !contentValid(result) || result.object?.type !== "PublicEvmWalletObservationResult") {
+      || !providerContentValid(result) || result.object?.type !== "PublicEvmWalletObservationResult") {
     const refusal = await recordRefusal(store, acceptance, result, at, `${category}-refusal`); return { ok: false, solicitation, offer, acceptance, providerResponse: result, refusal };
   }
   const { exchange, receipt } = result.object;
-  if (!contentValid(exchange) || !contentValid(receipt) || receipt.customer !== CUSTOMER || receipt.provider !== PROVIDER
+  if (!providerContentValid(exchange) || !providerContentValid(receipt) || receipt.customer !== CUSTOMER || receipt.provider !== PROVIDER
       || receipt.fulfillment !== exchange.id || receipt.assetSettlementClaimed !== false || exchange.credentialAccess !== false
       || exchange.signerMaterialAccepted !== false || exchange.transactionAssembly !== false || exchange.chainMutation !== false) throw new Error("provider receipt does not bind an exact read-only fulfillment");
   const disclosure = disclosureBuilder(result, at);

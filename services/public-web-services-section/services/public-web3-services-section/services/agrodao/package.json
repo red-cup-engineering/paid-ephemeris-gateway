@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/agrodao",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "type": "module",
   "files": [
     "src",
@@ -9,22 +9,22 @@
     "content/observations/public-accounts/*.json"
   ],
   "bin": {
-    "backtest-obsmetrologia-causal-sheaf": "./scripts/backtest-obsmetrologia-causal-sheaf.mjs",
-    "backtest-obsmetrologia-curvature-release": "./scripts/backtest-obsmetrologia-curvature-release.mjs",
-    "backtest-obsmetrologia-causal-transport": "./scripts/backtest-obsmetrologia-causal-transport.mjs",
-    "record-cross-wallet-deleverage-assay": "./scripts/record-cross-wallet-deleverage-assay.mjs",
-    "record-legacy-capital-recovery-assay": "./scripts/record-legacy-capital-recovery-assay.mjs",
-    "record-legacy-capital-recovery-preflight": "./scripts/record-legacy-capital-recovery-preflight.mjs",
-    "refresh-legacy-capital-recovery-preflight": "./scripts/refresh-legacy-capital-recovery-preflight.mjs",
-    "observe-legacy-recovery-contract-fingerprints": "./scripts/observe-legacy-recovery-contract-fingerprints.mjs",
-    "procure-fixed-block-contract-identities": "./scripts/procure-fixed-block-contract-identities.mjs",
-    "orchestrate-legacy-recovery-evidence-window": "./scripts/orchestrate-legacy-recovery-evidence-window.mjs",
-    "record-attributed-wallet-forensic-interpretation": "./scripts/record-attributed-wallet-forensic-interpretation.mjs",
-    "record-bounded-legal-acceptance": "./scripts/record-bounded-legal-acceptance.mjs",
-    "observe-treasury-portfolio": "./scripts/observe-treasury-portfolio.mjs",
-    "procure-hive-fleet-observation": "./src/procure-hive-fleet-observation.mjs",
-    "procure-public-evm-ledger": "./src/procure-public-evm-wallet-observation.mjs",
-    "procure-public-evm-wallet-observation": "./src/procure-public-evm-wallet-observation.mjs"
+    "backtest-obsmetrologia-causal-sheaf": "scripts/backtest-obsmetrologia-causal-sheaf.mjs",
+    "backtest-obsmetrologia-curvature-release": "scripts/backtest-obsmetrologia-curvature-release.mjs",
+    "backtest-obsmetrologia-causal-transport": "scripts/backtest-obsmetrologia-causal-transport.mjs",
+    "record-cross-wallet-deleverage-assay": "scripts/record-cross-wallet-deleverage-assay.mjs",
+    "record-legacy-capital-recovery-assay": "scripts/record-legacy-capital-recovery-assay.mjs",
+    "record-legacy-capital-recovery-preflight": "scripts/record-legacy-capital-recovery-preflight.mjs",
+    "refresh-legacy-capital-recovery-preflight": "scripts/refresh-legacy-capital-recovery-preflight.mjs",
+    "observe-legacy-recovery-contract-fingerprints": "scripts/observe-legacy-recovery-contract-fingerprints.mjs",
+    "procure-fixed-block-contract-identities": "scripts/procure-fixed-block-contract-identities.mjs",
+    "orchestrate-legacy-recovery-evidence-window": "scripts/orchestrate-legacy-recovery-evidence-window.mjs",
+    "record-attributed-wallet-forensic-interpretation": "scripts/record-attributed-wallet-forensic-interpretation.mjs",
+    "record-bounded-legal-acceptance": "scripts/record-bounded-legal-acceptance.mjs",
+    "observe-treasury-portfolio": "scripts/observe-treasury-portfolio.mjs",
+    "procure-hive-fleet-observation": "src/procure-hive-fleet-observation.mjs",
+    "procure-public-evm-ledger": "src/procure-public-evm-wallet-observation.mjs",
+    "procure-public-evm-wallet-observation": "src/procure-public-evm-wallet-observation.mjs"
   },
   "scripts": {
     "pretest": "node --test test/base-cbbtc-deleverage-proposal.test.mjs",

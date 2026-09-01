@@ -1,9 +1,16 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import { observeOpportunityFeed, OPPORTUNITY_FEED_CATEGORY } from "../src/opportunity-feed.mjs";
 
 const observedAt = "2026-09-01T18:00:00.000Z";
+
+test("package exposes the opportunity feed through a bare-path CLI target", async () => {
+  const manifest = JSON.parse(await readFile(new URL("../package.json", import.meta.url), "utf8"));
+  assert.equal(manifest.bin["aagaard-opportunity-feed"], "scripts/opportunity-feed.mjs");
+  assert.equal((await readFile(new URL("../scripts/opportunity-feed.mjs", import.meta.url), "utf8")).startsWith("#!/usr/bin/env node\n"), true);
+});
 
 function globalArbitrage() {
   return { schema: "aagaard.global-arbitrage-scan.v1", observedAt, status: "certified",

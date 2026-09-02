@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { runJsonMain } from "@red-cup-engineering/javascript-file-main-guard-service";
 import { createChannelStatusClient, loadChannelStatusDescriptors } from "./channel-status-client.mjs";
 import { NODE_ROOT, admitPortfolioSnapshot, formProcurementOpportunities } from "./federation.mjs";
 
@@ -15,4 +15,4 @@ export async function runDailyPortfolioSnapshot(options = {}) {
   return { type: "FiveChannelDailyPortfolioSnapshotRun", civilDay, snapshot: snapshot.id, deficits: snapshot.portfolioDeficits, procurementOpportunities: opportunities.map((offer) => ({ offer: offer.id, channel: offer.target, deficits: offer.object.deficits, authority: "offer-only" })) };
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) await runDailyPortfolioSnapshot().then((value) => process.stdout.write(`${JSON.stringify(value)}\n`)).catch((error) => { process.stderr.write(`refused: ${error.message}\n`); process.exitCode = 78; });
+await runJsonMain(runDailyPortfolioSnapshot, import.meta.url);

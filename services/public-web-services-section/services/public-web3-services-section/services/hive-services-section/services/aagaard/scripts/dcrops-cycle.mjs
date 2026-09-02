@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // One-step dCrops operator. Every invocation observes fresh season, land, and
 // seed state and can authorize at most one plot action. Clearing and replanting
 // therefore require separate invocations with an independent observation in
@@ -179,8 +180,5 @@ async function main() {
 }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  main().catch((error) => {
-    process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`);
-    process.exitCode = 1;
-  });
+  main().catch(reportFailure);
 }

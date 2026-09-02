@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Michael's productive-capital CapCell: converts one bounded liquid HBD
 // tranche into current-rate savings, using only independently agreed live
 // law and chain history as its restart state.
@@ -73,4 +74,4 @@ export async function operate({ executeOne = false, keyFile = "" } = {}) { const
 function options(argv) { const out = { executeOne: false, keyFile: "" }; for (let i = 0; i < argv.length; i += 1) { if (argv[i] === "--execute-one") out.executeOne = true;
   else if (argv[i] === "--key-file") out.keyFile = argv[++i] ?? ""; else fail(`unknown argument ${argv[i]}`); } if (!out.keyFile) fail("--key-file is required for capability refresh"); return out; }
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) operate(options(process.argv.slice(2))).then((receipt) => process.stdout.write(`${JSON.stringify(receipt)}\n`))
-  .catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  .catch(reportFailure);

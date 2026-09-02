@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Read-only Splinterlands ranked audit. It deliberately stops before queueing
 // a match: once queued, a team deadline and an energy-bearing result exist.
 
@@ -88,5 +89,5 @@ async function main() {
 }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  main().catch(reportFailure);
 }

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // One-vote Hive curation operator. The planner signal is explicitly not a
 // VESTS or HBD prediction. This boundary re-reads mana and the selected post,
 // broadcasts at most one positive vote, confirms the exact transaction, and
@@ -453,5 +454,5 @@ export async function operate(options) {
 async function main() { process.stdout.write(`${JSON.stringify(await operate(parseOptions(process.argv.slice(2))))}\n`); }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  main().catch(reportFailure);
 }

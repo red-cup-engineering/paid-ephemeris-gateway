@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // One-action TerraCore operator. It claims a material raid-exposed stash
 // first; otherwise it may spend one regenerated attack against one freshly
 // revalidated conservative target. The boundary accepts only a posting key
@@ -417,5 +418,5 @@ export async function operate(options) {
 async function main() { process.stdout.write(`${JSON.stringify(await operate(parseOptions(process.argv.slice(2))))}\n`); }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  main().catch(reportFailure);
 }

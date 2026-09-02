@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Fixed, evidence-backed 1.000 EDSI productive-position pilot. Observation is
 // independent and keyless. Execution revalidates market depth, historical
 // settled income, deployed peg-code identity, fleet self-cross, capital and
@@ -167,4 +168,4 @@ export async function operate(options) { const fresh = await freshPlan(); const 
   const event = await recordIncomeTokenAcquisition(DATA_DIR, receipt, completedAt); return Object.freeze({ ...receipt, durableRecord: Object.freeze({ confirmed: true, eventId: event.eventId }) }); }
 
 async function main() { process.stdout.write(`${JSON.stringify(await operate(parseOptions(process.argv.slice(2))), null, 2)}\n`); }
-if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) { main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; }); }
+if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) { main().catch(reportFailure); }

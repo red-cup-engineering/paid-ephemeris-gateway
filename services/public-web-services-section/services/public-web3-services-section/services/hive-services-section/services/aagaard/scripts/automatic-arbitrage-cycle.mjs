@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 
 import { spawn } from "node:child_process";
 import { pathToFileURL } from "node:url";
@@ -127,5 +128,5 @@ function parseOptions(argv) {
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   operate(parseOptions(process.argv.slice(2))).then((receipt) => process.stdout.write(`${JSON.stringify(receipt)}\n`))
-    .catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+    .catch(reportFailure);
 }

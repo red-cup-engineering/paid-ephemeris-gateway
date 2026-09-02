@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Restart-safe HELP liquidity CapCell. The chain is the state carrier: every
 // cycle refreshes doctrine/capabilities, reconciles providers,
 // and performs at most one bounded transition. A partial prior cycle is
@@ -146,4 +147,4 @@ function options(argv) { const result = { executeOne: false, michaelKeyFile: "",
   else if (argv[i] === "--help-key-file") result.helpKeyFile = argv[++i] ?? ""; else fail(`unknown argument ${argv[i]}`); }
   if (!result.michaelKeyFile || !result.helpKeyFile) fail("both active key-file paths are required for capability refresh"); return result; }
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) operate(options(process.argv.slice(2))).then((receipt) => process.stdout.write(`${JSON.stringify(receipt)}\n`))
-  .catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  .catch(reportFailure);

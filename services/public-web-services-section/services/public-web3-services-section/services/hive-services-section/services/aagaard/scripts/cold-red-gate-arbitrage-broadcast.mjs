@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Remote, active-authority signing boundary for Sigmund's bounded capital
 // circulation lane.  The active key remains on cold-red-gate; this process
 // receives only an already-sized two-leg Hive Engine envelope.
@@ -101,4 +102,4 @@ export function broadcastArbitrageViaColdRedGate(request) {
 }
 
 async function main() { process.stdout.write(JSON.stringify(await broadcastArbitrageViaColdRedGate(JSON.parse(readFileSync(0, "utf8"))))); }
-if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) main().catch(reportFailure);

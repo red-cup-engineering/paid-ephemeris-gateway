@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { reportFailure } from "../src/commandFailure.mjs";
 // Authenticates to the official Splinterlands API and websocket, then exits.
 // It has no battle, market, transfer, reward, or custom_json submission path.
 
@@ -124,5 +125,5 @@ export async function probe(options) {
 async function main() { process.stdout.write(`${JSON.stringify(await probe(parseOptions(process.argv.slice(2))))}\n`); }
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
-  main().catch((error) => { process.stderr.write(`${error instanceof Error ? error.message : String(error)}\n`); process.exitCode = 1; });
+  main().catch(reportFailure);
 }

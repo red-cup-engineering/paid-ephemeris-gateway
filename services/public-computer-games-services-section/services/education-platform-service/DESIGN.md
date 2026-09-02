@@ -1,12 +1,21 @@
 # Design
 
-This service implements two documents nearly verbatim: `self-education-platform-design.md` (the
-platform kernel) and `equivo-design.md` (theme #1), both in
+This service implements `self-education-platform-design.md` (the platform kernel) and
+`equivo-design.md` (the historical Equivo theme), both in
 `public-web-game-services-section/content/text/documents/articles/notes/`. Read those for the
 argued rationale (why the curriculum spine is Candidate C carrying Candidate A's narrative frame
 with Candidate B as an internal difficulty axis; why the Lakotaean register is a non-negotiable
 structural absence rather than a fallback; why type F/repair has no fair grading rule yet). This
 file records the decisions the *build* itself made where the designs left a build choice open.
+
+## Current composition
+
+The shared browser app is `mountEducationApp({ root, adapter })`. Equivo now supplies a thin
+adapter and bootstrap. The public composition boundary is
+`createEducationProjector({ mountPath, course, brand })` from `./projector`; the `iyappy` course
+preset is exported from `./themes/iyappy`. Its currently compiled course has 3 rooms and 12
+checks. These additions make the platform reusable without changing the historical Equivo design
+described below. iYappy deployment is underway; this document makes no public-lesson claim.
 
 ## Kernel / theme split
 
@@ -111,10 +120,11 @@ real checkers, only the retry policy differs.
 ## What's NOT in this build
 
 - `weiqi-Learn` ("wing one" -- Lantern's own corpus, renamed per the platform doc's placement
-  plan) is not ported here. This service is Equivo-only; porting Lantern's wing is a separate,
-  later step the platform doc names but this task did not ask for.
+  plan) is not ported here. Equivo and iYappy are the current course themes; porting Lantern's
+  wing remains a separate later step.
 - Server accounts/sync, and any ZBD/earn-only wiring for Equivo specifically -- `zbd-
   micropayment-rails.md`'s adoption map does not include Equivo, and neither design doc specifies
   what "earn-only" would mean for a course rather than a game. `src/earn.mts` stubs the adapter
   interface only.
-- Deploy: not yet run. See ROADMAP.md.
+- The historical Equivo deployment and the iYappy deployment are separate; iYappy's deployment
+  is underway and does not establish that a lesson is publicly available.

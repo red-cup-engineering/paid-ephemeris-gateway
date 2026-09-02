@@ -1,26 +1,13 @@
 /**
  * `markdown` -- a deliberately tiny, safe (escape-first) renderer for exactly the subset of
- * Markdown Equivo's own lesson prose uses: headings (#/##), paragraphs, bold/italic/inline-code,
- * fenced code blocks (non-`equivo-exercise` ones -- those are stripped by the caller before this
+ * Markdown lesson prose uses: headings (#/##), paragraphs, bold/italic/inline-code,
+ * fenced code blocks (non-exercise ones -- those are stripped by the caller before this
  * ever sees the body), unordered lists, and pipe tables. Not a general Markdown engine, and not
  * meant to become one -- house pattern for a corpus whose authoring surface is fixed and known,
  * matching the same "write exactly what the content needs, nothing speculative" discipline as
  * the rest of this build.
  */
-
-function escapeHtml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-/** Inline-level formatting: escape first, then apply bold/italic/inline-code in a fixed,
- * non-overlapping order so `**bold**` can't be reinterpreted as two `*italic*` spans. */
-function inline(text) {
-  let s = escapeHtml(text);
-  s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
-  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  s = s.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  return s;
-}
+import { renderMarkdownInlineHtml } from './vendor/markdown/render-markdown-inline-html.js';
 
 export function renderMarkdown(body) {
   const lines = body.split('\n');
@@ -31,13 +18,13 @@ export function renderMarkdown(body) {
 
   function flushParagraph() {
     if (paragraph.length > 0) {
-      out.push(`<p>${inline(paragraph.join(' '))}</p>`);
+      out.push(`<p>${renderMarkdownInlineHtml(paragraph.join(' '))}</p>`);
       paragraph = [];
     }
   }
   function flushList() {
     if (list.length > 0) {
-      out.push(`<ul>${list.map((li) => `<li>${inline(li)}</li>`).join('')}</ul>`);
+      out.push(`<ul>${list.map((li) => `<li>${renderMarkdownInlineHtml(li)}</li>`).join('')}</ul>`);
       list = [];
     }
   }
@@ -55,7 +42,7 @@ export function renderMarkdown(body) {
         i++;
       }
       i++; // skip closing fence
-      out.push(`<pre><code>${escapeHtml(codeLines.join('\n'))}</code></pre>`);
+      out.push(`<pre><code>${codeLines.join('\n').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}</code></pre>`);
       continue;
     }
 
@@ -63,7 +50,7 @@ export function renderMarkdown(body) {
       flushParagraph();
       flushList();
       const level = line.match(/^(#{1,3})/)[1].length;
-      out.push(`<h${level + 1}>${inline(line.replace(/^#{1,3}\s+/, ''))}</h${level + 1}>`);
+      out.push(`<h${level + 1}>${renderMarkdownInlineHtml(line.replace(/^#{1,3}\s+/, ''))}</h${level + 1}>`);
       i++;
       continue;
     }
@@ -88,8 +75,8 @@ export function renderMarkdown(body) {
       );
       if (rows.length > 0) {
         const [head, ...body_] = rows;
-        out.push('<table><thead><tr>' + head.map((c) => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
-          body_.map((r) => '<tr>' + r.map((c) => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>');
+        out.push('<table><thead><tr>' + head.map((c) => `<th>${renderMarkdownInlineHtml(c)}</th>`).join('') + '</tr></thead><tbody>' +
+          body_.map((r) => '<tr>' + r.map((c) => `<td>${renderMarkdownInlineHtml(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>');
       }
       continue;
     }
@@ -109,8 +96,9 @@ export function renderMarkdown(body) {
   return out.join('\n');
 }
 
-/** Strip every fenced ```equivo-exercise``` block from a room body -- the reading pane shows
- * prose only; exercises render through their own dedicated UI, never as an inert code block. */
-export function stripExerciseFences(body) {
-  return body.replace(/```equivo-exercise\s*\n[\s\S]*?```/g, '').trim();
+/** Strip the adapter-declared exercise fences while preserving ordinary code blocks. */
+export function stripExerciseFences(body, labels) {
+  if (!Array.isArray(labels) || labels.length === 0) return body.trim();
+  const escaped = labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  return body.replace(new RegExp('```(?:' + escaped + ')\\s*\\n[\\s\\S]*?```', 'g'), '').trim();
 }

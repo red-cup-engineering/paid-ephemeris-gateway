@@ -10,3 +10,12 @@
 {"a":"journal:category","e":"record.151a2a2ac87a498614cb25607700b6a492cb9b926696dab23c6a1d4002fbce79","t":"2026-09-02T07:27:54.562Z","v":"category:81a15779d7709bdf0222cff3c87656e64189986919236dd9e69e5b3559da1244"}
 {"a":"journal:content","e":"record.151a2a2ac87a498614cb25607700b6a492cb9b926696dab23c6a1d4002fbce79","t":"2026-09-02T07:27:54.562Z","v":"content.151a2a2ac87a498614cb25607700b6a492cb9b926696dab23c6a1d4002fbce79"}
 {"a":"charge:support","e":"record.151a2a2ac87a498614cb25607700b6a492cb9b926696dab23c6a1d4002fbce79","t":"2026-09-02T07:27:54.562Z","v":"evidence.present"}
+{"a":"journal:category","e":"record.6680a2519eeaad257ecc87e6a9791fa6714ea8a063f2c72014181e9ed78409ef","t":"2026-09-02T20:00:11.894Z","v":"category:a5d47a4311d759db69e576d9eedd6a02fcfd9cd214129fa8492ee1e9c7343def"}
+{"a":"journal:content","e":"record.6680a2519eeaad257ecc87e6a9791fa6714ea8a063f2c72014181e9ed78409ef","t":"2026-09-02T20:00:11.894Z","v":"content.6680a2519eeaad257ecc87e6a9791fa6714ea8a063f2c72014181e9ed78409ef"}
+{"a":"charge:support","e":"record.6680a2519eeaad257ecc87e6a9791fa6714ea8a063f2c72014181e9ed78409ef","t":"2026-09-02T20:00:11.894Z","v":"evidence.present"}
+{"a":"journal:category","e":"record.de7510eb722c55a6bc1d0825d9f0cc8586388459f5967570ee76c5bbf97d94e6","t":"2026-09-02T20:12:59.398Z","v":"category:a5d47a4311d759db69e576d9eedd6a02fcfd9cd214129fa8492ee1e9c7343def"}
+{"a":"journal:content","e":"record.de7510eb722c55a6bc1d0825d9f0cc8586388459f5967570ee76c5bbf97d94e6","t":"2026-09-02T20:12:59.398Z","v":"content.de7510eb722c55a6bc1d0825d9f0cc8586388459f5967570ee76c5bbf97d94e6"}
+{"a":"charge:support","e":"record.de7510eb722c55a6bc1d0825d9f0cc8586388459f5967570ee76c5bbf97d94e6","t":"2026-09-02T20:12:59.398Z","v":"evidence.present"}
+{"a":"journal:category","e":"record.6299ffaeff9e51f6f3df2dce7278cb354258f06eb50efbcb0b48f32244bebeb5","t":"2026-09-02T20:25:25.770Z","v":"category:a5d47a4311d759db69e576d9eedd6a02fcfd9cd214129fa8492ee1e9c7343def"}
+{"a":"journal:content","e":"record.6299ffaeff9e51f6f3df2dce7278cb354258f06eb50efbcb0b48f32244bebeb5","t":"2026-09-02T20:25:25.770Z","v":"content.6299ffaeff9e51f6f3df2dce7278cb354258f06eb50efbcb0b48f32244bebeb5"}
+{"a":"charge:support","e":"record.6299ffaeff9e51f6f3df2dce7278cb354258f06eb50efbcb0b48f32244bebeb5","t":"2026-09-02T20:25:25.770Z","v":"evidence.present"}

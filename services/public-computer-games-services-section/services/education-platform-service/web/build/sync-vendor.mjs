@@ -21,7 +21,7 @@ const VENDOR_ROOT = join(WEB_ROOT, 'js', 'vendor');
 function stripModule(srcPath, destPath) {
   const source = readFileSync(srcPath, 'utf8');
   const stripped = stripTypeScriptTypes(source, { mode: 'strip' });
-  const rewritten = stripped.replace(/(from\s+['"])(\.\.?\/[^'"]+)\.mts(['"])/g, '$1$2.js$3');
+  const rewritten = stripped.replace(/(from\s+['"])(\.\.?\/[^'"]+)\.mts(['"])/g, '$1$2.js$3').replace("'@red-cup-engineering/browser-local-state-service'", "'../browser-local-state.js'");
   mkdirSync(dirname(destPath), { recursive: true });
   writeFileSync(destPath, rewritten, 'utf8');
 }
@@ -46,6 +46,7 @@ function syncModules() {
   for (const [rel, out] of MODULES) {
     stripModule(join(SERVICE_ROOT, rel), join(WEB_ROOT, 'js', out));
   }
+  cpSync(join(SERVICE_ROOT, 'node_modules', '@red-cup-engineering', 'browser-local-state-service', 'src', 'browser-local-state.mjs'), join(VENDOR_ROOT, 'browser-local-state.js'));
 }
 
 /** Copy `@lenticule-science/metrologic`'s bilattice + obstruction/{settling,cochain} sources byte-identical --
@@ -68,10 +69,31 @@ function syncMath() {
   }
 }
 
+function syncMarkdownInlineRenderer() {
+  const markdownRoot = join(SERVICE_ROOT, 'node_modules', '@red-cup-engineering');
+  const output = join(VENDOR_ROOT, 'markdown');
+  mkdirSync(output, { recursive: true });
+  const modules = [
+    ['read-markdown-features-service/scripts/read-markdown-features.mjs', 'read-markdown-features.js'],
+    ['admit-markdown-link-target-service/scripts/admit-markdown-link-target.mjs', 'admit-markdown-link-target.js'],
+    ['render-markdown-inline-html-service/scripts/render-markdown-inline-html.mjs', 'render-markdown-inline-html.js'],
+  ];
+  for (const [source, destination] of modules) {
+    let body = readFileSync(join(markdownRoot, source), 'utf8');
+    if (destination === 'render-markdown-inline-html.js') {
+      body = body
+        .replace('"@red-cup-engineering/read-markdown-features-service"', '"./read-markdown-features.js"')
+        .replace('"@red-cup-engineering/admit-markdown-link-target-service"', '"./admit-markdown-link-target.js"');
+    }
+    writeFileSync(join(output, destination), body);
+  }
+}
+
 function main() {
   syncModules();
   syncMath();
-  process.stdout.write(`sync-vendor: wrote ${MODULES.length} stripped platform/theme modules + 6 bilattice + 2 obstruction math files to ${VENDOR_ROOT}\n`);
+  syncMarkdownInlineRenderer();
+  process.stdout.write(`sync-vendor: wrote ${MODULES.length} stripped platform/theme modules + 6 bilattice + 2 obstruction math + 3 markdown modules to ${VENDOR_ROOT}\n`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {

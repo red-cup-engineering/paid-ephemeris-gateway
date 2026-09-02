@@ -15,7 +15,17 @@
  */
 import * as persistence from './vendor/src/persistence.js';
 
-export const THEME_ID = 'equivo';
+/** Bind the shared state policy to an adapter-selected theme id. */
+export function createStateStore(themeId, storage = browserStorage()) {
+  if (!themeId) throw new TypeError('themeId is required');
+  let playerHandle;
+  return {
+    load() { playerHandle = persistence.openPlayerState(storage, themeId); return playerHandle.state; },
+    save(state) { return playerHandle.save(state); },
+    replace(state) { return playerHandle.replace(state); },
+    get mode() { return playerHandle?.mode ?? 'session'; },
+  };
+}
 
 export const today = persistence.today;
 export const effectiveExerciseState = persistence.effectiveExerciseState;
@@ -27,38 +37,10 @@ export const importStateJson = persistence.importStateJson;
 
 /** `window.localStorage` satisfies `StorageAdapter` directly -- no wrapping needed beyond
  * catching the "storage unavailable" case, which `persistence.mts` already does internally. */
-function adapter() {
-  return window.localStorage;
-}
-
-export function loadState() {
-  return persistence.loadPlayerState(adapter(), THEME_ID);
-}
-
-export function saveState(state) {
-  return persistence.savePlayerState(adapter(), state);
-}
-
-// --- lens (presentation register) preference: a tiny, separate localStorage key -- deliberately
-// NOT part of PlayerState (persistence.mts's schema is player *review history*, not UI prefs;
-// see that file's own header on what it stores and what it doesn't). ---------------------------
-
-const LENS_KEY = 'education-platform:equivo:lens';
-const DEFAULT_LENS = 'equivo-obsmetrologia';
-
-export function loadLens() {
+function browserStorage() {
   try {
-    return window.localStorage.getItem(LENS_KEY) ?? DEFAULT_LENS;
+    return window.localStorage;
   } catch {
-    return DEFAULT_LENS;
-  }
-}
-
-export function saveLens(lensId) {
-  try {
-    window.localStorage.setItem(LENS_KEY, lensId);
-  } catch {
-    // storage unavailable -- the lens choice just doesn't survive a reload, same degrade as
-    // persistence.mts's own player-state save.
+    return undefined;
   }
 }

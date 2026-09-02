@@ -1,59 +1,45 @@
-/**
- * `app` -- Equivo's browser face. Vanilla ES modules, no framework, no build step beyond
- * `npm run build:web` (which produces `data/equivo-world.json` and `js/vendor/**`, both of which
- * this file loads at runtime). House pattern vendored in SHAPE (not bytes) from
- * `lantern-service/web/js/app.js`: fetch the compiled world, hydrate it against the local save,
- * render a room list + a content pane, run exercise/review sessions through the REAL vendored
- * checkers -- never a client-side mock of the grading logic.
- *
- * Two disclosed, deliberate UX choices this file makes that the design docs do not themselves
- * specify a widget shape for (self-education-platform-design.md leaves exercise UI to the build):
- *
- *   1. First pass through a room (the "gate") is a LEARNING pass: a failed answer shows its real
- *      diagnosis and lets the player retry the same exercise immediately, with no cost and no
- *      SRS state written until they pass -- matching the platform's own no-list ("no energy/lives
- *      gate... no streak-loss shaming"). A later REVIEW pass is a single-shot honest recall check
- *      (a wrong answer records grade 1/Again and moves on) -- the standard Anki/FSRS distinction
- *      between learning a card and reviewing one, applied here because Equivo's checkers are the
- *      same real functions in both passes; only the retry policy differs.
- *   2. `measure`/`settle`/`observe` answers are structured widgets (toggles/selects), not free
- *      text, because their real checkers (`themes/equivo/registry.mts`) compare structured values
- *      (`[boolean,boolean]`, a boolean claim, an enum regime) -- a text box inviting typos would
- *      punish spelling, not understanding. `distinguish`/`relate` ARE free text, deliberately:
- *      their real checkers compare against `articulate`/`predicate`'s output, which is exactly
- *      the two phrases already sitting in the prompt's own sentence -- a close-reading exercise
- *      by construction (see `registry.mts`: `predicate` sets `entities=[left]`, `predicates=
- *      [right]` off the same `[token, claim]` split `articulate` names `potential`).
- */
+/** A theme-neutral browser controller for compiled education worlds. */
 import { renderMarkdown, stripExerciseFences } from './markdown.js';
 import { hydrateExercises, gradeExercise, exercisesByRoom } from './vendor/src/checker.js';
-import { equivoCheckers, nameOfCharge } from './vendor/themes/equivo/registry.js';
-import { equivoRegisters } from './vendor/themes/equivo/registers/index.js';
-import { renderTerm, isFullyAbsent } from './vendor/src/register.js';
 import { reviewCard, recallProbability, STAGE_CUTS } from './vendor/src/srs.js';
 import { buildGateSession, buildReviewSession } from './vendor/src/session.js';
 import { recallMastery, roomMastery } from './vendor/src/mastery.js';
-import * as playerStore from './state.js';
+import * as state from './state.js';
 
 const SEED_DEFAULTS = { stability: 0, difficulty: 5 }; // pre-first-review placeholder, Lantern's own convention (persistence.mts §1 note)
-const REGIME_OPTIONS = ['finite', 'scott', 'transfinite', 'aperiodic'];
 
-const els = {
-  loadStatus: document.getElementById('load-status'),
-  roomList: document.getElementById('room-list'),
-  content: document.getElementById('content-panel'),
-  lensSelect: document.getElementById('lens-select'),
-  lensBanner: document.getElementById('lens-absence-banner'),
-  streak: document.getElementById('streak-display'),
-  btnExport: document.getElementById('btn-export'),
-  btnImport: document.getElementById('btn-import'),
-  fileImport: document.getElementById('file-import'),
-};
+export function createEducationAppConfig(adapter) {
+  if (!adapter?.themeId || !adapter?.worldUrl || !adapter?.checkers || !adapter?.createAnswerForm) {
+    throw new TypeError('education adapter needs themeId, worldUrl, checkers, and createAnswerForm');
+  }
+  return Object.freeze({
+    ...adapter,
+    exerciseFenceLabels: adapter.exerciseFenceLabels ?? [],
+    presentation: { streak: true, halls: true, recallPercent: true, progressCount: false, ...adapter.presentation },
+  });
+}
+
+export function mountEducationApp({ root = document, adapter: suppliedAdapter }) {
+  const adapter = createEducationAppConfig(suppliedAdapter);
+  const document = root.ownerDocument ?? root;
+  const find = (id) => root.querySelector(`#${id}`);
+  const els = {
+    loadStatus: find('load-status'),
+    roomList: find('room-list'),
+    content: find('content-panel'),
+    storageStatus: find('storage-status'),
+    streak: find('streak-display'),
+    btnExport: find('btn-export'),
+    btnImport: find('btn-import'),
+    fileImport: find('file-import'),
+  };
+  if (!els.loadStatus || !els.roomList || !els.content) throw new TypeError('education shell needs load-status, room-list, and content-panel');
+  const playerHandle = state.createStateStore(adapter.themeId);
+  const playerStore = { ...state, loadState: () => playerHandle.load(), saveState: (value) => playerHandle.save(value), replaceState: (value) => playerHandle.replace(value), get mode() { return playerHandle.mode; } };
 
 /** @type {{world: any, byRoom: Map<string, any[]>, exercises: any[]}} */
 let world;
 let playerState = playerStore.loadState();
-let currentLens = playerStore.loadLens();
 let currentRoomId = null;
 /** Active exercise session, or null when the content pane is showing a reading pane. */
 let session = null; // { roomId, mode: 'gate'|'review', queue, index, retryAnswerCallback }
@@ -64,6 +50,13 @@ function today() {
 
 function save() {
   playerStore.saveState(playerState);
+  renderStorageStatus();
+}
+
+function renderStorageStatus() {
+  if (!els.storageStatus) return;
+  els.storageStatus.hidden = playerStore.mode === 'persistent';
+  els.storageStatus.textContent = 'Progress is session-only on this device. Export your save before leaving.';
 }
 
 // ---------------------------------------------------------------------------------------
@@ -72,20 +65,15 @@ function save() {
 
 async function boot() {
   try {
-    const res = await fetch('data/equivo-world.json');
+    const res = await fetch(adapter.worldUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.json();
-    const { exercises, unregisteredKinds } = hydrateExercises(raw.exercises, equivoCheckers);
-    if (unregisteredKinds.length > 0) {
-      // Loud, not silent -- matches hydrateExercises' own contract. Should never happen against
-      // a corpus whose checks and tests established that every exercise kind resolves to a real checker
-      // suite; if it does, it means the served data/equivo-world.json is stale relative to the
-      // registry, which is itself worth surfacing rather than quietly dropping exercises.
-      console.warn('unregistered exercise kinds:', unregisteredKinds);
-    }
+    const { exercises, unregisteredKinds } = hydrateExercises(raw.exercises, adapter.checkers);
+    if (unregisteredKinds.length > 0) throw new Error(`The course has unsupported exercise kinds: ${unregisteredKinds.join(', ')}`);
     world = { raw, exercises, byRoom: exercisesByRoom(exercises) };
     els.loadStatus.textContent = '';
-    renderLensOptions();
+    renderStorageStatus();
+    adapter.mountPresentation?.({ root, onChange: () => { if (session) renderExerciseStep(); } });
     renderRoomList();
     renderStreak();
     const first = pickInitialRoom();
@@ -165,10 +153,12 @@ function renderRoomList() {
     label.textContent = room.title;
     btn.appendChild(label);
 
-    if (unlocked && roomExercises(room.id).length > 0) {
+    if ((adapter.presentation.recallPercent || adapter.presentation.progressCount) && unlocked && roomExercises(room.id).length > 0) {
       const m = document.createElement('span');
       m.className = 'room-mastery';
-      m.textContent = recall === undefined ? '' : `${Math.round(recall * 100)}%`;
+      m.textContent = adapter.presentation.recallPercent
+        ? (recall === undefined ? '' : `${Math.round(recall * 100)}%`)
+        : `${roomExercises(room.id).filter((exercise) => effectiveState(exercise.id).lastReviewedAt !== undefined).length}/${roomExercises(room.id).length}`;
       btn.appendChild(m);
     }
 
@@ -199,7 +189,7 @@ function openRoom(roomId) {
   renderRoomList();
   const room = world.raw.rooms.find((r) => r.id === roomId);
   const exs = roomExercises(roomId);
-  const hall = world.raw.halls.find((h) => h.rooms.includes(roomId));
+  const hall = adapter.presentation.halls ? world.raw.halls?.find((h) => h.rooms.includes(roomId)) : null;
 
   els.content.innerHTML = '';
   const h2 = document.createElement('h2');
@@ -213,7 +203,7 @@ function openRoom(roomId) {
   els.content.appendChild(h2);
 
   const body = document.createElement('div');
-  body.innerHTML = renderMarkdown(stripExerciseFences(room.body));
+  body.innerHTML = renderMarkdown(stripExerciseFences(room.body, adapter.exerciseFenceLabels));
   els.content.appendChild(body);
 
   const gated = roomGatedOnce(roomId);
@@ -240,57 +230,11 @@ function openRoom(roomId) {
 }
 
 // ---------------------------------------------------------------------------------------
-// Presentation register (lens)
-// ---------------------------------------------------------------------------------------
-
-function lensDisplayName(id) {
-  return id.replace(/^equivo-/, '').replace(/^\w/, (c) => c.toUpperCase());
-}
-
-function renderLensOptions() {
-  els.lensSelect.innerHTML = '';
-  for (const id of Object.keys(equivoRegisters)) {
-    const opt = document.createElement('option');
-    opt.value = id;
-    opt.textContent = isFullyAbsent(equivoRegisters[id]) ? `${lensDisplayName(id)} (absent)` : lensDisplayName(id);
-    if (id === currentLens) opt.selected = true;
-    els.lensSelect.appendChild(opt);
-  }
-  updateLensBanner();
-}
-
-function updateLensBanner() {
-  const register = equivoRegisters[currentLens];
-  if (register && isFullyAbsent(register)) {
-    els.lensBanner.hidden = false;
-    els.lensBanner.textContent = `${lensDisplayName(currentLens)} lens: every term is a structural absence, not a placeholder -- ${register.terms.distinguish.reason}`;
-  } else {
-    els.lensBanner.hidden = true;
-  }
-}
-
-els.lensSelect.addEventListener('change', () => {
-  currentLens = els.lensSelect.value;
-  playerStore.saveLens(currentLens);
-  updateLensBanner();
-  if (session) renderExerciseStep();
-});
-
-function exerciseCaption(kind) {
-  const register = equivoRegisters[currentLens];
-  if (!register) return null;
-  const entry = register.terms[kind];
-  const p = document.createElement('p');
-  p.className = 'exercise-caption' + (entry && entry.state === 'absent' ? ' absent' : '');
-  p.textContent = `In the ${lensDisplayName(currentLens)} lens, this stage (${kind}) is: ${renderTerm(register, kind)}`;
-  return p;
-}
-
-// ---------------------------------------------------------------------------------------
 // Streak
 // ---------------------------------------------------------------------------------------
 
 function renderStreak() {
+  if (!adapter.presentation.streak || !els.streak) return;
   const s = playerState.streak;
   const atRisk = playerStore.streakAtRisk(s, today());
   els.streak.textContent = s.current > 0
@@ -308,26 +252,29 @@ function markActivity() {
 // Export / import (self-education-platform-design.md §7's documented seam)
 // ---------------------------------------------------------------------------------------
 
-els.btnExport.addEventListener('click', () => {
+els.btnExport?.addEventListener('click', () => {
   const blob = new Blob([playerStore.exportStateJson(playerState)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'equivo-save.json';
+  a.download = `${adapter.themeId}-save.json`;
   document.body.appendChild(a);
   a.click();
   a.remove();
   URL.revokeObjectURL(url);
 });
 
-els.btnImport.addEventListener('click', () => els.fileImport.click());
-els.fileImport.addEventListener('change', async () => {
+els.btnImport?.addEventListener('click', () => els.fileImport?.click());
+els.fileImport?.addEventListener('change', async () => {
   const file = els.fileImport.files?.[0];
   if (!file) return;
   try {
     const text = await file.text();
-    playerState = playerStore.importStateJson(text);
-    save();
+    const imported = playerStore.importStateJson(text);
+    if (!imported || imported.themeId !== adapter.themeId) throw new Error('That file is not a valid save for this course. Your current progress is unchanged.');
+    playerState = imported;
+    playerStore.replaceState(playerState);
+    renderStorageStatus();
     renderStreak();
     renderRoomList();
     if (currentRoomId) openRoom(currentRoomId);
@@ -385,8 +332,8 @@ function openReview() {
   els.content.appendChild(h2);
   const p = document.createElement('p');
   p.textContent = due.length === 0
-    ? 'Nothing is due for review right now -- everything reviewed so far is still comfortably above the 90% recall bar.'
-    : `${due.length} exercise${due.length === 1 ? '' : 's'} due, weakest recall first (real FSRS-lite scheduling, not a fixed list).`;
+    ? 'Nothing is scheduled for review right now.'
+    : `${due.length} exercise${due.length === 1 ? '' : 's'} scheduled for review.`;
   els.content.appendChild(p);
   if (due.length === 0) return;
   const btn = document.createElement('button');
@@ -415,7 +362,7 @@ function renderExerciseStep() {
   });
   els.content.appendChild(strip);
 
-  const caption = exerciseCaption(step.exercise.kind);
+  const caption = adapter.renderExerciseCaption?.(document, step.exercise);
   if (caption) els.content.appendChild(caption);
 
   const promptEl = document.createElement('p');
@@ -423,19 +370,24 @@ function renderExerciseStep() {
   promptEl.textContent = step.exercise.prompt;
   els.content.appendChild(promptEl);
 
-  const specList = renderSpecContext(step.exercise);
+  const specList = adapter.renderSpecContext?.(document, step.exercise);
   if (specList) els.content.appendChild(specList);
 
-  const { form, readAnswer } = buildAnswerForm(step.exercise);
+  const { form: answerFields, readAnswer } = adapter.createAnswerForm(document, step.exercise);
+  const form = document.createElement('form');
+  form.appendChild(answerFields);
   els.content.appendChild(form);
 
   const submitBtn = document.createElement('button');
-  submitBtn.type = 'button';
+  submitBtn.type = 'submit';
   submitBtn.className = 'primary';
   submitBtn.textContent = 'Check';
   form.appendChild(submitBtn);
 
-  submitBtn.addEventListener('click', () => {
+  form.querySelector('input, select, textarea')?.focus();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
     let answer;
     try {
       answer = readAnswer();
@@ -448,170 +400,6 @@ function renderExerciseStep() {
   });
 }
 
-/** A small, honest readout of the exercise's own spec (never the answer) -- e.g. the relation
- * cells a `settle` exercise is asking about, or the stages an `observe` exercise describes.
- * Nothing here is graded; it's the same information the prompt already implies, laid out. */
-function renderSpecContext(ex) {
-  const spec = ex.spec;
-  const ul = document.createElement('ul');
-  ul.className = 'spec-list';
-  if (ex.kind === 'settle' || ex.kind === 'repair') {
-    for (const c of spec.cells) {
-      const li = document.createElement('li');
-      li.textContent = `${c.subject} —${c.predicate}→ ${c.object}`;
-      ul.appendChild(li);
-    }
-  } else if (ex.kind === 'observe') {
-    spec.stages.forEach((s, i) => {
-      const li = document.createElement('li');
-      li.textContent = `stage ${i}${s.limit ? ' (limit)' : ''}: designated {${s.designated.join(', ')}}`;
-      ul.appendChild(li);
-    });
-    if (spec.opts?.cofinal) {
-      const li = document.createElement('li');
-      li.textContent = `cofinal: ${spec.opts.cofinal}`;
-      ul.appendChild(li);
-    }
-  } else {
-    return null;
-  }
-  return ul;
-}
-
-function buildAnswerForm(ex) {
-  const form = document.createElement('div');
-  form.className = 'answer-form';
-
-  if (ex.kind === 'distinguish' || ex.kind === 'relate') {
-    const isDistinguish = ex.kind === 'distinguish';
-    const f1 = document.createElement('div');
-    f1.className = 'answer-field';
-    const l1 = document.createElement('label');
-    l1.textContent = isDistinguish ? 'The token (mark)' : 'The entity';
-    const i1 = document.createElement('input');
-    i1.type = 'text';
-    i1.autocomplete = 'off';
-    l1.appendChild(i1);
-    f1.appendChild(l1);
-
-    const f2 = document.createElement('div');
-    f2.className = 'answer-field';
-    const l2 = document.createElement('label');
-    l2.textContent = isDistinguish ? 'The claim (kind)' : 'The predicate';
-    const i2 = document.createElement('input');
-    i2.type = 'text';
-    i2.autocomplete = 'off';
-    l2.appendChild(i2);
-    f2.appendChild(l2);
-
-    form.appendChild(f1);
-    form.appendChild(f2);
-    form.readAnswer = () => {
-      const a = i1.value.trim();
-      const b = i2.value.trim();
-      if (!a || !b) throw new Error('answer both fields');
-      return isDistinguish ? { potential: [a, b] } : { entities: [a], predicates: [b] };
-    };
-    return { form, readAnswer: form.readAnswer };
-  }
-
-  if (ex.kind === 'measure') {
-    const row = document.createElement('div');
-    row.className = 'toggle-row';
-    const kLabel = document.createElement('label');
-    const kInput = document.createElement('input');
-    kInput.type = 'checkbox';
-    kLabel.appendChild(kInput);
-    kLabel.appendChild(document.createTextNode('knowledge bit lit (asserted)'));
-    const tLabel = document.createElement('label');
-    const tInput = document.createElement('input');
-    tInput.type = 'checkbox';
-    tLabel.appendChild(tInput);
-    tLabel.appendChild(document.createTextNode('truth bit lit (confirmed)'));
-    row.appendChild(kLabel);
-    row.appendChild(tLabel);
-    form.appendChild(row);
-
-    const preview = document.createElement('p');
-    preview.className = 'charge-preview';
-    const updatePreview = () => {
-      preview.textContent = `= ${nameOfCharge([kInput.checked, tInput.checked])}`;
-    };
-    kInput.addEventListener('change', updatePreview);
-    tInput.addEventListener('change', updatePreview);
-    updatePreview();
-    form.appendChild(preview);
-
-    const readAnswer = () => ({ value: [kInput.checked, tInput.checked] });
-    form.readAnswer = readAnswer;
-    return { form, readAnswer };
-  }
-
-  if (ex.kind === 'settle') {
-    const row = document.createElement('div');
-    row.className = 'radio-row';
-    for (const [value, label] of [['true', 'Equivalent (one class)'], ['false', 'Not equivalent']]) {
-      const l = document.createElement('label');
-      const inp = document.createElement('input');
-      inp.type = 'radio';
-      inp.name = 'settle-claim';
-      inp.value = value;
-      l.appendChild(inp);
-      l.appendChild(document.createTextNode(label));
-      row.appendChild(l);
-    }
-    form.appendChild(row);
-    const readAnswer = () => {
-      const checked = form.querySelector('input[name="settle-claim"]:checked');
-      if (!checked) throw new Error('choose equivalent or not');
-      return { claim: checked.value === 'true' };
-    };
-    form.readAnswer = readAnswer;
-    return { form, readAnswer };
-  }
-
-  if (ex.kind === 'observe') {
-    const f1 = document.createElement('div');
-    f1.className = 'answer-field';
-    const l1 = document.createElement('label');
-    l1.textContent = 'Regime';
-    const sel = document.createElement('select');
-    for (const r of REGIME_OPTIONS) {
-      const o = document.createElement('option');
-      o.value = r;
-      o.textContent = r;
-      sel.appendChild(o);
-    }
-    l1.appendChild(sel);
-    f1.appendChild(l1);
-    form.appendChild(f1);
-
-    const row = document.createElement('div');
-    row.className = 'radio-row';
-    for (const [value, label] of [['true', 'H1 vanishes'], ['false', 'H1 does not vanish']]) {
-      const l = document.createElement('label');
-      const inp = document.createElement('input');
-      inp.type = 'radio';
-      inp.name = 'h1-vanishes';
-      inp.value = value;
-      l.appendChild(inp);
-      l.appendChild(document.createTextNode(label));
-      row.appendChild(l);
-    }
-    form.appendChild(row);
-
-    const readAnswer = () => {
-      const checked = form.querySelector('input[name="h1-vanishes"]:checked');
-      if (!checked) throw new Error('choose whether H1 vanishes');
-      return { regime: sel.value, h1Vanishes: checked.value === 'true' };
-    };
-    form.readAnswer = readAnswer;
-    return { form, readAnswer };
-  }
-
-  throw new Error(`app.js: no answer widget for exercise kind "${ex.kind}"`);
-}
-
 function handleVerdict(verdict, step) {
   showVerdict(verdict, step, (grade) => applyReview(step.exercise, grade));
 }
@@ -621,6 +409,8 @@ function showVerdict(verdict, step, onGraded) {
   els.content.querySelectorAll('.verdict, .grade-row').forEach((n) => n.remove());
   const box = document.createElement('div');
   box.className = 'verdict ' + (verdict.pass ? 'pass' : 'fail');
+  box.setAttribute('role', 'status');
+  box.setAttribute('aria-live', 'polite');
   const strong = document.createElement('strong');
   strong.textContent = verdict.pass ? 'Correct.' : 'Not quite.';
   const p = document.createElement('p');
@@ -632,12 +422,18 @@ function showVerdict(verdict, step, onGraded) {
   if (verdict.pass) {
     const grades = document.createElement('div');
     grades.className = 'grade-row';
+    let graded = false;
     for (const [grade, cls, label] of [[2, 'grade-hard', 'Hard'], [3, 'grade-good', 'Good'], [4, 'grade-easy', 'Easy']]) {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = `grade ${cls}`;
       b.textContent = label;
-      b.addEventListener('click', () => onGraded(grade));
+      b.addEventListener('click', () => {
+        if (graded) return;
+        graded = true;
+        grades.querySelectorAll('button').forEach((button) => { button.disabled = true; });
+        onGraded(grade);
+      });
       grades.appendChild(b);
     }
     els.content.appendChild(grades);
@@ -683,7 +479,7 @@ function finishSession() {
   els.content.appendChild(h2);
   const p = document.createElement('p');
   const recall = roomId === '__review__' ? undefined : roomRecall(roomId, today());
-  p.textContent = recall === undefined
+  p.textContent = !adapter.presentation.recallPercent || recall === undefined
     ? 'Nice work.'
     : `Recall mastery for this room: ${Math.round(recall * 100)}%${recall >= STAGE_CUTS.full ? ' (mastered)' : ''}.`;
   els.content.appendChild(p);
@@ -700,3 +496,5 @@ function finishSession() {
 }
 
 boot();
+return Object.freeze({ themeId: adapter.themeId, worldUrl: adapter.worldUrl });
+}

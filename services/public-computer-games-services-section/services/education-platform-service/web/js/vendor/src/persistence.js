@@ -17,6 +17,7 @@
  */
                                            
                                                        
+import { exportBrowserLocalState, importBrowserLocalState, openBrowserLocalState } from '../browser-local-state.js';
 
 /** The storage boundary: `localStorage`'s own shape (two synchronous methods), so the browser
  * face can pass `window.localStorage` directly, and tests/servers can pass `memoryAdapter()`. */
@@ -77,39 +78,32 @@ function emptyState(themeId         )              {
 
 /** Migration chain: each step takes the previous version's shape and returns the next. Add a new
  * `case N` here (never mutate an existing one) whenever `SCHEMA_VERSION` increments. */
-function migrate(raw         )              {
+function migrate(raw         )                     {
   const state = raw                                               ;
   if (typeof state.schemaVersion !== 'number') {
     // Pre-versioned or corrupt: cannot trust shape, start clean rather than guess.
-    return emptyState(state.themeId ?? 'unknown');
+    return null;
   }
   // No migrations needed yet (schema v1 is the only version). Future:
   // if (state.schemaVersion === 1) { state = { ...state, schemaVersion: 2, ... }; }
+  if (state.schemaVersion !== SCHEMA_VERSION || typeof state.themeId !== 'string' || !state.exercises || typeof state.exercises !== 'object' || Array.isArray(state.exercises) || !state.streak || typeof state.streak !== 'object') return null;
+  const streak = state.streak                        ;
+  if (![streak.current, streak.longest, streak.freezeTokens, streak.freezesUsed].every(Number.isFinite) || !(streak.lastActiveDay === null || Number.isInteger(streak.lastActiveDay))) return null;
+  if (!Object.values(state.exercises).every((card) => card && typeof card === 'object' && Number.isFinite((card             ).stability) && Number.isFinite((card             ).difficulty) && ((card             ).lastReviewedAt === undefined || Number.isInteger((card             ).lastReviewedAt)))) return null;
   return state               ;
 }
 
-export function loadPlayerState(adapter                , themeId         )              {
-  let raw               ;
-  try {
-    raw = adapter.getItem(storageKey(themeId));
-  } catch {
-    return emptyState(themeId); // storage unavailable (private mode, quota) -- degrade to session-only
-  }
-  if (!raw) return emptyState(themeId);
-  try {
-    return migrate(JSON.parse(raw));
-  } catch {
-    return emptyState(themeId); // corrupt save -- never throw the app into a broken state
-  }
+export function openPlayerState(adapter                , themeId         ) {
+  return openBrowserLocalState({ key: storageKey(themeId), create: () => emptyState(themeId), validate: (raw) => { const state = migrate(raw); return state?.themeId === themeId ? state : null; }, getStorage: () => adapter });
 }
 
+export function loadPlayerState(adapter                , themeId         )              {
+  return openPlayerState(adapter, themeId).state;
+}
+
+/** Compatibility entry point; callers that perform repeated writes should retain openPlayerState's handle. */
 export function savePlayerState(adapter                , state             )          {
-  try {
-    adapter.setItem(storageKey(state.themeId), JSON.stringify(state));
-    return true;
-  } catch {
-    return false; // quota exceeded or unavailable -- caller decides whether to warn the player
-  }
+  return openPlayerState(adapter, state.themeId).save(state);
 }
 
 /** An exercise's SRS state as the engine wants it: the local override if reviewed at least once,
@@ -171,9 +165,9 @@ export function streakAtRisk(streak             , day        )          {
 // --- export / import (platform §7's documented seam for a future accounts layer) -----------
 
 export function exportStateJson(state             )         {
-  return JSON.stringify(state, null, 2);
+  return exportBrowserLocalState(state, migrate);
 }
 
-export function importStateJson(text        )              {
-  return migrate(JSON.parse(text));
+export function importStateJson(text        )                     {
+  return importBrowserLocalState(text, migrate);
 }

@@ -10,7 +10,7 @@ import sirv from 'sirv';
 const ROOT = dirname(fileURLToPath(import.meta.url));
 
 const SECURITY_HEADERS = {
-  'content-security-policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:",
+  'content-security-policy': "default-src 'self'; script-src 'self' 'sha256-wxD/eUt8k7guVwbOBYaOzskOUkGzU6cxFs1T+iKmhpM='; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:",
   'x-content-type-options': 'nosniff',
   'x-frame-options': 'DENY',
   'referrer-policy': 'no-referrer',

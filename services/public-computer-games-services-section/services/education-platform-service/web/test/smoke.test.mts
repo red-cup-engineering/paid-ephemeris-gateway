@@ -40,7 +40,7 @@ test('/index.html serves the real shell page', async () => {
   assert.equal(res.headers.get('cache-control'), 'no-cache');
   const body = await res.text();
   assert.match(body, /Equivo/);
-  assert.match(body, /js\/app\.js/);
+  assert.match(body, /js\/equivo-app\.js/);
   assert.match(body, /<script type="importmap">/);
 });
 
@@ -56,6 +56,12 @@ test('/js/app.js serves as JavaScript', async () => {
   assert.match(res.headers.get('content-type') ?? '', /javascript/);
 });
 
+test('/js/equivo-app.js serves the thin theme bootstrap', async () => {
+  const res = await fetch(`${base}/js/equivo-app.js`);
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get('content-type') ?? '', /javascript/);
+});
+
 test('/data/equivo-world.json serves real, non-empty compiled course data', async () => {
   const res = await fetch(`${base}/data/equivo-world.json`);
   assert.equal(res.status, 200);
@@ -67,6 +73,8 @@ test('/data/equivo-world.json serves real, non-empty compiled course data', asyn
 test('every module the import map / app.js references actually serves', async () => {
   const paths = [
     '/js/state.js',
+    '/js/equivo-app.js',
+    '/js/equivo-adapter.js',
     '/js/markdown.js',
     '/js/vendor/src/checker.js',
     '/js/vendor/src/register.js',

@@ -75,7 +75,9 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
         account: request.account,
         snapshotBlock: "123",
         snapshotBlockHash: `0x${"ab".repeat(32)}`,
-        markets: [{ market: enteredMarket, symbol: "mcbBTC", underlyingDecimals: 8 }],
+        markets: [{ market: enteredMarket, underlying: "0x2222222222222222222222222222222222222222", symbol: "mcbBTC", underlyingDecimals: 8,
+          suppliedUnderlyingRaw: "75000000000000000000", borrowedUnderlyingRaw: "50000000000000000000", underlyingPriceMantissa: "1000000000000000000",
+          collateralFactorMantissa: "800000000000000000", borrowRatePerTimestampMantissa: "0", entered: true }],
         outcome: { type: "account-health-evaluated", factual: false, enteredMarketCount: 1 },
         riskEvaluationPerformed: true,
         evaluation: {
@@ -88,6 +90,14 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
           }],
           guard: { withdrawalOrLeverageExpansionAdmitted: false },
         },
+      };
+    },
+    evaluateHealth: ({ targetHealthFactorMantissa }) => {
+      assert.equal(targetHealthFactorMantissa, "1200000000000000000");
+      return {
+        current: { healthFactor: { kind: "finite", mantissa: "1200000000000000000" }, targetSatisfied: true },
+        repaymentOptions: [{ market: enteredMarket, symbol: "mcbBTC", currentMinimumUnderlyingRaw: "250" }],
+        guard: { withdrawalOrLeverageExpansionAdmitted: false },
       };
     },
   });
@@ -124,7 +134,8 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
   const yanagiRisk = disclosure.moonwellRisk.find(({ subject }) => subject === "urn:ame:wallet:yanagi");
   assert.equal(yanagiRisk.status, "observed");
   assert.equal(yanagiRisk.healthFactor.decimal, "1.2");
-  assert.equal(yanagiRisk.targetHealthFactor.decimal, "1.5");
+  assert.equal(yanagiRisk.targetHealthFactor.decimal, "1.2");
+  assert.equal(yanagiRisk.targetHealthFactor.classification, "btc-denominated-core");
   assert.equal(yanagiRisk.cbBtcRepayment.exactMinimumSats, "250");
   assert.equal(yanagiRisk.guard.newLeverageAdmitted, false);
   assert.equal(yanagiRisk.authority.humanApprovalRequired, true);

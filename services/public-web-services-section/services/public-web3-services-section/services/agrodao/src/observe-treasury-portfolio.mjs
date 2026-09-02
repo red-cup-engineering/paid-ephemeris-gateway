@@ -2,7 +2,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import {
-  MOONWELL_ACCOUNT_HEALTH_PROFILE, observeMoonwellAccountHealth,
+  evaluateMoonwellAccountHealth, MOONWELL_ACCOUNT_HEALTH_PROFILE, observeMoonwellAccountHealth,
 } from "@red-cup-engineering/ethereum-services-section/moonwell-account-health";
 import {
   BASE_PUBLIC_EVM_CHAIN, BASE_PUBLIC_EVM_PROVIDERS, createPublicEvmReadPool,
@@ -14,11 +14,11 @@ import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engine
 import { publicWalletFleet } from "./procure-public-evm-wallet-observation.mjs";
 import { observePublicSolanaNativeBalancePortfolio } from "./observe-public-solana-native-balances.mjs";
 import { createSettlementStore } from "./settlement-witness.mjs";
+import { selectHealthFactorTarget, STRICT_TARGET_HEALTH_FACTOR_WAD } from "./health-factor-policy.mjs";
 
 const CUSTOMER = "urn:ame:agrodao";
 const CATEGORY = "agrodao.treasury-portfolio-disclosure";
 const BASE_CAIP2 = "eip155:8453";
-const TARGET_HEALTH_FACTOR_MANTISSA = "1500000000000000000";
 const MOONWELL_COMPTROLLER = "0xfbb21d0380bee3312b33c4353c8936a0f13ef26c";
 const MOONWELL_REWARD_DISTRIBUTOR = "0xe9005b078701e2A0948D2EaC43010D35870Ad9d2";
 
@@ -91,6 +91,7 @@ function exactDecimal(mantissa, decimals = 18) {
 }
 
 function riskView(subject, account, health, provenance) {
+  const targetHealthFactor = selectHealthFactorTarget(health.markets);
   const current = health.evaluation.current;
   const cbBtcOptions = health.evaluation.repaymentOptions.filter((option) => {
     const market = health.markets.find((candidate) => candidate.market === option.market);
@@ -111,7 +112,7 @@ function riskView(subject, account, health, provenance) {
       mantissa: current.healthFactor.mantissa,
       decimal: exactDecimal(current.healthFactor.mantissa),
     } : current.healthFactor,
-    targetHealthFactor: { mantissa: TARGET_HEALTH_FACTOR_MANTISSA, decimal: "1.5" },
+    targetHealthFactor,
     targetSatisfied: current.targetSatisfied,
     cbBtcRepayment: exactMinimum === null ? {
       known: false,
@@ -139,7 +140,7 @@ function riskView(subject, account, health, provenance) {
 }
 
 async function joinMoonwellHealth({
-  report, fleet, observeHealth, createReadPool, readPoolOptions, healthDependencies,
+  report, fleet, observeHealth, evaluateHealth, createReadPool, readPoolOptions, healthDependencies,
 }) {
   const base = report.chains.find(({ caip2: chain }) => chain === BASE_CAIP2);
   if (base?.checked !== true || base.provenance === null || base.provenance === undefined) {
@@ -165,7 +166,7 @@ async function joinMoonwellHealth({
         rpcUrls: BASE_PUBLIC_EVM_PROVIDERS.map(({ url }) => url),
         snapshotBlock: boundary.blockNumber,
         snapshotBlockHash: boundary.blockHash,
-        targetHealthFactorMantissa: TARGET_HEALTH_FACTOR_MANTISSA,
+        targetHealthFactorMantissa: STRICT_TARGET_HEALTH_FACTOR_WAD,
         stresses: [],
         horizonsSeconds: [],
       }, { ...healthDependencies, readPool });
@@ -178,7 +179,10 @@ async function joinMoonwellHealth({
         results.push({ subject, account, status: "no-entered-markets", provenance: boundary,
           enteredMarketCount: 0, factual: true });
       } else if (health.outcome?.type === "account-health-evaluated" && health.riskEvaluationPerformed === true) {
-        results.push(riskView(subject, account, health, boundary));
+        const target = selectHealthFactorTarget(health.markets);
+        const evaluation = target.mantissa === STRICT_TARGET_HEALTH_FACTOR_WAD ? health.evaluation
+          : evaluateHealth({ markets: health.markets, targetHealthFactorMantissa: target.mantissa, stresses: [], horizonsSeconds: [] });
+        results.push(riskView(subject, account, { ...health, evaluation }, boundary));
       } else {
         throw new Error("Moonwell health observer returned an unrecognized outcome");
       }
@@ -198,6 +202,7 @@ export async function observeTreasuryPortfolio({
   chainCatalog = allChains(),
   reportDependencies = {},
   observeHealth = observeMoonwellAccountHealth,
+  evaluateHealth = evaluateMoonwellAccountHealth,
   createReadPool = createPublicEvmReadPool,
   readPoolOptions = {},
   healthDependencies = {},
@@ -223,7 +228,7 @@ export async function observeTreasuryPortfolio({
     now: () => new Date(at),
   });
   const moonwellRisk = await joinMoonwellHealth({
-    report, fleet, observeHealth, createReadPool, readPoolOptions, healthDependencies,
+    report, fleet, observeHealth, evaluateHealth, createReadPool, readPoolOptions, healthDependencies,
   });
   const solana = await observeSolanaPortfolio({ at, ...solanaOptions });
   if (solana?.type !== "PublicSolanaNativeBalanceDisclosure"

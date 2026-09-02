@@ -26,11 +26,12 @@
     </div>
   </header>
   <main>
-    <p class="offline-banner">Offline right now: Farstone, Aletheon, Tidepool — the 561 Group's GCP project
-    has billing disabled today, so their Cloud Run backends are down. Routing is correct and
-    each will come back the moment billing resumes; this is not a bug in the listing.</p>
+    <p class="offline-banner">Offline right now: Aletheon — the 561 Group's GCP project
+    has billing permanently off (founder-ruled 2026-08-31), so their Cloud Run origins are
+    permanently retired. Routing is correct; each entry returns as its free-lane migration
+    lands. This is not a bug in the listing.</p>
     <p class="result-count" id="result-count">3 worlds</p>
-    <div class="catalog-grid-wrap" id="catalog-grid" role="region" aria-label="MUD and MMO catalog"><div class="tufte-grid"><section class="tufte-tile" id="farstone" data-role="standard" data-lifecycle="present" data-confidence="low" data-side="center" style="--tile-span:4" aria-labelledby="farstone-title"><header><p class="tufte-eyebrow">Deep</p><h2 id="farstone-title">Farstone</h2></header><div class="tufte-tile-body">
+    <div class="catalog-grid-wrap" id="catalog-grid" role="region" aria-label="MUD and MMO catalog"><div class="tufte-grid"><section class="tufte-tile" id="farstone" data-role="standard" data-lifecycle="present" data-confidence="high" data-side="center" style="--tile-span:4" aria-labelledby="farstone-title"><header><p class="tufte-eyebrow">Deep</p><h2 id="farstone-title">Farstone</h2></header><div class="tufte-tile-body">
     <div class="card-head">
       <span class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
   <rect x="4" y="4" width="16" height="16" rx="3"/>
@@ -48,7 +49,9 @@
     <p class="status-note">The harbor sleeps between visits and catches up in bounded steps on requests; every settled mutation is flushed to persistent storage.</p>
     <ul class="keywords"><li class="keyword">mud</li><li class="keyword">text-adventure</li><li class="keyword">harbor</li><li class="keyword">feltos</li><li class="keyword">qwzspace</li><li class="keyword">tufte</li></ul>
     <div class="card-actions">
-      <span class="play-link" aria-disabled="true">Not yet deployed</span>
+      <a class="play-link" href="https://farstone.561.group/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+</svg> Play at farstone.561.group</a>
       <span class="subdomain-hint">farstone.561.group</span>
     </div>
   </div></section><section class="tufte-tile" id="aletheon" data-role="standard" data-lifecycle="present" data-confidence="low" data-side="center" style="--tile-span:4" aria-labelledby="aletheon-title"><header><p class="tufte-eyebrow">unshelved</p><h2 id="aletheon-title">Aletheon</h2></header><div class="tufte-tile-body">
@@ -70,7 +73,7 @@
       <span class="play-link" aria-disabled="true">Not yet deployed</span>
       <span class="subdomain-hint">aletheon.561.group</span>
     </div>
-  </div></section><section class="tufte-tile" id="tidepool" data-role="standard" data-lifecycle="present" data-confidence="low" data-side="center" style="--tile-span:4" aria-labelledby="tidepool-title"><header><p class="tufte-eyebrow">Deep</p><h2 id="tidepool-title">Tidepool</h2></header><div class="tufte-tile-body">
+  </div></section><section class="tufte-tile" id="tidepool" data-role="standard" data-lifecycle="present" data-confidence="high" data-side="center" style="--tile-span:4" aria-labelledby="tidepool-title"><header><p class="tufte-eyebrow">Deep</p><h2 id="tidepool-title">Tidepool</h2></header><div class="tufte-tile-body">
     <div class="card-head">
       <span class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
   <rect x="4" y="4" width="16" height="16" rx="3"/>
@@ -86,10 +89,16 @@
     <p class="status-note">The world is request-driven, not timer-driven (design: catch-up-on-request, not setInterval) -- it only advances when an HTTP request or a WS connection visits, per the deploy runbook&#39;s landed persistence pattern. A deployment with no other traffic needs SOME periodic visitor (a Cloud Run health probe, real users, or the reference bot&#39;s own documented health-check nudge) to keep ticking; this is intentional (&quot;the harbor sleeps between visitors&quot;), not a bug. Deploy with --no-cpu-throttling if health-probe-only traffic must still tick promptly, matching Farstone&#39;s own documented Cloud Run caveat.</p>
     <ul class="keywords"><li class="keyword">mud</li><li class="keyword">text-adventure</li><li class="keyword">llm-agent</li><li class="keyword">tidal-shore</li><li class="keyword">feltos</li><li class="keyword">qwzspace</li></ul>
     <div class="card-actions">
-      <span class="play-link" aria-disabled="true">Not yet deployed</span>
+      <a class="play-link" href="https://tidepool.561.group/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+  <path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+</svg> Play at tidepool.561.group</a>
       <span class="subdomain-hint">tidepool.561.group</span>
     </div>
   </div></section></div></div>
+    <nav class="game-pages-nav" aria-labelledby="game-pages-heading">
+    <h2 id="game-pages-heading">Per-game pages</h2>
+    <ul><li><a href="games/farstone/">Farstone</a></li><li><a href="games/aletheon/">Aletheon</a></li><li><a href="games/tidepool/">Tidepool</a></li></ul>
+  </nav>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">

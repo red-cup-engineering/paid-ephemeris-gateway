@@ -1,10 +1,10 @@
 // telnet-wiring — feltos's telnet transport (@red-cup-engineering/feltos/telnet) wired onto
 // Farstone's SAME live MudServer instance (serve.mts's `mud`), split out for direct testability
-// exactly like http-wiring.mts. See each export's own JSDoc for the "one clock, not two" design
+// exactly like world-hosting's http-wiring. See each export's own JSDoc for the "one clock, not two" design
 // and the feltos-side composition gap this module works around without editing feltos.
 
 import { closeMudTelnetServer, createMudTelnetServer, listenMudTelnetServer, tickMudTelnetServer } from "@red-cup-engineering/feltos/telnet";
-import type { WorldRuntime } from "./world-runtime.mts";
+import type { WorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
 
 /** The exact slice of a feltos `MudServer` (`mud-server.mjs`) this module reads from and wraps.
  *  `connectAnonymous`/`register`/`login`/`who`/`chat`/`tell` are the anonymouse-on-connect
@@ -53,9 +53,9 @@ function defaultCatchUpErrorLog(error: unknown): void {
 
 /**
  * listenFarstoneTelnet — wire feltos's telnet transport onto `mud` (the SAME live MudServer
- * `serve.mts` hands to `createFarstoneHttpServer`), tick-driven from `runtime`'s own catch-up
+ * `serve.mts` hands to `createWorldHttpServer`), tick-driven from `runtime`'s own catch-up
  * path — one clock, never a second independent setInterval driving the ENGINE (serve.mts's own
- * stated design; see world-runtime.mts's header). feltos's `tickMudTelnetServer` bundles "tick
+ * stated design; see world-hosting's world-runtime's header). feltos's `tickMudTelnetServer` bundles "tick
  * the engine" with "push connected sessions' output" in one call and exposes no push-only
  * counterpart nor an injectable tick function (a feltos-side gap, filed not fixed — a parallel
  * lot owns feltos): this function works around it by handing `createMudTelnetServer` a thin
@@ -65,7 +65,7 @@ function defaultCatchUpErrorLog(error: unknown): void {
  *
  * A second feltos-side gap (also filed, not fixed): `createMudTelnetServer`'s `MudServer`-shaped
  * interface requires fully SYNCHRONOUS `connect`/`enqueue` (telnet.mjs's own `handleLine` never
- * awaits them), unlike http-wiring.mts's composition (which wraps http.mjs's request listener
+ * awaits them), unlike world-hosting's http-wiring's composition (which wraps http.mjs's request listener
  * from OUTSIDE and awaits `preRequestCatchUp()` before it runs). Telnet has no equivalent
  * request/response boundary to interpose an async catch-up on, so a fresh `connect()` here can
  * only flush afterward fire-and-forget (below), not block the line on catch-up first — the
@@ -83,7 +83,7 @@ export async function listenFarstoneTelnet(
   const telnetMud: TelnetMudLike & { tick(): undefined } = {
     connect: (name: unknown) => {
       const actor = mud.connect(name);
-      // Fire-and-forget flush-on-mutation, mirroring http-wiring.mts's POST /connect — see this
+      // Fire-and-forget flush-on-mutation, mirroring world-hosting's http-wiring's POST /connect — see this
       // function's own JSDoc for why it cannot be awaited here.
       void runtime.postRequestFlush(0).catch(onCatchUpError);
       return actor;

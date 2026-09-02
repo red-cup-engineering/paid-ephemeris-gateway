@@ -6,7 +6,7 @@
 // so its room wires qwzspace straight to feltos's `createEngine`/`join`/`submit`/`step` (its own
 // header explains why: never `MudServer`, "which would just duplicate what qwzspace's room already
 // does"). Farstone is the opposite situation — it ALREADY ships a JSON request/response API
-// (http-wiring.mts / serve.mts) built on ONE raw, synchronous `MudServer` instance that headless
+// (world-hosting's http-wiring / serve.mts) built on ONE raw, synchronous `MudServer` instance that headless
 // clients and wheatstone depend on, unchanged, per this feature's own requirement. Introducing a
 // SECOND, independently-stepped feltos engine for the WS transport would fork the world in two —
 // exactly the single-source-of-truth failure this design avoids. So: `worldFactory()` here
@@ -17,7 +17,7 @@
 // (live) instance's MudServer becomes the ONE object BOTH transports drive: this file's own
 // `runTick` routes WS intents into `mud.connect()`/`mud.enqueue()`/`mud.tick()` — the exact same
 // methods the JSON `/connect`, `/command`, and `/tick` routes already call — and `serve.mts` hands
-// that SAME live instance to `createFarstoneHttpServer`, completely unchanged.
+// that SAME live instance to `createWorldHttpServer`, completely unchanged.
 //
 // "runTick calls the feltos engine's step": `mud.tick()` (mud-server.mjs) calls engine.mjs's own
 // `step()` internally — one `MudServer.tick()` per `runTick`, "qwzspace's tick literally IS feltos's
@@ -50,7 +50,7 @@
 // same instance — `selfAuditEvery` stays 0 here for exactly this reason (never wired to run
 // automatically in `createFarstoneRoom`), matching Tidepool's own default and its own stated
 // rationale ("a correctness dial, not required for v1 durability, which rests entirely on FeltOS's
-// own bucket-persisted trace" — true here too: Farstone's durability rests on world-store.mts's
+// own bucket-persisted trace" — true here too: Farstone's durability rests on world-hosting's world-store's
 // engine snapshot, not on qwzspace's log-replay).
 
 import { createMudServer } from "@red-cup-engineering/feltos/mud-server";
@@ -70,7 +70,7 @@ export interface FarstoneWorldInstance {
   snapOf: (id: string, tick: number) => unknown;
   /** NOT part of qwzspace's own `{runTick, subjectsOf, snapOf}` contract — room.mjs's own
    *  destructuring assignment simply ignores extra fields, so this rides alongside for
-   *  `serve.mts`/`http-wiring.mts`'s own use of the live MudServer instance. */
+   *  `serve.mts`/`world-hosting's http-wiring`'s own use of the live MudServer instance. */
   mud: () => FeltosMud;
 }
 
@@ -263,7 +263,7 @@ export function createFarstoneRoom(bootEngine: unknown, opts: FarstoneRoomOption
   return {
     room,
     /** The live MudServer instance — the SAME object `serve.mts` hands to
-     *  `createFarstoneHttpServer`, unchanged. Throws if called before the room has driven its own
+     *  `createWorldHttpServer`, unchanged. Throws if called before the room has driven its own
      *  live worldFactory() call — createRoom does this synchronously in its own constructor, so
      *  this is always populated by the time createRoom returns. */
     liveMud: (): FeltosMud => {

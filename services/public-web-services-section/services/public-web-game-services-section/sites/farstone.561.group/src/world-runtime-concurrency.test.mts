@@ -1,25 +1,19 @@
-// world-runtime-concurrency — reproduces, then closes, the 2026-08-20 live incident (see the
-// deploy runbook's Known-open-issues entry and world-runtime.mts's own "CONCURRENCY" header
-// section): concurrent requests racing preRequestCatchUp()/#flush() against REAL network
-// latency and real 429s. Before the single-flight fix landed, this reliably produced multiple
-// overlapping flushes — each capturing its own engine snapshot, each running its own GCS
-// metadata-GET + conditional-PUT retry loop — which is exactly the mechanism behind the live
-// "drop reverted, actor vanished" bug and the observed 429/OOM pileup (257s worst flush, 15 OOM
-// kills/25min). This test drives the REAL persistence path (world-store.mts / clock-store.mts /
-// gcs-client.mts / gcs-retry.mts, the real feltos engine) against a real (loopback) fake-GCS
-// server with INJECTED real setTimeout latency and injected 429s on writes, so it exercises the
-// exact code and the exact class of condition the live incident ran into — not a simplified
-// stand-in with a fake store and no real async gaps.
+// world-runtime-concurrency — reproduces, then closes, the 2026-08-20 live incident: concurrent
+// requests racing preRequestCatchUp()/#flush() (world-hosting's world-runtime) against REAL
+// network latency and real 429s. Drives the REAL persistence path (world-hosting's world-store/
+// clock-store, footing's gcs-client/gcs-retry, the real feltos engine) against a real
+// (loopback) fake-GCS server with injected latency and 429s on writes — the exact code and
+// class of condition the live incident ran into, not a simplified stand-in.
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { createEngine } from "@red-cup-engineering/feltos/engine";
 import { createMudServer } from "@red-cup-engineering/feltos/mud-server";
 import { FARSTONE_GAME, FARSTONE_RUNTIME } from "./farstone-game.mts";
-import { openWorldStore } from "./world-store.mts";
-import { openClockStore } from "./clock-store.mts";
-import { createWorldRuntime } from "./world-runtime.mts";
-import { startFakeGcs } from "./fake-gcs.mts";
+import { openWorldStore } from "@red-cup-engineering/world-hosting/world-store";
+import { openClockStore } from "@red-cup-engineering/world-hosting/clock-store";
+import { createWorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
+import { startFakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
 
 const unauthenticatedRequest: typeof fetch = (url, init) => fetch(url, init);
 

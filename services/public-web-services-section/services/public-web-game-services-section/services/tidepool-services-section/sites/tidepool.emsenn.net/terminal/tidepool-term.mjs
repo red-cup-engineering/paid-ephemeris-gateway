@@ -1,26 +1,15 @@
 #!/usr/bin/env node
-// tidepool-term — the terminal face (design §5.2), a small `stack()` of arnold's own published
+// tidepool-term — the terminal face (design §5.2): a small `stack()` of arnold's own published
 // shelf primitives (Screen, layout.stack, widgets.text/list/input/statusLine) over qwzspace's
-// Node client SDK (`client-node.mjs`'s `connectRoom`). Consumes arnold's PUBLISHED surface only —
-// never touches arnold's own tree, matching the concurrent terminal-flagship lane's boundary
-// (per the task's own instruction).
-//
-// Layout, top to bottom, exactly as design §5.2 lays it out:
-//   top:    text       — room name + description (from the perception frame)
-//   middle: list       — occupants and their affordances
-//   bottom: statusLine — tick/tide/weather/season (from frame.clock)
-//   input row: input/editInput — the command line, submitted via client-node.mjs's client
+// Node client SDK (`client-node`'s `connectRoom`), consuming arnold's PUBLISHED surface only.
+// Layout top to bottom: text (room name+description) / list (occupants+affordances) /
+// statusLine (tick/tide/weather/season from frame.clock) / input row submitting via the client.
 
 import process from "node:process";
 import { Screen } from "@red-cup-engineering/arnold/app";
 import { stack, inset } from "@red-cup-engineering/arnold/layout";
 import { box, input as drawInput, editInput, list, statusLine, text } from "@red-cup-engineering/arnold/widgets";
-// TRANSPORT NOTE (2026-08-20, found running the live-deploy mixed session): connects via
-// `../agents/ws-transport.mjs`, not qwzspace's own `client-node` `connectRoom` directly — that
-// transport cannot actually do `wss://` (see that file's header for the real bug), which would
-// have made this terminal face, exactly as originally shipped, unable to reach any real TLS
-// deployment (Cloud Run included) despite being a documented human-facing surface.
-import { connectRoomOverAnyScheme as connectRoom } from "../agents/ws-transport.mjs";
+import { connectRoom } from "@red-cup-engineering/qwzspace/client-node";
 
 const HOST = process.env["TIDEPOOL_HOST"] ?? "127.0.0.1";
 const PORT = process.env["TIDEPOOL_PORT"] ?? "18830";

@@ -25,9 +25,10 @@ state and no second engine.
   `farstone-progression.mts`, and `farstone-arcs.mts` define capabilities.
 - `src/catalogs.mts` and `src/thoughts.mts` are Farstone-owned content.
 - `docs/world/harbor.json` is the live authored world.
-- `src/serve.mts` runs the current FeltOS service with atomic persistence.
-- `src/world-store.mts` + `src/gcs-client.mts` select and implement the
-  persistence backend (local disk or a GCS bucket) — see "Persistence" below.
+- `src/serve.mts` is a thin composition of `@red-cup-engineering/world-hosting`'s
+  generic `serve` runtime (persistence backend selection, request-driven
+  catch-up, the outer HTTP server) with Farstone's own game, room, page, and
+  telnet wiring — see "Persistence" below.
 - `src/farstone-tufte.mts` and `src/web/` own Farstone's QwzSpace/TUFTE
   presentation. Generic room-to-document shaping remains in QwzSpace.
 - `node_modules/` is lockfile-resolved from the internal registry and carried
@@ -46,8 +47,10 @@ and `FELTOS_TICK_MS` configure the autosave and world-tick cadence. The suite
 includes a complete player campaign, deterministic autonomous simulation, an
 exact eight-year replay with bounded checkpoints, and the same eight-year
 replay proven byte-exact through a real save/load round trip over the GCS
-bucket-store path (against a fake-GCS double — see `src/world-store.test.mts`
-and `src/world-store-replay.test.mts`).
+bucket-store path (against a fake-GCS double — see
+`@red-cup-engineering/world-hosting`'s own `test/world-store.test.mjs` for the
+generic backend, and this package's `src/world-store-replay.test.mts` for the
+Farstone-specific replay).
 
 ## World time
 
@@ -65,7 +68,8 @@ background clock is running when nothing guarantees it is:
 
 - **Catch-up on request.** World time does not advance on a timer at all. Every incoming request
   first asks "how many real ticks are owed since the world was last advanced?" — computed from a
-  persisted `lastTickAt` timestamp (`src/clock-store.mts`), not a live in-process clock — and runs
+  persisted `lastTickAt` timestamp (`@red-cup-engineering/world-hosting`'s `clock-store`), not a
+  live in-process clock — and runs
   exactly that many ticks, in-request, before the route itself is handled. No request ever *skips*
   elapsed time; it catches up on it, honestly.
 - **Capped per request.** A world idle for hours does not make one unlucky visitor's request stall
@@ -79,7 +83,7 @@ background clock is running when nothing guarantees it is:
 - **Flush-on-mutation.** Durability no longer depends on a periodic timer firing. Every request
   that actually changes engine state — a catch-up that ran at least one real tick, an explicit
   `POST /tick`, or `POST /connect` joining a new actor — is followed immediately by a save
-  (`src/world-runtime.mts`'s `postRequestFlush`). `POST /command` alone does not flush: it only
+  (`@red-cup-engineering/world-hosting`'s `world-runtime`'s `postRequestFlush`). `POST /command` alone does not flush: it only
   enqueues, matching feltos's own existing async command/tick/drain pipeline (a queued command
   takes effect, and is saved, at the next tick that admits it — the same small, already-documented
   gap as before, not widened). The `FELTOS_SAVE_MS` interval save in `serve.mts` still runs, but
@@ -102,16 +106,17 @@ makes for `--min-instances 0`'s zero standing cost, not a hidden compromise.
 
 ## Persistence
 
-Backend is chosen by `FELTOS_BUCKET`/`FELTOS_SAVE` (`src/world-store.mts`):
+Backend is chosen by `FELTOS_BUCKET`/`FELTOS_SAVE`
+(`@red-cup-engineering/world-hosting`'s `world-store`):
 
 - Neither set: in-memory only (no change from before persistence existed).
 - `FELTOS_SAVE` set, `FELTOS_BUCKET` unset (local dev, unchanged): a local
   filesystem path, via feltos's own `saveEngine`/`loadEngine`.
-- `FELTOS_BUCKET` set (Cloud Run): a GCS bucket, via `src/gcs-client.mts`
-  (ambient Cloud Run service-account credentials through the metadata
-  server — no key file, no credential env var). `FELTOS_SAVE`, if also set,
-  becomes the *object name* inside that bucket (default `world.json`), not a
-  filesystem path.
+- `FELTOS_BUCKET` set (Cloud Run): a GCS bucket, via
+  `@red-cup-engineering/footing`'s `gcs-client` (ambient Cloud Run
+  service-account credentials through the metadata server — no key file, no
+  credential env var). `FELTOS_SAVE`, if also set, becomes the *object name*
+  inside that bucket (default `world.json`), not a filesystem path.
 
 The world is one mutable JSON snapshot (feltos's own `encodeSnapshot`
 envelope), overwritten with a GCS conditional write guarded by the object's

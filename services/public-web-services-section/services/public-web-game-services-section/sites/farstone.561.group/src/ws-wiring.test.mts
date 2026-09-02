@@ -1,5 +1,5 @@
 // ws-wiring.test — the qwzspace push transport wired ALONGSIDE the JSON API on the SAME
-// `http.Server` (http-wiring.mts's "PUSH TRANSPORT, ADDITIVE"): a real WS client joins, submits
+// `http.Server` (world-hosting's http-wiring's "PUSH TRANSPORT, ADDITIVE"): a real WS client joins, submits
 // commands, and receives perception frames pushed over the socket; a dropped connection resumes
 // (qwzspace's Tier-1 resume-token) without losing its persisted feltos actor; the OLD JSON routes
 // keep answering unchanged on the same server, seeing the SAME engine a WS client just mutated
@@ -14,8 +14,8 @@ import { closeMudHttpServer, listenMudHttpServer } from "@red-cup-engineering/fe
 import { decode, encode, intent, join as joinMsg } from "@red-cup-engineering/qwzspace/protocol";
 import { FARSTONE_GAME } from "./farstone-game.mts";
 import { createFarstoneRoom } from "./farstone-room.mts";
-import { createWorldRuntime } from "./world-runtime.mts";
-import { createFarstoneHttpServer } from "./http-wiring.mts";
+import { createWorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
+import { createWorldHttpServer } from "@red-cup-engineering/world-hosting/http-wiring";
 
 const TICK_MS = 20;
 
@@ -43,7 +43,7 @@ async function withLiveServer(
     { tickIntervalMs: TICK_MS, maxCatchUpTicksPerRequest: 50, lastTickAt: Date.now(), store: null, clockStore: null },
   );
   await runtime.preRequestCatchUp();
-  const server = createFarstoneHttpServer(mud, runtime, { tickIntervalMs: TICK_MS, room });
+  const server = createWorldHttpServer(mud, runtime, { tickIntervalMs: TICK_MS, room, processLabel: "Farstone" });
   const { origin } = await listenMudHttpServer(server, { host: "127.0.0.1", port: 0 });
   await warmUpLocalPort(origin);
   const wsOrigin = origin.replace("http://", "ws://");
@@ -78,7 +78,7 @@ function collector(ws: WebSocket) {
 }
 
 function nudge(origin: string): Promise<Response> {
-  // any plain HTTP request drives runtime.preRequestCatchUp() (http-wiring.mts) — the same
+  // any plain HTTP request drives runtime.preRequestCatchUp() (world-hosting's http-wiring) — the same
   // mechanism a browser page load or a health probe already provides in production.
   return fetch(`${origin}/health`);
 }

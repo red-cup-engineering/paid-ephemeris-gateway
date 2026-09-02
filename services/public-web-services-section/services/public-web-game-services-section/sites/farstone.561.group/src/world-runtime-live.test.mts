@@ -1,22 +1,20 @@
 // world-runtime-live — end-to-end proof against the REAL feltos engine, the REAL (raw,
-// unwrapped) MudServer, and a real (fake-http) GCS bucket, driven exactly the way `serve.mts`'s
-// own HTTP wrapper drives `WorldRuntime` (see its module header): `preRequestCatchUp()` before
-// a route runs, `postRequestFlush()` after a route that itself mutated state. This reproduces
-// the exact shape of the live churn bug the 2026-08-19 deploy runbook found: a mutating
-// command lands, real idle time passes with no process running any timer, then a fresh
-// "instance" boots from the persisted bucket state. Before this change, that reload could show
-// tick/assertion counters going BACKWARD and lose the mutation entirely. This test asserts the
-// fixed model never does either.
+// unwrapped) MudServer, and a real (fake-http) GCS bucket, driven exactly the way `serve.mts`
+// drives world-hosting's `WorldRuntime`: `preRequestCatchUp()` before a route runs,
+// `postRequestFlush()` after a route that itself mutated state. Reproduces the live churn bug
+// the 2026-08-19 deploy runbook found (a mutating command, an idle gap with no timer running,
+// then a fresh "instance" reload) — asserts the fixed model never loses the mutation or runs
+// tick/assertion counters backward.
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { createEngine } from "@red-cup-engineering/feltos/engine";
 import { createMudServer } from "@red-cup-engineering/feltos/mud-server";
 import { FARSTONE_GAME, FARSTONE_RUNTIME } from "./farstone-game.mts";
-import { openWorldStore } from "./world-store.mts";
-import { openClockStore } from "./clock-store.mts";
-import { createWorldRuntime } from "./world-runtime.mts";
-import { startFakeGcs } from "./fake-gcs.mts";
+import { openWorldStore } from "@red-cup-engineering/world-hosting/world-store";
+import { openClockStore } from "@red-cup-engineering/world-hosting/clock-store";
+import { createWorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
+import { startFakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
 
 const unauthenticatedRequest: typeof fetch = (url, init) => fetch(url, init);
 

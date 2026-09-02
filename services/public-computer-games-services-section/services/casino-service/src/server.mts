@@ -4,11 +4,12 @@
  * dependencies beyond the two `@red-cup-engineering/*` packages the economy itself needs —
  * matching parlor-service's/flickering-delve's own "no framework" house style.
  *
- * Identity: bearer-token guest sessions, the same shape flickering-delve-service's
- * `POST /session` already uses on this shelf (`sessions: Map<token, accountId>`, checked via an
- * `Authorization: Bearer <token>` header) — the "simplest coherent guest-token scheme" the task
- * brief asks for where no sibling in *this* game-home tree had picked one yet. Durable-account
- * login is a seam (see accounts.mts's header): every account minted here is a guest.
+ * Identity: bearer-token sessions, the same shape flickering-delve-service's `POST /session`
+ * already uses on this shelf (`sessions: Map<token, accountId>`, checked via an
+ * `Authorization: Bearer <token>` header). `POST /session` still mints a guest; `POST /login`
+ * mints or reclaims a durable handle+passphrase account (economy/accounts.mts's seam, now
+ * wired), and `POST /claim-account` folds a prior guest's balances/state into it — the same
+ * guest→durable shape flickering-delve's own `/claim` route already ships.
  *
  * Persistence: `CASINO_SNAPSHOT` (a file path) turns on save-on-interval-and-shutdown via
  * persistence.mts; unset, the service is purely in-memory, which is exactly what every test in
@@ -22,7 +23,8 @@ import { readFile } from 'node:fs/promises';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CasinoEconomy } from './economy/casino-economy.mts';
+import { CasinoEconomy, AuthError } from './economy/casino-economy.mts';
+import { casinoGuestId, casinoDurableId, isGuest } from './economy/accounts.mts';
 import { loadSnapshot, saveSnapshot } from './persistence.mts';
 import { BlackjackTable, type BlackjackSettlement } from './games/blackjack/table.mts';
 import { SlotsTable, type SlotsSettlement } from './games/slots/table.mts';
@@ -158,6 +160,12 @@ function bearer(req: IncomingMessage): string | undefined {
   return value === '' ? undefined : value;
 }
 
+/** 401 for a login-secret mismatch, 400 for every other thrown `Error` — the one place every
+ *  new account/friends route below decides its error status. */
+function statusForError(err: unknown): number {
+  return err instanceof AuthError ? 401 : 400;
+}
+
 // ── economy + sessions ────────────────────────────────────────────────────────────────
 
 const restored = await loadSnapshot(SNAPSHOT_PATH);
@@ -217,6 +225,73 @@ const server = createServer(async (req, res) => {
       const token = randomUUID();
       sessions.set(token, accountId);
       json(res, 200, { token, accountId, clientKey });
+      return;
+    }
+
+    // ── durable-account login + guest migration (economy/accounts.mts's seam, wired) ───────
+    // Handle+passphrase, the same shape flickering-delve-service's own `/session` already ships
+    // on this shelf — no OAuth/email provider for a v1 social-casino pass; a player's chosen
+    // passphrase IS the claim code they re-present, from any device, to reach the same account.
+
+    if (req.method === 'POST' && routePath === '/login') {
+      const value = await body(req);
+      if (typeof value.handle !== 'string' || value.handle.trim() === '') { json(res, 400, { error: 'missing handle' }); return; }
+      if (typeof value.secret !== 'string') { json(res, 400, { error: 'missing secret' }); return; }
+      try {
+        const login = economy.loginAccount(value.handle, value.secret);
+        const token = randomUUID();
+        sessions.set(token, login.accountId);
+        json(res, 200, { token, accountId: login.accountId, created: login.created, status: login.status });
+      } catch (err) {
+        json(res, statusForError(err), { error: err instanceof Error ? err.message : String(err) });
+      }
+      return;
+    }
+
+    if (req.method === 'POST' && routePath === '/claim-account') {
+      const accountId = accountFor(req);
+      if (accountId === undefined) { json(res, 401, { error: 'not logged in — POST /session or /login first' }); return; }
+      if (isGuest(accountId)) { json(res, 401, { error: 'log into a durable account first — POST /login' }); return; }
+      const value = await body(req);
+      if (typeof value.clientKey !== 'string' || value.clientKey.trim() === '') { json(res, 400, { error: 'missing clientKey' }); return; }
+      const guestAccountId = casinoGuestId(value.clientKey);
+      json(res, 200, economy.claimGuestIntoAccount(guestAccountId, accountId));
+      return;
+    }
+
+    // ── friends list, keyed to durable identity — a mutual link and one gift action ────────
+
+    if (req.method === 'GET' && routePath === '/friends') {
+      const accountId = accountFor(req, url.searchParams.get('token') ?? undefined);
+      if (accountId === undefined) { json(res, 401, { error: 'not logged in — POST /login first' }); return; }
+      json(res, 200, { friends: economy.friendsOf(accountId) });
+      return;
+    }
+
+    if (req.method === 'POST' && routePath === '/friends/add') {
+      const accountId = accountFor(req);
+      if (accountId === undefined) { json(res, 401, { error: 'not logged in — POST /login first' }); return; }
+      const value = await body(req);
+      if (typeof value.handle !== 'string' || value.handle.trim() === '') { json(res, 400, { error: 'missing handle' }); return; }
+      try {
+        json(res, 200, economy.addFriend(accountId, casinoDurableId(value.handle)));
+      } catch (err) {
+        json(res, statusForError(err), { error: err instanceof Error ? err.message : String(err) });
+      }
+      return;
+    }
+
+    if (req.method === 'POST' && routePath === '/friends/gift') {
+      const accountId = accountFor(req);
+      if (accountId === undefined) { json(res, 401, { error: 'not logged in — POST /login first' }); return; }
+      const value = await body(req);
+      if (typeof value.handle !== 'string' || value.handle.trim() === '') { json(res, 400, { error: 'missing handle' }); return; }
+      const amount = typeof value.amount === 'number' && Number.isFinite(value.amount) ? value.amount : 1;
+      try {
+        json(res, 200, economy.giftTicket(accountId, casinoDurableId(value.handle), amount));
+      } catch (err) {
+        json(res, statusForError(err), { error: err instanceof Error ? err.message : String(err) });
+      }
       return;
     }
 

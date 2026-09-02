@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
 import { withGcsRetry } from "@red-cup-engineering/footing/gcs-retry";
-import { startFakeGcs } from "./fake-gcs.mts";
-import type { FakeGcs } from "./fake-gcs.mts";
+import { startFakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
+import type { FakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
 
 const unauthenticatedRequest: typeof fetch = (url, init) => fetch(url, init);
 

@@ -1,17 +1,11 @@
-// persistence-churn.test — "the lesson of the day": mutate, force restart, verify survival.
-// Drives a real session (join, move, harvest, build, mark, propose/support/enact) through a
-// REAL tidepool-room against the flush-on-mutation `WorldRuntime`, backed by fake-gcs (the same
-// GCS JSON/upload semantics the real bucket backend speaks), then throws every in-memory object
-// away — room, runtime, engine handle, all of it — and boots a completely fresh instance from
-// nothing but the store's own persisted bytes, the way a Cloud Run cold start actually would.
-// Every mutation must have survived exactly: actor location, inventory contents, harvested
-// wares, a built structure, a folded mark, an enacted law, AND the original harvest-rights/
-// water-quality contradictions still standing as FOUR `both` (the immutable-trace guarantee).
-//
-// Also proves clock-store's own crash-safety ordering empirically: a flush that dies AFTER the
-// clock write but BEFORE the engine write must fail toward "under-count owed ticks" on restart,
-// never toward re-applying ticks that already landed — simulated by literally interrupting a
-// flush mid-way and reading back a lastTickAt that predates the (not yet written) engine change.
+// persistence-churn.test — "the lesson of the day": mutate, force restart, verify survival. A
+// REAL session (join/move/harvest/build/mark/propose/support/enact) plays through a real
+// tidepool-room + flush-on-mutation WorldRuntime over fake-gcs; a totally fresh instance then
+// boots from nothing but the store's own bytes (a cold start) and every mutation — including
+// the harvest-rights/water-quality FOUR `both` contradictions — must have survived exactly.
+// Also proves clock-store's crash ordering empirically (clock written before engine): a flush
+// interrupted mid-way under-counts owed ticks on restart, never re-applies them. Persistence
+// primitives now live in world-hosting (world-host-runtime note, 2026-09-01).
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -20,10 +14,10 @@ import { actorIdFor } from "@red-cup-engineering/feltos/mud-server";
 import { evidenceName, settleSubject, value } from "@red-cup-engineering/feltos/world";
 import { TIDEPOOL_GAME } from "./tidepool-game.mts";
 import { createTidepoolRoom } from "./tidepool-room.mts";
-import { openWorldStore } from "./world-store.mts";
-import { openClockStore } from "./clock-store.mts";
-import { createWorldRuntime } from "./tidepool-runtime.mts";
-import { startFakeGcs } from "./fake-gcs.mts";
+import { openWorldStore } from "@red-cup-engineering/world-hosting/world-store";
+import { openClockStore } from "@red-cup-engineering/world-hosting/clock-store";
+import { createWorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
+import { startFakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
 import { TIDEPOOL_RUNTIME } from "./tidepool-capabilities.mts";
 
 function gcsOptions(fake) {

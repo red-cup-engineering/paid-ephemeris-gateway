@@ -5,9 +5,7 @@ import { closeSync, constants, existsSync, fsyncSync, openSync, readFileSync, re
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
-const semanticDigest = semanticIdentity;
+import { semanticDigest } from "./policy-conformance.mjs";
 import { recordSettlementRecord } from "./settlement-witness.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");

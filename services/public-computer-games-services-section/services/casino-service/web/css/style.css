@@ -168,6 +168,70 @@ main {
   min-height: 1.2em;
 }
 
+.account form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.account label {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+}
+
+.account input {
+  background: var(--felt);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  color: var(--ink);
+  padding: 0.4rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.account button,
+#link-guest-btn {
+  background: linear-gradient(180deg, var(--red-bright), var(--red));
+  color: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+#link-guest-btn {
+  margin-top: 0.75rem;
+}
+
+#friends-panel {
+  margin-top: 1rem;
+  border-top: 1px solid var(--felt-border);
+  padding-top: 0.75rem;
+}
+
+#friends-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+#friends-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--felt);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+}
+
 .bundle-list {
   list-style: none;
   margin: 0;

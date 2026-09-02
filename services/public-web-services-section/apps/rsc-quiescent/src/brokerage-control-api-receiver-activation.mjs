@@ -2,8 +2,6 @@ import { closeSync, constants, existsSync, fsyncSync, lstatSync, mkdirSync, open
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-
-const rscValueId = (value, objectKind) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 import { admitEnterpriseInstall, revalidateEnterpriseInstall } from "../lib/management/skills/enforcing-mesh-scope/scripts/mesh-scope.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -15,7 +13,7 @@ const EVIDENCE = "ni:///sha-256;Ovjiv9a8cQJ74zZ7kbw3f6tImbTiakcSHTIV5EUcjjc", AD
 const LAW = "ni:///sha-256;fqCupKTkPu7Yta0UwcvyqaPAhfciGh2fZ6LXVVcXPhc";
 const RECOVERY_KEY = "NrBJW_pu-iTHgr-tpHwrCbcaQogI83Ee_P2vU8wu0mA";
 const RECOVERY_RECEIPT = `${WORKING}/claims/${RECOVERY_KEY}/receipt.json`;
-const digest = (value) => rscValueId(value, "rsc-quiescent.receiver-activation-record");
+const digest = (value) => identifyJsonSemanticContent({ objectKind: "rsc-quiescent.receiver-activation-record", value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 const identify = (body) => ({ id: digest(body), ...body });
 const freeze = (value) => { if (value && typeof value === "object" && !Object.isFrozen(value)) { Object.values(value).forEach(freeze); Object.freeze(value); } return value; };
 const binding = () => ({ allocationId: ALLOCATION, customer: "urn:ame:leader-movement-team", maximumInductions: 1, nodeId: NODE, receiverActor: "urn:ame:rsc-quiescent", receiverParent: PARENT, receiverContract: "ni:///sha-256;jEu9l81AnYaHH2bIOWT0ORsl-o5Imd7njissVLvh7eA", ceilings: { maximumFiles: 16, maximumBytes: 524288, maximumRuntimeMs: 120000 }, customerContract: "ni:///sha-256;9pOSj_Hdu4_hOMxqnKIxQIoLly634i0qz7LDPArrm68", considerationAdmission: "ni:///sha-256;6HU9Zv3L67WtdavNU9fEu-ZzMOTKUQU3eQkdbHd1HnI", publicationAdmission: "ni:///sha-256;HACkeap6XelMI6wIW3gUdqCfIEeg8xEcNiDBEWHdKNs" });

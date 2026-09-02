@@ -31,6 +31,8 @@
     "./opportunity-feed": "./src/opportunity-feed.mjs"
   },
   "dependencies": {
+    "@561-group/dispatching-a-task": "0.1.2",
+    "@561-group/listing-open-obligations": "0.1.2",
     "@561-group/resolving-an-identifier": "0.2.0",
     "@red-cup-engineering/agrodao": "0.16.4",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",

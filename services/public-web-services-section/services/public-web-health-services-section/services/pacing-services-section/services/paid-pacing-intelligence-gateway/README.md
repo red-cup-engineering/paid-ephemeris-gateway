@@ -34,10 +34,12 @@ validated instrument.
 
 `POST /v1/pacing/analysis` expects a JSON body `{ observations, windowDays?,
 metricIds? }`. `observations` must be a nonempty array of
-`nutrition-biometric-observation-v1`-shaped records (owned by
-`nutrition-services-section`): each needs a nonempty `metric`, a
-`measuredAt` or `enteredAt` ISO timestamp, and — unless
-`missingness.status` is `"missing"` — a `measurement.value`.
+`biometric-observation-v1`-shaped records (owned by
+`health-services-section`, the general health-science biometric
+observation schema; the nutrition-domain profile
+`nutrition-biometric-observation-v1` is accepted too, same fields): each
+needs a nonempty `metric`, a `measuredAt` or `enteredAt` ISO timestamp, and
+— unless `missingness.status` is `"missing"` — a `measurement.value`.
 
 `POST /v1/pacing/heart-rate-threshold` expects `{ restingHr }`, a finite
 positive number of beats per minute.

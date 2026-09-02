@@ -35,7 +35,7 @@
     "check:hive-capital": "node --check src/hive-capital-allocation.mjs && node --check test/hive-capital-allocation.test.mjs",
     "test:hive-capital": "node --test test/hive-capital-allocation.test.mjs"
   },
-  "description": "AGRODAO — the web3/on-chain asset-management sovereign enterprise: custody, positions, and cross-chain settlement for the firm's DAO-governed assets, distinct from any single chain's wallet-fleet operations app.",
+  "description": "AGRODAO \u2014 the web3/on-chain asset-management sovereign enterprise: custody, positions, and cross-chain settlement for the firm's DAO-governed assets, distinct from any single chain's wallet-fleet operations app.",
   "exports": {
     "./obsmetrologia-causal-sheaf-backtest": "./src/obsmetrologia-causal-sheaf-backtest.mjs",
     "./obsmetrologia-curvature-release-backtest": "./src/obsmetrologia-curvature-release-backtest.mjs",

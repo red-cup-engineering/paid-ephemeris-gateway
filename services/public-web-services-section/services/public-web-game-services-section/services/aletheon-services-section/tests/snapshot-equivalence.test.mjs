@@ -1,26 +1,11 @@
-// snapshot-equivalence — the proof snapshot.mjs's own header claims but, until this file, never
-// actually checked: replaying the FULL historical EAVT log and replaying a COMPACTED snapshot
-// plus only the rows appended after it must fold, through the exact same store.replay(), to
-// IDENTICAL world state — not "currently agrees," a state HASH compared byte-for-byte, so any
-// future change to snapshotRows()/replay() that breaks the equivalence fails loudly here instead
-// of silently reappearing as production data loss (the same class of bug the 2026-08-19 deploy
-// runbook's original OOM/compaction gap was).
-//
-// Three worlds get compared:
-//   1. `live`            — the real, actually-ticked-forward world object (ground truth: nobody
-//                           replayed anything to produce this one).
-//   2. `fullReplay`       — store.replay() over the ENTIRE historical trace, snapshot+tail included
-//                           (the pre-compaction boot path — full-log replay, still exactly how
-//                           local-file mode and a not-yet-compacted bucket both boot today).
-//   3. `snapshotPlusTail` — store.replay() over ONLY `snapshotRows(world)` taken partway through,
-//                           followed by the rows appended AFTER that point (the compacted boot
-//                           path a real production compaction+restart takes).
-//
-// If compaction is doing what it claims, all three must hash identically on every field a restore
-// is supposed to preserve (see persistence-replay.test.mjs's own "honest gap" test for the fields
-// that are NOT supposed to survive ANY restore path, replayed or not — marks/inventory/claim — and
-// which this hash deliberately excludes for exactly that reason, so this test can't fail on a gap
-// that already has its own dedicated, passing proof elsewhere).
+// snapshot-equivalence — proves snapshot.mjs's compaction claim: replaying the FULL historical
+// EAVT log and replaying a COMPACTED snapshot + only the rows appended after it must fold, via
+// the same store.replay(), to state HASHES that agree on every field a restore preserves (see
+// stateHash() below for exactly which fields, and why NPC x/y/z and all yaw are excluded — both
+// real, documented, pre-existing gaps, not something compaction introduces). Three worlds
+// compared: `live` (ground truth, never replayed), `fullReplay` (store.replay() over the entire
+// trace — today's boot path pre-compaction), `snapshotPlusTail` (replay over snapshotRows()
+// taken partway through + the rows appended after — the real compacted-boot path).
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
@@ -32,37 +17,33 @@ import { tryAttack, corrupt } from "../server/world/combat.mjs";
 import { snapshotRows, encodeSnapshotRows, decodeSnapshotRows } from "../server/world/snapshot.mjs";
 import { KIND, COMBAT } from "../shared/constants.mjs";
 
-// stateHash — every field a restore (full-log OR snapshot+tail) is supposed to preserve, and
-// NOTHING else: id/kind/name/x/y/z/hp/maxHp/killed/raised/hostile/state/bornTick (yaw excluded —
-// see the comment inline below for the real, pre-existing, unrelated-to-compaction reason).
-// Sorted by id first so entity insertion order (which can legitimately differ between a
-// from-scratch replay and the live Map) never affects the hash.
+/**
+ * Hash the fields a restore (full-log OR snapshot+tail) is supposed to preserve, and nothing
+ * else. Sorted by id first so entity insertion order (which can legitimately differ between a
+ * from-scratch replay and the live Map) never affects the hash.
+ * @param {object} world A live or replayed game world (`createWorld()`/`replay()` shape).
+ * @returns {string} A sha256 hex digest of the comparable state.
+ */
 function stateHash(world) {
   const rows = [...world.entities.values()]
-    .map((e) => ({
-      id: e.id, kind: e.kind, name: e.name,
-      // x/y/z at ticking.mjs's own round2 — the SAME rounding `append(..., "moved", ...)`
-      // already applies before a position ever reaches the trace (see round2/round3 there). Any
-      // replayed world's x/y/z is only ever as precise as the last "moved" row recorded it, by
-      // construction — comparing at higher precision than the trace itself carries would fail on
-      // the trace's own designed lossiness, not on a real equivalence bug.
-      //
-      // yaw is deliberately EXCLUDED: `bumpMoved` (ticking.mjs, the NPC path) only fires a
-      // "moved" append when x/z change, never on a yaw-only change — a stationary-but-spinning
-      // entity (kind "resonance": a decorative in-place animation, not real orientation) can spin
-      // forever live while its trace never records a single yaw update. Confirmed by direct diff
-      // against a live world before this test existed: every other field matched exactly; only
-      // "resonance" kind entities' yaw diverged, always to the replay-side default of 0. This is
-      // a real, pre-existing, cosmetic-only gap in ticking.mjs's OWN emission policy — identical
-      // whether a boot replays the full log or a compacted snapshot+tail, exactly like the
-      // documented marks/inventory/claim gaps persistence-replay.test.mjs already proves — not
-      // something compaction introduces, and out of this fix's scope (ticking.mjs's domain
-      // emission logic is deliberately untouched here).
-      x: round2(e.x), y: round2(e.y), z: round2(e.z),
-      hp: e.hp, maxHp: e.maxHp,
-      killed: e.killed, raised: e.raised, hostile: e.hostile, state: e.state,
-      bornTick: e.bornTick,
-    }))
+    .map((e) => {
+      const isPlayer = e.kind === KIND.player;
+      return {
+        id: e.id, kind: e.kind, name: e.name,
+        // x/y/z: STRICT only for players (stepPlayer still journals every tick a player moves).
+        // NPC position is excluded here — ticking.mjs's NPC_DURABLE_MOVE_TICKS (2026-09-02 fix)
+        // durable-writes an NPC position at most once per 60s, so a replay can legitimately lag
+        // live by up to that window; see tests/npc-move-durability.test.mjs for the cadence's own
+        // proof. round2 matches the SAME rounding append(..., "moved", ...) applies on write.
+        // yaw is excluded for all kinds: bumpMoved/stepPlayer only fire on x/z change, so a
+        // spinning-in-place "resonance" entity's yaw never lands on the trace (pre-existing,
+        // cosmetic-only gap, confirmed by direct live-world diff before this test existed).
+        x: isPlayer ? round2(e.x) : null, y: isPlayer ? round2(e.y) : null, z: isPlayer ? round2(e.z) : null,
+        hp: e.hp, maxHp: e.maxHp,
+        killed: e.killed, raised: e.raised, hostile: e.hostile, state: e.state,
+        bornTick: e.bornTick,
+      };
+    })
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   return createHash("sha256").update(JSON.stringify(rows)).digest("hex");
 }

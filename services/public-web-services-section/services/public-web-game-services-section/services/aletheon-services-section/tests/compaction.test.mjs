@@ -47,7 +47,7 @@ async function runIdleTicks(store, world, { ticks, flushEveryTicks, fake, bucket
   return samples;
 }
 
-test("idle-growth bound, measured: WITHOUT compaction the tail grows strictly every flush (the original bug, reproduced honestly)", async (t) => {
+test("idle-growth bound, measured: WITHOUT compaction the tail never shrinks and keeps climbing over a long idle run (the original bug, reproduced honestly)", async (t) => {
   const fake = await startFakeGcs("idle-no-compaction");
   t.after(() => fake.close());
   const store = openBucketLogStore({ kind: "bucket", bucket: "idle-no-compaction", object: "w.jsonl" }, {
@@ -58,28 +58,35 @@ test("idle-growth bound, measured: WITHOUT compaction the tail grows strictly ev
   const world = createWorld({ onAppend: (r) => store.appendRow(r) });
   seedWorld(world);
 
-  const samples = await runIdleTicks(store, world, { ticks: 600, flushEveryTicks: 100, fake, bucket: "idle-no-compaction", tailObjectName: "w.jsonl" });
+  // 3600 ticks (240s sim time), sampled every 300: with ticking.mjs's NPC_DURABLE_MOVE_TICKS
+  // cadence (60s, the 2026-09-02 cold-red-gate fix), growth is no longer smooth/every-tick — it
+  // steps by ~50 rows every 900 ticks as NPCs cross their own durability window, then plateaus.
+  // The window here is long enough to observe several real steps (measured fresh: t300=175 ...
+  // t3600=325), so this still proves the real claim — an uncompacted tail never shrinks and has no
+  // ceiling — without asserting the now-false "grows every single 100-tick sample" shape.
+  const samples = await runIdleTicks(store, world, { ticks: 3600, flushEveryTicks: 300, fake, bucket: "idle-no-compaction", tailObjectName: "w.jsonl" });
 
   console.log(`[measured] no-compaction idle growth: ${samples.map((s) => `t${s.tick}=${s.tailRows}rows/${s.tailBytes}B`).join(", ")}`);
 
   for (let i = 1; i < samples.length; i++) {
     assert.ok(
-      samples[i].tailRows > samples[i - 1].tailRows,
-      `expected strictly growing tail without compaction (sample ${i - 1} -> ${i}): ${samples[i - 1].tailRows} -> ${samples[i].tailRows}`,
+      samples[i].tailRows >= samples[i - 1].tailRows,
+      `expected a non-decreasing tail without compaction (sample ${i - 1} -> ${i}): ${samples[i - 1].tailRows} -> ${samples[i].tailRows}`,
     );
   }
-  assert.ok(samples.at(-1).tailRows > 600, "600+ idle ticks of NPC wander/hunt should file well over 600 uncompacted rows");
+  assert.ok(samples.at(-1).tailRows > samples[0].tailRows, "a long idle run without compaction should show real net growth, not a one-time burst that then plateaus forever");
+  assert.ok(samples.at(-1).tailRows > 300, "3600 idle ticks of NPC wander/hunt + repopulation should file well over 300 uncompacted rows");
 });
 
 test("idle-growth bound, measured: WITH compaction the tail never exceeds the threshold band, for as long as idle-ticking continues", async (t) => {
   const fake = await startFakeGcs("idle-with-compaction");
   t.after(() => fake.close());
-  // THRESHOLD sized relative to this test's own flush cadence (not production's 2000/30s) so the
-  // run actually shows several genuine grow-then-truncate cycles instead of every single flush
-  // immediately overshooting and compacting (still correct either way, just less illustrative of
-  // "crosses a threshold" behavior specifically — see the first test above for the "every flush
-  // recompacts" shape, which is its own valid, even stronger bound).
-  const THRESHOLD = 500;
+  // THRESHOLD and run length sized relative to ticking.mjs's NPC_DURABLE_MOVE_TICKS cadence (60s
+  // = 900 ticks, the 2026-09-02 cold-red-gate fix — durable "moved" rows now land in ~50-row
+  // bursts every 900 ticks, not every tick), so the run actually shows several genuine
+  // grow-then-truncate cycles: measured fresh, threshold 60 over 3600 ticks (100-tick flushes)
+  // yields 3 real compactions, worst observed tail 57 rows.
+  const THRESHOLD = 60;
   let onCompactCalls = 0;
   const store = openBucketLogStore({ kind: "bucket", bucket: "idle-with-compaction", object: "w.jsonl" }, {
     gcsClientOptions: { apiBase: fake.url, request: unauthenticatedRequest },
@@ -90,7 +97,7 @@ test("idle-growth bound, measured: WITH compaction the tail never exceeds the th
   seedWorld(world);
   store.setWorld(() => world); // the one line of wiring that turns compaction on
 
-  const samples = await runIdleTicks(store, world, { ticks: 300, flushEveryTicks: 5, fake, bucket: "idle-with-compaction", tailObjectName: "w.jsonl" });
+  const samples = await runIdleTicks(store, world, { ticks: 3600, flushEveryTicks: 100, fake, bucket: "idle-with-compaction", tailObjectName: "w.jsonl" });
 
   console.log(`[measured] with-compaction idle growth (threshold ${THRESHOLD}): ${samples.map((s) => `t${s.tick}=${s.tailRows}`).join(", ")}`);
   console.log(`[measured] compactions triggered over 300 idle ticks (${samples.length} flushes): ${onCompactCalls}`);

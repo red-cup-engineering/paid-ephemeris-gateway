@@ -1,29 +1,11 @@
 #!/usr/bin/env node
-// aletheon-server — the entry point. Stands up the authoritative world (server/app.mjs), serves
-// the browser client and upgrades WebSocket connections via @red-cup-engineering/qwzspace (the shared realtime
-// engine's http-ws-server carrier), and runs the world on a fixed 15 Hz tick via qwzspace's tick-
-// driver: advance the sim, then stream each player an interest-filtered delta. Env:
-//   PORT             (default 8787)     — the http/ws port
-//   WORLD_LOG        (optional path/name) — local mode: the EAVT trace lives at this .jsonl path;
-//                      read once at boot to RESTORE the world if it has rows, appended to
-//                      thereafter (store.mjs's own doc always said this was the point — "so a
-//                      crashed world replays from disk" — this session is what actually wires
-//                      boot-time replay to that path; see README's Persistence section for the
-//                      full account, including the local-dev behavior change this is). Bucket
-//                      mode: the object name within ALETHEON_BUCKET (default "aletheon-world.jsonl").
-//   ALETHEON_BUCKET  (optional bucket name) — GCS persistence (real, restore-on-boot, survives
-//                      Cloud Run scale-to-zero). See server/world/log-store.mjs. Takes priority
-//                      over WORLD_LOG-as-a-path (WORLD_LOG becomes the object name instead).
-//   WORLD_AUTOSAVE_MS (default 30000)   — bucket-mode-only: how often buffered rows are flushed.
-//   ALETHEON_COMPACT_ROWS (default 2000, log-store.mjs's DEFAULT_COMPACT_THRESHOLD_ROWS) —
-//                      bucket-mode-only: once a post-flush tail exceeds this many rows, the
-//                      current live world is compacted into a snapshot object and the tail is
-//                      truncated (see server/world/log-store.mjs / server/world/snapshot.mjs).
-//                      Closes the 2026-08-19 deploy runbook's Aletheon OOM finding (unbounded
-//                      idle-ticking log growth); see README's "Persistence" section.
-//
-// Reverse-DNS naming (the repo convention) maps @561/development.experimental.aletheon to the
-// subdomain aletheon.experimental.development.561.group; deploy/ has the ws-aware nginx + systemd.
+// aletheon-server — entry point. Stands up the world (server/app.mjs), serves the client, upgrades
+// WS via qwzspace, runs a 15Hz tick. Env: PORT (default 8787); WORLD_LOG (local-mode .jsonl path,
+// restore-on-boot, ALSO the bucket-mode object name if ALETHEON_BUCKET is set); ALETHEON_BUCKET
+// (GCS persistence, takes priority over WORLD_LOG-as-path); WORLD_AUTOSAVE_MS (default 30000,
+// bucket-mode flush / local-mode compaction check cadence); ALETHEON_COMPACT_ROWS (default 2000,
+// both backends — see server/world/{log-store,local-log-compaction}.mjs) rows-since-compaction
+// threshold past which the durable trace is truncated to snapshotRows()'s minimum row set.
 
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -33,6 +15,7 @@ import { TICK_MS } from "../shared/constants.mjs";
 import { createGameServer } from "../server/app.mjs";
 import { rowsFromLog } from "../server/world/store.mjs";
 import { resolveLogBackend, openBucketLogStore } from "../server/world/log-store.mjs";
+import { createLocalLogCompactor } from "../server/world/local-log-compaction.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, ".."); // the package directory, served statically
@@ -55,6 +38,7 @@ let rows = [];
 let logPath = null;
 let onAppend = null;
 let bucketStore = null;
+let localCompactor = null;
 
 if (backend.kind === "bucket") {
   const compactThresholdRows = Number(process.env.ALETHEON_COMPACT_ROWS) || undefined; // undefined -> log-store's own default
@@ -71,6 +55,15 @@ if (backend.kind === "bucket") {
 } else if (backend.kind === "file") {
   logPath = backend.path;
   rows = rowsFromLog(logPath); // read once at boot (restore, if any rows exist); appended to thereafter
+  const compactThresholdRows = Number(process.env.ALETHEON_COMPACT_ROWS) || undefined; // undefined -> local-log-compaction's own default
+  localCompactor = createLocalLogCompactor({
+    logPath,
+    compactThresholdRows,
+    onCompact: (info) => console.log(
+      `aletheon: compacted ${logPath} — ${info.tailRowsBeforeCompaction} rows -> snapshot ${info.snapshotRows} rows in ${info.durationMs.toFixed(1)}ms`,
+    ),
+  });
+  onAppend = () => localCompactor.noteAppend();
 }
 
 const { world, server, start } = createGameServer({ root: ROOT, logPath, onAppend, rows, seed: rows.length === 0 });
@@ -92,6 +85,11 @@ if (bucketStore) {
   if (await bucketStore.compactBacklogIfOversized()) {
     console.log(`aletheon: boot-time catch-up compaction ran (the loaded tail was already over the compaction threshold) — see the "compacted" log line above for the new size`);
   }
+} else if (localCompactor) {
+  localCompactor.setWorld(() => world);
+  if (localCompactor.compactBacklogIfOversized(rows.length)) {
+    console.log(`aletheon: boot-time catch-up compaction ran for ${logPath} (the loaded trace was already over the compaction threshold) — see the "compacted" log line above for the new size`);
+  }
 }
 
 server.listen(PORT, HOST, () => {
@@ -111,6 +109,9 @@ if (bucketStore) {
     bucketStore.flush().catch((err) => console.error("aletheon: autosave flush failed:", err.message));
   }, AUTOSAVE_MS);
   autosaveTimer.unref?.(); // never keep the process alive on its own
+} else if (localCompactor) {
+  autosaveTimer = setInterval(() => localCompactor.maybeCompact(), AUTOSAVE_MS);
+  autosaveTimer.unref?.(); // never keep the process alive on its own
 }
 
 async function shutdown() {
@@ -120,6 +121,8 @@ async function shutdown() {
   if (autosaveTimer) clearInterval(autosaveTimer);
   if (bucketStore) {
     try { await bucketStore.flush(); } catch (err) { console.error("aletheon: final save failed:", err.message); }
+  } else if (localCompactor) {
+    try { localCompactor.maybeCompact(); } catch (err) { console.error("aletheon: final compaction failed:", err.message); }
   }
   process.exit(0);
 }

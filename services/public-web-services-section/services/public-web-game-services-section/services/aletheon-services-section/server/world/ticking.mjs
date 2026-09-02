@@ -18,6 +18,14 @@ const CORRUPT_RADIUS = 10; // a fresh corpse this close to an Anomaly may rise
 const REGEN_PER_TICK = 0.6; // player vitality regained per tick when out of combat
 const REGEN_DELAY_MS = 4000;
 
+// NPC_DURABLE_MOVE_TICKS — closes the 2026-09-02 cold-red-gate incident: bumpMoved() used to file
+// a durable "moved" row on essentially every 15Hz tick for every wandering/hunting NPC (~61 of
+// them), growing WORLD_LOG to 8.3GB in ~36h. NPC positions are now durably journaled at most once
+// per this many ticks (60s); live position/`.dirty` still update every tick (see bumpMoved below),
+// so real-time network sync — which reads those fields directly, never the journal — is unaffected.
+// Player movement (stepPlayer) is untouched: real player actions stay journaled every tick.
+const NPC_DURABLE_MOVE_TICKS = Math.round(60000 / TICK_MS);
+
 export function tick(world) {
   world.tick++;
   const ps = players(world);
@@ -176,10 +184,15 @@ function nearestPlayer(ps, e, radius) {
 }
 
 function bumpMoved(world, e) {
-  e.dirty = true;
-  if (e.x !== e._lx || e.z !== e._lz) {
+  e.dirty = true; // real-time sync (session.mjs reads .dirty + live x/y/z) — every tick, unthrottled
+  const moved = e.x !== e._lx || e.z !== e._lz;
+  if (moved) { e._lx = e.x; e._lz = e.z; }
+  // Durable write: coarse cadence only (NPC_DURABLE_MOVE_TICKS, see its own comment above) — this
+  // is the actual disk-flood fix; the change-detection above stays so a stationary NPC never files
+  // a redundant identical row even once the cadence elapses.
+  if (moved && world.tick - (e._lastDurableMoveTick ?? -Infinity) >= NPC_DURABLE_MOVE_TICKS) {
     append(world, { e: e.id, a: "moved", v: { x: round2(e.x), y: round2(e.y), z: round2(e.z), yaw: round3(e.yaw) } });
-    e._lx = e.x; e._lz = e.z;
+    e._lastDurableMoveTick = world.tick;
   }
 }
 

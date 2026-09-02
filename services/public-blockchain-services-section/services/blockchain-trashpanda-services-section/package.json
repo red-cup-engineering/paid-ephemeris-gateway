@@ -33,6 +33,7 @@
     "@account-kit/infra": "4.84.1",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.8",
+    "@red-cup-engineering/user-operation-authorization-policy-service": "0.1.1",
     "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
     "@red-cup-engineering/witness-journal-log-service": "0.1.6",
     "@red-cup-engineering/x402-services-section": "1.3.3",

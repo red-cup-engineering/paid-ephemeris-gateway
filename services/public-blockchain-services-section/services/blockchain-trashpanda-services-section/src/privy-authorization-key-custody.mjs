@@ -10,7 +10,7 @@ import {
   timingSafeEqual,
 } from "node:crypto";
 import { readFileSync, statSync, writeFileSync } from "node:fs";
-import { createUserOperationAuthorizationPolicy } from "./user-operation-authorization-policy.mjs";
+import { createUserOperationAuthorizationPolicy } from "@red-cup-engineering/user-operation-authorization-policy-service";
 
 const FORMAT = "privy-p256-encrypted-pkcs8-v1";
 const TYPE = "urn:ame:blockchain-trashpanda:privy-authorization-key-keystore";

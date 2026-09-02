@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@red-cup-engineering/games-catalog-storefront": "0.1.0",
-    "@red-cup-engineering/web-tufte-gui-services-section": "0.4.1",
+    "@red-cup-engineering/web-tufte-gui-services-section": "0.6.0",
     "sirv": "3.0.2"
   },
   "devDependencies": {

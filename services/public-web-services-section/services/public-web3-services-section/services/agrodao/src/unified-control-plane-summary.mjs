@@ -3,6 +3,7 @@ import { EXPECTED_DELEVERAGE_STEPS } from "./cross-wallet-deleverage-assay.mjs";
 const HIVE_ACCOUNT = "michael561";
 const FIXED_FORK_CANDIDATE = "sigmund-beefy-tbtc-cbbtc";
 const TARGET_HEALTH_FACTOR_WAD = "1200000000000000000";
+const MAXIMUM_SLIPPAGE_BPS = "50";
 const AERODROME_STABLE_POOL = "0x488d6ea6064eee9352fdcdb7bc50d98a7ff3ad4e";
 const BASE_CHAIN = "eip155:8453";
 const SIGMUND_SOURCE = "0x32886f6f361c1d570255c2762967a2e41d0e9b1a";
@@ -104,20 +105,24 @@ function preArmSnapshot(observation, recovery) {
   });
 }
 
-function armingRefusalReasons(card, observation, currentBoundary, maximumSlippageBps) {
+function armingRefusalReasons(card, observation, currentBoundary, suppliedMaximumSlippageBps) {
   const reasons = [];
   let recovery;
   try { recovery = fixedForkRecovery(observation); } catch { reasons.push("refreshed-evidence-invalid"); return reasons; }
   const refreshed = preArmSnapshot(observation, recovery);
   if (currentBoundary?.chain !== observation.chain || currentBoundary?.block !== observation.block
       || currentBoundary?.blockHash?.toLowerCase() !== observation.blockHash.toLowerCase()) reasons.push("stale-observed-boundary");
+  if (BigInt(observation.block) <= BigInt(card.armingEnvelope.expiry.validThroughBlock)) {
+    reasons.push("refreshed-boundary-required");
+  }
   const expected = card.armingEnvelope.expectedPreArmSnapshot;
   for (const field of ["chain", "candidateId", "source", "target", "assets", "venue"]) {
     if (!same(refreshed[field], expected[field])) reasons.push(`${field}-drift`);
   }
   if (BigInt(recovery.routeGasUsed) > BigInt(card.armingEnvelope.ceilings.maximumGasUnits)) reasons.push("gas-ceiling-exceeded");
-  if (!/^(?:0|[1-9][0-9]*)$/u.test(maximumSlippageBps ?? "") || BigInt(maximumSlippageBps) > 10_000n) {
-    reasons.push("maximumSlippageBps-required");
+  if (card.armingEnvelope.ceilings.maximumSlippageBps !== MAXIMUM_SLIPPAGE_BPS
+      || (suppliedMaximumSlippageBps != null && suppliedMaximumSlippageBps !== MAXIMUM_SLIPPAGE_BPS)) {
+    reasons.push("maximumSlippageBps-policy-drift");
   }
   if (BigInt(refreshed.projectedHealth.currentWad) < BigInt(TARGET_HEALTH_FACTOR_WAD)
       || refreshed.projectedHealth.stressScenarios.some(({ healthFactorWad }) => BigInt(healthFactorWad) < BigInt(TARGET_HEALTH_FACTOR_WAD))) {
@@ -134,9 +139,11 @@ export function evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObserv
   const reasons = armingRefusalReasons(card, refreshedFixedForkObservation, currentBoundary,
     humanParameters.maximumSlippageBps);
   return Object.freeze({
-    status: reasons.length === 0 ? "human-arming-ready" : "refused",
+    status: reasons.length === 0 ? "human-transaction-authorization-required" : "refused",
     reasons: Object.freeze(reasons),
-    armingAdmitted: reasons.length === 0,
+    freshPreflightAdmitted: reasons.length === 0,
+    humanTransactionAuthorizationPresent: false,
+    armingAdmitted: false,
     oneUse: true,
     executionAdmitted: false,
     transactionAssembly: false,
@@ -151,10 +158,11 @@ export function summarizeUnifiedAgroControlPlane({ treasuryDisclosure, fixedFork
   const opportunity = hiveOpportunity(treasuryDisclosure);
   const recovery = fixedForkRecovery(fixedForkObservation);
   const expectedPreArmSnapshot = preArmSnapshot(fixedForkObservation, recovery);
+  const minimumCbBtcReceivedSats = (BigInt(recovery.fullConversion.cbbtcQuotedSats)
+    * (10_000n - BigInt(MAXIMUM_SLIPPAGE_BPS)) / 10_000n).toString();
   const card = Object.freeze({
     id: "review-sigmund-full-cbbtc-repayment",
-    status: "needs-human-parameter",
-    missingHumanParameter: "maximumSlippageBps",
+    status: "fresh-preflight-required",
     action: "Review the fixed-fork evidence for exiting SIGMUND's Beefy tBTC/cbBTC position, converting the full tBTC output through the observed Aerodrome stable pool, and applying all resulting cbBTC to the existing same-underlying Moonwell cbBTC debt.",
     evidence: Object.freeze({
       fixedForkObservation: fixedForkObservation.id,
@@ -176,11 +184,11 @@ export function summarizeUnifiedAgroControlPlane({ treasuryDisclosure, fixedFork
       expiry: Object.freeze({ validThroughBlock: fixedForkObservation.block,
         validThroughBlockHash: fixedForkObservation.blockHash, refreshedBoundaryRequiredAfterExpiry: true }),
       ceilings: Object.freeze({ maximumGasUnits: recovery.routeGasUsed,
-        gasCeilingSource: "fixed-fork-route-gas-used", maximumSlippageBps: null,
-        slippageCeilingSource: "human-parameter-required" }),
+        gasCeilingSource: "fixed-fork-route-gas-used", maximumSlippageBps: MAXIMUM_SLIPPAGE_BPS,
+        minimumCbBtcReceivedSats, slippageCeilingSource: "founder-delegated-policy" }),
       refuseBeforeArmingOn: Object.freeze(["stale-observed-boundary", "chain-or-candidate-drift", "contract-drift",
         "source-balance-drift", "target-debt-drift", "quote-drift", "gas-ceiling-exceeded",
-        "maximumSlippageBps-required", "projected-current-or-stress-health-factor-below-1.2"]),
+        "maximumSlippageBps-policy-drift", "projected-current-or-stress-health-factor-below-1.2"]),
     }),
     conceptualOperations: Object.freeze([...EXPECTED_DELEVERAGE_STEPS]),
     reconciliation: Object.freeze({
@@ -207,6 +215,8 @@ export function summarizeUnifiedAgroControlPlane({ treasuryDisclosure, fixedFork
     }),
     authority: Object.freeze({
       humanDecisionOnly: true,
+      freshPreflightRequired: true,
+      separateHumanTransactionAuthorizationRequired: true,
       executionAdmitted: false,
       transactionAssembly: false,
       outputCalldata: false,

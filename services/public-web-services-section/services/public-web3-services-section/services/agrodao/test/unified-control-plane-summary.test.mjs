@@ -64,32 +64,44 @@ test("compares the normalized Hive opportunity with the full fixed-fork recovery
   assert.equal(summary.recoveries[0].health.targetHealthFactorWad, "1200000000000000000");
   assert.equal(summary.recoveries[0].health.scenarios.length, 2);
   assert.equal(summary.humanReviewActionCards.length, 1);
-  assert.equal(summary.humanReviewActionCards[0].status, "needs-human-parameter");
-  assert.equal(summary.humanReviewActionCards[0].missingHumanParameter, "maximumSlippageBps");
+  assert.equal(summary.humanReviewActionCards[0].status, "fresh-preflight-required");
+  assert.equal(summary.humanReviewActionCards[0].armingEnvelope.ceilings.maximumSlippageBps, "50");
+  assert.equal(summary.humanReviewActionCards[0].armingEnvelope.ceilings.minimumCbBtcReceivedSats, "99060");
   assert.equal(summary.humanReviewActionCards[0].armingEnvelope.ceilings.maximumGasUnits, "50135");
   assert.equal(summary.humanReviewActionCards[0].conceptualOperations.length, 9);
   assert.equal(summary.humanReviewActionCards[0].reconciliation.postconditions.targetCbBtcAllowanceSats, "0");
   assert.match(summary.humanReviewActionCards[0].action, /full tBTC output.*existing same-underlying Moonwell cbBTC debt/u);
-  assert.deepEqual(summary.authority, { humanDecisionOnly: true, executionAdmitted: false,
+  assert.deepEqual(summary.authority, { humanDecisionOnly: true, freshPreflightRequired: true,
+    separateHumanTransactionAuthorizationRequired: true, executionAdmitted: false,
     transactionAssembly: false, outputCalldata: false, signing: false, broadcast: false, chainMutation: false });
 });
 
-test("pre-arm contract refuses stale boundaries, drift, missing slippage, and health below 1.2", () => {
+test("pre-arm contract refuses the expired fork, drift, slippage-policy changes, and health below 1.2", () => {
   const observation = fixedForkObservation();
   const card = summarizeUnifiedAgroControlPlane({ treasuryDisclosure: treasuryDisclosure(),
     fixedForkObservation: observation }).humanReviewActionCards[0];
   const boundary = { chain: observation.chain, block: observation.block, blockHash: observation.blockHash };
   assert.deepEqual(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: observation,
-    currentBoundary: boundary }).reasons, ["maximumSlippageBps-required"]);
+    currentBoundary: boundary }).reasons, ["refreshed-boundary-required"]);
   const stale = { ...boundary, block: "50761309" };
   assert.ok(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: observation,
-    currentBoundary: stale, humanParameters: { maximumSlippageBps: "25" } }).reasons.includes("stale-observed-boundary"));
+    currentBoundary: stale }).reasons.includes("stale-observed-boundary"));
+  assert.ok(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: observation,
+    currentBoundary: boundary, humanParameters: { maximumSlippageBps: "25" } }).reasons.includes("maximumSlippageBps-policy-drift"));
   const drifted = fixedForkObservation(); drifted.candidates[0].repayment.debtBeforeSats = "274569";
   assert.ok(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: drifted,
-    currentBoundary: boundary, humanParameters: { maximumSlippageBps: "25" } }).reasons.includes("target-drift"));
+    currentBoundary: boundary }).reasons.includes("target-drift"));
   const lowHealth = fixedForkObservation(); lowHealth.candidates[0].health.currentHealthFactorWad = "1199999999999999999";
   assert.ok(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: lowHealth,
-    currentBoundary: boundary, humanParameters: { maximumSlippageBps: "25" } }).reasons.includes("refreshed-evidence-invalid"));
+    currentBoundary: boundary }).reasons.includes("refreshed-evidence-invalid"));
+  const refreshed = fixedForkObservation(); refreshed.block = "50761309"; refreshed.blockHash = `0x${"2".repeat(64)}`;
+  assert.deepEqual(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: refreshed,
+    currentBoundary: { chain: refreshed.chain, block: refreshed.block, blockHash: refreshed.blockHash } }), {
+    status: "human-transaction-authorization-required", reasons: [], freshPreflightAdmitted: true,
+    humanTransactionAuthorizationPresent: false, armingAdmitted: false, oneUse: true,
+    executionAdmitted: false, transactionAssembly: false, outputCalldata: false, signing: false,
+    broadcast: false, chainMutation: false,
+  });
 });
 
 test("refuses widened execution authority or incomplete repayment evidence", () => {

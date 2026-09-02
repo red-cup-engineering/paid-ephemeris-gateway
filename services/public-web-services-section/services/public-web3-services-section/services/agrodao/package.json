@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/agrodao",
-  "version": "0.16.3",
+  "version": "0.16.4",
   "type": "module",
   "files": [
     "src",
@@ -59,14 +59,13 @@
     "./base-cbbtc-deleverage-proposal": "./src/base-cbbtc-deleverage-proposal.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/ethereum-services-section": "0.8.2",
+    "@red-cup-engineering/ethereum-services-section": "0.10.1",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/treasury-observation-service": "0.2.0",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1",
     "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
-    "@red-cup-engineering/witness-journal-log-service": "0.1.6",
-    "ethers": "6.17.0"
+    "@red-cup-engineering/witness-journal-log-service": "0.1.6"
   },
   "keywords": [
     "web3",

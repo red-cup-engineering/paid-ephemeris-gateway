@@ -1,6 +1,5 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { Interface } from "ethers";
 
 import { publicWalletFleet } from "../src/procure-public-evm-wallet-observation.mjs";
 import { defaultSettlementRoot, observeTreasuryPortfolio } from "../src/observe-treasury-portfolio.mjs";
@@ -51,26 +50,34 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
       coverage: { complete: false, incompleteChains: ["base", "arbitrum"] },
     };
   };
-  let healthCalls = 0;
+  const healthCalls = [];
   const enteredMarket = "0x1111111111111111111111111111111111111111";
   const disclosure = await observeTreasuryPortfolio({
     at: AT,
     fleet,
     reportPortfolio,
     store: { record: async (entry) => entries.push(entry) },
-    observeEnteredMarkets: async ({ account, boundary }) => {
-      assert.equal(boundary.blockNumber, "123");
-      return account.endsWith("224c08a8526751887a83e2711b167f890c6d078d") ? [enteredMarket] : [];
-    },
     observeHealth: async (request) => {
-      healthCalls += 1;
+      healthCalls.push(request.account);
       assert.equal(request.snapshotBlock, "123");
+      assert.equal(request.snapshotBlockHash, `0x${"ab".repeat(32)}`);
       assert.equal(request.targetHealthFactorMantissa, "1500000000000000000");
+      if (!request.account.endsWith("224c08a8526751887a83e2711b167f890c6d078d")) {
+        return {
+          caip2: "eip155:8453", account: request.account, snapshotBlock: "123",
+          snapshotBlockHash: `0x${"ab".repeat(32)}`, markets: [],
+          outcome: { type: "no-entered-markets", factual: true, enteredMarketCount: 0 },
+          riskEvaluationPerformed: false,
+        };
+      }
       return {
         caip2: "eip155:8453",
         account: request.account,
         snapshotBlock: "123",
+        snapshotBlockHash: `0x${"ab".repeat(32)}`,
         markets: [{ market: enteredMarket, symbol: "mcbBTC", underlyingDecimals: 8 }],
+        outcome: { type: "account-health-evaluated", factual: false, enteredMarketCount: 1 },
+        riskEvaluationPerformed: true,
         evaluation: {
           current: {
             healthFactor: { kind: "finite", mantissa: "1200000000000000000" },
@@ -102,7 +109,7 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
     chainMutation: false,
     humanApprovalRequiredForMutation: true,
   });
-  assert.equal(healthCalls, 1, "health is evaluated only for accounts with entered markets");
+  assert.equal(healthCalls.length, fleet.wallets.length, "the upstream observer classifies every fleet account");
   const yanagiRisk = disclosure.moonwellRisk.find(({ subject }) => subject === "urn:ame:wallet:yanagi");
   assert.equal(yanagiRisk.status, "observed");
   assert.equal(yanagiRisk.healthFactor.decimal, "1.2");
@@ -143,65 +150,21 @@ test("preserves entered-market and health refusal as unknown", async () => {
     }],
     coverage: { complete: true, incompleteChains: [] },
   });
-  let index = 0;
   const disclosure = await observeTreasuryPortfolio({
     at: AT,
     fleet,
     reportPortfolio,
     store: { record: async () => {} },
-    observeEnteredMarkets: async () => {
-      index += 1;
-      if (index === 1) throw new Error("rpc refused");
-      return ["0x1111111111111111111111111111111111111111"];
+    observeHealth: async (_request, { readPool }) => {
+      assert.equal(typeof readPool.requestAtBoundary, "function");
+      throw new Error("health refused");
     },
-    observeHealth: async () => { throw new Error("health refused"); },
   });
   assert.equal(disclosure.moonwellRisk[0].status, "unknown");
-  assert.match(disclosure.moonwellRisk[0].reason, /rpc refused/);
-  assert.ok(disclosure.moonwellRisk.slice(1).every(({ status, reason }) => status === "unknown" && /health refused/.test(reason)));
+  assert.ok(disclosure.moonwellRisk.every(({ status, reason }) => status === "unknown" && /health refused/.test(reason)));
 });
 
-test("default entered-market ABI receives bare addresses while disclosure keeps CAIP-10", async () => {
-  const fleet = publicWalletFleet();
-  const boundary = {
-    chain: "base", chainId: 8453, caip2: "eip155:8453", blockNumber: "123", blockTag: "0x7b",
-    blockHash: `0x${"ab".repeat(32)}`, provider: "https://mainnet.base.org", observedAt: AT,
-    requestedFinality: "finalized", finality: "finalized",
-  };
-  const reportPortfolio = async ({ roster }) => ({
-    observedAt: AT,
-    roster,
-    chains: [{
-      chain: "base", caip2: "eip155:8453", checked: true, provenance: boundary,
-      wallets: [], coverage: { walletsObserved: roster.length, complete: true, unchecked: [] },
-    }],
-    coverage: { complete: true, incompleteChains: [] },
-  });
-  const iface = new Interface(["function getAssetsIn(address) view returns (address[])"]);
-  const encodedAddresses = [];
-  const disclosure = await observeTreasuryPortfolio({
-    at: AT,
-    fleet,
-    reportPortfolio,
-    store: { record: async () => {} },
-    rpc: async (_url, method, params) => {
-      assert.equal(method, "eth_call");
-      assert.equal(params[1], boundary.blockTag);
-      const [address] = iface.decodeFunctionData("getAssetsIn", params[0].data);
-      encodedAddresses.push(String(address));
-      return iface.encodeFunctionResult("getAssetsIn", [[]]);
-    },
-    rpcSchedule: async () => {},
-    observeHealth: async () => { throw new Error("health must not run for an empty market list"); },
-  });
-
-  assert.equal(encodedAddresses.length, fleet.wallets.length);
-  assert.ok(encodedAddresses.every((address) => /^0x[0-9a-fA-F]{40}$/u.test(address) && !address.includes(":")));
-  assert.ok(disclosure.moonwellRisk.every(({ account, status, factual }) =>
-    /^eip155:8453:0x[0-9a-f]{40}$/u.test(account) && status === "no-entered-markets" && factual === true));
-});
-
-test("shared Moonwell RPC lane retries one 429 without multiplying fleet bursts", async () => {
+test("installed upstream pool fails over once at the exact boundary and never mixes an account across providers", async () => {
   const completeFleet = publicWalletFleet();
   const fleet = { ...completeFleet, wallets: completeFleet.wallets.slice(0, 3) };
   const boundary = {
@@ -218,44 +181,60 @@ test("shared Moonwell RPC lane retries one 429 without multiplying fleet bursts"
     }],
     coverage: { complete: true, incompleteChains: [] },
   });
-  const iface = new Interface(["function getAssetsIn(address) view returns (address[])"]);
-  const attempts = [];
-  const waits = [];
-  let active = 0;
-  let maximumActive = 0;
-  let first = true;
+  const calls = [];
+  const expectedHash = boundary.blockHash.toLowerCase();
+  const oracle = "0x2222222222222222222222222222222222222222";
+  const clients = new Map();
   const disclosure = await observeTreasuryPortfolio({
     at: AT,
     fleet,
     reportPortfolio,
     store: { record: async () => {} },
-    rpcSchedule: async (milliseconds) => waits.push(milliseconds),
-    rpc: async (_url, method, params) => {
-      active += 1;
-      maximumActive = Math.max(maximumActive, active);
-      try {
-        assert.equal(method, "eth_call");
-        const [address] = iface.decodeFunctionData("getAssetsIn", params[0].data);
-        attempts.push(String(address).toLowerCase());
-        await Promise.resolve();
-        if (first) {
-          first = false;
-          throw new Error("JSON-RPC HTTP 429: Too Many Requests");
-        }
-        return iface.encodeFunctionResult("getAssetsIn", [[]]);
-      } finally {
-        active -= 1;
-      }
+    readPoolOptions: {
+      maxAttemptsPerProvider: 1,
+      minimumIntervalMs: 0,
+      createClient: ({ provider }) => {
+        const client = {
+          getChainId: async () => {
+            calls.push({ provider: provider.id, operation: "chain" });
+            if (provider.id === "base-mainnet") {
+              const error = new Error("HTTP 429: Too Many Requests");
+              error.status = 429;
+              throw error;
+            }
+            return 8453;
+          },
+          getBlock: async ({ blockNumber }) => {
+            calls.push({ provider: provider.id, operation: "block", blockNumber });
+            return { number: 123n, hash: expectedHash, timestamp: 1_756_767_000n };
+          },
+          multicall: async ({ contracts, blockNumber, allowFailure }) => {
+            const account = contracts[0].args[0].toLowerCase();
+            calls.push({ provider: provider.id, operation: "account", account, blockNumber });
+            assert.equal(allowFailure, false);
+            assert.deepEqual(contracts.map(({ functionName }) => functionName),
+              ["getAssetsIn", "oracle", "getAccountLiquidity"]);
+            return [[], oracle, [0n, 0n, 0n]];
+          },
+        };
+        clients.set(provider.id, client);
+        return client;
+      },
     },
-    observeHealth: async () => { throw new Error("health must not run for an empty market list"); },
   });
 
-  assert.equal(maximumActive, 1);
-  assert.equal(attempts.length, fleet.wallets.length + 1);
-  assert.equal(attempts[0], attempts[1], "the rate-limited wallet retries before the fleet advances");
-  assert.deepEqual(attempts.slice(1), fleet.wallets.map(({ address }) => address.toLowerCase()));
-  assert.deepEqual(waits, [250, 250, 150, 150]);
-  assert.ok(disclosure.moonwellRisk.every(({ status, factual }) => status === "no-entered-markets" && factual === true));
+  assert.equal(clients.size, 3, "the installed pool constructs the canonical Base provider set once");
+  assert.equal(calls.filter(({ provider }) => provider === "base-mainnet").length, 1,
+    "the failed endpoint remains failed for the rest of this fleet run");
+  const accountCalls = calls.filter(({ operation }) => operation === "account");
+  assert.equal(accountCalls.length, fleet.wallets.length);
+  assert.deepEqual(accountCalls.map(({ provider }) => provider), fleet.wallets.map(() => "base-publicnode"));
+  assert.deepEqual(accountCalls.map(({ account }) => account), fleet.wallets.map(({ address }) => address.toLowerCase()));
+  assert.ok(accountCalls.every(({ blockNumber }) => blockNumber === 123n));
+  assert.ok(calls.filter(({ operation }) => operation === "block")
+    .every(({ blockNumber }) => blockNumber === 123n));
+  assert.ok(disclosure.moonwellRisk.every(({ account, status, factual }) =>
+    /^eip155:8453:0x[0-9a-f]{40}$/u.test(account) && status === "no-entered-markets" && factual === true));
 });
 
 test("default settlement root is the package root, so journal custody appends data/logs once", () => {

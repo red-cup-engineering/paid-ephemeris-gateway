@@ -1,11 +1,12 @@
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { Interface } from "ethers";
 import {
   MOONWELL_ACCOUNT_HEALTH_PROFILE, observeMoonwellAccountHealth,
 } from "@red-cup-engineering/ethereum-services-section/moonwell-account-health";
-import { jsonRpc } from "@red-cup-engineering/ethereum-services-section/public-evm-ledger";
+import {
+  BASE_PUBLIC_EVM_CHAIN, BASE_PUBLIC_EVM_PROVIDERS, createPublicEvmReadPool,
+} from "@red-cup-engineering/ethereum-services-section/public-evm-read";
 import { allChains } from "@red-cup-engineering/treasury-observation-service/chains";
 import { observePortfolio } from "@red-cup-engineering/treasury-observation-service/portfolio";
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
@@ -19,7 +20,6 @@ const BASE_CAIP2 = "eip155:8453";
 const TARGET_HEALTH_FACTOR_MANTISSA = "1500000000000000000";
 const MOONWELL_COMPTROLLER = "0xfbb21d0380bee3312b33c4353c8936a0f13ef26c";
 const MOONWELL_REWARD_DISTRIBUTOR = "0xe9005b078701e2A0948D2EaC43010D35870Ad9d2";
-const comptrollerInterface = new Interface(["function getAssetsIn(address) view returns (address[])"]);
 
 function identify(value) {
   return {
@@ -74,87 +74,6 @@ function coverage(report) {
 
 function caip10(address) {
   return `${BASE_CAIP2}:${address.toLowerCase()}`;
-}
-
-function delay(milliseconds) {
-  return milliseconds === 0 ? Promise.resolve() : new Promise((resolveDelay) => setTimeout(resolveDelay, milliseconds));
-}
-
-function boundedLaneInteger(name, value, minimum, maximum) {
-  if (!Number.isInteger(value) || value < minimum || value > maximum) {
-    throw new RangeError(`${name} must be an integer from ${minimum} through ${maximum}`);
-  }
-  return value;
-}
-
-/**
- * One shared public-RPC lane for the complete Moonwell fleet join. Calls are serialized, paced,
- * and a 429 is retried in place before the next wallet can start. A rejected wallet releases the
- * lane for the next wallet, so one provider refusal remains one wallet's unknown rather than a
- * fleet-wide failure. The scheduler is injectable so tests and other runtimes need not sleep.
- */
-export function createMoonwellRpcLane({
-  rpc = jsonRpc,
-  schedule = delay,
-  initialDelayMs = 250,
-  spacingMs = 150,
-  retryBaseMs = 250,
-  maxAttempts = 5,
-} = {}) {
-  if (typeof rpc !== "function" || typeof schedule !== "function") {
-    throw new TypeError("Moonwell RPC lane requires rpc and schedule functions");
-  }
-  boundedLaneInteger("initialDelayMs", initialDelayMs, 0, 5000);
-  boundedLaneInteger("spacingMs", spacingMs, 0, 5000);
-  boundedLaneInteger("retryBaseMs", retryBaseMs, 1, 5000);
-  boundedLaneInteger("maxAttempts", maxAttempts, 1, 8);
-  let tail = Promise.resolve();
-  let firstRequest = true;
-
-  async function execute(args) {
-    let waitMs = firstRequest ? initialDelayMs : spacingMs;
-    firstRequest = false;
-    for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
-      if (waitMs > 0) await schedule(waitMs);
-      try {
-        return await rpc(...args);
-      } catch (error) {
-        const retryable = /\bHTTP 429\b/u.test(String(error?.message ?? error));
-        if (!retryable || attempt + 1 >= maxAttempts) throw error;
-        waitMs = Math.min(5000, retryBaseMs * (2 ** attempt));
-      }
-    }
-    throw new Error("Moonwell RPC lane exhausted its bounded retry loop");
-  }
-
-  return (...args) => {
-    const result = tail.then(() => execute(args), () => execute(args));
-    tail = result.then(() => undefined, () => undefined);
-    return result;
-  };
-}
-
-function boundaryRpc(boundary, rpc) {
-  return async (rpcUrl, method, params) => {
-    const result = await rpc(rpcUrl, method, params);
-    if (method === "eth_getBlockByNumber" && params?.[0]?.toLowerCase() === boundary.blockTag.toLowerCase()) {
-      if (result === null || typeof result !== "object"
-          || String(result.number).toLowerCase() !== boundary.blockTag.toLowerCase()
-          || String(result.hash).toLowerCase() !== boundary.blockHash.toLowerCase()) {
-        throw new Error("Moonwell health block does not match the treasury portfolio provenance");
-      }
-    }
-    return result;
-  };
-}
-
-async function observeEnteredMarketsAtBoundary({ address, boundary, comptroller, rpc = jsonRpc }) {
-  // CAIP-10 identifies the account in disclosures. The contract ABI accepts only its bare
-  // address component; keeping these two fields separate prevents identity syntax leaking into
-  // an Ethereum address parameter.
-  const data = comptrollerInterface.encodeFunctionData("getAssetsIn", [address]);
-  const result = await rpc(boundary.provider, "eth_call", [{ to: comptroller, data }, boundary.blockTag]);
-  return comptrollerInterface.decodeFunctionResult("getAssetsIn", result)[0].map((address) => address.toLowerCase());
 }
 
 function exactDecimal(mantissa, decimals = 18) {
@@ -212,7 +131,7 @@ function riskView(subject, account, health, provenance) {
 }
 
 async function joinMoonwellHealth({
-  report, fleet, observeEnteredMarkets, observeHealth, rpc, rpcSchedule, rpcLaneOptions, healthDependencies,
+  report, fleet, observeHealth, createReadPool, readPoolOptions, healthDependencies,
 }) {
   const base = report.chains.find(({ caip2: chain }) => chain === BASE_CAIP2);
   if (base?.checked !== true || base.provenance === null || base.provenance === undefined) {
@@ -222,52 +141,45 @@ async function joinMoonwellHealth({
     }));
   }
   const boundary = base.provenance;
-  const laneRpc = createMoonwellRpcLane({ ...rpcLaneOptions, rpc, schedule: rpcSchedule });
-  const checkedRpc = boundaryRpc(boundary, laneRpc);
-  return Promise.all(fleet.wallets.map(async ({ subject, address }) => {
+  const readPool = createReadPool({
+    chain: BASE_PUBLIC_EVM_CHAIN,
+    providers: BASE_PUBLIC_EVM_PROVIDERS,
+    ...readPoolOptions,
+  });
+  const results = [];
+  for (const { subject, address } of fleet.wallets) {
     const account = caip10(address);
-    let enteredMarkets;
-    try {
-      enteredMarkets = await observeEnteredMarkets({
-        account,
-        address,
-        boundary,
-        comptroller: MOONWELL_COMPTROLLER,
-        rpc: checkedRpc,
-      });
-    } catch (error) {
-      return { subject, account, status: "unknown", provenance: boundary,
-        reason: `entered-market observation failed: ${String(error?.message ?? error)}` };
-    }
-    if (!Array.isArray(enteredMarkets)) {
-      return { subject, account, status: "unknown", provenance: boundary,
-        reason: "entered-market observer returned an invalid result" };
-    }
-    if (enteredMarkets.length === 0) {
-      return { subject, account, status: "no-entered-markets", provenance: boundary,
-        enteredMarketCount: 0, factual: true };
-    }
     try {
       const health = await observeHealth({
         profile: MOONWELL_ACCOUNT_HEALTH_PROFILE,
         account,
-        rpcUrl: boundary.provider,
         comptroller: MOONWELL_COMPTROLLER,
+        rpcUrls: BASE_PUBLIC_EVM_PROVIDERS.map(({ url }) => url),
         snapshotBlock: boundary.blockNumber,
+        snapshotBlockHash: boundary.blockHash,
         targetHealthFactorMantissa: TARGET_HEALTH_FACTOR_MANTISSA,
         stresses: [],
         horizonsSeconds: [],
-      }, { ...healthDependencies, rpc: checkedRpc });
-      if (health.snapshotBlock !== boundary.blockNumber || health.caip2 !== BASE_CAIP2) {
-        throw new Error("Moonwell health result does not identify the portfolio's Base block");
+      }, { ...healthDependencies, readPool });
+      if (health.snapshotBlock !== boundary.blockNumber
+          || health.snapshotBlockHash?.toLowerCase() !== boundary.blockHash.toLowerCase()
+          || health.caip2 !== BASE_CAIP2) {
+        throw new Error("Moonwell health result does not identify the portfolio's exact Base block");
       }
-      return riskView(subject, account, health, boundary);
+      if (health.outcome?.type === "no-entered-markets" && health.outcome.factual === true) {
+        results.push({ subject, account, status: "no-entered-markets", provenance: boundary,
+          enteredMarketCount: 0, factual: true });
+      } else if (health.outcome?.type === "account-health-evaluated" && health.riskEvaluationPerformed === true) {
+        results.push(riskView(subject, account, health, boundary));
+      } else {
+        throw new Error("Moonwell health observer returned an unrecognized outcome");
+      }
     } catch (error) {
-      return { subject, account, status: "unknown", provenance: boundary,
-        enteredMarketCount: enteredMarkets.length,
-        reason: `account-health observation failed: ${String(error?.message ?? error)}` };
+      results.push({ subject, account, status: "unknown", provenance: boundary,
+        reason: `account-health observation failed: ${String(error?.message ?? error)}` });
     }
-  }));
+  }
+  return results;
 }
 
 export async function observeTreasuryPortfolio({
@@ -277,11 +189,9 @@ export async function observeTreasuryPortfolio({
   store = defaultStore(),
   chainCatalog = allChains(),
   reportDependencies = {},
-  observeEnteredMarkets = observeEnteredMarketsAtBoundary,
   observeHealth = observeMoonwellAccountHealth,
-  rpc = jsonRpc,
-  rpcSchedule = delay,
-  rpcLaneOptions = {},
+  createReadPool = createPublicEvmReadPool,
+  readPoolOptions = {},
   healthDependencies = {},
 } = {}) {
   if (!Number.isFinite(Date.parse(at))) throw new TypeError("treasury portfolio disclosure requires an ISO observation time");
@@ -302,7 +212,7 @@ export async function observeTreasuryPortfolio({
     now: () => new Date(at),
   });
   const moonwellRisk = await joinMoonwellHealth({
-    report, fleet, observeEnteredMarkets, observeHealth, rpc, rpcSchedule, rpcLaneOptions, healthDependencies,
+    report, fleet, observeHealth, createReadPool, readPoolOptions, healthDependencies,
   });
   const body = {
     type: "TreasuryPortfolioDisclosure",

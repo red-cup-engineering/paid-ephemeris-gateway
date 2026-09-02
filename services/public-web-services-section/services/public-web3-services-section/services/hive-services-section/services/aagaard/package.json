@@ -31,6 +31,7 @@
     "./opportunity-feed": "./src/opportunity-feed.mjs"
   },
   "dependencies": {
+    "@561-group/resolving-an-identifier": "0.2.0",
     "@red-cup-engineering/agrodao": "0.16.4",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",

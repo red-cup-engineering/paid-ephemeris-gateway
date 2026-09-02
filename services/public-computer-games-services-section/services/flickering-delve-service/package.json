@@ -20,7 +20,8 @@
     "./package.json": "./package.json"
   },
   "dependencies": {
-    "@red-cup-engineering/feltos": "0.8.1"
+    "@red-cup-engineering/feltos": "0.8.1",
+    "@red-cup-engineering/seeded-random": "0.1.0"
   },
   "engines": {
     "node": ">=24"

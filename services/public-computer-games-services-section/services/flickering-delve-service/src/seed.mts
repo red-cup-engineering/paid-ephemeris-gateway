@@ -1,27 +1,12 @@
 /**
- * `seed` — deterministic, reproducible randomness for flickering's procedural cave.
- *
- * The FeltOS relational Lisp's `rand` reaches for `Math.random`, which is fine for a
- * vessel's idle wandering but wrong for a *shared* procedurally generated dungeon: every
- * delver must descend the SAME cave, so floor N's contents have to be a pure function of a
- * global seed and the depth — not of wall-clock entropy. This module is that pure function
- * surface: a string-hash into a 32-bit state, then a small fast PRNG (mulberry32) over it.
- *
- * Nothing here touches the clock or global state, so a floor generated on the server and a
- * floor previewed in a test are bit-identical. That determinism is also a security property
- * (the layout cannot be rerolled by a tampering client) and a fairness property (no two
- * players get a luckier cave).
+ * `seed` — deterministic, reproducible randomness for flickering's procedural cave, built on
+ * `@red-cup-engineering/seeded-random` — the house's one PRNG home. Every delver must descend
+ * the SAME cave, so floor N's contents are a pure function of a global seed and the depth, not
+ * wall-clock entropy: also a security property (no client-side rerolling) and a fairness one.
  */
+import { hashSeed, mulberry32 } from '@red-cup-engineering/seeded-random';
 
-/** Fold a string into a 32-bit unsigned seed (FNV-1a) — stable across processes. */
-export function hashSeed(text: string): number {
-  let h = 0x811c9dc5;
-  for (let i = 0; i < text.length; i++) {
-    h ^= text.charCodeAt(i);
-    h = Math.imul(h, 0x01000193);
-  }
-  return h >>> 0;
-}
+export { hashSeed };
 
 /** A deterministic stream of reals in [0, 1) and the integer/choice helpers built on it. */
 export interface Rng {
@@ -39,14 +24,7 @@ export interface Rng {
 
 /** A mulberry32 generator seeded by a 32-bit state — tiny, fast, and fully deterministic. */
 export function rngFrom(seed: number): Rng {
-  let a = seed >>> 0;
-  const next = (): number => {
-    a |= 0;
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
+  const next = mulberry32(seed);
   return {
     next,
     int: (min, max) => min + Math.floor(next() * (max - min + 1)),

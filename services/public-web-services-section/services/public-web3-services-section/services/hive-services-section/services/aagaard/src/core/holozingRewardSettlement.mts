@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as object } from "./objectGuards.mts";
 
 
 export const HOLOZING_REWARD_CLAIM_SCHEMA = "aagaard.holozing-reward-claim.v1" as const;
@@ -19,10 +20,6 @@ export interface HolozingRewardClaimEvent {
   readonly receipt: Readonly<Record<string, unknown>>;
 }
 
-function object(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function units3(value: unknown, label: string): bigint {
   const text = String(value ?? ""); const match = /^(?:0|[1-9][0-9]*)\.([0-9]{3})$/u.exec(text);
   if (!match) throw new TypeError(`${label} must have exactly three decimals`);

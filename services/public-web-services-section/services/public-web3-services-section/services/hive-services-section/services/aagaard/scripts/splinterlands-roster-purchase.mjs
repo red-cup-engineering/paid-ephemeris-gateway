@@ -4,11 +4,11 @@
 // and is re-derived from live official listings at both this boundary and
 // the lower signing boundary immediately before broadcast.
 
-import { spawn } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { broadcastViaChildProcess } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 import {
   SPLINTERLANDS_ROSTER_PURCHASE_POLICY,
@@ -79,22 +79,7 @@ async function verifyActiveKey(account, keyFile) {
   if (weight < threshold) fail("the supplied key does not independently satisfy michael561's active authority");
 }
 
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
-}
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
 async function confirmHive(txid, operation) {
   const confirmations = new Map();

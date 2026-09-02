@@ -4,7 +4,6 @@
 // policy. It cannot upgrade another stat, repeat a level, stake, transfer to a
 // player, buy an asset, contribute Favor, or invoke another game operation.
 
-import { spawn } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
@@ -15,6 +14,7 @@ import {
   reconcileTerraCoreEngineeringUpgrade,
   terraCoreEngineeringUpgradeIntent,
 } from "../src/integrations/terracore/terracore.adapter.ts";
+import { broadcastViaChildProcess, makeFail, parseAccountKeyFileExecuteOneOptions, rpc as sharedRpc } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const API = "https://api.terracoregame.com";
@@ -23,48 +23,11 @@ const CONTRACT_NODES = ["https://api.hive-engine.com/rpc/contracts", "https://he
 const BLOCKCHAIN_NODES = ["https://api.hive-engine.com/rpc/blockchain", "https://herpc.dtools.dev/blockchain"];
 const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
 
-function fail(message) { throw new Error(`terracore-engineering-upgrade: ${message}`); }
+const fail = makeFail("terracore-engineering-upgrade");
+const rpc = (node, method, params, timeoutMs) => sharedRpc(node, method, params, { timeoutMs, backoffMs: 500, fail });
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
-export function parseOptions(argv) {
-  const options = { account: "", keyFile: "", executeOne: false };
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
-    const take = () => {
-      const value = argv[index + 1];
-      if (!value || value.startsWith("--")) fail(`${argument} requires a value`);
-      index += 1;
-      return value;
-    };
-    if (argument === "--account") options.account = take().toLowerCase();
-    else if (argument === "--key-file") options.keyFile = take();
-    else if (argument === "--execute-one") options.executeOne = true;
-    else fail(`unknown argument ${argument}`);
-  }
-  if (!/^[a-z][a-z0-9.-]{2,15}$/.test(options.account)) fail("a canonical Hive --account is required");
-  if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
-  return Object.freeze(options);
-}
-
-async function rpc(node, method, params, timeoutMs = 8_000) {
-  let residue = "unavailable";
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const response = await fetch(node, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
-        signal: AbortSignal.timeout(timeoutMs),
-      });
-      const text = await response.text();
-      let body;
-      try { body = JSON.parse(text); } catch { residue = "non-JSON gateway response"; continue; }
-      if (response.ok && !body?.error) return body?.result;
-      residue = `HTTP ${response.status} or RPC error`;
-    } catch (error) { residue = error instanceof Error ? error.message : String(error); }
-    if (attempt < 2) await new Promise((resolvePromise) => setTimeout(resolvePromise, 500 * (attempt + 1)));
-  }
-  fail(`${node} ${method} failed: ${residue}`);
-}
+export function parseOptions(argv) { return parseAccountKeyFileExecuteOneOptions(argv, fail); }
 
 async function find(node, contract, table, query, limit = 2) {
   const rows = await rpc(node, "find", { contract, table, query, limit, offset: 0, indexes: [] });
@@ -125,23 +88,6 @@ async function verifyActiveKey(account, keyFile) {
   const threshold = Number(row.active?.weight_threshold ?? 1);
   const weight = Number((row.active?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
   if (weight < threshold) fail("the supplied key does not independently satisfy the account's active authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
 }
 
 async function confirmHive(txid, operation) {

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 
 export const CURATION_ACTION_SCHEMA = "aagaard.curation-action.v1" as const;
@@ -26,10 +27,6 @@ export interface CurationActionEvent {
   readonly receipt: Readonly<Record<string, unknown>>;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 
 function canonicalAccount(value: unknown, label: string): string {
   const account = String(value ?? "");

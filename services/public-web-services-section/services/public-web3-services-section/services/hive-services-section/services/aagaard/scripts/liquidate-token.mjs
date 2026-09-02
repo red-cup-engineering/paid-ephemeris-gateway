@@ -4,15 +4,13 @@
 // floor and a 300-second expiry; no buy, transfer, NFT, or staking action is
 // available through this boundary.
 
-import { spawn } from "node:child_process";
-import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { tokenLiquidationEvent } from "../src/core/tokenLiquidationSettlement.mts";
 import { assertLiquidationSymbolAllowed } from "../src/core/protectedAssets.mjs";
+import { broadcastViaChildProcess, makeFail, rpc as sharedRpc, verifyActiveKey as sharedVerifyActiveKey } from "../src/core/hiveScriptSupport.mjs";
 import { marketSellLimit } from "../src/integrations/hive-engine/hiveEngineOps.mjs";
-import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const HIVE_NODES = ["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"];
 const CONTRACT_NODES = ["https://api.hive-engine.com/rpc/contracts", "https://herpc.dtools.dev/contracts"];
@@ -20,7 +18,10 @@ const BLOCKCHAIN_NODES = ["https://api.hive-engine.com/rpc/blockchain", "https:/
 const FLEET = new Set(["emsenn0", "essiebee", "sigmund-vexler", "marshian", "michael561", "help-fund"]);
 const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
 
-function fail(message) { throw new Error(`liquidate-token: ${message}`); }
+const fail = makeFail("liquidate-token");
+const rpc = (node, method, params, timeoutMs) => sharedRpc(node, method, params, { timeoutMs, backoffMs: 350, fail });
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
+async function verifyActiveKey(account, keyFile) { return sharedVerifyActiveKey(account, keyFile, { rpc, hiveNode: HIVE_NODES[0], fail }); }
 
 export function parseOptions(argv) {
   const options = { account: "", symbol: "", keyFile: "", executeOne: false, maxSlippageBps: 500 };
@@ -45,23 +46,6 @@ export function parseOptions(argv) {
   if (!Number.isInteger(options.maxSlippageBps) || options.maxSlippageBps < 0 || options.maxSlippageBps > 2500) fail("--max-slippage-bps must be an integer from 0 through 2500");
   if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
   return Object.freeze(options);
-}
-
-async function rpc(node, method, params, timeoutMs = 8_000) {
-  let residue = "unavailable";
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const response = await fetch(node, { method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }), signal: AbortSignal.timeout(timeoutMs) });
-      const text = await response.text();
-      let body;
-      try { body = JSON.parse(text); } catch { residue = "non-JSON gateway response"; continue; }
-      if (response.ok && !body?.error) return body?.result;
-      residue = `HTTP ${response.status} or RPC error`;
-    } catch (error) { residue = error instanceof Error ? error.message : String(error); }
-    if (attempt < 2) await new Promise((resolvePromise) => setTimeout(resolvePromise, 350 * (attempt + 1)));
-  }
-  fail(`${node} ${method} failed: ${residue}`);
 }
 
 async function find(node, contract, table, query, limit = 1000, indexes = []) {
@@ -156,31 +140,6 @@ async function independentlyObservedState(account, symbol) {
   const states = await Promise.all(CONTRACT_NODES.map((node) => readState(account, symbol, node)));
   if (!statesAgree(states[0], states[1])) fail("independent Hive-Engine providers disagree on liquidation evidence");
   return Object.freeze({ state: states[0], providers: Object.freeze(CONTRACT_NODES.map((node, index) => Object.freeze({ node, observedAt: states[index].observedAt }))) });
-}
-
-async function verifyActiveKey(account, keyFile) {
-  const mode = statSync(keyFile).mode & 0o777;
-  if ((mode & 0o077) !== 0) fail("active-key file must not be group/world accessible");
-  const publicKey = PrivateKey.from(readFileSync(keyFile, "utf8").trim()).createPublic("STM").toString();
-  const rows = await rpc(HIVE_NODES[0], "condenser_api.get_accounts", [[account]]);
-  const authority = rows?.[0]?.active;
-  const threshold = Number(authority?.weight_threshold ?? 1);
-  const weight = Number((authority?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
-  if (weight < threshold) fail("the supplied key does not independently satisfy the account's active authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = ""; let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else { try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); } }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
 }
 
 async function confirmHiveTransaction(txid, operation) {

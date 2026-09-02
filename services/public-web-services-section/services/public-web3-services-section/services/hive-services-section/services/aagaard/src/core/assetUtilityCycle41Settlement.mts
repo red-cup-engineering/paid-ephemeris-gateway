@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 
 import type { HbdSavingsRecoveryEvent } from "./hbdSavingsRecoverySettlement.mts";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const ASSET_UTILITY_CYCLE_41_SCHEMA = "aagaard.asset-utility-cycle-41.v1" as const;
 export const ASSET_UTILITY_CYCLE_41_CATEGORY = "aagaard.asset-utility-cycle-41-event" as const;
@@ -24,7 +25,6 @@ export interface AssetUtilityCycle41Event {
   readonly procurement: Readonly<{ status: "no-candidate-accepted"; residue: typeof RESIDUE }>;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> { if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`); return value as Readonly<Record<string, unknown>>; }
 function rows(value: unknown, label: string): readonly unknown[] { if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`); return value; }
 
 export function assetUtilityCycle41Event(input: Readonly<{ recovery: HbdSavingsRecoveryEvent; workerBee: Readonly<Record<string, unknown>>;

@@ -5,7 +5,6 @@
 // and contains no upgrade, stake, token transfer, crate, quest, boss, NFT,
 // marketplace, or repeated-battle capability.
 
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -20,6 +19,7 @@ import {
   readTerraCoreActionReceipts,
   recordTerraCoreActionReceipt,
 } from "../src/core/terracoreSettlement.mts";
+import { broadcastViaChildProcess, makeFail, rpc as sharedRpc } from "../src/core/hiveScriptSupport.mjs";
 import { observeRcReserve } from "../src/integrations/hive/rcReserve.adapter.mts";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
@@ -30,7 +30,9 @@ const FLEET = Object.freeze(["sigmund-vexler", "help-fund", "emsenn0", "essiebee
 const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
 const DATA_DIR = new URL("../data/", import.meta.url).pathname;
 
-function fail(message) { throw new Error(`terracore-cycle: ${message}`); }
+const fail = makeFail("terracore-cycle");
+const rpc = (node, method, params, timeoutMs) => sharedRpc(node, method, params, { timeoutMs, backoffMs: 500, fail });
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
 export function parseOptions(argv) {
   const options = { account: "", keyFile: "", executeOne: false, recoverTx: "" };
@@ -99,27 +101,6 @@ async function readTargets(maxDefense) {
   return parseTerraCoreBattleTargets(body, observedAt);
 }
 
-async function rpc(node, method, params, timeoutMs = 8_000) {
-  let residue = "unavailable";
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const response = await fetch(node, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
-        signal: AbortSignal.timeout(timeoutMs),
-      });
-      const text = await response.text();
-      let body;
-      try { body = JSON.parse(text); } catch { residue = "non-JSON gateway response"; continue; }
-      if (response.ok && !body?.error) return body?.result;
-      residue = `HTTP ${response.status} or RPC error`;
-    } catch (error) { residue = error instanceof Error ? error.message : String(error); }
-    if (attempt < 2) await new Promise((resolvePromise) => setTimeout(resolvePromise, 500 * (attempt + 1)));
-  }
-  fail(`${node} ${method} failed: ${residue}`);
-}
-
 async function readScrapBalance(account, node) {
   const rows = await rpc(node, "find", { contract: "tokens", table: "balances", query: { account, symbol: "SCRAP" }, limit: 2, offset: 0, indexes: [] });
   if (!Array.isArray(rows) || rows.length > 1) fail(`${node} returned malformed SCRAP balance evidence`);
@@ -152,23 +133,6 @@ async function verifyPostingKey(account, keyFile) {
   const threshold = Number(row.posting?.weight_threshold ?? 1);
   const weight = Number((row.posting?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
   if (weight < threshold) fail("the supplied key does not independently satisfy the account's posting authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
 }
 
 async function confirmHiveTransaction(txid, operation) {

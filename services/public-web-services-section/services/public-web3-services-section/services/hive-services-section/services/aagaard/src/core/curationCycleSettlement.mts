@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 
 
 import type { CurationActionEvent } from "./curationActionSettlement.mts";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const CURATION_CYCLE_SCHEMA = "aagaard.curation-cycle.v1" as const;
 export const CURATION_CYCLE_CATEGORY = "aagaard.curation-cycle-event" as const;
@@ -25,10 +26,6 @@ export interface CurationCycleEvent {
   readonly chainMutation: true;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function rows(value: unknown, label: string): readonly unknown[] { if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`); return value; }
 function exactVests(value: unknown): string { const amount = String(value ?? ""); if (!/^(?:0|[1-9][0-9]*)\.[0-9]{6}$/u.test(amount)) throw new TypeError("baseline VESTS is malformed"); return amount; }
 

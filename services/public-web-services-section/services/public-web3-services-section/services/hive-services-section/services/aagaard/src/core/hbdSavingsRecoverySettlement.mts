@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const HBD_SAVINGS_RECOVERY_SCHEMA = "aagaard.hbd-savings-recovery.v1" as const;
 export const HBD_SAVINGS_RECOVERY_CATEGORY = "aagaard.hbd-savings-recovery-event" as const;
@@ -25,10 +26,6 @@ export interface HbdSavingsRecoveryEvent {
   readonly receipt: Readonly<Record<string, unknown>>;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function rows(value: unknown, label: string): readonly unknown[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`);
   return value;

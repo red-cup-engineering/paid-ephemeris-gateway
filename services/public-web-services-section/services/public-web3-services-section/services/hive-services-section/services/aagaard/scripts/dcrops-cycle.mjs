@@ -4,7 +4,6 @@
 // therefore require separate invocations with an independent observation in
 // between, matching the way the live action was first proven.
 
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -14,6 +13,7 @@ import {
   parseDCropsSeed,
   planDCropsPlot,
 } from "../src/integrations/dcrops/dcrops.adapter.ts";
+import { broadcastViaChildProcess } from "../src/core/hiveScriptSupport.mjs";
 import { observeRcReserve } from "../src/integrations/hive/rcReserve.adapter.mts";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
@@ -84,22 +84,7 @@ async function readPosition(account, landID, seedID, nodes = ENGINE_NODES) {
   });
 }
 
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
-}
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
 function safePosition(position, plotNo) {
   return Object.freeze({

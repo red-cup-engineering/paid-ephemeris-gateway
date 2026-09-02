@@ -1,9 +1,9 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as record } from "./objectGuards.mts";
 export const ACCOUNT_ROLE_RECTIFICATION_SCHEMA = "aagaard.account-role-rectification.v1" as const;
 export const ACCOUNT_ROLE_RECTIFICATION_CATEGORY = "aagaard.account-role-rectification-event" as const;
 const SETTLEMENT = "eip155:31337:0xb0dfc2eb77fb622c93f791071c66b039a7ae428d"; const ACTOR = "urn:ame:aagaard";
 const RESIDUE = "an A2A RMN operation must carry exactly one application/rmn+cbor raw part";
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> { if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`); return value as Readonly<Record<string, unknown>>; }
 export function accountRoleRectificationEvent(input: Readonly<{ merchant: Readonly<Record<string, unknown>>; editorial: Readonly<Record<string, unknown>>;
   monitor: Readonly<Record<string, unknown>>; procurementResidue: string; recordedAt?: string }>) {
   const merchant = input.merchant; const editorial = input.editorial; const monitor = input.monitor;

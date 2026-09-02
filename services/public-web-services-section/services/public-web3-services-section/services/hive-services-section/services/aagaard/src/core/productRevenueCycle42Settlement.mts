@@ -1,13 +1,13 @@
 import { createHash } from "node:crypto";
 
 import type { ProductPilotDistributionEvent } from "./productPilotSettlement.mts";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const PRODUCT_REVENUE_CYCLE_42_SCHEMA = "aagaard.product-revenue-cycle-42.v1" as const;
 export const PRODUCT_REVENUE_CYCLE_42_CATEGORY = "aagaard.product-revenue-cycle-42-event" as const;
 const SETTLEMENT = "eip155:31337:0xb0dfc2eb77fb622c93f791071c66b039a7ae428d"; const ACTOR = "urn:ame:aagaard";
 const RESIDUE = "an A2A RMN operation must carry exactly one application/rmn+cbor raw part";
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> { if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`); return value as Readonly<Record<string, unknown>>; }
 function rows(value: unknown, label: string): readonly unknown[] { if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`); return value; }
 function providers(value: unknown, label: string): readonly string[] { const result = rows(value, `${label} providers`).map(String).sort();
   if (result.length < 2 || new Set(result).size !== result.length || result.some((row) => !row.startsWith("https://"))) throw new TypeError(`${label} lacks providers`); return Object.freeze(result); }

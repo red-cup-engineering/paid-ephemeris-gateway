@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import type { CurationActionEvent } from "./curationActionSettlement.mts";
 import type { CurationCycleEvent } from "./curationCycleSettlement.mts";
 import type { CurationTelemetry } from "./curationSettlement.mts";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const CURATION_CYCLE_40_SCHEMA = "aagaard.curation-cycle-40.v1" as const;
 export const CURATION_CYCLE_40_CATEGORY = "aagaard.curation-cycle-40-event" as const;
@@ -42,10 +43,6 @@ export interface CurationCycle40Event {
   readonly procurement: Readonly<{ status: "no-candidate-accepted"; residue: typeof PROCUREMENT_RESIDUE }>;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function rows(value: unknown, label: string): readonly unknown[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`);
   return value;

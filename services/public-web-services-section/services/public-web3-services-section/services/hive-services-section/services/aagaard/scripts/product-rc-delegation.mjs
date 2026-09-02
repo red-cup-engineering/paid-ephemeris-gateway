@@ -4,7 +4,6 @@
 // execution requires the exact posting key and independently known prestate.
 
 import { createHash } from "node:crypto";
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
@@ -18,6 +17,7 @@ import {
   productRcDelegationOperation,
 } from "../src/core/directRcDelegation.mts";
 import { recordDirectRcDelegation } from "../src/core/directRcDelegationSettlement.mts";
+import { broadcastViaChildProcess } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const NODES = Object.freeze(["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"]);
@@ -113,16 +113,7 @@ async function verifyPostingKey(keyFile) {
   if (weight < threshold) fail("the supplied key does not independently satisfy help-fund's posting authority");
 }
 
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = ""; let stderr = ""; child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => { if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else { try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); } } });
-    child.stdin.end(JSON.stringify(request));
-  });
-}
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
 export function exactDirectRcOperation(operation) {
   if (!Array.isArray(operation) || operation.length !== 2) return false;

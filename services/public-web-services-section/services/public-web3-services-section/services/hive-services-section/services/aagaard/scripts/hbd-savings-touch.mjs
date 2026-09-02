@@ -4,13 +4,11 @@
 // Hive's interest compound interval. Exact balance and interest-operation
 // evidence are independently reconciled before the receipt is recorded.
 
-import { spawn } from "node:child_process";
-import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { recordHbdSavingsExit, recordHbdSavingsTouch } from "../src/core/hbdSavingsSettlement.mts";
-import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
+import { broadcastViaChildProcess, makeFail, parseAccountKeyFileExecuteOneOptions, rpc as sharedRpc, verifyActiveKey as sharedVerifyActiveKey } from "../src/core/hiveScriptSupport.mjs";
 
 const HIVE_NODES = ["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"];
 const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
@@ -20,27 +18,12 @@ const TOUCH_MEMO = "aagaard:hbd-interest-touch:v1";
 const EXIT_MEMO = "aagaard:hbd-savings-exit:v1";
 const COMPOUND_INTERVAL_MS = 30 * 24 * 60 * 60 * 1000;
 
-function fail(message) { throw new Error(`hbd-savings-touch: ${message}`); }
+const fail = makeFail("hbd-savings-touch");
+const rpc = (node, method, params, timeoutMs) => sharedRpc(node, method, params, { timeoutMs, backoffMs: 400, fail });
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
+async function verifyActiveKey(account, keyFile) { return sharedVerifyActiveKey(account, keyFile, { rpc, hiveNode: HIVE_NODES[0], fail }); }
 
-export function parseOptions(argv) {
-  const options = { account: "", keyFile: "", executeOne: false };
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
-    const take = () => {
-      const value = argv[index + 1];
-      if (!value || value.startsWith("--")) fail(`${argument} requires a value`);
-      index += 1;
-      return value;
-    };
-    if (argument === "--account") options.account = take().toLowerCase();
-    else if (argument === "--key-file") options.keyFile = take();
-    else if (argument === "--execute-one") options.executeOne = true;
-    else fail(`unknown argument ${argument}`);
-  }
-  if (!/^[a-z][a-z0-9.-]{2,15}$/.test(options.account)) fail("a canonical Hive --account is required");
-  if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
-  return Object.freeze(options);
-}
+export function parseOptions(argv) { return parseAccountKeyFileExecuteOneOptions(argv, fail); }
 
 function hbdMilli(value) {
   const match = /^(0|[1-9][0-9]*)\.([0-9]{3}) HBD$/.exec(String(value));
@@ -51,25 +34,6 @@ function hbdMilli(value) {
 function formatHbd(milli) {
   if (milli < 0n) fail("negative HBD amount");
   return `${milli / 1000n}.${(milli % 1000n).toString().padStart(3, "0")} HBD`;
-}
-
-async function rpc(node, method, params, timeoutMs = 8_000) {
-  let residue = "unavailable";
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const response = await fetch(node, {
-        method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }), signal: AbortSignal.timeout(timeoutMs),
-      });
-      const text = await response.text();
-      let body;
-      try { body = JSON.parse(text); } catch { residue = "non-JSON gateway response"; continue; }
-      if (response.ok && !body?.error) return body?.result;
-      residue = `HTTP ${response.status} or RPC error`;
-    } catch (error) { residue = error instanceof Error ? error.message : String(error); }
-    if (attempt < 2) await new Promise((resolvePromise) => setTimeout(resolvePromise, 400 * (attempt + 1)));
-  }
-  fail(`${node} ${method} failed: ${residue}`);
 }
 
 function accountEvidence(row) {
@@ -129,34 +93,6 @@ export function planTouch(state, nowMs = Date.now()) {
     elapsedDays: Number((elapsedMs / 86_400_000).toFixed(3)),
     hbdInterestRateBps: state.hbdInterestRateBps,
     reason: "touch an interest-bearing HBD savings balance after the compound interval with the minimum token unit",
-  });
-}
-
-async function verifyActiveKey(account, keyFile) {
-  const mode = statSync(keyFile).mode & 0o777;
-  if ((mode & 0o077) !== 0) fail("active-key file must not be group/world accessible");
-  const publicKey = PrivateKey.from(readFileSync(keyFile, "utf8").trim()).createPublic("STM").toString();
-  const rows = await rpc(HIVE_NODES[0], "condenser_api.get_accounts", [[account]]);
-  const authority = rows?.[0]?.active;
-  const threshold = Number(authority?.weight_threshold ?? 1);
-  const weight = Number((authority?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
-  if (weight < threshold) fail("the supplied key does not independently satisfy the account's active authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
   });
 }
 

@@ -1,14 +1,11 @@
 import { createHash } from "node:crypto";
 
 import { PRODUCT_RC_DELEGATION, PRODUCT_RC_DELEGATOR, PRODUCT_RC_RECIPIENT } from "./directRcDelegation.mts";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 export const DIRECT_RC_DELEGATION_SCHEMA = "aagaard.direct-rc-delegation.v1" as const;
 export const DIRECT_RC_DELEGATION_CATEGORY = "aagaard.direct-rc-delegation-event" as const;
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 
 function providers(value: unknown, label: string): readonly string[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} providers are absent`);

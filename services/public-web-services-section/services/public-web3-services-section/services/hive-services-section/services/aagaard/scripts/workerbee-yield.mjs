@@ -4,14 +4,12 @@
 // the no-fee ph1102 pool.  No other account, token, recipient, transfer, sale,
 // unstake, or delegation shape crosses this capability.
 
-import { spawn } from "node:child_process";
-import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { recordAssetYield } from "../src/core/assetYieldSettlement.mts";
+import { broadcastViaChildProcess, makeFail, rpc as sharedRpc, verifyActiveKey as sharedVerifyActiveKey } from "../src/core/hiveScriptSupport.mjs";
 import { batchOperations, delegate, stake } from "../src/integrations/hive-engine/hiveEngineOps.mjs";
-import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const ACCOUNT = "michael561";
 const SYMBOL = "WORKERBEE";
@@ -23,7 +21,10 @@ const BLOCKCHAIN_NODES = ["https://api.hive-engine.com/rpc/blockchain", "https:/
 const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
 const DATA_DIR = new URL("../data/", import.meta.url).pathname;
 
-function fail(message) { throw new Error(`workerbee-yield: ${message}`); }
+const fail = makeFail("workerbee-yield");
+const rpc = (node, method, params, timeoutMs) => sharedRpc(node, method, params, { timeoutMs, backoffMs: 350, fail });
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
+async function verifyActiveKey(account, keyFile) { return sharedVerifyActiveKey(account, keyFile, { rpc, hiveNode: HIVE_NODES[0], fail }); }
 
 export function parseOptions(argv) {
   const options = { account: "", keyFile: "", executeOne: false };
@@ -38,22 +39,6 @@ export function parseOptions(argv) {
   if (options.account !== ACCOUNT) fail(`--account must be exactly ${ACCOUNT}`);
   if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
   return Object.freeze(options);
-}
-
-async function rpc(node, method, params, timeoutMs = 8_000) {
-  let residue = "unavailable";
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const response = await fetch(node, { method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }), signal: AbortSignal.timeout(timeoutMs) });
-      const text = await response.text(); let body;
-      try { body = JSON.parse(text); } catch { residue = "non-JSON gateway response"; continue; }
-      if (response.ok && !body?.error) return body?.result;
-      residue = `HTTP ${response.status} or RPC error`;
-    } catch (error) { residue = error instanceof Error ? error.message : String(error); }
-    if (attempt < 2) await new Promise((resolvePromise) => setTimeout(resolvePromise, 350 * (attempt + 1)));
-  }
-  fail(`${node} ${method} failed: ${residue}`);
 }
 
 async function find(node, contract, table, query, limit = 1000, indexes = []) {
@@ -167,21 +152,6 @@ async function independentlyObservedState(account) {
   const states = await Promise.all(CONTRACT_NODES.map((node) => readState(account, node)));
   if (!statesAgree(states[0], states[1])) fail("independent Hive-Engine providers disagree on WORKERBEE yield evidence");
   return Object.freeze({ state: states[0], evidenceProviders: Object.freeze(CONTRACT_NODES.map((node) => Object.freeze({ node }))) });
-}
-
-async function verifyActiveKey(account, keyFile) {
-  const mode = statSync(keyFile).mode & 0o777; if ((mode & 0o077) !== 0) fail("active-key file must not be group/world accessible");
-  const publicKey = PrivateKey.from(readFileSync(keyFile, "utf8").trim()).createPublic("STM").toString();
-  const rows = await rpc(HIVE_NODES[0], "condenser_api.get_accounts", [[account]]); const authority = rows?.[0]?.active;
-  const threshold = Number(authority?.weight_threshold ?? 1); const weight = Number((authority?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
-  if (weight < threshold) fail("the supplied key does not independently satisfy the account's active authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => { const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] }); let stdout = ""; let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); }); child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => { if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else { try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); } } }); child.stdin.end(JSON.stringify(request)); });
 }
 
 function exactCustomJson(actual, expected) {

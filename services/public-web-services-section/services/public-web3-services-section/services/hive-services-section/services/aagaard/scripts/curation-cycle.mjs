@@ -4,7 +4,6 @@
 // broadcasts at most one positive vote, confirms the exact transaction, and
 // leaves the economic lot pending until Hive later emits curation_reward.
 
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -20,6 +19,7 @@ import {
   recordCurationAction,
   recordCurationPredictions,
 } from "../src/index.mts";
+import { broadcastViaChildProcess } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const HIVE_NODES = ["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"];
@@ -207,22 +207,7 @@ async function verifyPostingKey(account, keyFile) {
   if (weight < threshold) fail("the supplied key does not independently satisfy the account's posting authority");
 }
 
-function broadcast(request, broadcaster = BROADCASTER) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [broadcaster.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
-}
+function broadcast(request, broadcaster = BROADCASTER) { return broadcastViaChildProcess(request, broadcaster); }
 
 export function exactVoteOperation(actual, expected) {
   if (!actual || !expected || typeof actual !== "object" || typeof expected !== "object"

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 
 export const PRODUCT_REVENUE_CYCLE_SCHEMA = "aagaard.product-revenue-cycle.v1" as const;
@@ -21,10 +22,6 @@ export interface ProductRevenueCycleEvent {
   readonly chainMutation: false;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function exactProviders(value: unknown, label: string): readonly string[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} providers are absent`);
   const providers = value.map(String);

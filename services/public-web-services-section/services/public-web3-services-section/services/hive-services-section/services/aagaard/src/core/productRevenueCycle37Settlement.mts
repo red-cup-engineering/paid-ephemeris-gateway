@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as record } from "./objectGuards.mts";
 
 
 export const PRODUCT_REVENUE_CYCLE_37_SCHEMA = "aagaard.product-revenue-cycle-37.v1" as const;
@@ -27,10 +28,6 @@ export interface ProductRevenueCycle37Event {
   readonly procurement: Readonly<{ status: "no-candidate-accepted"; residue: string }>;
 }
 
-function record(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 function rows(value: unknown, label: string): readonly unknown[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`);
   return value;

@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { assertPlainObject as object } from "./objectGuards.mts";
 
 
 export const INCOME_TOKEN_ACQUISITION_SCHEMA = "aagaard.income-token-acquisition.v1" as const;
@@ -19,10 +20,6 @@ export interface IncomeTokenAcquisitionEvent {
   readonly receipt: Readonly<Record<string, unknown>>;
 }
 
-function object(value: unknown, label: string): Readonly<Record<string, unknown>> {
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
-  return value as Readonly<Record<string, unknown>>;
-}
 
 function providers(value: unknown, label: string): readonly string[] {
   if (!Array.isArray(value)) throw new TypeError(`${label} must be an array`);

@@ -4,7 +4,6 @@
 // balance for SWAP.HIVE through the exact surviving pool with a hard minimum.
 // CITY NFTs are observed but this script has no burn, transfer, or market path.
 
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -14,6 +13,7 @@ import {
   planDCityLiquidSimRecovery,
 } from "../src/integrations/dcity/dcity.adapter.ts";
 import { createSerializedHiveEngineRpc } from "../src/integrations/hive-engine/serializedRpc.mts";
+import { broadcastViaChildProcess, makeFail, parseAccountKeyFileExecuteOneOptions } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 
 const HIVE_NODES = ["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"];
@@ -23,27 +23,10 @@ const BROADCASTER = new URL("./hive-broadcast.mjs", import.meta.url);
 const CONTRACT_READERS = new Map(ENGINE_CONTRACT_NODES.map((node) => [node,
   createSerializedHiveEngineRpc({ nodes: [node], timeoutMs: 7_000, attemptsPerNode: 2 })]));
 
-function fail(message) { throw new Error(`dcity-recovery: ${message}`); }
+const fail = makeFail("dcity-recovery");
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
-export function parseOptions(argv) {
-  const options = { account: "", keyFile: "", executeOne: false };
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
-    const take = () => {
-      const value = argv[index + 1];
-      if (!value || value.startsWith("--")) fail(`${argument} requires a value`);
-      index += 1;
-      return value;
-    };
-    if (argument === "--account") options.account = take().toLowerCase();
-    else if (argument === "--key-file") options.keyFile = take();
-    else if (argument === "--execute-one") options.executeOne = true;
-    else fail(`unknown argument ${argument}`);
-  }
-  if (!/^[a-z][a-z0-9.-]{2,15}$/.test(options.account)) fail("a canonical Hive --account is required");
-  if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
-  return Object.freeze(options);
-}
+export function parseOptions(argv) { return parseAccountKeyFileExecuteOneOptions(argv, fail); }
 
 async function rpc(node, method, params, timeoutMs = 7000) {
   let residue = "unavailable";
@@ -139,23 +122,6 @@ async function verifyActiveKey(account, keyFile) {
   const threshold = Number(row.active?.weight_threshold ?? 1);
   const weight = Number((row.active?.key_auths ?? []).find(([candidate]) => candidate === publicKey)?.[1] ?? 0);
   if (weight < threshold) fail("the supplied key does not independently satisfy the account's active authority");
-}
-
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else {
-        try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); }
-      }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
 }
 
 async function confirmHiveTransaction(txid, operation) {

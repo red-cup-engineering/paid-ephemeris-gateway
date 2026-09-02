@@ -21,6 +21,7 @@ import {
 } from "../src/integrations/holozing/holozing.adapter.ts";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 import { sha256 } from "../src/integrations/hive/waggle/hash.mjs";
+import { makeFail, parseAccountKeyFileExecuteOneOptions } from "../src/core/hiveScriptSupport.mjs";
 
 const API = "https://api.holozing.com";
 const HIVE_NODES = ["https://api.hive.blog", "https://api.openhive.network", "https://api.deathwing.me"];
@@ -28,27 +29,9 @@ const ENGINE_CONTRACT_NODES = ["https://api.hive-engine.com/rpc/contracts", "htt
 const ENGINE_BLOCKCHAIN_NODES = ["https://api.hive-engine.com/rpc/blockchain", "https://herpc.dtools.dev/blockchain"];
 const DATA_DIR = new URL("../data/", import.meta.url).pathname;
 
-function fail(message) { throw new Error(`holozing-rewards: ${message}`); }
+const fail = makeFail("holozing-rewards");
 
-export function parseOptions(argv) {
-  const options = { account: "", keyFile: "", executeOne: false };
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
-    const take = () => {
-      const value = argv[index + 1];
-      if (!value || value.startsWith("--")) fail(`${argument} requires a value`);
-      index += 1;
-      return value;
-    };
-    if (argument === "--account") options.account = take().toLowerCase();
-    else if (argument === "--key-file") options.keyFile = take();
-    else if (argument === "--execute-one") options.executeOne = true;
-    else fail(`unknown argument ${argument}`);
-  }
-  if (!/^[a-z][a-z0-9.-]{2,15}$/.test(options.account)) fail("a canonical Hive --account is required");
-  if (options.executeOne && !options.keyFile) fail("--execute-one requires --key-file");
-  return Object.freeze(options);
-}
+export function parseOptions(argv) { return parseAccountKeyFileExecuteOneOptions(argv, fail); }
 
 export function loginMessage(account, expiryUnix) {
   if (!/^[a-z][a-z0-9.-]{2,15}$/.test(account)) fail("invalid login account");

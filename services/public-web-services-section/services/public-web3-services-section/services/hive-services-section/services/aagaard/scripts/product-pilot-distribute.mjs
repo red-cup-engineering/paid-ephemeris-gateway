@@ -5,7 +5,6 @@
 // visibility through independent Hive providers, and append a zero-revenue
 // distribution receipt.
 
-import { spawn } from "node:child_process";
 import { readFileSync, statSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
@@ -19,6 +18,7 @@ import {
   readProductPilotEvents,
 } from "../src/core/productPilotSettlement.mts";
 import { EXIT_TIGHTNESS_PILOT_TARGET } from "../src/core/exitTightnessPilotPost.mjs";
+import { broadcastViaChildProcess } from "../src/core/hiveScriptSupport.mjs";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 import { observe as observeDistribution } from "./plan-product-pilot-distribution.mjs";
 
@@ -66,19 +66,7 @@ async function verifyPostingKey(keyFile) {
   if (weight < threshold) fail("the supplied key does not independently satisfy michael561's posting authority");
 }
 
-function broadcast(request) {
-  return new Promise((resolvePromise, rejectPromise) => {
-    const child = spawn(process.execPath, [BROADCASTER.pathname], { stdio: ["pipe", "pipe", "pipe"] });
-    let stdout = ""; let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += String(chunk); });
-    child.stderr.on("data", (chunk) => { stderr += String(chunk); });
-    child.on("close", (code) => {
-      if (code !== 0) rejectPromise(new Error(stderr.trim() || `broadcaster exited ${code}`));
-      else { try { resolvePromise(JSON.parse(stdout)); } catch { rejectPromise(new Error("broadcaster returned invalid JSON")); } }
-    });
-    child.stdin.end(JSON.stringify(request));
-  });
-}
+function broadcast(request) { return broadcastViaChildProcess(request, BROADCASTER); }
 
 export function exactProductReblogOperation(operation) {
   const expected = productPilotReblogOperation();

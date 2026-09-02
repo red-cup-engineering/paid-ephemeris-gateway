@@ -5,8 +5,8 @@
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { createGcsClient } from "../server/world/gcs-client.mjs";
-import { withGcsRetry } from "../server/world/gcs-retry.mjs";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
+import { withGcsRetry } from "@red-cup-engineering/footing/gcs-retry";
 import { startFakeGcs } from "./helpers/fake-gcs.mjs";
 
 const unauthenticatedRequest = (url, init) => fetch(url, init);
@@ -144,21 +144,15 @@ test("withGcsRetry: exponential backoff with jitter actually grows between attem
   });
 });
 
-test("createGcsClient integration: retry is ON by default — getObject transparently survives a transient failure with no opt-in needed", async () => {
+test("createGcsClient integration: retry is opt-in by default — a bare call with no `retry` option surfaces a transient failure instead of masking it (footing's contract, not the old vendored default; log-store.mjs passes retry:true to keep its own prior always-on behavior)", async () => {
   await withFakeGcs("client-default-retry-get", async (fake) => {
     await fetch(`${fake.url}/upload/storage/v1/b/${fake.bucket}/o?uploadType=media&name=world.jsonl&ifGenerationMatch=0`, {
       method: "POST",
       body: "hello",
     });
     fake.failNextRequests(1, "throw");
-    // NOTE: no `retry` option passed at all — this is the production default, unlike Farstone's
-    // integration test (which passes a fast `retry:{sleep:...}` to skip real backoff). Aletheon's
-    // client defaults its own retry's `sleep` to a real timer, so this test accepts one real
-    // ~100ms-ish backoff delay rather than injecting a fake clock, to prove the DEFAULT path
-    // (not just an explicitly-configured one) actually retries.
     const client = createGcsClient({ bucket: fake.bucket, apiBase: fake.url, request: unauthenticatedRequest });
-    const found = await client.getObject("world.jsonl");
-    assert.equal(found?.text, "hello");
+    await assert.rejects(() => client.getObject("world.jsonl"));
   });
 });
 

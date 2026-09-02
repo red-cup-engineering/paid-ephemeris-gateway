@@ -125,19 +125,18 @@ Deferred / next-phase (shaped in the EAVT model, not yet built): entropy/Pisot g
   (fresh world, a real kill+raise sequence, a mid-corpse state, id-collision safety after restore),
   plus one test that PROVES — rather than assumes — the one real gap: marks/inventory never
   survive a replay, because those mutations never call `store.append()` in the first place.
-- `gcs-client.test.mjs` (5) + `log-store.test.mjs` (11) — the vendored GCS client and the bucket
-  log-store (backend resolution, buffered append, batched conditional-write flush with 412 retry
-  under genuine two-writer contention, and the same round-trip fidelity as the local-file path —
-  proved against a fake-GCS double, not mocked at the HTTP-call level).
-- `gcs-retry.test.mjs` (11) — the retry-with-backoff wrapper (`server/world/gcs-retry.mjs`, ported
-  byte-identical from Farstone's own `gcs-retry.mts`) against a fake-GCS double that injects
-  failures: a transient 503/thrown network error is retried and recovered; a permanent failure
-  exhausts its bounded attempt count and is surfaced loudly (`onExhausted`), never silently
-  dropped; 412/404 pass through untouched on the first attempt (retrying either would corrupt
-  `log-store.mjs`'s own optimistic-concurrency contract); backoff genuinely grows between
-  attempts (jittered, not fixed-delay); both `createGcsClient`'s `getObject`/`putObject` inherit
-  the default retry policy with no opt-in needed, and `retry: false` disables it back to the
-  pre-wrapper single-attempt behavior.
+- `gcs-client.test.mjs` (5) + `log-store.test.mjs` (11) — the GCS transport (consumed from
+  `@red-cup-engineering/footing`'s `./gcs-client`/`./gcs-retry`, `retry: true` at every real call
+  site) and the bucket log-store (backend resolution, buffered append, batched conditional-write
+  flush with 412 retry under genuine two-writer contention, and the same round-trip fidelity as
+  the local-file path — proved against a fake-GCS double, not mocked at the HTTP-call level).
+- `gcs-retry.test.mjs` (11) — footing's retry-with-backoff wrapper against a fake-GCS double that
+  injects failures: a transient 503/thrown network error is retried and recovered; a permanent
+  failure exhausts its bounded attempt count and is surfaced loudly (`onExhausted`), never
+  silently dropped; 412/404 pass through untouched on the first attempt (retrying either would
+  corrupt `log-store.mjs`'s own optimistic-concurrency contract); backoff genuinely grows between
+  attempts (jittered, not fixed-delay); retry is opt-in per call site and this package passes
+  `retry: true` on every production path.
 - `compaction.test.mjs` (3) + `snapshot-equivalence.test.mjs` (2) — the fix for the OOM crash-loop
   named in "Persistence" below: measured idle-growth *without* compaction (reproducing the
   original bug honestly), measured idle-growth *with* compaction (the tail never exceeds the
@@ -220,14 +219,12 @@ replay already carried — compaction introduces no new fidelity gap beyond the 
 
 ### GCS write retries (fixed — was a silent-failure risk on the autosave path)
 
-Both this tree's writes (`server/world/log-store.mjs`, via `server/world/gcs-client.mjs`) and
-Farstone's own (the sibling `farstone-services-section` site) hit an intermittent live `fetch
-failed` error on their autosave path (see the deploy runbook's "Known open issues"). Before this
-fix a single transient failure was fatal and silent — thrown straight out of
-`getObject`/`putObject` with no retry and no distinguishable log line. `server/world/gcs-retry.mjs`
-(ported byte-identical from Farstone's `src/gcs-retry.mts`, logic unchanged — see that module's
-own header for why the two trees are separate vendored copies rather than a shared package, left
-as-is for the rails-extraction docket rather than unified here) wraps every outbound call with
+Both this tree's writes (`server/world/log-store.mjs`, via `@red-cup-engineering/footing`'s
+`./gcs-client`) and Farstone's own (the sibling `farstone-services-section` site) hit an
+intermittent live `fetch failed` error on their autosave path (see the deploy runbook's "Known
+open issues"). Before this fix a single transient failure was fatal and silent — thrown straight
+out of `getObject`/`putObject` with no retry and no distinguishable log line. Footing's
+`./gcs-retry` (the shared owner both sites and this package consume) wraps every outbound call with
 bounded, jittered exponential backoff: transient failures (thrown network errors, 5xx/408/429)
 retry up to a capped attempt count and recover; `412`/`404` — the application-level
 optimistic-concurrency and legitimately-absent-object signals `log-store.mjs` itself depends on

@@ -1,18 +1,12 @@
-// clock-store — persists `lastTickAt`, the real wall-clock instant (epoch ms) up to which the
-// world has actually been advanced. Structurally identical to Farstone's own `clock-store.mts`
-// (the landed pattern this lane ports, not reinvents). A SEPARATE object/file from the engine
-// snapshot `world-store.mts` persists, so that module's wire format
-// (`encodeSnapshot`/`decodeSnapshot`) stays byte-for-byte unchanged.
-//
-// HONEST TRADE-OFF: writing two separate objects/files per flush is not atomic.
-// `tidepool-runtime.mts` writes the clock FIRST, then the engine snapshot SECOND, because that
-// ordering fails safe: if the process dies between the two writes, catch-up computes FEWER
-// owed ticks than reality on restart — a small, bounded loss, never a double-application of
-// ticks that already ran.
+// clock-store — persists lastTickAt, the wall-clock instant (epoch ms) up to which the world
+// has been advanced. Structurally identical to Farstone's own clock-store.mts. A separate
+// object/file from world-store.mts's engine snapshot, so that wire format stays unchanged.
+// Not atomic with the engine save: tidepool-runtime.mts writes the clock first, then the
+// snapshot, so a mid-write crash under-counts owed catch-up ticks rather than double-applying.
 
 import { loadJsonSnapshot, saveJsonSnapshot } from "@red-cup-engineering/feltos/persistence";
-import { createGcsClient } from "./gcs-client.mts";
-import type { GcsClientOptions } from "./gcs-client.mts";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
+import type { GcsClientOptions } from "@red-cup-engineering/footing/gcs-client";
 import type { WorldBackend } from "./world-store.mts";
 
 export interface ClockState {
@@ -63,7 +57,8 @@ export function openClockStore(backend: WorldBackend, opts: OpenClockStoreOption
     };
   }
 
-  const client = createGcsClient({ bucket: backend.bucket, ...opts.gcsClientOptions });
+  // retry:true preserves this store's pre-footing default (footing's own default is opt-in-off).
+  const client = createGcsClient({ bucket: backend.bucket, retry: true, ...opts.gcsClientOptions });
   const object = bucketClockObject(backend.object);
   const describe = `gs://${backend.bucket}/${object}`;
 

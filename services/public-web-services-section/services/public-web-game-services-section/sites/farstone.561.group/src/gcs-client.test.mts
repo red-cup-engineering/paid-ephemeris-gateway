@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { createGcsClient } from "./gcs-client.mts";
-import { withGcsRetry } from "./gcs-retry.mts";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
+import { withGcsRetry } from "@red-cup-engineering/footing/gcs-retry";
 import { startFakeGcs } from "./fake-gcs.mts";
 import type { FakeGcs } from "./fake-gcs.mts";
 

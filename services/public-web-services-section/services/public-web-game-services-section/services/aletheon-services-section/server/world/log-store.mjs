@@ -23,7 +23,7 @@
 //     is a correctness backstop for the one real same-process race (an autosave overlapping the
 //     shutdown-time final flush), not a substitute for that instance cap.
 
-import { createGcsClient } from "./gcs-client.mjs";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
 import { snapshotRows, encodeSnapshotRows, iterJsonlRows, DEFAULT_COMPACT_THRESHOLD_ROWS } from "./snapshot.mjs";
 
 const DEFAULT_BUCKET_OBJECT = "aletheon-world.jsonl";
@@ -95,7 +95,8 @@ export function resolveLogBackend(env = process.env) {
 // against an oversized backlog compacts it down immediately, so every boot AFTER that one reads
 // a small tail — self-healing in one cycle instead of never.
 export function openBucketLogStore(backend, opts = {}) {
-  const client = createGcsClient({ bucket: backend.bucket, ...opts.gcsClientOptions });
+  // retry:true preserves this store's pre-footing default (footing's own default is opt-in-off).
+  const client = createGcsClient({ bucket: backend.bucket, retry: true, ...opts.gcsClientOptions });
   const object = backend.object;
   const snapshotObject = bucketSnapshotObject(object);
   const describe = `gs://${backend.bucket}/${object}`;

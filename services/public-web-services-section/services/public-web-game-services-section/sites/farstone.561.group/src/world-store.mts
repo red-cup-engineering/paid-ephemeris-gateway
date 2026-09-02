@@ -1,34 +1,15 @@
-// world-store — selects Farstone's world-persistence backend and exposes one small
-// `load`/`save` surface regardless of which backend was chosen, mirroring the shape of
-// ruinfold's `store-factory.mts` (same house, same decision: env var present -> GCS bucket;
-// absent -> local disk).
-//
-// Backend selection, from `FELTOS_BUCKET` / `FELTOS_SAVE`:
-//   - `FELTOS_BUCKET` set (Cloud Run): the GCS bucket-backed store. `FELTOS_SAVE`, if also
-//     set, becomes the OBJECT NAME within that bucket (default "world.json") rather than a
-//     filesystem path — the same "root means something different per backend" shape
-//     ruinfold's own `resolveStoreRoot()` documents and tests for.
-//   - `FELTOS_BUCKET` unset, `FELTOS_SAVE` set (local dev, unchanged from before this
-//     change): a filesystem path, handled by feltos's own `loadEngine`/`saveEngine`
-//     (`@red-cup-engineering/feltos/persistence`) exactly as `serve.mts` called them
-//     directly before. Nothing about local-dev persistence behavior changed.
-//   - Neither set: no persistence — `openWorldStore` returns `null`, and callers keep the
-//     engine in memory only, exactly as before.
-//
-// Bucket-mode correctness: the world save is ONE mutable JSON blob (feltos's own
-// `encodeSnapshot`/`decodeSnapshot` envelope — the exact same bytes the file backend
-// writes), not an append-only log, so a save is a conditional REPLACE guarded by the
-// object's current GCS generation, retried on 412 (another save landed between our read
-// and our write) — see `save()` below. This is only a genuine multi-writer hazard if two
-// Farstone instances tick the same world concurrently; the deploy pins
-// `--max-instances 1` specifically so that never happens (see the deploy notes in
-// `../README.md`) — the retry loop here is a correctness backstop for the one real
-// same-process race (a periodic autosave overlapping the shutdown-time final save), not a
-// substitute for that instance cap.
+// world-store — selects Farstone's persistence backend (FELTOS_BUCKET set -> GCS bucket store,
+// FELTOS_SAVE as the object name; FELTOS_BUCKET unset with FELTOS_SAVE set -> local file via
+// feltos's loadEngine/saveEngine; neither set -> in-memory only, openWorldStore returns null)
+// and exposes one load/save surface regardless of backend, mirroring ruinfold's
+// store-factory.mts. Bucket-mode save is a conditional REPLACE guarded by GCS generation,
+// retried on 412 — a correctness backstop for autosave/shutdown-save overlap within one
+// instance, not a substitute for the deploy's --max-instances 1 pin (../README.md) that
+// prevents real multi-writer contention.
 
 import { loadEngine, saveEngine, encodeSnapshot, decodeSnapshot } from "@red-cup-engineering/feltos/persistence";
-import { createGcsClient } from "./gcs-client.mts";
-import type { GcsClientOptions } from "./gcs-client.mts";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
+import type { GcsClientOptions } from "@red-cup-engineering/footing/gcs-client";
 
 export interface WorldStoreEnv {
   FELTOS_SAVE?: string;
@@ -84,7 +65,8 @@ export function openWorldStore(backend: WorldBackend, opts: OpenWorldStoreOption
     };
   }
 
-  const client = createGcsClient({ bucket: backend.bucket, ...opts.gcsClientOptions });
+  // retry:true preserves this store's pre-footing default (footing's own default is opt-in-off).
+  const client = createGcsClient({ bucket: backend.bucket, retry: true, ...opts.gcsClientOptions });
   const object = backend.object;
   const describe = `gs://${backend.bucket}/${object}`;
 

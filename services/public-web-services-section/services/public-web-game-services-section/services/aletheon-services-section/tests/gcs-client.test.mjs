@@ -4,7 +4,7 @@
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { createGcsClient, createGoogleApiRequest } from "../server/world/gcs-client.mjs";
+import { createGcsClient, createGoogleApiRequest } from "@red-cup-engineering/footing/gcs-client";
 import { startFakeGcs } from "./helpers/fake-gcs.mjs";
 
 const unauthenticatedRequest = (url, init) => fetch(url, init);

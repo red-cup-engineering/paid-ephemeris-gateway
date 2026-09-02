@@ -5,7 +5,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { createGcsClient } from "./gcs-client.mts";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
 import { startFakeGcs } from "./fake-gcs.mts";
 
 function client(fake, retry) {

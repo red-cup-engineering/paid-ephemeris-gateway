@@ -1,24 +1,13 @@
-// world-store — selects Tidepool's world-persistence backend, structurally identical to
-// Farstone's own `world-store.mts` (the CURRENT landed MUD persistence pattern; per the deploy
-// runbook's farstone/aletheon rows and the mud-persistence-hardening lane's own findings).
-//
-// Backend selection, from `FELTOS_BUCKET` / `FELTOS_SAVE`:
-//   - `FELTOS_BUCKET` set (Cloud Run): the GCS bucket-backed store. `FELTOS_SAVE`, if also set,
-//     becomes the OBJECT NAME within that bucket (default "world.json").
-//   - `FELTOS_BUCKET` unset, `FELTOS_SAVE` set (local dev): a filesystem path, handled by
-//     feltos's own `loadEngine`/`saveEngine`.
-//   - Neither set: no persistence — `openWorldStore` returns `null`.
-//
-// Bucket-mode correctness: the world save is ONE mutable JSON blob (feltos's own
-// `encodeSnapshot`/`decodeSnapshot` envelope), so a save is a conditional REPLACE guarded by the
-// object's current GCS generation, retried on 412. This is only a genuine multi-writer hazard if
-// two Tidepool instances tick the same world concurrently; the deploy pins `--max-instances 1`
-// specifically so that never happens (same load-bearing precondition Farstone documents) — the
-// retry loop here is a correctness backstop, not a substitute for that instance cap.
+// world-store — selects Tidepool's persistence backend (FELTOS_BUCKET set -> GCS bucket store,
+// FELTOS_SAVE as the object name; FELTOS_BUCKET unset with FELTOS_SAVE set -> local file via
+// feltos's loadEngine/saveEngine; neither set -> in-memory only, openWorldStore returns null),
+// structurally identical to Farstone's own world-store.mts. Bucket-mode save is a conditional
+// REPLACE guarded by GCS generation, retried on 412 — a correctness backstop, not a substitute
+// for the deploy's --max-instances 1 pin that prevents real multi-writer contention.
 
 import { decodeSnapshot, encodeSnapshot, loadEngine, saveEngine } from "@red-cup-engineering/feltos/persistence";
-import { createGcsClient } from "./gcs-client.mts";
-import type { GcsClientOptions } from "./gcs-client.mts";
+import { createGcsClient } from "@red-cup-engineering/footing/gcs-client";
+import type { GcsClientOptions } from "@red-cup-engineering/footing/gcs-client";
 
 export interface WorldStoreEnv {
   FELTOS_SAVE?: string;
@@ -73,7 +62,8 @@ export function openWorldStore(backend: WorldBackend, opts: OpenWorldStoreOption
     };
   }
 
-  const client = createGcsClient({ bucket: backend.bucket, ...opts.gcsClientOptions });
+  // retry:true preserves this store's pre-footing default (footing's own default is opt-in-off).
+  const client = createGcsClient({ bucket: backend.bucket, retry: true, ...opts.gcsClientOptions });
   const object = backend.object;
   const describe = `gs://${backend.bucket}/${object}`;
 

@@ -54,6 +54,6 @@
     "@lenticule-science/metrologic": "0.1.0",
     "@red-cup-engineering/eavt": "0.4.0",
     "@red-cup-engineering/flatfile": "0.1.0",
-    "@red-cup-engineering/qwzspace": "0.4.1"
+    "@red-cup-engineering/qwzspace": "0.6.1"
   }
 }

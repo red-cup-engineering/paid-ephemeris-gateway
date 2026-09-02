@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { evaluateUnifiedAgroActionArming, summarizeUnifiedAgroControlPlane } from "../src/unified-control-plane-summary.mjs";
+import { evaluateUnifiedAgroActionArming, refreshUnifiedAgroActionCard,
+  summarizeUnifiedAgroControlPlane } from "../src/unified-control-plane-summary.mjs";
 
 function treasuryDisclosure() {
   return { id: "ni:///sha-256;portfolio", opportunities: {
@@ -97,6 +98,41 @@ test("pre-arm contract refuses the expired fork, drift, slippage-policy changes,
   const refreshed = fixedForkObservation(); refreshed.block = "50761309"; refreshed.blockHash = `0x${"2".repeat(64)}`;
   assert.deepEqual(evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObservation: refreshed,
     currentBoundary: { chain: refreshed.chain, block: refreshed.block, blockHash: refreshed.blockHash } }), {
+    status: "human-transaction-authorization-required", reasons: [], freshPreflightAdmitted: true,
+    humanTransactionAuthorizationPresent: false, armingAdmitted: false, oneUse: true,
+    executionAdmitted: false, transactionAssembly: false, outputCalldata: false, signing: false,
+    broadcast: false, chainMutation: false,
+  });
+});
+
+test("mints one replacement card from coherent fresh evidence and advances only to human transaction authorization", () => {
+  const original = fixedForkObservation();
+  const staleCard = summarizeUnifiedAgroControlPlane({ treasuryDisclosure: treasuryDisclosure(),
+    fixedForkObservation: original }).humanReviewActionCards[0];
+  const refreshed = fixedForkObservation(); refreshed.id = "ni:///sha-256;refreshed";
+  refreshed.block = "50761309"; refreshed.blockHash = `0x${"2".repeat(64)}`; refreshed.timestamp = "1788300002";
+  refreshed.candidates[0].outputs[0].amount = "11";
+  refreshed.candidates[0].outputs[1].amount = "21";
+  refreshed.candidates[0].fullConversion.tbtcInput = "11";
+  refreshed.candidates[0].fullConversion.cbbtcQuotedSats = "99559";
+  refreshed.candidates[0].fullConversion.cbbtcReceivedSats = "99559";
+  refreshed.candidates[0].repayment.repaymentSats = "99559";
+  refreshed.candidates[0].repayment.debtBeforeSats = "274570";
+  refreshed.candidates[0].repayment.debtAfterSats = "175011";
+  refreshed.candidates[0].repayment.debtDeltaSats = "99559";
+  const boundary = { chain: refreshed.chain, block: refreshed.block, blockHash: refreshed.blockHash };
+  const staleResult = evaluateUnifiedAgroActionArming({ card: staleCard,
+    refreshedFixedForkObservation: refreshed, currentBoundary: boundary });
+  assert.deepEqual(staleResult.reasons, ["target-drift", "assets-drift"]);
+  const replacement = refreshUnifiedAgroActionCard({ staleCard, treasuryDisclosure: treasuryDisclosure(),
+    refreshedFixedForkObservation: refreshed, currentBoundary: boundary });
+  assert.equal(replacement.status, "human-transaction-authorization-required");
+  assert.equal(replacement.armingEnvelope.lifecycle, "refreshed-preflight-bound");
+  assert.equal(replacement.armingEnvelope.ceilings.maximumSlippageBps, "50");
+  assert.equal(replacement.armingEnvelope.expectedPreArmSnapshot.target.debtSats, "274570");
+  assert.equal(replacement.armingEnvelope.expectedPreArmSnapshot.assets.cbbtcQuoteSats, "99559");
+  assert.deepEqual(evaluateUnifiedAgroActionArming({ card: replacement,
+    refreshedFixedForkObservation: refreshed, currentBoundary: boundary }), {
     status: "human-transaction-authorization-required", reasons: [], freshPreflightAdmitted: true,
     humanTransactionAuthorizationPresent: false, armingAdmitted: false, oneUse: true,
     executionAdmitted: false, transactionAssembly: false, outputCalldata: false, signing: false,

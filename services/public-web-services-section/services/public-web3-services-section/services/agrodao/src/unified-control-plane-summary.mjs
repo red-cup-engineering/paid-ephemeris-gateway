@@ -112,7 +112,13 @@ function armingRefusalReasons(card, observation, currentBoundary, suppliedMaximu
   const refreshed = preArmSnapshot(observation, recovery);
   if (currentBoundary?.chain !== observation.chain || currentBoundary?.block !== observation.block
       || currentBoundary?.blockHash?.toLowerCase() !== observation.blockHash.toLowerCase()) reasons.push("stale-observed-boundary");
-  if (BigInt(observation.block) <= BigInt(card.armingEnvelope.expiry.validThroughBlock)) {
+  if (card.armingEnvelope.lifecycle === "refreshed-preflight-bound") {
+    const expectedBoundary = card.armingEnvelope.expectedPreArmSnapshot.observedBoundary;
+    if (observation.block !== expectedBoundary.block
+        || observation.blockHash.toLowerCase() !== expectedBoundary.blockHash.toLowerCase()) {
+      reasons.push("refreshed-card-boundary-mismatch");
+    }
+  } else if (BigInt(observation.block) <= BigInt(card.armingEnvelope.expiry.validThroughBlock)) {
     reasons.push("refreshed-boundary-required");
   }
   const expected = card.armingEnvelope.expectedPreArmSnapshot;
@@ -154,6 +160,40 @@ export function evaluateUnifiedAgroActionArming({ card, refreshedFixedForkObserv
   });
 }
 
+export function refreshUnifiedAgroActionCard({ staleCard, treasuryDisclosure, refreshedFixedForkObservation,
+  currentBoundary }) {
+  object(staleCard, "staleCard");
+  if (staleCard.id !== "review-sigmund-full-cbbtc-repayment" || staleCard.armingEnvelope?.singleUse !== true) {
+    throw new TypeError("staleCard is not the bounded unified AGRO action card");
+  }
+  const recovery = fixedForkRecovery(refreshedFixedForkObservation);
+  if (currentBoundary?.chain !== refreshedFixedForkObservation.chain
+      || currentBoundary?.block !== refreshedFixedForkObservation.block
+      || currentBoundary?.blockHash?.toLowerCase() !== refreshedFixedForkObservation.blockHash.toLowerCase()) {
+    throw new TypeError("replacement card requires one exact current refreshed boundary");
+  }
+  if (BigInt(refreshedFixedForkObservation.block)
+      <= BigInt(staleCard.armingEnvelope.expiry.validThroughBlock)) {
+    throw new TypeError("replacement card boundary must be newer than the stale card boundary");
+  }
+  const base = summarizeUnifiedAgroControlPlane({ treasuryDisclosure,
+    fixedForkObservation: refreshedFixedForkObservation }).humanReviewActionCards[0];
+  return Object.freeze({
+    ...base,
+    status: "human-transaction-authorization-required",
+    evidence: Object.freeze({ ...base.evidence,
+      replacesFixedForkObservation: staleCard.evidence.fixedForkObservation }),
+    armingEnvelope: Object.freeze({ ...base.armingEnvelope,
+      lifecycle: "refreshed-preflight-bound",
+      replacesBoundary: staleCard.armingEnvelope.expectedPreArmSnapshot.observedBoundary,
+      replacementBoundary: base.armingEnvelope.expectedPreArmSnapshot.observedBoundary }),
+    authority: Object.freeze({ ...base.authority, freshPreflightRequired: false,
+      separateHumanTransactionAuthorizationRequired: true }),
+    refreshedRecovery: Object.freeze({ candidateId: recovery.candidateId,
+      fixedForkObservation: refreshedFixedForkObservation.id }),
+  });
+}
+
 export function summarizeUnifiedAgroControlPlane({ treasuryDisclosure, fixedForkObservation }) {
   const opportunity = hiveOpportunity(treasuryDisclosure);
   const recovery = fixedForkRecovery(fixedForkObservation);
@@ -178,6 +218,7 @@ export function summarizeUnifiedAgroControlPlane({ treasuryDisclosure, fixedFork
       projectedStressHealthFactors: recovery.health.scenarios,
     }),
     armingEnvelope: Object.freeze({
+      lifecycle: "fixed-fork-reference",
       singleUse: true,
       replayProtection: "consume-once-by-fixed-fork-observation-id-and-refreshed-boundary",
       expectedPreArmSnapshot,

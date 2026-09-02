@@ -1,4 +1,6 @@
-﻿// Front-matter content codec: the Hugo convention of a `---`-fenced YAML head
+﻿import { isObjectRecord as isPlainRecord } from "@red-cup-engineering/json-codec-service";
+
+// Front-matter content codec: the Hugo convention of a `---`-fenced YAML head
 // over a markdown body, as used by the koios.news content store.
 //
 // Vocabulary: FrontMatterDocument (the carrier: a frozen record of front-matter
@@ -536,8 +538,4 @@ function requireOnlyTrailingComment(rest: string, where: string): void {
 
 function requireKey(key: string, where: string): void {
   if (!KEY_PATTERN.test(key)) throw new TypeError(`${where}: \`${key}\` is not a bare front-matter key`);
-}
-
-function isPlainRecord(value: unknown): value is Readonly<Record<string, unknown>> {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
 }

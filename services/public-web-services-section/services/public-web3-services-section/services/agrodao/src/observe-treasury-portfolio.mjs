@@ -194,6 +194,13 @@ async function joinMoonwellHealth({
   return results;
 }
 
+async function defaultObserveHiveOpportunity(input, options) {
+  const { observeHiveEngineLiquidityOpportunity } = await import(
+    "@red-cup-engineering/treasury-observation-service/hive-engine-opportunities"
+  );
+  return observeHiveEngineLiquidityOpportunity(input, options);
+}
+
 export async function observeTreasuryPortfolio({
   at = new Date().toISOString(),
   fleet = publicWalletFleet(),
@@ -208,6 +215,8 @@ export async function observeTreasuryPortfolio({
   healthDependencies = {},
   observeSolanaPortfolio = observePublicSolanaNativeBalancePortfolio,
   solanaOptions = {},
+  observeHiveOpportunity = defaultObserveHiveOpportunity,
+  hiveOpportunityOptions = {},
 } = {}) {
   if (!Number.isFinite(Date.parse(at))) throw new TypeError("treasury portfolio disclosure requires an ISO observation time");
   if (fleet?.authority?.observationOnly !== true || fleet.authority.signerMaterialPresent !== false
@@ -215,6 +224,7 @@ export async function observeTreasuryPortfolio({
     throw new TypeError("treasury portfolio requires a public observation-only wallet fleet");
   }
   if (typeof reportPortfolio !== "function" || typeof observeSolanaPortfolio !== "function"
+      || typeof observeHiveOpportunity !== "function"
       || typeof store?.record !== "function") {
     throw new TypeError("treasury portfolio requires report and record operations");
   }
@@ -230,7 +240,13 @@ export async function observeTreasuryPortfolio({
   const moonwellRisk = await joinMoonwellHealth({
     report, fleet, observeHealth, evaluateHealth, createReadPool, readPoolOptions, healthDependencies,
   });
-  const solana = await observeSolanaPortfolio({ at, ...solanaOptions });
+  const [solana, hiveEngineLiquidity] = await Promise.all([
+    observeSolanaPortfolio({ at, ...solanaOptions }),
+    observeHiveOpportunity({ account: "michael561", baseSymbol: "SWAP.HIVE", quoteSymbol: "DEC" }, {
+      now: () => new Date(at),
+      ...hiveOpportunityOptions,
+    }),
+  ]);
   if (solana?.type !== "PublicSolanaNativeBalanceDisclosure"
       || solana.owner !== CUSTOMER || solana.chain?.caip2 == null
       || !Array.isArray(solana.subjects) || !Array.isArray(solana.unknowns)) {
@@ -254,6 +270,11 @@ export async function observeTreasuryPortfolio({
       reason: "no portfolio-wide USD valuation provider was supplied",
     },
     portfolio: { roster: report.roster, chains: report.chains, solanaNative: solana },
+    opportunities: {
+      enrollment: { account: "michael561", status: "public-observation-enrolled" },
+      hiveEngineLiquidity,
+      executionAuthority: false,
+    },
     moonwellRisk,
     authority: {
       observationOnly: true,

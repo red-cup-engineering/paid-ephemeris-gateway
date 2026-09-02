@@ -6,6 +6,25 @@ import { defaultSettlementRoot, observeTreasuryPortfolio } from "../src/observe-
 
 const AT = "2026-09-01T22:30:00.000Z";
 
+const observeHiveOpportunity = async ({ account, baseSymbol, quoteSymbol }) => ({
+  type: "NormalizedEarningOpportunity",
+  id: `hive-engine:marketpools:${baseSymbol}:${quoteSymbol}:${account}`,
+  chain: "hive:mainnet/hive-engine", account, provider: "Hive Engine marketpools",
+  mechanism: "constant-product liquidity provision earning the pool's 0.0025 gross swap fee",
+  underlyings: [baseSymbol, quoteSymbol],
+  apy: { availability: "unavailable", value: null, unit: "fraction-per-year",
+    denomination: `${baseSymbol}:${quoteSymbol} pool-share value`, method: "gross fee fraction 0.0025",
+    reason: "the public contract table exposes cumulative volume, not a time-bounded fee series" },
+  liquidity: { kind: "constant-product-pool-reserves",
+    capacity: { [baseSymbol]: "100", [quoteSymbol]: "200", totalShares: "300" },
+    accountAvailable: { [baseSymbol]: "1", [quoteSymbol]: "2" } },
+  changedRisks: ["two-sided exposure", "impermanent loss", "sidechain availability"],
+  exit: { operation: "Hive Engine marketpools removeLiquidity", receives: [baseSymbol, quoteSymbol],
+    constraints: ["requires separately authorized active-authority transaction"] },
+  freshness: { observedAt: AT, chainBoundary: { blockNumber: 1, blockHash: "a".repeat(64) },
+    provenance: [{ endpoint: "https://api.hive-engine.com/rpc/contracts", method: "find", params: {} }] },
+});
+
 test("records one secret-free, explicitly incomplete treasury portfolio disclosure", async () => {
   const fleet = publicWalletFleet();
   const entries = [];
@@ -56,6 +75,7 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
     at: AT,
     fleet,
     reportPortfolio,
+    observeHiveOpportunity,
     store: { record: async (entry) => entries.push(entry) },
     observeHealth: async (request) => {
       healthCalls.push(request.account);
@@ -116,6 +136,16 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
   assert.equal(disclosure.portfolio.solanaNative.status, "pending-enrollment");
   assert.equal(disclosure.portfolio.solanaNative.nativePositions, null);
   assert.equal(disclosure.portfolio.solanaNative.opportunityArena.crossAssetComparison, false);
+  assert.equal(disclosure.opportunities.enrollment.account, "michael561");
+  assert.equal(disclosure.opportunities.enrollment.status, "public-observation-enrolled");
+  assert.equal(disclosure.opportunities.hiveEngineLiquidity.apy.value, null);
+  assert.equal(disclosure.opportunities.hiveEngineLiquidity.apy.unit, "fraction-per-year");
+  assert.match(disclosure.opportunities.hiveEngineLiquidity.apy.denomination, /SWAP\.HIVE:DEC/u);
+  assert.equal(disclosure.opportunities.hiveEngineLiquidity.liquidity.capacity.totalShares, "300");
+  assert.ok(disclosure.opportunities.hiveEngineLiquidity.changedRisks.includes("impermanent loss"));
+  assert.equal(disclosure.opportunities.hiveEngineLiquidity.exit.operation, "Hive Engine marketpools removeLiquidity");
+  assert.equal(disclosure.opportunities.hiveEngineLiquidity.freshness.provenance.length, 1);
+  assert.equal(disclosure.opportunities.executionAuthority, false);
   assert.ok(disclosure.unknowns.some(({ subject, component }) => subject === "urn:ame:wallet:sigmund" && component === "verifiedTokens"));
   assert.ok(disclosure.unknowns.some(({ chain, component }) => chain === "eip155:42161" && component === "chain"));
   assert.ok(disclosure.unknowns.some(({ chain, component }) =>
@@ -176,6 +206,7 @@ test("preserves entered-market and health refusal as unknown", async () => {
     at: AT,
     fleet,
     reportPortfolio,
+    observeHiveOpportunity,
     store: { record: async () => {} },
     observeHealth: async (_request, { readPool }) => {
       assert.equal(typeof readPool.requestAtBoundary, "function");
@@ -211,6 +242,7 @@ test("installed upstream pool fails over once at the exact boundary and never mi
     at: AT,
     fleet,
     reportPortfolio,
+    observeHiveOpportunity,
     store: { record: async () => {} },
     readPoolOptions: {
       maxAttemptsPerProvider: 1,

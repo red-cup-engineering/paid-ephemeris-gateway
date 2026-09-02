@@ -44,8 +44,14 @@ export async function procureFixedForkBeefyVaultExits(request, options = {}) {
     requestDigest: observation.requestDigest,
     providerObservation: observation.id, providerProjection: provider.projection?.digest ?? null,
     block: observation.block, blockHash: observation.blockHash, candidateCount: observation.candidateCount,
-    candidates: observation.candidates.map(({ candidateId, outputs, fee }) => ({ candidateId, outputs,
-      totalFeeWeiCeil: fee.totalFeeWeiCeil })), recordedAt,
+    candidates: observation.candidates.map((candidate) => ({
+      candidateId: candidate.candidateId,
+      outputs: candidate.outputs,
+      ...(candidate.fee == null ? {} : { totalFeeWeiCeil: candidate.fee.totalFeeWeiCeil }),
+      ...(candidate.fullConversion == null ? {} : { fullConversion: candidate.fullConversion }),
+      ...(candidate.repayment == null ? {} : { repayment: candidate.repayment }),
+      ...(candidate.health == null ? {} : { health: candidate.health }),
+    })), recordedAt,
     decisionBoundary: { fixedForkEvidenceOnly: true, priceEvidenceComplete: false,
       executionAdmitted: false, transactionAssembly: false, outputCalldata: false, signing: false,
       broadcast: false, chainMutation: false } };

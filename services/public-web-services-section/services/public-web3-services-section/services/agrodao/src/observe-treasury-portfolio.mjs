@@ -242,7 +242,7 @@ export async function observeTreasuryPortfolio({
   });
   const [solana, hiveEngineLiquidity] = await Promise.all([
     observeSolanaPortfolio({ at, ...solanaOptions }),
-    observeHiveOpportunity({ account: "michael561", baseSymbol: "SWAP.HIVE", quoteSymbol: "DEC" }, {
+    observeHiveOpportunity({ account: "michael561", baseSymbol: "ZING", quoteSymbol: "SWAP.HIVE" }, {
       now: () => new Date(at),
       ...hiveOpportunityOptions,
     }),

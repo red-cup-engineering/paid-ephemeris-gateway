@@ -140,7 +140,7 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
   assert.equal(disclosure.opportunities.enrollment.status, "public-observation-enrolled");
   assert.equal(disclosure.opportunities.hiveEngineLiquidity.apy.value, null);
   assert.equal(disclosure.opportunities.hiveEngineLiquidity.apy.unit, "fraction-per-year");
-  assert.match(disclosure.opportunities.hiveEngineLiquidity.apy.denomination, /SWAP\.HIVE:DEC/u);
+  assert.match(disclosure.opportunities.hiveEngineLiquidity.apy.denomination, /ZING:SWAP\.HIVE/u);
   assert.equal(disclosure.opportunities.hiveEngineLiquidity.liquidity.capacity.totalShares, "300");
   assert.ok(disclosure.opportunities.hiveEngineLiquidity.changedRisks.includes("impermanent loss"));
   assert.equal(disclosure.opportunities.hiveEngineLiquidity.exit.operation, "Hive Engine marketpools removeLiquidity");

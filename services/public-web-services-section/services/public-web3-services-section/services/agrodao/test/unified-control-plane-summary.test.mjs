@@ -7,16 +7,16 @@ function treasuryDisclosure() {
   return { id: "ni:///sha-256;portfolio", opportunities: {
     enrollment: { account: "michael561", status: "public-observation-enrolled" },
     hiveEngineLiquidity: {
-      type: "NormalizedEarningOpportunity", id: "hive-engine:marketpools:SWAP.HIVE:DEC:michael561",
+      type: "NormalizedEarningOpportunity", id: "hive-engine:marketpools:ZING:SWAP.HIVE:michael561",
       chain: "hive:mainnet/hive-engine", account: "michael561", provider: "Hive Engine marketpools",
-      mechanism: "constant-product liquidity provision", underlyings: ["SWAP.HIVE", "DEC"],
+      mechanism: "constant-product liquidity provision", underlyings: ["ZING", "SWAP.HIVE"],
       apy: { availability: "unavailable", value: null, unit: "fraction-per-year",
-        denomination: "SWAP.HIVE:DEC pool-share value", method: "fee series unavailable",
+        denomination: "ZING:SWAP.HIVE pool-share value", method: "fee series unavailable",
         reason: "the public table has no time-bounded fee series" },
-      liquidity: { capacity: { "SWAP.HIVE": "100", DEC: "200", totalShares: "300" },
-        accountAvailable: { "SWAP.HIVE": "1", DEC: "2" } },
+      liquidity: { capacity: { ZING: "100", "SWAP.HIVE": "200", totalShares: "300" },
+        accountAvailable: { ZING: "1", "SWAP.HIVE": "2" } },
       changedRisks: ["impermanent loss", "sidechain availability"],
-      exit: { operation: "Hive Engine marketpools removeLiquidity", receives: ["SWAP.HIVE", "DEC"],
+      exit: { operation: "Hive Engine marketpools removeLiquidity", receives: ["ZING", "SWAP.HIVE"],
         constraints: ["separate active-authority transaction"] },
       freshness: { observedAt: "2026-09-01T22:30:00.000Z", chainBoundary: { blockNumber: 1 },
         provenance: [{ endpoint: "https://api.hive-engine.com/rpc/contracts", method: "find" }] },
@@ -49,8 +49,8 @@ test("compares the normalized Hive opportunity with the full fixed-fork recovery
     fixedForkObservation: fixedForkObservation() });
   assert.equal(summary.opportunities[0].account, "michael561");
   assert.equal(summary.opportunities[0].apy.value, null);
-  assert.equal(summary.opportunities[0].apy.denomination, "SWAP.HIVE:DEC pool-share value");
-  assert.deepEqual(summary.opportunities[0].capacity, { "SWAP.HIVE": "100", DEC: "200", totalShares: "300" });
+  assert.equal(summary.opportunities[0].apy.denomination, "ZING:SWAP.HIVE pool-share value");
+  assert.deepEqual(summary.opportunities[0].capacity, { ZING: "100", "SWAP.HIVE": "200", totalShares: "300" });
   assert.equal(summary.recoveries[0].fullConversion.cbbtcReceivedSats, "99558");
   assert.equal(summary.recoveries[0].repayment.debtAfterSats, "175010");
   assert.equal(summary.recoveries[0].health.targetHealthFactorWad, "1200000000000000000");
@@ -69,4 +69,3 @@ test("refuses widened execution authority or incomplete repayment evidence", () 
   assert.throws(() => summarizeUnifiedAgroControlPlane({ treasuryDisclosure: treasuryDisclosure(),
     fixedForkObservation: incomplete }), /lacks conserved/u);
 });
-

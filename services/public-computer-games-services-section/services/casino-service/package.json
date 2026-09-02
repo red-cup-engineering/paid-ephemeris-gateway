@@ -38,7 +38,7 @@
     "@red-cup-engineering/energy-bank": "^0.3.0",
     "@red-cup-engineering/parlor-kernel": "^0.3.0",
     "@red-cup-engineering/qwzspace": "^0.6.0",
-    "@red-cup-engineering/resonator": "^0.2.0"
+    "@red-cup-engineering/resonator": "0.2.1"
   },
   "exports": {
     "./economy/config": "./src/economy/config.mts",

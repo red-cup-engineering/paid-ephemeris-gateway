@@ -43,22 +43,60 @@ const WEB_ROOT = path.join(ROOT, 'web');
  *  passthrough — no path-traversal surface to reason about. */
 const CARD_TABLE_SVG_PATH = path.join(ROOT, 'node_modules', '@red-cup-engineering', 'card-table', 'src', 'svg.mjs');
 
-/** The spectacle client's two fresh house engines, vendored by DIRECTORY rather than one exact
+/** The spectacle client's fresh house engines, vendored by DIRECTORY rather than one exact
  *  file (contrast `CARD_TABLE_SVG_PATH` above): unlike `card-table/svg.mjs` ("no imports of its
- *  own"), qwzspace's and resonator's own subpath modules import EACH OTHER by relative path
- *  within their own `src/` tree (`render-loop.mjs` imports `./project.mjs`, resonator's
- *  `game/ambient.mjs` imports `../voice/presets.mjs`, etc.) — serving one file in isolation would
- *  leave the browser unable to resolve those sibling imports. Mapping `/vendor/<pkg>/<rest>` onto
- *  `<package>/src/<rest>` one-for-one lets every one of those relative imports resolve exactly the
- *  way they do inside `node_modules` itself, while `resolveInside` (the same traversal guard the
- *  static lobby file server already uses below) keeps this scoped to each package's own `src/`
- *  directory — no path outside it is ever reachable through this route. `.mjs` only: these
- *  packages ship a `.d.ts` beside every module, and a browser has no use for either the types or
- *  any non-JS file in the tree. */
+ *  own"), qwzspace's, resonator's, and music-engineering-services-section's own subpath modules
+ *  import EACH OTHER by relative path within their own `src/` tree (`render-loop.mjs` imports
+ *  `./project.mjs`, resonator's `game/ambient.mjs` imports `../voice/presets.mjs`, etc.) — serving
+ *  one file in isolation would leave the browser unable to resolve those sibling imports. Mapping
+ *  `/vendor/<pkg>/<rest>` onto `<package>/src/<rest>` one-for-one lets every one of those relative
+ *  imports resolve exactly the way they do inside `node_modules` itself, while `resolveInside`
+ *  (the same traversal guard the static lobby file server already uses below) keeps this scoped to
+ *  each package's own `src/` directory — no path outside it is ever reachable through this route.
+ *  `.mjs` only: these packages ship a `.d.ts` beside every module, and a browser has no use for
+ *  either the types or any non-JS file in the tree.
+ *
+ *  `music-engineering-services-section` is vendored here too, not because the browser imports it
+ *  directly, but because resonator's own game kit (`game/ambient.mjs`, `game/library.mjs`,
+ *  `game/primitives.mjs`, `game/cue.mjs`, `game/anticipation.mjs`) and `voice/voice.mjs` now
+ *  import its `generative/*.mjs` modules by BARE npm specifier
+ *  (`@red-cup-engineering/music-engineering-services-section/src/generative/random.mjs` etc. —
+ *  the transitive dependency this package's own dedup onto that shelf's generative core left
+ *  behind). A browser has no bare-specifier resolution at all; `rewriteVendorImports` below is
+ *  the resolve step that turns each such specifier into this same `/vendor/<pkg>/<rest>` route
+ *  on the way out, so the transitive import resolves exactly like every other vendored sibling
+ *  import already does. */
 const VENDOR_ROOTS: Readonly<Record<string, string>> = {
   qwzspace: path.join(ROOT, 'node_modules', '@red-cup-engineering', 'qwzspace', 'src'),
   resonator: path.join(ROOT, 'node_modules', '@red-cup-engineering', 'resonator', 'src'),
+  'music-engineering-services-section': path.join(
+    ROOT,
+    'node_modules',
+    '@red-cup-engineering',
+    'music-engineering-services-section',
+    'src',
+  ),
 };
+
+/** Matches a bare-specifier `from '@red-cup-engineering/<pkg>/src/<rest>'` (or `"`-quoted) inside
+ *  a vendored `.mjs` file's `import`/`export * as` statements. */
+const BARE_VENDOR_IMPORT = /(from\s+['"])@red-cup-engineering\/([a-z0-9-]+)\/src\/([^'"]+)(['"])/g;
+
+/**
+ * Rewrites bare `@red-cup-engineering/<pkg>/src/<rest>` import specifiers in vendored `.mjs`
+ * source text into this server's own `/vendor/<pkg>/<rest>` route, so a transitive npm
+ * dependency between two vendored packages resolves in a plain browser exactly as it does
+ * under Node. A specifier naming a package that is not itself a `VENDOR_ROOTS` entry is left
+ * untouched — this is a targeted resolve step over known vendored siblings, never a general
+ * bundler resolution pass.
+ * @param {string} source - the `.mjs` file's text content
+ * @returns {string} the same text with every resolvable bare vendor import rewritten
+ */
+function rewriteVendorImports(source: string): string {
+  return source.replace(BARE_VENDOR_IMPORT, (whole, prefix: string, pkg: string, rest: string, quote: string) =>
+    VENDOR_ROOTS[pkg] === undefined ? whole : `${prefix}/vendor/${pkg}/${rest}${quote}`,
+  );
+}
 
 const HOST = process.env.HOST ?? '127.0.0.1';
 const PORT = Number(process.env.PORT ?? 8880);
@@ -386,9 +424,9 @@ const server = createServer(async (req, res) => {
           const filePath = resolveInside(root, relPath);
           if (filePath !== null) {
             try {
-              const raw = await readFile(filePath);
+              const raw = await readFile(filePath, 'utf8');
               res.writeHead(200, { ...SECURITY_HEADERS, 'content-type': 'text/javascript; charset=utf-8' });
-              res.end(raw);
+              res.end(rewriteVendorImports(raw));
               return;
             } catch (err) {
               if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;

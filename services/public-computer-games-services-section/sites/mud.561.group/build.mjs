@@ -5,11 +5,13 @@
  * edited, by this script -- npm run generate-catalog produces it (see scripts/).
  */
 
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderTufteFragment } from '@red-cup-engineering/web-tufte-gui-services-section';
-import { catalogModel } from './js/catalog.mjs';
+import { esc } from '@red-cup-engineering/games-catalog-storefront';
+import { catalogModel, liveSubdomainsFromProbes } from './js/catalog.mjs';
+import { gamePageHtml, gamePagePath } from './js/game-page.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
@@ -23,6 +25,21 @@ function offlineNote(entries) {
     has billing permanently off (founder-ruled 2026-08-31), so their Cloud Run origins are
     permanently retired. Routing is correct; each entry returns as its free-lane migration
     lands. This is not a bug in the listing.</p>`;
+}
+
+/** The one link from the directory to each entry's own /games/<id>/ detail page -- the
+ *  per-game listing the README already claims. Deliberately separate from the TUFTE tile
+ *  grid (shared with play.561.group, which carries no such pages) rather than reaching into
+ *  shared-package tile markup. */
+function gamePagesNavHtml(entries) {
+  if (entries.length === 0) return '';
+  const items = entries
+    .map((e) => `<li><a href="${esc(gamePagePath(e))}">${esc(e.displayName)}</a></li>`)
+    .join('');
+  return `<nav class="game-pages-nav" aria-labelledby="game-pages-heading">
+    <h2 id="game-pages-heading">Per-game pages</h2>
+    <ul>${items}</ul>
+  </nav>`;
 }
 
 function indexHtml(gridFragment, entries) {
@@ -57,6 +74,7 @@ function indexHtml(gridFragment, entries) {
     ${offlineNote(entries)}
     <p class="result-count" id="result-count">${entries.length} world${entries.length === 1 ? '' : 's'}</p>
     <div class="catalog-grid-wrap" id="catalog-grid" role="region" aria-label="MUD and MMO catalog">${gridFragment}</div>
+    ${gamePagesNavHtml(entries)}
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
@@ -73,16 +91,33 @@ function indexHtml(gridFragment, entries) {
 `;
 }
 
+/** Writes `games/<entry.id>/index.html` for one catalog entry -- its full declared
+ *  entryPoints, dated liveness, and how-to-join. Same probe-derived `liveSubdomains` set the
+ *  index page's tiles are gated by, so a game's primary play link agrees on both pages. */
+async function writeGamePage(entry, liveSubdomains) {
+  const dir = path.join(ROOT, gamePagePath(entry));
+  await mkdir(dir, { recursive: true });
+  await writeFile(path.join(dir, 'index.html'), gamePageHtml(entry, liveSubdomains));
+}
+
 async function build() {
   const catalog = JSON.parse(await readFile(path.join(ROOT, 'catalog.json'), 'utf8'));
   const entries = Array.isArray(catalog.games) ? catalog.games : [];
   const fragment = renderTufteFragment(catalogModel(entries));
   await writeFile(path.join(ROOT, 'index.html'), indexHtml(fragment, entries));
   process.stdout.write(`build.mjs: wrote index.html (${fragment.length} bytes of grid, ${entries.length} entries)\n`);
+
+  const liveSubdomains = liveSubdomainsFromProbes(entries);
+  for (const entry of entries) {
+    // Sequential: a three-to-a-dozen-entry directory's build step, not a hot path -- matches
+    // scripts/build-mud-catalog.mjs's own sequential-for-readable-output convention.
+    await writeGamePage(entry, liveSubdomains);
+  }
+  process.stdout.write(`build.mjs: wrote ${entries.length} per-game page(s) under games/<id>/\n`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   await build();
 }
 
-export { build, indexHtml };
+export { build, indexHtml, gamePagesNavHtml, writeGamePage };

@@ -1,6 +1,6 @@
 {
   "$schemaNote": "mud.561.group's own catalog.json: exactly play.561.group's catalog.json entries whose keywords match catalog-filter.json's includeIfAnyKeyword, each carrying an additional liveProbe result (a real, dated HTTP check of its own playUrl -- see scripts/build-mud-catalog.mjs#probeEntry). Never hand-edit; regenerate with npm run generate-catalog.",
-  "generated": "2026-08-31",
+  "generated": "2026-09-02",
   "games": [
     {
       "id": "farstone",
@@ -35,10 +35,10 @@
       "shelf": "Deep",
       "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/sites/farstone.561.group",
       "liveProbe": {
-        "checkedAt": "2026-08-31T22:42:35.186Z",
+        "checkedAt": "2026-09-02T08:03:05.806Z",
         "url": "https://farstone.561.group/",
-        "httpStatus": 500,
-        "ok": false,
+        "httpStatus": 200,
+        "ok": true,
         "error": null
       }
     },
@@ -72,7 +72,7 @@
       "shelf": "unshelved",
       "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/services/aletheon-services-section",
       "liveProbe": {
-        "checkedAt": "2026-08-31T22:42:36.340Z",
+        "checkedAt": "2026-09-02T08:03:06.991Z",
         "url": "https://aletheon.561.group/",
         "httpStatus": 500,
         "ok": false,
@@ -114,10 +114,10 @@
       "shelf": "Deep",
       "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/services/tidepool-services-section/sites/tidepool.emsenn.net",
       "liveProbe": {
-        "checkedAt": "2026-08-31T22:42:36.771Z",
+        "checkedAt": "2026-09-02T08:03:07.543Z",
         "url": "https://tidepool.561.group/",
-        "httpStatus": 500,
-        "ok": false,
+        "httpStatus": 200,
+        "ok": true,
         "error": null
       }
     }

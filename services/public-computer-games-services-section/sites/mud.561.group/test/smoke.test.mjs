@@ -22,16 +22,36 @@ test('catalog.json on disk lists only entries matching catalog-filter.json, each
   }
 });
 
-test('index.html renders one tile per catalog.json entry and loads no remote asset', async () => {
+test('index.html renders one tile per catalog.json entry, links its per-game page, and loads no remote asset', async () => {
   const [catalog, html] = await Promise.all([
     readFile(path.join(ROOT, 'catalog.json'), 'utf8').then(JSON.parse),
     readFile(path.join(ROOT, 'index.html'), 'utf8'),
   ]);
   for (const game of catalog.games) {
     assert.ok(html.includes(game.displayName), `index.html is missing a tile for ${game.displayName}`);
+    assert.ok(html.includes(`games/${game.id}/`), `index.html is missing a per-game link for ${game.id}`);
   }
   assert.doesNotMatch(html, /<script[^>]+src="https?:/);
   assert.doesNotMatch(html, /<link[^>]+href="https?:/);
+});
+
+test('games/<id>/index.html exists on disk for every catalog entry, carrying its full declared entry-point surface and a dated liveness readout', async () => {
+  const catalog = await readFile(path.join(ROOT, 'catalog.json'), 'utf8').then(JSON.parse);
+  for (const game of catalog.games) {
+    const html = await readFile(path.join(ROOT, 'games', game.id, 'index.html'), 'utf8');
+    assert.match(html, new RegExp(`<h1>${game.displayName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</h1>`));
+    for (const kind of Object.keys(game.entryPoints || {})) {
+      assert.ok(html.includes(`<dt>${kind}</dt>`), `games/${game.id}/index.html is missing its "${kind}" entry point`);
+    }
+    if (game.liveProbe) {
+      assert.ok(html.includes(game.liveProbe.checkedAt), `games/${game.id}/index.html is missing its dated liveProbe.checkedAt`);
+      if (!game.liveProbe.ok) {
+        assert.match(html, /GCP project has billing permanently off/);
+      }
+    }
+    assert.doesNotMatch(html, /<script[^>]+src="https?:/);
+    assert.doesNotMatch(html, /<link[^>]+href="https?:/);
+  }
 });
 
 test('serve.mjs serves index.html, catalog.json, catalog-filter.json, and css over real HTTP', async () => {
@@ -61,6 +81,13 @@ test('serve.mjs serves index.html, catalog.json, catalog-filter.json, and css ov
     const cssRes = await fetch(`${base}/css/style.css`);
     assert.equal(cssRes.status, 200);
     assert.match(cssRes.headers.get('content-type') ?? '', /text\/css/);
+
+    const catalog = (await (await fetch(`${base}/catalog.json`)).json());
+    for (const game of catalog.games) {
+      const gamePageRes = await fetch(`${base}/games/${game.id}/`);
+      assert.equal(gamePageRes.status, 200, `games/${game.id}/ did not return HTTP 200`);
+      assert.match(await gamePageRes.text(), new RegExp(`<h1>${game.displayName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</h1>`));
+    }
 
     const missingRes = await fetch(`${base}/does-not-exist.html`);
     assert.equal(missingRes.status, 404);

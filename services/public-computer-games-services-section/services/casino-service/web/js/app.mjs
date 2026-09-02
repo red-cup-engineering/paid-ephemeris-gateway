@@ -4,6 +4,8 @@
 
 const CLIENT_KEY_STORAGE = 'cowrie-casino-client-key';
 let token = null;
+let accountId = null;
+let isDurableAccount = false;
 
 function clientKey() {
   let key = localStorage.getItem(CLIENT_KEY_STORAGE);
@@ -87,10 +89,58 @@ async function renderBundles() {
   }
 }
 
+function accountMessage(message) {
+  setText('account-message', message);
+}
+
+function showAccountPanels(showLinkGuest) {
+  document.getElementById('link-guest-btn')?.toggleAttribute('hidden', !showLinkGuest);
+  document.getElementById('friends-panel')?.removeAttribute('hidden');
+}
+
+async function renderFriends() {
+  const list = document.getElementById('friends-list');
+  if (!list || !isDurableAccount) return;
+  const { friends } = await api('/friends');
+  list.innerHTML = '';
+  if (friends.length === 0) {
+    const li = document.createElement('li');
+    li.textContent = 'No friends yet — add one by handle above.';
+    list.appendChild(li);
+    return;
+  }
+  for (const friendAccountId of friends) {
+    const li = document.createElement('li');
+    const name = document.createElement('span');
+    name.textContent = friendAccountId;
+    const gift = document.createElement('button');
+    gift.type = 'button';
+    gift.textContent = 'Gift 1 ticket';
+    gift.addEventListener('click', async () => {
+      gift.disabled = true;
+      try {
+        // account ids are "casino:account-<handle-slug>" — the slug after the last "-" split
+        // is close enough for a v1 gift button (a full handle registry is later-pass work).
+        const handle = friendAccountId.replace(/^casino:account-/, '');
+        const result = await api('/friends/gift', { method: 'POST', body: JSON.stringify({ handle, amount: 1 }) });
+        accountMessage(`Gifted 1 ticket to ${friendAccountId}.`);
+        renderBalances(result.status);
+      } catch (err) {
+        accountMessage(err.message);
+      } finally {
+        gift.disabled = false;
+      }
+    });
+    li.append(name, gift);
+    list.appendChild(li);
+  }
+}
+
 async function boot() {
   try {
     const session = await api('/session', { method: 'POST', body: JSON.stringify({ clientKey: clientKey() }) });
     token = session.token;
+    accountId = session.accountId;
     setText('identity-status', `Playing as guest ${session.accountId}.`);
     await refreshBalances();
     await renderBundles();
@@ -98,6 +148,51 @@ async function boot() {
     setText('identity-status', `Could not reach the casino: ${err.message}`);
   }
 }
+
+document.getElementById('login-form')?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const handle = document.getElementById('login-handle')?.value.trim();
+  const secret = document.getElementById('login-secret')?.value ?? '';
+  if (!handle) { accountMessage('Enter a handle first.'); return; }
+  try {
+    const login = await api('/login', { method: 'POST', body: JSON.stringify({ handle, secret }) });
+    token = login.token;
+    accountId = login.accountId;
+    isDurableAccount = true;
+    setText('identity-status', `Logged in as ${login.accountId}${login.created ? ' (just claimed)' : ''}.`);
+    accountMessage(login.created ? 'Handle claimed — remember your passphrase, it is your claim code.' : 'Welcome back.');
+    showAccountPanels(true);
+    renderBalances(login.status);
+    await renderFriends();
+  } catch (err) {
+    accountMessage(err.message);
+  }
+});
+
+document.getElementById('link-guest-btn')?.addEventListener('click', async () => {
+  try {
+    const result = await api('/claim-account', { method: 'POST', body: JSON.stringify({ clientKey: clientKey() }) });
+    accountMessage(result.migrated ? 'Guest tickets/chips linked into this account.' : 'Nothing to link (no guest progress found).');
+    renderBalances(result.status);
+    document.getElementById('link-guest-btn')?.setAttribute('hidden', '');
+  } catch (err) {
+    accountMessage(err.message);
+  }
+});
+
+document.getElementById('add-friend-form')?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const handle = document.getElementById('friend-handle')?.value.trim();
+  if (!handle) { accountMessage('Enter a friend\'s handle first.'); return; }
+  try {
+    await api('/friends/add', { method: 'POST', body: JSON.stringify({ handle }) });
+    accountMessage(`Added ${handle} as a friend.`);
+    document.getElementById('friend-handle').value = '';
+    await renderFriends();
+  } catch (err) {
+    accountMessage(err.message);
+  }
+});
 
 document.getElementById('claim-tickets-btn')?.addEventListener('click', async () => {
   try {

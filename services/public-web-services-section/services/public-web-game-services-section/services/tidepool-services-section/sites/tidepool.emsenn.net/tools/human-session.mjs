@@ -1,20 +1,13 @@
 #!/usr/bin/env node
-// human-session — a scripted stand-in for the "connect as a human via the web face" leg of the
+// human-session — a scripted stand-in for the "connect as a human via the web face" leg of a
 // mixed-session deploy test. Speaks the IDENTICAL wire protocol the real browser client speaks
-// (web/app.js imports connectRoom from the same client.mjs this file's client-node.mjs wraps —
-// see web/app.js's own header comment: `client.sendIntent("command", { command: inputValue })`
-// is exactly what this script's own sendIntent calls do). No headless browser was available in
-// this environment (and installing one would violate the house zero-external-runtime-deps
-// rule), so this is disclosed honestly as protocol-identical scripted play, not literal DOM
-// automation — the real web/index.html + app.js + vendor/qwzspace bundle were separately
-// verified to serve correctly (frontdoor-walk, 0 MISS/0 BADMIME) as evidence the web face itself
-// is real and reachable.
-//
-// This is a fixed narrative script (deliberate pacing, not a policy function) — the "human"
-// player of the mixed session, distinct from the two zero-LLM reference agents run alongside it.
+// (src/web/tidepool-client.mjs's own `client.sendIntent("command", { command })`) — no headless
+// browser available in this environment, so this is disclosed as protocol-identical scripted
+// play, not literal DOM automation. A fixed narrative script (deliberate pacing, not a policy
+// function) — the "human" player of a mixed session, distinct from the zero-LLM reference bots.
 
 import process from "node:process";
-import { connectRoomOverAnyScheme as connectRoom } from "../agents/ws-transport.mjs";
+import { connectRoom } from "@red-cup-engineering/qwzspace/client-node";
 
 const NAME = process.argv[2] ?? process.env["TIDEPOOL_HUMAN_NAME"] ?? "morgan";
 const url = process.env["TIDEPOOL_WS_URL"] ?? "ws://127.0.0.1:18830/";

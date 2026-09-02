@@ -13,8 +13,8 @@ import { closeMudHttpServer, listenMudHttpServer } from "@red-cup-engineering/fe
 import { IAC, SB, SE } from "@red-cup-engineering/feltos/telnet";
 import { FARSTONE_GAME } from "./farstone-game.mts";
 import { createFarstoneRoom } from "./farstone-room.mts";
-import { createWorldRuntime } from "./world-runtime.mts";
-import { createFarstoneHttpServer } from "./http-wiring.mts";
+import { createWorldRuntime } from "@red-cup-engineering/world-hosting/world-runtime";
+import { createWorldHttpServer } from "@red-cup-engineering/world-hosting/http-wiring";
 import { listenFarstoneTelnet, pushFarstoneTelnetUpdates } from "./telnet-wiring.mts";
 import type { FarstoneTelnetServer } from "./telnet-wiring.mts";
 
@@ -117,7 +117,7 @@ async function withLiveServer(
     },
   );
   await runtime.preRequestCatchUp();
-  const httpServer = createFarstoneHttpServer(mud, runtime, { tickIntervalMs: TICK_MS, room });
+  const httpServer = createWorldHttpServer(mud, runtime, { tickIntervalMs: TICK_MS, room, processLabel: "Farstone" });
   const { origin } = await listenMudHttpServer(httpServer, { host: "127.0.0.1", port: 0 });
   await warmUpLocalPort(origin);
   telnet = await listenFarstoneTelnet(mud, runtime, { host: "127.0.0.1", port: 0, catchUpIntervalMs: TICK_MS });

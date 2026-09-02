@@ -10,8 +10,6 @@ import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-
-const rscValueId = (value, objectKind) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 import { querySettlementRecords, recordSettlementRecord } from "@red-cup-engineering/witness-journal-document-service";
 
 import CONFIG from "../content/config/platform-node-admission-receiver.json" with { type: "json" };
@@ -48,7 +46,7 @@ export class PlatformNodeAdmissionError extends Error {
 }
 
 export function semanticDigest(value) {
-  return rscValueId(value, "rsc-quiescent.platform-node-admission-record");
+  return identifyJsonSemanticContent({ objectKind: "rsc-quiescent.platform-node-admission-record", value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 }
 
 export function identify(body) {

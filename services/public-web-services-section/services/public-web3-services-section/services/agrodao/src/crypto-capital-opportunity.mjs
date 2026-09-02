@@ -1,13 +1,4 @@
-import {
-  EMPTY_WITNESS_ROOT,
-  identifyJsonSemanticContent,
-} from "@red-cup-engineering/semantic-content-identify-service";
-
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({
-  objectKind,
-  value,
-  witnessRoot: EMPTY_WITNESS_ROOT,
-}).token;
+import { semanticIdentity } from "./semantic-identity.mjs";
 
 export const CRYPTO_CAPITAL_OPPORTUNITY_PROFILE =
   "org.emsenn.agrodao.crypto-capital-opportunity.v1";

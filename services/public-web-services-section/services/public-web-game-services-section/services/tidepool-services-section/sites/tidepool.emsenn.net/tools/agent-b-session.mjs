@@ -1,19 +1,13 @@
 #!/usr/bin/env node
-// agent-b-session — the SECOND of the two concurrent agent players for the mixed-session deploy
-// test, run alongside the stock, zero-LLM `agents/reference-bot.mjs` (which proves the protocol
-// suffices for a program driven by affordances ALONE). This one is deliberately DIFFERENT: it
-// knows about `propose`/`support`/`enact` (cap-governance.mts) even though — a real finding,
-// see the deploy report's thinness list — those commands are NOT enumerated in
-// `frame.subjects[].affordances` the way every other verb is (perception.mts never lists them).
-// A pure affordance-driven player (the stock reference-bot, or an LLM given ONLY the frame)
-// could never discover governance exists at all. This script stands in for an LLM agent that
-// was given the verb list out of band (e.g. in a system prompt, per the design brief's own
-// documented adapter), same as this file was written from reading the source, not the frame —
-// which is exactly the gap being demonstrated, not hidden. Still zero LLM calls: fixed script,
-// same protocol, same `sendIntent("command", { command })` wire shape as every other client.
+// agent-b-session — the SECOND of two concurrent agent players for a mixed-session deploy test,
+// run alongside the stock, zero-LLM `agents/reference-bot.mjs` (which proves the protocol
+// suffices for a program driven by affordances ALONE). This one exercises `propose`/`support`/
+// `enact` (cap-governance.mts), enumerated at the weir in `perception.mts`'s own affordances —
+// same protocol, same `sendIntent("command", { command })` wire shape as every other client,
+// still zero LLM calls.
 
 import process from "node:process";
-import { connectRoomOverAnyScheme as connectRoom } from "../agents/ws-transport.mjs";
+import { connectRoom } from "@red-cup-engineering/qwzspace/client-node";
 
 const NAME = process.argv[2] ?? process.env["TIDEPOOL_BOT_NAME"] ?? "orrin";
 const url = process.env["TIDEPOOL_WS_URL"] ?? "ws://127.0.0.1:18830/";

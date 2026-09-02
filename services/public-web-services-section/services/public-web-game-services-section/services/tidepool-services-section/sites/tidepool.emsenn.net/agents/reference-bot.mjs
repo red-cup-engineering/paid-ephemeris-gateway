@@ -1,60 +1,15 @@
 #!/usr/bin/env node
-// TRANSPORT NOTE (2026-08-20, found running this bot against the real live deploy): connects via
-// `./ws-transport.mjs`'s `connectRoomOverAnyScheme`, not qwzspace's own `connectRoom` — see that
-// file's header for the real bug this works around (qwzspace's `client-node` transport cannot
-// actually do `wss://`, so this bot would silently never play against any real TLS deployment).
-//
-// reference-bot — the executable proof the agent protocol suffices for a PROGRAM, no LLM call
-// anywhere in this file (design §5.3 — "mirroring the stopped lane's own explicit ask"). It
-// speaks tidepool.protocol.v1 exactly the way any client does: connect, read the perception
-// frame handed back as its own qwzspace entity (design §2.1), parse
-// `frame.subjects[].affordances` (design §2.2's in-band affordance enumeration), pick ONE legal
-// verb, submit it as `{ command }` via the wire-identical `sendIntent("command", { command })`
-// path (design §2.3), and react to `frame.recentEvents`. Every decision below is either
-// deterministic or a plain `Math.random()` pick — nothing here is a model call, and nothing
-// here needs one: this is the load-bearing evidence that the wire protocol itself, not an LLM's
-// judgment, is what makes the world playable.
-//
-// TURN PACING: the bot acts AT MOST ONCE PER FRAME UPDATE — it waits for its own next "me" event
-// before submitting another intent, the same one-decision-per-turn discipline an LLM agent would
-// need (a model call is slow; nothing here should assume it can spam intents faster than a real
-// turn). ACTION_DELAY_MS adds a further pause on top, so a running bot's log is legible to a
-// human watching it play, not a flood.
-//
-// THE HEALTH-CHECK NUDGE, disclosed: Tidepool's world only advances on `preRequestCatchUp()`
-// (http-wiring.mts), fired by an incoming HTTP request or a WS upgrade — never on its own timer
-// (design §3: "the harbor sleeps between visitors"). A bot that only ever sends WS intents,
-// after its one upgrade-time catch-up, would sit forever with its own commands queued but never
-// applied — nothing else would ever visit to advance the clock. In a real deployment this is a
-// non-issue (Cloud Run health probes and real user traffic are themselves "visitors"); a
-// standalone bot has no such traffic, so it supplies its own, honestly (see NUDGE_MS below): a
-// periodic `GET /health` alongside its normal play — exactly the same kind of request an uptime
-// checker already sends in production, not a hidden protocol-level mechanism.
-//
-// === HOW A REAL LLM AGENT DRIVES THIS SAME SURFACE (the "thin adapter", documented per the
-// design brief) ===
-//   1. On every "me" frame update (exactly what `client.view.on("me", ...)` hands this bot
-//      below), serialize the frame's `place`, `occupants`, `subjects[].cells`/`.affordances`,
-//      `clock`, and `recentEvents` as structured context — the frame is already JSON, so this is
-//      literally `JSON.stringify(frame)` or a light prose transcription of it.
-//   2. Prompt the model once per turn: "here is what you perceive; here is what you may do to
-//      each thing you see (each subject's own affordances array); reply with exactly one command
-//      string." No tool schema is needed beyond "emit text matching one of the enumerated
-//      affordances as a verb, optionally with an argument" — the same one-grammar, human-
-//      typeable-and-program-emittable string this bot itself sends (design §2.3).
-//   3. Submit the model's reply exactly as this bot submits its own picks below:
-//      `client.sendIntent("command", { command: modelReply.trim() })`. `gameValidate` and
-//      feltos's own capability handlers already refuse anything malformed or impossible with a
-//      `message()` event back to the actor (this file's own `logEvents` already renders those the
-//      same as any other event) — an LLM's occasional bad guess costs nothing more than a normal
-//      player's typo would.
-//   4. Optionally feed `recentEvents` from the NEXT frame back into the model's running context
-//      as "what happened since your last turn" — exactly what this bot's own `logEvents` prints.
-//   That is the entire adapter: no other integration surface exists, or is needed, between the
-//   protocol and a model.
+// reference-bot — proves the agent protocol suffices for a PROGRAM, no LLM call anywhere here
+// (design §5.3). Connects, reads its own perception frame, picks ONE legal verb from
+// `frame.subjects[].affordances` (§2.2), submits it via `sendIntent("command", { command })`
+// (§2.3), reacts to `frame.recentEvents` — every choice below is deterministic or Math.random().
+// Acts at most once per "me" frame update (paced by ACTION_DELAY_MS) and self-nudges with a
+// periodic GET /health, since the world only advances on request-driven catch-up (§3) and a
+// WS-only bot alone would never trigger one. An LLM adapter over this surface: serialize the
+// frame, prompt for one command string, submit it exactly as this bot submits its own picks.
 
 import process from "node:process";
-import { connectRoomOverAnyScheme as connectRoom } from "./ws-transport.mjs";
+import { connectRoom } from "@red-cup-engineering/qwzspace/client-node";
 
 const HOST = process.env["TIDEPOOL_HOST"] ?? "127.0.0.1";
 const PORT = process.env["TIDEPOOL_PORT"] ?? "18830";

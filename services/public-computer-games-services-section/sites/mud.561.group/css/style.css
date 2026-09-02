@@ -607,3 +607,68 @@ footer.site-footer {
   margin: 0 0 1rem;
   max-width: 46rem;
 }
+
+/* ---------- index.html's per-game-pages nav, and each games/<id>/ detail page ---------- */
+
+.game-pages-nav {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.game-pages-nav h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+}
+
+.game-pages-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main > section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+main > section h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.6rem;
+}
+
+.entry-points {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+}
+
+.entry-point {
+  display: contents;
+}
+
+.entry-points dt {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.entry-points dd {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--fg);
+}
+
+.how-to-join {
+  font-size: 0.95rem;
+}
+
+.offline-detail {
+  color: var(--badge-dev-fg);
+}

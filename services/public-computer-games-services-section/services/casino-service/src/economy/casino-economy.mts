@@ -14,9 +14,10 @@
  */
 import { createLedger } from '@red-cup-engineering/energy-bank/ledger';
 import type { Ledger, LedgerEntry } from '@red-cup-engineering/energy-bank/ledger';
-import { fundAccount, spendFromAccount } from '@red-cup-engineering/energy-bank/transfer';
+import { fundAccount, spendFromAccount, transferEnergy } from '@red-cup-engineering/energy-bank/transfer';
+import { hashSecret } from '@red-cup-engineering/energy-bank/accounts';
 import { checkAll } from '@red-cup-engineering/energy-bank/invariants';
-import { newPlayerRecord, casinoGuestId } from './accounts.mts';
+import { newPlayerRecord, casinoGuestId, casinoDurableId, migrateGuestPlayer, isGuest, AuthError } from './accounts.mts';
 import type { PlayerRecord, AccountId } from './accounts.mts';
 import { computeAccrual } from './accrual.mts';
 import { computeDailyBonus } from './daily-bonus.mts';
@@ -35,11 +36,16 @@ import {
   TICKET_ENTRY_SINK_ACCOUNT,
   CHIP_ISSUANCE_ACCOUNT,
   TABLE_BANKROLL_SEED_ACCOUNT,
+  NAMESPACE,
 } from './config.mts';
+
+export { AuthError };
 
 export interface CasinoEconomySnapshot {
   readonly ledgerEntries: readonly LedgerEntry[];
   readonly players: readonly PlayerRecord[];
+  /** Undirected friend edges, each pair written once (`a < b`) — see `addFriend`/`friendsOf`. */
+  readonly friendLinks?: readonly (readonly [AccountId, AccountId])[];
 }
 
 export interface BalanceStatus {
@@ -65,6 +71,9 @@ function nextRef(tag: string, accountId: AccountId): string {
 export class CasinoEconomy {
   readonly ledger: Ledger;
   private readonly players = new Map<AccountId, PlayerRecord>();
+  /** Undirected friend graph, durable accounts only — each edge recorded both directions so
+   *  either side's `friendsOf` is an O(1) lookup. See `addFriend`/`giftTicket`. */
+  private readonly friends = new Map<AccountId, Set<AccountId>>();
 
   constructor(ledger: Ledger = createLedger()) {
     this.ledger = ledger;
@@ -77,6 +86,15 @@ export class CasinoEconomy {
       this.players.set(accountId, record);
     }
     return record;
+  }
+
+  private linkFriend(accountId: AccountId, friendAccountId: AccountId): void {
+    let set = this.friends.get(accountId);
+    if (set === undefined) {
+      set = new Set();
+      this.friends.set(accountId, set);
+    }
+    set.add(friendAccountId);
   }
 
   private balanceOf(accountId: AccountId, commodity: string): number {
@@ -95,6 +113,86 @@ export class CasinoEconomy {
     const accountId = casinoGuestId(clientKey);
     this.playerFor(accountId);
     return accountId;
+  }
+
+  /**
+   * Log into (or claim) a durable handle with a passphrase — the handle+passphrase login this
+   * package's account seam (accounts.mts) was built for. First login for a handle sets its
+   * secret hash (`created: true`); a later login must supply the matching passphrase, or
+   * throws `AuthError`. This is the "claim code" a player re-presents from any device/session
+   * to reach the same durable account — no OAuth or email provider needed for this pass.
+   * @throws {AuthError} on an empty passphrase, or one that does not match an already-claimed handle
+   */
+  loginAccount(handle: string, secret: string, now: Date = new Date()): { accountId: AccountId; created: boolean; status: BalanceStatus } {
+    if (secret.trim() === '') throw new AuthError('an account needs a passphrase');
+    const accountId = casinoDurableId(handle);
+    const player = this.playerFor(accountId);
+    const hash = hashSecret(NAMESPACE, accountId, secret);
+    let created = false;
+    if (player.secretHash === null) {
+      player.secretHash = hash;
+      created = true;
+    } else if (player.secretHash !== hash) {
+      throw new AuthError('that passphrase does not match');
+    }
+    return { accountId, created, status: this.statusOf(accountId, now) };
+  }
+
+  /**
+   * Migrate a guest's non-ledger state and TICKET/CHIP ledger balances into a durable account,
+   * once. `migrated: false` (never a throw) covers every refusal: no such guest, a durable
+   * target that already shows progress, or the seam's own self-migration guard — see
+   * accounts.mts#migrateGuestPlayer, which decides the non-ledger half of this.
+   */
+  claimGuestIntoAccount(guestAccountId: AccountId, durableAccountId: AccountId, now: Date = new Date()): { migrated: boolean; status: BalanceStatus } {
+    const guest = this.players.get(guestAccountId);
+    if (guest === undefined) return { migrated: false, status: this.statusOf(durableAccountId, now) };
+    const migratedRecord = migrateGuestPlayer(guest, durableAccountId, this.players.get(durableAccountId));
+    if (migratedRecord === null) return { migrated: false, status: this.statusOf(durableAccountId, now) };
+    this.players.set(durableAccountId, migratedRecord);
+    this.players.delete(guestAccountId);
+    const date = this.dateStringAt(now);
+    for (const commodity of [TICKET, CHIP]) {
+      const amount = this.balanceOf(guestAccountId, commodity);
+      if (amount > 0) {
+        transferEnergy(this.ledger, guestAccountId, durableAccountId, String(amount), commodity, nextRef('migrate', durableAccountId), date);
+      }
+    }
+    return { migrated: true, status: this.statusOf(durableAccountId, now) };
+  }
+
+  /**
+   * Add a mutual friend link between two durable accounts — the friends list's whole shape:
+   * an undirected edge, no request/accept flow (a v1 minimal enough to gift a ticket against).
+   * @throws {RangeError} if either id is a guest account, or the two ids are the same account
+   */
+  addFriend(accountId: AccountId, friendAccountId: AccountId): { friends: readonly AccountId[] } {
+    if (isGuest(accountId) || isGuest(friendAccountId)) throw new RangeError('friends must be durable accounts — log in first');
+    if (accountId === friendAccountId) throw new RangeError('cannot friend yourself');
+    if (!this.players.has(friendAccountId)) throw new RangeError(`no account claimed at ${friendAccountId}`);
+    this.linkFriend(accountId, friendAccountId);
+    this.linkFriend(friendAccountId, accountId);
+    return { friends: this.friendsOf(accountId) };
+  }
+
+  /** The durable accounts `accountId` has friended, in no particular order. */
+  friendsOf(accountId: AccountId): readonly AccountId[] {
+    return [...(this.friends.get(accountId) ?? [])];
+  }
+
+  /**
+   * Gift TICKETs to a friend — the friends list's one concrete action. Requires an existing
+   * friend link (added by either side) and enough TICKETs to cover the gift; both accounts
+   * must be durable, matching `addFriend`'s own guard.
+   * @throws {RangeError} if either account is a guest, the two accounts are not friends, or the sender cannot cover `amount`
+   */
+  giftTicket(fromAccountId: AccountId, toAccountId: AccountId, amount = 1, now: Date = new Date()): { ticketsGifted: number; status: BalanceStatus } {
+    if (isGuest(fromAccountId) || isGuest(toAccountId)) throw new RangeError('gifting requires durable accounts — log in first');
+    if (!(this.friends.get(fromAccountId)?.has(toAccountId) ?? false)) throw new RangeError('not friends yet — add-friend first');
+    transferEnergy(this.ledger, fromAccountId, toAccountId, String(amount), TICKET, nextRef('gift', fromAccountId), this.dateStringAt(now), {
+      narration: `ticket gift: ${fromAccountId} -> ${toAccountId}`,
+    });
+    return { ticketsGifted: amount, status: this.statusOf(fromAccountId, now) };
   }
 
   /** Read-only status: current ticket/chip balances, ticket-accrual countdown, and today's
@@ -267,17 +365,27 @@ export class CasinoEconomy {
     return this.ledger.audit().journal;
   }
 
-  /** Snapshot both pieces of mutable state this economy owns, for persistence.mts. */
+  /** Snapshot every piece of mutable state this economy owns, for persistence.mts. Each
+   *  undirected friend edge is written once (`a < b`), not twice. */
   snapshot(): CasinoEconomySnapshot {
-    return { ledgerEntries: this.ledger.all(), players: [...this.players.values()] };
+    const friendLinks: [AccountId, AccountId][] = [];
+    for (const [accountId, friendSet] of this.friends) {
+      for (const friendAccountId of friendSet) if (accountId < friendAccountId) friendLinks.push([accountId, friendAccountId]);
+    }
+    return { ledgerEntries: this.ledger.all(), players: [...this.players.values()], friendLinks };
   }
 
   /** Rebuild a `CasinoEconomy` from a prior snapshot. The ledger is reconstructed from its raw
    *  entry list (the same "seed a ledger from an arbitrary initial list" path
-   *  `createLedger(initial)` documents); player records are restored by account id. */
+   *  `createLedger(initial)` documents); player records and friend edges are restored by
+   *  account id (`friendLinks` is optional so a pre-friends-list snapshot still loads). */
   static fromSnapshot(snapshot: CasinoEconomySnapshot): CasinoEconomy {
     const economy = new CasinoEconomy(createLedger(snapshot.ledgerEntries));
     for (const player of snapshot.players) economy.players.set(player.accountId, { ...player });
+    for (const [accountId, friendAccountId] of snapshot.friendLinks ?? []) {
+      economy.linkFriend(accountId, friendAccountId);
+      economy.linkFriend(friendAccountId, accountId);
+    }
     return economy;
   }
 }

@@ -4,8 +4,6 @@ import { fileURLToPath } from "node:url";
 
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
 
-const rscValueId = (value, objectKind) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
-
 import { admitEnterpriseInstall, revalidateEnterpriseInstall } from "../lib/management/skills/enforcing-mesh-scope/scripts/mesh-scope.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -30,7 +28,7 @@ const AUTHORIZATION_EVIDENCE = "ni:///sha-256;RESeSQCJgefaqMRTj9t9KIyrZcmFX-eXt6
 const AUTHORIZATION_ADMISSION = "ni:///sha-256;x4tE53Q2te6hEiXMyi1uoIqi2SJnE1JQEQS1lcyVZxU";
 
 function semanticDigest(value) {
-  return rscValueId(value, "rsc-quiescent.receiver-activation-record");
+  return identifyJsonSemanticContent({ objectKind: "rsc-quiescent.receiver-activation-record", value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 }
 
 function identify(body) {

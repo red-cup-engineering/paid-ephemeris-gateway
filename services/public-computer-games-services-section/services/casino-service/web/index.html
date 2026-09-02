@@ -22,6 +22,27 @@
       <p id="identity-status">Opening a table for you&hellip;</p>
     </section>
 
+    <section class="panel account" id="account-panel">
+      <form id="login-form">
+        <label for="login-handle">Handle</label>
+        <input type="text" id="login-handle" name="handle" autocomplete="username" placeholder="a name to log in with" />
+        <label for="login-secret">Passphrase</label>
+        <input type="password" id="login-secret" name="secret" autocomplete="current-password" placeholder="your claim code" />
+        <button id="login-btn" type="submit">Log in / claim handle</button>
+      </form>
+      <button id="link-guest-btn" type="button" hidden>Link this guest's tickets/chips into my account</button>
+      <p class="hint" id="account-message" role="status"></p>
+      <div id="friends-panel" hidden>
+        <h2>Friends</h2>
+        <form id="add-friend-form">
+          <label for="friend-handle">Friend's handle</label>
+          <input type="text" id="friend-handle" name="handle" placeholder="a friend's handle" />
+          <button id="add-friend-btn" type="submit">Add friend</button>
+        </form>
+        <ul id="friends-list"></ul>
+      </div>
+    </section>
+
     <section class="panel balances" aria-live="polite">
       <div class="stat">
         <span class="stat-label">Tickets</span>

@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { CasinoEconomy } from './casino-economy.mts';
+import { CasinoEconomy, AuthError } from './casino-economy.mts';
+import { casinoGuestId, casinoDurableId } from './accounts.mts';
 import { TICKET_ACCRUAL_CAP, TICKET_ACCRUAL_PERIOD_MS, BUY_IN_TICKET_COST, BUY_IN_CHIP_GRANT } from './config.mts';
 
 const T0 = new Date(Date.UTC(2026, 7, 29, 0, 0, 0));
@@ -168,4 +169,156 @@ test('snapshot/fromSnapshot: round-trips ledger and player state exactly', () =>
   // the restored economy remembers the daily bonus was already claimed today.
   const reclaim = restored.claimDailyBonus(account, T0);
   assert.equal(reclaim.claimed, false);
+});
+
+// ── durable-account login (accounts.mts's seam, wired) ─────────────────────────────────
+
+test('loginAccount: first login for a handle claims it and derives a durable id deterministically', () => {
+  const economy = new CasinoEconomy();
+  const login = economy.loginAccount('morgan', 'correct-horse', T0);
+  assert.equal(login.created, true);
+  assert.equal(login.accountId, economy.loginAccount('morgan', 'correct-horse', T0).accountId);
+});
+
+test('loginAccount: a later login with the same passphrase reconnects to the same account, created:false', () => {
+  const economy = new CasinoEconomy();
+  const first = economy.loginAccount('morgan', 'correct-horse', T0);
+  const second = economy.loginAccount('morgan', 'correct-horse', at(1000));
+  assert.equal(second.created, false);
+  assert.equal(second.accountId, first.accountId);
+});
+
+test('loginAccount: a mismatched passphrase throws AuthError, never silently logs in', () => {
+  const economy = new CasinoEconomy();
+  economy.loginAccount('morgan', 'correct-horse', T0);
+  assert.throws(() => economy.loginAccount('morgan', 'wrong-passphrase', T0), AuthError);
+});
+
+test('loginAccount: an empty passphrase throws AuthError', () => {
+  const economy = new CasinoEconomy();
+  assert.throws(() => economy.loginAccount('morgan', '', T0), AuthError);
+});
+
+test('loginAccount: balances survive a reconnect from a fresh session — the assay this route exists for', () => {
+  const economy = new CasinoEconomy();
+  const first = economy.loginAccount('morgan', 'correct-horse', T0);
+  economy.claimDailyBonus(first.accountId, T0);
+  const before = economy.statusOf(first.accountId, T0).tickets;
+  assert.ok(before > 0);
+  // a second, independent "session" reconnects with the same claim code (the passphrase).
+  const second = economy.loginAccount('morgan', 'correct-horse', at(1));
+  assert.equal(second.accountId, first.accountId);
+  assert.equal(second.status.tickets, before);
+});
+
+// ── guest -> durable migration, wired through the economy ──────────────────────────────
+
+test('claimGuestIntoAccount: folds a guest\'s ticket/chip balances and streak state into the durable account', () => {
+  const economy = new CasinoEconomy();
+  const guestKey = 'device-xyz';
+  const guestId = economy.guestAccount(guestKey);
+  economy.claimDailyBonus(guestId, T0); // grants a ticket, sets streak to 1
+  const guestTickets = economy.statusOf(guestId, T0).tickets;
+  assert.ok(guestTickets > 0);
+
+  const login = economy.loginAccount('morgan', 'correct-horse', T0);
+  const result = economy.claimGuestIntoAccount(guestId, login.accountId, T0);
+  assert.equal(result.migrated, true);
+  assert.equal(result.status.tickets, guestTickets);
+  assert.equal(result.status.dailyBonus.streak, 1);
+  // the guest's own balance is gone — it moved, not copied.
+  assert.equal(economy.statusOf(guestId, T0).tickets, 0);
+  assert.deepEqual(economy.checkInvariants(), []);
+});
+
+test('claimGuestIntoAccount: migrated:false, no throw, when there is no such guest', () => {
+  const economy = new CasinoEconomy();
+  const login = economy.loginAccount('morgan', 'correct-horse', T0);
+  const neverPlayedGuest = casinoGuestId('never-seen-device');
+  const result = economy.claimGuestIntoAccount(neverPlayedGuest, login.accountId, T0);
+  assert.equal(result.migrated, false);
+});
+
+test('claimGuestIntoAccount: refuses to clobber a durable account that already has its own progress', () => {
+  const economy = new CasinoEconomy();
+  const guestId = economy.guestAccount('device-xyz');
+  economy.claimDailyBonus(guestId, T0);
+  const login = economy.loginAccount('morgan', 'correct-horse', T0);
+  economy.claimDailyBonus(login.accountId, T0); // the durable account already has its own streak
+
+  const result = economy.claimGuestIntoAccount(guestId, login.accountId, T0);
+  assert.equal(result.migrated, false);
+  // the guest's own balance is untouched — nothing moved.
+  assert.ok(economy.statusOf(guestId, T0).tickets > 0);
+});
+
+// ── friends list + gift-a-ticket ────────────────────────────────────────────────────────
+
+test('addFriend: links two durable accounts mutually', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const b = economy.loginAccount('sam', 'secret-b', T0).accountId;
+  const result = economy.addFriend(a, b);
+  assert.deepEqual(result.friends, [b]);
+  assert.deepEqual(economy.friendsOf(b), [a]);
+});
+
+test('addFriend: refuses a guest account on either side', () => {
+  const economy = new CasinoEconomy();
+  const durable = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const guest = economy.guestAccount('device-xyz');
+  assert.throws(() => economy.addFriend(guest, durable), RangeError);
+  assert.throws(() => economy.addFriend(durable, guest), RangeError);
+});
+
+test('addFriend: refuses friending a handle nobody has claimed with a login yet', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const nobody = casinoDurableId('nobody');
+  assert.throws(() => economy.addFriend(a, nobody), RangeError);
+});
+
+test('giftTicket: moves a TICKET from one friend to another, ledger balanced', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const b = economy.loginAccount('sam', 'secret-b', T0).accountId;
+  economy.addFriend(a, b);
+  economy.claimDailyBonus(a, T0);
+  const before = economy.statusOf(a, T0).tickets;
+  assert.ok(before > 0);
+
+  const gift = economy.giftTicket(a, b, 1, T0);
+  assert.equal(gift.ticketsGifted, 1);
+  assert.equal(economy.statusOf(a, T0).tickets, before - 1);
+  assert.equal(economy.statusOf(b, T0).tickets, 1);
+  assert.deepEqual(economy.checkInvariants(), []);
+});
+
+test('giftTicket: refuses a gift between accounts that are not friends', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const b = economy.loginAccount('sam', 'secret-b', T0).accountId;
+  economy.claimDailyBonus(a, T0);
+  assert.throws(() => economy.giftTicket(a, b, 1, T0), RangeError);
+});
+
+test('giftTicket: refuses a gift the sender cannot cover (ledger\'s own no-negative-balance guard)', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const b = economy.loginAccount('sam', 'secret-b', T0).accountId;
+  economy.addFriend(a, b);
+  assert.throws(() => economy.giftTicket(a, b, 1, T0));
+});
+
+test('snapshot/fromSnapshot: a friend link survives a restart', () => {
+  const economy = new CasinoEconomy();
+  const a = economy.loginAccount('morgan', 'secret-a', T0).accountId;
+  const b = economy.loginAccount('sam', 'secret-b', T0).accountId;
+  economy.addFriend(a, b);
+
+  const restored = CasinoEconomy.fromSnapshot(economy.snapshot());
+  assert.deepEqual(restored.friendsOf(a), [b]);
+  assert.deepEqual(restored.friendsOf(b), [a]);
+  // and the restored durable account still requires the same passphrase.
+  assert.throws(() => restored.loginAccount('morgan', 'wrong', T0), AuthError);
 });

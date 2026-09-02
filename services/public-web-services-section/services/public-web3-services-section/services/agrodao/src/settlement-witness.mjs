@@ -1,8 +1,7 @@
 import { appendEntries, logPathFor } from "@red-cup-engineering/witness-journal-log-service";
 import { entry } from "@red-cup-engineering/witness-journal-entry-service";
 
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
+import { semanticIdentity } from "./semantic-identity.mjs";
 const semanticId = semanticIdentity;
 const ethereumObservationId = semanticIdentity;
 

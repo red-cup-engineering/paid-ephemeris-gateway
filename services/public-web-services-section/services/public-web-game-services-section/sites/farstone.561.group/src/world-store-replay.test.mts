@@ -1,20 +1,16 @@
 // world-store-replay — the same eight-Farstone-year replay-exactness property
-// `stability.test.mts` proves for the in-memory engine snapshot/restore round trip
-// (`checkpointEngine`/`snapshotEngine`/`restoreEngine`), but routed through the actual
-// bucket-persistence path this deploy relies on: `world-store.mts`'s save()/load() over a
-// real network round trip to a fake-GCS double, byte-for-byte (`assert.deepEqual` on the
-// full snapshot). Task requirement: "saves must survive restart with the 8-year
-// replay-exactness property intact — add a test proving save/load round-trips world
-// state." This is that test, run against the identical world shape and tick count
-// `stability.test.mts` uses, so the numbers are directly comparable.
+// stability.test.mts proves for the in-memory engine snapshot/restore round trip, but routed
+// through the actual bucket-persistence path this deploy relies on (world-hosting's
+// world-store save()/load() over a real network round trip to a fake-GCS double), against the
+// identical world shape/tick count stability.test.mts uses, so the numbers are comparable.
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { createEngine, step } from "@red-cup-engineering/feltos/engine";
 import { checkpointEngine, snapshotEngine } from "@red-cup-engineering/feltos/persistence";
 import { FARSTONE_RUNTIME, gameFromBible } from "./farstone-game.mts";
-import { openWorldStore } from "./world-store.mts";
-import { startFakeGcs } from "./fake-gcs.mts";
+import { openWorldStore } from "@red-cup-engineering/world-hosting/world-store";
+import { startFakeGcs } from "@red-cup-engineering/world-hosting/fake-gcs";
 
 const unauthenticatedRequest: typeof fetch = (url, init) => fetch(url, init);
 

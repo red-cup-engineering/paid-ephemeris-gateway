@@ -1,6 +1,4 @@
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
-const semanticDigest = semanticIdentity;
+import { semanticDigest } from "./policy-conformance.mjs";
 import {
   createHash,
   createPrivateKey,
@@ -272,7 +270,7 @@ function parseKeystore(path) {
   if (!/^ni:\/\/\/sha-256;[A-Za-z0-9_-]{42}[AEIMQUYcgkosw048]$/u.test(parsed.keyId)) throw new Error("Privy authorization keyId is invalid");
   const publicDer = decodeBase64(parsed.publicKey.data, "public key");
   try {
-    const actualKeyId = semanticIdentity("blockchain-trashpanda.privy-p256-public-key", { encoding: "base64", data: publicDer.toString("base64") });
+    const actualKeyId = semanticDigest("blockchain-trashpanda.privy-p256-public-key", { encoding: "base64", data: publicDer.toString("base64") });
     if (actualKeyId !== parsed.keyId) throw new Error("Privy authorization keyId does not match its public key");
   } finally {
     publicDer.fill(0);
@@ -293,7 +291,7 @@ export function createPrivyAuthorizationKeyKeystore({ path, passwordFile }) {
       passphrase: password,
     });
     publicDer = publicKey.export({ format: "der", type: "spki" });
-    const keyId = semanticIdentity("blockchain-trashpanda.privy-p256-public-key", { encoding: "base64", data: publicDer.toString("base64") });
+    const keyId = semanticDigest("blockchain-trashpanda.privy-p256-public-key", { encoding: "base64", data: publicDer.toString("base64") });
     const record = {
       type: TYPE,
       version: 1,

@@ -4,6 +4,71 @@ const ACTOR = "urn:ame:aagaard";
 const SETTLEMENT = "eip155:31337:0xb0dfc2eb77fb622c93f791071c66b039a7ae428d";
 export const OPPORTUNITY_FEED_CATEGORY = "aagaard.opportunity-feed";
 
+const MAX_JSON_DEPTH = 100;
+const MAX_ERROR_PATH_LENGTH = 320;
+
+function boundedPath(path) {
+  if (path.length <= MAX_ERROR_PATH_LENGTH) return path;
+  return `${path.slice(0, 150)}...${path.slice(-150)}`;
+}
+
+function refuseJsonValue(path, reason) {
+  throw new TypeError(`Aagaard opportunity-feed JSON value refused at ${boundedPath(path)}: ${reason}`);
+}
+
+function projectJsonValue(value, path, depth, active) {
+  if (value === null || typeof value === "string" || typeof value === "boolean") return value;
+  if (typeof value === "number") {
+    if (!Number.isFinite(value)) refuseJsonValue(path, "number must be finite");
+    return value;
+  }
+  if (value === undefined) refuseJsonValue(path, "undefined is not a JSON value");
+  if (typeof value === "bigint") refuseJsonValue(path, "bigint is not a JSON value");
+  if (typeof value === "symbol") refuseJsonValue(path, "symbol is not a JSON value");
+  if (typeof value === "function") refuseJsonValue(path, "function is not a JSON value");
+  if (depth >= MAX_JSON_DEPTH) refuseJsonValue(path, `nesting exceeds ${MAX_JSON_DEPTH} levels`);
+  if (active.has(value)) refuseJsonValue(path, "cyclic reference is not a JSON value");
+
+  active.add(value);
+  try {
+    if (Array.isArray(value)) {
+      const projected = [];
+      for (let index = 0; index < value.length; index += 1) {
+        const itemPath = `${path}[${index}]`;
+        if (!Object.hasOwn(value, index)) refuseJsonValue(itemPath, "array hole is not a JSON value");
+        if (value[index] === undefined) refuseJsonValue(itemPath, "undefined array entry is not a JSON value");
+        projected.push(projectJsonValue(value[index], itemPath, depth + 1, active));
+      }
+      return Object.freeze(projected);
+    }
+
+    const prototype = Object.getPrototypeOf(value);
+    if (prototype !== Object.prototype && prototype !== null) {
+      refuseJsonValue(path, "non-plain object is not a JSON value");
+    }
+    const projected = {};
+    for (const key of Object.keys(value)) {
+      const propertyPath = `${path}[${JSON.stringify(key)}]`;
+      const descriptor = Object.getOwnPropertyDescriptor(value, key);
+      if (!descriptor || !("value" in descriptor)) refuseJsonValue(propertyPath, "accessor property is not a JSON value");
+      if (descriptor.value === undefined) continue;
+      Object.defineProperty(projected, key, {
+        value: projectJsonValue(descriptor.value, propertyPath, depth + 1, active),
+        enumerable: true,
+        configurable: false,
+        writable: false,
+      });
+    }
+    return Object.freeze(projected);
+  } finally {
+    active.delete(value);
+  }
+}
+
+export function projectOpportunityFeedJsonValue(value) {
+  return projectJsonValue(value, "$", 0, new WeakSet());
+}
+
 function sourceUnknown(source, problem) {
   return Object.freeze({ source, status: "unknown", problem });
 }
@@ -115,7 +180,7 @@ export function formOpportunityFeed({ observedAt, globalArbitrage, poolCycle, ga
   const at = new Date(observedAt).toISOString();
   const observations = Object.freeze({ globalArbitrage, poolCycle, games });
   const candidates = Object.freeze([...globalCandidates(globalArbitrage), ...gameCandidates(games)]);
-  return Object.freeze({
+  return projectOpportunityFeedJsonValue({
     kind: "aagaard.unified-opportunity-feed",
     version: 1,
     observedAt: at,

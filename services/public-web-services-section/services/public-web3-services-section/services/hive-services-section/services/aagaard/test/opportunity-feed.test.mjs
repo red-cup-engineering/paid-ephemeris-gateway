@@ -1,8 +1,18 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 
-import { observeOpportunityFeed, OPPORTUNITY_FEED_CATEGORY } from "../src/opportunity-feed.mjs";
+import { querySettlementRecords } from "@red-cup-engineering/witness-journal-document-service";
+import { startFilesystemWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-document-service/filesystem-provider";
+
+import { awaitFilesystemWitnessJournalProvider, observe } from "../scripts/opportunity-feed.mjs";
+import {
+  observeOpportunityFeed,
+  OPPORTUNITY_FEED_CATEGORY,
+  projectOpportunityFeedJsonValue,
+} from "../src/opportunity-feed.mjs";
 
 const observedAt = "2026-09-01T18:00:00.000Z";
 
@@ -17,7 +27,7 @@ function globalArbitrage() {
     certifyingProviders: ["provider-a", "provider-b"], providerKnowledge: { value: "true", unavailable: [{ provider: "provider-c", problem: "timeout" }] },
     opportunities: [
       { symbol: "DEC", pool: "SWAP.HIVE:DEC", policyAdmitted: true, policyRefusal: null,
-        exact: { admitted: true, quote: { worstCaseProfitSwapHive: "0.01200000" } } },
+        exact: { admitted: true, quote: { worstCaseProfitSwapHive: "0.01200000", optionalFee: undefined } } },
       { symbol: "SPS", pool: "SWAP.HIVE:SPS", policyAdmitted: false, policyRefusal: "worst-case edge below policy",
         exact: { admitted: true, quote: { worstCaseProfitSwapHive: "0.00010000" } } },
     ], refusal: null, credentialAccess: false, chainMutation: false, executionAdmissible: false };
@@ -41,12 +51,15 @@ function games() {
   ];
   return { schema: "aagaard.game-opportunity-plan.v1", observedAt, ranked,
     observations: {
-      dcity: { before: { simBalance: "91.000" }, plan: { kind: "ready", quote: { minimumSwapHive: "0.04000000" } } },
+      dcity: { before: { simBalance: "91.000", pending: undefined },
+        plan: { kind: "ready", quote: { minimumSwapHive: "0.04000000", optionalFee: undefined } } },
       holozingRewards: { plan: { kind: "ready", minimumClaimZing: "2.500" } },
       terracore: { plan: { kind: "claim", amount: "6.25000000" } },
       unavailable: [{ game: "splinterlands", error: "maintenance" }],
     }, credentialAccess: false, chainMutation: false };
 }
+
+const providers = { globalArbitrage, poolCycle, games };
 
 test("unifies exact read-only opportunities while retaining incomparable classes and all gates", async () => {
   let recorded;
@@ -71,6 +84,30 @@ test("unifies exact read-only opportunities while retaining incomparable classes
   assert.equal(feed.candidates.find((item) => item.identity === "dcity:recover-closed-sim").plan.quote.minimumSwapHive, "0.04000000");
   assert.equal(feed.candidates.find((item) => item.identity === "holozing-rewards:claim-pending-zing").plan.minimumClaimZing, "2.500");
   assert.equal(feed.candidates.find((item) => item.identity === "terracore:claim-raid-exposed-scrap").plan.amount, "6.25000000");
+  assert.equal(Object.isFrozen(feed), true);
+  assert.equal(Object.isFrozen(arb.sourceCandidate.exact.quote), true);
+  assert.equal(Object.hasOwn(arb.sourceCandidate.exact.quote, "optionalFee"), false);
+});
+
+test("JSON projection rejects non-JSON provider values with bounded paths", () => {
+  const sparse = [];
+  sparse.length = 1;
+  for (const [value, reason] of [
+    [{ nested: { amount: 1n } }, "bigint"],
+    [{ nested: { amount: Number.NaN } }, "finite"],
+    [{ nested: { amount: new Date(observedAt) } }, "non-plain object"],
+    [{ nested: [undefined] }, "undefined array entry"],
+    [{ nested: sparse }, "array hole"],
+    [{ nested: Symbol("amount") }, "symbol"],
+    [{ nested: () => 1 }, "function"],
+  ]) {
+    assert.throws(() => projectOpportunityFeedJsonValue(value), (error) => {
+      assert.match(error.message, /^Aagaard opportunity-feed JSON value refused at \$\["nested"\](?:\["amount"\]|\[0\])?:/);
+      assert.match(error.message, new RegExp(reason));
+      assert.ok(error.message.length <= 500);
+      return true;
+    });
+  }
 });
 
 test("turns thrown and over-authorized providers into visible unknowns without losing the feed", async () => {
@@ -82,4 +119,72 @@ test("turns thrown and over-authorized providers into visible unknowns without l
   assert.equal(feed.unknowns.some((item) => item.source === "global-arbitrage-scan" && item.problem === "offline"), true);
   assert.equal(feed.unknowns.some((item) => item.source === "exact-pool-cycle-assay" && /did not prove/.test(item.problem)), true);
   assert.equal(feed.candidates.some((item) => item.identity === "terracore:claim-raid-exposed-scrap"), true);
+});
+
+test("keeps an explicit remote WitnessJournal provider unchanged", async () => {
+  const env = Object.freeze({ WITNESS_JOURNAL_RDF_AGENT: "https://journal.example.test/.well-known/agent-card.json" });
+  let started = false;
+  let received;
+  const result = await observe({ env, providers,
+    startFilesystemProvider: async () => { started = true; throw new Error("must not start"); },
+    observeFeed: async (options) => { received = options; return "remote-result"; } });
+  assert.equal(result, "remote-result");
+  assert.equal(started, false);
+  assert.strictEqual(received.env, env);
+  assert.strictEqual(received.providers, providers);
+});
+
+test("persists a local opportunity feed across filesystem-provider restart and query", async () => {
+  const root = await mkdtemp(join(tmpdir(), "aagaard-witness-journal-"));
+  try {
+    const result = await observe({ env: { AAGAARD_WITNESS_JOURNAL_ROOT: root }, providers, now: () => observedAt });
+    assert.equal(result.feed.authority.credentialAccess, false);
+    assert.equal(result.feed.authority.chainMutation, false);
+
+    const restarted = await startFilesystemWitnessJournalProviderProcess({ root, host: "127.0.0.1", port: 0 });
+    try {
+      await awaitFilesystemWitnessJournalProvider(restarted.agentCardUrl);
+      const records = await querySettlementRecords(OPPORTUNITY_FEED_CATEGORY, { agentUrl: restarted.agentCardUrl });
+      assert.equal(records.length, 1);
+      assert.deepEqual(records[0], result.feed);
+      assert.equal(Object.hasOwn(records[0].evidence.globalArbitrage.value.opportunities[0].exact.quote, "optionalFee"), false);
+      assert.equal(Object.hasOwn(records[0].evidence.games.value.observations.dcity.before, "pending"), false);
+    } finally {
+      await restarted.close();
+    }
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("refuses to run without a remote agent or explicit local root", async () => {
+  await assert.rejects(observe({ env: {}, providers }), /WITNESS_JOURNAL_RDF_AGENT or AAGAARD_WITNESS_JOURNAL_ROOT/);
+});
+
+test("closes the local provider after operation success and failure", async () => {
+  for (const failure of [null, new Error("operation failed")]) {
+    let closes = 0;
+    let receivedEnv;
+    const startFilesystemProvider = async (options) => {
+      assert.deepEqual(options, { root: "/explicit/journal", host: "127.0.0.1", port: 0 });
+      return { agentCardUrl: "http://127.0.0.1:49152/.well-known/agent-card.json",
+        close: async () => { closes += 1; } };
+    };
+    const observeFeed = async ({ env }) => {
+      receivedEnv = env;
+      if (failure) throw failure;
+      return "local-result";
+    };
+    const operation = observe({
+      env: { AAGAARD_WITNESS_JOURNAL_ROOT: "/explicit/journal", HIVE_ACTIVE_KEY: "must-not-pass" },
+      providers,
+      startFilesystemProvider,
+      readyFilesystemProvider: async () => {},
+      observeFeed,
+    });
+    if (failure) await assert.rejects(operation, failure);
+    else assert.equal(await operation, "local-result");
+    assert.deepEqual(receivedEnv, { WITNESS_JOURNAL_RDF_AGENT: "http://127.0.0.1:49152/.well-known/agent-card.json" });
+    assert.equal(closes, 1);
+  }
 });

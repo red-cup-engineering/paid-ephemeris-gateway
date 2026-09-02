@@ -1,4 +1,0 @@
-{
-  "$schemaNote": "The one JSON parameter that makes mud.561.group a directory over play.561.group's shared catalog instead of a copy of it: any catalog-entry.json whose keywords include one of includeIfAnyKeyword is listed here. Graphical MMOs count as MUDs (owner ruling, 2026-08-31) -- 'mmorpg' is in scope on purpose, not just 'mud'.",
-  "includeIfAnyKeyword": ["mud", "mmorpg"]
-}

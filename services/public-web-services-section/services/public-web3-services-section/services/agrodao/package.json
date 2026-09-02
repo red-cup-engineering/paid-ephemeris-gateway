@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/agrodao",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "type": "module",
   "files": [
     "src",
@@ -64,7 +64,7 @@
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/solana-services-section": "0.1.0",
-    "@red-cup-engineering/treasury-observation-service": "0.3.0",
+    "@red-cup-engineering/treasury-observation-service": "0.3.1",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1",
     "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
     "@red-cup-engineering/witness-journal-log-service": "0.1.6"

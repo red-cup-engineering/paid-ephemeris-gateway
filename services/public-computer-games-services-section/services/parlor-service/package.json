@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "@red-cup-engineering/cartridge": "0.2.1",
-    "@red-cup-engineering/parlor-kernel": "0.2.0"
+    "@red-cup-engineering/parlor-kernel": "0.2.0",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0"
   },
   "exports": {
     "./pig/rules": "./src/games/pig/rules.mts",

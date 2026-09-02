@@ -16,7 +16,8 @@
     "serve": "node web/server.mjs"
   },
   "dependencies": {
-    "@lenticule-science/metrologic": "0.1.0"
+    "@lenticule-science/metrologic": "0.1.0",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0"
   },
   "exports": {
     "./types": "./src/types.mts",

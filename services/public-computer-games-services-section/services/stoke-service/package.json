@@ -30,6 +30,7 @@
   "dependencies": {
     "@lenticule-science/metrologic": "0.1.0",
     "@red-cup-engineering/cartridge": "0.2.1",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0",
     "sirv": "3.0.2"
   },
   "engines": {

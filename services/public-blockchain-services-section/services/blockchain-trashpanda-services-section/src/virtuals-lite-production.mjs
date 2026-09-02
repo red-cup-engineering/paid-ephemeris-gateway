@@ -1,17 +1,6 @@
-import { createHash, randomBytes } from "node:crypto";
-import {
-  closeSync,
-  constants,
-  existsSync,
-  fsyncSync,
-  linkSync,
-  mkdirSync,
-  openSync,
-  readFileSync,
-  statSync,
-  unlinkSync,
-  writeFileSync,
-} from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, statSync } from "node:fs";
+import { createFlatfile, ensureFlatfileDirectory, readFlatfileText } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { io as defaultIo } from "socket.io-client";
@@ -66,45 +55,20 @@ function normalizeJobId(value) {
 
 function readObject(path, label) {
   let value;
-  try { value = JSON.parse(readFileSync(path, "utf8")); }
+  try { value = JSON.parse(readFlatfileText(path)); }
   catch { throw new TypeError(`${label} must be present and valid JSON`); }
   if (value === null || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
   return value;
 }
 
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
 
 function privateDirectory(path) {
-  if (!existsSync(path)) mkdirSync(path, { recursive: true, mode: 0o700 });
+  if (!existsSync(path)) ensureFlatfileDirectory(path, { mode: 0o700 });
   const stat = statSync(path);
   if (!stat.isDirectory() || (stat.mode & 0o077) !== 0) throw new TypeError("Virtuals production state directories must be private");
   return path;
 }
 
-function writeCreateOnly(path, value) {
-  const temporary = join(dirname(path), `.${process.pid}.${randomBytes(12).toString("hex")}.tmp`);
-  let descriptor;
-  try {
-    descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-    writeFileSync(descriptor, `${JSON.stringify(value)}\n`);
-    fsyncSync(descriptor);
-  } finally {
-    if (descriptor !== undefined) closeSync(descriptor);
-  }
-  try {
-    linkSync(temporary, path);
-    syncDirectory(dirname(path));
-    return true;
-  } catch (error) {
-    if (error?.code !== "EEXIST") throw error;
-    return false;
-  } finally {
-    unlinkSync(temporary);
-  }
-}
 
 export function requireVirtualsProductionGate({
   terminalPath = DEFAULT_TERMINAL_PATH,
@@ -176,7 +140,7 @@ export function createVirtualsProductionGuard({
     const requestSha256 = createHash("sha256").update(JSON.stringify(request)).digest("hex");
     const path = join(jobDirectory(id), "claim.json");
     const value = { type: "BlockchainTrashpandaVirtualsProductionJobClaim", jobId: id, operatorWallet, priceUsdc: VIRTUALS_PRODUCTION_PRICE, serviceOnly: true, requestSha256, admittedAt: now() };
-    if (!writeCreateOnly(path, value)) {
+    if (!createFlatfile(path, JSON.stringify(value) + "\n", { mode: 0o600, createDirectories: false })) {
       const existing = readObject(path, "Virtuals production job claim");
       if (existing.jobId !== id || existing.operatorWallet !== operatorWallet || existing.requestSha256 !== requestSha256) {
         throw new TypeError("Virtuals production job identifier is already bound to different work");
@@ -208,7 +172,7 @@ export function createVirtualsProductionGuard({
       attemptedAt: now(),
       retry: false,
     };
-    if (!writeCreateOnly(join(jobDirectory(jobId), `${name}.json`), value)) throw new TypeError(`Virtuals production ${name} attempt is already exhausted`);
+    if (!createFlatfile(join(jobDirectory(jobId), `${name}.json`), JSON.stringify(value) + "\n", { mode: 0o600, createDirectories: false })) throw new TypeError(`Virtuals production ${name} attempt is already exhausted`);
     return Object.freeze(value);
   }
 
@@ -222,7 +186,7 @@ export function createVirtualsProductionGuard({
       attemptedAt: now(),
       retry: false,
     };
-    if (!writeCreateOnly(publicationPath, value)) throw new TypeError("Virtuals production offering publication attempt is already exhausted");
+    if (!createFlatfile(publicationPath, JSON.stringify(value) + "\n", { mode: 0o600, createDirectories: false })) throw new TypeError("Virtuals production offering publication attempt is already exhausted");
     return Object.freeze(value);
   }
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { closeSync, constants, existsSync, fsyncSync, mkdirSync, openSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { writeFlatfile } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { recordSettlementRecord } from "./settlement-witness.mjs";
@@ -16,19 +16,6 @@ const facilitator = {
   async settle() { throw new Error("channel-readiness proof does not settle"); },
 };
 
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
-function project(value) {
-  const root = join(ROOT, "data", "evidence");
-  if (!existsSync(root)) { mkdirSync(root, { recursive: true, mode: 0o700 }); syncDirectory(join(ROOT, "data")); }
-  const target = join(root, "channel-readiness.json"), bytes = Buffer.from(`${JSON.stringify(value)}\n`);
-  if (existsSync(target)) { if (!readFileSync(target).equals(bytes)) throw new TypeError("channel readiness projection conflicts"); return target; }
-  const temporary = join(root, `.channel-readiness.${process.pid}.tmp`), descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-  try { writeFileSync(descriptor, bytes); fsyncSync(descriptor); } finally { closeSync(descriptor); }
-  renameSync(temporary, target); syncDirectory(root); return target;
-}
 
 async function proveX402Challenge() {
   const service = createYanagiX402Service({ facilitatorClient: facilitator, afterSettle: async () => { throw new Error("unpaid proof cannot witness settlement"); } });
@@ -64,7 +51,7 @@ export async function admitChannelReadiness() {
     disposition: "admit-x402-challenge-and-virtuals-authority-refusal", recordedAt });
   await recordSettlementRecord({ agentUrl: WITNESS_JOURNAL_AGENT, settlement: ACTOR, actor: ACTOR,
     category: "blockchain-trashpanda.channel-readiness-admissions", recordedAt, record: admission });
-  return Object.freeze({ admission, evidence, x402, virtuals, projection: project(evidence) });
+  return Object.freeze({ admission, evidence, x402, virtuals, projection: writeFlatfile(join(ROOT, "data", "evidence", "channel-readiness.json"), JSON.stringify(evidence) + "\n", { ifExists: "same", mode: 0o600, directoryMode: 0o700, conflictMessage: "channel readiness projection conflicts" }) });
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

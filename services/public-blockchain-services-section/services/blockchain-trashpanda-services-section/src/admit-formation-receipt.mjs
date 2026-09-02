@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto";
-import {
-  closeSync, constants, existsSync, fsyncSync, mkdirSync, openSync, readFileSync, realpathSync, renameSync, writeFileSync,
-} from "node:fs";
+import { existsSync, readFileSync, realpathSync } from "node:fs";
+import { writeFlatfile } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -46,29 +45,7 @@ function foundingManifest() {
   return { type: "PlatformNodeProductionManifest", nodeId: "blockchain-trashpanda", targetRoot: ROOT, fileCount: files.length, totalBytes: files.reduce((sum, file) => sum + file.byteLength, 0), files };
 }
 
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
 
-function projectReceipt(receipt) {
-  const dataRoot = join(ROOT, "data");
-  const formationRoot = join(dataRoot, "formation");
-  if (!existsSync(dataRoot)) { mkdirSync(dataRoot, { mode: 0o700 }); syncDirectory(ROOT); }
-  if (!existsSync(formationRoot)) { mkdirSync(formationRoot, { mode: 0o700 }); syncDirectory(dataRoot); }
-  const target = join(formationRoot, "receiver-induction-receipt.json");
-  const bytes = Buffer.from(`${JSON.stringify(receipt)}\n`, "utf8");
-  if (existsSync(target)) {
-    if (!readFileSync(target).equals(bytes)) throw new TypeError("formation receipt projection conflicts with the admitted receipt");
-    return target;
-  }
-  const temporary = join(formationRoot, `.receiver-induction-receipt.${process.pid}.tmp`);
-  const descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-  try { writeFileSync(descriptor, bytes); fsyncSync(descriptor); } finally { closeSync(descriptor); }
-  renameSync(temporary, target);
-  syncDirectory(formationRoot);
-  return target;
-}
 
 export async function admitFormationReceipt(receipt) {
   if (realpathSync(ROOT) !== ROOT) throw new TypeError("formation receipt admission is outside Blockchain Trashpanda");
@@ -102,7 +79,7 @@ export async function admitFormationReceipt(receipt) {
     recordedAt: admission.admittedAt,
     record: admission,
   });
-  const projection = projectReceipt(receipt);
+  const projection = writeFlatfile(join(ROOT, "data", "formation", "receiver-induction-receipt.json"), JSON.stringify(receipt) + "\n", { ifExists: "same", mode: 0o600, directoryMode: 0o700, conflictMessage: "formation receipt projection conflicts with the admitted receipt" });
   return Object.freeze({ admission, projection, receiverReceipt: receipt.id, manifestDigest });
 }
 

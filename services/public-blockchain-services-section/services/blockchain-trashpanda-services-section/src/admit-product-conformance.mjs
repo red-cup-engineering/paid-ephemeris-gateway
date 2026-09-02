@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { closeSync, constants, existsSync, fsyncSync, mkdirSync, openSync, readFileSync, realpathSync, renameSync, writeFileSync } from "node:fs";
+import { realpathSync } from "node:fs";
+import { writeFlatfile } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { recordSettlementRecord } from "./settlement-witness.mjs";
@@ -14,26 +15,6 @@ function contentValid(value) {
   if (!value?.id) return false;
   const { id: _id, ...body } = value;
   return value.id === semanticDigest("blockchain-trashpanda.product-conformance-admission", body);
-}
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
-function projectEvidence(evidence) {
-  const dataRoot = join(ROOT, "data"), evidenceRoot = join(dataRoot, "evidence");
-  if (!existsSync(evidenceRoot)) { mkdirSync(evidenceRoot, { recursive: true, mode: 0o700 }); syncDirectory(dataRoot); }
-  const target = join(evidenceRoot, "product-conformance.json");
-  const bytes = Buffer.from(`${JSON.stringify(evidence)}\n`, "utf8");
-  if (existsSync(target)) {
-    if (!readFileSync(target).equals(bytes)) throw new TypeError("product evidence projection already exists with different bytes");
-    return target;
-  }
-  const temporary = join(evidenceRoot, `.product-conformance.${process.pid}.tmp`);
-  const descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-  try { writeFileSync(descriptor, bytes); fsyncSync(descriptor); } finally { closeSync(descriptor); }
-  renameSync(temporary, target);
-  syncDirectory(evidenceRoot);
-  return target;
 }
 
 export async function admitProductConformance({ measurement }) {
@@ -62,7 +43,7 @@ export async function admitProductConformance({ measurement }) {
   const admission = identify({ type: "BlockchainTrashpandaProductConformanceAdmission", enterprise: ACTOR,
     evidence, measurement, disposition: "admit-deterministically-measured-product-evidence", admittedAt });
   await recordSettlementRecord({ agentUrl: WITNESS_JOURNAL_AGENT, settlement: ACTOR, actor: ACTOR, category: "blockchain-trashpanda.product-conformance-admissions", recordedAt: admittedAt, record: admission });
-  return Object.freeze({ admission, evidence, projection: projectEvidence(evidence) });
+  return Object.freeze({ admission, evidence, projection: writeFlatfile(join(ROOT, "data", "evidence", "product-conformance.json"), JSON.stringify(evidence) + "\n", { ifExists: "same", mode: 0o600, directoryMode: 0o700, conflictMessage: "product evidence projection already exists with different bytes" }) });
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

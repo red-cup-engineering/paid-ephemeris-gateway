@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto";
-import { closeSync, constants, existsSync, fsyncSync, openSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
+import { writeFlatfile } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -17,10 +18,6 @@ function identify(body) {
   return { id: semanticDigest("blockchain-trashpanda.founding-manifest", body), ...body };
 }
 
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
 
 function validateManifest(manifest) {
   if (manifest?.type !== "PlatformNodeProductionManifest"
@@ -47,20 +44,6 @@ function validateManifest(manifest) {
   return manifest;
 }
 
-function projectManifest(manifest) {
-  const target = join(FORMATION_ROOT, "founding-manifest.json");
-  const bytes = Buffer.from(`${JSON.stringify(manifest)}\n`, "utf8");
-  if (existsSync(target)) {
-    if (!readFileSync(target).equals(bytes)) throw new TypeError("founding manifest projection conflicts");
-    return target;
-  }
-  const temporary = join(FORMATION_ROOT, `.founding-manifest.${process.pid}.tmp`);
-  const descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-  try { writeFileSync(descriptor, bytes); fsyncSync(descriptor); } finally { closeSync(descriptor); }
-  renameSync(temporary, target);
-  syncDirectory(FORMATION_ROOT);
-  return target;
-}
 
 export async function admitFoundingManifest(value) {
   const manifest = validateManifest(value);
@@ -76,7 +59,7 @@ export async function admitFoundingManifest(value) {
   });
   await recordSettlementRecord({ agentUrl: WITNESS_JOURNAL_AGENT, settlement: "urn:ame:blockchain-trashpanda", actor: "urn:ame:blockchain-trashpanda",
     category: "blockchain-trashpanda.founding-manifest-admissions", recordedAt: admittedAt, record: admission });
-  return Object.freeze({ admission, projection: projectManifest(manifest) });
+  return Object.freeze({ admission, projection: writeFlatfile(join(ROOT, "data", "formation", "founding-manifest.json"), JSON.stringify(manifest) + "\n", { ifExists: "same", mode: 0o600, directoryMode: 0o700, createDirectories: false, conflictMessage: "founding manifest projection conflicts" }) });
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

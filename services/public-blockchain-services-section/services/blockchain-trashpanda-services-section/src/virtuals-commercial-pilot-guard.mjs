@@ -1,17 +1,6 @@
-import { createHash, randomBytes } from "node:crypto";
-import {
-  closeSync,
-  constants,
-  existsSync,
-  fsyncSync,
-  linkSync,
-  mkdirSync,
-  openSync,
-  readFileSync,
-  statSync,
-  unlinkSync,
-  writeFileSync,
-} from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, statSync } from "node:fs";
+import { createFlatfile, ensureFlatfileDirectory, readFlatfileText } from "@red-cup-engineering/flatfile";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -34,16 +23,9 @@ function normalizeAddress(value, label) {
   return value.toLowerCase();
 }
 
-function syncDirectory(path) {
-  const descriptor = openSync(path, constants.O_RDONLY | (constants.O_DIRECTORY ?? 0));
-  try { fsyncSync(descriptor); } finally { closeSync(descriptor); }
-}
 
 function ensurePrivateDirectory(path) {
-  if (!existsSync(path)) {
-    mkdirSync(path, { recursive: true, mode: 0o700 });
-    syncDirectory(dirname(path));
-  }
+  if (!existsSync(path)) ensureFlatfileDirectory(path, { mode: 0o700 });
   const stat = statSync(path);
   if (!stat.isDirectory()) throw new TypeError("commercial pilot state root must be a directory");
   if ((stat.mode & 0o077) !== 0) throw new TypeError("commercial pilot state root must be private");
@@ -51,34 +33,12 @@ function ensurePrivateDirectory(path) {
 
 function readJson(path, label) {
   let value;
-  try { value = JSON.parse(readFileSync(path, "utf8")); }
+  try { value = JSON.parse(readFlatfileText(path)); }
   catch { throw new TypeError(`${label} must be valid JSON`); }
   if (value === null || typeof value !== "object" || Array.isArray(value)) throw new TypeError(`${label} must be an object`);
   return value;
 }
 
-function writeCreateOnlyJson(path, value) {
-  const bytes = Buffer.from(`${JSON.stringify(value)}\n`);
-  const temporary = join(dirname(path), `.${process.pid}.${randomBytes(12).toString("hex")}.tmp`);
-  let descriptor;
-  try {
-    descriptor = openSync(temporary, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL, 0o600);
-    writeFileSync(descriptor, bytes);
-    fsyncSync(descriptor);
-  } finally {
-    if (descriptor !== undefined) closeSync(descriptor);
-  }
-  try {
-    linkSync(temporary, path);
-    syncDirectory(dirname(path));
-    return true;
-  } catch (error) {
-    if (error?.code !== "EEXIST") throw error;
-    return false;
-  } finally {
-    unlinkSync(temporary);
-  }
-}
 
 function requireAuthorization(path) {
   const authorization = readJson(path, "commercial pilot authorization");
@@ -186,7 +146,7 @@ export function createVirtualsCommercialPilotGuard({
       offering: { name: PILOT_OFFERING_NAME, jobFee: PILOT_PRICE, jobFeeType: "fixed", requiredFunds: false },
       admittedAt: now(),
     };
-    if (writeCreateOnlyJson(claimPath, claim)) return Object.freeze(claim);
+    if (createFlatfile(claimPath, JSON.stringify(claim) + "\n", { mode: 0o600, createDirectories: false })) return Object.freeze(claim);
     const existing = readJson(claimPath, "commercial pilot job claim");
     if (!sameClaim(existing, claim)) throw new TypeError("commercial pilot has already claimed a different job");
     return Object.freeze(existing);
@@ -219,7 +179,7 @@ export function createVirtualsCommercialPilotGuard({
       attemptedAt: now(),
       retry: false,
     };
-    if (!writeCreateOnlyJson(path, attempt)) {
+    if (!createFlatfile(path, JSON.stringify(attempt) + "\n", { mode: 0o600, createDirectories: false })) {
       throw new TypeError(`commercial pilot offering ${effect} attempt is already exhausted; retry is refused`);
     }
     return Object.freeze(attempt);
@@ -261,7 +221,7 @@ export function createVirtualsCommercialPilotGuard({
       attemptedAt: now(),
       retry: false,
     };
-    if (!writeCreateOnlyJson(path, attempt)) {
+    if (!createFlatfile(path, JSON.stringify(attempt) + "\n", { mode: 0o600, createDirectories: false })) {
       throw new TypeError(`commercial pilot ${effect} attempt is already exhausted; retry is refused`);
     }
     return Object.freeze(attempt);
@@ -299,7 +259,7 @@ export function createVirtualsCommercialPilotGuard({
           attemptedAt: now(),
           retry: false,
         };
-        if (!writeCreateOnlyJson(attemptPath, attempt)) {
+        if (!createFlatfile(attemptPath, JSON.stringify(attempt) + "\n", { mode: 0o600, createDirectories: false })) {
           throw new TypeError(`commercial pilot ${normalizedCall.phase} attempt is already exhausted; retry is refused`);
         }
         return delegate.sendCalls(chainId, calls);

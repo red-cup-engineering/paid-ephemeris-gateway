@@ -12,6 +12,7 @@ import { observePortfolio } from "@red-cup-engineering/treasury-observation-serv
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
 
 import { publicWalletFleet } from "./procure-public-evm-wallet-observation.mjs";
+import { observePublicSolanaNativeBalancePortfolio } from "./observe-public-solana-native-balances.mjs";
 import { createSettlementStore } from "./settlement-witness.mjs";
 
 const CUSTOMER = "urn:ame:agrodao";
@@ -58,17 +59,24 @@ function unknowns(report) {
   });
 }
 
-function coverage(report) {
+function coverage(report, solana) {
+  const checkedChains = report.chains.filter((chain) => chain.checked === true).map((chain) => chain.caip2);
+  if (solana.status === "observed") checkedChains.push(solana.chain.caip2);
+  const incompleteChains = report.coverage.incompleteChains.map((chainId) => {
+    const chain = report.chains.find((candidate) => candidate.chain === chainId);
+    return chain?.caip2 ?? chainId;
+  });
+  if (solana.coverage.complete !== true) incompleteChains.push(solana.chain.caip2);
   return {
-    complete: report.coverage.complete === true,
-    checkedChains: report.chains.filter((chain) => chain.checked === true).map((chain) => chain.caip2),
-    incompleteChains: report.coverage.incompleteChains.map((chainId) => {
-      const chain = report.chains.find((candidate) => candidate.chain === chainId);
-      return chain?.caip2 ?? chainId;
-    }),
+    complete: report.coverage.complete === true && solana.coverage.complete === true,
+    checkedChains,
+    incompleteChains: [...new Set(incompleteChains)],
     walletsExpected: report.roster.length,
     walletChainObservationsExpected: report.roster.length * report.chains.length,
     walletChainObservationsChecked: report.chains.reduce((sum, chain) => sum + (chain.coverage?.walletsObserved ?? 0), 0),
+    solanaAccountsEnrolled: solana.coverage.enrolledAccounts,
+    solanaAccountsAttempted: solana.coverage.attemptedAccounts,
+    solanaAccountsObserved: solana.coverage.observedAccounts,
   };
 }
 
@@ -193,13 +201,16 @@ export async function observeTreasuryPortfolio({
   createReadPool = createPublicEvmReadPool,
   readPoolOptions = {},
   healthDependencies = {},
+  observeSolanaPortfolio = observePublicSolanaNativeBalancePortfolio,
+  solanaOptions = {},
 } = {}) {
   if (!Number.isFinite(Date.parse(at))) throw new TypeError("treasury portfolio disclosure requires an ISO observation time");
   if (fleet?.authority?.observationOnly !== true || fleet.authority.signerMaterialPresent !== false
       || fleet.authority.transactionAuthorityGranted !== false || fleet.authority.chainMutationGranted !== false) {
     throw new TypeError("treasury portfolio requires a public observation-only wallet fleet");
   }
-  if (typeof reportPortfolio !== "function" || typeof store?.record !== "function") {
+  if (typeof reportPortfolio !== "function" || typeof observeSolanaPortfolio !== "function"
+      || typeof store?.record !== "function") {
     throw new TypeError("treasury portfolio requires report and record operations");
   }
   const roster = fleet.wallets.map(({ subject, address }) => ({ subject, address }));
@@ -214,20 +225,30 @@ export async function observeTreasuryPortfolio({
   const moonwellRisk = await joinMoonwellHealth({
     report, fleet, observeHealth, createReadPool, readPoolOptions, healthDependencies,
   });
+  const solana = await observeSolanaPortfolio({ at, ...solanaOptions });
+  if (solana?.type !== "PublicSolanaNativeBalanceDisclosure"
+      || solana.owner !== CUSTOMER || solana.chain?.caip2 == null
+      || !Array.isArray(solana.subjects) || !Array.isArray(solana.unknowns)) {
+    throw new Error("treasury portfolio received an invalid public Solana disclosure");
+  }
+  const subjects = [...new Set([
+    ...report.roster.map(({ subject }) => subject),
+    ...solana.subjects,
+  ])];
   const body = {
     type: "TreasuryPortfolioDisclosure",
     owner: CUSTOMER,
     observedAt: report.observedAt,
     disclosedAt: at,
-    subjects: report.roster.map(({ subject }) => subject),
-    coverage: coverage(report),
-    unknowns: unknowns(report),
+    subjects,
+    coverage: coverage(report, solana),
+    unknowns: [...unknowns(report), ...solana.unknowns],
     valuation: {
       priced: false,
       totalUsd: null,
       reason: "no portfolio-wide USD valuation provider was supplied",
     },
-    portfolio: { roster: report.roster, chains: report.chains },
+    portfolio: { roster: report.roster, chains: report.chains, solanaNative: solana },
     moonwellRisk,
     authority: {
       observationOnly: true,

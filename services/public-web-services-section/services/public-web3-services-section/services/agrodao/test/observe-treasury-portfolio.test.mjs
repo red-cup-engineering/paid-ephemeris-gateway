@@ -96,9 +96,20 @@ test("records one secret-free, explicitly incomplete treasury portfolio disclosu
   assert.ok(disclosure.subjects.includes("urn:ame:wallet:yanagi"));
   assert.ok(disclosure.subjects.includes("urn:ame:wallet:sigmund"));
   assert.equal(disclosure.coverage.complete, false);
-  assert.deepEqual(disclosure.coverage.incompleteChains.sort(), ["eip155:42161", "eip155:8453"]);
+  assert.deepEqual(disclosure.coverage.incompleteChains.sort(), [
+    "eip155:42161",
+    "eip155:8453",
+    "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+  ]);
+  assert.equal(disclosure.coverage.solanaAccountsEnrolled, 0);
+  assert.equal(disclosure.coverage.solanaAccountsObserved, 0);
+  assert.equal(disclosure.portfolio.solanaNative.status, "pending-enrollment");
+  assert.equal(disclosure.portfolio.solanaNative.nativePositions, null);
+  assert.equal(disclosure.portfolio.solanaNative.opportunityArena.crossAssetComparison, false);
   assert.ok(disclosure.unknowns.some(({ subject, component }) => subject === "urn:ame:wallet:sigmund" && component === "verifiedTokens"));
   assert.ok(disclosure.unknowns.some(({ chain, component }) => chain === "eip155:42161" && component === "chain"));
+  assert.ok(disclosure.unknowns.some(({ chain, component }) =>
+    chain.startsWith("solana:") && component === "account-roster"));
   assert.deepEqual(disclosure.valuation, {
     priced: false,
     totalUsd: null,

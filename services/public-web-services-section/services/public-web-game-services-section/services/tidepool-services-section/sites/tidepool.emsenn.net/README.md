@@ -80,16 +80,15 @@ npm test
 | `tidepool-runtime.test.mts` | catch-up math, capping, and the clock-before-engine flush ordering |
 | `persistence-churn.test.mts` | **the lesson of the day**: mutate a real session, force a full instance teardown and cold-boot rebuild from nothing but the store's own bytes, verify every mutation survived exactly — location, inventory, an enacted law, a folded mark, and both original contradictions still standing as `both` |
 
-## Vendoring
+## Dependencies
 
-`vendor/@red-cup-engineering/feltos/` is a snapshot of `feltos@0.5.0`, pulled via
-`npm pack` off Verdaccio (which, unlike the fizzos-era gap this replaces, genuinely has 0.5.0
-published — an exact match for the active source tree) — see that directory's own `VENDORED.md`
-for the full account, including the empirical proof (the full suite passing against the vendor
-copy, not just a normal `node_modules` install) and a flagged note that, since the versions now
-match exactly, a human may reasonably decide vendoring no longer earns its complexity here.
-`@red-cup-engineering/qwzspace` (`0.4.1`) and `@red-cup-engineering/arnold` (`0.2.0`) are both
-genuinely current on Verdaccio — normal pinned dependencies, no vendoring.
+`@red-cup-engineering/feltos` (`0.5.0`), `@red-cup-engineering/qwzspace` (`0.4.1`), and
+`@red-cup-engineering/arnold` (`0.2.0`) are all genuinely current on Verdaccio — normal exact-pinned
+`dependencies`/`optionalDependencies`, no vendoring. A prior revision vendored a snapshot of
+feltos under `vendor/` for Cloud Run build-time provenance pinning; once Verdaccio's published
+feltos was confirmed an exact match for the pinned version, that vendor copy stopped earning its
+complexity and was dropped — `Dockerfile` now ships `node_modules/@red-cup-engineering/feltos` as
+a plain `COPY . .`, identical to how qwzspace and arnold already worked.
 
 ## Deploy
 

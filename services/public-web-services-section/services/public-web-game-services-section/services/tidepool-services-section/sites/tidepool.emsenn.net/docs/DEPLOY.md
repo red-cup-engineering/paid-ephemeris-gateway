@@ -33,11 +33,11 @@ probes alone; same alternative Farstone's own runbook entry notes.
 
 Cloud Build has no access to the house Verdaccio registry (127.0.0.1:4873, local-only) —
 confirmed live by aletheon's own Dockerfile comment. `Dockerfile` therefore ships the
-already-Verdaccio-resolved local `node_modules` as-is via a plain `COPY . .` (qwzspace and
-arnold are real, non-symlinked directories there) and only patches in the vendored feltos copy
-afterward (see `vendor/@red-cup-engineering/feltos/VENDORED.md`). `.gitignore` deliberately
-carries no unanchored `node_modules/` rule, so nothing under `node_modules/` is silently dropped
-from the upload context — the exact failure Farstone's own build hit and documented.
+already-Verdaccio-resolved local `node_modules` as-is via a plain `COPY . .` — feltos, qwzspace,
+and arnold are all real, non-symlinked, exact-pinned directories there, no vendoring for any of
+them. `.gitignore` deliberately carries no unanchored `node_modules/` rule, so nothing under
+`node_modules/` is silently dropped from the upload context — the exact failure Farstone's own
+build hit and documented.
 
 ## Environment variables
 

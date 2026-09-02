@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { createPolicyBoundPrivyAuthorizationSignFn } from "./privy-authorization-key-custody.mjs";
+import { createPolicyBoundPrivyAuthorizationSignFn } from "@red-cup-engineering/ethereum-services-section/privy-authorization-key-custody";
 import { evaluateBasePreSignPolicy } from "./policy-conformance.mjs";
 import {
   BASE_CHAIN_ID,
@@ -96,6 +96,10 @@ export async function startVirtualsCommercialPilot({
   const signFn = createPolicyBoundPrivyAuthorizationSignFn({
     path: resolve(authorizationKeystorePath),
     passwordFile: resolve(authorizationPasswordFile),
+    keystoreProfile: {
+      type: "urn:ame:blockchain-trashpanda:privy-authorization-key-keystore",
+      keyIdDomain: "blockchain-trashpanda.privy-p256-public-key",
+    },
     policy: {
       walletId,
       privyAppId,

@@ -5,9 +5,10 @@ import { join, resolve } from "node:path";
 import { createSemanticRecordJournal } from "@red-cup-engineering/semantic-record-journal-service";
 import { addressChannelPortfolioRecord } from "@red-cup-engineering/a2a-channel-portfolio-status-service";
 import { ACTOR, NODE_ROOT } from "./identity.mjs";
+import { canonical } from "@red-cup-engineering/json-codec-service";
 
 export { ACTOR, NODE_ROOT } from "./identity.mjs";
-export function canonical(value) { if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`; if (value && typeof value === "object") return `{${Object.keys(value).sort().filter((key) => value[key] !== undefined).map((key) => `${JSON.stringify(key)}:${canonical(value[key])}`).join(",")}}`; return JSON.stringify(value); }
+export { canonical };
 export function digest(value) { return `sha256:${createHash("sha256").update(canonical(value)).digest("hex")}`; }
 export function contentId(value) { return identifyJsonSemanticContent({ objectKind: "emsweb.video-federation.record", value: value, witnessRoot: EMPTY_WITNESS_ROOT }).token; }
 function exactId(value) { if (!value || typeof value !== "object") return false; const { id, ...body } = value; return id === contentId(body); }

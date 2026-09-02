@@ -55,8 +55,6 @@ test("worker.fetch proxies to the rewritten origin for a mapped host", async (t)
   const response = await worker.fetch(request);
 
   assert.equal(response.status, 200);
-  assert.equal(
-    new URL(seenRequest.url).hostname,
-    "casino-1019481907460.us-central1.run.app",
-  );
+  assert.equal(new URL(seenRequest.url).hostname, "ops.561.group");
+  assert.equal(new URL(seenRequest.url).port, "8081");
 });

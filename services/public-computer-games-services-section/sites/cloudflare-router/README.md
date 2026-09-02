@@ -56,7 +56,7 @@ continuity until each one migrates too).
 | `durante.561.group`            | `durante-1019481907460.us-central1.run.app`          |
 | `aletheon.561.group`           | `aletheon-1019481907460.us-central1.run.app`         |
 | `tidepool.561.group`           | `tidepool-1019481907460.us-central1.run.app`         |
-| `casino.561.group`              | `casino-1019481907460.us-central1.run.app`           |
+| `casino.561.group`              | `http://ops.561.group:8081` (revived onto cold-red-gate) |
 
 `wrangler.jsonc`'s `routes` array is what actually attaches each
 hostname to this Worker as a Workers Custom Domain (which also

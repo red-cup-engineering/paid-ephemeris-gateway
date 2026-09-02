@@ -15,7 +15,7 @@ export const ORIGIN_BY_HOST = new Map([
   ["durante.561.group", "durante-1019481907460.us-central1.run.app"],
   ["aletheon.561.group", "aletheon-1019481907460.us-central1.run.app"],
   ["tidepool.561.group", "tidepool-1019481907460.us-central1.run.app"],
-  ["casino.561.group", "casino-1019481907460.us-central1.run.app"],
+  ["casino.561.group", "http://ops.561.group:8081"],
 ]);
 
 export function upstreamRequestFor(request) {

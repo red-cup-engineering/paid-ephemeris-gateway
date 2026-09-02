@@ -1,5 +1,4 @@
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
+import { semanticIdentity } from "./semantic-identity.mjs";
 const semanticId = semanticIdentity;
 const ethereumObservationId = semanticIdentity;
 import { createSettlementStore } from "./settlement-witness.mjs";

@@ -4,9 +4,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";
+import { semanticIdentity } from "./semantic-identity.mjs";
 import { digest as ethereumProviderDigest, run as runEthereumProvider } from "@red-cup-engineering/ethereum-services-section/public-wallet-observation";
-const semanticIdentity = (objectKind, value) => identifyJsonSemanticContent({ objectKind, value, witnessRoot: EMPTY_WITNESS_ROOT }).token;
 const semanticId = semanticIdentity;
 import { createSettlementStore } from "./settlement-witness.mjs";
 

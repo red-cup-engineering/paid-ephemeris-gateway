@@ -21,7 +21,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@red-cup-engineering/vault-compiler": "0.1.0",
+    "@red-cup-engineering/vault-compiler": "0.1.2",
     "@red-cup-engineering/education-platform-service": "0.2.4",
     "@red-cup-engineering/read-markdown-frontmatter-service": "0.1.4"
   },

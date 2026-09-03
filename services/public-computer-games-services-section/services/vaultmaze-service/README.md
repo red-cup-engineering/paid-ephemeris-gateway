@@ -4,9 +4,9 @@ Digital garden + knowledge vault + spaced repetition, gamified. A directory of f
 markdown ("a wing") compiles into a walkable map: remembering a fact keeps its room lit, and
 forgetting fogs the frontier back — nothing is ever deleted, only temporarily unreachable.
 
-**VaultMaze** is the player-facing name. The package, directory, module names, and
-`localStorage` key prefix (`lantern:<wing>`) retain the historical `lantern`/`lantern-service`
-identity so existing player saves are never orphaned by a display rename. L-Space consumes this
+**VaultMaze** is the player-facing name and the package and directory identity. The
+`localStorage` key prefix (`lantern:<wing>`) retains the historical `lantern` identity so
+existing player saves are never orphaned. L-Space consumes this
 as a passage engine rather than a competing vault ontology. See `DESIGN.md` for the full design
 rationale and `web/README.md` for the browser face's file-by-file map.
 
@@ -31,7 +31,7 @@ npm run vaultmaze -- <path-to-your-vault>
 
 Auto-detects the vault's dialect (an `.obsidian` directory, an `.org` file majority, or house
 frontmatter markers — override with `--dialect house|obsidian|org`), compiles it via
-`@561-group/vault-compiler`, builds the layout, and serves it. `--wing <id>` names the wing
+`@red-cup-engineering/vault-compiler`, builds the layout, and serves it. `--wing <id>` names the wing
 (default: the vault directory's basename); `--port`/`--host` as with `serve:web`; `--exclude
 <glob>` adds an exclude glob (repeatable); `--no-serve` compiles without starting the server.
 This command only ever reads from the vault directory; every file it writes goes under this

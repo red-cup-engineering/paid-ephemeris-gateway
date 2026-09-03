@@ -6,14 +6,14 @@
  *                           [--port N] [--host H] [--exclude <glob>]... [--no-serve]
  *
  * READ-ONLY IS SACRED: this command only ever *reads* from `<vaultDir>` — that guarantee is
- * enforced by `@561-group/vault-compiler` itself (see its `read-only` tests), not just this
+ * enforced by `@red-cup-engineering/vault-compiler` itself (see its `read-only` tests), not just this
  * file's own discipline. Every byte this command writes goes under this service's own
  * `web/data/` directory, never into the vault.
  *
- * Compiles via `@561-group/vault-compiler` (dialect auto-detected, or `--dialect` override),
+ * Compiles via `@red-cup-engineering/vault-compiler` (dialect auto-detected, or `--dialect` override),
  * builds the same layout artifact the house-only `build:web` pipeline builds (the same
  * `buildLayout` lantern-service's own `web/build/build-layout.mts` was ported from — see
- * `@561-group/vault-compiler/build-layout`'s own doc comment for that provenance), and writes:
+ * `@red-cup-engineering/vault-compiler/build-layout`'s own doc comment for that provenance), and writes:
  *
  *   - `web/data/<wing>.json`          the compiled World — SAME artifact shape `build:web` writes
  *   - `web/data/<wing>-layout.json`   room positions + auto-hall katas — SAME shape
@@ -31,8 +31,8 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { compileVault } from '@561-group/vault-compiler/compile';
-import { buildLayout } from '@561-group/vault-compiler/build-layout';
+import { compileVault } from '@red-cup-engineering/vault-compiler/compile';
+import { buildLayout } from '@red-cup-engineering/vault-compiler/build-layout';
 import { createStaticServer } from '../web/server.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -89,7 +89,7 @@ function describeDegradations(world, dialect) {
 
   if (dialect === 'org') {
     notes.push(
-      "This is a minimal v1 org-mode reader: PROPERTY drawers, TODO states, and [[id:...]] org-roam links are not read. See @561-group/vault-compiler's README for the full disclosed scope.",
+      "This is a minimal v1 org-mode reader: PROPERTY drawers, TODO states, and [[id:...]] org-roam links are not read. See @red-cup-engineering/vault-compiler's README for the full disclosed scope.",
     );
   }
 

@@ -1,4 +1,4 @@
-# lantern-service — architecture
+# VaultMaze — architecture
 
 Companion to `DESIGN.md` (design rationale) and `web/README.md` (the browser face's file map).
 
@@ -18,7 +18,7 @@ scene module" pattern doesn't apply, because there is nothing here for a scene m
   read at all is `compile.mts`'s CLI entry point, which is I/O bookkeeping (reading a corpus
   directory, writing a JSON file), not domain logic.
 - **Zero runtime dependencies.** `package.json` has no `dependencies` key beyond
-  `@561-group/vault-compiler`, used only by `scripts/vaultmaze.mjs`. Node builtins otherwise
+  `@red-cup-engineering/vault-compiler`, used only by `scripts/vaultmaze.mjs`. Node builtins otherwise
   (`node:fs`, `node:path`, `node:url`, `node:http`).
 - **No stateful scene module.** Every other fleet service isolates mutable state behind one
   `scene.mts`; Lantern has none because it has no server-held player state at all. The compiler

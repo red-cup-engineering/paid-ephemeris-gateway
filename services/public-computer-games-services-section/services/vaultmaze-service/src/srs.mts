@@ -14,10 +14,9 @@
  * be the full optimizer.
  */
 import type { Grade } from './types.mts';
-
-export const DECAY = -0.5;
+import { DECAY, FACTOR, recallProbability, daysUntilRetention, DEFAULT_TARGET_RETENTION, STAGE_CUTS } from '@red-cup-engineering/education-platform-service/srs';
+export { DECAY, FACTOR, recallProbability, daysUntilRetention, DEFAULT_TARGET_RETENTION, STAGE_CUTS };
 /** = 0.9^(1/DECAY) − 1, FSRS's own published constant, not chosen for this project. */
-export const FACTOR = 19 / 81;
 
 /** New-card initial stability S0 (days), by grade. DESIGN.md §2 table. */
 const S0: Record<Grade, number> = { 1: 0.4, 2: 1.0, 3: 2.5, 4: 4.5 };
@@ -39,19 +38,6 @@ function clip(x: number, lo: number, hi: number): number {
  * (days). `t <= 0` is defined as certain recall (1); `S <= 0` is defined as certain forgetting
  * (0) — both guards for degenerate inputs, not part of the published curve itself.
  */
-export function recallProbability(t: number, S: number): number {
-  if (S <= 0) return 0;
-  if (t <= 0) return 1;
-  return Math.pow(1 + (FACTOR * t) / S, DECAY);
-}
-
-/** Inverse of `recallProbability` for `t`, solving the curve for `t` at a target retention `R`:
- * `t(R) = S * ((R^(1/DECAY) - 1) / FACTOR)`. At `R = 0.9` this equals `S` exactly. */
-export function daysUntilRetention(S: number, targetR: number): number {
-  if (S <= 0) return 0;
-  return S * ((Math.pow(targetR, 1 / DECAY) - 1) / FACTOR);
-}
-
 export interface CardState {
   stability: number;
   difficulty: number;
@@ -86,12 +72,3 @@ export function reviewCard(state: CardState, grade: Grade, now: number): CardSta
 
   return { stability: nextStability, difficulty: nextDifficulty, lastReviewedAt: now };
 }
-
-/** Default target retention used for "next due" scheduling — DESIGN.md §2. */
-export const DEFAULT_TARGET_RETENTION = 0.9;
-
-/** Light-stage cut points — DESIGN.md §2: design constants (flavor); the day-multiples they
- * imply are a mechanical consequence of the real curve (load-bearing), not separately tuned —
- * see `lightcone.mts`, which classifies directly from `R` rather than duplicating derived
- * multiples, so there is nothing here to drift out of sync with the curve. */
-export const STAGE_CUTS = { full: 0.9, embers: 0.7, dim: 0.5 } as const;

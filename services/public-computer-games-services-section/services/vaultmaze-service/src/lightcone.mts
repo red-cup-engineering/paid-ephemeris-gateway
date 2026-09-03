@@ -18,13 +18,8 @@
 import type { Door, Hall, ReviewCard, Room, RoomId, LightStage } from './types.mts';
 import { recallProbability, STAGE_CUTS } from './srs.mts';
 import { STABLE_HALL_BONUS } from './stability.mts';
-
-export function classifyStage(R: number): LightStage {
-  if (R >= STAGE_CUTS.full) return 'full';
-  if (R >= STAGE_CUTS.embers) return 'embers';
-  if (R >= STAGE_CUTS.dim) return 'dim';
-  return 'fogged';
-}
+import { classifyStage } from '@red-cup-engineering/education-platform-service/lightcone';
+export { classifyStage };
 
 /** A room has never been gated yet: no card of its has been reviewed. Such a room carries no
  * light of its own — it must be reached via the light cone from without, same as a fogged one,

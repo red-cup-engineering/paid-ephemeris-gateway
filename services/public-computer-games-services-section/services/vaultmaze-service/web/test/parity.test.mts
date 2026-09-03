@@ -11,6 +11,7 @@ import * as realSrs from '../../src/srs.mts';
 import * as realLightcone from '../../src/lightcone.mts';
 import * as portSrs from '../js/engine/srs.js';
 import * as portLightcone from '../js/engine/lightcone.js';
+import * as portStability from '../js/engine/stability.js';
 import * as portKata from '../js/engine/kata.js';
 import { scoreCard as realScoreCard, kataRatio as realKataRatio, beltForRatio as realBeltForRatio, awardedBelt as realAwardedBelt, ratioToGrade as realRatioToGrade } from '../../src/kata.mts';
 
@@ -123,9 +124,9 @@ test('lightcone port: revealedTerritory and rootRooms match', () => {
   assert.deepEqual([...portLightcone.rootRooms(rooms, doors)].sort(), [...realLightcone.rootRooms(rooms as any, doors as any)].sort());
 });
 
-test('lightcone port: STABLE_HALL_BONUS matches the real engine constant', async () => {
+test('stability port: STABLE_HALL_BONUS matches the real engine constant', async () => {
   const realStability = await import('../../src/stability.mts');
-  assert.equal(portLightcone.STABLE_HALL_BONUS, realStability.STABLE_HALL_BONUS);
+  assert.equal(portStability.STABLE_HALL_BONUS, realStability.STABLE_HALL_BONUS);
 });
 
 test('kata port: scoreCard/kataRatio/belts/ratioToGrade match the real engine', () => {

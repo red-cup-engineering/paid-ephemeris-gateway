@@ -32,12 +32,12 @@
     "serve": "node src/server.mts"
   },
   "dependencies": {
-    "@red-cup-engineering/card-table": "^0.1.0",
+    "@red-cup-engineering/card-table": "0.1.0",
     "@red-cup-engineering/cartridge": "0.2.1",
-    "@red-cup-engineering/cast": "^0.1.0",
-    "@red-cup-engineering/energy-bank": "^0.3.0",
-    "@red-cup-engineering/parlor-kernel": "^0.3.0",
-    "@red-cup-engineering/qwzspace": "^0.6.0",
+    "@red-cup-engineering/cast": "0.1.0",
+    "@red-cup-engineering/energy-bank": "0.3.0",
+    "@red-cup-engineering/parlor-kernel": "0.3.0",
+    "@red-cup-engineering/qwzspace": "0.6.2",
     "@red-cup-engineering/resonator": "0.2.1"
   },
   "exports": {

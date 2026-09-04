@@ -6,6 +6,8 @@
  */
 import type { CardKind, Door, ReviewCard, Room } from './types.mts';
 import { asList } from './frontmatter-values.mts';
+import { findAliasSpan } from "@red-cup-engineering/vault-compiler/cards";
+export { findAliasSpan };
 
 const NEW_CARD_STABILITY = 0; // seeded properly by srs.reviewCard on the gate-pass; placeholder pre-first-review
 const NEW_CARD_DIFFICULTY = 5; // neutral placeholder, overwritten on first review
@@ -76,16 +78,7 @@ export interface AliasSpan {
   matched: string;
 }
 
-/** Longest-match, case-insensitive, word-boundary search for any of `aliases` inside `text`. */
-export function findAliasSpan(text: string, aliases: readonly string[]): AliasSpan | null {
-  const candidates = [...aliases].filter((a) => a.length > 0).sort((a, b) => b.length - a.length);
-  for (const alias of candidates) {
-    const re = new RegExp(`\\b${escapeRegExp(alias)}\\b`, 'i');
-    const m = re.exec(text);
-    if (m) return { start: m.index, end: m.index + m[0].length, matched: m[0] };
-  }
-  return null;
-}
+
 
 function firstParagraph(body: string): string {
   const trimmed = body.trim();

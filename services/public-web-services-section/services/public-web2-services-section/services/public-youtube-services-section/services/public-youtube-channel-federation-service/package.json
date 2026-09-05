@@ -1,6 +1,6 @@
 {
   "name": "@causeway-services/public-youtube-channel-federation-service",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "module",
   "description": "Non-central five-channel covenant, authenticated portfolio snapshots, weekday-aware deficit reports, and channel-addressed procurement opportunities.",
   "scripts": {
@@ -14,7 +14,7 @@
     "node": ">=22.18"
   },
   "dependencies": {
-    "@red-cup-engineering/json-codec-service": "0.1.13",
+    "@red-cup-engineering/json-codec-service": "0.2.0",
     "@red-cup-engineering/javascript-file-main-guard-service": "0.1.2",
     "@red-cup-engineering/a2a-agent-card-discovery-service": "1.0.9",
     "@red-cup-engineering/a2a-agent-card-key-service": "1.0.5",

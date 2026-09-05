@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/aagaard",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "type": "module",
   "description": "Sovereign Hive wallet-fleet operations using chain-confirmed evidence.",
   "files": [
@@ -35,6 +35,7 @@
     "@561-group/listing-open-obligations": "0.1.2",
     "@561-group/resolving-an-identifier": "0.2.0",
     "@red-cup-engineering/agrodao": "0.16.4",
+    "@red-cup-engineering/canonical-json-service": "0.2.1",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1"

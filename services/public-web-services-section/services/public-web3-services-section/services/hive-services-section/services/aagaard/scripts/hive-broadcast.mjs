@@ -93,6 +93,7 @@ import {
   assertExactSplinterlandsRosterPurchaseOperation,
   planSplinterlandsRosterPurchase,
 } from "../src/integrations/splinterlands/splinterlandsMarket.mts";
+import { canonicalJson as canonical } from "@red-cup-engineering/canonical-json-service";
 
 const ALLOWED_CONTRACT_ACTIONS = new Set([
   "hivepegged.withdraw",
@@ -195,11 +196,7 @@ function validateHelpLiquidityBootstrapSwap(account, role, lane, target, fields,
   if (!admitted) fail("hive-broadcast: HELP liquidity bootstrap is only the exact bounded 0.5 SWAP.HIVE BTC-pool conversion");
 }
 
-function canonical(value) {
-  if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
-  if (value && typeof value === "object") return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${canonical(value[key])}`).join(",")}}`;
-  return JSON.stringify(value);
-}
+
 
 function validateHelpLiquidityAdd(account, role, lane, target, fields, decoded, operation, authorization) {
   const payload = decoded?.contractPayload;

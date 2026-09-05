@@ -1,0 +1,29 @@
+{
+  "id": "aletheon",
+  "displayName": "Aletheon",
+  "description": "A browser 3D fantasy MMORPG built on QwzSpace: a hand-rolled RFC 6455 WebSocket server running a 15Hz tick loop, with real combat, claim altars, an illocutionary speech-act system (assert/deny/abstain/contest), marks, K4-gauge powers, and an economy, over a four-valued bilattice world-truth model.",
+  "subdomain": "aletheon",
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "intentLog": {
+    "schemaVersion": "aletheon-v1"
+  },
+  "status": "playable",
+  "statusNote": "Known limitation: marks and inventory mutate state directly and do not survive a restore. (Event-log compaction and the sustained-traffic OOM crash-loop this used to note were fixed and verified live 2026-08-20 -- see the deploy runbook's Known open issues.)",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "mmorpg",
+    "3d",
+    "bilattice",
+    "websocket",
+    "combat",
+    "illocution",
+    "real-time"
+  ],
+  "shelf": "unshelved"
+}

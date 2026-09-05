@@ -1,0 +1,35 @@
+{
+  "name": "@red-cup-engineering/splinterlands-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Read-only Splinterlands collection observation, a bounded card-market purchase planner, and a battle-readiness audit signal. Deliberately has no battle-queue or team-submission encoder: see README for the ToS boundary this preserves.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs"
+  },
+  "exports": {
+    ".": "./src/collection.mjs",
+    "./collection": {
+      "types": "./src/collection.d.ts",
+      "default": "./src/collection.mjs"
+    },
+    "./market": {
+      "types": "./src/market.d.ts",
+      "default": "./src/market.mjs"
+    },
+    "./queue-readiness": {
+      "types": "./src/queue-readiness.d.ts",
+      "default": "./src/queue-readiness.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "splinterlands",
+    "sovereign-state-enterprise"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@561-group/durante",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "durante — a QUAKE-like first-person shooter on @561-group/abrash (software 3D over the daleske pixel terminal). You walk a level, strafe, and shoot a demon. The paraconsistent TWIST rides the substrate three ways. (1) THE ARENA IS A MERGE OF TRACES: the level is not authored once — it SETTLES from the federated union of every player's trace, so a deathmatch arena is the fold of the peers who built it, and where two traces DISAGREE about a wall the substrate holds it ⊤ — a CONTESTED wall that SHIVERS, and a PHASE GATE you can walk through (passContested) precisely because nobody agrees it is solid. (2) A WEAPON'S EFFECT IS EVIDENCE YOU FOLD: a shot does not subtract a hit-point — it APPENDS deny(demon,'alive') to the trace, negative evidence on the demon's vitality. The demon's life is the FOLD of that evidence; the LAW is linear, so every wound is a witness kept, never overwritten. (3) THE ENEMY IS HELD ⊤: between your first wound and the kill, the demon is alive-AND-dead — affirmed alive by its spawn, denied alive by your shots — a held contradiction ⊤, the demon you cannot trust, rendered with a CONTESTED tint, until enough deny-evidence SETTLES it to f (dead) and it falls. ⊤ is not a debug dump here, it is the designed mechanic: the monster that is both until you settle it. THE LAW: ⊤ held, append-only trace, evidence linear. Named for the durante lineage of the id-software fast shooter. Built on @561-group/abrash (+ @561-group/computer); games ride the engine.",
+  "keywords": [
+    "game",
+    "fps",
+    "quake-like",
+    "first-person-shooter",
+    "raycaster",
+    "pixel",
+    "federation",
+    "paraconsistent",
+    "bilattice",
+    "held-contradiction",
+    "561-group"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/561-group.git",
+    "directory": "apps/games/durante"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "durante": "./scripts/durante.mjs"
+  },
+  "scripts": {
+    "test": "node tests/arena.test.mjs && node tests/combat.test.mjs && node tests/demon.test.mjs && node tests/game.test.mjs",
+    "demo": "node scripts/durante.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./arena": "./src/arena.mjs",
+    "./combat": "./src/combat.mjs",
+    "./demon": "./src/demon.mjs",
+    "./game": "./src/game.mjs",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@561-group/abrash": "0.0.1"
+  }
+}

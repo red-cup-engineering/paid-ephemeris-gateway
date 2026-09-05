@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 4500" width="3600" height="4500">
+
+<line x1="1350" y1="2030" x2="2250" y2="2030" stroke="#111111" stroke-width="6"/>
+<text x="1800" y="2310" text-anchor="middle" font-family="Helvetica Neue, sans-serif" font-weight="400" letter-spacing="10" font-size="220" fill="#111111">Commit And Pray</text>
+<line x1="1350" y1="2470" x2="2250" y2="2470" stroke="#111111" stroke-width="6"/>
+</svg>

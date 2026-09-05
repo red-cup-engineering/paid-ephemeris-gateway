@@ -1,0 +1,26 @@
+{
+  "id": "be-not-so-fearful",
+  "displayName": "Be Not So Fearful",
+  "description": "A backrooms/SCP-inspired extraction shooter on @red-cup-engineering/abrash: OG-Wolfenstein-grade raycast graphics, Quake-grade momentum physics (a BNSF-owned kernel composing abrash's real collision.move -- bunnyhop speed gain, rocket-jump verticality, both numerically tested) over seeded backrooms-liminal levels whose contested (⊤) walls -- abrash's own held-contradiction mechanic -- shiver as the dread signal. Four anomalies, each a learnable, tested behavior contract (watched vs unwatched, sound through walls, territory, an unconditional toll). Loot is banked only on an explicit extraction at a beacon; unbanked loot is simply never counted on death -- what you carry is what you can lose.",
+  "subdomain": "fearful",
+  "entryPoints": {
+    "browser": "/",
+    "headless": "src/cartridge.mts"
+  },
+  "seedPolicy": {
+    "kind": "client-supplied"
+  },
+  "intentLog": {
+    "schemaVersion": "bnsf-run/1"
+  },
+  "replayVerifier": "src/manifest.mts#verify",
+  "keywords": [
+    "game", "fps", "extraction-shooter", "backrooms", "scp", "quake-like", "raycaster", "momentum",
+    "bunnyhop", "rocket-jump", "561-group", "browser", "federation", "paraconsistent", "bilattice"
+  ],
+  "status": "playable",
+  "statusNote": "Live-playtested (real BFS+optimal-strafe controller driving the actual deployed build, not a mock): movement numbers are real and measured -- ground max 7 u/s, bunnyhop reaches >2x ground max within 7 hop cycles, rocket-jump apex clears 1.4x a normal jump's height while a normal jump alone does not. All four anomalies are live and distinct (Unwitnessed: watched vs unwatched; Hum: sound-through-walls hunt-and-juke; Warden: territorial retreat-before-aggro dread; Toll: an unconditional pursuit tied to one warded high-value item, its guardian's spawn distance tuned 2026-08-20 after a playtest found it spawning on top of its own loot with zero counterplay). Extraction economy confirmed live: banked loot survives death, unbanked loot is simply forfeited, a real extraction was driven end to end. Known thinness, stated plainly: content volume is still small (one authored encounter density per tier, not a deep library of variety) and there is no audio yet -- The Hum's \"loudness\" is a pure game-logic signal today, not a real sound layer.",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": true,
+  "shelf": "Puzzle Den"
+}

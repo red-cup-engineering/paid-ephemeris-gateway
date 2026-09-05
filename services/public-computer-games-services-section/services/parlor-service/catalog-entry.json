@@ -1,0 +1,31 @@
+{
+  "id": "parlor",
+  "displayName": "Parlor",
+  "description": "Five games, one service, one rules-as-data kernel: Pig and Farkle (hold-or-roll / dice-set-scoring, each with a bot opponent that plays the published math), Yacht (5 dice, 3 rolls, 13 categories), Chutes & Ladders (the classic 100-square race as a board graph, with the live exact finish-turn distribution computed and shown), and Fair Spin (a practice slot machine that shows computed RTP, per-symbol hit odds, and expected loss per 100 spins permanently, never behind a click). Daily-seeded per game, earn-only, no wagering, kind design.",
+  "subdomain": "parlor",
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "on-demand"
+  },
+  "intentLog": {
+    "schemaVersion": "parlor-cartridge-v1"
+  },
+  "status": "playable",
+  "statusNote": "seedPolicy is on-demand at this top level, not daily-utc: the front door (/) is a shelf page linking to five independently-seeded games (each daily-seeded under its own parlor:<gameId>, per README), with no single canonical today's-seed for the entry as a whole -- same reasoning as cartridgeWrapped below. cartridgeWrapped is false at this top level pending independent validation -- each of the five sub-games (src/games/{pig,farkle,yacht,chutes,reels}) carries its own cartridge.mts/manifest.mts wrapping @red-cup-engineering/parlor-kernel/replay#buildCartridge, but this catalog-entry.json covers one service directory with one replayVerifier field, which cannot honestly point at five separate per-game verifiers at once.",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": false,
+  "keywords": [
+    "pig",
+    "farkle",
+    "yacht",
+    "chutes-and-ladders",
+    "slot-machine",
+    "dice-games",
+    "daily-puzzle",
+    "computed-odds",
+    "earn-only"
+  ],
+  "shelf": "Card Table"
+}

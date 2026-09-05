@@ -1,0 +1,7 @@
+{
+ "wingId": "weiqi",
+ "dialect": "house",
+ "dialectReason": "20/20 sampled markdown file(s) carry a house frontmatter marker field (type/cites/date-created)",
+ "degradations": [],
+ "sourceDir": "/home/emsenn/info/lib/emsenn/services/561-group/services/science-services-section/services/agent-services-section/services/play-services-section/services/game-science-services-section/services/board-games-services-section/services/weiqi-services-section/content/text"
+}

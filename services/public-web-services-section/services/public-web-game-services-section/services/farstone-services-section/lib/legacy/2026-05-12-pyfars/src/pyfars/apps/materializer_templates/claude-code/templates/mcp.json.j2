@@ -1,0 +1,10 @@
+{%- set host = mcp_binding.host if mcp_binding else "127.0.0.1" -%}
+{%- set port = mcp_binding.port if mcp_binding else 8001 -%}
+{
+  "mcpServers": {
+    "pyfars-substrate": {
+      "type": "http",
+      "url": "http://{{ host }}:{{ port }}/mcp"
+    }
+  }
+}

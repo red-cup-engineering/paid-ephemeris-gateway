@@ -1,0 +1,59 @@
+# Farstone polity — files that should not be committed.
+
+# PyFARS runtime artifacts — written by the engine each tick; never
+# part of the substrate's authored source.
+.pyfars/events.jsonl
+.pyfars/projections.jsonl
+.pyfars/event-log/
+.pyfars/drafts/
+.pyfars/harness-output/
+.pyfars/harness-manifests/
+.pyfars/run.sock
+.pyfars/profile/
+.pyfars/oauth/clients.json
+.pyfars/heartbeat.lock
+
+# Operator secrets — never committed. The engine reads from
+# .pyfars/secrets.env at boot; .pyfars/secrets.env.example is the
+# template the install harness writes for operators to copy from.
+.pyfars/secrets.env
+.pyfars/secrets.env.*
+!.pyfars/secrets.env.example
+
+# Nix build outputs
+result
+result-*
+
+# Python build/dev artifacts
+.venv/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+# OpenClaw — ignore runtime/secrets; track agent identity/memory markdown.
+.openclaw/*.json
+.openclaw/*.json.*
+.openclaw/identity/
+.openclaw/devices/
+.openclaw/logs/
+.openclaw/memory/
+.openclaw/flows/
+.openclaw/tasks/
+.openclaw/plugins/
+.openclaw/canvas/
+.openclaw/completions/
+.openclaw/tui/
+.openclaw/workspace/
+.openclaw/workspace-state.json
+.openclaw/agents/*/agent/
+.openclaw/agents/*/sessions/
+.openclaw/agents/*/*.json
+.openclaw/agents/*/*.jsonl
+
+# Editor + OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://561.group/schema/print-on-demand-design.schema.json",
+  "title": "PrintOnDemandDesign",
+  "type": "object",
+  "required": ["id", "niche", "phrase", "layout", "colorway", "title", "description", "tags", "products"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+-[0-9]{2}-[a-z0-9-]+$" },
+    "niche": { "type": "string" },
+    "phrase": { "type": "string", "minLength": 1 },
+    "subphrase": { "type": "string" },
+    "layout": {
+      "type": "string",
+      "enum": ["stacked-bold", "badge-circle", "two-line-contrast", "minimal-caption", "arc-tag"]
+    },
+    "colorway": {
+      "type": "string",
+      "enum": ["mono-black", "mono-white", "accent-orange", "accent-mint", "accent-navy"]
+    },
+    "title": { "type": "string", "minLength": 1, "maxLength": 140 },
+    "description": { "type": "string", "minLength": 1 },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 13
+    },
+    "products": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["shirt", "mug", "sticker", "poster"] },
+      "minItems": 1
+    },
+    "artPrompt": { "type": "string" }
+  },
+  "additionalProperties": false
+}

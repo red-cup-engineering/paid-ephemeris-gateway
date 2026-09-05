@@ -1,0 +1,277 @@
+/* Stoke — theme-aware tokens (light default; dark via prefers-color-scheme or the explicit
+   toggle), prefers-reduced-motion respected. Badge colors carry the house's computed/authored
+   disclosure discipline (wilder-conceptions-01.md item 5 + the ringleader's resolution) — visibly
+   distinct on purpose, never distinguishable by color alone (label text differs too). */
+
+:root {
+  --bg: #f6f3ee;
+  --panel-bg: #ffffff;
+  --ink: #1c1a17;
+  --ink-dim: #6b665e;
+  --border: #d8d2c6;
+  --accent: #2f6f4f;
+  --accent-soft: #6fae86;
+  --radius: 10px;
+  --focus-ring: #1a5fb4;
+
+  --computed-bg: #eaf1fb;
+  --computed-ink: #1a4d8f;
+  --computed-border: #a9c6ea;
+  --authored-bg: #fbf1de;
+  --authored-ink: #8a5a1f;
+  --authored-border: #e0b876;
+
+  --node-fill-empty: #d8d2c6;
+  --node-fill-full: #2f6f4f;
+  --edge-line: #9a927f;
+
+  --refused-ink: #a3311f;
+  --ok-ink: #2f6f4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16181a;
+    --panel-bg: #1f2224;
+    --ink: #ece7de;
+    --ink-dim: #a39c8f;
+    --border: #3a3d3f;
+    --accent: #6fae86;
+    --accent-soft: #2f6f4f;
+    --focus-ring: #6fa8f5;
+
+    --computed-bg: #16233a;
+    --computed-ink: #8fb8ec;
+    --computed-border: #2c4a72;
+    --authored-bg: #2a2213;
+    --authored-ink: #e0b876;
+    --authored-border: #5c4a24;
+
+    --node-fill-empty: #3a3d3f;
+    --node-fill-full: #6fae86;
+    --edge-line: #7d7666;
+
+    --refused-ink: #e4897a;
+    --ok-ink: #8fd1a8;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #16181a;
+  --panel-bg: #1f2224;
+  --ink: #ece7de;
+  --ink-dim: #a39c8f;
+  --border: #3a3d3f;
+  --accent: #6fae86;
+  --accent-soft: #2f6f4f;
+  --focus-ring: #6fa8f5;
+
+  --computed-bg: #16233a;
+  --computed-ink: #8fb8ec;
+  --computed-border: #2c4a72;
+  --authored-bg: #2a2213;
+  --authored-ink: #e0b876;
+  --authored-border: #5c4a24;
+
+  --node-fill-empty: #3a3d3f;
+  --node-fill-full: #6fae86;
+  --edge-line: #7d7666;
+
+  --refused-ink: #e4897a;
+  --ok-ink: #8fd1a8;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.4;
+}
+
+a { color: var(--accent); }
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel-bg);
+}
+
+.site-title { font-weight: 700; font-size: 1.25rem; }
+.spacer { flex: 1; }
+.seed-badge { font-size: 0.85rem; color: var(--ink-dim); }
+.seed-badge code { font-family: ui-monospace, monospace; }
+
+.theme-toggle, button, .action-button {
+  font: inherit;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: transform 100ms ease, border-color 100ms ease;
+}
+button:hover, .action-button:hover { border-color: var(--accent); }
+button:not(:disabled):active, .action-button:not(:disabled):active { transform: translateY(1px); }
+
+.honesty-banner {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-dim);
+}
+
+.play-main {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.2fr) minmax(260px, 1fr) minmax(240px, 0.9fr);
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .play-main { grid-template-columns: 1fr; }
+}
+
+section, aside {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+h2 { margin-top: 0; font-size: 1.05rem; }
+h3 { font-size: 0.95rem; color: var(--ink-dim); }
+
+.graph-svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  color: var(--edge-line);
+}
+
+.node-circle {
+  fill: color-mix(in srgb, var(--node-fill-empty) calc((1 - var(--fill-t, 0)) * 100%), var(--node-fill-full) calc(var(--fill-t, 0) * 100%));
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  transition: stroke 100ms ease, stroke-width 100ms ease;
+}
+/* Nodes are also click targets (a mouse-convenience shortcut over the always-present form
+   controls — see render-graph.mjs's module doc); give that affordance a visible hover cue so
+   it doesn't read as purely decorative. */
+.graph-node--clickable { cursor: pointer; }
+.graph-node--clickable:hover .node-circle { stroke: var(--accent); stroke-width: 2.5; }
+.node-label { fill: var(--ink); font-size: 11px; }
+.node-stock { fill: var(--panel-bg); font-size: 10px; font-weight: 600; }
+.edge-label { fill: var(--ink-dim); font-size: 9px; }
+
+.stock-list, .edge-list, .event-log, .mixture-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.event-log { max-height: 260px; }
+.event { color: var(--ink-dim); }
+.event--refused { color: var(--refused-ink); }
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.badge--computed {
+  background: var(--computed-bg);
+  color: var(--computed-ink);
+  border-color: var(--computed-border);
+}
+.badge--authored {
+  background: var(--authored-bg);
+  color: var(--authored-ink);
+  border-color: var(--authored-border);
+}
+
+.action-form fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem;
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.5rem;
+}
+.action-form legend { font-size: 0.8rem; color: var(--ink-dim); padding: 0 0.3rem; }
+.action-form label { font-size: 0.75rem; color: var(--ink-dim); display: block; }
+.action-form input, .action-form select {
+  font: inherit;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+}
+.hint { font-size: 0.8rem; color: var(--ink-dim); }
+
+.prestige-panel, .verify-panel { font-size: 0.9rem; margin-bottom: 0.5rem; }
+.prestige-not-ready { color: var(--ink-dim); font-style: italic; }
+.prestige-history-note { font-size: 0.78rem; color: var(--ink-dim); }
+.action-button--terminal {
+  border-color: var(--refused-ink);
+  color: var(--refused-ink);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.action-button--terminal:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.verify-ok { color: var(--ok-ink); }
+.verify-fail { color: var(--refused-ink); font-weight: 700; }
+
+.site-footer {
+  padding: 1rem 1.25rem 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

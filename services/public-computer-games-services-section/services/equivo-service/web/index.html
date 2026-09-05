@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Equivo — learn to observe equivalence by measuring obstruction</title>
+<meta name="description" content="Equivo: a Duolingo-style course that teaches equivalence by measuring obstruction — real bilattice descent and cohomology, computed live by @lenticule-science/metrologic, not decorative math." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>≃</text></svg>" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "@lenticule-science/metrologic/bilattice": "./js/vendor/math/bilattice/index.mjs",
+    "@lenticule-science/metrologic/obstruction/cochain": "./js/vendor/math/obstruction/cochain.mjs",
+    "@lenticule-science/metrologic/obstruction/settling": "./js/vendor/math/obstruction/settling.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app">
+  <header id="app-header">
+    <h1><span aria-hidden="true">≃</span> Equivo</h1>
+    <p class="subtitle">Learn to observe equivalence by measuring obstruction — one real computation at a time.</p>
+
+    <div id="header-controls">
+      <label id="lens-label">
+        Lens
+        <select id="lens-select" aria-label="Presentation lens"></select>
+      </label>
+      <div id="streak-display" role="status" aria-label="Streak status"></div>
+      <p id="storage-status" role="status" hidden></p>
+      <div id="header-actions">
+        <button type="button" id="btn-export">Export save</button>
+        <button type="button" id="btn-import">Import save</button>
+        <input type="file" id="file-import" accept="application/json" hidden />
+      </div>
+    </div>
+    <p id="lens-absence-banner" class="lens-absence-banner" hidden></p>
+  </header>
+
+  <main id="app-main">
+    <nav id="room-list" aria-label="Unit 1: The Descent"></nav>
+
+    <section id="content-panel" aria-live="polite">
+      <p id="load-status" role="status"></p>
+    </section>
+  </main>
+
+  <footer id="app-footer">
+    <p>Platform + Equivo theme #1, built entirely against real, tested code
+       (<code>@lenticule-science/metrologic</code>) — every exercise is a real computation, verified by the
+       same package at content-build time so wrong content cannot ship.</p>
+  </footer>
+</div>
+<script type="module" src="js/equivo-app.js"></script>
+</body>
+</html>

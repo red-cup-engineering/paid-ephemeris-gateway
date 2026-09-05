@@ -1,0 +1,26 @@
+{
+  "_comment": "Spec event-log-append:2026.05.09+event-log-append §6.4 — Audit firing (violation regime). Fixture: a code-survey result with two matches; the canonical site plus a hypothetical rogue opener. Test posts these cells, expects the auditing-codepath-uniqueness rule to fire on the violation branch and produce a codepath-uniqueness-violation finding plus audit-state: violated.",
+  "survey": {
+    "id": "code-survey:2026-05-15-violation-fixture",
+    "target_pattern": "<root>/<event-log-dir>/<YYYY-MM-DD>.jsonl",
+    "open_mode": "a",
+    "match_locations": [
+      "pyfars.runtime.event_log.EventLog.append",
+      "pyfars.runtime.session._direct_append"
+    ],
+    "completed_at": "2026-05-15T17:00:00Z"
+  },
+  "expected_cells_after_firing": [
+    {"entity": "event-log-append-call-site", "predicate": "audit-state", "value": "violated", "bilattice": "t"}
+  ],
+  "expected_findings": [
+    {
+      "entity": "finding:codepath-uniqueness-violation-2026-05-15T17:00:00Z",
+      "cells": [
+        {"predicate": "kind", "value": "codepath-uniqueness-violation", "bilattice": "t"},
+        {"predicate": "expected-call-site", "value": "pyfars.runtime.event_log.EventLog.append", "bilattice": "t"},
+        {"predicate": "observed-locations", "value": ["pyfars.runtime.event_log.EventLog.append", "pyfars.runtime.session._direct_append"], "bilattice": "t"}
+      ]
+    }
+  ]
+}

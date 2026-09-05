@@ -1,0 +1,13 @@
+{
+  "type": "BlockchainTrashpandaSettlementEnablementOrder",
+  "decidedBy": "session sweep (2026-08-31), founder-ordered decision-sweep authority",
+  "decidedOn": "2026-08-31",
+  "decision": "The charter's formation-tranche settlement block is lifted (content/charters/blockchain-trashpanda.json, \"no mainnet settlement or real USDC during the formation tranche\" removed from boundary). Basis: the agent is listed and priced on Virtuals ACP (agent 44184) and has never earned solely because its own charter forbade settlement; no owner fence names it; enabling settlement harms no body.",
+  "status": "queued",
+  "queuedWork": [
+    "wire real Base-mainnet USDC settlement into the pre-sign transaction policy conformance service",
+    "re-run the authorized one-job Virtuals pilot's terminal-outcome appraisal against the post-pilot market services mandate's activationGate before publishing evidence-based market pricing",
+    "carry the pilot through to real settlement now that the boundary clause forbidding it is removed"
+  ],
+  "explicitlyNotDone": "This record only lifts the charter-level prohibition and files the queued work; it does not implement settlement wiring, which is separate engineering work."
+}

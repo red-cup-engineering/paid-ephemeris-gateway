@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blackjack — Cowrie Casino</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blackjack.css" />
+</head>
+<body>
+  <header class="masthead masthead-compact">
+    <div class="masthead-inner">
+      <a class="back-to-lobby" href="/">&larr; Cowrie Casino</a>
+      <h1>Blackjack</h1>
+      <span class="glyph" aria-hidden="true">&#9824;</span>
+    </div>
+  </header>
+
+  <main class="bj-main">
+    <section class="panel bj-balances" aria-live="polite">
+      <div class="stat">
+        <span class="stat-label">Chips</span>
+        <span class="stat-value" id="bj-chip-balance">&mdash;</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Jackpot Pool</span>
+        <span class="stat-value jackpot" id="bj-jackpot-balance">&mdash;</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Hands Played</span>
+        <span class="stat-value" id="bj-hands-played">0</span>
+      </div>
+      <label class="house-math-toggle">
+        <input type="checkbox" id="house-math-checkbox" />
+        House Math
+      </label>
+    </section>
+
+    <p class="hint" id="bj-message" role="status">Opening the table&hellip;</p>
+
+    <section class="bj-table" id="bj-table" data-fx="table-idle">
+      <div class="bj-felt-arc" aria-hidden="true"></div>
+
+      <div class="bj-seat bj-seat-dealer">
+        <div class="bj-seat-label">Dealer<span class="bj-hand-total" id="dealer-total"></span></div>
+        <div class="bj-cards" id="dealer-cards" data-fx="dealer-cards"></div>
+      </div>
+
+      <div class="bj-house-math" id="house-math-panel" hidden>
+        <h3>House Math</h3>
+        <p class="house-math-sub">Exact expected value per unit bet, computed live against this shoe &mdash; not a memorized chart.</p>
+        <dl class="house-math-grid" id="house-math-grid"></dl>
+      </div>
+
+      <div class="bj-hands" id="player-hands"></div>
+
+      <div class="bj-outcome" id="bj-outcome" data-fx="outcome" hidden></div>
+    </section>
+
+    <section class="panel bj-controls" id="bj-bet-controls">
+      <h2>Place your bet</h2>
+      <div class="bj-chip-picker" id="bj-chip-picker"></div>
+      <div class="bj-bet-row">
+        <span class="bj-bet-readout">Bet: <strong id="bj-bet-amount">25</strong> chips</span>
+        <button id="bj-deal-btn" type="button" class="bj-primary-btn">Deal</button>
+      </div>
+    </section>
+
+    <section class="panel bj-controls" id="bj-action-controls" hidden>
+      <h2>Your move</h2>
+      <div class="bj-action-row">
+        <button id="bj-hit-btn" type="button">Hit</button>
+        <button id="bj-stand-btn" type="button">Stand</button>
+        <button id="bj-double-btn" type="button">Double</button>
+        <button id="bj-split-btn" type="button">Split</button>
+        <button id="bj-surrender-btn" type="button">Surrender</button>
+        <button id="bj-next-hand-btn" type="button" class="bj-primary-btn">Next Hand</button>
+      </div>
+    </section>
+
+    <section class="panel bj-rules" id="bj-rules">
+      <h2>Table rules</h2>
+      <p id="bj-rules-text"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cowrie Casino &middot; Blackjack &middot; play currency only, no real-money wagers or payouts, ever</p>
+  </footer>
+
+  <script type="module" src="/js/blackjack.mjs"></script>
+</body>
+</html>

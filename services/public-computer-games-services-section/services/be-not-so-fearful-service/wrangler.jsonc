@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "be-not-so-fearful-561-group",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    { "pattern": "fearful.561.group", "custom_domain": true }
+  ]
+}

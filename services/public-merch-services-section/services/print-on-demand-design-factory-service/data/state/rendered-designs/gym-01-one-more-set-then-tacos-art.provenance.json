@@ -1,0 +1,12 @@
+{
+  "designId": "gym-01-one-more-set-then-tacos",
+  "provider": "cloudflare-workers-ai",
+  "model": "@cf/black-forest-labs/flux-1-schnell",
+  "promptUsed": "a bold flat-vector illustration of gym equipment and a stylized weightlifter silhouette, dynamic poster composition, that visually evokes the mood of \"One More Set Then Tacos\". Bold flat color palette suited to screen-printing. No text, letters, or numbers anywhere in the image. No logos, no brand names, no trademarked characters, no real people, nothing hateful. Wholly original artwork, centered subject, print-ready poster composition, high contrast, transparent or single flat-color background.",
+  "generatedAt": "2026-09-01T01:09:27.159Z",
+  "sourceWidthPx": 1024,
+  "outputTargetWidthPx": 2400,
+  "upscaled": true,
+  "upscaleNote": null,
+  "outputPath": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-merch-services-section/services/print-on-demand-design-factory-service/data/state/rendered-designs/gym-01-one-more-set-then-tacos-art.png"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "help-hive-liquidity-manager",
+  "name": "liquidity portfolio manager",
+  "kind": "office",
+  "normative-structure": "Whether capital that Sigmund has explicitly released is productively and safely deployed in Hive-Engine liquidity pools from the help-fund account is this office's own answer. It accounts for both pool legs, fees, ratio, slippage, impermanent-loss exposure, withdrawal constraints, and the value of remaining liquid. A release is a ceiling, never an obligation to enter an unsuitable pool.",
+  "deontic-profile": {
+    "evaluate-hive-engine-liquidity-pools": "duty",
+    "account-for-released-surplus": "duty",
+    "propose-exact-liquidity-deployment": "duty",
+    "authorize-an-exact-liquidity-envelope": "deontic-power",
+    "resist-consuming-unreleased-or-unsettled-capital": "deontic-immunity"
+  },
+  "provides-skill": [
+    "listing-open-obligations",
+    "making-a-task",
+    "dispatching-a-task"
+  ],
+  "authority-scope": [
+    "services/hive-blockchain-services-section/services/help-hive-liquidity-enterprise/"
+  ],
+  "jurisdiction": "services/hive-blockchain-services-section/services/help-hive-liquidity-enterprise/",
+  "part-of": "agrodao",
+  "reports-to": "treasury-steward",
+  "theory-basis": [
+    "RenDanHeYi xiaowei: a pool-facing micro-enterprise constituted by the liquidity user and the yield-risk trade rather than by spare treasury cash",
+    "AGRODAO treasury separation: HELP may deploy only an exact expiring surplus release after Sigmund's arbitrage reserve",
+    "Constant-product market making: fees are earned against inventory rebalancing and impermanent-loss exposure, so gross APR alone cannot authorize capital"
+  ],
+  "founded": "2026-07-22",
+  "x-provenance": {
+    "recorded-by": "codex",
+    "recorded-on": "2026-07-22",
+    "derived-from": "user correction that HELP should provide pool liquidity with capital Sigmund does not need liquid for arbitrage"
+  }
+}

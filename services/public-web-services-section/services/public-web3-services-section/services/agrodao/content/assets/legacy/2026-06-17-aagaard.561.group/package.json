@@ -1,0 +1,29 @@
+{
+  "name": "@emsenn/aagaard",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Aagaard — autonomous on-chain agentic operations platform for the Hive wallet fleet: gated voting (curation knapsack + spectral alpha radar) and trading lanes over the upstream Hive computing pipeline, with posting and gaming prepared but locked.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "serve": "node src/serve.mts",
+    "check": "tsc --noEmit"
+  },
+  "exports": {
+    "./serve": "./src/serve.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@emsenn/propolis": "0.0.1",
+    "@emsenn/http-server": "0.0.0",
+    "@emsenn/computing-with-hive": "0.0.0",
+    "@emsenn/organizing-with-the-web": "0.0.0",
+    "@emsenn/relating": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": false
+}

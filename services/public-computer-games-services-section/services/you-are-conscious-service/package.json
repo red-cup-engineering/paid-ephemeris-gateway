@@ -1,0 +1,52 @@
+{
+  "name": "@red-cup-engineering/you-are-conscious-561-group",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "idle-game",
+    "incremental",
+    "interactive-fiction",
+    "kind-incremental",
+    "honest-numbers",
+    "goodhart"
+  ],
+  "description": "you-are-conscious.561.group — the kind incremental where the ladder you climb over a real widget production graph is a consciousness ladder: every automation tier is a genuine cognitive capability, taught through a mechanic the player operates, and the paperclip joke is told straight, then made to hurt exactly once, honestly, at the self-model tier, through systems the player already trusts.",
+  "scripts": {
+    "serve": "node web/server.mjs",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/fixtures/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts web/test/*.test.mts"
+  },
+  "exports": {
+    "./graph": "./src/graph.mts",
+    "./eigen": "./src/eigen.mts",
+    "./tick": "./src/tick.mts",
+    "./provenance": "./src/provenance.mts",
+    "./state": "./src/state.mts",
+    "./tiers": "./src/tiers.mts",
+    "./attention": "./src/attention.mts",
+    "./exploration": "./src/exploration.mts",
+    "./policy": "./src/policy.mts",
+    "./goodhart": "./src/goodhart.mts",
+    "./calibration": "./src/calibration.mts",
+    "./values": "./src/values.mts",
+    "./reflect": "./src/reflect.mts",
+    "./mentorship": "./src/mentorship.mts",
+    "./intents": "./src/intents.mts",
+    "./cartridge": "./src/cartridge.mts",
+    "./cartridge.manifest": "./src/cartridge.manifest.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@lenticule-science/metrologic": "0.1.0",
+    "@red-cup-engineering/cartridge": "0.2.1",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0",
+    "sirv": "3.0.2"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

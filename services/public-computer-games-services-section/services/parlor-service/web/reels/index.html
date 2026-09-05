@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fair Spin — parlor.561.group</title>
+<meta name="description" content="A 3-reel practice slot that inverts the genre: computed RTP, exact per-symbol hit odds, and expected loss per 100 spins are shown permanently on the machine face, never behind a click. Practice bankroll only — no real currency ever enters or leaves.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/parlor-kernel/seed": "/vendor/parlor-kernel/seed.mjs",
+    "@red-cup-engineering/parlor-kernel/reels": "/vendor/parlor-kernel/reels.mjs",
+    "@red-cup-engineering/parlor-kernel/odds": "/vendor/parlor-kernel/odds.mjs",
+    "@red-cup-engineering/parlor-kernel/disclosure": "/vendor/parlor-kernel/disclosure.mjs",
+    "@red-cup-engineering/parlor-kernel/dice": "/vendor/parlor-kernel/dice.mjs",
+    "@red-cup-engineering/cartridge/seed": "/vendor/cartridge/seed.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">Fair Spin</span>
+  <nav class="game-nav" aria-label="Parlor games">
+    <a href="/">All games</a>
+    <a href="/pig/">Pig</a>
+    <a href="/farkle/">Farkle</a>
+    <a href="/yacht/">Yacht</a>
+    <a href="/chutes/">Chutes &amp; Ladders</a>
+    <a href="/reels/" aria-current="page">Fair Spin</a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label"></code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="table-panel">
+    <div class="earn-banner">PRACTICE BANKROLL ONLY. This number is not money, was never money, and cannot become money — there is no path anywhere in this game from your practice bankroll to real currency, in either direction.</div>
+
+    <div id="disclosure-panel" class="odds-panel" aria-live="off"></div>
+
+    <div class="reel-window-row" id="reel-window-row"></div>
+
+    <div id="badge-row" class="action-row"></div>
+
+    <div class="stake-row">
+      <label for="bet-select">Bet</label>
+      <select id="bet-select"></select>
+      <span id="bankroll-label" class="balance-row"></span>
+    </div>
+
+    <div id="ruin-disclosure" class="disclosure-text"></div>
+
+    <div class="action-row">
+      <button id="btn-spin" class="action-button action-button--primary" type="button">Spin</button>
+      <button id="btn-new-session" class="action-button" type="button">New session (free)</button>
+    </div>
+
+    <div id="status-panel" class="status-panel"></div>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Session summary</h2>
+    <p class="help-panel">Your real, recorded spins this session, compared against the published figures above — never a resampled estimate.</p>
+    <div id="summary-panel"></div>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  RTP and hit odds are computed by exact enumeration in <code>@red-cup-engineering/parlor-kernel/odds</code> and
+  <code>/reels</code>, over this machine's own reel data (<code>src/games/reels/data.mts</code>) — see
+  <code>src/games/reels/disclosure.test.mts</code>'s "no dark patterns" test and this service's
+  <code>README.md</code> for the exact figures.
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="../js/app-reels.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

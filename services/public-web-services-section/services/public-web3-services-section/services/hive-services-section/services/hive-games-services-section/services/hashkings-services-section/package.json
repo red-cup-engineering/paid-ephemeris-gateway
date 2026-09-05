@@ -1,0 +1,28 @@
+{
+  "name": "@red-cup-engineering/hashkings-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Read-only HashKings recovery observation: exact-arithmetic BUDS pool-exit quoting and a conservative preserve-custody vs. review-recovery classification for a game whose web client has repeatedly parked behind a redirect lander.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs"
+  },
+  "exports": {
+    ".": "./src/recovery.mjs",
+    "./recovery": {
+      "types": "./src/recovery.d.ts",
+      "default": "./src/recovery.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "hive-engine",
+    "hashkings",
+    "sovereign-state-enterprise"
+  ]
+}

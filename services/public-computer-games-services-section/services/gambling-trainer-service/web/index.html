@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelly's Wager — gambling-trainer.561.group</title>
+<meta name="description" content="A daily-seeded, practice-bankroll trainer for expected value, variance, and Kelly-criterion sizing. Every offer is graded against the real Kelly optimum; every spend is typed on screen as freely reversible, priced, or terminal. Earn-only — no real currency ever enters or leaves.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/cartridge/seed": "/vendor/red-cup-engineering-cartridge/seed.mjs",
+    "@red-cup-engineering/cartridge/replay": "/vendor/red-cup-engineering-cartridge/replay.mjs",
+    "@red-cup-engineering/cartridge/manifest": "/vendor/red-cup-engineering-cartridge/manifest.mjs",
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/red-cup-engineering-cartridge/intent-log.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <ellipse cx="24" cy="24" rx="18" ry="11"/>
+    <path d="M13 17q11-6 22 0" stroke-width="1.3" opacity="0.6"/>
+    <path d="M11 24 14.25 21.5 17.5 24 20.75 21.5 24 24 27.25 21.5 30.5 24 33.75 21.5 37 24"/>
+  </svg>
+  <span class="site-title">Kelly's Wager</span>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label"></code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="offer-section">
+    <div id="econ-banner" class="econ-banner">Practice bankroll only. We sell ads and share the revenue with players. We never take your money to play, never let you wager it, and never pay out more than we verifiably earned.</div>
+
+    <div id="offer-panel" class="offer-panel" aria-live="off">
+      <p class="offer-empty">Loading today's offers…</p>
+    </div>
+
+    <div id="disclosure-panel" class="disclosure-panel"></div>
+
+    <div class="stake-row">
+      <label for="stake-slider">Stake (fraction of balance)</label>
+      <input id="stake-slider" type="range" min="0" max="1" step="0.01" value="0" />
+      <output id="stake-output" for="stake-slider">0%</output>
+    </div>
+
+    <div class="grade-panel" id="grade-panel" aria-live="polite"></div>
+
+    <div class="action-row">
+      <button id="btn-reroll" class="action-button action-button--priced" type="button">Reroll (priced)</button>
+      <button id="btn-commit" class="action-button action-button--terminal" type="button">Commit stake (terminal)</button>
+      <button id="btn-new-run" class="action-button action-button--reversible" type="button">New run (free)</button>
+    </div>
+
+    <div id="status-panel" class="status-panel"></div>
+  </section>
+
+  <aside class="side-panel">
+    <div class="balance-row">
+      <span>Practice bankroll</span>
+      <strong id="balance-label">0 coins</strong>
+    </div>
+    <h2>Bankroll paths</h2>
+    <svg id="paths-chart" class="paths-svg" aria-label="Bankroll paths: yours, Kelly, flat, all-in"></svg>
+    <ul id="paths-legend" class="paths-legend"></ul>
+    <h2>Run summary</h2>
+    <div id="summary-panel" class="summary-panel"></div>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  Every wager's true probability and true cost are shown next to it, always — even the ones
+  pitched to sound exciting. Kelly sizing is computed by this service's vendored
+  <code>kelly.mts</code> (ported from <code>@lenticule-science/gambling-services-section</code>).
+  See <code>DESIGN.md</code> in this service for the disclosure discipline and the honest chart
+  of accounts.
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <ellipse cx="24" cy="24" rx="18" ry="11"/>
+      <path d="M13 17q11-6 22 0" stroke-width="1.3" opacity="0.6"/>
+      <path d="M11 24 14.25 21.5 17.5 24 20.75 21.5 24 24 27.25 21.5 30.5 24 33.75 21.5 37 24"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="js/app.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('kellys-wager-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('kellys-wager-theme', next); else localStorage.removeItem('kellys-wager-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

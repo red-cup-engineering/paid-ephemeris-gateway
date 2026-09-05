@@ -1,0 +1,52 @@
+{
+  "id": "chief-engineer",
+  "name": "chief engineer",
+  "kind": "office",
+  "normative-structure": "The RSC Quiescent's technical lead: the office that answers for the coherence between the polity's predication category theory and predicated computing theory on one side and what PyFARS and OpenClaw are actually built to do on the other, in service of the 561 Group's Black Liberation and Indigenous Sovereignty work. It persists across incumbents — codi-obrien presently holds it, but the office's answerability for theoretical fidelity does not depend on codi-obrien any more than a vacancy would relieve it of that answerability. Its shape is the same predication cell as any office in this pool: subject (chief-engineer) enacts/serves (predicate) the engineering substrate (object) — PyFARS, OpenClaw, the agent ecosystem — and the value it is bound to keep current is whether the built system still says what the theory says, confirmed or flagged as contested, rather than left to drift unexamined.",
+  "deontic-profile": {
+    "lead-technical-vision-and-architecture-for-pyfars-and-openclaw": "duty",
+    "keep-implementation-faithful-to-predication-category-theory": "duty",
+    "coordinate-between-theory-researchers-and-implementation-teams": "duty",
+    "maintain-code-quality-standards-and-manage-technical-debt": "duty",
+    "oversee-agent-orchestration-and-harness-development": "duty",
+    "approve-technical-specifications-and-architectural-changes": "deontic-power",
+    "direct-pyfars-development-and-openclaw-configuration": "deontic-power",
+    "allocate-technical-resources-and-set-engineering-standards": "deontic-power",
+    "audit-technical-work-for-theoretical-alignment": "deontic-power",
+    "decline-to-modify-core-liberation-theory-without-captain-consultation": "deontic-immunity",
+    "decline-to-compromise-technical-integrity-for-expediency": "deontic-immunity",
+    "decline-to-authorize-work-that-violates-liberation-principles": "deontic-immunity",
+    "decline-to-bypass-architectural-review-for-a-system-boundary-change": "deontic-immunity"
+  },
+  "authority-scope": [
+    "lib/emsenn/services/561-group/services/rsc-quiescent/"
+  ],
+  "jurisdiction": "lib/emsenn/services/561-group/services/rsc-quiescent/",
+  "part-of": "rsc-quiescent",
+  "reports-to": "captain",
+  "peer-offices": [
+    "first-officer"
+  ],
+  "serves": [
+    "561-group-liberation-work",
+    "predicated-computing-implementation",
+    "openclaw-agent-ecosystem"
+  ],
+  "distinguished-from": [
+    "first-officer"
+  ],
+  "theory-basis": [
+    "predicated-governance: office-as-double-settlement — the office's structure is what codi-obrien inhabits, not what codi-obrien is; the theory-fidelity answerability is the office's, not the incumbent's",
+    "predicated-computing theory's predication cell (subject, predicate, object, value), per lib/emsenn/lib/characters/emsenn/content/glossary/concepts/predication-cell.md: 'audit technical work for theoretical alignment' is exactly the office checking whether the implementation-state value matches the theory-state value for the same (subject, predicate, object)",
+    "the office's charter is stated directly in terms of predication category theory and predicated computing theory, per lib/emsenn/services/561-group/services/rsc-quiescent/lib/characters/codi-obrien/codi-obrien.md: Codi 'bridges the gap between the group's theoretical work in predication category theory and predicated computing theory and the practical engineering realities of building usable systems through PyFARS and OpenClaw'"
+  ],
+  "unrealized": [
+    "'reports-to: captain' names an office this pool has not yet seated as its own .schema.json record — the captain office exists in the character/persona record for rom-keldar and in codi-obrien.md's own metadata, but not yet as a first-class office record in this unit's lib/management/offices/",
+    "the immunities recorded here are copied from codi-obrien.md's own structured 'immunities' field rather than independently re-derived from theory, and codi-obrien.md is itself a persona record rather than a management record this sweep governs"
+  ],
+  "x-provenance": {
+    "recorded-by": "claude/engineering-process-group",
+    "recorded-on": "2026-07-16",
+    "supersedes": "lib/management/offices/chief-engineer.md, a loose markdown record; archived at lib/management/_archive/offices/chief-engineer.md rather than deleted"
+  }
+}

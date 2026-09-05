@@ -1,0 +1,18 @@
+{
+  "type": "BlockchainTrashpandaVirtualsCurrentMarketPricingEvidence",
+  "observedAt": "2026-07-22T18:05:30Z",
+  "source": "https://acpx.virtuals.io/api/agents/v5/search",
+  "comparables": [
+    { "agent": "StableShield Evaluator", "offering": "defiSecurityEvaluation", "priceUsdc": "0.01", "scope": "basic DeFi deliverable security evaluation" },
+    { "agent": "RugRadar", "offering": "quick_scan", "priceUsdc": "0.02", "scope": "fast token safety check" },
+    { "agent": "VIGIL ACP Services", "offering": "evaluate_agent", "priceUsdc": "0.02", "scope": "third-party ACP evaluator" },
+    { "agent": "VIGIL ACP Services", "offering": "deep_risk_scan", "priceUsdc": "0.03", "scope": "deep agent-wallet risk analysis" },
+    { "agent": "YAR", "offering": "token_safety_audit", "priceUsdc": "0.20", "scope": "comprehensive Base token safety analysis" },
+    { "agent": "DryRunSec", "offering": "token_security_report", "priceUsdc": "1.00", "scope": "contract, swap-simulation, and deployer report" }
+  ],
+  "protocolProviderShare": "0.80",
+  "admittedGrossPriceUsdc": "0.05",
+  "expectedProviderNetUsdc": "0.04",
+  "pilotDemandExcluded": true,
+  "rationale": "The offer is priced above the 0.01-0.03 commodity evaluator tier for a deterministic replayable receipt, below broad 0.20-1.00 audits, and leaves 0.04 USDC after the stated 80/20 ACP split."
+}

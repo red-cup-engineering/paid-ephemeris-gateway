@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farkle — parlor.561.group</title>
+<meta name="description" content="Farkle: dice-set scoring, hot dice, and a real chance to bust the whole turn. Every roll-or-bank decision shows the computed bust probability and expected value of rolling again. Earn-only, no wagering.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/shelf-chrome.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/parlor-kernel/seed": "/vendor/parlor-kernel/seed.mjs",
+    "@red-cup-engineering/parlor-kernel/dice": "/vendor/parlor-kernel/dice.mjs",
+    "@red-cup-engineering/parlor-kernel/turns": "/vendor/parlor-kernel/turns.mjs",
+    "@red-cup-engineering/parlor-kernel/board": "/vendor/parlor-kernel/board.mjs",
+    "@red-cup-engineering/parlor-kernel/tally": "/vendor/parlor-kernel/tally.mjs",
+    "@red-cup-engineering/parlor-kernel/odds": "/vendor/parlor-kernel/odds.mjs",
+    "@red-cup-engineering/parlor-kernel/reels": "/vendor/parlor-kernel/reels.mjs",
+    "@red-cup-engineering/parlor-kernel/disclosure": "/vendor/parlor-kernel/disclosure.mjs",
+    "@red-cup-engineering/parlor-kernel/replay": "/vendor/parlor-kernel/replay.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+    <rect x="4" y="4" width="40" height="40" rx="6"/>
+    <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+    <path d="M28 16v16"/>
+    <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+  </svg>
+  <span class="site-title">Farkle</span>
+  <nav class="game-nav" aria-label="Parlor games">
+    <a href="../pig/">Pig</a>
+    <a href="../farkle/" aria-current="page">Farkle</a>
+    <a href="../yacht/">Yacht</a>
+  </nav>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label">—</code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+</header>
+
+<main class="play-main">
+  <section class="table-panel">
+    <div class="earn-banner">Practice scorekeeping only. Nothing is staked, nothing is wagered, no currency of any kind enters or leaves.</div>
+
+    <p class="turn-banner" id="turn-banner" aria-live="off">Loading…</p>
+    <p id="dice-remaining-note" class="help-panel"></p>
+    <div class="dice-row" id="dice-row" role="group" aria-label="Dice on the table — select which ones to set aside"></div>
+    <p class="turn-total">Turn points: <span id="turn-points-value">0</span></p>
+
+    <div class="odds-panel" aria-live="polite">
+      <h2>Computed odds — rolling the dice still on the table</h2>
+      <div class="odds-grid">
+        <div class="odds-figure"><span class="label">Bust probability</span><span class="value" id="odds-bust">—</span></div>
+        <div class="odds-figure"><span class="label">Average score of that roll</span><span class="value" id="odds-avg">—</span></div>
+        <div class="odds-figure"><span class="label">Expected value of rolling again</span><span class="value" id="odds-ev">—</span></div>
+      </div>
+    </div>
+
+    <div class="action-row">
+      <button id="btn-roll" class="action-button action-button--primary" type="button">Roll <kbd>R</kbd></button>
+      <button id="btn-set-aside" class="action-button action-button--primary" type="button">Set aside selected <kbd>A</kbd></button>
+      <button id="btn-bank" class="action-button" type="button">Bank <kbd>B</kbd></button>
+      <button id="btn-new-daily" class="action-button" type="button">Today's game <kbd>T</kbd></button>
+      <button id="btn-new-random" class="action-button" type="button">New random game <kbd>N</kbd></button>
+    </div>
+
+    <div id="status-panel" class="status-panel" aria-live="polite"></div>
+
+    <div class="log-panel">
+      <strong>Log</strong>
+      <ol id="log-list" reversed></ol>
+    </div>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Score</h2>
+    <table class="score-table" id="score-table"><tbody></tbody></table>
+
+    <h2>Rules</h2>
+    <p class="help-panel">Roll the dice pool, set aside any valid scoring group (a 1, a 5, or three-or-more of
+      a kind), then roll the rest or bank. Set aside every die and the pool refills to six —
+      "hot dice" — without losing your turn points. A roll that scores nothing busts the whole
+      turn. Reach <span id="entry-value">500</span> points in one turn to get on the board; first
+      to <span id="target-value">10000</span> wins. <code>bot</code> takes the maximal scoring
+      set every roll and plays the exact EV sign shown above.</p>
+
+    <h2>Keyboard</h2>
+    <p class="help-panel">
+      <kbd>1</kbd>–<kbd>6</kbd> toggle a die on the table · <kbd>A</kbd> set aside selection ·
+      <kbd>R</kbd> roll · <kbd>B</kbd> bank · <kbd>T</kbd> today's game · <kbd>N</kbd> new random game.
+      Every die and control is also a plain focusable button.
+    </p>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <span>Rules and odds computed live by <code>@red-cup-engineering/parlor-kernel</code>. Determinism: the same seed always deals the same dice.</span>
+  <p class="shelf-footer-line">
+    <svg class="shelf-mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+      <rect x="4" y="4" width="40" height="40" rx="6"/>
+      <path d="M14 32V16h6a4 4 0 0 1 0 8h-6"/>
+      <path d="M28 16v16"/>
+      <path d="M28 24h6a4 4 0 0 1 0 8h-6"/>
+    </svg>
+    Part of the <a href="https://play.561.group">561 shelf</a>.
+  </p>
+</footer>
+
+<div id="aria-live" role="status" aria-live="polite" class="sr-only"></div>
+
+<script type="module" src="../js/app-farkle.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('parlor-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('parlor-theme', next); else localStorage.removeItem('parlor-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

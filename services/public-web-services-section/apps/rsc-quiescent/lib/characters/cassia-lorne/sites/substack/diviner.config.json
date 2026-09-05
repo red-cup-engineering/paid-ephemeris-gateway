@@ -1,0 +1,12 @@
+{
+  "persona": "cassia-lorne",
+  "chartHourUtc": 16,
+  "seedSalt": "cartomantia",
+  "atomicsProvider": "nim",
+  "atomicsModel": "meta/llama-3.1-70b-instruct",
+  "imageProvider": "pollinations",
+  "imageModel": "stabilityai/stable-diffusion-3-medium",
+  "synthesisModel": "opus",
+  "minWords": 600,
+  "maxWords": 1200
+}

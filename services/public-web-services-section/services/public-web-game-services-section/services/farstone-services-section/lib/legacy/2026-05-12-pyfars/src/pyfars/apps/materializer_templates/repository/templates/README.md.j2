@@ -1,0 +1,157 @@
+<!--
+  GENERATED FILE — do not hand-edit.
+  Regenerate with: {{ generation_command }}
+  Source template: pyfars.harnesses:repository/templates/README.md.j2
+  Last generated:  {{ generated_at }}
+-->
+
+# {{ polity.title or "(polity missing)" }}
+
+{% if is_polity_root %}
+{{ polity.title or "The polity" }} is a confederacy for Black Liberation and Indigenous Sovereignty (founded 2018-04-01). This repository is the polity's *meta-repo* — it holds the manifest and bootstrap for the family of repositories that together form the polity's operational and intellectual life. Each member retains its own git history; this repo coordinates them.
+
+## Layout
+
+```
+{{ polity_layout.short or "polity" }}/
+├── polity.yaml                       manifest of every member repo
+├── Makefile                          install and verify the local operator tools
+├── theories/                         theory corpus
+├── records/                          operational records
+└── tools/                            runtime, platform, publishing, and external source repositories
+```
+
+Root and nested repositories are tracked as Git submodules and described in `polity.yaml`. Nested tool repositories such as `tools/platform/pyfars/` and `tools/math/pypred/` live inside the `tools` submodule. The platform-slug taxonomy (`tools/platform/<realization>/`) mirrors the engineering-theory taxonomy in `{{ top_theories_root_path }}/engineering/.../predicated-computing/`.
+
+## Bootstrap
+
+```bash
+git clone --recurse-submodules {{ polity_layout.meta_repo_url or "git@github.com:emsenn/561.git" }}
+cd {{ polity_layout.short or "561" }}
+git submodule update --init --recursive # idempotent repair if clone omitted recursion
+make install                            # installs the pyfars command through Nix
+nix run .#pyfars                        # runs host-aware PyFARS bootstrap for this checkout
+```
+
+Without submodules, you can read `polity.yaml` and `git clone` each repo manually into its declared path, but the normal path is recursive submodule clone/update.
+
+`make install` is the normal operator bootstrap. It installs `pyfars` into the user's Nix profile from the root flake, using the local `tools/platform/pyfars/` checkout as the input when that sibling is present. After this step, `pyfars` should be available as a normal shell command.
+
+`nix run .#pyfars` with no arguments runs the host-aware bootstrap app. With arguments, it dispatches to the normal PyFARS CLI, so `nix run .#pyfars -- run .` is equivalent to running `pyfars run .` from an installed profile.
+
+## Members
+
+| Path | Role | Description |
+|---|---|---|
+{%- for m in polity_layout.members %}
+| [`{{ m.path }}`]({{ m.path }}) | {{ m.role or "—" }} | {{ m.description or "—" }} |
+{%- endfor %}
+
+## What this meta-repo is *not*
+
+- It is **not** a monorepo. Each member is independently versioned and cloneable.
+- It is **not** the source of truth for which version of each runtime is deployed. That role belongs to `flake.lock`.
+- It does **not** vendor member-repo content into the superrepo history. The superrepo records member revisions as gitlinks and `.gitmodules` entries; each member keeps its own history.
+
+---
+{% endif %}
+
+# How to navigate the corpus
+
+{% if ship -%}
+The operational substrate of **{{ ship.title }}**{% if ship.designation %} ({{ ship.designation }}){% endif %}, a ship of **{{ polity.title or "the polity" }}**.
+{%- else -%}
+The operational substrate of **{{ polity.title or "the polity" }}**.
+{%- endif %}
+{% if charter_path %}
+The polity's charter is recorded at [`{{ charter_path }}`]({{ charter_path }}).
+{% endif %}
+This corpus carries the math, engineering, and operational content of a working agential platform whose substrate is *predicated computing* — computers whose primary substrate is the predication (subject-predicate-object cell) rather than the addressed memory cell.
+
+## Corpus layout
+
+- **`{{ theory_root_path }}/`** — research content. The top-level research areas:
+{%- for t in top_theories %}
+  - [`{{ t.path }}`]({{ t.path }}) — {{ t.title or t.slug }}
+{%- endfor %}
+- **`{{ operations_root_path }}/`** — the polity's working state. Command (charter, agents, personas, personnel, ships, computer-systems), engineering (services, skills, harnesses, agents, personas, records), science (research streams).
+
+The substrate runtime is the `pyfars` Python engine (this repository's `pyfars` member, or a flake input when not run from the polity meta-repo). The engine walks the predication graph, validates content, runs queries, and serves the polity's MCP transport. The `pyfars` CLI is lifecycle-only (boots and stops the engine, installs harness files); operations on a running polity go through the engine's API.
+
+## Nix flake — package and host projection
+
+The `flake.nix` at the repo root packages the current substrate tools and projects host-specific Nix outputs from registered computer-system records. The live host today is `vps-mini-cold-red-gate`, an Ubuntu system using Nix packages and user-level systemd services. NixOS configurations are emitted only for computer-system records that explicitly set `nixos-managed: true`.
+
+Each registered computer-system with a `nix-system:` gets a `devShells.<system>.<computer-system-slug>` output for development and repair work{% if computer_systems %}:
+
+| Computer-system | Role | Nix system | Entry |
+|---|---|---|---|
+{%- for cs in computer_systems %}
+| [`{{ cs.slug }}`]({{ command_root_path }}/group/computer-systems/{{ cs.slug }}.md) | {{ cs.role }} | `{{ cs.nix_system }}` | `nix develop .#{{ cs.slug }}` |
+{%- endfor %}
+
+{% endif %}
+
+The live command surface is installed with `make install`, which uses the flake's `pyfars` package. `nix run .#pyfars` runs the generated host-aware bootstrap when invoked with no arguments. Adding or changing a host means editing the corresponding record under `{{ command_root_path }}/group/computer-systems/` and re-running `pyfars install-harness nix-flake`; the generated flake should reflect the records, not invent host policy on its own.
+
+### Installing Nix
+
+The flake assumes a working multi-user Nix install. We use **[Determinate Nix](https://determinate.systems/)** as the canonical installer:
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+
+Reasons: flakes enabled by default, robust uninstall, and a more agent-friendly maintenance surface than the Ubuntu/Debian-packaged Nix (which we found to be broken on first install at `vps-mini-cold-red-gate` — see the friction-log). After install, open a new shell so `PATH` picks up `/nix/var/nix/profiles/default/bin` and `~/.nix-profile/bin`, then:
+
+```bash
+make install
+pyfars --help
+```
+
+If your host is registered as a polity computer-system, `nix develop .#<your-computer-system-slug>` gives a development shell for repair and local development. If it is not registered, `nix develop` gives a generic devshell with the same toolchain.
+
+### Why Nix carries the swarm, and not (yet) something else
+
+The captain's preference is Guix; Nix is today's pragma. The flake-as-deployment-spec story is mature in Nix in a way Guix's manifest story isn't yet, and getting the polity's swarm-projection working *now* matters more than getting the long-term-correct packaging story right. A future Guix harness will likely wrap the Nix layer rather than replace it.
+
+## Where to start
+
+For an agent given a substantive task aboard the polity:
+
+1. **Engineering theory** — [`predicated-computing/_index.md`]({{ predicated_computing_path }}). What a predicated computer *is*, what its substrate commits to.
+2. **Math foundation** — [`predication-categories/_index.md`]({{ predication_categories_path }}). Bilattice values, predication fibrations, closure 2-monad, four-regime classification. Look here when an engineering claim cites a math object you don't recognize.
+3. **Sub-theories of predicated-computing**:
+{%- for st in predicated_computing_subtheories %}
+   - [`{{ st.slug }}/`]({{ st.path }}) — {{ st.title or st.slug }}
+{%- endfor %}
+4. **Working instructions** — [`CLAUDE.md`](CLAUDE.md) (Claude Code) or [`AGENTS.md`](AGENTS.md) (Codex / Cursor / Aider / Cline). Generated alongside this file by the orientation harnesses; covers reading, writing, editing, committing, validation conventions.
+
+## Tooling
+
+`pyfars` is the polity's substrate runtime. The CLI is lifecycle-only — Docker / Apache / systemd shaped:
+
+- `pyfars run <dir>` — boot the engine bound to the polity at `<dir>`. Spawns services declared by the substrate (web app, MCP server, control-plane API on a Unix Domain Socket at `<dir>/.pyfars/run.sock`).
+- `pyfars install` — install harness files into a polity-image.
+- `pyfars clean` — undo install.
+- `pyfars help [<verb>]` — usage.
+
+Operations on a *running* polity (substrate queries, witness emission, dispatch, etc.) go through the engine's API rather than the CLI. The same FastAPI app is served simultaneously over UDS (for local clients) and TCP (for the public web). Endpoints include `/api/show/<slug>`, `/api/context/<slug>`, `/api/search`, `/api/list`, `/api/stats`, `/api/control/engine`. See `governance/specifications/wiring-protocols.md` (in pyfars) for the full protocol map.
+
+Run `make install` from the repository root to install `pyfars` as a normal command in the user's Nix profile. See the [pyfars repository's README](https://github.com/emsenn/pyfars#readme) for the full toolkit guide.
+
+## Polity & ship
+
+{% if polity -%}
+- **Polity:** [{{ polity.title }}]({{ command_root_path }}/group/561-group.md) ({{ polity.slug or "—" }})
+{%- endif %}
+{% if ship -%}
+- **Ship:** [{{ ship.title }}]({{ command_root_path }}/group/ships/rsc-quiescent.md){% if ship.current_voyage %} — current voyage: *{{ ship.current_voyage }}*{% endif %}
+{%- endif %}
+{% if captain -%}
+- **Captain:** [{{ captain.title or captain.slug }}]({{ command_root_path }}/group/personnel/{{ captain.slug }}.md){% if captain.public_domain %} · [{{ captain.public_domain }}](https://{{ captain.public_domain }}){% endif %}
+{%- endif %}
+
+## License
+
+See [LICENSE](LICENSE).

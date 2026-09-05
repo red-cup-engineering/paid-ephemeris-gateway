@@ -1,0 +1,31 @@
+{
+  "name": "@red-cup-engineering/print-on-demand-design-factory",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Generates print-ready designs and their listing copy (title, description, tags, product targets) as code, for the Fine Print Mercantile print-on-demand shop. Two lanes: zero-cost typographic SVG rendering, and a real LLM raster-art lane (Gemini direct, OpenRouter fallback) with per-image provider/model provenance. No HTTP upload client, no account mutation.",
+  "main": "src/design-factory.mjs",
+  "exports": {
+    ".": "./src/design-factory.mjs",
+    "./corpus": "./src/corpus.mjs"
+  },
+  "bin": {
+    "pod-merch": "apps/print-on-demand-design-factory-cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check src/design-factory.mjs && node --check src/corpus.mjs && node --check scripts/generate-design.mjs && node --check scripts/generate-set-of-designs.mjs && node --check scripts/generate-image-art.mjs && node --check scripts/generate-set-of-image-art.mjs && node --check apps/print-on-demand-design-factory-cli.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/image-generation-inference-team": "0.1.1",
+    "sharp": "0.35.4"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "print-on-demand",
+    "brand:fine-print-mercantile",
+    "design-generator",
+    "svg"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "endpoints": [
+    {
+      "domain": "aagaard.561.group",
+      "serviceName": "aagaard",
+      "port": 18807,
+      "script": "serve"
+    }
+  ]
+}

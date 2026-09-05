@@ -1,0 +1,51 @@
+{
+  "type": "BlockchainTrashpandaPrelaunchEconomicAppraisal",
+  "recordedAt": "2026-07-22T18:30:17.379Z",
+  "enterprise": "urn:ame:blockchain-trashpanda",
+  "valueCreated": {
+    "recognition": "not-yet-recognized",
+    "amountUsdMicros": null,
+    "evidence": [
+      "data/evidence/product-conformance.json",
+      "public Virtuals discovery of the one-job pilot"
+    ],
+    "reason": "A conforming product and discoverable offer prove capability and access, but no external customer has yet evidenced receipt usefulness."
+  },
+  "valueCaptured": {
+    "recognition": "not-yet-recognized",
+    "amountUsdMicros": null,
+    "settlementReceipts": [],
+    "reason": "No Virtuals ACP or Coinbase CDP settlement receipt exists; absence of a receipt is not rounded to a zero-revenue assertion."
+  },
+  "costs": {
+    "recognition": "partially-observed-not-booked",
+    "amountUsdMicros": null,
+    "observations": [
+      {
+        "kind": "product-compute-benchmark",
+        "meanMilliseconds": "25.651838",
+        "runs": 100,
+        "cashCost": "not measured"
+      },
+      {
+        "kind": "coinbase-facilitator-schedule",
+        "firstMonthlyTransactionsFree": 1000,
+        "costPerTransactionAfterFreeTierUsd": "0.001",
+        "cashCost": "projected, not incurred"
+      },
+      {
+        "kind": "cloud-run-marginal-compute",
+        "estimatedOrderUsdPerRequest": "0.000003",
+        "cashCost": "projected, not incurred"
+      }
+    ],
+    "reason": "Development inference, operator attention, and local resource costs lack attributable invoices or metering and remain unknown rather than zero."
+  },
+  "pricingIsNotValueRecognition": true,
+  "pilotDemandUsedForPricing": false,
+  "nextRecognitionEvents": [
+    "customer accepts a delivered Virtuals receipt",
+    "Virtuals provides an exact service-fee settlement receipt",
+    "CDP settles a paid Trashpanda Services request and Coinbase Bazaar indexes it"
+  ]
+}

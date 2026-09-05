@@ -1,0 +1,36 @@
+{
+  "name": "@red-cup-engineering/x402-hive-exit-tightness-seller-service",
+  "version": "0.1.0",
+  "description": "Re-faces the live HBD-paid hive-engine-exit-tightness product as the first x402 hbd-transfer-scheme seller: a GET without payment returns the 402 payment requirement, a GET with a verified HBD transfer settles and returns the report. Never holds a key, signs, or broadcasts a transaction; the exit-tightness report itself is produced by the existing aagaard read-only probe, invoked as an external command.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/sell-hive-exit-tightness-resource.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "apps",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "node --check src/sell-hive-exit-tightness-resource.mjs && node --check apps/x402-hive-exit-tightness-seller-cli.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/form-hbd-payment-requirement-service": "0.1.0",
+    "@red-cup-engineering/verify-hbd-payment-service": "0.1.0",
+    "@red-cup-engineering/settle-hbd-purchase-service": "0.1.1",
+    "@red-cup-engineering/execute-javascript-node-command-service": "0.2.1",
+    "@red-cup-engineering/semantic-record-journal-service": "0.1.11"
+  },
+  "keywords": [
+    "x402",
+    "hbd-transfer",
+    "hive",
+    "sovereign-state-enterprise"
+  ]
+}

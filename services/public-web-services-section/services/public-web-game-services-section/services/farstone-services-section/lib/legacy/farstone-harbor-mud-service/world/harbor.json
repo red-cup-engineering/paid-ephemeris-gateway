@@ -1,0 +1,2214 @@
+{
+  "$comment": "Farstone Harbor — first structured slice. Engine-neutral plain JSON: any engine can load it. This is the seed of the playable world (the MUD reading of Farstone). Recovered faithfully from the archive; thin where the archive is thin. id/name/description on every entry; rooms carry exits, items/npcs carry location; tags classify. Coordinates and richer detail live elsewhere when they matter.",
+  "meta": {
+    "world": "farstone-harbor",
+    "register": "mud",
+    "note": "The working waterfront of a granite island after the summer trade has gone. Off-season: the fleet half tied-up, money short, tempers on the quay shorter.",
+    "currency": "penny (100 pennies = 1 dollar); coin is an integer of pennies",
+    "playerStart": "harbor-quay",
+    "playerStartCoin": 250
+  },
+  "rooms": [
+    {
+      "id": "harbor-quay",
+      "name": "Farston Harbor Quay",
+      "description": "The working face of the harbor: granite setts wet with spray, bollards trailing salt-stiff line, and a fleet half tied-up now the summer trade has gone. The breakwater shoulders the swell to the south; the ferry terminal stands off to the east. Tempers here are as short as the season.",
+      "exits": {
+        "west": "the-chandlery",
+        "east": "the-ferry-terminal",
+        "north": "downtown-farston",
+        "northwest": "the-boatyard",
+        "northeast": "market-row",
+        "south": "fizzwater-quay",
+        "seaward": "harbor-mouth"
+      },
+      "tags": [
+        "place",
+        "harbor",
+        "outdoor",
+        "start-room",
+        "dock"
+      ]
+    },
+    {
+      "id": "the-chandlery",
+      "name": "The Chandlery",
+      "description": "Yorrick Vane's shop, smelling of tar and hemp and lamp-oil. Coils of rope hang from the beams, brass fittings gleam dully on the shelves, and a floor of priced wares waits for buyers who are scarce this time of year.",
+      "exits": {
+        "east": "harbor-quay"
+      },
+      "tags": [
+        "place",
+        "shop",
+        "indoor"
+      ]
+    },
+    {
+      "id": "the-boatyard",
+      "name": "The Boatyard",
+      "description": "Hulls up on the hardstanding, the steaming-box gone cold, the forge quiet. The forge floor still holds raw iron and oak and a shipwright's tools — enough to make a blade or a fistful of nails for anyone who knows the work.",
+      "exits": {
+        "southeast": "harbor-quay"
+      },
+      "tags": [
+        "place",
+        "forge",
+        "craft",
+        "outdoor",
+        "dock"
+      ]
+    },
+    {
+      "id": "market-row",
+      "name": "Market Row",
+      "description": "A short run of stalls along the waterfront. Greer Tenn's fishwives' stalls hold what the thin catch allows — fresh fish, samphire relish, a hot fry-stall going against the cold. Loud, shrewd, and watchful of everyone's business.",
+      "exits": {
+        "southwest": "harbor-quay",
+        "north": "the-saltloft-inn",
+        "east": "the-net-loft"
+      },
+      "tags": [
+        "place",
+        "market",
+        "shop",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "the-saltloft-inn",
+      "name": "The Saltloft Inn",
+      "description": "The warm heart of the off-season town: a blackened stew-pot kept on the boil, narrow rope-strung beds up the stair, and a taproom with a fire and whatever talk the lean months leave. Nessa Cawl keeps it, cheerful and generous, the place everyone drifts to when the quay turns mean.",
+      "exits": {
+        "south": "market-row"
+      },
+      "tags": [
+        "place",
+        "inn",
+        "indoor",
+        "social-hub"
+      ]
+    },
+    {
+      "id": "the-ferry-terminal",
+      "name": "The Ferry Terminal",
+      "description": "The eastern end of the harbor, where the mainland ferry ties up twice a day when the weather allows. A terminal café tracks the sailings; in a hard blow the harbormaster closes the harbor and the morning boat does not come.",
+      "exits": {
+        "west": "harbor-quay",
+        "north": "the-harbormasters-office"
+      },
+      "tags": [
+        "place",
+        "ferry",
+        "transit",
+        "indoor"
+      ]
+    },
+    {
+      "id": "downtown-farston",
+      "name": "Downtown Farston",
+      "description": "Up off the water, Main Street and the civic blocks: the converted-Victorian city hall, the records clerk's office, the volunteer fire station, the library across the way. The municipal heart of the island, where permits age and water-quality disputes are argued out.",
+      "exits": {
+        "south": "harbor-quay",
+        "north": "the-ridge",
+        "west": "farr-valley",
+        "east": "the-chapel",
+        "northeast": "the-records-office",
+        "northwest": "the-island-library",
+        "southeast": "the-fire-station",
+        "southwest": "the-schoolhouse"
+      },
+      "tags": [
+        "place",
+        "town",
+        "civic",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "fizzwater-quay",
+      "name": "Fizzwater Quay",
+      "description": "A short spur of the breakwater where a carbonated spring bubbles up through a crack in the granite, hissing and frothing against the stone — Fizzwater, the islanders call it, and they'll argue all day whether it's a wonder or a nuisance. The harbor quay lies north; a low door with a swinging lamp leads into the Salt Lantern to the east.",
+      "exits": {
+        "north": "harbor-quay",
+        "east": "the-salt-lantern",
+        "south": "south-point-light"
+      },
+      "tags": [
+        "place",
+        "harbor",
+        "outdoor",
+        "curiosity"
+      ]
+    },
+    {
+      "id": "the-salt-lantern",
+      "name": "The Salt Lantern",
+      "description": "A cramped one-room taproom hung off the end of the quay, lit by a single brass lantern and warmed against the spray. Pip Fizzle keeps it, drawing pints cut with the fizzing spring water and swearing it's the only reason anyone visits. The quay is back out west.",
+      "exits": {
+        "west": "fizzwater-quay"
+      },
+      "tags": [
+        "place",
+        "tavern",
+        "indoor",
+        "social-hub"
+      ]
+    },
+    {
+      "id": "harbor-mouth",
+      "name": "The Harbor Mouth",
+      "description": "The granite arms of the breakwater fall astern; the open grey swell of the channel lifts the hull. The quay lies shoreward; the fishing grounds open north, the shipping lane east.",
+      "exits": {
+        "shoreward": "harbor-quay",
+        "north": "the-fishing-grounds",
+        "east": "the-shipping-lane"
+      },
+      "tags": [
+        "place",
+        "ocean"
+      ]
+    },
+    {
+      "id": "the-fishing-grounds",
+      "name": "The Fishing Grounds",
+      "description": "Cold green water over the bank where the fleet works in season — empty now but for wheeling gulls and the slap of the swell. The harbor mouth lies south.",
+      "exits": {
+        "south": "harbor-mouth"
+      },
+      "tags": [
+        "place",
+        "ocean",
+        "fishing"
+      ]
+    },
+    {
+      "id": "the-shipping-lane",
+      "name": "The Shipping Lane",
+      "description": "The deepwater lane the mainland traders run. Land is a blue line south-west; the open sea broadens east toward the horizon.",
+      "exits": {
+        "west": "harbor-mouth",
+        "east": "the-open-sea"
+      },
+      "tags": [
+        "place",
+        "ocean"
+      ]
+    },
+    {
+      "id": "the-open-sea",
+      "name": "The Open Sea",
+      "description": "Blue water to every horizon, the long Atlantic roll. Only the shipping lane, west, offers a way home.",
+      "exits": {
+        "west": "the-shipping-lane"
+      },
+      "tags": [
+        "place",
+        "ocean",
+        "deep"
+      ]
+    },
+    {
+      "id": "the-ridge",
+      "name": "The Ridge",
+      "description": "The southwest shoulder of Mt Farstone, climbing through red spruce and balsam fir to the 200-metre watershed line. Stacked cordwood and a sawpit speak of timber work; the air smells of resin and cold stone. A logging ordinance is nailed to a post.",
+      "exits": {
+        "south": "downtown-farston",
+        "north": "the-quarry",
+        "west": "the-spruce-hollow"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "forest",
+        "ridge",
+        "node:timber"
+      ]
+    },
+    {
+      "id": "the-quarry",
+      "name": "The Strake Quarry",
+      "description": "A stepped granite cut into the mountain's flank, grey water pooled in the lowest bench. Drill-steels and a hand-cranked derrick stand idle in the off-season. Iron-red seams thread the stone. The summit track climbs north; and below the lowest bench, behind a barricade of rotten props, a timbered adit goes down into the old Strake mine — abandoned since the cave-in, and best left so, the quarrymen say.",
+      "exits": {
+        "south": "the-ridge",
+        "north": "mt-farstone-summit",
+        "down": "ufr-adit"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "quarry",
+        "node:iron",
+        "node:stone"
+      ]
+    },
+    {
+      "id": "farr-valley",
+      "name": "Farr Valley",
+      "description": "Cleared farmland on silty river terraces — hay, root crops, two small orchards along the Farr River buffer. A farm-stand stands at the lane's edge. Inland and hungry for the sea's catch, which fetches a dear price up here.",
+      "exits": {
+        "east": "downtown-farston",
+        "south": "marsh-end",
+        "west": "the-river-ford"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "valley",
+        "farm"
+      ]
+    },
+    {
+      "id": "marsh-end",
+      "name": "Marsh-End",
+      "description": "Where the town loosens into rural lots and the lane turns to mud. Spartina and salt-hay stretch south toward the tidal marsh; the smell is brackish and green.",
+      "exits": {
+        "north": "farr-valley",
+        "south": "the-marsh"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "rural"
+      ]
+    },
+    {
+      "id": "the-marsh",
+      "name": "The Salt Marsh",
+      "description": "Three square kilometres of Spartina and tidal channel, the soft-shell clam bed exposed at low water and the state-listed tern colony loud at South Point. The marsh-witch's path winds off west; the lighthouse stands south. The records clerk's closure notices are posted on a board.",
+      "exits": {
+        "north": "marsh-end",
+        "west": "morrigans-hut",
+        "south": "south-point-light"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "marsh",
+        "shellfish"
+      ]
+    },
+    {
+      "id": "morrigans-hut",
+      "name": "Morrigan's Hut",
+      "description": "A turf-roofed hut past the salt marsh, hung with drying herbs, mussel-shell charms, and things the chapel would frown on. Smoke curls from a low fire. This is the outside edge of the island's moral map.",
+      "exits": {
+        "east": "the-marsh"
+      },
+      "tags": [
+        "place",
+        "indoor",
+        "marsh",
+        "hut"
+      ]
+    },
+    {
+      "id": "the-chapel",
+      "name": "The Chapel of Maraset",
+      "description": "A plain granite chapel to the grey-eyed lady of tide and harbor, lit by tallow and the green seaward light. The quiet here is a balm against the off-season cold. An almshouse cot stands in the side aisle.",
+      "exits": {
+        "west": "downtown-farston",
+        "north": "the-old-cemetery"
+      },
+      "tags": [
+        "place",
+        "indoor",
+        "chapel",
+        "civic",
+        "social-hub"
+      ]
+    },
+    {
+      "id": "south-point-light",
+      "name": "South Point Light",
+      "description": "The 1872 lighthouse at the island's southern tip, automated since '87 but still tended. It marks the harbor approach and the Farr River bar; the lamp throws its grey beam across the fog. The Historical Society's seasonal museum is shuttered for winter.",
+      "exits": {
+        "north": "the-marsh",
+        "shoreward": "fizzwater-quay",
+        "east": "the-shingle-strand"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "light"
+      ]
+    },
+    {
+      "id": "the-records-office",
+      "name": "The Records Office",
+      "description": "A low room of oak filing-cases and ledgers gone soft with sea-damp, behind the city-hall counter. Here every boat, lot, permit, and grievance on the island is written down twice and agreed upon never. The clerk's desk holds the dredging file open to Application 23, stamped by two hands that did not speak to each other.",
+      "exits": {
+        "southwest": "downtown-farston"
+      },
+      "tags": [
+        "place",
+        "civic",
+        "town",
+        "indoor"
+      ]
+    },
+    {
+      "id": "the-island-library",
+      "name": "The Carnegie Library",
+      "description": "A single high room of shelved books, a coal stove, and the green light off the harbor through tall windows. The island's whole memory is here: tide-tables back a century, the wreck registers, a shelf of forbidden marsh-lore the chapel would rather was burned, and the only surviving survey of the old Strake mine.",
+      "exits": {
+        "southeast": "downtown-farston"
+      },
+      "tags": [
+        "place",
+        "civic",
+        "town",
+        "indoor",
+        "social-hub"
+      ]
+    },
+    {
+      "id": "the-fire-station",
+      "name": "The Volunteer Fire Station",
+      "description": "An engine-bay with a hand-pumper, coiled canvas hose, and a wall of leather buckets. A duty roster and the season's fire-risk board hang by the door — in a dry spell the chief raises the watch, and the whole island holds its breath against a spark.",
+      "exits": {
+        "northwest": "downtown-farston"
+      },
+      "tags": [
+        "place",
+        "civic",
+        "town",
+        "indoor"
+      ]
+    },
+    {
+      "id": "the-schoolhouse",
+      "name": "The Island Schoolhouse",
+      "description": "One room, one stove, two rows of scarred desks, and a map of an island that does not quite match the island. Off-season the dozen children of Farston are kept here out of the wind, reciting tide and times-tables, daring each other about the mine and the marsh-witch.",
+      "exits": {
+        "northeast": "downtown-farston"
+      },
+      "tags": [
+        "place",
+        "civic",
+        "town",
+        "indoor"
+      ]
+    },
+    {
+      "id": "the-old-cemetery",
+      "name": "The Old Cemetery",
+      "description": "Slate headstones leaning in salt grass behind the chapel, the oldest worn blank, names of drowned crews cut in rows. A sunken vault-door at the north wall is chained and sealed with lead — the way the founders went down into the rock to bury their dead, before the chapel was raised over them. The chain has not been opened in living memory.",
+      "exits": {
+        "south": "the-chapel"
+      },
+      "tags": [
+        "place",
+        "town",
+        "outdoor",
+        "quiet"
+      ]
+    },
+    {
+      "id": "the-harbormasters-office",
+      "name": "The Harbormaster's Office",
+      "description": "A glass-fronted office over the ferry slip, a barograph ticking on the wall and the storm-cone halyard at the window. From here the harbor is opened and closed: when the glass falls and the cone goes up, no boat leaves, and the morning ferry does not come.",
+      "exits": {
+        "south": "the-ferry-terminal"
+      },
+      "tags": [
+        "place",
+        "harbor",
+        "civic",
+        "indoor"
+      ]
+    },
+    {
+      "id": "the-net-loft",
+      "name": "The Net Loft",
+      "description": "A long upstairs room over the market, smelling of tar and tan-bark, where the off-season is spent mending. Brown nets hang in loops from the rafters; a net-mender's wooden needle clicks through the long afternoons, and gossip travels faster here than anywhere on the quay.",
+      "exits": {
+        "west": "market-row"
+      },
+      "tags": [
+        "place",
+        "market",
+        "craft",
+        "indoor",
+        "social-hub"
+      ]
+    },
+    {
+      "id": "mt-farstone-summit",
+      "name": "The Summit of Mt Farstone",
+      "description": "The bald granite crown of the island, two hundred metres up, wind enough to lean on. The whole of Farstone lies spread below — harbor, marsh, the grey ring of the sea — and on a clear day the blue smudge of the mainland east. A founders' cairn stands here, stones added by every generation, and a sea-eagle rides the updraught off the cliff.",
+      "exits": {
+        "south": "the-quarry"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "summit",
+        "high",
+        "node:stone"
+      ]
+    },
+    {
+      "id": "the-spruce-hollow",
+      "name": "The Spruce Hollow",
+      "description": "A deep fold in the ridge where the red spruce closes overhead and the light goes green and dim. Deer-paths thread the moss; a wild boar roots somewhere in the understorey, and the off-season hunter comes here for meat when the sea gives nothing. Resin and cold and the smell of crushed needles.",
+      "exits": {
+        "east": "the-ridge",
+        "north": "the-charcoal-clearing"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "forest",
+        "node:timber",
+        "wild"
+      ]
+    },
+    {
+      "id": "the-charcoal-clearing",
+      "name": "The Charcoal-Burner's Clearing",
+      "description": "A burned circle in the high wood where the charcoal-burner works a smouldering earth-kiln, blue smoke leaking from the turf. His hut is a lean-to of bark. Stacked cordwood and sacks of finished charcoal wait for the boatyard forge; he keeps to himself up here and likes it.",
+      "exits": {
+        "south": "the-spruce-hollow"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "forest",
+        "craft",
+        "wild"
+      ]
+    },
+    {
+      "id": "the-river-ford",
+      "name": "The Farr River Ford",
+      "description": "Where the lane crosses the Farr on flat stones, the river running brown and quick off the high ground to the sea. Alders lean over the water; a heron stands in the shallows. Upstream the river narrows into the otter-haunted banks; the valley lies back east.",
+      "exits": {
+        "east": "farr-valley",
+        "south": "the-otter-bank"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "river",
+        "wild",
+        "node:fish"
+      ]
+    },
+    {
+      "id": "the-otter-bank",
+      "name": "The Otter Bank",
+      "description": "A quiet reach of the Farr below the ford, undercut banks and a slide of mud where the otters come and go. Freshwater mussels in the gravel, watercress in the margins, and a stillness that the town never has. A good place to set a line, or simply to sit out of the wind.",
+      "exits": {
+        "north": "the-river-ford"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "river",
+        "wild",
+        "quiet"
+      ]
+    },
+    {
+      "id": "the-shingle-strand",
+      "name": "The Shingle Strand",
+      "description": "A storm-beach of grey shingle below South Point, hissing as each wave drags back. The wrack-line is a museum of the sea's losses — fish-boxes, glass floats, a boot, things from ships that did not come home. At the cliff's foot a low sea-cave mouth swallows the tide twice a day; you could get in at low water, if you were foolish.",
+      "exits": {
+        "west": "south-point-light",
+        "down": "the-sea-caves"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "shore",
+        "wild",
+        "node:shellfish"
+      ]
+    },
+    {
+      "id": "the-sea-caves",
+      "name": "The Sea Caves",
+      "description": "A wet vaulted dark under the headland, floored with weed-slick boulders and loud with the boom of the swell in the deeper passages. Smugglers used these once, and someone uses them still: a stack of oilcloth bundles is wedged above the tide-line, and the air carries pipe-smoke that is not yours.",
+      "exits": {
+        "up": "the-shingle-strand"
+      },
+      "tags": [
+        "place",
+        "cave",
+        "shore",
+        "wild",
+        "dark"
+      ]
+    },
+    {
+      "id": "ufr-adit",
+      "name": "The Strake Adit",
+      "description": "Past the rotten barricade, the mine swallows the daylight in a dozen yards. The adit is a timbered throat of cold air and dripping rock, the rails of an old ore-tramway running away downhill into black. Someone has scratched a warning into a prop: TURNED BACK AT THE THIRD LEVEL — GOD KEEP THE REST. The quarry is the grey square of light behind you, up.",
+      "exits": {
+        "up": "the-quarry",
+        "down": "ufr-stope"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "mine",
+        "dark",
+        "depth:1"
+      ]
+    },
+    {
+      "id": "ufr-stope",
+      "name": "The Old Stope",
+      "description": "A worked-out chamber where the iron seam was chased out of the rock, the walls stepped and raw, abandoned tools rusting where they were dropped the day of the cave-in. The floor is alive with droppings and gnawed bone, and the dark squeaks and shifts: the rats own this level now, and they have grown bold and big on what the mine left behind.",
+      "exits": {
+        "up": "ufr-adit",
+        "down": "ufr-pumphouse",
+        "north": "ufr-drift"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "mine",
+        "dark",
+        "depth:1"
+      ]
+    },
+    {
+      "id": "ufr-drift",
+      "name": "The Flooded Drift",
+      "description": "A side-drift that runs down into standing black water, the roof furred with sleeping bats and the air thick and guano-sour. Something pale moves in the flooded end. A miner's strongbox sits on a dry ledge, left behind in the panic of the cave-in and never reclaimed.",
+      "exits": {
+        "south": "ufr-stope"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "mine",
+        "dark",
+        "water",
+        "depth:1"
+      ]
+    },
+    {
+      "id": "ufr-pumphouse",
+      "name": "The Pumphouse",
+      "description": "A flooded engine-chamber where a great rusted pump once kept the lower levels dry; it stands seized and silent, and the water has been winning for thirty years. Pipes thread the dark like roots. Something long and many-legged pours itself along the ceiling pipes toward the warmth of you.",
+      "exits": {
+        "up": "ufr-stope",
+        "down": "ufr-chute"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "mine",
+        "dark",
+        "water",
+        "depth:1"
+      ]
+    },
+    {
+      "id": "ufr-chute",
+      "name": "The Ore Chute",
+      "description": "The bottom of the upper mine: a steep timber chute the ore was dropped down, now a greased black slide into the deeper workings. Cold air comes up it, smelling of older stone. There is no easy way back up the chute — only down, into the deep workings, or back the way you came.",
+      "exits": {
+        "up": "ufr-pumphouse",
+        "down": "ufr-shaft"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "mine",
+        "dark",
+        "depth:1"
+      ]
+    },
+    {
+      "id": "ufr-shaft",
+      "name": "The Sunken Shaft",
+      "description": "Below the worked mine the rock changes — this is no longer a thing men dug, but a natural fault the miners broke into and fled. The shaft drops away into a cavern below; a low gnawed passage runs west into a reek of musk and old kills. The walls glisten, and the dark here has a weight the upper levels did not.",
+      "exits": {
+        "up": "ufr-chute",
+        "down": "ufr-cavern",
+        "west": "ufr-warren"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "cave",
+        "dark",
+        "depth:2"
+      ]
+    },
+    {
+      "id": "ufr-warren",
+      "name": "The Gnawed Warren",
+      "description": "A foul nest-chamber bedded in shredded timber and bone, the floor of it heaving with rats the size of dogs — and at the heart of the warren, bloated and pale and vast, the thing they feed: the Tallow King, grown monstrous in the dark on thirty years of the mine's dead. The smell alone could fell you. This is a dead end, and the things in it know it.",
+      "exits": {
+        "east": "ufr-shaft"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "cave",
+        "dark",
+        "lair",
+        "depth:2"
+      ]
+    },
+    {
+      "id": "ufr-cavern",
+      "name": "The Glittering Cavern",
+      "description": "A natural hall where the lamp wakes ten thousand answering glints — quartz and a true vein of gemstone threading the far wall, never found by the miners who died one level up from it. A cold underground pool holds blind white crayfish. Beautiful and indifferent; the mountain kept its best from everyone.",
+      "exits": {
+        "up": "ufr-shaft",
+        "down": "ufr-cavein"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "cave",
+        "dark",
+        "water",
+        "node:gem",
+        "depth:2"
+      ]
+    },
+    {
+      "id": "ufr-cavein",
+      "name": "The Cave-In",
+      "description": "Here a wall of fallen rock chokes the cavern — and through a gap torn in it, dressed stone shows: not natural, not mine-work, but laid courses, a built thing the cavern broke into. Cold dry air breathes out of the gap, and it smells of dust and the very old dead. Something is down there that the island chose to forget.",
+      "exits": {
+        "up": "ufr-cavern",
+        "down": "cat-stair"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "cave",
+        "dark",
+        "depth:2"
+      ]
+    },
+    {
+      "id": "cat-stair",
+      "name": "The Ossuary Stair",
+      "description": "A worn spiral stair of fitted granite winding down into the catacombs the founders cut before the town had a chapel — the island's first dead, walled in the living rock. The steps are dished by feet that have been dust four hundred years. Niches in the wall hold the brown gleam of bone. The quiet listens back.",
+      "exits": {
+        "up": "ufr-cavein",
+        "down": "cat-gallery"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "catacomb",
+        "dark",
+        "quiet",
+        "depth:3"
+      ]
+    },
+    {
+      "id": "cat-gallery",
+      "name": "The Bone Gallery",
+      "description": "A long vaulted hall, the walls stacked floor-to-roof with the skulls and long-bones of the founding dead, set in patterns by patient hands. Many of the niches are empty, and the dust before them is disturbed — something has been getting up and walking. They notice you. A sealed crypt-door stands to the east; the gallery falls away to a sump below.",
+      "exits": {
+        "up": "cat-stair",
+        "north": "cat-niche",
+        "east": "cat-crypt",
+        "down": "cat-sump"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "catacomb",
+        "dark",
+        "depth:3"
+      ]
+    },
+    {
+      "id": "cat-niche",
+      "name": "The Weeping Niche",
+      "description": "A side-chapel of the dead where water weeps perpetually down a calcite face, building the bones into the wall in a slow stone shroud. A reliquary of black wood sits on the altar-shelf, untouched by the thing that crouches here gnawing in the dark — a ghoul, grave-pale, that turns its ruined face to the light of you.",
+      "exits": {
+        "south": "cat-gallery"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "catacomb",
+        "dark",
+        "lair",
+        "depth:3"
+      ]
+    },
+    {
+      "id": "cat-crypt",
+      "name": "A Sealed Crypt",
+      "description": "Behind the broken seal: a single great sarcophagus of green-veined stone, the lid ground aside from within. Here lies — lay — the first lord of the island, the founder whose name the worn cemetery stones still carry, and he has not stayed dead. The barrow-wight rises in a cold blue light, the grey-iron blade of his burial still in his fist, and a king's ransom of grave-gold at his feet.",
+      "exits": {
+        "west": "cat-gallery"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "catacomb",
+        "dark",
+        "lair",
+        "vault",
+        "depth:3"
+      ]
+    },
+    {
+      "id": "cat-sump",
+      "name": "The Catacomb Sump",
+      "description": "The catacombs end where the dressed stone drowns: a sump of black water rising from below, and a current in it, and warmth — warmth, this deep, all wrong. The air coming up is wet and green and breathing. Whatever is below is alive in a way the dead above are not. The only way on is down, into the water.",
+      "exits": {
+        "up": "cat-gallery",
+        "down": "sump-gate"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "catacomb",
+        "dark",
+        "water",
+        "depth:3"
+      ]
+    },
+    {
+      "id": "sump-gate",
+      "name": "The Sump Gate",
+      "description": "You come up out of the drowned stair into warm wet air and a sourceless green-gold glow, and you stop, because it makes no sense: a jungle, here, under the whole weight of the island. Fungus the size of trees. Fern and creeper of pale flesh-coloured growth. The drip and trickle of warm water everywhere, and a smell of rot and bloom and sweetness. The Sunless Sump. Nobody up top knows this is here.",
+      "exits": {
+        "up": "cat-sump",
+        "down": "sump-gallery"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "jungle",
+        "warm",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "sump-gallery",
+      "name": "The Fungal Gallery",
+      "description": "A vast warm cavern roofed with luminous fungus that hangs in glowing curtains and lights the place like a drowned cathedral. Pale jungle grows from every ledge; spore drifts on the wet air like slow gold snow. Things buzz and flit at the edge of the light. A sucking mire opens south; a built channel — sewer-old, dressed stone — runs east, draining the dark.",
+      "exits": {
+        "up": "sump-gate",
+        "south": "sump-mire",
+        "east": "sump-conduit"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "jungle",
+        "warm",
+        "node:fungus",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "sump-mire",
+      "name": "The Mire",
+      "description": "The cavern floor turns to a warm black bog that sucks at the boot and breathes bubbles of foul gas. Fat leeches ribbon through the water; pale roots grope under the surface. Squatting on a hummock, big as a cart and patient as the bog itself, a giant toad watches you with golden eyes and waits for you to come within reach of its tongue.",
+      "exits": {
+        "north": "sump-gallery",
+        "down": "sump-bloom"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "jungle",
+        "warm",
+        "water",
+        "lair",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "sump-bloom",
+      "name": "The Bloom",
+      "description": "The lowest pocket of the mire, where the fungus reaches its monstrous flowering: a chamber of glowing caps the height of a man, breathing spores in slow pulses, and among them a thing that was perhaps once a man and is now a walking colony of the bloom, soft and luminous and reaching. The light here is the most beautiful and the most poisonous thing in the whole island.",
+      "exits": {
+        "up": "sump-mire"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "jungle",
+        "warm",
+        "lair",
+        "node:fungus",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "sump-conduit",
+      "name": "The Drowned Conduit",
+      "description": "A great dressed-stone sewer-channel, older than the catacombs, older maybe than people — who built it, and to drain what, nobody now could say. Warm water sluices down it waist-deep, loud in the dark. Blind white fish school around your legs; and something longer and paler than a fish moves against the current, unhurried, toward you.",
+      "exits": {
+        "west": "sump-gallery",
+        "down": "sump-spring"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "sewer",
+        "warm",
+        "water",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "sump-spring",
+      "name": "The Warm Spring",
+      "description": "The source: a great upwelling of warm water that hisses and froths and fizzes against the rock — and you know that froth, that mineral sharpness on the air. This is the Fizzwater. The spring the whole harbor drinks and argues over rises here, in the deep warm dark, from a wound in the world older than the island. Pip Fizzle would weep to see it. The water goes down from here, into the last cold place.",
+      "exits": {
+        "up": "sump-conduit",
+        "down": "vault-stair"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "sump",
+        "warm",
+        "water",
+        "curiosity",
+        "depth:4"
+      ]
+    },
+    {
+      "id": "vault-stair",
+      "name": "The Stair of Shells",
+      "description": "Below the warm spring the air turns cold again — a different cold, the cold of deep water. A stair descends, and every step is paved with shells: oyster, whelk, the spiral of things that have no name above, pressed into the stone over ages past counting. An offering-stair. People came down here once, and gave, and were afraid.",
+      "exits": {
+        "up": "sump-spring",
+        "down": "vault-antechamber"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "vault",
+        "dark",
+        "cold",
+        "depth:5"
+      ]
+    },
+    {
+      "id": "vault-antechamber",
+      "name": "The Vault Antechamber",
+      "description": "A drowned shrine, knee-deep in still black water, and you understand at last what the grey-eyed lady of the chapel really is and where she really lives. Maraset of the tide was here before the chapel raised its tame granite face over her. Old carvings ring the walls: a woman, an eye, and below the waterline a coiled shape too large to take in. The water ahead is utterly black and utterly deep.",
+      "exits": {
+        "up": "vault-stair",
+        "down": "vault-deep"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "vault",
+        "dark",
+        "cold",
+        "water",
+        "depth:5"
+      ]
+    },
+    {
+      "id": "vault-deep",
+      "name": "The Drowned Vault",
+      "description": "The bottom of the island, the bottom of everything: a flooded chamber of black water without any floor you can find, and in it, vast and patient and very slowly turning to regard you with one grey unhuman eye, the thing the chapel calls Maraset and the founders fed and the deep made long before either — the Grey-Eyed Thing in the Deep. Around its resting place, ages of offering: the drowned hoard of Farstone, gold and pearl and the gifts of the lost. It has been waiting. It is glad you came.",
+      "exits": {
+        "up": "vault-antechamber"
+      },
+      "tags": [
+        "place",
+        "underground",
+        "vault",
+        "dark",
+        "cold",
+        "water",
+        "lair",
+        "depth:5"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "a-mooring-line",
+      "name": "a coil of mooring-line",
+      "description": "Salt-stiff hemp, but sound. Good for tying a boat or anything else.",
+      "location": "harbor-quay",
+      "tags": [
+        "item",
+        "takeable",
+        "material:hemp",
+        "quality:45"
+      ]
+    },
+    {
+      "id": "a-fish-knife",
+      "name": "a fisherman's knife",
+      "description": "A worn working knife with a fish-scaled handle. Ready to wield.",
+      "location": "harbor-quay",
+      "tags": [
+        "item",
+        "takeable",
+        "weapon",
+        "weapon-damage:6",
+        "weapon-skill:fighting.melee.knife",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-set-of-picks",
+      "name": "a set of lockpicks",
+      "description": "A slim roll of picks and tension wrenches, left on the quay by someone who'd rather not be asked about them.",
+      "location": "harbor-quay",
+      "tags": [
+        "item",
+        "takeable",
+        "tool:lockpick",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-clasp-knife",
+      "name": "a brass clasp-knife",
+      "description": "A folding brass knife from the chandlery shelf. For sale.",
+      "location": "the-chandlery",
+      "tags": [
+        "item",
+        "ware",
+        "price:60",
+        "weapon",
+        "weapon-damage:5",
+        "weapon-skill:fighting.melee.knife",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-coil-of-rope",
+      "name": "a coil of tarred rope",
+      "description": "Fresh tarred rope, stiff and black and strong. For sale.",
+      "location": "the-chandlery",
+      "tags": [
+        "item",
+        "ware",
+        "price:25",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "a-ships-biscuit",
+      "name": "a ship's biscuit",
+      "description": "Hard tack that keeps forever and feeds you in a pinch. For sale.",
+      "location": "the-chandlery",
+      "tags": [
+        "item",
+        "ware",
+        "price:8",
+        "provides:need:hunger",
+        "amount:4",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-woollen-coat",
+      "name": "a heavy woollen coat",
+      "description": "A thick coat against the harbor wind, good enough to turn a blow. For sale.",
+      "location": "the-chandlery",
+      "tags": [
+        "item",
+        "ware",
+        "price:90",
+        "armor",
+        "armor-protection:3",
+        "armor-covers:torso",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "a-bar-of-iron",
+      "name": "a bar of pig-iron",
+      "description": "Raw forging stock. Two bars and a hammer would make a blade.",
+      "location": "the-boatyard",
+      "tags": [
+        "item",
+        "takeable",
+        "material:iron",
+        "quality:6",
+        "weight:4",
+        "linear-consumable"
+      ]
+    },
+    {
+      "id": "another-bar-of-iron",
+      "name": "a bar of pig-iron",
+      "description": "Raw forging stock, the second in the boatyard's stack.",
+      "location": "the-boatyard",
+      "tags": [
+        "item",
+        "takeable",
+        "material:iron",
+        "quality:6",
+        "weight:4",
+        "linear-consumable"
+      ]
+    },
+    {
+      "id": "an-oak-billet",
+      "name": "an oak billet",
+      "description": "A short length of seasoned oak, fit for sawing into plank.",
+      "location": "the-boatyard",
+      "tags": [
+        "item",
+        "takeable",
+        "material:oak",
+        "quality:5",
+        "weight:3",
+        "linear-consumable"
+      ]
+    },
+    {
+      "id": "a-shipwrights-hammer",
+      "name": "a shipwright's hammer",
+      "description": "A heavy forging hammer. A reusable tool — it survives the work.",
+      "location": "the-boatyard",
+      "tags": [
+        "item",
+        "takeable",
+        "tool:hammer",
+        "quality:6",
+        "weight:3",
+        "reusable"
+      ]
+    },
+    {
+      "id": "a-pit-saw",
+      "name": "a two-man pit-saw",
+      "description": "A long pit-saw for ripping timber. A reusable tool.",
+      "location": "the-boatyard",
+      "tags": [
+        "item",
+        "takeable",
+        "tool:saw",
+        "quality:5",
+        "weight:5",
+        "reusable"
+      ]
+    },
+    {
+      "id": "the-stew-pot",
+      "name": "the Saltloft's fish-stew pot",
+      "description": "A blackened pot of chowder kept on the boil. Eat from it to take the edge off hunger.",
+      "location": "the-saltloft-inn",
+      "tags": [
+        "resource",
+        "fixed",
+        "provides:need:hunger",
+        "amount:30"
+      ]
+    },
+    {
+      "id": "the-inn-beds",
+      "name": "the Saltloft's narrow beds",
+      "description": "A row of rope-strung beds up the inn stair. Rest here.",
+      "location": "the-saltloft-inn",
+      "tags": [
+        "resource",
+        "fixed",
+        "provides:need:rest",
+        "amount:24"
+      ]
+    },
+    {
+      "id": "the-taproom",
+      "name": "the Saltloft taproom",
+      "description": "Warmth, a fire, and whatever talk the off-season leaves. Relax here.",
+      "location": "the-saltloft-inn",
+      "tags": [
+        "resource",
+        "fixed",
+        "provides:need:recreation",
+        "amount:30"
+      ]
+    },
+    {
+      "id": "the-fishwives-fry",
+      "name": "the fishwives' hot fry-stall",
+      "description": "A spitting fry-stall on market row, going against the cold. Eat from it.",
+      "location": "market-row",
+      "tags": [
+        "resource",
+        "fixed",
+        "provides:need:hunger",
+        "amount:24"
+      ]
+    },
+    {
+      "id": "a-brass-lantern",
+      "name": "a brass lantern",
+      "description": "A dented brass lantern, still bright, that lends the Salt Lantern its name.",
+      "location": "the-salt-lantern",
+      "tags": [
+        "item",
+        "takeable",
+        "reusable",
+        "material:brass",
+        "quality:50",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-bottle-of-fizzwater",
+      "name": "a bottle of fizzwater",
+      "description": "Spring water straight off the quay, still fizzing. Sharp, mineral, faintly absurd.",
+      "location": "fizzwater-quay",
+      "tags": [
+        "item",
+        "takeable",
+        "linear-consumable",
+        "provides:need:thirst",
+        "quality:30",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "marsh-clam-1",
+      "name": "a soft-shell clam",
+      "description": "Dug from the marsh bed at low water, sweet and gritty.",
+      "location": "the-marsh",
+      "tags": [
+        "item",
+        "takeable",
+        "edible",
+        "nutrition:4",
+        "shellfish"
+      ]
+    },
+    {
+      "id": "marsh-clam-2",
+      "name": "a soft-shell clam",
+      "description": "Dug from the marsh bed at low water, sweet and gritty.",
+      "location": "the-marsh",
+      "tags": [
+        "item",
+        "takeable",
+        "edible",
+        "nutrition:4",
+        "shellfish"
+      ]
+    },
+    {
+      "id": "a-permit-notice",
+      "name": "the dredging permit notice",
+      "description": "Application 23: a deep-water channel dredge. Stamped both 'within decision window' and 'overdue' by different hands — the contradiction the clerk's office holds rather than resolves.",
+      "location": "downtown-farston",
+      "tags": [
+        "item",
+        "fixed",
+        "readable",
+        "sign"
+      ]
+    },
+    {
+      "id": "the-mine-survey",
+      "name": "the old Strake mine survey",
+      "description": "A water-stained survey of the Strake mine, drawn the year of the cave-in. The upper levels are neatly inked; below the third level the surveyor's hand grows hurried, then stops. A final note: 'Broke into worked stone below the iron. Did not proceed. Sealed the chute. Recommend the same to any who come after.' Nobody came after.",
+      "location": "the-island-library",
+      "tags": [
+        "item",
+        "fixed",
+        "readable",
+        "sign"
+      ]
+    },
+    {
+      "id": "a-glass-float",
+      "name": "a green glass float",
+      "description": "A blown-glass fishing float the sea has given back, clouded and lovely, worth a few coin to a collector.",
+      "location": "the-shingle-strand",
+      "tags": [
+        "item",
+        "takeable",
+        "value:8",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-bundle-of-contraband",
+      "name": "a bundle of oilcloth contraband",
+      "description": "Someone's untaxed brandy and tobacco, wedged above the tide-line in the sea-caves. Taking it is theft from people who settle debts personally — but it would fetch a good price from the right buyer.",
+      "location": "the-sea-caves",
+      "tags": [
+        "item",
+        "takeable",
+        "value:35",
+        "contraband",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "a-miners-lamp",
+      "name": "a miner's brass lamp",
+      "description": "A heavy safety-lamp left hanging at the adit mouth, still holding oil after all these years. It throws a steady flame against the dark of the mine. A reusable tool — and down here, a kind of courage.",
+      "location": "ufr-adit",
+      "tags": [
+        "item",
+        "takeable",
+        "reusable",
+        "tool:lamp",
+        "light",
+        "material:brass",
+        "quality:40",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-pick-hammer",
+      "name": "a miner's pick-hammer",
+      "description": "A short heavy pick-hammer dropped the day the mine fell, the haft sound under the rust. It was made to break rock; it breaks other things just as well.",
+      "location": "ufr-stope",
+      "tags": [
+        "item",
+        "takeable",
+        "weapon",
+        "weapon-damage:8",
+        "weapon-skill:fighting.melee.club",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "a-cache-of-back-pay",
+      "name": "a tin of miner's back-pay",
+      "description": "A rusted wages-tin on a dry ledge above the flooded drift, the pay a dead man never collected. The coins inside are still good.",
+      "location": "ufr-drift",
+      "tags": [
+        "item",
+        "takeable",
+        "value:30",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-rough-gem",
+      "name": "a rough gemstone",
+      "description": "A thumb of raw gemstone prised from the glittering vein, uncut and cloudy and quietly worth a small fortune to the right buyer.",
+      "location": "ufr-cavern",
+      "tags": [
+        "item",
+        "takeable",
+        "value:25",
+        "gem",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "another-rough-gem",
+      "name": "a rough gemstone",
+      "description": "A second stone from the vein the dead miners never reached, glinting in the lamplight.",
+      "location": "ufr-cavern",
+      "tags": [
+        "item",
+        "takeable",
+        "value:25",
+        "gem",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-black-reliquary",
+      "name": "a black-wood reliquary",
+      "description": "A small casket of black bog-oak from the weeping niche, its silver clasp green with age. Whatever relic it held is long gone, but the casket itself is old island work and worth a great deal to the chapel — or to someone less particular.",
+      "location": "cat-niche",
+      "tags": [
+        "item",
+        "takeable",
+        "value:40",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-grey-iron-blade",
+      "name": "the grey-iron burial blade",
+      "description": "The barrow-wight's own sword, grey iron that has never rusted and never dulled in four hundred years in the dark. It is cold to hold and it hums, very faintly, against the bone of your hand. The finest weapon on the island, and it was buried for a reason.",
+      "location": "the-barrow-wight",
+      "tags": [
+        "item",
+        "weapon",
+        "weapon-damage:12",
+        "weapon-skill:fighting.melee.sword",
+        "weight:2"
+      ]
+    },
+    {
+      "id": "a-bronze-torc",
+      "name": "a founder's bronze torc",
+      "description": "The neck-ring of the island's first lord, worked bronze gone green-gold, taken from the barrow. It is the oldest made thing you have ever touched.",
+      "location": "the-barrow-wight",
+      "tags": [
+        "item",
+        "value:60",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-luminous-cap",
+      "name": "a luminous fungal cap",
+      "description": "A glowing cap the size of a dinner-plate, cut from the bloom, still shining a cold blue. The marsh-witch would give much for it, and the chapel would burn you for bringing it up.",
+      "location": "sump-bloom",
+      "tags": [
+        "item",
+        "takeable",
+        "value:18",
+        "fungus",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-drowned-crown",
+      "name": "a drowned crown",
+      "description": "A circlet of sea-gold from the hoard of the Drowned Vault, set with a pearl the colour of a storm-sky. It was an offering to the thing in the deep, and the thing in the deep does not need it. You might.",
+      "location": "vault-deep",
+      "tags": [
+        "item",
+        "takeable",
+        "value:150",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "the-maraset-pearl",
+      "name": "the Maraset Pearl",
+      "description": "A pearl as big as a fist and grey as the lady's eye, the heart of the drowned hoard, older than the chapel that worships its shadow. It is the single most valuable thing on Farstone, and bringing it into the light feels like a theft from the world itself.",
+      "location": "vault-deep",
+      "tags": [
+        "item",
+        "takeable",
+        "value:200",
+        "weight:1"
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "dax-pell",
+      "name": "Dax Pell",
+      "description": "An out-of-work deckhand, hot-headed and restless, broke and hungry since the boats tied up. He stands on the quay spoiling for a fight. Talk to him, feed him, or fight him — blows land both ways. Flagged rival to Sergeant Mara Quill.",
+      "location": "harbor-quay",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "skill:combat:65",
+        "attr:str:13",
+        "attr:dex:12",
+        "attr:int:9",
+        "attr:wis:8",
+        "attr:con:12",
+        "coin:40",
+        "stance:offensive",
+        "wielding:a-gutting-knife",
+        "wearing:an-oilskin",
+        "rival:mara-quill",
+        "faction:fishers"
+      ]
+    },
+    {
+      "id": "a-gutting-knife",
+      "name": "a gutting knife",
+      "description": "Dax Pell's knife, kept sharp for fish and trouble alike.",
+      "location": "dax-pell",
+      "tags": [
+        "item",
+        "weapon",
+        "weapon-damage:7",
+        "weapon-skill:fighting.melee.knife",
+        "weight:1",
+        "wielded"
+      ]
+    },
+    {
+      "id": "an-oilskin",
+      "name": "a tarred oilskin",
+      "description": "Dax Pell's tarred oilskin, worn at the torso against the weather and worse.",
+      "location": "dax-pell",
+      "tags": [
+        "item",
+        "armor",
+        "armor-protection:2",
+        "armor-covers:torso",
+        "weight:2",
+        "worn"
+      ]
+    },
+    {
+      "id": "mara-quill",
+      "name": "Sergeant Mara Quill",
+      "description": "The harbor constable: steady and fair, twenty years keeping peace on the quay. She out-defends and counters — a genuine contest, not a free win. Flagged rival to Dax Pell, so the quay sits on one short fuse.",
+      "location": "harbor-quay",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "skill:combat:80",
+        "attr:str:12",
+        "attr:dex:13",
+        "attr:int:11",
+        "attr:wis:12",
+        "attr:con:13",
+        "coin:120",
+        "stance:defensive",
+        "defense:parry",
+        "wielding:a-constables-baton",
+        "wearing:a-leather-jerkin",
+        "rival:dax-pell",
+        "faction:watch"
+      ]
+    },
+    {
+      "id": "a-constables-baton",
+      "name": "a constable's baton",
+      "description": "Mara Quill's baton, plain and businesslike.",
+      "location": "mara-quill",
+      "tags": [
+        "item",
+        "weapon",
+        "weapon-damage:9",
+        "weapon-skill:fighting.melee.club",
+        "weight:2",
+        "wielded"
+      ]
+    },
+    {
+      "id": "a-leather-jerkin",
+      "name": "a studded leather jerkin",
+      "description": "Mara Quill's studded leather jerkin, worn at the torso.",
+      "location": "mara-quill",
+      "tags": [
+        "item",
+        "armor",
+        "armor-protection:4",
+        "armor-covers:torso",
+        "weight:4",
+        "worn"
+      ]
+    },
+    {
+      "id": "yorrick-vane",
+      "name": "Yorrick Vane",
+      "description": "The chandler: a stern shopkeeper with a full purse and a floor of priced wares. Elder sister to Guildmaster Orla. Keeps a daily routine — the shop by day, the inn by night.",
+      "location": "the-chandlery",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "shopkeeper",
+        "coin:1200",
+        "routine:shop-day-inn-night",
+        "faction:fishers",
+        "shop",
+        "sells:rope",
+        "sells:fizzwater"
+      ]
+    },
+    {
+      "id": "nessa-cawl",
+      "name": "Nessa Cawl",
+      "description": "The innkeeper of the Saltloft: cheerful and generous, the social hub of the off-season town. She tends the stew-pot, the beds, and the taproom, and has a healer's hands.",
+      "location": "the-saltloft-inn",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "innkeeper",
+        "coin:300",
+        "skill:people.healing:5"
+      ]
+    },
+    {
+      "id": "greer-tenn",
+      "name": "Greer Tenn",
+      "description": "The fishwife of market row: broad-armed, loud, and shrewd, selling what the thin catch allows and knowing everyone's business. Runs a second priced shop and the hot fry-stall.",
+      "location": "market-row",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "shopkeeper",
+        "skill:haggling",
+        "skill:gutting",
+        "faction:fishers",
+        "shop",
+        "sells:fish"
+      ]
+    },
+    {
+      "id": "old-pell",
+      "name": "Old Pell",
+      "description": "The lamp-keeper, solitary and watchful, alone with the harbor light. He keeps to himself at the eastern end of the harbor.",
+      "location": "the-ferry-terminal",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "lamp-keeper",
+        "coin:60",
+        "faction:chapel"
+      ]
+    },
+    {
+      "id": "pip-fizzle",
+      "name": "Pip Fizzle",
+      "description": "The Salt Lantern's keeper: small, quick, and endlessly delighted by the fizzing spring that the rest of the harbor finds tiresome. Pours a strange sparkling pint and will talk your ear off about it.",
+      "location": "the-salt-lantern",
+      "tags": [
+        "npc",
+        "attr:int:12",
+        "attr:wis:11",
+        "coin:30",
+        "stance:peaceful",
+        "faction:marsh"
+      ]
+    },
+    {
+      "id": "coilin-vey",
+      "name": "Coilin Vey",
+      "description": "A fisher, hot-headed and ambitious, pressing for a dredged deep-water channel that would silt his rival's clam ground. He carries the dredging-permit dispute like a coal in his chest.",
+      "location": "the-boatyard",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:fishers",
+        "rival:brannaugh-ross",
+        "coin:30",
+        "stance:peaceful",
+        "skill:fishing:40"
+      ]
+    },
+    {
+      "id": "brannaugh-ross",
+      "name": "Brannaugh Ross",
+      "description": "A clam-digger, cold and tenacious, who works the marsh bed Coilin's dredging would ruin. She will not yield the permit fight, and the lean season sharpens her.",
+      "location": "the-marsh",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:fishers",
+        "rival:coilin-vey",
+        "coin:25",
+        "stance:peaceful",
+        "skill:fishing:45"
+      ]
+    },
+    {
+      "id": "father-coll",
+      "name": "Father Coll",
+      "description": "The keeper of the Chapel of Maraset, grey and steady, who tends the sanctioned faith and frowns on the marsh-witch's trade.",
+      "location": "the-chapel",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:chapel",
+        "coin:40"
+      ]
+    },
+    {
+      "id": "sister-edda",
+      "name": "Sister Edda",
+      "description": "A healer of the chapel almshouse, warm against the cold, who keeps the cots and the medicine chest.",
+      "location": "the-chapel",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:chapel",
+        "coin:20",
+        "skill:people.healing:8"
+      ]
+    },
+    {
+      "id": "morrigan",
+      "name": "Morrigan",
+      "description": "The marsh-witch, who trades cures, charms, and the spells the chapel forbids from her hut past the salt marsh. She knows the tides and the things that should not speak.",
+      "location": "morrigans-hut",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:marsh",
+        "coin:50"
+      ]
+    },
+    {
+      "id": "tomas-strake",
+      "name": "Tomas Strake",
+      "description": "The quarryman, broad and silent, who works the granite cut on the mountain's flank. His family's name is on the stone.",
+      "location": "the-quarry",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "coin:35",
+        "skill:mining:50"
+      ]
+    },
+    {
+      "id": "a-valley-grocer",
+      "name": "the valley grocer",
+      "description": "A farm-stand grocer at the lane's edge in Farr Valley, who buys and sells the sea's catch dear, this far inland.",
+      "location": "farr-valley",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "shop",
+        "sells:fish",
+        "coin:300"
+      ]
+    },
+    {
+      "id": "clerk-halloran",
+      "name": "Clerk Halloran",
+      "description": "The records clerk, a thin patient man buried to the elbows in the island's paperwork. He holds the dredging permit in two minds at once — within its window and overdue — and is, in his quiet way, the most powerful person on Farstone, because nothing happens here that he has not stamped.",
+      "location": "the-records-office",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "civic",
+        "faction:watch",
+        "coin:80"
+      ]
+    },
+    {
+      "id": "ivy-renn",
+      "name": "Miss Ivy Renn",
+      "description": "The island librarian, sharp-eyed and soft-spoken, keeper of every fact Farston would rather forget. She knows where the mine survey is shelved, and what the chapel had her lock away, and she will tell you — if she decides you should know.",
+      "location": "the-island-library",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:chapel",
+        "coin:30",
+        "skill:lore:30"
+      ]
+    },
+    {
+      "id": "chief-oakes",
+      "name": "Chief Bram Oakes",
+      "description": "The volunteer fire chief, broad and weathered, who reads the dry-spell board like scripture. In a hard summer he raises the fire-watch and the whole island answers to him; off-season he sharpens hooks and waits for the spark that mustn't come.",
+      "location": "the-fire-station",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "civic",
+        "faction:watch",
+        "coin:50"
+      ]
+    },
+    {
+      "id": "schoolmistress-vell",
+      "name": "Schoolmistress Ada Vell",
+      "description": "The island's teacher, brisk and kind, who keeps a dozen children fed on tide-tables and just enough fear of the mine and the marsh to keep them out of both. Mostly.",
+      "location": "the-schoolhouse",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:chapel",
+        "coin:40"
+      ]
+    },
+    {
+      "id": "a-farston-child",
+      "name": "a Farston child",
+      "description": "A wind-burned island child in a too-big coat, full of dares and rumours: the rat-king under the quarry, the witch's charms, the grey lady who walks the strand when somebody's going to drown.",
+      "location": "the-schoolhouse",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "stance:peaceful",
+        "child"
+      ]
+    },
+    {
+      "id": "another-farston-child",
+      "name": "a Farston child",
+      "description": "Another of the schoolhouse children, this one certain there is treasure in the old catacombs and equally certain her brother is too scared to go and get it.",
+      "location": "the-schoolhouse",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "stance:peaceful",
+        "child"
+      ]
+    },
+    {
+      "id": "sexton-senan",
+      "name": "Old Senan the Sexton",
+      "description": "The gravedigger and sexton, older than his own oldest stone, who tends the cemetery and the chained vault-door behind the chapel. He knows the founders went down into the rock to bury their first dead, and he knows the chain on that door is the only thing anyone living agrees should stay shut.",
+      "location": "the-old-cemetery",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:chapel",
+        "coin:25",
+        "skill:lore:20"
+      ]
+    },
+    {
+      "id": "harbormaster-quist",
+      "name": "Harbormaster Quist",
+      "description": "The harbormaster, square and unhurried, who opens and closes the harbor on the word of a falling glass. When she runs up the storm-cone the fleet stays tied and the ferry stays home, and the whole off-season tightens another notch.",
+      "location": "the-harbormasters-office",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "harbormaster",
+        "civic",
+        "faction:watch",
+        "coin:90"
+      ]
+    },
+    {
+      "id": "wenna-drust",
+      "name": "Wenna Drust",
+      "description": "The net-mender of the loft, her wooden needle never still, who knows everyone's business a day before they do. The loft is where the off-season's news is made, traded, and improved upon.",
+      "location": "the-net-loft",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:fishers",
+        "coin:35",
+        "skill:net-mending:40"
+      ]
+    },
+    {
+      "id": "cael-the-collier",
+      "name": "Cael the Collier",
+      "description": "The charcoal-burner of the high wood, soot to the eyebrows and content with it, who feeds the boatyard forge its fuel and the town none of his time. He minds his kiln and the deep forest and prefers the company of neither chapel nor quay.",
+      "location": "the-charcoal-clearing",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "faction:marsh",
+        "coin:45",
+        "skill:woodcutting:35"
+      ]
+    },
+    {
+      "id": "riba-voss",
+      "name": "Riba Voss",
+      "description": "She keeps the sea-caves and the trade that runs through them, calm as slack water and twice as cold. She will buy anything you bring her and ask nothing about where it came from — gems, grave-gold, contraband, the drowned hoard itself — and pay in clean coin. The island's one true fence.",
+      "location": "the-sea-caves",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "shop",
+        "shopkeeper",
+        "faction:marsh",
+        "stance:peaceful",
+        "coin:700"
+      ]
+    },
+    {
+      "id": "a-giant-rat",
+      "name": "a giant rat",
+      "description": "A rat the size of a terrier, yellow-toothed and bold, grown fat in the dark on what the dead mine left. It does not run from your light the way an honest rat would.",
+      "location": "ufr-stope",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-stope",
+        "health:8",
+        "attack:3",
+        "respawn:40",
+        "beast"
+      ]
+    },
+    {
+      "id": "another-giant-rat",
+      "name": "a giant rat",
+      "description": "Another of the stope's bold rats, slick-furred and quick, circling for the back of your ankle.",
+      "location": "ufr-stope",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-stope",
+        "health:8",
+        "attack:3",
+        "respawn:40",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-cave-bat",
+      "name": "a cave bat",
+      "description": "A leather-winged bat the size of a cat, dropping out of the furred roof to slash and wheel away. There are more of them above, hanging and watching.",
+      "location": "ufr-drift",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-drift",
+        "health:5",
+        "attack:2",
+        "respawn:40",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-cave-centipede",
+      "name": "a cave centipede",
+      "description": "A blind segmented thing as long as your arm, pouring along the pumphouse pipes on a hundred legs, its fangs beaded with venom. It moves faster than anything that long should.",
+      "location": "ufr-pumphouse",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-pumphouse",
+        "health:14",
+        "attack:5",
+        "respawn:60",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-blind-crayfish",
+      "name": "a great blind crayfish",
+      "description": "A pallid crayfish the size of a lobster, white and eyeless, clattering up out of the cold pool with claws that could take a finger. It guards the gem-vein without knowing what it guards.",
+      "location": "ufr-cavern",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-cavern",
+        "health:10",
+        "attack:3",
+        "respawn:60",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-dire-rat",
+      "name": "a dire rat",
+      "description": "Not a rat any longer but something the deep made out of one: hairless, dog-sized, red-eyed, and utterly without fear. The warren is full of them and they answer to the thing at its heart.",
+      "location": "ufr-warren",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-warren",
+        "health:16",
+        "attack:6",
+        "respawn:50",
+        "beast"
+      ]
+    },
+    {
+      "id": "another-dire-rat",
+      "name": "a dire rat",
+      "description": "Another of the warren's red-eyed horrors, lips peeled back from yellow tusks, herding you toward its king.",
+      "location": "ufr-warren",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:ufr-warren",
+        "health:16",
+        "attack:6",
+        "respawn:50",
+        "beast"
+      ]
+    },
+    {
+      "id": "the-tallow-king",
+      "name": "the Tallow King",
+      "description": "The thing the warren feeds: a rat grown vast and pale and near-shapeless, a slick mountain of tallow-coloured flesh, blind, bloated, and ancient, that has eaten the mine's every dead thing for thirty years and means to eat you. It cannot move far from its nest, but you have come to its nest.",
+      "location": "ufr-warren",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "boss",
+        "home:ufr-warren",
+        "health:60",
+        "attack:10",
+        "respawn:200",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-shambling-corpse",
+      "name": "a shambling corpse",
+      "description": "One of the founding dead, risen grey and dripping from its niche, moving toward you with the patient hunger of something that has waited four hundred years for company.",
+      "location": "cat-gallery",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:cat-gallery",
+        "health:20",
+        "attack:7",
+        "respawn:70",
+        "undead"
+      ]
+    },
+    {
+      "id": "another-shambling-corpse",
+      "name": "a shambling corpse",
+      "description": "Another of the walking dead, jaw working on no words, reaching with bone fingers worn smooth by the dark.",
+      "location": "cat-gallery",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:cat-gallery",
+        "health:20",
+        "attack:7",
+        "respawn:70",
+        "undead"
+      ]
+    },
+    {
+      "id": "a-bone-rattler",
+      "name": "a bone-rattler",
+      "description": "A skeleton bound upright by something that is not muscle, clattering as it comes, a notched grave-knife in its fist and cold blue fire where its eyes should be.",
+      "location": "cat-gallery",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:cat-gallery",
+        "health:14",
+        "attack:6",
+        "respawn:60",
+        "undead"
+      ]
+    },
+    {
+      "id": "a-ghoul",
+      "name": "a ghoul",
+      "description": "A grave-pale eater of the dead, crouched and gnawing in the weeping niche, that lifts its ruined face and decides, with a terrible eagerness, that fresh is better. Its touch carries the chill of the grave.",
+      "location": "cat-niche",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:cat-niche",
+        "health:28",
+        "attack:9",
+        "respawn:90",
+        "undead"
+      ]
+    },
+    {
+      "id": "the-barrow-wight",
+      "name": "the Barrow-Wight",
+      "description": "The first lord of Farstone, four hundred years dead and risen in a cold blue light, crowned in shadow and gripping the grey-iron blade of his burial. He does not shamble like the lesser dead; he advances, with the terrible dignity of a king who was buried with his sword and never agreed to lie still. To best him is to take his blade and his torc — and his long, long rest.",
+      "location": "cat-crypt",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "boss",
+        "home:cat-crypt",
+        "health:80",
+        "attack:14",
+        "respawn:300",
+        "undead"
+      ]
+    },
+    {
+      "id": "a-cave-leech",
+      "name": "a cave leech",
+      "description": "A black ribbon of a thing as long as your leg, ribboning through the warm bog-water toward the heat of you, its mouth a ring of backward teeth.",
+      "location": "sump-mire",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:sump-mire",
+        "health:12",
+        "attack:5",
+        "respawn:50",
+        "beast"
+      ]
+    },
+    {
+      "id": "another-cave-leech",
+      "name": "a cave leech",
+      "description": "Another fat leech uncoiling from the mire, drawn to your warmth and your blood.",
+      "location": "sump-mire",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:sump-mire",
+        "health:12",
+        "attack:5",
+        "respawn:50",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-giant-toad",
+      "name": "a giant toad",
+      "description": "A toad the size of a hay-cart, mottled and warty and patient, watching you with lamp-gold eyes from its hummock. When it strikes, the tongue comes faster than you can flinch, and the maw behind it is a wet dark hole.",
+      "location": "sump-mire",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "boss",
+        "home:sump-mire",
+        "health:40",
+        "attack:11",
+        "respawn:120",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-spore-shambler",
+      "name": "a spore-shambler",
+      "description": "A thing that was a man, perhaps a lost miner, perhaps an older offering, now a slow luminous colony of the bloom in the rough shape of a person, reaching for you with soft glowing hands that want only to make more of themselves out of you.",
+      "location": "sump-bloom",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:sump-bloom",
+        "health:45",
+        "attack:10",
+        "respawn:150",
+        "fungal"
+      ]
+    },
+    {
+      "id": "a-drowned-thing",
+      "name": "a drowned thing",
+      "description": "Something pale and long and eel-finned slides up the old conduit against the current, neither fish nor snake nor man but with a suggestion of all three, and far too many small bright teeth. It has lived in the sewers under the world a very long time.",
+      "location": "sump-conduit",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:sump-conduit",
+        "health:35",
+        "attack:9",
+        "respawn:90",
+        "beast"
+      ]
+    },
+    {
+      "id": "a-vault-sentinel",
+      "name": "a drowned sentinel",
+      "description": "A guardian of the deep shrine, an offering that was given living long ago and given a duty instead of a death: armoured in barnacle and shell, weeping black water, it bars the way down with a patience that is itself a kind of horror.",
+      "location": "vault-antechamber",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:vault-antechamber",
+        "health:50",
+        "attack:14",
+        "respawn:200",
+        "undead"
+      ]
+    },
+    {
+      "id": "another-vault-sentinel",
+      "name": "a drowned sentinel",
+      "description": "A second of the shrine's drowned guardians, shell-crusted and grey, lifting a barnacled weapon it has held since before the town had a name.",
+      "location": "vault-antechamber",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:vault-antechamber",
+        "health:50",
+        "attack:14",
+        "respawn:200",
+        "undead"
+      ]
+    },
+    {
+      "id": "the-grey-eyed-thing",
+      "name": "the Grey-Eyed Thing in the Deep",
+      "description": "It fills the black water and it fills the dark and it is, you understand now, what the chapel has been quietly worshipping all along under the name of a grey-eyed lady — vast, coiled, ancient beyond the island, beyond the founders who fed it, turning one cold grey eye the size of a boat upon you with something that is almost, unbearably, affection. It has waited a long time in the dark at the bottom of the world. It is so very glad you came down to it.",
+      "location": "vault-deep",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "boss",
+        "home:vault-deep",
+        "health:200",
+        "attack:22",
+        "respawn:600",
+        "eldritch"
+      ]
+    }
+  ],
+  "ships": [
+    {
+      "id": "the-harbor-dinghy",
+      "name": "the harbor dinghy",
+      "description": "A tubby clinker dinghy for hire by the hour, oars shipped, a scrap of sail forward.",
+      "class": "dinghy",
+      "location": "harbor-quay",
+      "hull": 6,
+      "speed": 1,
+      "cargo": 2,
+      "price": 40,
+      "rent": 8,
+      "rooms": [
+        {
+          "id": "dinghy-thwart",
+          "name": "the dinghy's thwart",
+          "description": "A single wet thwart amidships; you row or you sit. The whole boat is the helm.",
+          "exits": {},
+          "deck": true,
+          "helm": true
+        }
+      ]
+    },
+    {
+      "id": "the-grey-lugger",
+      "name": "the grey lugger",
+      "description": "A two-masted lugger, grey-painted and weatherly, the kind that works cargo down the coast. A real ship, and priced like one.",
+      "class": "lugger",
+      "location": "the-boatyard",
+      "hull": 18,
+      "speed": 2,
+      "cargo": 12,
+      "price": 260,
+      "rent": 30,
+      "rooms": [
+        {
+          "id": "lugger-deck",
+          "name": "the lugger's deck",
+          "description": "A broad working deck, hatches to the hold forward, the wheel aft.",
+          "exits": {
+            "aft": "lugger-wheel",
+            "below": "lugger-hold"
+          },
+          "deck": true
+        },
+        {
+          "id": "lugger-wheel",
+          "name": "the lugger's wheel",
+          "description": "The helm aft under a scrap of awning, the long tiller-lines to the rudder. From here she answers.",
+          "exits": {
+            "forward": "lugger-deck"
+          },
+          "helm": true
+        },
+        {
+          "id": "lugger-hold",
+          "name": "the lugger's hold",
+          "description": "A dark dry hold that smells of tar and old cargo, room for a real load.",
+          "exits": {
+            "above": "lugger-deck"
+          }
+        }
+      ]
+    }
+  ]
+}

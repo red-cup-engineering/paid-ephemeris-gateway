@@ -1,0 +1,91 @@
+{
+  "date": "2026-06-12",
+  "chartTime": "2026-06-12T16:00:00Z",
+  "moon": {
+    "placement": {
+      "sign": {
+        "index": 1,
+        "name": "Taurus",
+        "glyph": "♉",
+        "element": "earth",
+        "modality": "fixed",
+        "rulerClassical": "Venus"
+      },
+      "degreeInSign": 16.794063736248063
+    },
+    "lunation": {
+      "elongation": 325.0831393416338,
+      "phase": "waning crescent",
+      "illuminatedFraction": 0.09000826364571968,
+      "trend": "waning"
+    }
+  },
+  "motion": {
+    "kind": "aspect",
+    "aspect": {
+      "bodyA": "moon",
+      "bodyB": "mercury",
+      "aspect": {
+        "name": "sextile",
+        "glyph": "⚹",
+        "angle": 60,
+        "orb": 6,
+        "rank": "major"
+      },
+      "separation": 59.115172697250955,
+      "offset": -0.884827302749045,
+      "phase": "separating"
+    },
+    "exactTime": "2026-06-12T14:28:18Z"
+  },
+  "tarot": {
+    "spread": "single card",
+    "date": "2026-06-12",
+    "positions": [
+      {
+        "position": "the day",
+        "card": {
+          "arcana": "major",
+          "number": 3,
+          "name": "The Empress"
+        },
+        "orientation": "reversed"
+      }
+    ],
+    "provenance": {
+      "method": "xmur3+mulberry32 fisher-yates, orientation by next uniform < 1/2",
+      "seed": "cartomantia:2026-06-12"
+    }
+  },
+  "numerology": {
+    "date": "2026-06-12",
+    "steps": [
+      19,
+      10,
+      1
+    ],
+    "value": 1,
+    "kind": "simple"
+  },
+  "lection": {
+    "cycle": "RCL via lectio wire (https://lectionary.library.vanderbilt.edu/daily-readings/ (Year A 2025–26 daily readings, fetched 2026-06-11))",
+    "reference": "Psalm 116:1-2, 12-19"
+  },
+  "signals": [
+    {
+      "kind": "elemental-signature",
+      "text": "air and water share the lead, 3 placements each",
+      "synthesizer": "element census over the chart's sign placements"
+    },
+    {
+      "kind": "dream",
+      "text": "A wilting flower floats on stagnant water.",
+      "synthesizer": "nim:meta/llama-3.3-70b-instruct"
+    },
+    {
+      "kind": "color-tone",
+      "text": "Soft misty blue deepening to turquoise",
+      "synthesizer": "nim:meta/llama-3.3-70b-instruct"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/work-item",
+  "$comment": "An element of a task, and the thing that actually appears in a queue, a backlog, or a plan as a trackable entry. Something becomes a work-item at the moment somebody judges it actionable and commits it to the system: raw input — an idea, a request, a problem noticed — turns into a work-item when someone decides this needs doing. A work-item is either a work-unit, which is atomic, or a workflow, which is a composition of further work-items. That makes it a recursive type: a workflow is itself a work-item, so a task can hold atoms and compounds at any depth. A work-item is NOT a task. A task is the planning-level container and may hold several; a work-item is the individual entry. In simple cases a task holds exactly one and the two look identical, which is why they are used interchangeably and should not be.",
+  "type": "object",
+  "required": [
+    "name",
+    "kind",
+    "actions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the work-item is called, as it is said. Stated as what to do."
+    },
+    "kind": {
+      "enum": [
+        "work-unit",
+        "workflow"
+      ],
+      "$comment": "Atomic or composite. A work-unit is fully specified — what goes in, what operation is performed, what comes out, and every parameter bound — and cannot be broken down further without ceasing to be one operation producing one output. A workflow is a structured composition of further work-items, and is itself a work-item."
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "The actions it is made of. One or more: a work-item that comes to no action is an entry in a backlog and nothing else."
+    },
+    "work-items": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "The work-items composed, where this is a workflow. The recursion lives here — each is a work-item in its own right, atomic or composite."
+    },
+    "x-provenance": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "A workflow is a composition, so it must say what it composes. A work-unit is atomic, so it must not.",
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "workflow"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "work-items"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "work-items"
+          ]
+        }
+      }
+    }
+  ],
+  "$comment-absences": "No worker or assignee: who does it belongs to the dispatch. No status: whether it is open, underway or finished is a readout over its actions, and a work-item that could assert its own completion is marking its own homework. The corpus's older note lists a status as intrinsic; that was written before the goal moved onto the task, and is not followed here.",
+  "x-source": {
+    "derived-from": "work-item.md — an element of a task, atomic (work-unit) or composite (workflow), recursive; work-unit.md — complete specification, one operation, one output"
+  },
+  "x-provenance": {
+    "recorded-by": "claude/configuration-manager",
+    "recorded-on": "2026-07-15"
+  },
+  "title": "work item"
+}

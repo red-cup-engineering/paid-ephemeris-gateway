@@ -1,0 +1,242 @@
+.\" waggle(1) - manual page, mdoc(7) macros.
+.\" Render:  mandoc -a man/waggle.1     Lint:  mandoc -T lint man/waggle.1
+.Dd June 6, 2026
+.Dt WAGGLE 1
+.Os
+.Sh NAME
+.Nm waggle
+.Nd zero-dependency Node-to-Hive blockchain client
+.Sh SYNOPSIS
+.Nm
+.Ar command
+.Op Ar arguments ...
+.Nm
+.Cm help
+.Sh DESCRIPTION
+.Nm
+reads the Hive blockchain and acts on it from the shell: it builds, signs,
+and broadcasts transactions \(em votes, posts, comments, follows, reblogs,
+transfers, and reward claims \(em using only Node built-ins, with no npm
+dependency tree.
+Reads need no keys.
+Writes need the relevant Hive private key, supplied through the environment
+.Pq see Sx ENVIRONMENT ;
+.Nm
+never writes keys to disk.
+.Pp
+The first argument is a
+.Ar command .
+With no command, or with
+.Cm help ,
+.Fl h ,
+or
+.Fl Fl help ,
+.Nm
+prints a usage summary.
+Results are printed to standard output as pretty-printed JSON, or as a bare
+string for scalar results.
+.Ss Read commands
+These query a Hive node and require no keys.
+.Bl -tag -width Ds
+.It Cm globals
+Print the dynamic global properties of the chain.
+.It Cm refblock
+Print the transaction-as-proof-of-stake reference data:
+.Va ref_block_num ,
+.Va ref_block_prefix ,
+and the chain head time.
+.It Cm account Ar name
+Print the account object for
+.Ar name .
+.It Cm content Ar author Ar permlink
+Print a post or comment via
+.Li condenser_api.get_content .
+.It Cm post Ar author Ar permlink
+Print a post via the bridge API
+.Li bridge.get_post .
+.It Cm ranked Ar sort Op Ar tag Op Ar limit
+Print ranked posts.
+.Ar sort
+is one of
+.Cm trending , hot , created ,
+and the other bridge sorts.
+.It Cm posts Ar account Op Ar sort Op Ar limit
+Print an account's posts.
+.Ar sort
+is one of
+.Cm blog , feed , posts , replies .
+.It Cm profile Ar account
+Print an account's social profile.
+.It Cm followers Ar account Op Ar limit
+Print the accounts following
+.Ar account .
+.It Cm following Ar account Op Ar limit
+Print the accounts
+.Ar account
+follows.
+.It Cm follow-count Ar account
+Print follower and following counts for
+.Ar account .
+.It Cm history Ar account Op Ar limit
+Print the account's operation history.
+.El
+.Ss Write commands
+These build, sign, and broadcast a transaction, and need the relevant private
+key in the environment.
+Social actions use the
+.Ev WAGGLE_POSTING_KEY ;
+value transfers use the
+.Ev WAGGLE_ACTIVE_KEY .
+.Bl -tag -width Ds
+.It Cm vote Ar author Ar permlink Op Ar weight
+Vote on a post.
+.Ar weight
+is in basis points and defaults to
+.Li 10000
+.Pq 100% .
+Needs the posting key.
+.It Cm unvote Ar author Ar permlink
+Remove a vote
+.Pq weight 0 .
+Needs the posting key.
+.It Cm publish Ar title Ar body Op Ar tag
+Publish a new top-level post.
+If
+.Ar body
+is
+.Sq Fl
+the body is read from standard input.
+Needs the posting key.
+.It Cm reply Ar parentAuthor Ar parentPermlink Ar body
+Reply to a post or comment.
+If
+.Ar body
+is
+.Sq Fl
+the body is read from standard input.
+Needs the posting key.
+.It Cm transfer Ar to Ar amount Op Ar memo
+Transfer value, e.g.\&
+.Li "1.000 HIVE" .
+Needs the active key.
+The memo is sent as plaintext.
+.It Cm follow Ar account
+Follow
+.Ar account .
+Needs the posting key.
+.It Cm unfollow Ar account
+Unfollow
+.Ar account .
+Needs the posting key.
+.It Cm reblog Ar author Ar permlink
+Reblog a post to your blog.
+Needs the posting key.
+.It Cm claim
+Claim all pending rewards for the configured account.
+Needs the posting key.
+.El
+.Ss Utility commands
+.Bl -tag -width Ds
+.It Cm pubkey Ar wif
+Derive and print the
+.Li STM
+public key for a WIF private key, entirely offline.
+.It Cm whoami
+Print the configured account and the public keys derived from the configured
+private keys.
+.It Cm help
+Print the usage summary.
+.El
+.Sh ENVIRONMENT
+.Bl -tag -width WAGGLE_POSTING_KEY
+.It Ev WAGGLE_ACCOUNT
+Default account for write commands, and the observer for reads that accept one.
+.It Ev WAGGLE_POSTING_KEY
+WIF posting key, used by
+.Cm vote , publish , reply , follow , reblog ,
+and
+.Cm claim .
+.It Ev WAGGLE_ACTIVE_KEY
+WIF active key, used by
+.Cm transfer .
+.It Ev WAGGLE_OWNER_KEY
+WIF owner key.
+.It Ev WAGGLE_MEMO_KEY
+WIF memo key.
+.It Ev WAGGLE_NODES
+Comma-separated list of node base URLs to use instead of the built-in
+defaults.
+.El
+.Sh EXIT STATUS
+.Ex -std
+A non-zero exit means the command was unknown or the operation failed.
+The error message is printed to standard error, prefixed with
+.Ql waggle: .
+.Sh EXAMPLES
+Read an account, no keys required:
+.Pp
+.Dl $ waggle account hiveio
+.Pp
+Print the five trending posts in the
+.Li hive
+tag:
+.Pp
+.Dl $ waggle ranked trending hive 5
+.Pp
+Derive a public key from a WIF, offline:
+.Pp
+.Dl $ waggle pubkey 5J...
+.Pp
+Vote at 50% after exporting a posting key:
+.Pp
+.Dl $ export WAGGLE_ACCOUNT=alice WAGGLE_POSTING_KEY=5J...
+.Dl $ waggle vote bob a-post 5000
+.Pp
+Publish a post whose body is piped in from a file:
+.Pp
+.Dl $ waggle publish \(dqHello Hive\(dq - hive < post.md
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa scripts/waggle.mjs
+The command-line entry point.
+.It Pa lib/client.mjs
+The library entry point, exporting the
+.Vt Waggle
+class.
+.El
+.Sh SEE ALSO
+.Xr node 1
+.Pp
+The library API and the byte-level derivations are documented under the
+package's
+.Pa docs/
+directory and
+.Pa README.md .
+.Sh STANDARDS
+.Nm
+speaks Hive JSON-RPC 2.0 (the condenser positional and bridge named-object
+conventions), graphene binary serialization, and secp256k1 with RFC 6979
+deterministic
+.Ar k
+and the graphene canonical-signature rule.
+.Sh HISTORY
+.Nm
+was written for the 561-group repository as a from-the-ground-up rederivation
+of a Hive client, taking only Node built-ins as given.
+It is named for the bees' waggle dance, by which a hive shares where to go.
+.Sh AUTHORS
+.An emsenn Aq Mt emsenn@emsenn.net .
+.Sh CAVEATS
+.Nm
+is experimental.
+Transfers carry plaintext memos; encrypted memos are not implemented.
+Only single-signature authorities are assembled, and the chain id and
+.Li STM
+address prefix are pinned to Hive mainnet.
+.Sh SECURITY CONSIDERATIONS
+Private keys are read only from the environment and are never written to disk
+by
+.Nm .
+A WIF on the command line
+.Pq for example to Cm pubkey
+may be recorded in your shell history; prefer the environment for secrets.

@@ -1,0 +1,361 @@
+/* Cowrie Casino — placeholder lobby. Dark casino palette: near-black felt, deep red and gold
+   accents, a single jackpot-gold highlight color used sparingly (the one thing that should pop
+   is the jackpot number, not every button on the page). */
+
+:root {
+  --felt: #0c1410;
+  --felt-panel: #121d17;
+  --felt-border: #24382c;
+  --ink: #e9e4d8;
+  --ink-dim: #a8a196;
+  --gold: #d4af37;
+  --gold-bright: #f2cf5b;
+  --red: #7a1f2b;
+  --red-bright: #a8283a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--felt);
+  color: var(--ink);
+  font-family: 'Georgia', 'Iowan Old Style', serif;
+  min-height: 100%;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at top, rgba(122, 31, 43, 0.18), transparent 60%),
+    linear-gradient(180deg, var(--felt) 0%, #0a100c 100%);
+}
+
+.masthead {
+  text-align: center;
+  padding: 2.5rem 1rem 1.25rem;
+  border-bottom: 1px solid var(--felt-border);
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glyph {
+  color: var(--red-bright);
+  font-size: 1.6rem;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.panel {
+  background: var(--felt-panel);
+  border: 1px solid var(--felt-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+#identity-panel {
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+}
+
+.balances {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 8rem;
+}
+
+.stat-label {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--ink);
+}
+
+.stat-value.jackpot {
+  color: var(--gold-bright);
+}
+
+.stat-cap {
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.actions button {
+  background: linear-gradient(180deg, var(--red-bright), var(--red));
+  color: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  filter: brightness(1.1);
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.hint {
+  flex-basis: 100%;
+  margin: 0.25rem 0 0;
+  color: var(--gold-bright);
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+
+.account form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.account label {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+}
+
+.account input {
+  background: var(--felt);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  color: var(--ink);
+  padding: 0.4rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.account button,
+#link-guest-btn {
+  background: linear-gradient(180deg, var(--red-bright), var(--red));
+  color: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+#link-guest-btn {
+  margin-top: 0.75rem;
+}
+
+#friends-panel {
+  margin-top: 1rem;
+  border-top: 1px solid var(--felt-border);
+  padding-top: 0.75rem;
+}
+
+#friends-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+#friends-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--felt);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.bundle-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.bundle-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--felt-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.bundle-list .bundle-name {
+  font-weight: bold;
+}
+
+.bundle-list .best-value {
+  color: var(--gold);
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+
+.bundle-list button {
+  background: var(--gold);
+  color: #1a1408;
+  border: none;
+  border-radius: 5px;
+  padding: 0.35rem 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.game-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.game-list-grid {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.game-card {
+  display: flex;
+}
+
+.game-card-link {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--felt-border);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  width: 100%;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.game-card-link:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.game-card-slots .game-card-link {
+  background: linear-gradient(160deg, rgba(47, 184, 198, 0.14), rgba(0, 0, 0, 0.3));
+  border-color: #2fb8c6;
+}
+
+.game-card-slots .game-card-link:hover {
+  border-color: var(--gold-bright);
+}
+
+.game-card-badge {
+  justify-self: start;
+  background: var(--gold);
+  color: #1a1408;
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.game-card-name {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.game-card-blurb {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.game-card-cta {
+  color: var(--gold-bright);
+  font-size: 0.85rem;
+  justify-self: end;
+}
+
+.disclosure p,
+.coming-soon p {
+  color: var(--ink-dim);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.disclosure a {
+  color: var(--gold-bright);
+}
+
+footer {
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  padding: 1.5rem 1rem 2.5rem;
+}

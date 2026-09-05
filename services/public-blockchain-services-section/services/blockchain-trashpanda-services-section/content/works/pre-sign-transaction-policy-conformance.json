@@ -1,0 +1,11 @@
+{
+  "id": "pre-sign-transaction-policy-conformance",
+  "name": "pre-sign transaction policy conformance",
+  "from": "An agent has a normalized unsigned Base transaction and a declared policy, but does not know whether signing would conform to every policy clause at an exact block anchor.",
+  "to": "Before any signature, the agent has a deterministic independently replayable receipt with transaction and policy digests, chain and block identity, per-clause pass, fail, or escalate dispositions, an overall verdict, evidence references, and replay instructions.",
+  "cost": "Bounded computation, state observation, evidence retention, and review attention measured and booked by the enterprise.",
+  "otherwise": "The agent signs without an independently reproducible policy answer, manually reconstructs one, or refuses the transaction because assurance is unavailable.",
+  "kind": "language-presentation",
+  "customer": "Base wallet agents and operators",
+  "authorityBoundary": "read-only; no credentials, custody, signing, broadcast, or state mutation"
+}

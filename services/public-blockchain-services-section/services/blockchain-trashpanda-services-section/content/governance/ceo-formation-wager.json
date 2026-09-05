@@ -1,0 +1,38 @@
+{
+  "id": "ceo-formation-wager",
+  "type": "RendanheyiLeadershipBid",
+  "candidate": "yanagi-chief-executive",
+  "office": "chief-executive-officer",
+  "enterprise": "blockchain-trashpanda",
+  "leadingGoal": "Before the next Investment Review Board checkpoint, prove or refute paid agent demand for a deterministic, independently replayable pre-sign policy verdict on Base without accepting signing or custody authority.",
+  "checkpoint": "next investment review after the deterministic corpus and the two authorized sandbox channel proofs settle",
+  "plan": [
+    "form the sovereign node and preserve the refusal boundary",
+    "build the deterministic Base policy corpus and verifier",
+    "separate recovery, treasury, Virtuals, and receipt identities without loading recovery credentials",
+    "run at most one Base Sepolia x402 proof and one Virtuals sandbox service-only proof",
+    "return separate value-created, value-captured, and cost evidence"
+  ],
+  "measures": [
+    "100 percent expected classification across the mandatory corpus",
+    "byte-identical receipts across three replays",
+    "measured service latency",
+    "zero credential, custody, signing, broadcast, mainnet, or real-USDC effects",
+    "one Base Sepolia x402 proof receipt or explicit refusal",
+    "one Virtuals sandbox service-only proof receipt or explicit refusal"
+  ],
+  "acceptedValueAdjustmentContract": "formation-value-adjustment",
+  "contestable": true,
+  "downsideExposure": {
+    "distributionClaimOnShortfall": false,
+    "compensationClaimOnShortfall": false,
+    "reopensOfficeOnShortfall": true,
+    "boardReturnRequiredBeforeExpansion": true
+  },
+  "authority": {
+    "allocation": "urn:emsenn:allocation:blockchain-trashpanda-formation-market-pilot-2026-07-22",
+    "boardDecision": "ni:///sha-256;D8F_tkxsUXr4BdQPm9irFJZg9542feppt5d-W8kord0",
+    "leaderDecision": "ni:///sha-256;VWfexkzOYIcZyZAmTXfQZVAzLK6dtsDi9wxd5mKL-5U"
+  },
+  "candidateAcceptance": "accepted"
+}

@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# Refuse a commit that doesn't bump pyproject.toml version.
+#
+# Why this hook exists:
+#
+# pyfars's package version is YYYY.MM.DD+<noun>, e.g. 2026.05.09+lantern.
+# Nix's content-addressed store differentiates rebuilds correctly (different
+# source → different store hash), BUT downstream Python tools (uv, pip,
+# wheel cache, .dist-info names, profile entries, sometimes humans reading
+# `pyfars --version`) key off the *version string*, not the store hash.
+#
+# When two commits in one day produce wheels named pyfars-YYYY.MM.DD+noun
+# with the same version string but different content, those tools collide
+# and serve stale code. Engineers redeploy "successfully", binaries run,
+# nothing changes. We have lost hours+sessions to this.
+#
+# The fix is structural: make the version string a per-commit identity.
+# Either bump the date (ordinary work) or change the noun (fresh chapter).
+# This hook enforces it locally; CI should enforce it on push too.
+set -euo pipefail
+
+extract_version() {
+  # $1 is a full git-show spec for pyproject.toml — either
+  # "HEAD:pyproject.toml" (the committed version) or
+  # ":pyproject.toml" (the index-staged version). Returns the
+  # version string, or empty if the file is missing or has no
+  # version line.
+  git show "$1" 2>/dev/null \
+    | sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' \
+    | head -1
+}
+
+# Allow merge commits / amends without a pyproject.toml change to skip —
+# the version was already bumped by the original commit.
+if [ -f .git/MERGE_MSG ] || [ -f .git/CHERRY_PICK_HEAD ]; then
+  exit 0
+fi
+
+head_version="$(extract_version HEAD:pyproject.toml)"
+staged_version="$(extract_version :pyproject.toml)"
+
+if [ -z "$staged_version" ]; then
+  echo "pre-commit: pyproject.toml not staged or missing 'version =' line." >&2
+  echo "Stage pyproject.toml with a bumped version." >&2
+  exit 1
+fi
+
+if [ -z "$head_version" ]; then
+  # First commit on this branch / orphan branch — no HEAD version to
+  # compare. Allow.
+  exit 0
+fi
+
+if [ "$head_version" = "$staged_version" ]; then
+  cat >&2 <<EOF
+pre-commit: pyproject.toml version unchanged ($staged_version).
+
+Every pyfars commit MUST bump the version string in pyproject.toml.
+The version is YYYY.MM.DD+<noun>:
+
+  - For ordinary work: bump the date to today.
+      version = "$(date -u +%Y.%m.%d)+${staged_version##*+}"
+
+  - For a fresh chapter (architectural pivot, breaking change, new arc):
+      change the noun-codename to a new word.
+
+Why: downstream Python tooling (uv, pip, wheel cache, .dist-info paths,
+operator profile lookups) keys off the version string. Two commits in one
+day with the same version string land as the same cached wheel and your
+redeploy serves stale code. Hours of "the deploy went fine but nothing
+changed" debugging are caused by this. The hook refuses to let it happen.
+
+Stage the bumped pyproject.toml and commit again.
+EOF
+  exit 1
+fi
+
+exit 0

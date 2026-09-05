@@ -1,0 +1,12 @@
+{
+  "designId": "prog-01-worked-on-my-machine",
+  "provider": "cloudflare-workers-ai",
+  "model": "@cf/black-forest-labs/flux-1-schnell",
+  "promptUsed": "a minimalist flat-vector illustration of a retro computer terminal on a desk, warm studio lighting, screen-print poster style, that visually evokes the mood of \"It Worked On My Machine\" (ship it anyway). Bold flat color palette suited to screen-printing. No text, letters, or numbers anywhere in the image. No logos, no brand names, no trademarked characters, no real people, nothing hateful. Wholly original artwork, centered subject, print-ready poster composition, high contrast, transparent or single flat-color background.",
+  "generatedAt": "2026-09-01T01:09:12.832Z",
+  "sourceWidthPx": 1024,
+  "outputTargetWidthPx": 2400,
+  "upscaled": true,
+  "upscaleNote": null,
+  "outputPath": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-merch-services-section/services/print-on-demand-design-factory-service/data/state/rendered-designs/prog-01-worked-on-my-machine-art.png"
+}

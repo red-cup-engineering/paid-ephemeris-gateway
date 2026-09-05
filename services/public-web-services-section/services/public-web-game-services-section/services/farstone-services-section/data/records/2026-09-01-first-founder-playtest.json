@@ -1,0 +1,26 @@
+{
+  "type": "FarstonePlaytestRecord",
+  "recordedAt": "2026-09-01T04:10:00Z",
+  "player": "the founder, browser client at https://farstone.561.group, first session after the browser face went live",
+  "verbatimTranscript": [
+    "> skills -> Unknown command: skills",
+    "> stats -> Unknown command: stats",
+    "> who -> Unknown command: who",
+    "> whoami -> Unknown command: whoami",
+    "> finger emsenn -> Unknown command: finger",
+    "> one test? -> Unknown command: one",
+    "> inventory -> You carry nothing.",
+    "> look me -> You do not see me.",
+    "> look emsenn -> emsenn",
+    "> say Fair enough. -> You say, “Fair enough.”"
+  ],
+  "founderVerdictOnUi": "grating to look at; TUFTE is called a Tiling User Form Topology Engine and the face does not tile",
+  "findings": [
+    "talker/identity verbs (who, whoami, finger, chat, tell, register, login) are telnet-transport-only; the web/HTTP transport never received them (known filed gap, now founder-hit)",
+    "skills and stats have no player-facing surface though the engine carries skills (practice) and vitals",
+    "look me fails; look <self-name> returns a bare name -- actors lack self-inspection and descriptions",
+    "unknown-command response teaches nothing; should surface available verbs or route to help",
+    "web face renders as a stacked document, not TUFTE's own tiling topology; visual register grating"
+  ],
+  "disposition": "two lots dispatched 2026-09-01: web-transport verb parity + player surfaces + self-inspection (feltos/farstone); TUFTE tiling realization + calm visual base (web-tufte custody, fable-designed)"
+}

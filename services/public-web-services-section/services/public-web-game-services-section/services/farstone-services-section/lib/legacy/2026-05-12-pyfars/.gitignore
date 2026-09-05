@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+
+# Build artifacts
+dist/
+build/
+result
+result-*
+
+# Runtime artifacts (pyfars engine state, openclaw workspace, substrate records)
+.pyfars/
+.openclaw/
+records/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store

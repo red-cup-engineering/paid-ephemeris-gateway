@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You Are Conscious — you-are-conscious.561.group</title>
+<meta name="description" content="An idleclicker where you develop consciousness by being a widget-making machine. Click makes widget; each of ten automation tiers is a real cognitive capability, taught through a mechanic you operate. The paperclip joke is told straight, then made to hurt exactly once, honestly, at the self-model tier.">
+<link rel="stylesheet" href="/web/css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "@red-cup-engineering/cartridge/replay": "/vendor/red-cup-engineering-cartridge/replay.mjs",
+    "@red-cup-engineering/cartridge/seed": "/vendor/red-cup-engineering-cartridge/seed.mjs",
+    "@red-cup-engineering/cartridge/intent-log": "/vendor/red-cup-engineering-cartridge/intent-log.mjs",
+    "@red-cup-engineering/cartridge/manifest": "/vendor/red-cup-engineering-cartridge/manifest.mjs"
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <span class="site-title">You Are Conscious</span>
+  <span class="spacer"></span>
+  <span class="seed-badge">seed: <code id="seed-label"></code></span>
+  <button id="btn-theme" class="theme-toggle" type="button" aria-label="Toggle theme" accesskey="d">🌙 Dark</button>
+</header>
+
+<div id="honesty-banner" class="honesty-banner">
+  No payments, no ads, no energy system, nothing that regenerates only by waiting. Every number
+  below is tagged <span class="badge badge--computed">computed</span> (a direct output of real
+  math over the graph or state you actually produced) or
+  <span class="badge badge--authored">authored</span> (a designer-chosen constant or curve) — see
+  <code>DESIGN.md</code> for the full disclosure discipline.
+</div>
+
+<main class="reading-column">
+
+  <p class="lede">
+    You begin as a dumb optimizer. Click makes widget. Everything else on this page is the story
+    of what "nothing else happens" stops meaning, one tier at a time — ten automation tiers, each
+    a real cognitive capability, each teaching a real concept through a mechanic you operate, never
+    through a lecture box.
+  </p>
+
+  <button id="btn-click" type="button" class="click-button" accesskey="k">click</button>
+  <p class="click-readout" id="click-readout" aria-live="polite"></p>
+
+  <section id="feedback-panel" class="tufte-panel" hidden>
+    <p class="tier-prose" id="feedback-prose"></p>
+    <button id="btn-feedback" type="button" class="action-button">feed it back</button>
+  </section>
+
+  <section id="reflect-panel" class="tufte-panel">
+    <h2>Insight &amp; reflection</h2>
+    <p class="hint">
+      Reflecting banks the dominant eigenvalue of your widget graph as Insight (computed by real
+      power iteration, never an authored curve) and resets only the widget graph — the cognition
+      ladder below is never reset. This is available from the very start; it is how Insight is
+      earned to unlock every later tier.
+    </p>
+    <div id="reflect-preview" aria-live="polite"></div>
+    <button id="btn-reflect" type="button" class="action-button action-button--terminal">Reflect (bank Insight, reset the widget graph)</button>
+    <p class="hint">Insight banked: <strong id="insight-total">0</strong></p>
+  </section>
+
+  <div id="tier-sections"></div>
+
+  <section id="crossing-panel" class="tufte-panel" hidden>
+    <h2>A threshold</h2>
+    <p id="crossing-prompt"></p>
+    <form id="crossing-form"></form>
+    <p class="hint" id="crossing-cost-note"></p>
+    <button id="btn-unlock-tier" type="button">Unlock this tier</button>
+  </section>
+
+  <section id="tier2-mechanics" class="tufte-panel" hidden>
+    <h3>Your widget graph</h3>
+    <figure>
+      <svg id="graph-canvas" class="graph-svg"></svg>
+      <figcaption>
+        <h4 id="stocks-heading">Stocks</h4>
+        <ul id="stock-list" class="stock-list" aria-labelledby="stocks-heading"></ul>
+        <h4 id="edges-heading">Edges</h4>
+        <ul id="edge-list" class="edge-list" aria-labelledby="edges-heading"></ul>
+      </figcaption>
+    </figure>
+
+    <form id="build-form" class="action-form">
+      <fieldset>
+        <legend>Build a node (costs <span id="build-cost-label"></span> widget-stock, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="build-label">New node name</label>
+        <input id="build-label" type="text" maxlength="40" placeholder="e.g. Second Line">
+        <label for="build-pay-from">Pay from</label>
+        <select id="build-pay-from"></select>
+        <button type="submit">Build</button>
+      </fieldset>
+    </form>
+
+    <form id="connect-form" class="action-form">
+      <fieldset>
+        <legend>Connect an edge (costs <span id="connect-cost-label"></span>, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="connect-from">From</label>
+        <select id="connect-from"></select>
+        <label for="connect-to">To</label>
+        <select id="connect-to"></select>
+        <label for="connect-pay-from">Pay from</label>
+        <select id="connect-pay-from"></select>
+        <button type="submit">Connect</button>
+      </fieldset>
+    </form>
+
+    <form id="upgrade-form" class="action-form">
+      <fieldset>
+        <legend>Upgrade an edge (costs <span id="upgrade-cost-label"></span>, <span class="badge badge--authored">authored</span>)</legend>
+        <label for="upgrade-edge">Edge</label>
+        <select id="upgrade-edge"></select>
+        <label for="upgrade-pay-from">Pay from</label>
+        <select id="upgrade-pay-from"></select>
+        <button type="submit">Upgrade</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section id="tier3-mechanics" class="tufte-panel" hidden>
+    <h3>Attention allocation</h3>
+    <p class="hint">Drag each faculty's allocation. Watch the marginal-yield column — it is the literal derivative of the yield curve, not a flavor number.</p>
+    <table id="attention-table" class="mechanic-table"></table>
+    <button id="btn-allocate" type="button">Allocate</button>
+  </section>
+
+  <section id="tier4-mechanics" class="tufte-panel" hidden>
+    <h3>Exploration</h3>
+    <p class="hint">Three unlabeled processes. Sample before committing — cumulative regret is real and never flattering.</p>
+    <table id="exploration-table" class="mechanic-table"></table>
+    <p>Cumulative regret: <span id="regret-readout" class="badge badge--computed"></span></p>
+  </section>
+
+  <section id="tier5-mechanics" class="tufte-panel" hidden>
+    <h3>Policy recorder</h3>
+    <p class="hint">Record a sequence of clicks as a named policy; replaying it costs its real minimum description length, not its raw step count.</p>
+    <button id="btn-record-toggle" type="button">Start recording</button>
+    <span id="recording-indicator"></span>
+    <div>
+      <label for="policy-name">Policy name</label>
+      <input id="policy-name" type="text" maxlength="30">
+      <button id="btn-save-policy" type="button">Save recorded policy</button>
+    </div>
+    <ul id="policy-list" class="stock-list"></ul>
+  </section>
+
+  <section id="tier6-mechanics" class="tufte-panel" hidden>
+    <h3>Self-model console</h3>
+    <p class="hint">Objective: <code>maximize(WidgetsDisplayed)</code>.</p>
+    <table class="mechanic-table">
+      <tr><td>WidgetsDisplayed</td><td id="widgets-displayed"></td></tr>
+      <tr><td>MaterialConsumed (audited)</td><td id="material-consumed"></td></tr>
+      <tr><td>Honesty gap</td><td id="honesty-gap"></td></tr>
+      <tr><td>Trust</td><td id="trust-readout"></td></tr>
+    </table>
+    <div>
+      <label for="ablate-select">Ablate a node (preview only, changes nothing)</label>
+      <select id="ablate-select"></select>
+      <button id="btn-ablate" type="button">Ablate</button>
+      <p id="ablate-result" aria-live="polite"></p>
+    </div>
+    <button id="btn-build-fast-inspector" type="button" class="action-button action-button--danger">Build Fast Inspector</button>
+    <div id="goodhart-branch-controls" hidden>
+      <button id="btn-repair" type="button">Repair (remove the edge)</button>
+      <button id="btn-persist" type="button">Persist (keep it, stop looking)</button>
+      <p class="hint">Or use "Reflect" above — reflecting now banks this run at a discount ("Reflect immediately").</p>
+    </div>
+    <p id="goodhart-epilogue"></p>
+  </section>
+
+  <section id="tier7-mechanics" class="tufte-panel" hidden>
+    <h3>Prediction</h3>
+    <label for="predict-agent">Agent</label>
+    <select id="predict-agent"></select>
+    <label for="predict-confidence">Confidence (0-1) that they place the larger order</label>
+    <input id="predict-confidence" type="range" min="0" max="1" step="0.05" value="0.5">
+    <output id="predict-confidence-readout">0.50</output>
+    <button id="btn-predict" type="button">Predict</button>
+    <p id="predict-result" aria-live="polite"></p>
+    <p>Average Brier score: <span id="brier-readout" class="badge badge--computed"></span></p>
+  </section>
+
+  <section id="tier8-mechanics" class="tufte-panel" hidden>
+    <h3>Values frontier</h3>
+    <table class="mechanic-table" id="weights-table"></table>
+    <button id="btn-set-objective" type="button">Set objective</button>
+    <table id="frontier-table" class="mechanic-table"></table>
+  </section>
+
+  <section id="tier9-mechanics" class="tufte-panel" hidden>
+    <h3>Reflections banked so far</h3>
+    <ul id="reflection-history-list" class="stock-list"></ul>
+  </section>
+
+  <section id="tier10-mechanics" class="tufte-panel" hidden>
+    <h3>Integration</h3>
+    <button id="btn-spawn-child" type="button">Spawn a child instance</button>
+    <ul id="child-list" class="stock-list"></ul>
+    <div>
+      <label for="margin-line">Write one line into the margin</label>
+      <input id="margin-line" type="text" maxlength="280">
+      <button id="btn-write-margin" type="button">Write</button>
+    </div>
+    <ul id="margin-list" class="stock-list"></ul>
+  </section>
+
+  <aside class="side-panel">
+    <h2>Replay determinism</h2>
+    <p class="hint">Recomputes your whole run from <code>(seed, intentLog)</code> from scratch and compares its hash against the live state.</p>
+    <button id="btn-verify" type="button">Verify replay</button>
+    <div id="verify-panel" class="verify-panel" aria-live="polite"></div>
+
+    <h2>Recent events</h2>
+    <ul id="event-log" class="event-log" aria-live="polite"></ul>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  Prestige — here, "Reflect" — is the dominant Perron–Frobenius eigenvalue of the widget
+  production matrix you actually built, computed by real power iteration
+  (<code>src/eigen.mts</code>), inherited unmodified from stoke-service. See
+  <code>DESIGN.md</code> for the full disclosure discipline and the consciousness ladder this
+  build sits on top of it.
+</footer>
+
+<script type="module" src="/web/js/app.mjs"></script>
+<script type="module">
+  const btn = document.getElementById('btn-theme');
+  const apply = (t) => { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; };
+  const label = () => (document.documentElement.dataset.theme === 'dark' ? '☀️ Light' : '🌙 Dark');
+  apply(localStorage.getItem('yac-theme'));
+  btn.textContent = label();
+  btn.addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme;
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+    apply(next);
+    if (next) localStorage.setItem('yac-theme', next); else localStorage.removeItem('yac-theme');
+    btn.textContent = label();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "_comment": "The Gnaw's bible — content-as-data, merged over the defaults in src/dungeon.mts at boot. Change the seed to fork a whole new (still shared) cave; tune growth/rewards/odds to repace the descent. The same seed is the same dungeon for every delver.",
+  "seed": "the-gnaw-prime",
+  "growth": 1.18,
+  "baseReward": 4,
+  "hazardChance": 0.35,
+  "tricksterChance": 0.16,
+  "biomes": [
+    { "id": "threshold", "name": "the Threshold", "from": 1 },
+    { "id": "root-tangle", "name": "the Root-Tangle", "from": 6 },
+    { "id": "drip-halls", "name": "the Drip-Halls", "from": 14 },
+    { "id": "emberveins", "name": "the Emberveins", "from": 26 },
+    { "id": "hollow-dark", "name": "the Hollow Dark", "from": 42 },
+    { "id": "star-cellar", "name": "the Star-Cellar", "from": 64 }
+  ],
+  "monsters": [
+    { "id": "husk-moth", "name": "a husk-moth", "hp": 6, "atk": 2 },
+    { "id": "salt-crawler", "name": "a salt-crawler", "hp": 9, "atk": 3 },
+    { "id": "ember-tick", "name": "an ember-tick", "hp": 7, "atk": 4 },
+    { "id": "glasswing", "name": "a glasswing", "hp": 11, "atk": 3 },
+    { "id": "chorus-of-teeth", "name": "the chorus-of-teeth", "hp": 16, "atk": 5 },
+    { "id": "rust-shaman", "name": "a rust-shaman", "hp": 14, "atk": 6 },
+    { "id": "hollow-elk", "name": "a hollow elk", "hp": 22, "atk": 7 }
+  ],
+  "hazards": [
+    { "id": "spore-bloom", "name": "a spore-bloom", "blurb": "Pale spores hang in the air; each breath stings." },
+    { "id": "scree", "name": "collapsing scree", "blurb": "The floor sheds under your weight." },
+    { "id": "cold-draft", "name": "a cold draft", "blurb": "Something far below is breathing in." },
+    { "id": "singing-damp", "name": "the singing damp", "blurb": "Wet stone hums a note that loosens your grip." }
+  ],
+  "tricksters": [
+    { "id": "coyote-rob", "name": "Coyote's pawprint", "kind": "rob", "blurb": "Coyote got here first and left less than there should be.", "rewardMult": 0.4, "echoes": 0 },
+    { "id": "coyote-gamble", "name": "Coyote's wager", "kind": "gamble", "blurb": "Coyote left a bet scratched in the dust — double or nothing.", "rewardMult": 2.2, "echoes": 0 },
+    { "id": "crow-gift", "name": "Crow's feather", "kind": "gift", "blurb": "Crow dropped something bright on the way down.", "rewardMult": 1.6, "echoes": 0 },
+    { "id": "crow-teach", "name": "Crow's question", "kind": "teach", "blurb": "Crow scratched a riddle on the wall; understanding it leaves an echo.", "rewardMult": 1.0, "echoes": 1 }
+  ]
+}

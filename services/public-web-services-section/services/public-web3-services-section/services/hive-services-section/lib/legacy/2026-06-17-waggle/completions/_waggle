@@ -1,0 +1,50 @@
+#compdef waggle waggle.mjs
+# zsh completion for waggle
+# Install: place this file (named _waggle) on your $fpath, e.g.
+#   cp completions/_waggle ~/.zsh/completions/_waggle   # with that dir on fpath
+# then restart zsh or run `compinit`.
+
+_waggle() {
+    local -a commands
+    commands=(
+        # reads (no keys)
+        'globals:dynamic global properties'
+        'refblock:ref_block_num / ref_block_prefix / chain time'
+        'account:account object'
+        'content:condenser_api.get_content'
+        'post:bridge.get_post'
+        'ranked:ranked posts by tag'
+        'posts:an account'\''s posts'
+        'profile:social profile'
+        'followers:accounts following an account'
+        'following:accounts an account follows'
+        'follow-count:follower/following counts'
+        'history:account operation history'
+        # writes (need a key)
+        'vote:vote on a post (posting key)'
+        'unvote:remove a vote (posting key)'
+        'publish:publish a top-level post (posting key)'
+        'reply:reply to a post or comment (posting key)'
+        'transfer:transfer value (active key)'
+        'follow:follow an account (posting key)'
+        'unfollow:unfollow an account (posting key)'
+        'reblog:reblog a post (posting key)'
+        'claim:claim pending rewards (posting key)'
+        # util
+        'pubkey:derive the STM public key from a WIF (offline)'
+        'whoami:configured account + derived public keys'
+        'help:usage summary'
+    )
+
+    if (( CURRENT == 2 )); then
+        _describe -t commands 'waggle command' commands
+        return
+    fi
+
+    case "${words[2]}" in
+        ranked)  (( CURRENT == 3 )) && _values 'sort' trending hot created payout muted ;;
+        posts)   (( CURRENT == 4 )) && _values 'sort' blog feed posts replies ;;
+    esac
+}
+
+_waggle "$@"

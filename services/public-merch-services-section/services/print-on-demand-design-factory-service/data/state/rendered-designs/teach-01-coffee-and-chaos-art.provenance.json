@@ -1,0 +1,12 @@
+{
+  "designId": "teach-01-coffee-and-chaos",
+  "provider": "cloudflare-workers-ai",
+  "model": "@cf/black-forest-labs/flux-1-schnell",
+  "promptUsed": "a warm flat-vector illustration of a classroom scene with a chalkboard and a stack of books, friendly poster style, that visually evokes the mood of \"Teachers Run On Coffee And Chaos\". Bold flat color palette suited to screen-printing. No text, letters, or numbers anywhere in the image. No logos, no brand names, no trademarked characters, no real people, nothing hateful. Wholly original artwork, centered subject, print-ready poster composition, high contrast, transparent or single flat-color background.",
+  "generatedAt": "2026-09-01T01:09:34.244Z",
+  "sourceWidthPx": 1024,
+  "outputTargetWidthPx": 2400,
+  "upscaled": true,
+  "upscaleNote": null,
+  "outputPath": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-merch-services-section/services/print-on-demand-design-factory-service/data/state/rendered-designs/teach-01-coffee-and-chaos-art.png"
+}

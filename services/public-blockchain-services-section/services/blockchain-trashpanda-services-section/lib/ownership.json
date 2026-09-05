@@ -1,0 +1,23 @@
+{
+  "kind": "node-micro-enterprise-constitution",
+  "node": "blockchain-trashpanda",
+  "rights": [
+    "decision",
+    "personnel",
+    "distribution"
+  ],
+  "rightsEvidence": {
+    "decision": "authors, admits, changes, or refuses its own policy-conformance contracts within the charter",
+    "personnel": "mutually selects, animates, contests, and removes operators of its own offices",
+    "distribution": "settles captured value only from sourced receipts and its accepted value-adjustment contract"
+  },
+  "approvalFromAbove": false,
+  "customerOutcome": "An agent preparing an unsigned Base transaction receives a deterministic, block-bound, independently replayable clause-by-clause policy verdict before signing.",
+  "rules": [
+    "write only this settlement",
+    "no owner, manager, inducer, receiver, channel, or token holder may override a local refusal",
+    "no internal handoff settles value",
+    "no recovery credential enters runtime",
+    "no distribution occurs without captured-value evidence and the local distribution right"
+  ]
+}

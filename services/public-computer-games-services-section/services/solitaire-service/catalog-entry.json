@@ -1,0 +1,121 @@
+{
+  "id": "solitaire",
+  "displayName": "Solitaire",
+  "description": "One rules engine, variant rules as data: Klondike, FreeCell, and Spider (1/2/4-suit) all read from the same declarative VariantSpec, with deterministic seeded deals, a solver-certified FreeCell deal generator, and a move-log that doubles as undo/redo and proof-of-play.",
+  "subdomain": "solitaire",
+  "configs": [
+    {
+      "id": "klondike-draw1",
+      "displayName": "Klondike (Draw 1)",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4,
+        "drawCount": 1
+      }
+    },
+    {
+      "id": "klondike-draw3",
+      "displayName": "Klondike (Draw 3)",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4,
+        "drawCount": 3
+      }
+    },
+    {
+      "id": "freecell",
+      "displayName": "FreeCell",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4
+      }
+    },
+    {
+      "id": "spider-1suit",
+      "displayName": "Spider (1 Suit)",
+      "params": {
+        "decks": 2,
+        "suitsInPlay": 1
+      }
+    },
+    {
+      "id": "spider-2suit",
+      "displayName": "Spider (2 Suit)",
+      "params": {
+        "decks": 2,
+        "suitsInPlay": 2
+      }
+    },
+    {
+      "id": "spider-4suit",
+      "displayName": "Spider (4 Suit)",
+      "params": {
+        "decks": 2,
+        "suitsInPlay": 4
+      }
+    },
+    {
+      "id": "yukon",
+      "displayName": "Yukon",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4
+      }
+    },
+    {
+      "id": "forty-thieves",
+      "displayName": "Forty Thieves",
+      "params": {
+        "decks": 2,
+        "suitsInPlay": 4,
+        "drawCount": 1
+      }
+    },
+    {
+      "id": "golf",
+      "displayName": "Golf",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4
+      }
+    },
+    {
+      "id": "tripeaks",
+      "displayName": "TriPeaks",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4
+      }
+    },
+    {
+      "id": "pyramid",
+      "displayName": "Pyramid",
+      "params": {
+        "decks": 1,
+        "suitsInPlay": 4
+      }
+    }
+  ],
+  "entryPoints": {
+    "browser": "/"
+  },
+  "seedPolicy": {
+    "kind": "daily-utc"
+  },
+  "intentLog": {
+    "schemaVersion": "solitaire-cartridge-v1",
+    "schemaRef": "src/cartridge.mts#SolitaireIntent"
+  },
+  "replayVerifier": "src/cartridge.manifest.mts#verify",
+  "keywords": [
+    "klondike",
+    "freecell",
+    "spider",
+    "solitaire",
+    "card-game"
+  ],
+  "status": "playable",
+  "energyBankWrapped": false,
+  "cartridgeWrapped": true,
+  "shelf": "Card Table"
+}

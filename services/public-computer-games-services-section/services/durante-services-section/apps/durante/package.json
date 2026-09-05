@@ -1,0 +1,40 @@
+{
+  "name": "@red-cup-engineering/durante",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "durante — a QUAKE-like first-person shooter on @red-cup-engineering/abrash (a software-3D pixel engine). You walk a level, strafe, and shoot a demon. The paraconsistent TWIST rides the substrate three ways: (1) THE ARENA IS A MERGE OF TRACES — the level settles from the federated union of every player's trace, and a wall two traces disagree about is a CONTESTED phase gate you can walk through. (2) A WEAPON'S EFFECT IS EVIDENCE — a shot appends deny(demon,'alive') to the trace rather than subtracting a hit-point. (3) THE ENEMY IS HELD ⊤ — between your first wound and the kill, a demon is alive-AND-dead, a held contradiction, until enough deny-evidence SETTLES it to dead. Browser-playable: a <canvas> face driven by requestAnimationFrame, keyboard-complete controls (arrows/WASD move+turn, space fires — no mouse required), served by a zero-dependency Node HTTP server.",
+  "keywords": [
+    "game",
+    "fps",
+    "quake-like",
+    "first-person-shooter",
+    "raycaster",
+    "pixel",
+    "federation",
+    "paraconsistent",
+    "bilattice",
+    "held-contradiction",
+    "561-group",
+    "browser"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@lenticule-science/metrologic": "0.1.1",
+    "@red-cup-engineering/abrash": "0.1.1",
+    "@red-cup-engineering/cartridge": "0.2.0",
+    "@red-cup-engineering/daleske": "0.1.0",
+    "@red-cup-engineering/footing": "0.1.2"
+  },
+  "bin": {
+    "durante-terminal": "./scripts/durante-terminal.mjs"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs web/*.mjs scripts/*.mjs agents/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mts agents/*.test.mts",
+    "start": "node src/server.mjs",
+    "terminal": "node scripts/durante-terminal.mjs",
+    "agent": "node agents/reference-entrant.mjs"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "paid-ephemeris-gateway",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-08-31",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "ephemeris.561.group",
+      "custom_domain": true
+    }
+  ],
+  // Every settlement-affecting value is deployment-supplied, never a source
+  // constant -- see boundaryFor() in src/worker.mjs. X402_PAY_TO is a
+  // `wrangler secret put` value, not a var (see 2026-08-31 x402-payto-decision
+  // record in x402-services-section/data/records/).
+  "vars": {
+    "X402_NETWORK": "eip155:8453",
+    "X402_FACILITATOR": "https://facilitator.payai.network"
+  }
+}

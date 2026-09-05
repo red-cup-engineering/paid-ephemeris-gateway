@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Watch a replay — Ruinfold Daily</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0d12'/%3E%3Ctext x='8' y='12' font-size='12' text-anchor='middle' fill='%236fa8dc' font-family='monospace'%3E%40%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/web/css/style.css" />
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">RUINFOLD</a>
+  <nav><span class="sub" id="run-label">Replay viewer</span></nav>
+</header>
+<main>
+  <section class="panel" id="picker-panel">
+    <h2>Watch a run</h2>
+    <p class="sub">Paste a run id (shown after a submission, or from a leaderboard row), or pick a date's leaderboard below.</p>
+    <form id="run-id-form" class="cta-row">
+      <input type="text" id="run-id-input" placeholder="2026-08-19__wanderer-abc123__..." style="flex:1; min-width:16rem; background:var(--bg); color:var(--ink); border:1px solid var(--line); border-radius:4px; padding:0.4rem;" />
+      <button class="btn" type="submit">Watch</button>
+    </form>
+    <form id="date-form" class="cta-row">
+      <input type="date" id="lb-date-input" />
+      <button class="btn secondary" type="submit">Browse that day's leaderboard</button>
+    </form>
+    <table class="board" id="picker-board" hidden>
+      <thead><tr><th>#</th><th>Wanderer</th><th>Score</th><th>Ticks</th><th></th></tr></thead>
+      <tbody id="picker-body"></tbody>
+    </table>
+  </section>
+
+  <div class="play-layout" id="viewer" hidden>
+    <div class="stage">
+      <canvas id="stage-canvas" aria-label="replay view" role="img"></canvas>
+    </div>
+    <aside class="hud panel">
+      <div class="hud-row"><span>Actor</span><span id="v-actor">&mdash;</span></div>
+      <div class="hud-row"><span>Date</span><span id="v-date">&mdash;</span></div>
+      <div class="hud-row"><span>Score</span><span id="v-score">&mdash;</span></div>
+      <div class="hud-row"><span>Ended</span><span id="v-ended">&mdash;</span></div>
+      <div class="hud-row"><span>Tick</span><span id="v-tick">0 / 0</span></div>
+      <div class="cta-row">
+        <button class="btn secondary" id="v-playpause">Pause</button>
+        <button class="btn secondary" id="v-restart">Restart</button>
+      </div>
+      <div class="cta-row">
+        <span class="sub">Speed</span>
+        <button class="btn secondary" data-speed="1">1x</button>
+        <button class="btn secondary" data-speed="4">4x</button>
+        <button class="btn secondary" data-speed="16">16x</button>
+      </div>
+    </aside>
+  </div>
+</main>
+<script type="importmap">
+{ "imports": { "#engine/": "/engine/" } }
+</script>
+<script type="module" src="/web/js/app-watch.mjs"></script>
+</body>
+</html>

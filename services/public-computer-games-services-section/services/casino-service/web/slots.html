@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tideline Treasures — Cowrie Casino</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/slots.css" />
+</head>
+<body>
+  <header class="masthead masthead-compact">
+    <div class="masthead-inner">
+      <a class="back-to-lobby" href="/">&larr; Cowrie Casino</a>
+      <h1>Tideline Treasures</h1>
+      <span class="glyph" aria-hidden="true">&#128032;</span>
+    </div>
+  </header>
+
+  <main class="slots-main">
+    <section class="panel slots-balances" aria-live="polite">
+      <div class="stat">
+        <span class="stat-label">Chips</span>
+        <span class="stat-value" id="slots-chip-balance">&mdash;</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Jackpot Pool</span>
+        <span class="stat-value jackpot" id="slots-jackpot-balance">&mdash;</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Spins Played</span>
+        <span class="stat-value" id="slots-spins-played">0</span>
+      </div>
+      <div class="slots-toggle-row">
+        <button type="button" id="sound-toggle-btn" class="icon-toggle-btn" aria-pressed="true" title="Toggle sound">&#128266;</button>
+        <label class="house-math-toggle">
+          <input type="checkbox" id="house-math-checkbox" />
+          House Math
+        </label>
+        <button type="button" id="paytable-btn" class="icon-toggle-btn" title="Paytable">&#128220;</button>
+      </div>
+    </section>
+
+    <p class="hint" id="slots-message" role="status">Opening the machine&hellip;</p>
+
+    <section class="slots-stage" id="slots-stage">
+      <canvas id="slots-canvas" width="800" height="440" aria-label="Tideline Treasures reels"></canvas>
+      <div class="slots-banner" id="slots-banner" hidden></div>
+    </section>
+
+    <div class="slots-house-math" id="house-math-panel" hidden>
+      <h3>House Math</h3>
+      <p class="house-math-sub">Every figure below is computed from the reel/paytable data itself — never asserted. See method notes.</p>
+      <dl class="house-math-grid" id="house-math-grid"></dl>
+    </div>
+
+    <section class="panel slots-controls">
+      <div class="slots-bet-row">
+        <button type="button" id="bet-down-btn" class="bet-adjust-btn">&minus;</button>
+        <span class="bet-readout">Bet/line: <strong id="bet-per-line-amount">5</strong> &middot; Total: <strong id="total-bet-amount">100</strong> chips</span>
+        <button type="button" id="bet-up-btn" class="bet-adjust-btn">+</button>
+      </div>
+      <div class="slots-action-row">
+        <button type="button" id="spin-btn" class="slots-primary-btn">Spin</button>
+        <div class="autospin-controls">
+          <label for="autospin-count">Auto-spin</label>
+          <select id="autospin-count">
+            <option value="0">Off</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          <button type="button" id="autospin-stop-btn" hidden>Stop</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel slots-paytable" id="paytable-panel" hidden>
+      <h2>Paytable &amp; Rules</h2>
+      <div id="paytable-content"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cowrie Casino &middot; Tideline Treasures &middot; play currency only, no real-money wagers or payouts, ever</p>
+  </footer>
+
+  <script type="module" src="/js/slots.mjs"></script>
+</body>
+</html>

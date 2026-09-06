@@ -1,7 +1,6 @@
 # Gig Assist Services Section
 
-The app seat of the 561 Group's work program's public face, Towpath
-Work, a division of Causeway Services, beneath
+The app seat of the 561 Group's work program's public face, beneath
 [public-web-work-services-section](../../README.md). Founded 2026-09-05
 from the program carrier,
 [561 Group Work Services Section](../../../../../../../../../561-group-services-section/services/561-group-operations-services-section/services/561-group-work-services-section/README.md),

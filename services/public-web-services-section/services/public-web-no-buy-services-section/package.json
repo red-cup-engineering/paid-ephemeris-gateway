@@ -1,7 +1,7 @@
 {
   "name": "@causeway-services/public-web-no-buy-services-section",
   "version": "0.1.0",
-  "description": "The app seat of the No Buy program's public face, Millrace No Buy: a JSON parameterization of the one platform app at nobuy.561.group, never a second app.",
+  "description": "The app seat of the No Buy program's public face, public-no-buy-services-section: a JSON parameterization of the one platform app at nobuy.561.group, never a second app.",
   "type": "module",
   "keywords": [
     "public"

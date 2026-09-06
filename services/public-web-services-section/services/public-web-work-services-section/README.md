@@ -11,8 +11,8 @@ sibling list, as seen in its own child
 [pacing-app](../public-web-health-services-section/services/pacing-services-section/services/pacing-app/README.md).
 Founded 2026-09-05 from the program carrier,
 [561 Group Work Services Section](../../../../../../../561-group-services-section/services/561-group-operations-services-section/services/561-group-work-services-section/README.md),
-which names the divisions — the public one, Towpath Work, a division of
-Causeway Services — and keeps their custody thread whole.
+which names the divisions — the public one, public-work-services-section
+— and keeps their custody thread whole.
 
 This section owns no capability of its own; it groups the work
 program's public web apps the way `public-web-health-services-section`

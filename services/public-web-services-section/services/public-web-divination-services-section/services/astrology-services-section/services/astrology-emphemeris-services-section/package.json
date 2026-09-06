@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@lenticule-science/divination-services-section": "2.0.2",
-    "@red-cup-engineering/semantic-record-journal-service": "0.1.8",
+    "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1",
     "@red-cup-engineering/x402-services-section": "2.0.1",
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",

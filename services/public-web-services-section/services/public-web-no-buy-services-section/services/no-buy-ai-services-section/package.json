@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/no-buy-ai-services-section",
+  "version": "0.1.0",
+  "description": "No Buy AI: the house's own free-inference practice, routing a person's own requests across their own free-tier quotas, offered to a person. A JSON parameterization of the one platform app at nobuy.561.group.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

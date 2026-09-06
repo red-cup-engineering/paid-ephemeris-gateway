@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/no-buy-crypto-services-section",
+  "version": "0.1.0",
+  "description": "No Buy Crypto: every way a person can come to hold crypto without buying it, with the labor each way actually costs stated plainly. A JSON parameterization of the one platform app at nobuy.561.group.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

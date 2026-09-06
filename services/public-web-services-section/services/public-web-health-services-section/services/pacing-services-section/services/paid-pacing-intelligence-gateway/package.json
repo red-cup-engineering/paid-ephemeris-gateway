@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@red-cup-engineering/pacing-intelligence-services-section": "0.1.1",
-    "@red-cup-engineering/semantic-record-journal-service": "0.1.9",
+    "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1",
     "@red-cup-engineering/x402-services-section": "1.5.0",
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",

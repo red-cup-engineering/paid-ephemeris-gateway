@@ -2,7 +2,7 @@
   "name": "@561-group/aletheon",
   "version": "0.0.1",
   "type": "module",
-  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void \u2014 every vital fact is a bilattice cell (\u22a5 unknown / t real / f destroyed / \u22a4 contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the 561-group computer and math substrates; the browser renders a streamed view with a from-scratch WebGL2 engine and rederived vec/mat/quat math. Zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
+  "description": "Aletheon: a browser 3D fantasy MMORPG whose world-truth is voidmath. The realm is settled out of the Void — every vital fact is a bilattice cell (⊥ unknown / t real / f destroyed / ⊤ contradiction-held-as-a-situation). The authoritative server folds an append-only EAVT trace through the 561-group computer and math substrates; the browser renders a streamed view with a from-scratch WebGL2 engine and rederived vec/mat/quat math. Zero build, pure ESM. Served at aletheon.561.group (declared via the 561:serve block).",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emsenn/bare-cedar-fog.git",
@@ -52,7 +52,7 @@
   "dependencies": {
     "@561-group/computer": "^0.0.5",
     "@lenticule-science/metrologic": "0.1.0",
-    "@red-cup-engineering/eavt": "0.4.0",
+    "@red-cup-engineering/eavt": "0.9.0",
     "@red-cup-engineering/flatfile": "0.1.0",
     "@red-cup-engineering/footing": "0.1.3",
     "@red-cup-engineering/qwzspace": "0.6.1"

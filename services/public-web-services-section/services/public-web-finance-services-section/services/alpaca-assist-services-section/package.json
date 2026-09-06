@@ -1,0 +1,12 @@
+{
+  "name": "@causeway-services/alpaca-assist-services-section",
+  "version": "0.1.0",
+  "description": "Alpaca Assist at alpaca-assist.561.group: Tidepool's decision-support assistant for a retail investor with an Alpaca account; the deployable Cloudflare Worker wrapping the assistant engine and the Alpaca tools, carrying no application logic of its own.",
+  "type": "module",
+  "keywords": [
+    "brand:tidepool",
+    "alpaca-assist",
+    "public-web-finance",
+    "causeway-services"
+  ]
+}

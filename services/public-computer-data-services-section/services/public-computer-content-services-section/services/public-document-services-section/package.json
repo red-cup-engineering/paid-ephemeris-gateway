@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/public-document-services-section",
+  "version": "0.1.0",
+  "description": "Causeway Services' public document face: documents are content carriers with a document codec and bounded metadata.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/public-specification-services-section",
+  "version": "0.1.0",
+  "description": "Causeway Services' published-specifications face: the public rendering of a fabricated specification, once the engineering and operations seats produce one.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

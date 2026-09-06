@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/public-computer-content-services-section",
+  "version": "0.1.0",
+  "description": "Causeway Services' public computer content face: content services own operations on content carriers directly beneath computer data services.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

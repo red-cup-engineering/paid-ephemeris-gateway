@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/public-computer-data-services-section",
+  "version": "0.1.0",
+  "description": "Causeway Services' public computer data face: this section is ordered by prerequisite concepts.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

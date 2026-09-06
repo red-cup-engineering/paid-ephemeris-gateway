@@ -1,0 +1,9 @@
+{
+  "name": "@causeway-services/public-article-services-section",
+  "version": "0.1.0",
+  "description": "Causeway Services' public article face: articles restrict documents to prose objects intended to carry a sustained claim.",
+  "type": "module",
+  "keywords": [
+    "public"
+  ]
+}

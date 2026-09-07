@@ -71,16 +71,16 @@ decision to make explicitly, not a quiet addition to this one.
 
 ## Migration status
 
-`src/collection.mjs` is a plain-JavaScript port of `aagaard`'s
-`src/integrations/splinterlands/splinterlands.adapter.ts`. `src/market.mjs`
+`aagaard` consumes this package at the exact `0.1.0` registry pin for
+collection parsing and readiness. `src/market.mjs`
 is a port of `src/integrations/splinterlands/splinterlandsMarket.mts`.
 `src/queue-readiness.mjs` ports only `SPLINTERLANDS_OPERATOR_POLICY` and
 `admitOneSplinterlandsQueue` out of
 `src/integrations/splinterlands/splinterlandsOperator.mts` — the rest of
 that file (team selection, battle-operation encoders) is the automated-play
-surface described above and was not ported. `aagaard`'s own scripts still
-import its own TypeScript copies; see the parent section's README for the
-shared migration debt this leaves.
+surface described above and was not ported. Aagaard's scripts retain their
+account-specific observation and policy work while importing collection
+mechanics from this package.
 
 ## Verification
 

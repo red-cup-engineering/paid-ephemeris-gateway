@@ -45,17 +45,10 @@ shape around a signature supplied from outside.
 
 ## Migration status
 
-Ported in full from `aagaard`'s
-`src/integrations/holozing/holozing.adapter.ts` (fully self-contained),
-plus the pure `loginMessage`, `keychainLoginEnvelope`, `balancesAgree`, and
-`attachHolozingDurableRecord` helpers from `aagaard`'s
-`scripts/holozing-rewards.mjs`. `attachHolozingDurableRecord`'s `recorder`
-parameter here takes just the receipt (`recorder(receipt)`), rather than
-aagaard's `recorder(dataDir, receipt, completedAt)` — the data-directory and
-persistence concerns stay with whatever caller supplies a recorder, keeping
-this module free of any I/O of its own. `aagaard`'s own
-`scripts/holozing-rewards.mjs` still imports its own TypeScript copy of the
-adapter and performs the actual login, claim, and settlement I/O.
+`aagaard` consumes this package at the exact `0.1.0` registry pin for its
+reward observation, planning, and reconciliation. Its script retains only
+the account-specific login, claim, and settlement I/O; this package owns the
+shared pure mechanics.
 
 ## Verification
 

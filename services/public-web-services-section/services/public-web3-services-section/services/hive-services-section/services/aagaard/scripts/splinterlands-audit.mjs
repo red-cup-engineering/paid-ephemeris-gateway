@@ -5,7 +5,7 @@ import { reportFailure } from "../src/commandFailure.mjs";
 
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
-import { assessSplinterlandsOwnedModernCore } from "../src/integrations/splinterlands/splinterlands.adapter.ts";
+import { assessSplinterlandsOwnedModernCore } from "@red-cup-engineering/splinterlands-services-section";
 import {
   SPLINTERLANDS_OPERATOR_POLICY,
   admitOneSplinterlandsQueue,

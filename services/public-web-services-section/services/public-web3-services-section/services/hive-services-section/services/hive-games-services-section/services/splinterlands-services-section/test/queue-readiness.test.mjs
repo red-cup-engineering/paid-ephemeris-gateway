@@ -4,7 +4,7 @@ import test from "node:test";
 import { SPLINTERLANDS_OPERATOR_POLICY, admitOneSplinterlandsQueue } from "../src/queue-readiness.mjs";
 
 const READY = Object.freeze({
-  account: "michael561",
+  account: "aagaard-test",
   energy: 40,
   outstandingMatches: 0,
   collectionReady: true,
@@ -15,7 +15,7 @@ const READY = Object.freeze({
 test("admission requires the exact account, energy floor, and clean queue budget", () => {
   const admission = admitOneSplinterlandsQueue(READY);
   assert.equal(admission.kind, "queue-one");
-  assert.equal(admitOneSplinterlandsQueue({ ...READY, account: "someone-else" }).kind, "refuse");
+  assert.equal(admitOneSplinterlandsQueue({ ...READY, account: "!invalid" }).kind, "refuse");
   assert.match(admitOneSplinterlandsQueue({ ...READY, energy: 39 }).reason, /energy is below/);
   assert.match(admitOneSplinterlandsQueue({ ...READY, outstandingMatches: 1 }).reason, /outstanding/);
   assert.match(admitOneSplinterlandsQueue({ ...READY, collectionReady: false }).reason, /no owned-only Modern team core/);

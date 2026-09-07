@@ -39,7 +39,7 @@ function evidence(overrides = new Map()) {
 
 test("roster purchase is one exact five-card basket with a hard credit ceiling and reserve", () => {
   const plan = planSplinterlandsRosterPurchase({
-    account: "michael561",
+    account: "aagaard-test",
     creditBalance: 384,
     clientVersion: "0.7.177",
     nonce: "A1b2C3d4E5",
@@ -49,7 +49,7 @@ test("roster purchase is one exact five-card basket with a hard credit ceiling a
   assert.equal(plan.credits, 314);
   assert.equal(plan.creditReserve, 70);
   assert.deepEqual(plan.listings.map((row) => row.cardDetailId), [802, 784, 742, 731, 817]);
-  assert.deepEqual(plan.operation[1].required_auths, ["michael561"]);
+  assert.deepEqual(plan.operation[1].required_auths, ["aagaard-test"]);
   assert.deepEqual(plan.operation[1].required_posting_auths, []);
   assert.deepEqual(JSON.parse(plan.operation[1].json), {
     currency: "CREDITS",
@@ -63,7 +63,7 @@ test("roster purchase is one exact five-card basket with a hard credit ceiling a
 });
 
 test("roster planner refuses substitutions, fleet sellers, price drift, and reserve exhaustion", () => {
-  const base = { account: "michael561", creditBalance: 384, clientVersion: "0.7.177", nonce: "A1b2C3d4E5", now: NOW };
+  const base = { account: "aagaard-test", creditBalance: 384, clientVersion: "0.7.177", nonce: "A1b2C3d4E5", now: NOW };
   const wrongEdition = new Map([[802, [listing(802, 15, 1)]]]);
   assert.throws(() => planSplinterlandsRosterPurchase({ ...base, listingsByCard: evidence(wrongEdition) }), /no admitted listing/);
   const fleetSeller = new Map([[784, [listing(784, 14, 1, { seller: "sigmund-vexler" })]]]);
@@ -74,7 +74,7 @@ test("roster planner refuses substitutions, fleet sellers, price drift, and rese
 });
 
 test("roster settlement requires all exact UIDs and the exact committed credit delta", () => {
-  const plan = planSplinterlandsRosterPurchase({ account: "michael561", creditBalance: 384, clientVersion: "0.7.177", nonce: "A1b2C3d4E5", listingsByCard: evidence(), now: NOW });
+  const plan = planSplinterlandsRosterPurchase({ account: "aagaard-test", creditBalance: 384, clientVersion: "0.7.177", nonce: "A1b2C3d4E5", listingsByCard: evidence(), now: NOW });
   const acquired = plan.listings.map((row) => row.uid);
   assert.deepEqual(reconcileSplinterlandsRosterPurchase({ plan, beforeCredits: 384, afterCredits: 70, beforeUids: ["C12-640-EXISTINGAA"], afterUids: ["C12-640-EXISTINGAA", ...acquired] }), {
     confirmed: true,

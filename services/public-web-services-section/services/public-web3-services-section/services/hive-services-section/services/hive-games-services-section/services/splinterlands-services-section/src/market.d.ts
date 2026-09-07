@@ -8,7 +8,6 @@ export interface SplinterlandsRosterCardTarget {
 }
 
 export interface SplinterlandsRosterPurchasePolicy {
-  readonly account: "michael561";
   readonly currency: "CREDITS";
   readonly maximumCredits: number;
   readonly minimumCreditReserve: number;
@@ -31,13 +30,13 @@ export interface SplinterlandsRosterListing {
 }
 
 export interface SplinterlandsRosterPurchasePlan {
-  readonly account: "michael561";
+  readonly account: string;
   readonly currency: "CREDITS";
   readonly credits: number;
   readonly creditReserve: number;
   readonly listings: readonly SplinterlandsRosterListing[];
   readonly operation: readonly ["custom_json", Readonly<{
-    required_auths: readonly ["michael561"];
+    required_auths: readonly [string];
     required_posting_auths: readonly [];
     id: "sm_market_purchase";
     json: string;

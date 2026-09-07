@@ -9,7 +9,6 @@
 // this service, and none is planned).
 
 export const SPLINTERLANDS_OPERATOR_POLICY = Object.freeze({
-  account: "michael561",
   format: "modern",
   matchType: "Modern Ranked",
   minimumEnergy: 40,
@@ -26,7 +25,7 @@ export const SPLINTERLANDS_OPERATOR_POLICY = Object.freeze({
  * this service deliberately does not provide (see README).
  */
 export function admitOneSplinterlandsQueue(input) {
-  if (input.account !== SPLINTERLANDS_OPERATOR_POLICY.account) return Object.freeze({ kind: "refuse", reason: "the first operator is hard-bound to michael561" });
+  if (typeof input.account !== "string" || !/^[a-z][a-z0-9.-]{2,15}$/u.test(input.account)) return Object.freeze({ kind: "refuse", reason: "the observed account is invalid" });
   if (!Number.isFinite(input.energy) || input.energy < SPLINTERLANDS_OPERATOR_POLICY.minimumEnergy) return Object.freeze({ kind: "refuse", reason: `energy is below the hard ${SPLINTERLANDS_OPERATOR_POLICY.minimumEnergy} floor` });
   if (!Number.isSafeInteger(input.outstandingMatches) || input.outstandingMatches !== 0) return Object.freeze({ kind: "refuse", reason: "an outstanding or malformed battle queue exists" });
   if (!input.collectionReady) return Object.freeze({ kind: "refuse", reason: "no owned-only Modern team core is ready" });

@@ -1,7 +1,6 @@
 // Type declarations for @red-cup-engineering/splinterlands-services-section/queue-readiness.
 
 export interface SplinterlandsOperatorPolicy {
-  readonly account: "michael561";
   readonly format: "modern";
   readonly matchType: "Modern Ranked";
   readonly minimumEnergy: number;

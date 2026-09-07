@@ -19,7 +19,7 @@ import {
   parseHoloZingPendingRewards,
   planHoloZingRewardClaim,
   reconcileHoloZingRewardClaim,
-} from "../src/integrations/holozing/holozing.adapter.ts";
+} from "@red-cup-engineering/holozing-services-section";
 import { PrivateKey } from "../src/integrations/hive/waggle/keys.mjs";
 import { sha256 } from "../src/integrations/hive/waggle/hash.mjs";
 import { makeFail, parseAccountKeyFileExecuteOneOptions } from "../src/core/hiveScriptSupport.mjs";

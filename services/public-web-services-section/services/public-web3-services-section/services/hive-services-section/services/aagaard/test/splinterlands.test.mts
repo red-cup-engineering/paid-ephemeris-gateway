@@ -3,7 +3,7 @@ import test from "node:test";
 
 import {
   assessSplinterlandsOwnedModernCore,
-} from "../src/integrations/splinterlands/splinterlands.adapter.ts";
+} from "@red-cup-engineering/splinterlands-services-section";
 import { parseOptions } from "../scripts/splinterlands-audit.mjs";
 import { loginMessage, parseOptions as parseSessionOptions } from "../scripts/splinterlands-session-probe.mjs";
 

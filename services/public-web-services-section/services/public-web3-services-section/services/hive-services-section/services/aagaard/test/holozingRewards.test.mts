@@ -5,7 +5,7 @@ import {
   parseHoloZingPendingRewards,
   planHoloZingRewardClaim,
   reconcileHoloZingRewardClaim,
-} from "../src/integrations/holozing/holozing.adapter.ts";
+} from "@red-cup-engineering/holozing-services-section";
 import {
   attachHolozingDurableRecord,
   balancesAgree,

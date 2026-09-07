@@ -7,7 +7,6 @@
 // nothing here signs or broadcasts it.
 
 export const SPLINTERLANDS_ROSTER_PURCHASE_POLICY = Object.freeze({
-  account: "michael561",
   currency: "CREDITS",
   maximumCredits: 320,
   minimumCreditReserve: 64,
@@ -68,7 +67,7 @@ export function parseSplinterlandsRosterListing(value, now = new Date()) {
 }
 
 export function planSplinterlandsRosterPurchase(input) {
-  if (input.account !== SPLINTERLANDS_ROSTER_PURCHASE_POLICY.account) throw new Error("Splinterlands roster purchase is hard-bound to michael561");
+  if (typeof input.account !== "string" || !/^[a-z][a-z0-9.-]{2,15}$/u.test(input.account)) throw new Error("invalid Splinterlands purchase account");
   if (!Number.isSafeInteger(input.creditBalance) || input.creditBalance < 0) throw new Error("Splinterlands credit balance must be a nonnegative integer");
   if (!/^0\.\d+\.\d+$/u.test(input.clientVersion)) throw new Error("invalid Splinterlands client version");
   if (!NONCE.test(input.nonce)) throw new Error("Splinterlands purchase nonce must be exactly ten alphanumeric characters");
@@ -95,13 +94,13 @@ export function planSplinterlandsRosterPurchase(input) {
     n: input.nonce,
   });
   const operation = Object.freeze(["custom_json", Object.freeze({
-    required_auths: Object.freeze([SPLINTERLANDS_ROSTER_PURCHASE_POLICY.account]),
+    required_auths: Object.freeze([input.account]),
     required_posting_auths: Object.freeze([]),
     id: "sm_market_purchase",
     json,
   })]);
   return Object.freeze({
-    account: SPLINTERLANDS_ROSTER_PURCHASE_POLICY.account,
+    account: input.account,
     currency: SPLINTERLANDS_ROSTER_PURCHASE_POLICY.currency,
     credits,
     creditReserve,

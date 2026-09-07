@@ -465,11 +465,14 @@ const server = createServer((request, response) => {
   });
 });
 
-const controller = new AbortController();
-runtime.start(controller.signal);
-process.once("SIGINT", () => controller.abort());
-process.once("SIGTERM", () => controller.abort());
+export function startAagaardServer(): void {
+  const controller = new AbortController();
+  runtime.start(controller.signal);
+  process.once("SIGINT", () => controller.abort());
+  process.once("SIGTERM", () => controller.abort());
+  server.listen(port, host, () => {
+    process.stderr.write(`[aagaard] http://${host}:${port} live=${config.live} enabled=[${config.enabled.join(",")}]\n`);
+  });
+}
 
-server.listen(port, host, () => {
-  process.stderr.write(`[aagaard] http://${host}:${port} live=${config.live} enabled=[${config.enabled.join(",")}]\n`);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) startAagaardServer();

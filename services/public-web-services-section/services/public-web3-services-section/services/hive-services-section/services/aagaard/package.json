@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/aagaard",
-  "version": "0.4.8",
+  "version": "0.4.10",
   "type": "module",
   "description": "Sovereign Hive wallet-fleet operations using chain-confirmed evidence.",
   "files": [

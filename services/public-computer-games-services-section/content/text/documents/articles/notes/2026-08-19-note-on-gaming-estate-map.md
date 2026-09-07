@@ -12,8 +12,8 @@ This is Red Cup Engineering's answer to "what game stuff do we have, and where i
 Every built asset named below stays exactly where it already lives; every path in this
 document is a pointer, not a copy.
 
-Sibling to `computer-code-services-section`, `computer-data-services-section`,
-`computer-networking-services-section`, and `computer-systems-services-section` under
+Sibling to `computer-code-engineering-services-section`, `computer-data-engineering-services-section`,
+`computer-networking-engineering-services-section`, and `computer-systems-services-section` under
 `computer-services-section`.
 
 The full detail this map is drawn from — complete tables, per-asset test runs, proof-file
@@ -81,7 +81,7 @@ stale lie the day after it's written.
 | — | Energy Bank (`@561-group/energy-bank`) | `public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/energy-bank` | In-build; real source+tests on disk. No fleet service posts a payout entry to it yet |
 | — | semiotic-exchange-chain family | `.../computer-systems-services-section/services/semiotic-computer-system-services-section/services/semiotic-exchange-chain-services-section` (+ `modeled-union-dimension`, `sovereign-membrane-admission-service`) | Landed spec + 3 packages, **30/31** verified across the family (the 1 fail is a documented, expected `ERR_MODULE_NOT_FOUND` for an unwritten package) |
 | — | FeltOS MUD kernel | `.../computer-systems-services-section/services/computer-mud-services-section/apps/fizzos` | Landed, **59/60** verified (1 SIGTERM-handling test fails, possibly sandbox-specific) |
-| — | ActivityPub server | `.../computer-networking-services-section/services/activitypub-services-section` | Landed, **50/50** verified. No public deploy target — see the inventory note §17 and §9 below |
+| — | ActivityPub server | `.../computer-networking-engineering-services-section/services/activitypub-services-section` | Landed, **50/50** verified. No public deploy target — see the inventory note §17 and §9 below |
 
 ## 4. Now/Next — the shared substrate
 
@@ -93,7 +93,7 @@ The load-bearing packages and infrastructure every game above rides or is meant 
 | **@561-group/energy-bank** — double-entry ENERGY ledger, pluggable settlement | `public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/energy-bank` | In-build, 79/79 own tests verified |
 | **@lenticule-science/metrologic** — bilattice/obstruction/spectral/Chu-space core every game's mechanics cite | `engineering-services-section/.../science-services-section/services/information-science-services-section/services/math-services-section/services/obsmetrological-services-section/apps/metrologic` | Landed, 64/64 verified |
 | **play.561.group** — the Shelf/Storefront, catalog reader | `public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/sites/play.561.group` | Landed, 6/6 verified. Reframed as "the CD-suite reborn" (`2026-08-19-note-on-the-suite-and-the-studio.md`); named-shelf reorg, a shared "Today" page, and cast v1 are directives, not yet built |
-| **ActivityPub federation** — the substrate the gamified-Fediverse-client vision would run on | `.../computer-networking-services-section/services/activitypub-services-section` | Landed, 50/50 verified, no reachable public deploy yet |
+| **ActivityPub federation** — the substrate the gamified-Fediverse-client vision would run on | `.../computer-networking-engineering-services-section/services/activitypub-services-section` | Landed, 50/50 verified, no reachable public deploy yet |
 | **Self-Education Platform** — corpus-compiler/FSRS/Checker chassis under Lantern, Equivo, weiqi-Learn | not a separate service — "what `lantern-service/src/` already substantially is, generalized in place" | Specified (`self-education-platform-design.md`); the pluggable `Checker` interface has no code yet |
 | **ZBD micropayment rails** — Lightning payout adapter, ads-fund-payouts ledger policy | not built | Specification only (`zbd-micropayment-rails.md`); no fleet service posts a `liabilities:*`/`expenses:payout:*` entry yet |
 | **The cast** — recurring agent players sharing the intent-log API | not built | Named directive (`2026-08-19-note-on-the-suite-and-the-studio.md` §5); no code |

@@ -56,7 +56,7 @@ and entangled, not left as an unnamed debt.
   sends is already an RMN-typed envelope, the same Relation Model Notation lineage EAVT/SEAVT sit
   downstream of per the org-layering law.
 - **Engineering.** The live server is `@red-cup-engineering/activitypub-services-section`
-  (`computer-engineering-services-section/services/computer-networking-services-section/services/activitypub-services-section`).
+  (`computer-engineering-services-section/services/computer-networking-engineering-services-section/services/activitypub-services-section`).
   Its dependency graph is real entanglement, not a stub: `@red-cup-engineering/relation-model-notation-json-codec`
   and `-typing`, `@red-cup-engineering/a2a-rmn-part-service`, `@red-cup-engineering/ni-services-section`
   (content identity), `@red-cup-engineering/semantic-content-identify-service`, and

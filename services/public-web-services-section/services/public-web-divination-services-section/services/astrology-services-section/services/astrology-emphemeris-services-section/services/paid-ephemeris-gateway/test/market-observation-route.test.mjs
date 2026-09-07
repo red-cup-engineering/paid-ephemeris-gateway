@@ -26,23 +26,6 @@ function decodeChallenge(response) {
   return JSON.parse(Buffer.from(response.headers.get("payment-required"), "base64").toString("utf8"));
 }
 
-/** Answer eth_blockNumber and eth_getLogs the way settlement.mjs's own tests do. */
-const AUTHORIZATION_USED_TOPIC = "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5";
-const topicFor = (addr) => `0x${"0".repeat(24)}${addr.slice(2).toLowerCase()}`;
-const log = (addr) => ({ topics: [AUTHORIZATION_USED_TOPIC, topicFor(addr), `0x${"1".repeat(64)}`] });
-function rpcFake({ tip = 50548585, logs = [] } = {}) {
-  return async (_url, init) => {
-    const body = JSON.parse(init.body);
-    if (body.method === "eth_blockNumber") {
-      return { ok: true, status: 200, json: async () => ({ jsonrpc: "2.0", id: 1, result: `0x${tip.toString(16)}` }) };
-    }
-    if (body.method === "eth_getLogs") {
-      return { ok: true, status: 200, json: async () => ({ jsonrpc: "2.0", id: 1, result: logs }) };
-    }
-    return { ok: false, status: 400, json: async () => ({}) };
-  };
-}
-
 test("normalizeWindowRequest(): defaults, accepts in-range integers, refuses the rest", () => {
   assert.equal(normalizeWindowRequest({}), DEFAULT_WINDOW_BLOCKS);
   assert.equal(normalizeWindowRequest({ windowBlocks: "900" }), 900);
@@ -96,11 +79,15 @@ test("seller exposes the market-observation product at the declared price, along
   }
 });
 
-test("createMarketObservationHandler(): serves a live observation on settled payment, RPC mocked", async () => {
-  const a = "0x1111111111111111111111111111111111111111";
-  const b = "0x2222222222222222222222222222222222222222";
+test("createMarketObservationHandler(): serves a live observation from the injected canonical observer", async () => {
   const handler = createMarketObservationHandler({}, {
-    fetchImpl: rpcFake({ logs: [log(a), log(b), log(a)] }),
+    observeSettlement: async () => ({
+      ok: true,
+      asset: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      measured: { authorizations: 3, distinctAuthorizers: 2, provenance: { providerId: "base-a" } },
+      extrapolated: { dayFactor: 48 },
+      caveat: "EIP-3009 activity is not a count of x402 uses or agents.",
+    }),
     now: () => "2026-08-28T00:00:00.000Z",
   });
 
@@ -118,18 +105,12 @@ test("createMarketObservationHandler(): serves a live observation on settled pay
   assert.equal(body.measured.authorizations, 3);
   assert.equal(body.measured.distinctAuthorizers, 2);
   assert.equal(body.distinctAuthorizersSampled, 2);
-  assert.match(body.caveat, /not a marker of the protocol/u);
+  assert.match(body.caveat, /not a count of x402 uses or agents/u);
 });
 
 test("createMarketObservationHandler(): a throttled RPC is a 502, never a silent zero", async () => {
   const handler = createMarketObservationHandler({}, {
-    fetchImpl: async (_url, init) => {
-      const body = JSON.parse(init.body);
-      if (body.method === "eth_blockNumber") {
-        return { ok: false, status: 429, json: async () => ({}) };
-      }
-      return { ok: false, status: 400, json: async () => ({}) };
-    },
+    observeSettlement: async () => ({ ok: false, reason: "provider throttled (429)" }),
   });
 
   let statusCode = 200;

@@ -19,7 +19,7 @@
     },
     {
       "title": "x402 Market Observation (Base USDC settlements)",
-      "description": "Live-sampled count of EIP-3009 AuthorizationUsed settlements on Base USDC over a recent block window, with distinct paying-agent population and extrapolation, measured at the chain not a directory.",
+      "description": "Sampled Base-USDC EIP-3009 AuthorizationUsed activity over a recent block range, with canonical-provider provenance and explicit arithmetic extrapolation. It does not identify x402 use or agents.",
       "category": "data",
       "network": "Base",
       "method": "GET",

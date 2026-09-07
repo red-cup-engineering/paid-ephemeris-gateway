@@ -110,7 +110,7 @@ export function createServer(env = process.env, dependencies = {}) {
     [`GET ${MARKET_OBSERVATION_ROUTE}`]: {
       accepts: { scheme: "exact", price: MARKET_OBSERVATION_PRICE, network, payTo },
       description:
-        "x402 Market Observation: a live-sampled count of EIP-3009 AuthorizationUsed settlements on Base USDC over a recent block window, with distinct paying-agent population and day/month extrapolation\u2014measured at the chain, not a directory, so it is not subject to catalog undercount.",
+        "x402 Market Observation: sampled Base-USDC EIP-3009 AuthorizationUsed activity over a recent block range, with provider provenance and explicit arithmetic extrapolation. It does not identify x402 use, agents, or protocol share.",
       mimeType: "application/json",
       serviceName: "561-group-x402-market-observation",
       tags: ["x402", "market-data", "base", "eip-3009", "agent-commerce", "settlement"],

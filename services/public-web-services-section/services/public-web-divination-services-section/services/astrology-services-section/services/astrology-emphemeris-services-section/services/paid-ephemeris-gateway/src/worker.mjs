@@ -10,7 +10,7 @@ import {
   normalizeWindowRequest,
   marketObservationDiscovery,
 } from "./market-observation-route.mjs";
-import { observeSettlement } from "./x402-settlement-observation.mjs";
+import { observeSettlement } from "@red-cup-engineering/x402-market-observation-service/settlement";
 import {
   MOMENT_ESSENTIALS_PRICE,
   MOMENT_ESSENTIALS_ROUTE,
@@ -53,14 +53,13 @@ async function momentEssentialsResponse(date, dependencies) {
 async function marketObservationResponse(env, url, dependencies) {
   try {
     const windowBlocks = normalizeWindowRequest(Object.fromEntries(url.searchParams));
-    const rpcUrl = dependencies.rpcUrl || env.X402_MARKET_RPC_URL || "https://mainnet.base.org";
     const observe = dependencies.observeSettlement || observeSettlement;
-    const settlement = await observe({ rpcUrl, windowBlocks });
-    if (!settlement.ok) return json({ error: `settlement measurement failed: ${settlement.reason}`, rpcUrl }, 502);
+    const settlement = await observe({ readPool: dependencies.readPool, windowBlocks });
+    if (!settlement.ok) return json({ error: `settlement measurement failed: ${settlement.reason}` }, 502);
     return json({
       recordType: "561-group.x402-market-observation",
       observedAt: new Date().toISOString(),
-      chain: { network: "eip155:8453", asset: settlement.asset, rpcUrl },
+      chain: { network: "eip155:8453", asset: settlement.asset, rangeObservation: true, provenance: settlement.measured.provenance },
       measured: settlement.measured,
       distinctAuthorizersSampled: settlement.measured.distinctAuthorizers,
       extrapolated: settlement.extrapolated,
@@ -109,7 +108,7 @@ function boundaryFor(env, dependencies, cache) {
       [`GET ${MARKET_OBSERVATION_ROUTE}`]: {
         accepts: { scheme: "exact", price: MARKET_OBSERVATION_PRICE, network, payTo },
         description:
-          "x402 Market Observation: a live-sampled count of EIP-3009 AuthorizationUsed settlements on Base USDC over a recent block window, with distinct paying-agent population and day/month extrapolation—measured at the chain, not a directory, so it is not subject to catalog undercount.",
+          "x402 Market Observation: sampled Base-USDC EIP-3009 AuthorizationUsed activity over a recent block range, with provider provenance and explicit arithmetic extrapolation. It does not identify x402 use, agents, or protocol share.",
         mimeType: "application/json",
         serviceName: "561-group-x402-market-observation",
         tags: ["x402", "market-data", "base", "eip-3009", "agent-commerce", "settlement"],
@@ -122,7 +121,7 @@ function boundaryFor(env, dependencies, cache) {
 
 /**
  * Build one Workers `{ fetch }` export. `dependencies` injects test doubles
- * (`facilitatorClient`, `computeEssentials`, `observeSettlement`, `rpcUrl`)
+ * (`facilitatorClient`, `computeEssentials`, `observeSettlement`, `readPool`)
  * the same way `createServer(env, dependencies)` does for the Express/Cloud
  * Run entry in `server.mjs`; production uses the zero-argument default.
  */

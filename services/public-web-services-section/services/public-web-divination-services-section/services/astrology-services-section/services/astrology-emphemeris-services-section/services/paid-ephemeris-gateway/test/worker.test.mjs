@@ -94,7 +94,7 @@ test("Moment Essentials refuses a malformed date before pricing it", async () =>
   assert.equal(response.status, 422);
 });
 
-test("Market Observation serves a live observation after settlement, RPC mocked", async () => {
+test("Market Observation serves a live observation after settlement through the injected canonical observer", async () => {
   const paidFacilitator = {
     async getSupported() { return { kinds: [{ x402Version: 2, scheme: "exact", network: NETWORK }], extensions: [], signers: {} }; },
     async verify() { return { isValid: true, payer: `0x${"22".repeat(20)}` }; },

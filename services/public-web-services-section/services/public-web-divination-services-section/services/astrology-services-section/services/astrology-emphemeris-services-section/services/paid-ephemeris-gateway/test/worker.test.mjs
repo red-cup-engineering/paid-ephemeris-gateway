@@ -3,6 +3,7 @@ import test from "node:test";
 
 import { createWorkerHandler, WORKER_ROUTES } from "../src/worker.mjs";
 import { MOMENT_ESSENTIALS_ROUTE } from "../src/route-catalog.mjs";
+import { ASTRONOMY_POSITIONS_ROUTE } from "../src/astronomy-positions-route.mjs";
 import { MARKET_OBSERVATION_ROUTE } from "../src/market-observation-route.mjs";
 
 const PAY_TO = "0x42F72C0a340A4A55C082Fe42483e87691D2bff64";
@@ -16,8 +17,8 @@ function unpaidFacilitator() {
   };
 }
 
-test("declares the two Workers-portable products, excluding Precision Moment", () => {
-  assert.deepEqual(WORKER_ROUTES, [MOMENT_ESSENTIALS_ROUTE, MARKET_OBSERVATION_ROUTE]);
+test("declares the three Workers-portable products, excluding Precision Moment", () => {
+  assert.deepEqual(WORKER_ROUTES, [MOMENT_ESSENTIALS_ROUTE, ASTRONOMY_POSITIONS_ROUTE, MARKET_OBSERVATION_ROUTE]);
 });
 
 test("serves status and the 402index verification file unpriced, with no env at all", async () => {

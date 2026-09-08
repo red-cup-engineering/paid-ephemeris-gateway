@@ -8,6 +8,12 @@ import {
 
 import { selectFacilitatorClient } from "./cdp-facilitator.mjs";
 import {
+  ASTRONOMY_POSITIONS_PRICE,
+  ASTRONOMY_POSITIONS_ROUTE,
+  astronomyPositionsDiscovery,
+  computeAstronomyPositions,
+} from "./astronomy-positions-route.mjs";
+import {
   MARKET_OBSERVATION_PRICE,
   MARKET_OBSERVATION_ROUTE,
   createMarketObservationHandler,
@@ -51,6 +57,15 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
       serviceName: "561-group-precision-moment",
       tags: ["ephemeris", "astrology", "jpl-de440", "natal-chart", "provenance"],
       extensions: precisionDiscovery,
+    },
+    [`GET ${ASTRONOMY_POSITIONS_ROUTE}`]: {
+      accepts: { scheme: "exact", price: ASTRONOMY_POSITIONS_PRICE, network, payTo },
+      description:
+        "Astronomy Positions: apparent geocentric ecliptic longitude/latitude/speed for the ten bodies at one exact UTC instant, plus lunar phase and illuminated fraction, provenance, and audited error bounds. No signs, no aspects, no astrological interpretation.",
+      mimeType: "application/json",
+      serviceName: "561-group-astronomy-positions",
+      tags: ["ephemeris", "positional-astronomy", "planetary-positions", "jpl", "provenance"],
+      extensions: astronomyPositionsDiscovery,
     },
     [`GET ${MARKET_OBSERVATION_ROUTE}`]: {
       accepts: { scheme: "exact", price: MARKET_OBSERVATION_PRICE, network, payTo },
@@ -106,6 +121,7 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
       ...[STATUS_ROUTE, "/healthz"].map((match) => ({ match, methods: ["GET"], handler: () => Response.json({ status: "ok", service: "paid-ephemeris-gateway" }) })),
       { match: INDEX_VERIFICATION_ROUTE, methods: ["GET"], handler: () => new Response(env.INDEX_VERIFICATION_HASH || DEFAULT_INDEX_VERIFICATION_HASH, { headers: { "content-type": "text/plain" } }) },
       { match: MOMENT_ESSENTIALS_ROUTE, methods: ["GET"], handler: (ctx) => paid(ctx, (ctx) => normalizeInstant(ctx.params.date), (ctx) => Response.json((dependencies.computeEssentials || computeEphemeris)(ctx.params.date))) },
+      { match: ASTRONOMY_POSITIONS_ROUTE, methods: ["GET"], handler: (ctx) => paid(ctx, (ctx) => normalizeInstant(ctx.params.date), (ctx) => Response.json((dependencies.computeAstronomyPositions || computeAstronomyPositions)(ctx.params.date))) },
       ...(dependencies.computePrecision ? [{ match: PRECISION_MOMENT_ROUTE, methods: ["GET"], handler: (ctx) => paid(ctx,
         (ctx) => dependencies.normalizePrecisionRequest(ctx.params.date, precisionOptions(query(ctx))),
         async (ctx) => Response.json(await dependencies.computePrecision(ctx.params.date, precisionOptions(query(ctx))))) }] : []),

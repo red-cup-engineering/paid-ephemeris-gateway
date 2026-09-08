@@ -1,7 +1,8 @@
 import { createGatewayApplication } from "./application.mjs";
 import { MOMENT_ESSENTIALS_ROUTE } from "./route-catalog.mjs";
+import { ASTRONOMY_POSITIONS_ROUTE } from "./astronomy-positions-route.mjs";
 import { MARKET_OBSERVATION_ROUTE } from "./market-observation-route.mjs";
-export const WORKER_ROUTES = Object.freeze([MOMENT_ESSENTIALS_ROUTE, MARKET_OBSERVATION_ROUTE]);
+export const WORKER_ROUTES = Object.freeze([MOMENT_ESSENTIALS_ROUTE, ASTRONOMY_POSITIONS_ROUTE, MARKET_OBSERVATION_ROUTE]);
 function workersSettlementWitness(context) {
   const result = context?.result;
   console.log(JSON.stringify({

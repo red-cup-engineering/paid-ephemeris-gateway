@@ -7,6 +7,7 @@ import {
   STATUS_ROUTE,
 } from "../src/route-catalog.mjs";
 import { MARKET_OBSERVATION_ROUTE, MARKET_OBSERVATION_PRICE } from "../src/market-observation-route.mjs";
+import { ASTRONOMY_POSITIONS_ROUTE, ASTRONOMY_POSITIONS_PRICE } from "../src/astronomy-positions-route.mjs";
 
 const BASE = "eip155:8453";
 const USDC = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913".toLowerCase();
@@ -20,6 +21,7 @@ const EXAMPLE_PRECISION_QUERY = "latitude=46.7867&longitude=-92.1005";
 
 const ROUTE_META = new Map([
   [MOMENT_ESSENTIALS_ROUTE, { name: "Moment Essentials", price: MOMENT_ESSENTIALS_PRICE }],
+  [ASTRONOMY_POSITIONS_ROUTE, { name: "Astronomy Positions", price: ASTRONOMY_POSITIONS_PRICE }],
   [MARKET_OBSERVATION_ROUTE, { name: "x402 Market Observation", price: MARKET_OBSERVATION_PRICE }],
   [PRECISION_MOMENT_ROUTE, { name: "Precision Moment", price: PRECISION_MOMENT_PRICE, query: EXAMPLE_PRECISION_QUERY }],
 ]);

@@ -14,14 +14,14 @@ function fixture({ payTo = acceptance.payTo, offers = PUBLIC_OFFERS } = {}) {
   };
 }
 
-test("PUBLIC_OFFERS is exactly the two routes the Workers transport serves", () => {
-  assert.deepEqual(PUBLIC_OFFERS.map((offer) => offer.name), ["Moment Essentials", "x402 Market Observation"]);
+test("PUBLIC_OFFERS is exactly the three routes the Workers transport serves", () => {
+  assert.deepEqual(PUBLIC_OFFERS.map((offer) => offer.name), ["Moment Essentials", "Astronomy Positions", "x402 Market Observation"]);
 });
 
 test("qualifies the Workers-served public offers without attempting payment, and skips Precision Moment with no PRECISION_ORIGIN", async () => {
   const result = await verifyPublicOffer({ origin: "https://example.test", precisionOrigin: undefined, fetchImpl: fixture() });
   assert.equal(result.qualified, true);
-  assert.equal(result.offers.length, 2);
+  assert.equal(result.offers.length, 3);
   assert.equal(result.precisionAssayed, false);
   assert.equal(result.paymentAttempted, false);
 });
@@ -36,7 +36,7 @@ test("refuses payout identity drift", async () => {
 test("assays Precision Moment only when an explicit PRECISION_ORIGIN is supplied, against that origin", async () => {
   const result = await verifyPublicOffer({ origin: "https://example.test", precisionOrigin: "https://precision.example.test", fetchImpl: fixture() });
   assert.equal(result.precisionAssayed, true);
-  assert.equal(result.offers.length, 3);
+  assert.equal(result.offers.length, 4);
   assert.ok(result.offers.some((offer) => offer.name === "Precision Moment"));
 });
 

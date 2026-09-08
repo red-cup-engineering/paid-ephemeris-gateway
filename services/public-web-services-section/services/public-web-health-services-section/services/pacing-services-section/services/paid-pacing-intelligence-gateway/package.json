@@ -9,7 +9,10 @@
   "main": "src/server.mjs",
   "exports": {
     ".": "./src/server.mjs",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./application": "./src/application.mjs",
+    "./worker": "./src/worker.mjs",
+    "./offers": "./src/offers.mjs"
   },
   "files": [
     "README.md",
@@ -20,15 +23,16 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
+    "@red-cup-engineering/http-server-core-service": "0.1.1",
     "@red-cup-engineering/pacing-intelligence-services-section": "0.1.1",
+    "@red-cup-engineering/read-http-request-body-service": "0.2.1",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
     "@red-cup-engineering/witness-journal-document-service": "1.0.1",
-    "@red-cup-engineering/x402-services-section": "1.5.0",
+    "@red-cup-engineering/x402-services-section": "2.1.0",
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",
     "@x402/evm": "2.24.0",
     "@x402/extensions": "2.24.0",
-    "@x402/svm": "2.24.0",
-    "express": "5.2.1"
+    "@x402/svm": "2.24.0"
   },
   "keywords": [
     "x402",

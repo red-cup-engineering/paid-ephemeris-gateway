@@ -1,0 +1,12 @@
+{
+  "type": "PaidPacingIntelligenceGatewayFinding",
+  "version": 1,
+  "recordedAt": "2026-09-08",
+  "finding": "@red-cup-engineering/http-server-core-service 0.1.1's Node start() transport does not route a rejected handler through the fetch handler's onError, so an over-limit request body answers plain-text 500 instead of the JSON 413 the Fetch transport gives",
+  "package": "@red-cup-engineering/http-server-core-service",
+  "version_measured": "0.1.1",
+  "reproduction": "createFetchHandler({ onError, resources: [{ match: \"/p\", methods: [\"POST\"], handler: async (ctx) => Response.json(await readJsonBody(ctx.request, { maxBytes: 1024 })) }] }) served two ways with the same 4KiB JSON body: the Fetch transport (calling the handler directly) answers 413 {\"error\":\"request body exceeded 1024 bytes\",\"isBodyReadError\":true,\"name\":\"BodyReadError\"}; the Node transport (start({ fetch: handler })) answers 500 \"Internal Server Error\" as plain text. The repro uses no paid-pacing-intelligence-gateway code at all.",
+  "exposedBy": "test/http-application.test.mjs in this gateway, which asserts the two transports agree on 400/415/413 for malformed bodies. Its 413 case fails on the Node transport for this reason; the other 33 tests in this package pass.",
+  "notDoneHere": "Repairing and republishing @red-cup-engineering/http-server-core-service is a separate lot in that package's own custody, with its own consumers to re-pin; this gateway's offer migration did not cause the defect and does not paper over it.",
+  "recordedBy": "claude-fable-5.1"
+}

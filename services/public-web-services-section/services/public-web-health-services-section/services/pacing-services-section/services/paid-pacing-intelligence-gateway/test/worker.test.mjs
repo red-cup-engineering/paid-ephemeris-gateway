@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { createWorkerHandler, WORKER_ROUTES } from "../src/worker.mjs";
-import { HEART_RATE_THRESHOLD_ROUTE, PACING_ANALYSIS_ROUTE } from "../src/route-catalog.mjs";
+import { HEART_RATE_THRESHOLD_ROUTE, PACING_ANALYSIS_ROUTE } from "../src/offers.mjs";
 
 const PAY_TO = "0x42F72C0a340A4A55C082Fe42483e87691D2bff64";
 const NETWORK = "eip155:8453";

@@ -33,6 +33,20 @@ test("serves status unpriced, with no env at all", async () => {
   assert.deepEqual(await status.json(), { status: "ok", service: "paid-pacing-intelligence-gateway" });
 });
 
+test("serves a configured 402index verification hash without requiring payment configuration", async () => {
+  const worker = createWorkerHandler();
+  const response = await worker.fetch(new Request("https://api.pacing.561.group/.well-known/402index-verify.txt"), { INDEX_VERIFICATION_HASH: "test-hash" });
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "text/plain");
+  assert.equal(await response.text(), "test-hash");
+});
+
+test("does not fabricate a 402index verification hash", async () => {
+  const worker = createWorkerHandler();
+  const response = await worker.fetch(new Request("https://api.pacing.561.group/.well-known/402index-verify.txt"), {});
+  assert.equal(response.status, 404);
+});
+
 test("refuses an unknown path with 404", async () => {
   const worker = createWorkerHandler();
   const response = await worker.fetch(new Request("https://pacing.561.group/nope"), {});

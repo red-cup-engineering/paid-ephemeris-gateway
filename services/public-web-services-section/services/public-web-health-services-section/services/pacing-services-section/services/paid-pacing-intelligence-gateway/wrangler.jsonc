@@ -5,6 +5,12 @@
   "compatibility_date": "2026-08-31",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "api.pacing.561.group",
+      "custom_domain": true
+    }
+  ],
   // Every settlement-affecting value is deployment-supplied, never a source
   // constant -- see boundaryFor() in src/worker.mjs. X402_PAY_TO is a
   // `wrangler secret put` value, not a var (see 2026-08-31 x402-payto-decision

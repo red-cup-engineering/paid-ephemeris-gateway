@@ -83,6 +83,45 @@
         "x402_payment_valid": null,
         "domain_verified": 0
       }
+    },
+    {
+      "title": "Astronomy Positions (ephemeris)",
+      "description": "Apparent geocentric ecliptic longitude/latitude/speed for ten bodies at one exact UTC instant, plus lunar phase and illuminated fraction, provenance, and audited error bounds. No signs, no aspects, no astrological interpretation.",
+      "category": "data",
+      "network": "Base",
+      "method": "GET",
+      "url": "https://ephemeris.561.group/v1/astronomy/positions/{date}",
+      "probeUrl": "https://ephemeris.561.group/v1/astronomy/positions/2026-07-21",
+      "price": "$0.04",
+      "priceAtomicUsdc": "40000",
+      "registration": {
+        "request": "POST https://402index.io/api/v1/register {\"url\":\"https://ephemeris.561.group/v1/astronomy/positions/2026-07-21\",\"name\":\"Astronomy Positions (ephemeris)\",\"protocol\":\"x402\",\"description\":\"...\",\"category\":\"data\",\"http_method\":\"GET\",\"price_usd\":0.04,\"payment_asset\":\"USD Coin\",\"payment_network\":\"Base\",\"provider\":\"561 Group\"}",
+        "httpStatus": 201,
+        "registeredAt": "2026-09-08 05:04:01"
+      },
+      "402indexServiceId": "9c846ae8-3eba-4a03-afb5-24cf328fd635",
+      "statusFieldsAtRegistration": {
+        "status": "active",
+        "health_status": "healthy",
+        "x402_payment_valid": null,
+        "domain_verified": 0,
+        "approval_reason": "domain-verified"
+      },
+      "verificationAtRegistration": {
+        "httpStatus": 402,
+        "accepts": [
+          {
+            "scheme": "exact",
+            "network": "eip155:8453",
+            "amount": "40000",
+            "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+            "payTo": "0x32886F6F361C1d570255c2762967A2e41D0E9B1a",
+            "maxTimeoutSeconds": 300
+          }
+        ],
+        "assetKnown": true
+      },
+      "note": "Registered directly to status active because ephemeris.561.group was already a verified domain (see domainClaim above) at registration time -- no pending interval this time."
     }
   ]
 }

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@red-cup-engineering/arnold": "^0.2.0",
+    "@red-cup-engineering/javascript-argv-parsing-services-section": "0.1.0",
     "@red-cup-engineering/wheatstone": "0.3.0"
   },
   "engines": {

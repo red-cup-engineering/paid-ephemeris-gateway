@@ -1,21 +1,11 @@
 #!/usr/bin/env node
-// farstone — Farstone's terminal client. The game owns its REST adapter and composes it with the
-// generic Wheatstone terminal UI; Wheatstone contains no Farstone-specific code or content.
-//
-//   node bin/farstone.mjs [--base <url>] [--name <player name>]
-//
-// defaults: --base https://farstone.561.group (or FARSTONE_BASE)
-//           --name FARSTONE_NAME env, else "wanderer"
-//
-// in-app: /help  /quit
-// keys:   PgUp/PgDn scroll  Ctrl-L to tail  Up/Down history  Ctrl-C quit
-//
-// There is no GMCP/MSDP-equivalent channel on this wire (see farstone-world.mjs's header), so the
-// Ctrl-B / /audit side panel stays empty over this carrier — that is the honest state, not a bug:
-// everything Farstone tells you arrives as prose in the output pane, nothing is synthesized to fill
-// a panel that has no real data behind it.
+// farstone — Farstone's terminal client: the game's REST adapter composed with the generic
+// Wheatstone terminal UI (Wheatstone holds no Farstone-specific code). Usage/defaults/keys are
+// in usage() below. The Ctrl-B/`/audit` panel stays empty over this wire on purpose — there is
+// no GMCP/MSDP-equivalent channel here (see src/world.mjs), so nothing is synthesized to fill it.
 
 import { run } from "@red-cup-engineering/wheatstone/app";
+import { argument } from "@red-cup-engineering/javascript-argv-parsing-services-section/parse-javascript-argv";
 import { farstoneWorld } from "../src/world.mjs";
 
 const argv = process.argv.slice(2);
@@ -38,13 +28,8 @@ function usage() {
 
 if (argv.includes("-h") || argv.includes("--help")) { usage(); process.exit(0); }
 
-function argAfter(flag) {
-  const i = argv.indexOf(flag);
-  return i === -1 ? undefined : argv[i + 1];
-}
-
-const base = argAfter("--base") || process.env.FARSTONE_BASE || "https://farstone.561.group";
-const name = argAfter("--name") || process.env.FARSTONE_NAME || "wanderer";
+const base = argument("--base", argv) || process.env.FARSTONE_BASE || "https://farstone.561.group";
+const name = argument("--name", argv) || process.env.FARSTONE_NAME || "wanderer";
 
 const world = farstoneWorld({ base, name });
 run({ world, target: base.replace(/^https?:\/\//, "") });

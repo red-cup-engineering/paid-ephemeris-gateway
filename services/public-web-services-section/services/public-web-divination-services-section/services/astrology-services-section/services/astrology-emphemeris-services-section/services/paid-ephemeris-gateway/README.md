@@ -13,9 +13,9 @@ is absent.
 
 | Route | Price | Product | Served by |
 |---|---:|---|---|
-| `GET /v1/ephemeris/moment/:date` | USD 0.04 | Audited deterministic positions for ten bodies, motion, lunar phase, major aspects, and provenance. | Both transports. Live today at `https://ephemeris.561.group` (Workers). |
-| `GET /v1/ephemeris/precision-moment/:date` | USD 0.32 | The same instant recomputed from pinned JPL DE440 through OxiEphemeris, with observer location, houses, angles, nodes, lots, sect, dignities, expanded aspects, and cross-engine divergence. | Node entry only — **not** served at `https://ephemeris.561.group` (404 there; that hostname is the Workers deployment). The Node entry has a Cloud Run service (`paid-ephemeris-gateway`, `us-central1`, latest revision `paid-ephemeris-gateway-00005-gsz`, Ready since 2026-08-15) but it is not currently reachable: GCP project `five-six-one-group-dev` has billing permanently disabled (a spent free trial, by standing house decision, never to be re-enabled), and its `*.run.app` URLs answer with Google Frontend `500`/`503` errors rather than the application. No transport is serving Precision Moment live as of 2026-09-08. |
-| `GET /v1/x402-market/observation` | USD 0.10 | Sampled Base-USDC EIP-3009 `AuthorizationUsed` activity over a recent block range, with provider provenance. | Both transports. Live today at `https://ephemeris.561.group`. |
+| `GET /v1/ephemeris/moment/:date` | USD 0.04 | Audited deterministic positions for ten bodies, motion, lunar phase, major aspects, and provenance. | Both transports. Served at `https://ephemeris.561.group` (Workers). |
+| `GET /v1/ephemeris/precision-moment/:date` | USD 0.32 | The same instant recomputed from pinned JPL DE440 through OxiEphemeris, with observer location, houses, angles, nodes, lots, sect, dignities, expanded aspects, and cross-engine divergence. | Node entry only — **not** served at `https://ephemeris.561.group` (that hostname is the Workers deployment, which drops this route whenever `dependencies.computePrecision` is absent). The Node entry's Cloud Run path is unusable because GCP project `five-six-one-group-dev` has billing permanently disabled by standing house decision, never to be re-enabled. Which transport, if any, is reachable for this route is checked with `gcloud`/`wrangler`/`curl` per the `whats-live` skill, never asserted here. |
+| `GET /v1/x402-market/observation` | USD 0.10 | Sampled Base-USDC EIP-3009 `AuthorizationUsed` activity over a recent block range, with provider provenance. | Both transports. Served at `https://ephemeris.561.group`. |
 
 Every response marks astronomical measurements separately from
 tradition-dependent astrological interpretations. Payment is evidence that a
@@ -48,11 +48,11 @@ discovery metadata (`declareDiscoveryExtension` in `route-catalog.mjs` /
 `market-observation-route.mjs`). That metadata rides inside every 402
 challenge regardless of facilitator; Coinbase's own Bazaar catalog only
 ingests it automatically for settlements that clear through the CDP
-facilitator. The gateway currently runs on Base mainnet through
+facilitator. The gateway runs on Base mainnet through
 `facilitator.payai.network` (a free, keyless, Base-mainnet-capable facilitator
-selected 2026-08-31 after CDP credentials proved unreachable — see
+selected after CDP credentials proved unreachable — see
 `cdp-facilitator.mjs` for the still-supported CDP path if
-`CDP_API_KEY_ID`/`CDP_API_KEY_SECRET` ever land in the environment), so it
+`CDP_API_KEY_ID`/`CDP_API_KEY_SECRET` become available), so it
 does not get the automatic CDP-Bazaar listing and needs the explicit
 `/api/v1/register` submission to [402index.io](https://402index.io/) that its
 sibling `base-chain-data-gateway` already carries in its own
@@ -62,11 +62,11 @@ The production hostname `ephemeris.561.group` is the Workers deployment (a
 Cloudflare Custom Domain route in `wrangler.jsonc`, not a CNAME onto Cloud
 Run); it only ever discovers the two routes that transport serves. Precision
 Moment's discovery metadata rides only on the Node entry's own challenges,
-wherever that entry is actually reachable (see the route table above for its
-current, not-live, state).
+wherever that entry is reachable (see the route table above for how that
+transport's reachability is derived).
 
-Live production configuration (`wrangler.jsonc` vars plus the `X402_PAY_TO`
-secret, already set):
+Production configuration (`wrangler.jsonc` vars plus the `X402_PAY_TO`
+secret, set via `wrangler secret put`):
 
 ```text
 X402_NETWORK=eip155:8453

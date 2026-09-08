@@ -34,40 +34,38 @@ an explicit seller payout address, so a misconfigured deploy fails loudly
 
 `src/read-json-body.mjs` is a small local Fetch-`Request` JSON body reader
 (content-type/size/parse-failure refusal, matching `test/http-application.test.mjs`).
-It exists because the pinned `@red-cup-engineering/read-http-request-body-service@0.1.1`
+It exists because the pinned `@red-cup-engineering/read-http-request-body-service`
 publishes only a Node `http.IncomingMessage` reader — no `/web` (or any other
-Fetch-`Request`) export exists on the registry as of 2026-09-08 — so this
+Fetch-`Request`) export exists on the registry — so this
 gateway (Fetch-native end to end) cannot consume it directly. This is a real
 gap in that shared package, not a design choice of this gateway; the local
 file is a debt to retire if/when a Fetch-native export is published there.
 
-## Live: Base-mainnet settlement
+## Base-mainnet settlement
 
 `@red-cup-engineering/jsnode-package-vulnerability-triage-services-section`
-is published at `0.1.0` on `https://registry.561.group`, and this gateway's
-`package.json` pins that exact version; a plain `npm install` resolves it
+is published on `https://registry.561.group`, and this gateway's
+`package.json` pins an exact version; a plain `npm install` resolves it
 (and every other `@red-cup-engineering`/`@lenticule-science` dependency) from
 the house registry with no local/symlinked workaround.
 
-This worker is deployed live at both the `orphan-patch.561.group` custom
-domain and `paid-orphan-patch-triage-gateway.morgan-sennhauser.workers.dev`,
-on Base mainnet (`eip155:8453`), settling through
+This worker deploys to both the `orphan-patch.561.group` custom
+domain and the `paid-orphan-patch-triage-gateway.morgan-sennhauser.workers.dev`
+`workers.dev` host, on Base mainnet (`eip155:8453`), settling through
 `https://facilitator.payai.network` to `X402_PAY_TO` (a `wrangler secret put`
 value; see the `x402.payto-decision` record in
-`x402-services-section/data/logs/2026/09/01/`). Verified live 2026-09-08: on
-both hosts, `GET /v1/status` answers `200` and `POST /v1/orphan-patch/score`
-with a valid `OrphanPatchHarvestInput` body answers `HTTP 402` with a decoded
-`payment-required` payload whose `accepts[0].payTo` is
-`0x32886f6f361c1d570255c2762967a2e41d0e9b1a`, `network` is `eip155:8453`, and
-`amount` is `20000` (USDC, 6 decimals — the declared $0.02 price).
+`x402-services-section/data/logs/2026/09/01/`). Whether either host is
+actually answering, and what a probe of `/v1/status` or
+`/v1/orphan-patch/score` returns, is checked live with `wrangler`/`curl`
+against those hosts, per the `whats-live` skill, never asserted here.
 
 ## Redeploy
 
 1. `npm install` (resolves cleanly against the published pins).
 2. `npm test` (`node --test`).
 3. `wrangler secret put X402_PAY_TO` if the secret is ever missing
-   (`wrangler secret list` shows it today) and, if a CDP-hosted facilitator
-   is wanted instead of the public one, also `CDP_API_KEY_ID` /
+   (`wrangler secret list` shows whether it is set) and, if a CDP-hosted
+   facilitator is wanted instead of the public one, also `CDP_API_KEY_ID` /
    `CDP_API_KEY_SECRET`.
 4. `wrangler deploy` — binds both `orphan-patch.561.group` (Custom Domain,
    already on this account's Cloudflare zone) and the `workers.dev` host

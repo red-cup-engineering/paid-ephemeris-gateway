@@ -46,28 +46,15 @@ export const marketObservationDiscovery = declareDiscoveryExtension({
 export function createMarketObservationHandler(_env = process.env, dependencies = {}) {
   const observe = dependencies.observeSettlement || observeSettlement;
   const now = dependencies.now || (() => new Date().toISOString());
-  return async function marketObservationHandler(request, response, next) {
-    try {
-      const windowBlocks = normalizeWindowRequest(request.query);
-      const settlement = await observe({ readPool: dependencies.readPool, windowBlocks });
-      if (!settlement.ok) { response.status(502).json({ error: `settlement measurement failed: ${settlement.reason}` }); return; }
-      response.json({
-        recordType: "561-group.x402-market-observation", observedAt: now(),
-        chain: { network: "eip155:8453", asset: settlement.asset, rangeObservation: true, provenance: settlement.measured.provenance },
-        measured: settlement.measured, distinctAuthorizersSampled: settlement.measured.distinctAuthorizers,
-        extrapolated: settlement.extrapolated, caveat: settlement.caveat,
-      });
-    } catch (error) {
-      if (error instanceof TypeError || error instanceof RangeError) { response.status(422).json({ error: error.message }); return; }
-      next(error);
-    }
+  return async function marketObservationHandler(context) {
+    const windowBlocks = normalizeWindowRequest(Object.fromEntries(context.url.searchParams));
+    const settlement = await observe({ readPool: dependencies.readPool, windowBlocks });
+    if (!settlement.ok) return Response.json({ error: `settlement measurement failed: ${settlement.reason}` }, { status: 502 });
+    return Response.json({
+      recordType: "561-group.x402-market-observation", observedAt: now(),
+      chain: { network: "eip155:8453", asset: settlement.asset, rangeObservation: true, provenance: settlement.measured.provenance },
+      measured: settlement.measured, distinctAuthorizersSampled: settlement.measured.distinctAuthorizers,
+      extrapolated: settlement.extrapolated, caveat: settlement.caveat,
+    });
   };
-}
-
-export function validateMarketObservationRequest(request, response, next) {
-  try { normalizeWindowRequest(request.query); next(); }
-  catch (error) {
-    if (error instanceof TypeError || error instanceof RangeError) { response.status(422).json({ error: error.message }); return; }
-    next(error);
-  }
 }

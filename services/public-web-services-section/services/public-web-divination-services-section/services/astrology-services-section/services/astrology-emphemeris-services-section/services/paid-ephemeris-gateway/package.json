@@ -9,7 +9,9 @@
   "main": "src/server.mjs",
   "exports": {
     ".": "./src/server.mjs",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./application": "./src/application.mjs",
+    "./worker": "./src/worker.mjs"
   },
   "files": [
     "README.md",
@@ -33,7 +35,7 @@
     "@x402/evm": "2.19.0",
     "@x402/extensions": "2.19.0",
     "@x402/svm": "2.19.0",
-    "express": "5.2.1"
+    "@red-cup-engineering/http-server-core-service": "0.1.1"
   },
   "keywords": [
     "x402",

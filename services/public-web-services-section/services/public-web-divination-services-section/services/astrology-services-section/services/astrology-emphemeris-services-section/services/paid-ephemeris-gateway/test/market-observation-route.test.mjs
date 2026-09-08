@@ -1,3 +1,4 @@
+import { start } from "@red-cup-engineering/http-server-core-service/server";
 import assert from "node:assert/strict";
 import test from "node:test";
 
@@ -44,11 +45,10 @@ test("seller exposes the market-observation product at the declared price, along
     X402_PAY_TO: PAY_TO,
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
-  const server = app.listen(0, "127.0.0.1");
-  await new Promise((accept) => server.once("listening", accept));
-  await new Promise((accept) => setTimeout(accept, 50));
+  const server = await start(app, { port: 0, host: "127.0.0.1" });
+  await new Promise((accept) => setTimeout(accept, 150));
   try {
-    const origin = `http://127.0.0.1:${server.address().port}`;
+    const origin = `http://127.0.0.1:${server.port}`;
 
     const challengeResponse = await fetch(`${origin}${MARKET_OBSERVATION_ROUTE}`, {
       headers: { "x-forwarded-proto": "https" },
@@ -75,7 +75,7 @@ test("seller exposes the market-observation product at the declared price, along
     const nonsenseWindow = await fetch(`${origin}${MARKET_OBSERVATION_ROUTE}?windowBlocks=not-a-number`);
     assert.equal(nonsenseWindow.status, 422);
   } finally {
-    await new Promise((accept) => server.close(accept));
+    await server.close();
   }
 });
 
@@ -91,13 +91,9 @@ test("createMarketObservationHandler(): serves a live observation from the injec
     now: () => "2026-08-28T00:00:00.000Z",
   });
 
-  let statusCode = 200;
-  let body;
-  const response = {
-    status(code) { statusCode = code; return this; },
-    json(payload) { body = payload; },
-  };
-  await handler({ query: {} }, response, (error) => { throw error; });
+  const response = await handler({ url: new URL("https://example.test/") });
+  const statusCode = response.status;
+  const body = await response.json();
 
   assert.equal(statusCode, 200);
   assert.equal(body.recordType, "561-group.x402-market-observation");
@@ -113,13 +109,9 @@ test("createMarketObservationHandler(): a throttled RPC is a 502, never a silent
     observeSettlement: async () => ({ ok: false, reason: "provider throttled (429)" }),
   });
 
-  let statusCode = 200;
-  let body;
-  const response = {
-    status(code) { statusCode = code; return this; },
-    json(payload) { body = payload; },
-  };
-  await handler({ query: {} }, response, (error) => { throw error; });
+  const response = await handler({ url: new URL("https://example.test/") });
+  const statusCode = response.status;
+  const body = await response.json();
 
   assert.equal(statusCode, 502);
   assert.match(body.error, /429/u);
@@ -137,17 +129,15 @@ test("serves the directory verification hash unpriced", async () => {
     INDEX_VERIFICATION_HASH: "deadbeefcafe",
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
-  const server = app.listen(0, "127.0.0.1");
-  await new Promise((accept) => server.once("listening", accept));
-  await new Promise((accept) => setTimeout(accept, 50));
+  const server = await start(app, { port: 0, host: "127.0.0.1" });
+  await new Promise((accept) => setTimeout(accept, 150));
   try {
-    const origin = `http://127.0.0.1:${server.address().port}`;
+    const origin = `http://127.0.0.1:${server.port}`;
     const response = await fetch(`${origin}/.well-known/402index-verify.txt`);
     assert.equal(response.status, 200, "must not sit behind the payment middleware");
     assert.match(response.headers.get("content-type") ?? "", /text\/plain/u);
     assert.equal((await response.text()).trim(), "deadbeefcafe");
   } finally {
-    server.close();
-    await new Promise((accept) => server.once("close", accept));
+    await server.close();
   }
 });

@@ -1,3 +1,4 @@
+import { start } from "@red-cup-engineering/http-server-core-service/server";
 import assert from "node:assert/strict";
 import test from "node:test";
 
@@ -34,11 +35,10 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
     X402_PAY_TO: PAY_TO,
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
-  const server = app.listen(0, "127.0.0.1");
-  await new Promise((accept) => server.once("listening", accept));
-  await new Promise((accept) => setTimeout(accept, 50));
+  const server = await start(app, { port: 0, host: "127.0.0.1" });
+  await new Promise((accept) => setTimeout(accept, 150));
   try {
-    const origin = `http://127.0.0.1:${server.address().port}`;
+    const origin = `http://127.0.0.1:${server.port}`;
     const essentials = await fetch(`${origin}${MOMENT_ESSENTIALS_ROUTE.replace(":date", "2026-07-21T00:00:00Z")}`, {
       headers: { "x-forwarded-proto": "https" },
     });
@@ -72,6 +72,6 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
     const health = await fetch(`${origin}${STATUS_ROUTE}`);
     assert.equal(health.status, 200);
   } finally {
-    await new Promise((accept) => server.close(accept));
+    await server.close();
   }
 });

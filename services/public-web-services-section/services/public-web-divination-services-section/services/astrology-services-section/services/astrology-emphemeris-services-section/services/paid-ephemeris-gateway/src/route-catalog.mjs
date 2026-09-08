@@ -145,6 +145,6 @@ export const precisionMomentListingFramings = Object.freeze({
     title: "DE440 Celestial Position Fix",
     description:
       "Arcsecond-grade JPL DE440 celestial body positions for one exact UTC instant and Earth-surface location: raw apparent ecliptic/equatorial coordinates, local horizon angles, and solar/lunar position with cross-engine divergence evidence. Built for marine celestial navigation, solar-angle and camera-exposure planning, and observation scheduling; no astrological interpretation implied.",
-    tags: ["ephemeris", "jpl-de440", "celestial-navigation", "positional-astronomy", "solar-angle", "observation-planning", "provenance"],
+    tags: ["ephemeris", "jpl-de440", "celestial-navigation", "positional-astronomy", "provenance"],
   },
 });

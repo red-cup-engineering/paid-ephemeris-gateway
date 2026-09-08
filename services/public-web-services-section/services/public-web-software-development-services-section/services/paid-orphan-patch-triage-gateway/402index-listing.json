@@ -1,0 +1,41 @@
+{
+  "note": "First registration to https://402index.io/ via POST /api/v1/register (open, unauthenticated) on 2026-09-08, at the orphan-patch.561.group custom domain. The POST returned HTTP 201 with status \"pending\" and health_status \"healthy\" inline in the registration response; that response's own verification block independently corroborated the real Base-mainnet x402 challenge (httpStatus 402, network eip155:8453, payTo 0x32886F6F361C1d570255c2762967A2e41D0E9B1a, assetKnown true). A GET on the new id minutes later returned HTTP 404 {\"error\":\"Service not found\"} -- 402index's id-lookup endpoint does not expose a self-registered listing while it is \"pending\" review (the same behavior observed re-registering paid-ephemeris-gateway and base-chain-data-gateway tonight). The verbatim status fields below are the ones the 201 response carried, not a later GET.",
+  "status": "live (Cloudflare Workers custom domain orphan-patch.561.group; Base mainnet settlement via facilitator.payai.network; payout to founder-controlled 0x32886F6F361C1d570255c2762967A2e41D0E9B1a)",
+  "provider": "561 Group",
+  "domainClaim": {
+    "domain": "orphan-patch.561.group",
+    "checkedWellKnown": {
+      "url": "https://orphan-patch.561.group/.well-known/402index-verify.txt",
+      "checkedAt": "2026-09-08T04:26:37Z",
+      "httpStatus": 404,
+      "body": "Not Found"
+    },
+    "outcome": "No verify file has ever been served at this domain. A POST /api/v1/claim would return a fresh, unpublished verification hash whose only path to success is placing a new file at that well-known URL -- a Worker/DNS change. Per standing instruction (attempt the claim/verify flow for this domain only if it needs no Worker change), the claim step was not initiated here. Founder-hands item: run POST /api/v1/claim {\"domain\":\"orphan-patch.561.group\"}, publish the returned hash at /.well-known/402index-verify.txt (a wrangler deploy or a static route addition), then POST /api/v1/claim/verify with the same domain."
+  },
+  "listings": [
+    {
+      "title": "Orphan-Patch Triage Score",
+      "description": "x402 seller wrapping a deterministic orphan-patch scorer: send advisories, maintenance, and dependents data, pay the x402 exact-EVM challenge, receive a ranked candidate list of packages with disclosed unpatched advisories, silent maintainers, and many dependents.",
+      "category": "security",
+      "network": "Base",
+      "method": "POST",
+      "url": "https://orphan-patch.561.group/v1/orphan-patch/score",
+      "probeBody": "{\"advisories\":[{\"id\":\"GHSA-2026-0001\",\"package\":\"left-pad-example\",\"ecosystem\":\"npm\",\"severity\":\"high\",\"published\":\"2026-01-15T00:00:00Z\",\"fixedVersion\":null}],\"maintenance\":[{\"package\":\"left-pad-example\",\"ecosystem\":\"npm\",\"lastReleaseDaysAgo\":900,\"openIssueResponseDaysMedian\":null}],\"dependents\":[{\"package\":\"left-pad-example\",\"ecosystem\":\"npm\",\"dependentCount\":4200}]}",
+      "price": "$0.02",
+      "priceAtomicUsdc": "20000",
+      "registration": {
+        "request": "POST https://402index.io/api/v1/register {\"url\":\"https://orphan-patch.561.group/v1/orphan-patch/score\",\"name\":\"Orphan-Patch Triage Score\",\"protocol\":\"x402\",...}",
+        "httpStatus": 201,
+        "registeredAt": "2026-09-08 04:25:43"
+      },
+      "402indexServiceId": "da57b5f7-548f-466e-b64d-751149919532",
+      "statusFieldsAtRegistration": {
+        "status": "pending",
+        "health_status": "healthy",
+        "x402_payment_valid": null,
+        "domain_verified": 0
+      },
+      "subsequentGetServiceById": "GET /api/v1/services/da57b5f7-548f-466e-b64d-751149919532 -> HTTP 404 {\"error\":\"Service not found\"} (checked 2026-09-08, ~5 min after registration; see note)"
+    }
+  ]
+}

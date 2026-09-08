@@ -1,9 +1,33 @@
 {
-  "note": "Submitted to https://402index.io/ via POST /api/v1/register (open, unauthenticated) on 2026-09-05 by the executive session. Both listings returned HTTP 201, status \"pending\" review; 402index's own live probe independently corroborated the real Base-mainnet x402 challenge for each (httpStatus 402, network eip155:8453, payTo 0x32886F6F361C1d570255c2762967A2e41D0E9B1a, assetKnown true). Discovery path is 402index (and future directories); the Coinbase Bazaar auto-catalog does not apply because production settles via facilitator.payai.network, not CDP.",
-  "status": "live (Cloudflare Workers at paid-ephemeris-gateway.morgan-sennhauser.workers.dev; Base mainnet settlement via facilitator.payai.network; payout to founder-controlled 0x32886F6F361C1d570255c2762967A2e41D0E9B1a)",
+  "note": "Every id from the 2026-09-05 registration (94d596b1-c6e8-42ef-918c-2b76617453d2, 2dfed01e-bd0f-4320-8121-e8cb8b86ce0f) was found returning {\"error\":\"Service not found\"} from GET https://402index.io/api/v1/services/<id> on 2026-09-07/08 -- the listings were gone from that lookup. Re-registered fresh on 2026-09-08 via POST https://402index.io/api/v1/register (open, unauthenticated), this time at the ephemeris.561.group custom domain (not workers.dev, which is dead weight now that the custom domain is live). Both POSTs returned HTTP 201 with status \"pending\" and health_status \"healthy\" inline in the registration response. A GET on each new id minutes later returned the same {\"error\":\"Service not found\"} the old ids gave: 402index's id-lookup and list endpoints do not expose a self-registered listing while it is \"pending\" review. This explains the disappearance of the 2026-09-05 ids without implicating any change on our side -- the verbatim status fields below are the ones the 201 response carried, not a later GET (GET has nothing to give while pending).",
+  "status": "live (Cloudflare Workers custom domain ephemeris.561.group; Base mainnet settlement via facilitator.payai.network; payout to founder-controlled 0x32886F6F361C1d570255c2762967A2e41D0E9B1a)",
   "provider": "561 Group",
-  "customDomainPending": "ephemeris.561.group still CNAME'd at the dead Cloud Run mapping (ghs.googlehosted.com); DNS fix is a founder-hands or zone:write-token step, not required for the workers.dev URL to earn",
-  "domainVerificationAvailable": "402index POST /api/v1/claim + /claim/verify would flip pending->approved and enable self-service editing; deferred",
+  "domainClaim": {
+    "domain": "ephemeris.561.group",
+    "servedVerifyFile": {
+      "url": "https://ephemeris.561.group/.well-known/402index-verify.txt",
+      "checkedAt": "2026-09-08T04:26:06Z",
+      "httpStatus": 200,
+      "body": "8f8a2ea306af8bf4937fbeaf674c1cabcf974d319934f31d6c4e7c515fdc873a"
+    },
+    "claimRequest": {
+      "request": "POST https://402index.io/api/v1/claim {\"domain\":\"ephemeris.561.group\"}",
+      "httpStatus": 200,
+      "response": {
+        "domain": "ephemeris.561.group",
+        "verification_token": "1ba03b555f84091f5fcaa70a1706bb68ab158d0cc34ef57bec1c2a7fb88204d9",
+        "verification_hash": "cbc03cc301d7d4f514c12264825983d122f15dc7d4c1eeeee2353214b29f1b10",
+        "verification_url": "https://ephemeris.561.group/.well-known/402index-verify.txt",
+        "instructions": "Place a text file at the URL above containing only this hash: cbc03cc301d7d4f514c12264825983d122f15dc7d4c1eeeee2353214b29f1b10"
+      }
+    },
+    "verifyAttempt": {
+      "request": "POST https://402index.io/api/v1/claim/verify {\"domain\":\"ephemeris.561.group\"}",
+      "httpStatus": 422,
+      "response": { "error": "Hash mismatch. The verification file must contain the SHA-256 hash of your verification token." }
+    },
+    "outcome": "The API demanded verification_hash cbc03cc301d7d4f514c12264825983d122f15dc7d4c1eeeee2353214b29f1b10, which does not match the hash already served by the Worker (8f8a2ea306af8bf4937fbeaf674c1cabcf974d319934f31d6c4e7c515fdc873a, from an earlier, unrecorded claim attempt). Per standing instruction the Worker was not changed to match the newly demanded hash. domain_verified remains 0 on every listing below. Founder-hands item: publish exactly cbc03cc301d7d4f514c12264825983d122f15dc7d4c1eeeee2353214b29f1b10 as the sole content of /.well-known/402index-verify.txt on ephemeris.561.group (a wrangler/Worker change), then POST /api/v1/claim/verify {\"domain\":\"ephemeris.561.group\"} again -- claim tokens expire after 72 hours per the API's own documented behavior."
+  },
   "listings": [
     {
       "title": "Exact-Moment Ephemeris (astrology & astronomy)",
@@ -11,11 +35,23 @@
       "category": "data",
       "network": "Base",
       "method": "GET",
-      "url": "https://paid-ephemeris-gateway.morgan-sennhauser.workers.dev/v1/ephemeris/moment/{date}",
-      "probeUrl": "https://paid-ephemeris-gateway.morgan-sennhauser.workers.dev/v1/ephemeris/moment/2026-07-21",
+      "url": "https://ephemeris.561.group/v1/ephemeris/moment/{date}",
+      "probeUrl": "https://ephemeris.561.group/v1/ephemeris/moment/2026-07-21",
       "price": "$0.04",
       "priceAtomicUsdc": "40000",
-      "402indexServiceId": "94d596b1-c6e8-42ef-918c-2b76617453d2"
+      "registration": {
+        "request": "POST https://402index.io/api/v1/register {\"url\":\"https://ephemeris.561.group/v1/ephemeris/moment/2026-07-21\",\"name\":\"Exact-Moment Ephemeris (astrology & astronomy)\",\"protocol\":\"x402\",...}",
+        "httpStatus": 201,
+        "registeredAt": "2026-09-08 04:25:09"
+      },
+      "402indexServiceId": "f99aca66-3317-4f91-b0b3-e910ae62b7e3",
+      "statusFieldsAtRegistration": {
+        "status": "pending",
+        "health_status": "healthy",
+        "x402_payment_valid": null,
+        "domain_verified": 0
+      },
+      "subsequentGetServiceById": "GET /api/v1/services/f99aca66-3317-4f91-b0b3-e910ae62b7e3 -> HTTP 404 {\"error\":\"Service not found\"} (checked 2026-09-08, ~5 min after registration; see note)"
     },
     {
       "title": "x402 Market Observation (Base USDC settlements)",
@@ -23,10 +59,22 @@
       "category": "data",
       "network": "Base",
       "method": "GET",
-      "url": "https://paid-ephemeris-gateway.morgan-sennhauser.workers.dev/v1/x402-market/observation",
+      "url": "https://ephemeris.561.group/v1/x402-market/observation",
       "price": "$0.10",
       "priceAtomicUsdc": "100000",
-      "402indexServiceId": "2dfed01e-bd0f-4320-8121-e8cb8b86ce0f"
+      "registration": {
+        "request": "POST https://402index.io/api/v1/register {\"url\":\"https://ephemeris.561.group/v1/x402-market/observation\",\"name\":\"x402 Market Observation (Base USDC settlements)\",\"protocol\":\"x402\",...}",
+        "httpStatus": 201,
+        "registeredAt": "2026-09-08 04:25:20"
+      },
+      "402indexServiceId": "337e8764-785b-4da6-87a7-ac7b18a464e6",
+      "statusFieldsAtRegistration": {
+        "status": "pending",
+        "health_status": "healthy",
+        "x402_payment_valid": null,
+        "domain_verified": 0
+      },
+      "subsequentGetServiceById": "GET /api/v1/services/337e8764-785b-4da6-87a7-ac7b18a464e6 -> HTTP 404 {\"error\":\"Service not found\"} (checked 2026-09-08, ~5 min after registration; see note)"
     }
   ]
 }

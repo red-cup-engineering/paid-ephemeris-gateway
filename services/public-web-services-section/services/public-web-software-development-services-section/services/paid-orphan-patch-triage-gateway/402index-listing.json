@@ -1,16 +1,19 @@
 {
-  "note": "First registration to https://402index.io/ via POST /api/v1/register (open, unauthenticated) on 2026-09-08, at the orphan-patch.561.group custom domain. The POST returned HTTP 201 with status \"pending\" and health_status \"healthy\" inline in the registration response; that response's own verification block independently corroborated the real Base-mainnet x402 challenge (httpStatus 402, network eip155:8453, payTo 0x32886F6F361C1d570255c2762967A2e41D0E9B1a, assetKnown true). A GET on the new id minutes later returned HTTP 404 {\"error\":\"Service not found\"} -- 402index's id-lookup endpoint does not expose a self-registered listing while it is \"pending\" review (the same behavior observed re-registering paid-ephemeris-gateway and base-chain-data-gateway tonight). The verbatim status fields below are the ones the 201 response carried, not a later GET.",
+  "note": "2026-09-08: the gateway's shared application (src/application.mjs, used by both worker.mjs and server.mjs) gained a GET /.well-known/402index-verify.txt route (serves env.INDEX_VERIFICATION_HASH as text/plain, 404 when unset) and was redeployed. POST /api/v1/claim {\"domain\":\"orphan-patch.561.group\"} returned verification_hash da8c5c97cf9ecb434f53a0596c1aef4fd90539f74678e2688696a02f3664b73b, set as the INDEX_VERIFICATION_HASH secret via `wrangler secret put`. GET https://orphan-patch.561.group/.well-known/402index-verify.txt then served that hash (HTTP 200, text/plain). POST /api/v1/claim/verify {\"domain\":\"orphan-patch.561.group\"} returned {\"status\":\"verified\",\"services_count\":1,\"retroactively_approved\":1}. The service id below now resolves with \"status\":\"active\" and \"approval_reason\":\"domain-verified\" (its top-level verified/domain_verified integer fields still read 0 despite the domain claim being verified -- the same 402index API quirk observed on base-chain-data-gateway).",
   "status": "live (Cloudflare Workers custom domain orphan-patch.561.group; Base mainnet settlement via facilitator.payai.network; payout to founder-controlled 0x32886F6F361C1d570255c2762967A2e41D0E9B1a)",
   "provider": "561 Group",
   "domainClaim": {
     "domain": "orphan-patch.561.group",
+    "verifiedAt": "2026-09-08T05:00:17Z",
+    "verificationHash": "da8c5c97cf9ecb434f53a0596c1aef4fd90539f74678e2688696a02f3664b73b",
     "checkedWellKnown": {
       "url": "https://orphan-patch.561.group/.well-known/402index-verify.txt",
-      "checkedAt": "2026-09-08T04:26:37Z",
-      "httpStatus": 404,
-      "body": "Not Found"
+      "checkedAt": "2026-09-08T05:00:13Z",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "body": "da8c5c97cf9ecb434f53a0596c1aef4fd90539f74678e2688696a02f3664b73b"
     },
-    "outcome": "No verify file has ever been served at this domain. A POST /api/v1/claim would return a fresh, unpublished verification hash whose only path to success is placing a new file at that well-known URL -- a Worker/DNS change. Per standing instruction (attempt the claim/verify flow for this domain only if it needs no Worker change), the claim step was not initiated here. Founder-hands item: run POST /api/v1/claim {\"domain\":\"orphan-patch.561.group\"}, publish the returned hash at /.well-known/402index-verify.txt (a wrangler deploy or a static route addition), then POST /api/v1/claim/verify with the same domain."
+    "outcome": "POST /api/v1/claim/verify returned status \"verified\", services_count 1, retroactively_approved 1."
   },
   "listings": [
     {
@@ -30,12 +33,13 @@
       },
       "402indexServiceId": "da57b5f7-548f-466e-b64d-751149919532",
       "statusFieldsAtRegistration": {
-        "status": "pending",
+        "status": "active",
         "health_status": "healthy",
         "x402_payment_valid": null,
-        "domain_verified": 0
+        "domain_verified": 0,
+        "approval_reason": "domain-verified"
       },
-      "subsequentGetServiceById": "GET /api/v1/services/da57b5f7-548f-466e-b64d-751149919532 -> HTTP 404 {\"error\":\"Service not found\"} (checked 2026-09-08, ~5 min after registration; see note)"
+      "subsequentGetServiceById": "GET /api/v1/services/da57b5f7-548f-466e-b64d-751149919532 -> HTTP 200, \"status\":\"active\", \"approval_reason\":\"domain-verified\" (checked 2026-09-08T05:00Z, after the claim/verify call retroactively approved this domain's service)"
     }
   ]
 }

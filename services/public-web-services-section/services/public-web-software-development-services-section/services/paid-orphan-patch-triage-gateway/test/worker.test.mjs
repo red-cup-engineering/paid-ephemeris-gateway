@@ -60,6 +60,23 @@ test("serves status unpriced, with no env at all", async () => {
   assert.deepEqual(await status.json(), { status: "ok", service: "paid-orphan-patch-triage-gateway" });
 });
 
+test("serves the 402index verification hash as text/plain when configured", async () => {
+  const worker = createWorkerHandler();
+  const response = await worker.fetch(
+    new Request("https://orphan-patch.561.group/.well-known/402index-verify.txt"),
+    { INDEX_VERIFICATION_HASH: "abc123" },
+  );
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "text/plain");
+  assert.equal(await response.text(), "abc123");
+});
+
+test("returns 404 for the 402index verification route when unset", async () => {
+  const worker = createWorkerHandler();
+  const response = await worker.fetch(new Request("https://orphan-patch.561.group/.well-known/402index-verify.txt"), {});
+  assert.equal(response.status, 404);
+});
+
 test("refuses an unknown path with 404", async () => {
   const worker = createWorkerHandler();
   const response = await worker.fetch(new Request("https://orphan-patch.561.group/nope"), {});
@@ -71,6 +88,7 @@ test("reports clean misconfiguration, not a crash, when X402_PAY_TO is absent", 
   const response = await worker.fetch(
     new Request("https://orphan-patch.561.group" + ORPHAN_PATCH_SCORE_ROUTE, {
       method: "POST",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify(HARVEST_INPUT),
     }),
     {},
@@ -96,6 +114,7 @@ test("Orphan-Patch Score issues the 402 challenge unpaid, then serves the ranked
   const unpaid = await worker.fetch(
     new Request("https://orphan-patch.561.group" + ORPHAN_PATCH_SCORE_ROUTE, {
       method: "POST",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify(HARVEST_INPUT),
     }),
     env,
@@ -107,7 +126,7 @@ test("Orphan-Patch Score issues the 402 challenge unpaid, then serves the ranked
   const paid = await worker.fetch(
     new Request("https://orphan-patch.561.group" + ORPHAN_PATCH_SCORE_ROUTE, {
       method: "POST",
-      headers: { "payment-signature": paymentSignatureFor(challenge) },
+      headers: { "content-type": "application/json", "payment-signature": paymentSignatureFor(challenge) },
       body: JSON.stringify(HARVEST_INPUT),
     }),
     env,
@@ -126,6 +145,7 @@ test("refuses a malformed harvest input (missing arrays) before it reaches the s
   const unpaid = await worker.fetch(
     new Request("https://orphan-patch.561.group" + ORPHAN_PATCH_SCORE_ROUTE, {
       method: "POST",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify({ advisories: [] }),
     }),
     env,
@@ -135,7 +155,7 @@ test("refuses a malformed harvest input (missing arrays) before it reaches the s
   const paid = await worker.fetch(
     new Request("https://orphan-patch.561.group" + ORPHAN_PATCH_SCORE_ROUTE, {
       method: "POST",
-      headers: { "payment-signature": paymentSignatureFor(challenge) },
+      headers: { "content-type": "application/json", "payment-signature": paymentSignatureFor(challenge) },
       body: JSON.stringify({ advisories: [] }),
     }),
     env,

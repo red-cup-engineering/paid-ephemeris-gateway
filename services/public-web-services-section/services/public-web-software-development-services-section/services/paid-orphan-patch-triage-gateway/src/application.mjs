@@ -51,11 +51,17 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
     const status = error instanceof BodyReadError ? error.status : error instanceof TypeError || error instanceof RangeError || error instanceof SyntaxError ? 422 : 500;
     return Response.json({ error: status === 500 ? "internal error computing gateway response" : error.message }, { status });
   }
+  function indexVerification() {
+    const hash = env.INDEX_VERIFICATION_HASH;
+    if (typeof hash !== "string" || hash === "") return new Response("not found", { status: 404, headers: { "content-type": "text/plain" } });
+    return new Response(hash, { status: 200, headers: { "content-type": "text/plain" } });
+  }
   return createFetchHandler({
     cacheControl: { noStore: true },
     onError: refusal,
     resources: [
       ...[STATUS_ROUTE, "/healthz"].map((match) => ({ match, methods: ["GET"], handler: () => Response.json({ status: "ok", service: "paid-orphan-patch-triage-gateway" }) })),
+      { match: "/.well-known/402index-verify.txt", methods: ["GET"], handler: indexVerification },
       { match: ORPHAN_PATCH_SCORE_ROUTE, methods: ["POST"], handler: (ctx) => paid(ctx, null, dependencies.score || scoreSetOfOrphanPatchCandidates) },
     ],
   });

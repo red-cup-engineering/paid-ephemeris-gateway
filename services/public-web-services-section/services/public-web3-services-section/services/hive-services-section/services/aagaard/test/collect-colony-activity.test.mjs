@@ -1,8 +1,7 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import test from "node:test";
 
-import { canonicalJson } from "@red-cup-engineering/canonical-json-service";
+import { deriveCborNi } from "@red-cup-engineering/derive-cbor-ni-service";
 import { recordSettlementRecord } from "@red-cup-engineering/witness-journal-document-service";
 import { startWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-document-service/test-provider";
 
@@ -16,5 +15,5 @@ test("projects settled fleet ticks through the declared WitnessJournal provider"
   const pulse = await collectAagaardColonyActivity({ agentUrl: journal.agentCardUrl, recordedAt: "2026-09-05T18:05:00.000Z", window: { fromExclusive: "2026-09-05T17:00:00.000Z", toInclusive: "2026-09-05T19:00:00.000Z" } });
   assert.equal(pulse.events.length, 2);
   assert.equal(pulse.stocks.find((stock) => stock.id === "fleet-liquid-hive").amount, "2.5");
-  assert.equal(pulse.stocks[0].evidence[0], `urn:sha256:${createHash("sha256").update(canonicalJson(tick)).digest("hex")}`);
+  assert.equal(pulse.stocks[0].evidence[0], deriveCborNi({ value: tick }).uri);
 });

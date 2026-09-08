@@ -1,16 +1,23 @@
 # paid-ephemeris-gateway
 
-An x402-gated seller for two calculations of the same exact moment. The
+An x402-gated seller for calculations of the same exact moment. The
 Ephemeris Tracking Team owns the products; this gateway owns HTTP admission,
 Coinbase Bazaar discovery, payment enforcement, and the settled boundary
-witness.
+witness. The gateway ships two transports from one shared application
+(`src/application.mjs`): a Fetch/Cloudflare-Workers entry (`src/worker.mjs`)
+and an Express/Node entry (`src/server.mjs`, `src/deployment.mjs`). They do
+not serve the same route set — Precision Moment needs a subprocess and a
+local DE440 binary, which a Workers isolate cannot provide, so
+`application.mjs` drops that route whenever `dependencies.computePrecision`
+is absent.
 
-| Route | Price | Product |
-|---|---:|---|
-| `GET /v1/ephemeris/moment/:date` | USD 0.04 | Audited deterministic positions for ten bodies, motion, lunar phase, major aspects, and provenance. |
-| `GET /v1/ephemeris/precision-moment/:date` | USD 0.32 | The same instant recomputed from pinned JPL DE440 through OxiEphemeris, with observer location, houses, angles, nodes, lots, sect, dignities, expanded aspects, and cross-engine divergence. |
+| Route | Price | Product | Served by |
+|---|---:|---|---|
+| `GET /v1/ephemeris/moment/:date` | USD 0.04 | Audited deterministic positions for ten bodies, motion, lunar phase, major aspects, and provenance. | Both transports. Live today at `https://ephemeris.561.group` (Workers). |
+| `GET /v1/ephemeris/precision-moment/:date` | USD 0.32 | The same instant recomputed from pinned JPL DE440 through OxiEphemeris, with observer location, houses, angles, nodes, lots, sect, dignities, expanded aspects, and cross-engine divergence. | Node entry only — **not** served at `https://ephemeris.561.group` (404 there; that hostname is the Workers deployment). The Node entry has a Cloud Run service (`paid-ephemeris-gateway`, `us-central1`, latest revision `paid-ephemeris-gateway-00005-gsz`, Ready since 2026-08-15) but it is not currently reachable: GCP project `five-six-one-group-dev` has billing permanently disabled (a spent free trial, by standing house decision, never to be re-enabled), and its `*.run.app` URLs answer with Google Frontend `500`/`503` errors rather than the application. No transport is serving Precision Moment live as of 2026-09-08. |
+| `GET /v1/x402-market/observation` | USD 0.10 | Sampled Base-USDC EIP-3009 `AuthorizationUsed` activity over a recent block range, with provider provenance. | Both transports. Live today at `https://ephemeris.561.group`. |
 
-Both responses mark astronomical measurements separately from
+Every response marks astronomical measurements separately from
 tradition-dependent astrological interpretations. Payment is evidence that a
 priced boundary crossing settled; it is never evidence that an interpretation
 is scientific fact.
@@ -36,18 +43,27 @@ or more.
 
 ## Discovery (Bazaar metadata, 402index.io)
 
-Both routes declare strong Bazaar discovery metadata (`declareDiscoveryExtension`
-in `route-catalog.mjs`). That metadata rides inside every 402 challenge
-regardless of facilitator; Coinbase's own Bazaar catalog only ingests it
-automatically for settlements that clear through the CDP facilitator. The
-gateway currently runs on Base mainnet through `facilitator.payai.network`
-(a free, keyless, Base-mainnet-capable facilitator selected 2026-08-31 after
-CDP credentials proved unreachable — see `cdp-facilitator.mjs` for the
-still-supported CDP path if `CDP_API_KEY_ID`/`CDP_API_KEY_SECRET` ever land in
-the environment), so it does not get the automatic CDP-Bazaar listing and
-needs the explicit `/api/v1/register` submission to
-[402index.io](https://402index.io/) that its sibling `base-chain-data-gateway`
-already carries in its own `402index-listing.json`.
+Every route this gateway declares — on either transport — carries Bazaar
+discovery metadata (`declareDiscoveryExtension` in `route-catalog.mjs` /
+`market-observation-route.mjs`). That metadata rides inside every 402
+challenge regardless of facilitator; Coinbase's own Bazaar catalog only
+ingests it automatically for settlements that clear through the CDP
+facilitator. The gateway currently runs on Base mainnet through
+`facilitator.payai.network` (a free, keyless, Base-mainnet-capable facilitator
+selected 2026-08-31 after CDP credentials proved unreachable — see
+`cdp-facilitator.mjs` for the still-supported CDP path if
+`CDP_API_KEY_ID`/`CDP_API_KEY_SECRET` ever land in the environment), so it
+does not get the automatic CDP-Bazaar listing and needs the explicit
+`/api/v1/register` submission to [402index.io](https://402index.io/) that its
+sibling `base-chain-data-gateway` already carries in its own
+`402index-listing.json`.
+
+The production hostname `ephemeris.561.group` is the Workers deployment (a
+Cloudflare Custom Domain route in `wrangler.jsonc`, not a CNAME onto Cloud
+Run); it only ever discovers the two routes that transport serves. Precision
+Moment's discovery metadata rides only on the Node entry's own challenges,
+wherever that entry is actually reachable (see the route table above for its
+current, not-live, state).
 
 Live production configuration (`wrangler.jsonc` vars plus the `X402_PAY_TO`
 secret, already set):
@@ -60,7 +76,9 @@ X402_PAY_TO=<set via `wrangler secret put`, never a source constant>
 
 Do not put credentials or the production payout identity in source. The
 source law names the provider actor; deployment configuration binds that actor
-to the production account. The CDP path (`X402_FACILITATOR_PROVIDER=cdp`,
+to the production account — `X402_PAY_TO` carries the single ruled house
+payout identity, supplied only through `wrangler secret put`. The CDP path
+(`X402_FACILITATOR_PROVIDER=cdp`,
 `X402_FACILITATOR=https://api.cdp.coinbase.com/platform/v2/x402`,
 `CDP_API_KEY_ID`, `CDP_API_KEY_SECRET`) remains fully wired in
 `cdp-facilitator.mjs` and is worth re-selecting if CDP credentials become

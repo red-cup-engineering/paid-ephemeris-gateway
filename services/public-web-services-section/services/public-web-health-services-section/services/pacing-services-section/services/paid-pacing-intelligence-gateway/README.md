@@ -51,24 +51,34 @@ middleware runs.
 
 Both routes declare Bazaar discovery metadata (`bodyType: "json"`, since
 both are POST-with-body products, unlike the ephemeris gateway's GET/path
-products). Coinbase catalogs them after the first successful settlement
-through the CDP facilitator; there is no separate listing submission.
-Production configuration uses:
+products). That metadata rides inside every 402 challenge regardless of
+facilitator.
+
+Production settles through `facilitator.payai.network`, not the CDP
+facilitator (see `wrangler.jsonc`'s `X402_FACILITATOR` var — the same
+non-CDP facilitator `paid-ephemeris-gateway` runs on). Coinbase's own Bazaar
+catalog only ingests a listing automatically for settlements that clear
+through the CDP facilitator, so that automatic-catalog claim does not hold
+for this gateway's production configuration; discovery here is through
+[402index.io](https://402index.io/) and the challenge's own Bazaar extension,
+the same as `paid-ephemeris-gateway`. Production configuration is:
 
 ```text
 X402_NETWORK=eip155:8453
-X402_FACILITATOR_PROVIDER=cdp
-X402_FACILITATOR=https://api.cdp.coinbase.com/platform/v2/x402
-CDP_API_KEY_ID=...
-CDP_API_KEY_SECRET=...
-X402_PAY_TO=0x42F72C0a340A4A55C082Fe42483e87691D2bff64
+X402_FACILITATOR=https://facilitator.payai.network
+X402_PAY_TO=<set via `wrangler secret put`, never a source constant>
 ```
 
-`X402_PAY_TO` is the same house payout address the ephemeris gateway and
-the trashpanda x402 seller use (`X402_DEFAULT_PAY_TO` in
-`blockchain-trashpanda-services-section/src/x402-service.mjs`); it is
-never invented per-gateway. Do not put credentials or the production
-payout identity in source.
+`X402_PAY_TO` carries the single ruled house payout identity (record:
+`x402.payto-decision`, 2026-08-31, in
+`x402-services-section/data/logs/2026/09/01/semantic-record-content.jsonl`);
+it is never invented per-gateway and is never a source constant or a literal
+in this document — it is supplied only through `wrangler secret put`. The
+CDP path (`X402_FACILITATOR_PROVIDER=cdp`,
+`X402_FACILITATOR=https://api.cdp.coinbase.com/platform/v2/x402`,
+`CDP_API_KEY_ID`, `CDP_API_KEY_SECRET`) remains available in
+`cdp-facilitator.mjs` and is the one path that would feed Coinbase's own
+Bazaar catalog automatically, if CDP credentials become reachable.
 
 For Base Sepolia proving, omit the CDP variables and use:
 

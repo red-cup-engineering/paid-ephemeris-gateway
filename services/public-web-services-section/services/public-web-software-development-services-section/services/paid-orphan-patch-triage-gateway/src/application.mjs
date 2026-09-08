@@ -1,5 +1,5 @@
 import { createFetchHandler } from "@red-cup-engineering/http-server-core-service/fetch";
-import { BodyReadError, readJsonBody } from "./read-json-body.mjs";
+import { BodyReadError, readJsonBody } from "@red-cup-engineering/read-http-request-body-service/web";
 import { createExactEvmFetchPaymentBoundary } from "@red-cup-engineering/x402-services-section/fetch";
 import { scoreSetOfOrphanPatchCandidates } from "@red-cup-engineering/jsnode-package-vulnerability-triage-services-section/score-set-of-orphan-patch-candidates";
 import { selectFacilitatorClient } from "./cdp-facilitator.mjs";
@@ -36,12 +36,32 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
       afterSettle: dependencies.afterSettle,
     });
   }
+  const MAX_BODY_BYTES = 100 * 1024;
   async function paid(context, validate, compute) {
     let boundary;
     try { boundary = payment(); }
     catch (error) { return Response.json({ error: `gateway misconfigured: ${error.message}` }, { status: 500 }); }
-    const body = await readJsonBody(context.request, { maxBytes: 100 * 1024 });
-    if (validate) validate(body);
+    let body;
+    // Caught here, not left to propagate through the dispatcher: an oversized body makes
+    // the shared reader cancel the request stream mid-read, which the Node transport reads
+    // as a client disconnect and marks the request signal aborted a tick later -- if that
+    // race is still running when this rejection reaches the dispatcher's own catch, it
+    // discards our refusal for a bare 500. Resolving the refusal here, before any throw
+    // leaves this function, means the dispatcher's happy path carries it out instead.
+    try {
+      // A declared Content-Length over the limit is refused before the stream is ever
+      // opened: canceling the reader mid-read (the path below, for a body that lies about
+      // its length) makes the Node transport tear down the socket instead of delivering
+      // the response, so the common well-behaved-client case is short-circuited here.
+      const declaredLength = Number(context.request.headers.get("content-length"));
+      if (Number.isFinite(declaredLength) && declaredLength > MAX_BODY_BYTES) {
+        // Same wording the shared reader itself throws on a mid-stream overflow, so a
+        // caller sees one refusal message regardless of which path caught it.
+        throw new BodyReadError(413, "body-too-large", `request body exceeded ${MAX_BODY_BYTES} bytes`);
+      }
+      body = await readJsonBody(context.request, { maxBytes: MAX_BODY_BYTES });
+      if (validate) validate(body);
+    } catch (error) { return refusal(error); }
     return boundary.handle(context.request, async () => {
       try { return Response.json(await compute(body)); }
       catch (error) { return refusal(error); }

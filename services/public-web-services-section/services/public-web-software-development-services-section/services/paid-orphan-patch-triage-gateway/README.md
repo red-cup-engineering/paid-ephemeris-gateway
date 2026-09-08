@@ -32,14 +32,19 @@ for dispatch and `@red-cup-engineering/x402-services-section/fetch`'s
 an explicit seller payout address, so a misconfigured deploy fails loudly
 (HTTP 500 with the missing-variable name) instead of paying out nowhere.
 
-`src/read-json-body.mjs` is a small local Fetch-`Request` JSON body reader
-(content-type/size/parse-failure refusal, matching `test/http-application.test.mjs`).
-It exists because the pinned `@red-cup-engineering/read-http-request-body-service`
-publishes only a Node `http.IncomingMessage` reader — no `/web` (or any other
-Fetch-`Request`) export exists on the registry — so this
-gateway (Fetch-native end to end) cannot consume it directly. This is a real
-gap in that shared package, not a design choice of this gateway; the local
-file is a debt to retire if/when a Fetch-native export is published there.
+Body reading uses `@red-cup-engineering/read-http-request-body-service/web`'s
+`readJsonBody`/`BodyReadError` (its `/web` export, published at `0.2.1`,
+reads a Fetch-`Request` directly; the earlier local `src/read-json-body.mjs`
+shim existed only because that export did not exist yet, and was retired
+once it shipped). `paid()` in `src/application.mjs` refuses a request whose
+declared `content-length` exceeds the 100 KiB body cap before ever opening
+the request stream: opening it and then cancelling mid-read (the shared
+reader's own overflow path, for a body that lies about its length) makes
+`src/server.mjs`'s Node HTTP transport read the cancellation as a client
+disconnect and tear down the socket before a response can be sent, so the
+declared-length check keeps the common well-behaved-client case off that
+path. `src/worker.mjs`'s in-memory Fetch handler has no such socket to lose,
+so it hits the reader's own overflow path directly.
 
 ## Base-mainnet settlement
 

@@ -1,6 +1,6 @@
 [project]
 name = "farstone"
-version = "2026.05.11"
+version = "0.1.0"
 description = "Farstone, an island polity packaged as a PyFARS application."
 readme = "README.md"
 requires-python = ">=3.11"

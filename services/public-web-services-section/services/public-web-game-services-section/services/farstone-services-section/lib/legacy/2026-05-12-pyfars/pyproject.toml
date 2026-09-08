@@ -1,6 +1,6 @@
 [project]
 name = "pyfars"
-version = "2026.05.14+farstone-submodule"
+version = "0.2.0"
 description = "PyFARS — Python implementation of FARS (Flatfile Agentic Resource System): substrate, operators, closure-rule system, and runtime scaffolding for a predication-graph-shaped flatfile corpus."
 requires-python = ">=3.11"
 dependencies = [

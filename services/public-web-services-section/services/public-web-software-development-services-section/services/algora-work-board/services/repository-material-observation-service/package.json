@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/repository-material-observation-service",
-  "version": "3.0.3",
+  "version": "0.0.0",
   "type": "module",
   "exports": {
     ".": "./src/repo-workspace.mjs"
@@ -10,7 +10,7 @@
     "content/schemas"
   ],
   "dependencies": {
-    "@red-cup-engineering/github-services-section": "1.0.0",
+    "@red-cup-engineering/github-services-section": "0.0.0",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.11"
   },

@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@red-cup-engineering/jsnode-package-vulnerability-triage-services-section": "0.1.0",
-    "@red-cup-engineering/x402-services-section": "2.0.0",
+    "@red-cup-engineering/x402-services-section": "0.5.0",
     "@x402/extensions": "2.19.0",
     "@red-cup-engineering/http-server-core-service": "0.1.1",
     "@red-cup-engineering/read-http-request-body-service": "0.2.1"

@@ -674,7 +674,7 @@ wheels = [
 
 [[package]]
 name = "farstone"
-version = "2026.5.11"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "pyfars" },
@@ -2615,7 +2615,7 @@ wheels = [
 
 [[package]]
 name = "pyfars"
-version = "2026.5.11+materializer"
+version = "0.3.0"
 source = { git = "ssh://git@github.com/emsenn/pyfars?branch=main#dd12fa36e9f3e9e42f0e17de759bc6ef0283b6b4" }
 dependencies = [
     { name = "anthropic" },

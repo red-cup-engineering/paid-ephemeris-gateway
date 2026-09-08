@@ -43,7 +43,7 @@
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/splinterlands-services-section": "0.1.0",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1"
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0"
   },
   "devDependencies": {
     "@types/node": "22.20.1",

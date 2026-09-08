@@ -34,6 +34,6 @@
     "@red-cup-engineering/stripe-services-section": "0.1.5",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1"
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0"
   }
 }

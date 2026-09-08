@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/algora-work-board-conductor",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "type": "module",
   "bin": {
     "algora-run-loop": "scripts/run-loop.mjs"
@@ -10,17 +10,17 @@
     "./planner": "./src/planner.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/algora-opportunity-observation-service": "1.0.0",
-    "@red-cup-engineering/github-services-section": "1.0.0",
-    "@red-cup-engineering/software-execution-adjudication-service": "1.0.0",
-    "@red-cup-engineering/software-patch-synthesis-service": "1.0.1",
-    "@red-cup-engineering/software-sandbox-execution-service": "1.0.1",
-    "@red-cup-engineering/software-solve-loop-service": "1.0.0",
-    "@red-cup-engineering/software-work-allocation-service": "1.0.0",
-    "@red-cup-engineering/software-work-qualification-assay-service": "1.0.0",
-    "@red-cup-engineering/software-work-rectification-assay-service": "1.0.1",
-    "@red-cup-engineering/software-work-risk-assay-service": "1.0.0",
-    "@red-cup-engineering/software-work-witness-service": "1.0.2"
+    "@red-cup-engineering/algora-opportunity-observation-service": "0.0.0",
+    "@red-cup-engineering/github-services-section": "0.0.0",
+    "@red-cup-engineering/software-execution-adjudication-service": "0.0.0",
+    "@red-cup-engineering/software-patch-synthesis-service": "0.0.0",
+    "@red-cup-engineering/software-sandbox-execution-service": "0.0.0",
+    "@red-cup-engineering/software-solve-loop-service": "0.0.0",
+    "@red-cup-engineering/software-work-allocation-service": "0.0.0",
+    "@red-cup-engineering/software-work-qualification-assay-service": "0.0.0",
+    "@red-cup-engineering/software-work-rectification-assay-service": "0.0.0",
+    "@red-cup-engineering/software-work-risk-assay-service": "0.0.0",
+    "@red-cup-engineering/software-work-witness-service": "0.0.0"
   },
   "scripts": {
     "test": "node --test"

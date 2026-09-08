@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/software-sandbox-execution-service",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "type": "module",
   "files": [
     "src",
@@ -15,8 +15,8 @@
     "./worker": "./src/worker.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/coding-context-projection-service": "1.0.1",
-    "@red-cup-engineering/github-services-section": "1.0.0"
+    "@red-cup-engineering/coding-context-projection-service": "0.1.0",
+    "@red-cup-engineering/github-services-section": "0.0.0"
   },
   "scripts": {
     "test": "node --test"

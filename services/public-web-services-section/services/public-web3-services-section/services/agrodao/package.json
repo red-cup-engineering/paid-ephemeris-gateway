@@ -35,7 +35,7 @@
     "check:hive-capital": "node --check src/hive-capital-allocation.mjs && node --check test/hive-capital-allocation.test.mjs",
     "test:hive-capital": "node --test test/hive-capital-allocation.test.mjs"
   },
-  "description": "AGRODAO \u2014 the web3/on-chain asset-management sovereign enterprise: custody, positions, and cross-chain settlement for the firm's DAO-governed assets, distinct from any single chain's wallet-fleet operations app.",
+  "description": "AGRODAO — the web3/on-chain asset-management sovereign enterprise: custody, positions, and cross-chain settlement for the firm's DAO-governed assets, distinct from any single chain's wallet-fleet operations app.",
   "exports": {
     "./obsmetrologia-causal-sheaf-backtest": "./src/obsmetrologia-causal-sheaf-backtest.mjs",
     "./obsmetrologia-curvature-release-backtest": "./src/obsmetrologia-curvature-release-backtest.mjs",
@@ -70,7 +70,7 @@
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/solana-services-section": "0.1.0",
     "@red-cup-engineering/treasury-observation-service": "0.4.0",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1",
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0",
     "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
     "@red-cup-engineering/witness-journal-log-service": "0.1.6"
   },

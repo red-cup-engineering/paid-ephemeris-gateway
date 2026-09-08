@@ -26,11 +26,11 @@
     "test": "node --test test/*.test.mjs test/prove.mjs"
   },
   "dependencies": {
-    "@lenticule-science/divination-services-section": "2.0.2",
+    "@lenticule-science/divination-services-section": "0.2.0",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1",
-    "@red-cup-engineering/x402-market-observation-service": "1.0.0",
-    "@red-cup-engineering/x402-services-section": "2.0.1",
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0",
+    "@red-cup-engineering/x402-market-observation-service": "0.2.0",
+    "@red-cup-engineering/x402-services-section": "0.6.0",
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",
     "@x402/evm": "2.19.0",
     "@x402/extensions": "2.19.0",

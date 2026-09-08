@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/software-work-witness-service",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "type": "module",
   "exports": {
     ".": "./src/outcome-ledger.mjs",
@@ -11,10 +11,10 @@
     "src"
   ],
   "dependencies": {
-    "@red-cup-engineering/inference-work-lot-service": "4.2.7",
+    "@red-cup-engineering/inference-work-lot-service": "0.5.0",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
-    "@red-cup-engineering/witness-journal-document-service": "1.0.1",
-    "@red-cup-engineering/settlement-record-store-service": "1.0.0"
+    "@red-cup-engineering/witness-journal-document-service": "0.1.0",
+    "@red-cup-engineering/settlement-record-store-service": "0.0.0"
   },
   "scripts": {
     "test": "node --test"

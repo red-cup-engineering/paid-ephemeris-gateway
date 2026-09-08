@@ -2811,7 +2811,7 @@ wheels = [
 
 [[package]]
 name = "pyfars"
-version = "2026.5.12+farstone.submodule"
+version = "0.4.0"
 source = { editable = "." }
 dependencies = [
     { name = "anthropic" },

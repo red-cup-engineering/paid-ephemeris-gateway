@@ -24,10 +24,11 @@
   "dependencies": {
     "@red-cup-engineering/abrash": "0.1.1",
     "@red-cup-engineering/cartridge": "0.2.0",
-    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0"
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0",
+    "@red-cup-engineering/web-server-platform-services-section": "0.6.0"
   },
   "scripts": {
-    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/anomalies/*.mts src/ext/*.mts && for f in src/*.mjs src/server/*.mjs web/*.mjs web/js/*.mjs agents/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/anomalies/*.mts src/ext/*.mts && for f in worker.mjs src/*.mjs src/server/*.mjs web/*.mjs web/js/*.mjs agents/*.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts src/anomalies/*.test.mts src/ext/*.test.mts",
     "start": "node src/server.mjs",
     "serve": "node src/server.mjs"

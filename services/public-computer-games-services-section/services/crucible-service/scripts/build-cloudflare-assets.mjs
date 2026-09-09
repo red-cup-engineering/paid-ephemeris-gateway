@@ -1,24 +1,14 @@
 #!/usr/bin/env node
 // build-cloudflare-assets — snapshots web/server.mjs's dynamic .mts stripping and vendor
 // pass-through into a static dist/ tree for Cloudflare Workers Assets. Run: node scripts/build-cloudflare-assets.mjs
-import { mkdir, cp, rm } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { copyStrippingMts } from "@red-cup-engineering/project-browser-asset-tree-service";
+import { buildCloudflareStaticAssetTree } from "@red-cup-engineering/project-browser-asset-tree-service";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
-const DIST = join(ROOT, "dist");
-const VENDOR_MATH_ROOT = join(ROOT, "node_modules", "@lenticule-science", "metrologic");
-const VENDOR_DEST = join(DIST, "vendor", "lenticule-science-metrologic");
-
 async function main() {
-  await rm(DIST, { recursive: true, force: true });
-  await mkdir(DIST, { recursive: true });
-  await copyStrippingMts(join(ROOT, "web"), join(DIST, "web"));
-  await copyStrippingMts(join(ROOT, "src"), join(DIST, "src"));
-  await cp(VENDOR_MATH_ROOT, VENDOR_DEST, { recursive: true });
-  console.log(`built ${DIST}`);
+  console.log(`built ${await buildCloudflareStaticAssetTree({ rootDirectory: ROOT, copies: [{ source: "node_modules/@lenticule-science/metrologic", destination: "vendor/lenticule-science-metrologic" }] })}`);
 }
 
 main();

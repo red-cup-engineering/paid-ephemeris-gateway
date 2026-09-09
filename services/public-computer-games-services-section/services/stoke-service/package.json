@@ -12,7 +12,7 @@
   "description": "stoke.561.group — the kind incremental: the player builds a real production graph, and prestige is not an authored curve, it is the dominant Perron-Frobenius eigenvalue of the player's actual production matrix, computed by real math (@lenticule-science/metrologic), with the prestige loadout literally the eigenvector. Every displayed number is tagged computed-from-your-graph or designed-flavor; no number is ever both.",
   "scripts": {
     "serve": "node web/server.mjs",
-    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts web/test/*.test.mts && for f in worker.mjs web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts web/test/*.test.mts"
   },
   "exports": {
@@ -30,7 +30,8 @@
   "dependencies": {
     "@lenticule-science/metrologic": "0.1.0",
     "@red-cup-engineering/cartridge": "0.2.1",
-    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.2.0",
+    "@red-cup-engineering/web-server-platform-services-section": "0.6.0",
     "sirv": "3.0.2"
   },
   "engines": {

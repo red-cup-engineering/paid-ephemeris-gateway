@@ -3,16 +3,14 @@
 // and vendor pass-through) plus one addition: bake /api/manifest as a static JSON file from the
 // deterministic `manifest` export of the (now-stripped) cartridge.manifest.mts.
 // Run: node scripts/build-cloudflare-assets.mjs
-import { mkdir, writeFile, cp, rm } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { copyStrippingMts } from "@red-cup-engineering/project-browser-asset-tree-service";
+import { buildCloudflareStaticAssetTree } from "@red-cup-engineering/project-browser-asset-tree-service";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
 const DIST = join(ROOT, "dist");
-const VENDOR_CARTRIDGE_ROOT = join(ROOT, "node_modules", "@red-cup-engineering", "cartridge", "src");
-const VENDOR_DEST = join(DIST, "vendor", "red-cup-engineering-cartridge");
 
 /**
  * Import the stripped `dist/src/cartridge.manifest.mts` copy at build time and write its
@@ -27,11 +25,7 @@ async function writeApiManifest() {
 }
 
 async function main() {
-  await rm(DIST, { recursive: true, force: true });
-  await mkdir(DIST, { recursive: true });
-  await copyStrippingMts(join(ROOT, "web"), join(DIST, "web"));
-  await copyStrippingMts(join(ROOT, "src"), join(DIST, "src"));
-  await cp(VENDOR_CARTRIDGE_ROOT, VENDOR_DEST, { recursive: true });
+  await buildCloudflareStaticAssetTree({ rootDirectory: ROOT, copies: [{ source: "node_modules/@red-cup-engineering/cartridge/src", destination: "vendor/red-cup-engineering-cartridge" }] });
   await writeApiManifest();
   console.log(`built ${DIST}`);
 }

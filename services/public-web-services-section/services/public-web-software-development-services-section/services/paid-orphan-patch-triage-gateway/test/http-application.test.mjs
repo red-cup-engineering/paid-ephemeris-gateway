@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { start } from "@red-cup-engineering/http-server-core-service/server";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 import { createServer } from "../src/server.mjs";
 import { createWorkerHandler } from "../src/worker.mjs";
 
@@ -40,7 +40,7 @@ test("one application preserves HTTP and payment admission across Worker and Nod
   };
   const worker = createWorkerHandler(dependencies);
   const { app } = createServer(env, dependencies);
-  const server = await start(app, { port: 0, host: "127.0.0.1" }); t.after(() => server.close());
+  const server = await startWebServer(app, { port: 0, host: "127.0.0.1" }); t.after(() => server.close());
   await new Promise((resolve) => setTimeout(resolve, 150));
   const origin = `http://127.0.0.1:${server.port}`;
   const receivers = [(url, init) => worker.fetch(new Request(url, init), env), (url, init) => fetch(url, init)];

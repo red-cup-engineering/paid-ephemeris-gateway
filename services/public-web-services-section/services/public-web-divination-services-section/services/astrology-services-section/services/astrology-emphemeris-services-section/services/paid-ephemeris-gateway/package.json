@@ -35,7 +35,7 @@
     "@x402/evm": "2.19.0",
     "@x402/extensions": "2.19.0",
     "@x402/svm": "2.19.0",
-    "@red-cup-engineering/http-server-core-service": "0.1.1"
+    "@red-cup-engineering/web-server-services-section": "0.1.1"
   },
   "keywords": [
     "x402",
@@ -43,6 +43,6 @@
     "sovereign-state-enterprise"
   ],
   "devDependencies": {
-    "wrangler": "^4.129.0"
+    "wrangler": "4.129.0"
   }
 }

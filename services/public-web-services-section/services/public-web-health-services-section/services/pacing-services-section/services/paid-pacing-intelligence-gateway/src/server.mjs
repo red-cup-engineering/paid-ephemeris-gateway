@@ -2,7 +2,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createSemanticRecordJournal } from "@red-cup-engineering/semantic-record-journal-service";
 import { createSettlementWitness } from "./settlement-witness.mjs";
-import { start } from "@red-cup-engineering/http-server-core-service/server";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 import { createGatewayApplication } from "./application.mjs";
 import {
   HEART_RATE_THRESHOLD_PRICE,
@@ -26,7 +26,7 @@ export function createServer(env = process.env, dependencies = {}) {
   if (!payTo) throw new Error("X402_PAY_TO is required (seller payout address); no default is provided on purpose");
   const application = createGatewayApplication({ ...env, X402_NETWORK: network, X402_FACILITATOR: facilitatorUrl }, { ...dependencies, afterSettle: dependencies.afterSettle || createSettlementWitness(env) });
   // Cloud Run terminates TLS at one explicitly trusted proxy hop.
-  const app = { fetch: application, trustProxy: 1 };
+  const app = application;
   return {
     app,
     network,
@@ -42,7 +42,7 @@ const NODE_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const isMain = import.meta.url === `file://${process.argv[1]}`;
 if (isMain) {
   const { app, network, facilitatorUrl, payTo, prices, port } = createServer();
-  await start(app, { port, host: "0.0.0.0" });
+  await startWebServer(app, { port, host: "0.0.0.0", trustProxy: 1 });
   {
     const journal = createSemanticRecordJournal({ root: NODE_ROOT, objectKind: "paid-pacing-intelligence-gateway.server-event" });
     journal.record({

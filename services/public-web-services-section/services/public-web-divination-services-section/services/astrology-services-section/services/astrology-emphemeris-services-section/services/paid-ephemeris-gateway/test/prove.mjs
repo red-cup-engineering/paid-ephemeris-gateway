@@ -1,4 +1,4 @@
-import { start } from "@red-cup-engineering/http-server-core-service/server";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 import assert from "node:assert/strict";
 import test from "node:test";
 
@@ -35,7 +35,7 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
     X402_PAY_TO: PAY_TO,
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
-  const server = await start(app, { port: 0, host: "127.0.0.1" });
+  const server = await startWebServer(app, { port: 0, host: "127.0.0.1", trustProxy: 1 });
   await new Promise((accept) => setTimeout(accept, 150));
   try {
     const origin = `http://127.0.0.1:${server.port}`;

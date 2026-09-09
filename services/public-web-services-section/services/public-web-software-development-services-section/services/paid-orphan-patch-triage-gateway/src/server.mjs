@@ -1,4 +1,4 @@
-import { start } from "@red-cup-engineering/http-server-core-service/server";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 import { createGatewayApplication } from "./application.mjs";
 import { ORPHAN_PATCH_SCORE_PRICE, ORPHAN_PATCH_SCORE_ROUTE, STATUS_ROUTE } from "./route-catalog.mjs";
 export { ORPHAN_PATCH_SCORE_PRICE, ORPHAN_PATCH_SCORE_ROUTE, STATUS_ROUTE };
@@ -10,7 +10,7 @@ export function createServer(env = process.env, dependencies = {}) {
   if (!payTo) throw new Error("X402_PAY_TO is required (seller payout address); no default is provided on purpose");
   const application = createGatewayApplication({ ...env, X402_NETWORK: network, X402_FACILITATOR: facilitatorUrl }, dependencies);
   // Cloud Run terminates TLS at one explicitly trusted proxy hop.
-  const app = { fetch: application, trustProxy: 1 };
+  const app = application;
   return {
     app,
     network,
@@ -24,7 +24,7 @@ export function createServer(env = process.env, dependencies = {}) {
 const isMain = import.meta.url === `file://${process.argv[1]}`;
 if (isMain) {
   const { app, port } = createServer();
-  await start(app, { port, host: "0.0.0.0" });
+  await startWebServer(app, { port, host: "0.0.0.0", trustProxy: 1 });
   {
     console.log(`paid-orphan-patch-triage-gateway listening on 0.0.0.0:${port}`);
   }

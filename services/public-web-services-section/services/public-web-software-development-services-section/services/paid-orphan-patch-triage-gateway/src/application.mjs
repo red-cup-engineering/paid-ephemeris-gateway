@@ -1,4 +1,4 @@
-import { createFetchHandler } from "@red-cup-engineering/http-server-core-service/fetch";
+import { createWebApplicationEngine } from "@red-cup-engineering/web-server-services-section";
 import { BodyReadError, readJsonBody } from "@red-cup-engineering/read-http-request-body-service/web";
 import { createExactEvmFetchPaymentBoundary } from "@red-cup-engineering/x402-services-section/fetch";
 import { scoreSetOfOrphanPatchCandidates } from "@red-cup-engineering/jsnode-package-vulnerability-triage-services-section/score-set-of-orphan-patch-candidates";
@@ -76,7 +76,7 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
     if (typeof hash !== "string" || hash === "") return new Response("not found", { status: 404, headers: { "content-type": "text/plain" } });
     return new Response(hash, { status: 200, headers: { "content-type": "text/plain" } });
   }
-  return createFetchHandler({
+  return createWebApplicationEngine({
     cacheControl: { noStore: true },
     onError: refusal,
     resources: [

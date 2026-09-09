@@ -16,7 +16,7 @@ export function createWorkerHandler(dependencies = {}) {
         });
         applications.set(env, application);
       }
-      return application(request, { capabilities: env });
+      return application.fetch(request, { capabilities: env });
     },
   };
 }

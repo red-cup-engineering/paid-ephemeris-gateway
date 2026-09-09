@@ -1,4 +1,4 @@
-import { createFetchHandler } from "@red-cup-engineering/http-server-core-service/fetch";
+import { createWebApplicationEngine } from "@red-cup-engineering/web-server-services-section";
 import { createExactEvmFetchPaymentBoundary } from "@red-cup-engineering/x402-services-section/fetch";
 import { bazaarResourceServerExtension } from "@x402/extensions/bazaar";
 import {
@@ -115,7 +115,7 @@ export function createGatewayApplication(env = {}, dependencies = {}) {
   }
   const query = (context) => Object.fromEntries(context.url.searchParams);
   const market = createMarketObservationHandler(env, dependencies);
-  return createFetchHandler({
+  return createWebApplicationEngine({
     cacheControl: { noStore: true }, onError: refusal,
     resources: [
       ...[STATUS_ROUTE, "/healthz"].map((match) => ({ match, methods: ["GET"], handler: () => Response.json({ status: "ok", service: "paid-ephemeris-gateway" }) })),

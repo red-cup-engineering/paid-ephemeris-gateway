@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/paid-pacing-intelligence-gateway",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "x402 seller for stateless pacing-intelligence biometric analysis: $0.05 full analyzePacing report and $0.01 Workwell heart-rate-threshold heuristic, with citations and epistemic labels; the API stores nothing.",
   "engines": {
@@ -23,7 +23,6 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@red-cup-engineering/http-server-core-service": "0.1.1",
     "@red-cup-engineering/pacing-intelligence-services-section": "0.1.1",
     "@red-cup-engineering/read-http-request-body-service": "0.2.1",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
@@ -32,7 +31,8 @@
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",
     "@x402/evm": "2.24.0",
     "@x402/extensions": "2.24.0",
-    "@x402/svm": "2.24.0"
+    "@x402/svm": "2.24.0",
+    "@red-cup-engineering/web-server-services-section": "0.1.1"
   },
   "keywords": [
     "x402",

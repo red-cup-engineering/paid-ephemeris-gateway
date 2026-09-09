@@ -23,7 +23,7 @@ export function createWorkerHandler(dependencies = {}) {
         application = createGatewayApplication(env, { ...dependencies, afterSettle: dependencies.afterSettle ?? workersSettlementWitness });
         applications.set(env, application);
       }
-      return application(request, { capabilities: env });
+      return application.fetch(request, { capabilities: env });
     },
   };
 }

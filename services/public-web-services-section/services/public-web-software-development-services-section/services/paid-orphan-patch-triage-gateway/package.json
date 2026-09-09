@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/paid-orphan-patch-triage-gateway",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "x402 seller for the orphan-patch triage scorer: ranks packages with disclosed advisories, silent maintainers, and many dependents as orphan-patch candidates, deterministically, from public inputs alone.",
   "engines": {
@@ -25,8 +25,8 @@
     "@red-cup-engineering/jsnode-package-vulnerability-triage-services-section": "0.1.0",
     "@red-cup-engineering/x402-services-section": "0.5.0",
     "@x402/extensions": "2.19.0",
-    "@red-cup-engineering/http-server-core-service": "0.1.1",
-    "@red-cup-engineering/read-http-request-body-service": "0.2.1"
+    "@red-cup-engineering/read-http-request-body-service": "0.2.1",
+    "@red-cup-engineering/web-server-services-section": "0.1.1"
   },
   "keywords": [
     "x402",

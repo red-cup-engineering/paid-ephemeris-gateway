@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { start } from "@red-cup-engineering/http-server-core-service/server";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 
 import { startFilesystemWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-document-service/filesystem-provider";
 import { createSemanticRecordJournal } from "@red-cup-engineering/semantic-record-journal-service";
@@ -15,7 +15,7 @@ const witnessJournal = await startFilesystemWitnessJournalProviderProcess({
 const env = { ...process.env, WITNESS_JOURNAL_DOCUMENT_AGENT: witnessJournal.agentCardUrl };
 const { app, network, facilitatorUrl, payTo, prices, port } = createServer(env);
 const deploymentJournal = createSemanticRecordJournal({ root: resolve(dataRoot), objectKind: "paid-ephemeris-gateway.deployment-event" });
-const server = await start(app, { port, host: "0.0.0.0" });
+const server = await startWebServer(app, { port, host: "0.0.0.0", trustProxy: 1 });
 {
   const readyRecord = { event: "paid-ephemeris-gateway-ready", port, network, facilitatorUrl, payTo, prices, witnessJournalAgent: witnessJournal.agentCardUrl };
   deploymentJournal.record({ category: "paid-ephemeris-gateway.deployment.ready", recordedAt: new Date().toISOString(), record: readyRecord, charge: { support: true, refutation: false } });

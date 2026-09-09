@@ -3,7 +3,9 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { seavt } from "@red-cup-engineering/witness-journal-entry-service";
+import { jsonToTerm } from "@red-cup-engineering/relation-model-notation-json-codec";
 import { appendSeavt } from "@red-cup-engineering/witness-journal-log-service";
+const directSeavt = (entity, attribute, value, time) => seavt(jsonToTerm(entity), jsonToTerm(attribute), jsonToTerm(value), time);
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -18,11 +20,11 @@ export function recordSettlementRecord({ actor, category, recordedAt, record, da
   const entity = niSurface("record", record.id);
   const disposition = typeof record.disposition === "string" ? record.disposition : "admitted";
   const rows = [
-    seavt(entity, "settlement:actor", "actor.blockchain-trashpanda", recordedAt),
-    seavt(entity, "settlement:category", category, recordedAt),
-    seavt(entity, "settlement:record", entity, recordedAt),
-    seavt(entity, "settlement:record-type", `record.type.${String(record.type)}`, recordedAt),
-    seavt(entity, "settlement:disposition", `settlement.disposition.${disposition}`, recordedAt),
+    directSeavt(entity, "settlement:actor", "actor.blockchain-trashpanda", recordedAt),
+    directSeavt(entity, "settlement:category", category, recordedAt),
+    directSeavt(entity, "settlement:record", entity, recordedAt),
+    directSeavt(entity, "settlement:record-type", `record.type.${String(record.type)}`, recordedAt),
+    directSeavt(entity, "settlement:disposition", `settlement.disposition.${disposition}`, recordedAt),
   ];
   const receipt = appendSeavt(dataRoot, "blockchain-trashpanda.settlement", rows, recordedAt);
   return Object.freeze({ ...receipt, documentNi: record.id, record: record.id });

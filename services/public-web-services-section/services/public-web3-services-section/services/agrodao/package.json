@@ -71,8 +71,8 @@
     "@red-cup-engineering/solana-services-section": "0.1.0",
     "@red-cup-engineering/treasury-observation-service": "0.4.0",
     "@red-cup-engineering/witness-journal-document-service": "0.1.0",
-    "@red-cup-engineering/witness-journal-entry-service": "0.1.7",
-    "@red-cup-engineering/witness-journal-log-service": "0.1.6"
+    "@red-cup-engineering/witness-journal-entry-service": "0.3.0",
+    "@red-cup-engineering/witness-journal-log-service": "0.3.0"
   },
   "keywords": [
     "web3",

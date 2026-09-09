@@ -71,7 +71,7 @@ X402_PAY_TO=<set via `wrangler secret put`, never a source constant>
 
 `X402_PAY_TO` carries the single ruled house payout identity (record:
 `x402.payto-decision`, 2026-08-31, in
-`x402-services-section/data/logs/2026/09/01/semantic-record-content.jsonl`);
+`x402-services-section/data/logs/2026/09/01/witness-journal-seavt.jsonl`);
 it is never invented per-gateway and is never a source constant or a literal
 in this document — it is supplied only through `wrangler secret put`. The
 CDP path (`X402_FACILITATOR_PROVIDER=cdp`,

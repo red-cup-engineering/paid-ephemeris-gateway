@@ -3,16 +3,15 @@
 // and vendor pass-through) plus one addition: bake /api/manifest as a static JSON file from the
 // deterministic `manifest` export of the (now-stripped) cartridge.manifest.mts.
 // Run: node scripts/build-cloudflare-assets.mjs
-import { mkdir, writeFile, cp, rm } from "node:fs/promises";
-import { join, dirname } from "node:path";
+import { writeFile, readdir, readFile } from "node:fs/promises";
+import { join, dirname, relative, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { copyStrippingMts } from "@red-cup-engineering/project-browser-asset-tree-service";
+import { buildCloudflareStaticAssetTree } from "@red-cup-engineering/project-browser-asset-tree-service";
+import { createWebReleaseManifest, serializeWebReleaseManifest } from "@red-cup-engineering/web-release-candidate-service";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
 const DIST = join(ROOT, "dist");
-const VENDOR_CARTRIDGE_ROOT = join(ROOT, "node_modules", "@red-cup-engineering", "cartridge", "src");
-const VENDOR_DEST = join(DIST, "vendor", "red-cup-engineering-cartridge");
 
 /**
  * Import the stripped `dist/src/cartridge.manifest.mts` copy at build time and write its
@@ -26,14 +25,44 @@ async function writeApiManifest() {
   await writeFile(join(DIST, "api-manifest.json"), JSON.stringify(mod.manifest, null, 2));
 }
 
+/** Read the sealed Worker Assets tree as the one portable release inventory. */
+async function releaseArtifacts(directory = DIST) {
+  const artifacts = [];
+  async function visit(current) {
+    const entries = await readdir(current, { withFileTypes: true });
+    entries.sort((left, right) => left.name.localeCompare(right.name));
+    for (const entry of entries) {
+      const path = join(current, entry.name);
+      if (entry.isDirectory()) {
+        await visit(path);
+      } else if (entry.isFile()) {
+        artifacts.push({ path: relative(directory, path).split(sep).join("/"), body: await readFile(path) });
+      } else {
+        throw new Error(`Cloudflare asset tree contains a non-file entry: ${path}`);
+      }
+    }
+  }
+  await visit(directory);
+  return artifacts;
+}
+
+async function writeReleaseManifest() {
+  const manifest = createWebReleaseManifest({
+    artifacts: await releaseArtifacts(),
+    baseUrl: "https://you-are-conscious.561.group/",
+    profile: "cloudflare-worker-assets",
+    excludePaths: ["release-manifest.json"],
+    metadata: { deliveryClass: "dynamic-stateless", receiver: "cloudflare-worker-assets" },
+  });
+  await writeFile(join(DIST, "release-manifest.json"), serializeWebReleaseManifest(manifest));
+  return manifest;
+}
+
 async function main() {
-  await rm(DIST, { recursive: true, force: true });
-  await mkdir(DIST, { recursive: true });
-  await copyStrippingMts(join(ROOT, "web"), join(DIST, "web"));
-  await copyStrippingMts(join(ROOT, "src"), join(DIST, "src"));
-  await cp(VENDOR_CARTRIDGE_ROOT, VENDOR_DEST, { recursive: true });
+  await buildCloudflareStaticAssetTree({ rootDirectory: ROOT, copies: [{ source: "node_modules/@red-cup-engineering/cartridge/src", destination: "vendor/red-cup-engineering-cartridge" }] });
   await writeApiManifest();
-  console.log(`built ${DIST}`);
+  const manifest = await writeReleaseManifest();
+  console.log(`built ${DIST} (${manifest.digest})`);
 }
 
 main();

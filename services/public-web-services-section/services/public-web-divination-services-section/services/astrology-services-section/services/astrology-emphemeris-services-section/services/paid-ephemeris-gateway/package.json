@@ -29,7 +29,7 @@
   "dependencies": {
     "@lenticule-science/astronomy-services-section": "0.4.2",
     "@lenticule-science/divination-services-section": "0.2.3",
-    "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
+    "@red-cup-engineering/semantic-record-journal-service": "0.4.0",
     "@red-cup-engineering/web-server-services-section": "0.1.5",
     "@red-cup-engineering/witness-journal-document-service": "0.1.0",
     "@red-cup-engineering/x402-market-observation-service": "0.2.0",

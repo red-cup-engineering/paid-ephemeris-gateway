@@ -1,5 +1,5 @@
 {
-  "name": "@red-cup-engineering/you-are-conscious-561-group",
+  "name": "@red-cup-engineering/you-are-conscious-service",
   "version": "0.1.0",
   "type": "module",
   "keywords": [
@@ -13,7 +13,7 @@
   "description": "you-are-conscious.561.group — the kind incremental where the ladder you climb over a real widget production graph is a consciousness ladder: every automation tier is a genuine cognitive capability, taught through a mechanic the player operates, and the paperclip joke is told straight, then made to hurt exactly once, honestly, at the self-model tier, through systems the player already trusts.",
   "scripts": {
     "serve": "node web/server.mjs",
-    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/fixtures/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts src/fixtures/*.mts web/test/*.test.mts && for f in worker.mjs web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts web/test/*.test.mts"
   },
   "exports": {
@@ -39,7 +39,9 @@
   "dependencies": {
     "@lenticule-science/metrologic": "0.1.0",
     "@red-cup-engineering/cartridge": "0.2.1",
-    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0",
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.2.0",
+    "@red-cup-engineering/web-release-candidate-service": "0.1.1",
+    "@red-cup-engineering/web-server-platform-services-section": "0.6.0",
     "sirv": "3.0.2"
   },
   "engines": {

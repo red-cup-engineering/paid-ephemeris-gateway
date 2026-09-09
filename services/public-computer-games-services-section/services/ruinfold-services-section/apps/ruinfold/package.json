@@ -5,7 +5,7 @@
   "description": "Ruinfold Daily: a seeded-daily single-player roguelike run engine (move-log replay, five-way bilattice death, integer scoring). Daily-tournament plumbing (date arithmetic, submission guard, run/score/scored-lock store, leaderboard ranking, submission pipeline) comes from @red-cup-engineering/footing, the extraction of this app's own former src/server/* modules; everything else stays zero-dependency, and Node's native TypeScript type-stripping runs .mts directly.",
   "dependencies": {
     "@red-cup-engineering/footing": "0.1.2",
-    "@red-cup-engineering/semantic-record-journal-service": "0.1.8"
+    "@red-cup-engineering/semantic-record-journal-service": "0.4.0"
   },
   "imports": {
     "#engine/*": "./src/engine/*",

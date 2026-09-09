@@ -11,13 +11,14 @@
   ],
   "description": "crucible.561.group — a daily-seeded single-player puzzle where every move's energy cost is the measured obstruction (@lenticule-science/metrologic H1 rank / settling depth / regime) of that move, not a designer spreadsheet. Deterministic replay: seed + move log -> identical final state and cost, always.",
   "scripts": {
-    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts web/test/*.test.mts && for f in web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
+    "check": "tsc --noEmit --noCheck --allowImportingTsExtensions --module nodenext --moduleResolution nodenext --target esnext src/*.mts web/test/*.test.mts && for f in worker.mjs web/js/*.mjs web/server.mjs; do [ -e \"$f\" ] || continue; node --check \"$f\" || exit 1; done",
     "test": "node --test src/*.test.mts web/test/*.test.mts",
     "serve": "node web/server.mjs"
   },
   "dependencies": {
     "@lenticule-science/metrologic": "0.1.0",
-    "@red-cup-engineering/project-browser-asset-tree-service": "0.1.0"
+    "@red-cup-engineering/project-browser-asset-tree-service": "0.2.0",
+    "@red-cup-engineering/web-server-platform-services-section": "0.6.0"
   },
   "exports": {
     "./types": "./src/types.mts",

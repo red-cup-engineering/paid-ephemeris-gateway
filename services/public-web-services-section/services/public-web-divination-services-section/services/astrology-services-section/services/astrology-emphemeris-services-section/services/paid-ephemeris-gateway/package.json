@@ -1,8 +1,8 @@
 {
   "name": "@red-cup-engineering/paid-ephemeris-gateway",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "type": "module",
-  "description": "x402 seller for two exact-moment astronomy/astrology products: $0.04 deterministic essentials and $0.32 JPL DE440 precision, each with provenance and explicit semantic layers.",
+  "description": "Astronomy and divining offers over shared numerical computation and the shared x402 seller engine.",
   "engines": {
     "node": ">=22.18"
   },
@@ -16,7 +16,8 @@
   "files": [
     "README.md",
     "scripts",
-    "src"
+    "src",
+    "data/contracts"
   ],
   "scripts": {
     "start": "node src/server.mjs",
@@ -26,16 +27,15 @@
     "test": "node --test test/*.test.mjs test/prove.mjs"
   },
   "dependencies": {
-    "@lenticule-science/divination-services-section": "0.2.0",
+    "@lenticule-science/astronomy-services-section": "0.4.2",
+    "@lenticule-science/divination-services-section": "0.2.3",
     "@red-cup-engineering/semantic-record-journal-service": "0.1.11",
+    "@red-cup-engineering/web-server-services-section": "0.1.5",
     "@red-cup-engineering/witness-journal-document-service": "0.1.0",
     "@red-cup-engineering/x402-market-observation-service": "0.2.0",
-    "@red-cup-engineering/x402-services-section": "0.6.0",
-    "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",
-    "@x402/evm": "2.19.0",
-    "@x402/extensions": "2.19.0",
-    "@x402/svm": "2.19.0",
-    "@red-cup-engineering/web-server-services-section": "0.1.1"
+    "@red-cup-engineering/x402-offer-seller-service": "0.2.0",
+    "@red-cup-engineering/x402-services-section": "0.9.3",
+    "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0"
   },
   "keywords": [
     "x402",

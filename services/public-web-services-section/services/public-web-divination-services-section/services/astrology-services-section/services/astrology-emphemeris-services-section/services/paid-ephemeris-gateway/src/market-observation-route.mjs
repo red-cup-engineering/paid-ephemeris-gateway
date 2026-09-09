@@ -5,10 +5,10 @@
  * request validation, and its public response shape.
  */
 import { observeSettlement } from "@red-cup-engineering/x402-market-observation-service/settlement";
-import { declareDiscoveryExtension } from "@x402/extensions/bazaar";
+import { MARKET_OFFER } from "./route-catalog.mjs";
 
-export const MARKET_OBSERVATION_PRICE = "$0.10";
-export const MARKET_OBSERVATION_ROUTE = "/v1/x402-market/observation";
+export const MARKET_OBSERVATION_PRICE = MARKET_OFFER.declaration.price;
+export const MARKET_OBSERVATION_ROUTE = MARKET_OFFER.declaration.route;
 export const DEFAULT_WINDOW_BLOCKS = 900;
 export const MIN_WINDOW_BLOCKS = 30;
 export const MAX_WINDOW_BLOCKS = 10800;
@@ -23,24 +23,7 @@ export function normalizeWindowRequest(query = {}) {
   return windowBlocks;
 }
 
-export const marketObservationDiscovery = declareDiscoveryExtension({
-  input: { windowBlocks: DEFAULT_WINDOW_BLOCKS },
-  inputSchema: { properties: { windowBlocks: {
-    type: "integer", minimum: MIN_WINDOW_BLOCKS, maximum: MAX_WINDOW_BLOCKS, default: DEFAULT_WINDOW_BLOCKS,
-    description: "Block-count sample window ending near a public-provider chain tip; the response distinguishes measured range from arithmetic extrapolation.",
-  } } },
-  output: { schema: { type: "object", required: ["recordType", "observedAt", "chain", "measured", "extrapolated", "caveat"], properties: {
-    recordType: { type: "string" }, observedAt: { type: "string" }, chain: { type: "object" }, measured: { type: "object" },
-    distinctAuthorizersSampled: { type: "integer" }, extrapolated: { type: "object" }, caveat: { type: "string" },
-  } }, example: {
-    recordType: "561-group.x402-market-observation", observedAt: "2026-08-28T02:00:00.000Z",
-    chain: { network: "eip155:8453", asset: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", rangeObservation: true },
-    measured: { fromBlock: 50546711, toBlock: 50547611, blocks: 900, approximateMinutes: 30, authorizations: 812, distinctAuthorizers: 96 },
-    distinctAuthorizersSampled: 96,
-    extrapolated: { dayFactor: 48, monthFactor: 1440, authorizationsPerDay: 38976, authorizationsPer30Days: 1169280, basis: "a 900-block sample scaled by 48.0 to a day; a burst inside the window is scaled with it" },
-    caveat: "EIP-3009 AuthorizationUsed is not an x402 marker or an agent identity. Daily and monthly figures are arithmetic projections from this sampled range, not established bounds.",
-  } },
-});
+export const marketObservationDiscovery = MARKET_OFFER.discovery;
 
 /** Build the post-payment handler. `readPool`, `observeSettlement`, and `now` are test seams. */
 export function createMarketObservationHandler(_env = process.env, dependencies = {}) {

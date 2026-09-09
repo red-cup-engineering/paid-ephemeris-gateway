@@ -30,8 +30,8 @@ test("serves status and the 402index verification file unpriced, with no env at 
 
   const verify = await worker.fetch(new Request("https://ephemeris.561.group/.well-known/402index-verify.txt"), env);
   assert.equal(verify.status, 200);
-  assert.equal(verify.headers.get("content-type"), "text/plain");
-  assert.equal(await verify.text(), "8f8a2ea306af8bf4937fbeaf674c1cabcf974d319934f31d6c4e7c515fdc873a");
+  assert.equal(verify.headers.get("content-type").split(";")[0], "text/plain");
+  assert.equal((await verify.text()).trim(), "8f8a2ea306af8bf4937fbeaf674c1cabcf974d319934f31d6c4e7c515fdc873a");
 });
 
 test("verification route honors an INDEX_VERIFICATION_HASH override and needs no payout configuration", async () => {
@@ -40,7 +40,7 @@ test("verification route honors an INDEX_VERIFICATION_HASH override and needs no
     new Request("https://ephemeris.561.group/.well-known/402index-verify.txt"),
     { INDEX_VERIFICATION_HASH: "override-hash" },
   );
-  assert.equal(await response.text(), "override-hash");
+  assert.equal((await response.text()).trim(), "override-hash");
 });
 
 test("refuses an unknown path with 404", async () => {

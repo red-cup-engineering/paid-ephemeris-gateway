@@ -36,10 +36,9 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
   const server = await startWebServer(app, { port: 0, host: "127.0.0.1", trustProxy: 1 });
-  await new Promise((accept) => setTimeout(accept, 150));
   try {
     const origin = `http://127.0.0.1:${server.port}`;
-    const essentials = await fetch(`${origin}${MOMENT_ESSENTIALS_ROUTE.replace(":date", "2026-07-21T00:00:00Z")}`, {
+    const essentials = await fetch(`${origin}${MOMENT_ESSENTIALS_ROUTE.replace("{date}", "2026-07-21T00:00:00Z")}`, {
       headers: { "x-forwarded-proto": "https" },
     });
     assert.equal(essentials.status, 402);
@@ -50,7 +49,7 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
     assert.match(essentialsChallenge.resource.url, /^https:\/\//u);
     assert.equal(essentialsChallenge.extensions.bazaar.routeTemplate, MOMENT_ESSENTIALS_ROUTE);
 
-    const precisionPath = PRECISION_MOMENT_ROUTE.replace(":date", "2026-07-21T00:00:00Z");
+    const precisionPath = PRECISION_MOMENT_ROUTE.replace("{date}", "2026-07-21T00:00:00Z");
     const precision = await fetch(`${origin}${precisionPath}?latitude=41.8781&longitude=-87.6298`);
     assert.equal(precision.status, 402);
     const precisionChallenge = decodeChallenge(precision);
@@ -61,12 +60,12 @@ test("seller exposes two exact-moment Bazaar products at the mandated prices", a
       ["latitude", "longitude"],
     );
 
-    const impossibleEssentials = await fetch(`${origin}${MOMENT_ESSENTIALS_ROUTE.replace(":date", "1700-01-01")}`);
+    const impossibleEssentials = await fetch(`${origin}${MOMENT_ESSENTIALS_ROUTE.replace("{date}", "1700-01-01")}`);
     assert.equal(impossibleEssentials.status, 422);
     const missingLocation = await fetch(`${origin}${precisionPath}`);
     assert.equal(missingLocation.status, 422);
     const unsupportedPrecisionDate = await fetch(
-      `${origin}${PRECISION_MOMENT_ROUTE.replace(":date", "1900-01-01")}?latitude=0&longitude=0`,
+      `${origin}${PRECISION_MOMENT_ROUTE.replace("{date}", "1900-01-01")}?latitude=0&longitude=0`,
     );
     assert.equal(unsupportedPrecisionDate.status, 422);
     const health = await fetch(`${origin}${STATUS_ROUTE}`);

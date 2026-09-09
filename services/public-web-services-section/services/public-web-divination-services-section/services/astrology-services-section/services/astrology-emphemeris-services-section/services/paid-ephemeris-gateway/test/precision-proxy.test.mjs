@@ -9,8 +9,8 @@ function decodeChallenge(response) {
 
 test("PRECISION_PROXY_ROUTES names exactly the two subprocess-only routes", () => {
   assert.deepEqual(PRECISION_PROXY_ROUTES, [
-    "/v1/ephemeris/precision-moment/:date",
-    "/v1/astronomy/precision-positions/:date",
+    "/v1/ephemeris/precision-moment/{date}",
+    "/v1/astronomy/precision-positions/{date}",
   ]);
 });
 

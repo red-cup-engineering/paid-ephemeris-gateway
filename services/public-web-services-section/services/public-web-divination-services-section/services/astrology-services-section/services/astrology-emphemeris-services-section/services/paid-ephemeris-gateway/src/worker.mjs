@@ -1,30 +1,10 @@
+import { createOfferSellerWorker, proxyPaymentBoundary } from "@red-cup-engineering/x402-offer-seller-service";
 import { createGatewayApplication } from "./application.mjs";
-import { MOMENT_ESSENTIALS_ROUTE } from "./route-catalog.mjs";
-import { ASTRONOMY_POSITIONS_ROUTE } from "./astronomy-positions-route.mjs";
-import { MARKET_OBSERVATION_ROUTE } from "./market-observation-route.mjs";
-export const WORKER_ROUTES = Object.freeze([MOMENT_ESSENTIALS_ROUTE, ASTRONOMY_POSITIONS_ROUTE, MARKET_OBSERVATION_ROUTE]);
-function workersSettlementWitness(context) {
-  const result = context?.result;
-  console.log(JSON.stringify({
-    event: "paid-ephemeris-gateway.workers-settlement",
-    network: result?.network,
-    transaction: result?.transaction,
-    payer: result?.payer ?? null,
-    amount: result?.amount ?? context.requirements?.amount,
-    recordedAt: new Date().toISOString(),
-  }));
-}
+import { ESSENTIALS_OFFER, ASTRONOMY_OFFER, MARKET_OFFER, PRECISION_OFFER, ASTRONOMY_PRECISION_OFFER } from "./route-catalog.mjs";
+export const WORKER_ROUTES = Object.freeze([ESSENTIALS_OFFER, ASTRONOMY_OFFER, MARKET_OFFER].map((offer) => offer.declaration.route));
+export const PRECISION_PROXY_ROUTES = Object.freeze([PRECISION_OFFER, ASTRONOMY_PRECISION_OFFER].map((offer) => offer.declaration.route));
+export { proxyPaymentBoundary as proxyToPrecisionOrigin };
 export function createWorkerHandler(dependencies = {}) {
-  const applications = new WeakMap();
-  return {
-    fetch(request, env = {}) {
-      let application = applications.get(env);
-      if (!application) {
-        application = createGatewayApplication(env, { ...dependencies, afterSettle: dependencies.afterSettle ?? workersSettlementWitness });
-        applications.set(env, application);
-      }
-      return application.fetch(request, { capabilities: env });
-    },
-  };
+  return createOfferSellerWorker((env) => createGatewayApplication(env, dependencies));
 }
 export default createWorkerHandler();

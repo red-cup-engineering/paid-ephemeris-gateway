@@ -2,6 +2,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 import { createGatewayApplication } from "./application.mjs";
+import { computePrecisionAstronomyPositions, normalizePrecisionAstronomyRequest } from "@lenticule-science/astronomy-services-section/node";
 import { createSemanticRecordJournal } from "@red-cup-engineering/semantic-record-journal-service";
 
 import {
@@ -33,9 +34,11 @@ export function createServer(env = process.env, dependencies = {}) {
   if (!payTo) throw new Error("X402_PAY_TO is required (seller payout address); no default is provided on purpose");
   const application = createGatewayApplication({ ...env, X402_NETWORK: network, X402_FACILITATOR: facilitatorUrl }, {
     ...dependencies, normalizePrecisionRequest, computePrecision: dependencies.computePrecision || computePrecisionMoment,
+    normalizeAstronomyPrecisionRequest: normalizePrecisionAstronomyRequest,
+    computeAstronomyPrecision: dependencies.computeAstronomyPrecision || computePrecisionAstronomyPositions,
     afterSettle: dependencies.afterSettle || createSettlementWitness(env),
   });
-  const app = application;
+  const app = application.engine;
   return {
     app,
     network,

@@ -11,11 +11,12 @@
       "custom_domain": true
     }
   ],
-  // Every settlement-affecting value is deployment-supplied, never a source
-  // constant -- see boundaryFor() in src/worker.mjs. X402_PAY_TO is a
+  // Every settlement-affecting value is supplied through deployment bindings.
+  // X402_PAY_TO is a
   // `wrangler secret put` value, not a var; the payout address it carries is
   // recorded beside this file in 402index-listing.json.
   "vars": {
+    "PRECISION_ORIGIN": "http://ops.561.group:8086",
     "X402_NETWORK": "eip155:8453",
     "X402_FACILITATOR": "https://facilitator.payai.network"
   }

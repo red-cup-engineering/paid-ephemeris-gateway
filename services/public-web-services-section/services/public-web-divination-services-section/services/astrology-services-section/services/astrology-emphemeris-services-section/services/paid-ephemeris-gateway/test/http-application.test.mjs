@@ -24,7 +24,6 @@ test("one application preserves HTTP and payment admission across Worker and Nod
   const worker = createWorkerHandler(dependencies);
   const { app } = createServer(env, dependencies);
   const server = await startWebServer(app, { port: 0, host: "127.0.0.1" }); t.after(() => server.close());
-  await new Promise((resolve) => setTimeout(resolve, 150));
   const origin = `http://127.0.0.1:${server.port}`;
   const receivers = [(url, init) => worker.fetch(new Request(url, init), env), (url, init) => fetch(url, init)];
   for (const [path, method, expected] of [["/v1/status", "GET", 200], ["/v1/status", "HEAD", 200], ["/v1/status", "OPTIONS", 204], ["/v1/status", "POST", 405], ["/missing", "GET", 404], ["/%ZZ", "GET", 400]]) {

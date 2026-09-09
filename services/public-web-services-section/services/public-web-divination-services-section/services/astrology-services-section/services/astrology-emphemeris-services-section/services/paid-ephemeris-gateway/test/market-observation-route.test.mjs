@@ -46,7 +46,6 @@ test("seller exposes the market-observation product at the declared price, along
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
   const server = await startWebServer(app, { port: 0, host: "127.0.0.1" });
-  await new Promise((accept) => setTimeout(accept, 150));
   try {
     const origin = `http://127.0.0.1:${server.port}`;
 
@@ -59,9 +58,7 @@ test("seller exposes the market-observation product at the declared price, along
     assert.equal(challenge.accepts[0].network, NETWORK);
     assert.equal(challenge.resource.mimeType, "application/json");
     assert.match(challenge.resource.url, new RegExp(`${MARKET_OBSERVATION_ROUTE}$`));
-    // A static path (no :param segments) carries no routeTemplate by Bazaar's own convention —
-    // the requested URL already is the exact resource, unlike the ephemeris routes' :date.
-    assert.equal(challenge.extensions.bazaar.routeTemplate, undefined);
+    assert.equal(challenge.extensions.bazaar.routeTemplate, MARKET_OBSERVATION_ROUTE);
     assert.equal(
       challenge.extensions.bazaar.schema.properties.input.properties.queryParams.properties.windowBlocks.maximum,
       MAX_WINDOW_BLOCKS,
@@ -130,7 +127,6 @@ test("serves the directory verification hash unpriced", async () => {
     PORT: "0",
   }, { facilitatorClient: facilitator, afterSettle: async () => {} });
   const server = await startWebServer(app, { port: 0, host: "127.0.0.1" });
-  await new Promise((accept) => setTimeout(accept, 150));
   try {
     const origin = `http://127.0.0.1:${server.port}`;
     const response = await fetch(`${origin}/.well-known/402index-verify.txt`);

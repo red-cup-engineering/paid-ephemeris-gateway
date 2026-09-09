@@ -21,5 +21,5 @@ test("computeAstronomyPositions(): astronomy-only projection, no signs, no aspec
 
 test("prices Astronomy Positions at $0.04 on its own templated route", () => {
   assert.equal(ASTRONOMY_POSITIONS_PRICE, "$0.04");
-  assert.equal(ASTRONOMY_POSITIONS_ROUTE, "/v1/astronomy/positions/:date");
+  assert.equal(ASTRONOMY_POSITIONS_ROUTE, "/v1/astronomy/positions/{date}");
 });

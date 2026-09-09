@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { startWebServer } from "@red-cup-engineering/web-server-services-section/node";
 
 import {
   HEART_RATE_THRESHOLD_PRICE,
@@ -37,13 +38,12 @@ async function withServer(dependencies, run) {
     X402_PAY_TO: PAY_TO,
     PORT: "0",
   }, { facilitatorClient: unpaidFacilitator, afterSettle: async () => {}, ...dependencies });
-  const server = app.listen(0, "127.0.0.1");
-  await new Promise((accept) => server.once("listening", accept));
+  const server = await startWebServer(app, { port: 0, host: "127.0.0.1", trustProxy: 1 });
   await new Promise((accept) => setTimeout(accept, 50));
   try {
-    await run(`http://127.0.0.1:${server.address().port}`);
+    await run(`http://127.0.0.1:${server.port}`);
   } finally {
-    await new Promise((accept) => server.close(accept));
+    await server.close();
   }
 }
 

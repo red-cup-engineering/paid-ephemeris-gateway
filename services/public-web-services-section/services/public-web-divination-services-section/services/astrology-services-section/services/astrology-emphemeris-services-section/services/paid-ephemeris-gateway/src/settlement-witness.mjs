@@ -2,15 +2,10 @@ import { resolve } from "node:path";
 
 import { recordWitnessJournalBatch, relationalWitnessJournalDocument } from "@red-cup-engineering/witness-journal-document-service";
 import { settlementWitnessGraphId } from "@red-cup-engineering/x402-settlement-witness-identity";
+import { settlementWitness } from "@red-cup-engineering/x402-services-section/offer";
+import { OFFERS } from "./route-catalog.mjs";
 
 const NODE_ID = "paid-ephemeris-gateway";
-
-function tierFromAmount(amount) {
-  const value = String(amount ?? "");
-  if (value === "40000" || value === "$0.04") return "moment-essentials";
-  if (value === "320000" || value === "$0.32") return "precision-moment";
-  return "undeclared";
-}
 
 export function createSettlementWitness(env = process.env, dependencies = {}) {
   const agentUrl = env.WITNESS_JOURNAL_DOCUMENT_AGENT ?? env.WITNESS_JOURNAL_RDF_AGENT;
@@ -22,6 +17,11 @@ export function createSettlementWitness(env = process.env, dependencies = {}) {
 
   const record = dependencies.record || recordWitnessJournalBatch;
   const now = dependencies.now || (() => new Date().toISOString());
+  const attribute = settlementWitness(OFFERS, {
+    env: {},
+    now,
+    log: dependencies.log || (() => {}),
+  });
 
   return async function appendSettlement(context) {
     const transaction = context?.result?.transaction;
@@ -31,7 +31,8 @@ export function createSettlementWitness(env = process.env, dependencies = {}) {
     const payer = context.result.payer ?? null;
     const recordedAt = now();
     const graph = settlementWitnessGraphId({ network, transaction });
-    const tier = tierFromAmount(amount);
+    const attribution = await attribute(context);
+    const tier = attribution.operation ?? "undeclared";
     const assertions = [
       ["urn:x402:network", network],
       ["urn:x402:transaction", transaction],

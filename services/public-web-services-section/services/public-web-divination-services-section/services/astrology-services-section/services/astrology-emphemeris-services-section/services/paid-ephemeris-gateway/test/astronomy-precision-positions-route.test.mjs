@@ -1,47 +1,36 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { createServer } from "../src/server.mjs";
+import { ASTRONOMY_PRECISION_POSITIONS_PRICE, ASTRONOMY_PRECISION_POSITIONS_ROUTE } from "../src/astronomy-precision-positions-route.mjs";
 
-import {
-  ASTRONOMY_PRECISION_POSITIONS_PRICE,
-  ASTRONOMY_PRECISION_POSITIONS_ROUTE,
-  projectAstronomyPrecisionPositions,
-} from "../src/astronomy-precision-positions-route.mjs";
-
-const FIXTURE_PRECISION_MOMENT = {
-  tier: "precision-moment",
-  time: "2026-07-21T00:00:00.000Z",
-  location: { latitudeDegreesNorth: 41.8781, longitudeDegreesEast: -87.6298 },
-  metrology: { ephemeris: "JPL DE440", supplier: "OxiEphemeris 0.1.1" },
-  chart: {
-    bodies: [
-      { body: "Sun", lon_deg: 118.28, lat_deg: -0.0001, sign: "Cancer", house: 7, retrograde: false },
-      { body: "Moon", lon_deg: 202.98, lat_deg: -4.15, sign: "Libra", house: 9, retrograde: false },
-    ],
-    houses: { system: "placidus", cusps_deg: [1, 2, 3] },
-    angles: { ascendant_deg: 277.8, mc_deg: 213.4 },
-    nodes: { mean_node_deg: 331.5, true_node_deg: 330.3 },
-    lots: { fortune_deg: 12.3 },
-    dignities: { sun: "domicile" },
-  },
-  essentialsCrossCheck: { sun: { absoluteDifferenceArcminutes: 0.03, withinEssentialsAuditedBound: true } },
-};
-
-test("projectAstronomyPrecisionPositions(): astronomy only, no sign/house/angle/lot/dignity", () => {
-  const result = projectAstronomyPrecisionPositions(FIXTURE_PRECISION_MOMENT);
-  assert.equal(result.tier, "astronomy-precision-positions");
-  assert.equal(result.time, FIXTURE_PRECISION_MOMENT.time);
-  assert.deepEqual(result.location, FIXTURE_PRECISION_MOMENT.location);
-  assert.deepEqual(result.metrology, FIXTURE_PRECISION_MOMENT.metrology);
-  assert.deepEqual(result.nodes, FIXTURE_PRECISION_MOMENT.chart.nodes);
-  assert.equal(result.bodies.length, 2);
-  for (const body of result.bodies) {
-    assert.ok(!("sign" in body) && !("house" in body));
-  }
-  assert.ok(!("houses" in result) && !("angles" in result) && !("lots" in result) && !("dignities" in result));
-  assert.deepEqual(result.essentialsCrossCheck, FIXTURE_PRECISION_MOMENT.essentialsCrossCheck);
+test("precision astronomy serves polar locations through the astronomy operation", async () => {
+  const network = "eip155:84532";
+  let physicalOptions;
+  const { app } = createServer({
+    X402_NETWORK: network, X402_PAY_TO: "0x0000000000000000000000000000000000000001", X402_FACILITATOR: "https://facilitator.invalid",
+  }, {
+    computePrecision: () => { throw new Error("astronomy must not call astrology"); },
+    computeAstronomyPrecision: (_date, options) => { physicalOptions = options; return { tier: "astronomy-precision-positions" }; },
+    afterSettle: async () => {},
+    facilitatorClient: {
+      getSupported: async () => ({ kinds: [{ x402Version: 2, scheme: "exact", network }], extensions: [], signers: {} }),
+      verify: async () => ({ isValid: true, payer: "0x" + "11".repeat(20) }),
+      settle: async () => ({ success: true, network, transaction: "0x" + "ab".repeat(32) }),
+    },
+  });
+  const url = "https://ephemeris.test/v1/astronomy/precision-positions/2026-07-21T00:00:00Z?latitude=89&longitude=0&houseSystem=placidus";
+  const unpaid = await app.fetch(new Request(url));
+  assert.equal(unpaid.status, 402);
+  assert.equal(physicalOptions, undefined);
+  const challenge = JSON.parse(Buffer.from(unpaid.headers.get("payment-required"), "base64"));
+  const payment = Buffer.from(JSON.stringify({ x402Version: 2, accepted: challenge.accepts[0], payload: { signature: "0xtest" } })).toString("base64");
+  const paid = await app.fetch(new Request(url, { headers: { "payment-signature": payment } }));
+  assert.equal(paid.status, 200);
+  assert.deepEqual(physicalOptions, { latitude: "89", longitude: "0" });
+  assert.equal((await paid.json()).tier, "astronomy-precision-positions");
 });
 
 test("prices Astronomy Precision Positions at $0.32 on its own templated route", () => {
   assert.equal(ASTRONOMY_PRECISION_POSITIONS_PRICE, "$0.32");
-  assert.equal(ASTRONOMY_PRECISION_POSITIONS_ROUTE, "/v1/astronomy/precision-positions/:date");
+  assert.equal(ASTRONOMY_PRECISION_POSITIONS_ROUTE, "/v1/astronomy/precision-positions/{date}");
 });

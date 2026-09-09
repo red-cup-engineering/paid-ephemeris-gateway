@@ -14,6 +14,7 @@ test("settled payments become typed witness-journal document batches on the gate
     record: async (request) => { recorded = request; return { graphPath: "witness.nq" }; },
   });
   await witness({
+    transportContext: { request: { method: "GET", path: "/v1/ephemeris/precision-moment/2026-07-21T00:00:00Z" } },
     result: {
       network: "eip155:8453",
       transaction: "0xabc",
@@ -28,6 +29,25 @@ test("settled payments become typed witness-journal document batches on the gate
   assert.ok(recorded.batch.assertions.some((assertion) =>
     assertion.predicate === "urn:emsenn:ephemeris:tier" && assertion.object.value === "precision-moment"));
   assert.match(recorded.batch.graph, /^ni:\/\/\/sha-256;[A-Za-z0-9_-]{43}$/u);
+});
+
+test("same-price astronomy precision settlements retain their declared operation", async () => {
+  let recorded;
+  const witness = createSettlementWitness({
+    WITNESS_JOURNAL_RDF_AGENT: "http://127.0.0.1:19764/.well-known/agent-card.json",
+    PAID_EPHEMERIS_DATA_ROOT: "/durable/ephemeris",
+    X402_PAY_TO: "0x0000000000000000000000000000000000000001",
+  }, {
+    now: () => "2026-07-21T12:00:00.000Z",
+    record: async (request) => { recorded = request; return { graphPath: "witness.nq" }; },
+  });
+  await witness({
+    transportContext: { request: { method: "GET", path: "/v1/astronomy/precision-positions/2026-07-21T00:00:00Z" } },
+    result: { network: "eip155:8453", transaction: "0xdef", amount: "320000" },
+    requirements: { amount: "320000" },
+  });
+  assert.ok(recorded.batch.assertions.some((assertion) =>
+    assertion.predicate === "urn:emsenn:ephemeris:tier" && assertion.object.value === "astronomy-precision-positions"));
 });
 
 test("witness wiring refuses ephemeral or uncontracted storage", () => {

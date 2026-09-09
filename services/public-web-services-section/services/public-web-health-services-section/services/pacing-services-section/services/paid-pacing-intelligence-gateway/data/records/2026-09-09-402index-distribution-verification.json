@@ -1,0 +1,59 @@
+{
+  "type": "PaidPacingIntelligenceGatewayDistributionVerification",
+  "version": 1,
+  "observedAt": "2026-09-09T00:52:16Z",
+  "channel": {
+    "name": "402index",
+    "homepage": "https://402index.io/",
+    "purposeObserved": "Protocol-agnostic directory of paid APIs for AI agents; its public page describes it as indexed, verified, and searchable.",
+    "registrationEndpoint": "POST https://402index.io/api/v1/register",
+    "accountOrVerificationRequirement": "The public site examined does not state an account requirement. The existing seller receipt records domain-claim verification for api.pacing.561.group, which is the verification that admitted these listings.",
+    "listingCost": "unknown; the public homepage's zero-price application metadata is not a directory-listing fee schedule."
+  },
+  "customerOffers": [
+    {
+      "serviceId": "de8162ef-87ea-4648-aa6d-d49b0b6b8e1f",
+      "name": "Pacing Analysis",
+      "url": "https://api.pacing.561.group/v1/pacing/analysis",
+      "method": "POST",
+      "priceUsd": 0.05,
+      "paymentAsset": "USD Coin",
+      "paymentNetwork": "Base",
+      "customerClaim": "A stateless report over caller-submitted biometric observations, with rolling baselines, deviation flags, citations, and epistemic labels. It does not diagnose, predict, or confirm post-exertional malaise.",
+      "directoryRead": {
+        "endpoint": "GET https://402index.io/api/v1/services/de8162ef-87ea-4648-aa6d-d49b0b6b8e1f",
+        "status": "active",
+        "healthStatus": "healthy",
+        "probeStatus": "probeable",
+        "approvalReason": "domain-verified"
+      }
+    },
+    {
+      "serviceId": "0c9a770b-d13a-40c2-a2c1-a3865bf70a8b",
+      "name": "Heart-Rate Threshold",
+      "url": "https://api.pacing.561.group/v1/pacing/heart-rate-threshold",
+      "method": "POST",
+      "priceUsd": 0.01,
+      "paymentAsset": "USD Coin",
+      "paymentNetwork": "Base",
+      "customerClaim": "The Workwell Foundation resting-heart-rate-plus-15-bpm pacing-ceiling heuristic, expressly labeled an unvalidated clinical rule of thumb. It is stateless and stores no submitted or computed data.",
+      "directoryRead": {
+        "endpoint": "GET https://402index.io/api/v1/services/0c9a770b-d13a-40c2-a2c1-a3865bf70a8b",
+        "status": "active",
+        "healthStatus": "healthy",
+        "probeStatus": "probeable",
+        "approvalReason": "domain-verified"
+      }
+    }
+  ],
+  "priorPublicationAuthorityAndReceipt": {
+    "ownerReceipt": "../../402index-listing.json",
+    "recordedAction": "The seller claimed and verified api.pacing.561.group, then registered each listed route at 402index. Each registration received HTTP 201 on 2026-09-08.",
+    "currentAction": "No registration or update was sent in this verification. The market projector is idempotent and must refresh recorded service IDs rather than duplicate registrations."
+  },
+  "receiverCheck": {
+    "directory": "Both route records were active, healthy, and probeable at observedAt.",
+    "seller": "GET https://api.pacing.561.group/v1/status returned HTTP 200 and {\"status\":\"ok\",\"service\":\"paid-pacing-intelligence-gateway\"} at observedAt."
+  },
+  "distributionDecision": "402index is the eligible completed channel for the current PayAI/Base x402 production offers. Coinbase Bazaar remains a discovery extension only: its automatic catalog path requires CDP-cleared listings, which this production settlement path does not use."
+}

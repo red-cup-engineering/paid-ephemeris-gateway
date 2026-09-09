@@ -19,10 +19,14 @@ import process from "node:process";
 import {
   aspectsInChart,
   computeChart,
-  findExactAspects,
+  bodyLongitude,
   findIngresses,
+  isoFromJulianDay,
+  julianDayFromIso,
   lunationOf,
+  normalizeDegrees,
   signPlacement,
+  terrestrialJulianDay,
   BODIES,
   type AspectHit,
   type Body,
@@ -32,10 +36,10 @@ import {
 import {
   dailySpread,
   reduceDate,
-  type DailyIndicators,
-  type FeaturedMotion,
   type SynthesizedSignal,
 } from "@lenticule-science/divining/divination";
+import { type DailyIndicatorsRecord, type MotionRecord } from "@lenticule-science/divining/divination/codecs";
+import { findCircleCrossings } from "@lenticule-science/astronomy-services-section";
 import {
   encodeDailyIndicators,
   encodeSpreadDocument,
@@ -56,7 +60,17 @@ function dayWindow(dateIso: string): readonly [string, string] {
  * the chart's tightest applying major aspect, falling back to the tightest
  * of any phase.
  */
-export function featureMotion(chart: Chart, dateIso: string): FeaturedMotion {
+function exactAspectTimes(bodyA: Body, bodyB: Body, angle: number, start: string, end: string): readonly string[] {
+  const relativeLongitude = (julianDay: number): number => normalizeDegrees(bodyLongitude(bodyB, julianDay) - bodyLongitude(bodyA, julianDay));
+  const targets = angle === 0 || angle === 180 ? [angle] : [angle, 360 - angle];
+  const startTt = terrestrialJulianDay(julianDayFromIso(start));
+  const endTt = terrestrialJulianDay(julianDayFromIso(end));
+  return Object.freeze(targets.flatMap((target) => findCircleCrossings(relativeLongitude, target, startTt, endTt, { stepDays: 0.1 }))
+    .map((crossing) => isoFromJulianDay(crossing.julianDay))
+    .sort());
+}
+
+export function featureMotion(chart: Chart, dateIso: string): MotionRecord {
   const [start, end] = dayWindow(dateIso);
   let moonIngress: IngressEvent | undefined;
   for (const body of BODIES) {
@@ -66,22 +80,36 @@ export function featureMotion(chart: Chart, dateIso: string): FeaturedMotion {
       moonIngress = ingresses[0];
       continue;
     }
-    return Object.freeze({ kind: "ingress" as const, ingress: ingresses[0] as IngressEvent });
+    const ingress = ingresses[0] as IngressEvent;
+    return Object.freeze({ kind: "ingress" as const, ingress: Object.freeze({
+      body: ingress.body,
+      time: ingress.time,
+      signTo: Object.freeze({ name: ingress.to.name }),
+      signFrom: Object.freeze({ name: ingress.from.name }),
+      direction: ingress.direction === "increasing" ? "direct" as const : "retrograde" as const,
+    }) });
   }
   const hits = [...aspectsInChart(chart.bodies)].sort(
     (a, b) => Math.abs(a.offset) - Math.abs(b.offset),
   );
   for (const hit of hits) {
-    const exact = findExactAspects(hit.bodyA, hit.bodyB, hit.aspect.angle, start, end);
-    if (exact.length > 0) {
+    const exact = exactAspectTimes(hit.bodyA, hit.bodyB, hit.aspect.angle, start, end);
+    const [exactTime] = exact;
+    if (exactTime !== undefined) {
       return Object.freeze({
         kind: "aspect" as const,
         aspect: hit,
-        exactTime: (exact[0] as { time: string }).time,
+        exactTime,
       });
     }
   }
-  if (moonIngress) return Object.freeze({ kind: "ingress" as const, ingress: moonIngress });
+  if (moonIngress) return Object.freeze({ kind: "ingress" as const, ingress: Object.freeze({
+    body: moonIngress.body,
+    time: moonIngress.time,
+    signTo: Object.freeze({ name: moonIngress.to.name }),
+    signFrom: Object.freeze({ name: moonIngress.from.name }),
+    direction: moonIngress.direction === "increasing" ? "direct" as const : "retrograde" as const,
+  }) });
   const applying = hits.find((hit) => hit.phase === "applying");
   const chosen = applying ?? hits[0];
   if (!chosen) throw new TypeError("no aspects in orb and no ingresses: widen the search");
@@ -194,7 +222,7 @@ async function modelSignals(
 export async function assembleIndicators(
   dateIso: string,
   options: Readonly<{ cableUrl?: string }> = {},
-): Promise<DailyIndicators> {
+): Promise<DailyIndicatorsRecord> {
   const config = loadDivinerConfig();
   const chartTime = `${dateIso}T${String(config.chartHourUtc).padStart(2, "0")}:00:00Z`;
   const chart = computeChart(chartTime);
@@ -259,7 +287,15 @@ async function main(): Promise<void> {
   );
 
   const imageSeed = seedFromString(indicators.tarot.provenance.seed ?? `${dateIso}:${config.seedSalt}`);
-  const illustration = await generateIllustration(brief, indicators.signals, config, imageSeed);
+  const illustrationSignals = indicators.signals.filter(
+    (signal): signal is SynthesizedSignal =>
+      signal.kind === "dream" ||
+      signal.kind === "historical-echo" ||
+      signal.kind === "elemental-signature" ||
+      signal.kind === "metaphor-object" ||
+      signal.kind === "color-tone",
+  );
+  const illustration = await generateIllustration(brief, illustrationSignals, config, imageSeed);
   if (illustration) {
     const extension = illustration.mimeType.includes("png") ? "png" : illustration.mimeType.includes("jpeg") || illustration.mimeType.includes("jpg") ? "jpg" : "img";
     const imagePath = join(PROPERTY_ROOT, "backstage", "images", `${dateIso}.${extension}`);

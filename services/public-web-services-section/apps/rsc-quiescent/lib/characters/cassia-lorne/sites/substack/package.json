@@ -16,10 +16,12 @@
     "divine:read": "node src/read.ts",
     "divine:hive-draft": "node src/hive-draft.ts",
     "divine": "npm run divine:indicators && npm run divine:read && npm run divine:hive-draft",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.ts"
   },
   "dependencies": {
-    "@lenticule-science/divining": "0.2.1",
+    "@lenticule-science/astronomy-services-section": "0.4.2",
+    "@lenticule-science/divining": "0.4.2",
     "@red-cup-engineering/json-codec-service": "0.1.13"
   },
   "devDependencies": {

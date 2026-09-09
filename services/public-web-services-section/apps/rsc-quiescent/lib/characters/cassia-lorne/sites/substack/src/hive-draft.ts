@@ -41,6 +41,26 @@ export type HiveDraftPayload = Readonly<{
   imageUploadRequired: boolean;
 }>;
 
+type IllustrationMetadata = Readonly<{ mimeType?: unknown }>;
+
+function imageExtension(mimeType: unknown): "png" | "jpg" | "img" {
+  if (mimeType === "image/png") return "png";
+  if (mimeType === "image/jpeg" || mimeType === "image/jpg") return "jpg";
+  return "img";
+}
+
+/** Resolve the exact image stage 1 recorded, retaining JPEG output from before metadata was read here. */
+export function generatedImagePath(imagesRoot: string, dateIso: string): string | undefined {
+  const metadataPath = join(imagesRoot, `${dateIso}.json`);
+  if (existsSync(metadataPath)) {
+    const metadata = JSON.parse(readFileSync(metadataPath, "utf8")) as IllustrationMetadata;
+    const path = join(imagesRoot, `${dateIso}.${imageExtension(metadata.mimeType)}`);
+    return existsSync(path) ? path : undefined;
+  }
+  const retainedJpeg = join(imagesRoot, `${dateIso}.jpg`);
+  return existsSync(retainedJpeg) ? retainedJpeg : undefined;
+}
+
 function slugify(title: string): string {
   return title
     .toLowerCase()
@@ -82,8 +102,8 @@ async function main(): Promise<void> {
     console.error(`warning: ${dateIso}'s read was withheld by the publish gates; drafting from it anyway for review, not for posting as-is`);
   }
 
-  const imagePath = join(PROPERTY_ROOT, "backstage", "images", `${dateIso}.png`);
-  const draft = buildHiveDraft(dateIso, readFileSync(documentPath, "utf8"), existsSync(imagePath) ? imagePath : undefined);
+  const imagePath = generatedImagePath(join(PROPERTY_ROOT, "backstage", "images"), dateIso);
+  const draft = buildHiveDraft(dateIso, readFileSync(documentPath, "utf8"), imagePath);
 
   const draftPath = join(PROPERTY_ROOT, "backstage", "hive-drafts", `${dateIso}.json`);
   mkdirSync(join(PROPERTY_ROOT, "backstage", "hive-drafts"), { recursive: true });

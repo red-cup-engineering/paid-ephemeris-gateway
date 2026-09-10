@@ -65,7 +65,7 @@
     "@561-group/dispatching-a-task": "0.1.2",
     "@561-group/listing-open-obligations": "0.1.2",
     "@561-group/resolving-an-identifier": "0.2.0",
-    "@red-cup-engineering/ethereum-services-section": "0.11.2",
+    "@red-cup-engineering/ethereum-engineering-services-section": "0.11.2",
     "@red-cup-engineering/json-schema-services-section": "0.1.7",
     "@red-cup-engineering/semantic-content-identify-service": "0.2.7",
     "@red-cup-engineering/solana-services-section": "0.1.0",

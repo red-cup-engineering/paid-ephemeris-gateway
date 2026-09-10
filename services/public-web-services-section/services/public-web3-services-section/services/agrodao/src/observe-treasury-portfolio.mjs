@@ -3,10 +3,10 @@ import { fileURLToPath } from "node:url";
 
 import {
   evaluateMoonwellAccountHealth, MOONWELL_ACCOUNT_HEALTH_PROFILE, observeMoonwellAccountHealth,
-} from "@red-cup-engineering/ethereum-services-section/moonwell-account-health";
+} from "@red-cup-engineering/ethereum-engineering-services-section/moonwell-account-health";
 import {
   BASE_PUBLIC_EVM_CHAIN, BASE_PUBLIC_EVM_PROVIDERS, createPublicEvmReadPool,
-} from "@red-cup-engineering/ethereum-services-section/public-evm-read";
+} from "@red-cup-engineering/ethereum-engineering-services-section/public-evm-read";
 import { allChains } from "@red-cup-engineering/treasury-observation-service/chains";
 import { observePortfolio } from "@red-cup-engineering/treasury-observation-service/portfolio";
 import { EMPTY_WITNESS_ROOT, identifyJsonSemanticContent } from "@red-cup-engineering/semantic-content-identify-service";

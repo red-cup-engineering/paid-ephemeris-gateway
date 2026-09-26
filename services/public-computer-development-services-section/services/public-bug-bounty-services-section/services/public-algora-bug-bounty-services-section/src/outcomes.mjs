@@ -1,6 +1,6 @@
 import { appendFile, mkdir, readFile } from "node:fs/promises";
-import { createHash } from "node:crypto";
 import { join } from "node:path";
+import { sha256Hex } from "@red-cup-engineering/cryptographic-computer-data-engineering-services-section/integrity";
 
 function canonical(value) {
   if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
@@ -14,7 +14,7 @@ export class Outcome {
     if (!repository || !Number.isInteger(issueNumber)) throw new TypeError("an outcome needs repository and issueNumber");
     if (!['planned', 'attempted', 'won', 'lost', 'failed', 'skipped'].includes(status)) throw new TypeError(`unknown outcome status: ${status}`);
     Object.assign(this, { repository, issueNumber, status, observedAt: observedAt ?? new Date().toISOString(), ...details });
-    this.id = `sha256:${createHash("sha256").update(canonical({ ...this })).digest("hex")}`;
+    this.id = `sha256:${sha256Hex(canonical({ ...this }))}`;
     Object.freeze(this);
   }
 }

@@ -9,6 +9,7 @@ export const NEWSCABLE_SOURCE_BUNDLE_CONTRACT = "ni:///sha-256;ebrZ90_nZRpBkxaSQ
 export const WEB_SOURCE_TEXT_CONTRACT = "ni:///sha-256;I2k7lfS_yS2236-b3gijN3QgQz9W0KkPgbFEDEoNZ5c";
 export const PRIOR_RESEARCH_CONTRACT = "ni:///sha-256;ugqKIc6VFzqzfbuJ6JNrMB4Gognt169Wm1ZC8cf3vj0";
 
+const PUBLIC_WEB_SOURCE_OBJECT_KIND = "rsc-quiescent.record";
 const URL_PATTERN = /^https?:\/\/[^\s<>"']+$/iu;
 // Six fully selected sources at this ceiling still fit comfortably inside the
 // 200k Sonnet route, while preserving enough reporting for a real manuscript.
@@ -141,11 +142,18 @@ function assertionSentences(value) {
   }).slice(0, 20);
 }
 
-// Public Web Source's textDigest is a digest of the exact UTF-8 text bytes,
-// not the JSON serialization of a JavaScript string. Object deliveries remain
-// canonically digested by this service's ordinary digest function.
+// Budget only recognizer entries present in both the original summary and
+// the exact bounded packet text. Truncation must not add a new recognizer entry to the budget.
+function packetContextAssertions(value) {
+  const original = new Set(assertionSentences(value));
+  return assertionSentences(compact(value, MAX_CURRENT_SOURCE_CONTEXT_CHARACTERS))
+    .filter((entry) => original.has(entry));
+}
+
+// Public Web Source commits text as a JSON string through the semantic
+// identity envelope in its producer object-kind domain, just like its delivery.
 function publicWebTextDigest(value) {
-  return digest(value);
+  return digest(value, PUBLIC_WEB_SOURCE_OBJECT_KIND);
 }
 
 function demandFrom(activity) {
@@ -210,7 +218,7 @@ function inspectDemand(demand) {
     publicWebDelivery = object(publicWebEvidence.object);
     const results = Array.isArray(publicWebDelivery.results) ? publicWebDelivery.results : undefined;
     const obstructions = Array.isArray(publicWebDelivery.obstructions) ? publicWebDelivery.obstructions : undefined;
-    if (!results || !obstructions || digest({ results, obstructions }) !== publicWebDelivery.deliveryDigest) {
+    if (!results || !obstructions || digest({ results, obstructions }, PUBLIC_WEB_SOURCE_OBJECT_KIND) !== publicWebDelivery.deliveryDigest) {
       return { error: { code: "public-web-custody-unproven", reason: "public Web delivery digest does not bind its acquired results and obstructions" } };
     }
     for (const raw of results) {
@@ -407,10 +415,10 @@ export function formAdmissibleResearchPacket(demand, instant = new Date().toISOS
       evidence: Object.freeze({ candidateCount: candidates.length, freshSourceCount: fresh.length, requiredTerms: Object.freeze(termWords) }),
     });
   }
-  const assertionCount = selected.reduce((count, source) => count + assertionSentences(source.summary).length, 0);
+  const assertionCount = selected.reduce((count, source) => count + packetContextAssertions(source.summary).length, 0);
   const leadAssertionCount = selected
     .filter((source) => source.url === inspected.assignment.leadSourceUrl || source.requestedUrl === inspected.assignment.leadSourceUrl)
-    .reduce((count, source) => count + assertionSentences(source.summary).length, 0);
+    .reduce((count, source) => count + packetContextAssertions(source.summary).length, 0);
   const licensedMaximumWords = assertionCount * inspected.budget.maximumWordsPerAssertion;
   const evidenceDeficits = [
     ...(assertionCount < inspected.budget.minimumDistinctAssertions

@@ -1,0 +1,35 @@
+{
+  "id": "advancing-causeway-public-computer-services",
+  "name": "Causeway Computer Services Team Lead service duty",
+  "authority": "causeway-computer-services-team-lead",
+  "claim": "causeway-computer-services-team-lead",
+  "from": "A public computer service need, integration defect, stale consumer, or failed provider-to-receiver transition.",
+  "to": "A coherent public computer capability runs through its actual consumer and receiver with necessary semantics retained; unresolved provider or receiver admission is named from observed evidence.",
+  "cost": "Bounded service and engineering attention on admitted execution capacity; no new spending or external commitments.",
+  "needs": [
+    "serve-causeway-computer-services-team-lead"
+  ],
+  "skills": [
+    "serve-causeway-computer-services-team-lead"
+  ],
+  "delegation": true,
+  "receiver-condition": "The requesting human or an independently authorized receiver checks the actual effect. The producer's report alone is not acceptance.",
+  "x-provenance": {
+    "recorded-by": "bare-cedar-fog-codex",
+    "recorded-on": "2026-10-06",
+    "basis": "emsenn requested all ChatGPT-Web agents seated in their requested offices and explicitly directed creation of missing scoped offices; role scope recovered from the current service chats.",
+    "chatgpt-account": "@emsenn.chatgpt-web@cold-red-gate.561.group"
+  },
+  "last-governance-act": {
+    "actor": "@codex@bare-cedar-fog.561.group",
+    "character": "bare-cedar-fog-codex",
+    "instructedBy": "emsenn",
+    "evidence": [
+      "Current human request: ensure all ChatGPT-Web agents are seated in their requested offices.",
+      "Current human clarification: Create their requested scoped offices."
+    ],
+    "at": "2026-10-06T20:32:57.483Z",
+    "authority": "human-founder-request:emsenn:2026-10-06",
+    "before": null
+  }
+}

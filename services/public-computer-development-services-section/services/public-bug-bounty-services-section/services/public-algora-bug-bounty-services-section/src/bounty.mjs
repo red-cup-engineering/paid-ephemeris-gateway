@@ -12,7 +12,7 @@ export class Attempt {
 
 /** The information needed to decide whether a GitHub issue is worth opening. */
 export class Bounty {
-  constructor({ repository, issueNumber, title, url, rewardUsd, attempts = [], observedAt }) {
+  constructor({ repository, issueNumber, title, url, rewardUsd, attempts = [], observedAt, platform = "algora", platformId = null, body = "" }) {
     if (!/^.+\/.+$/.test(repository ?? "")) throw new TypeError("repository must be owner/name");
     if (!Number.isInteger(issueNumber) || issueNumber < 1) throw new TypeError("issueNumber must be a positive integer");
     if (!Number.isFinite(rewardUsd) || rewardUsd < 0) throw new TypeError("rewardUsd must be a non-negative number");
@@ -23,6 +23,10 @@ export class Bounty {
     this.rewardUsd = rewardUsd;
     this.attempts = attempts.map((attempt) => attempt instanceof Attempt ? attempt : new Attempt(attempt));
     this.observedAt = observedAt ?? new Date().toISOString();
+    // Where the reward is posted: the same GitHub issue can be funded on several platforms.
+    this.platform = platform;
+    this.platformId = platformId;
+    this.body = body ?? "";
     Object.freeze(this.attempts);
     Object.freeze(this);
   }

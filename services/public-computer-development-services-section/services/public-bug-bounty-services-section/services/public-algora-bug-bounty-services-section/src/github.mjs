@@ -27,7 +27,7 @@ export async function listBounties({ query = DEFAULT_QUERY, limit = 20, token, f
     const comment = findAlgoraComment(comments);
     const rewardUsd = parseReward(comment);
     if (comment && rewardUsd !== null) {
-      bounties.push(new Bounty({ repository, issueNumber: issue.number, title: issue.title, url: issue.html_url, rewardUsd, attempts: parseAttempts(comment), observedAt }));
+      bounties.push(new Bounty({ repository, issueNumber: issue.number, title: issue.title, url: issue.html_url, rewardUsd, attempts: parseAttempts(comment), observedAt, body: issue.body ?? "" }));
     }
   }
   return bounties;

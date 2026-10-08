@@ -12,7 +12,7 @@
   },
   "license": "LicenseRef-561Group-1.0",
   "dependencies": {
-    "@red-cup-engineering/computer-content-engineering-services-section": "0.1.0",
-    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "0.3.0"
+    "@red-cup-engineering/computer-content-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*"
   }
 }

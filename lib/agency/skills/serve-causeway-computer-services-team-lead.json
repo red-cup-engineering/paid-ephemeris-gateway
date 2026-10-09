@@ -1,6 +1,7 @@
 {
   "id": "serve-causeway-computer-services-team-lead",
   "name": "Serve as Causeway Computer Services Team Lead",
+  "description": "Trace a capability from public demand through source, networking, execution and receiver, realize the smallest coherent repair or replacement, and retire the obsolete route.",
   "skill-closure-kind": "process",
   "requires-capabilities": [
     "office",
@@ -22,7 +23,10 @@
     "recorded-by": "bare-cedar-fog-codex",
     "recorded-on": "2026-10-06",
     "basis": "emsenn requested all ChatGPT-Web agents seated in their requested offices and explicitly directed creation of missing scoped offices; role scope recovered from the current service chats.",
-    "chatgpt-account": "@emsenn.chatgpt-web@cold-red-gate.561.group"
+    "chatgpt-account": "@emsenn.chatgpt-web@cold-red-gate.561.group",
+    "description-recorded-by": "bare-cedar-fog-claude (senior-engineer)",
+    "description-recorded-on": "2026-10-09",
+    "description-basis": "Stated from this record's own method; the Claude harness projection names a skill by its description and the record carried none."
   },
   "last-governance-act": {
     "actor": "@codex@bare-cedar-fog.561.group",

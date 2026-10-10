@@ -1,0 +1,45 @@
+# Install this at .github/workflows/solve-and-test.yml in your RUNNER repo (a repo you control).
+# It clones an untrusted bounty repo, applies a candidate patch, and runs its tests inside a
+# disposable GitHub Actions runner. No secrets are exposed to the untrusted code: this workflow
+# uses none, and the checkout is a plain public clone (not actions/checkout with a token).
+name: solve-and-test
+run-name: solve-and-test-${{ inputs.correlation_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      target_repo: { description: "owner/name of the bounty repo", required: true }
+      target_ref: { description: "branch/ref to test", required: true }
+      patch_url: { description: "raw URL of the candidate unified diff", required: true }
+      correlation_id: { description: "unique customer dispatch correlation", required: true }
+
+permissions: {} # no token powers granted to the untrusted job
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Clone target (untrusted)
+        run: git clone --depth 1 --branch "${{ inputs.target_ref }}" "https://github.com/${{ inputs.target_repo }}.git" work
+
+      - name: Apply candidate patch
+        working-directory: work
+        run: |
+          curl -sSL "${{ inputs.patch_url }}" -o /tmp/patch.diff
+          if grep -q '^--- ' /tmp/patch.diff 2>/dev/null; then
+            git apply --whitespace=nowarn /tmp/patch.diff || { echo "PATCH_APPLY_FAILED"; exit 1; }
+          else
+            echo "no diff supplied — base run"
+          fi
+
+      - name: Detect and run tests
+        working-directory: work
+        run: |
+          set -e
+          if [ -f package.json ]; then npm install --no-audit --no-fund && npm test --silent
+          elif [ -f pyproject.toml ] || [ -f requirements.txt ]; then pip install -e . 2>/dev/null || pip install -r requirements.txt; pytest -q
+          elif [ -f Cargo.toml ]; then cargo test
+          elif [ -f go.mod ]; then go test ./...
+          elif [ -f Makefile ]; then make test
+          else echo "NO_TEST_HARNESS"; exit 1
+          fi

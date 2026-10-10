@@ -1,0 +1,18 @@
+{
+  "profile": "org.emsenn.evm.public-account-observation.v1",
+  "subject": "urn:ame:yanagi",
+  "observer": "urn:ame:agrodao",
+  "chain": {
+    "chainId": 42161,
+    "caip2": "eip155:42161"
+  },
+  "account": {
+    "address": "0x224C08A8526751887a83e2711B167f890c6D078d",
+    "caip10": "eip155:42161:0x224C08A8526751887a83e2711B167f890c6D078d"
+  },
+  "authority": {
+    "observationOnly": true,
+    "signerMaterialPresent": false,
+    "transactionAuthorityGranted": false
+  }
+}

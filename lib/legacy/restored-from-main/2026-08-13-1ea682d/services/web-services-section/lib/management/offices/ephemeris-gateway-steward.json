@@ -1,0 +1,36 @@
+{
+  "id": "ephemeris-gateway-steward",
+  "name": "ephemeris gateway steward",
+  "kind": "office",
+  "normative-structure": "Whether the paid ephemeris gateway ever serves its product without a facilitator-confirmed settled x402 payment, and whether it ever holds, custodies, or moves the paying agent's funds itself rather than leaving verification and settlement to the configured external facilitator, is this office's own record. It persists across incumbents and vacancy alike: the deontic profile below binds whoever or whatever operates src/server.mjs, rather than any one operator. Its shape is the same predication cell as any office in this pool: subject (ephemeris-gateway-steward) enacts/serves (predicate) the gateway's x402/facilitator payment boundary and its served product (object), and the office answers for that boundary staying honest — no custody, no unpaid serving, no unaudited or out-of-window product — rather than for any single request's outcome.",
+  "deontic-profile": {
+    "gate-service-on-a-facilitator-confirmed-settled-x402-payment": "duty",
+    "serve-only-the-independently-audited-range-guarded-ephemeris-product": "duty",
+    "reject-an-invalid-or-out-of-window-date-before-any-payment-is-requested": "duty",
+    "flip-the-network-and-facilitator-target-between-testnet-and-mainnet-by-environment": "deontic-power",
+    "decline-to-custody-broadcast-or-move-the-paying-agents-funds": "deontic-immunity",
+    "decline-to-serve-a-date-outside-the-audited-1800-2050-window": "deontic-immunity",
+    "decline-to-hardcode-a-payout-address-in-source": "deontic-immunity"
+  },
+  "authority-scope": [
+    "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section/"
+  ],
+  "jurisdiction": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section/",
+  "part-of": "astrology-services-section",
+  "reports-to": [],
+  "theory-basis": [
+    "the agentic-metro-enterprise idea: a sovereign settlement rooted in informational territory, possessing its own identity, constitution, books, offices, obligations, admissions, capabilities, borders, and means of refusal",
+    "the cryptographic-services-section's own established boundary pattern (lib/emsenn/services/561-group/services/red-cup-engineering/services/cryptographic-services-section/content/contracts/cryptographic-services.json): a service that touches settlement primitives derives identity and signs or verifies, but never broadcasts and never moves value itself — generalized here to a facilitator-mediated x402 payment rather than a locally-held key",
+    "the gateway's own contract (content/contracts/paid-ephemeris-gateway.json) and its implementation comment in src/server.mjs: pre-payment date validation runs before the x402 gate specifically so a request that can never be fulfilled is refused for free, and the served product is the ephemeris-tracking-team's independently accuracy-audited, range-guarded computeEphemeris() output, never a placeholder"
+  ],
+  "unrealized": [
+    "mainnet CDP-facilitator credentials (CDP_API_KEY_ID/CDP_API_KEY_SECRET or the CDP_API_KEY_NAME/CDP_API_KEY_PRIVATE_KEY pair) are not present in this repository — the flip-the-network-and-facilitator-target power is presently exercised only against the keyless public testnet facilitator, never observed against Base mainnet",
+    "the Coinbase Bazaar auto-listing this route declares takes effect only once a CDP-facilitator-settled payment actually occurs — not yet observed, since no mainnet run has happened"
+  ],
+  "founded": "2026-07-18",
+  "x-provenance": {
+    "recorded-by": "claude/union-recovery-agent",
+    "recorded-on": "2026-07-18",
+    "derived-from": "user directive of 2026-07-18: bring paid-ephemeris-gateway up to full union realization standard, mirroring the LISS and cryptographic-services-section templates"
+  }
+}

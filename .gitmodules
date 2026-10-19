@@ -62,3 +62,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-work-rectification-assay-service
 	url = https://github.com/causeway-services/software-work-rectification-assay-service.git
 	branch = main
+[submodule "software-static-verification-service"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-static-verification-service
+	url = https://github.com/causeway-services/software-static-verification-service.git
+	branch = main

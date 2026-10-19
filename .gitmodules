@@ -30,3 +30,7 @@
 	path = services/web-services-section/services/media-services-section/services/koios-news/services/newswire-editorial-production
 	url = https://github.com/causeway-services/newswire-editorial-production.git
 	branch = main
+[submodule "independent-editorial-assessment"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/services/independent-editorial-assessment
+	url = https://github.com/causeway-services/independent-editorial-assessment.git
+	branch = main

@@ -1,9 +1,0 @@
-{
-  "name": "@rsc-quiescent/algora-work-board",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "description": "Circuit board whose sovereign dies observe, assay, allocate, synthesize, execute, adjudicate, publish, witness, and rectify software work.",
-  "scripts": {},
-  "license": "LicenseRef-561Group-1.0"
-}

@@ -23,54 +23,6 @@
 	path = services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section
 	url = https://github.com/causeway-services/paid-ephemeris-gateway.git
 	branch = main
-[submodule "software-work-risk-assay-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/work-risk-assay-service
-	url = https://github.com/causeway-services/software-work-risk-assay-service.git
-	branch = main
-[submodule "software-work-qualification-assay-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/work-qualification-assay-service
-	url = https://github.com/causeway-services/software-work-qualification-assay-service.git
-	branch = main
-[submodule "software-work-allocation-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/work-allocation-service
-	url = https://github.com/causeway-services/software-work-allocation-service.git
-	branch = main
-[submodule "software-work-witness-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-work-witness-service
-	url = https://github.com/causeway-services/software-work-witness-service.git
-	branch = main
-[submodule "software-work-rectification-assay-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-work-rectification-assay-service
-	url = https://github.com/causeway-services/software-work-rectification-assay-service.git
-	branch = main
-[submodule "software-static-verification-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-static-verification-service
-	url = https://github.com/causeway-services/software-static-verification-service.git
-	branch = main
-[submodule "software-sandbox-execution-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-sandbox-execution-service
-	url = https://github.com/causeway-services/software-sandbox-execution-service.git
-	branch = main
-[submodule "software-patch-synthesis-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-patch-synthesis-service
-	url = https://github.com/causeway-services/software-patch-synthesis-service.git
-	branch = main
-[submodule "software-execution-adjudication-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-execution-adjudication-service
-	url = https://github.com/causeway-services/software-execution-adjudication-service.git
-	branch = main
-[submodule "repository-material-observation-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/repository-material-observation-service
-	url = https://github.com/causeway-services/repository-material-observation-service.git
-	branch = main
-[submodule "algora-opportunity-observation-service"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/opportunity-observation-service
-	url = https://github.com/causeway-services/algora-opportunity-observation-service.git
-	branch = main
-[submodule "algora-work-board-conductor"]
-	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/algora-work-board-conductor
-	url = https://github.com/causeway-services/algora-work-board-conductor.git
-	branch = main
 [submodule "cassia-lorne-substack-com"]
 	path = services/web-services-section/lib/characters/cassia-lorne/sites/substack
 	url = https://github.com/causeway-services/cassia-lorne-substack-com.git
@@ -78,4 +30,8 @@
 [submodule "koios-news-service-section"]
 	path = services/web-services-section/services/media-services-section/services/koios-news
 	url = https://github.com/causeway-services/koios-news-service-section.git
+	branch = main
+[submodule "algora-work-board"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board
+	url = https://github.com/causeway-services/algora-work-board.git
 	branch = main

@@ -54,3 +54,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/work-allocation-service
 	url = https://github.com/causeway-services/software-work-allocation-service.git
 	branch = main
+[submodule "software-work-witness-service"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-work-witness-service
+	url = https://github.com/causeway-services/software-work-witness-service.git
+	branch = main

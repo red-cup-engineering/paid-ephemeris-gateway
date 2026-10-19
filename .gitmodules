@@ -26,3 +26,7 @@
 	path = services/web-services-section/services/media-services-section/services/koios-news/services/web-source-acquisition
 	url = https://github.com/causeway-services/web-source-acquisition.git
 	branch = main
+[submodule "newswire-editorial-production"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/services/newswire-editorial-production
+	url = https://github.com/causeway-services/newswire-editorial-production.git
+	branch = main

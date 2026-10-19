@@ -42,3 +42,7 @@
 	path = services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section
 	url = https://github.com/causeway-services/paid-ephemeris-gateway.git
 	branch = main
+[submodule "software-work-risk-assay-service"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/work-risk-assay-service
+	url = https://github.com/causeway-services/software-work-risk-assay-service.git
+	branch = main

@@ -35,3 +35,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board
 	url = https://github.com/causeway-services/algora-work-board.git
 	branch = main
+[submodule "blockchain-trashpanda-services-section"]
+	path = services/blockchain-services-section/services/blockchain-trashpanda-services-section
+	url = https://github.com/causeway-services/blockchain-trashpanda-services-section.git
+	branch = main

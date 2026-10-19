@@ -38,3 +38,7 @@
 	path = services/web-services-section/services/media-services-section/services/koios-news/services/activitypub-retained-inbox-provider
 	url = https://github.com/causeway-services/activitypub-retained-inbox-provider.git
 	branch = main
+[submodule "paid-ephemeris-gateway"]
+	path = services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section
+	url = https://github.com/causeway-services/paid-ephemeris-gateway.git
+	branch = main

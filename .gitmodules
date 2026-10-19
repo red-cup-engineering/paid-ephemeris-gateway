@@ -90,3 +90,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/algora-work-board-conductor
 	url = https://github.com/causeway-services/algora-work-board-conductor.git
 	branch = main
+[submodule "cassia-lorne-substack-com"]
+	path = services/web-services-section/lib/characters/cassia-lorne/sites/substack
+	url = https://github.com/causeway-services/cassia-lorne-substack-com.git
+	branch = main

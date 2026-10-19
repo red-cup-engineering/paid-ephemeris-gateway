@@ -82,3 +82,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/repository-material-observation-service
 	url = https://github.com/causeway-services/repository-material-observation-service.git
 	branch = main
+[submodule "algora-opportunity-observation-service"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/opportunity-observation-service
+	url = https://github.com/causeway-services/algora-opportunity-observation-service.git
+	branch = main

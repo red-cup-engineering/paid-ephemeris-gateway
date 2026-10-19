@@ -1,9 +1,6 @@
 [submodule "services/web-services-section/services/web2-services-section/discord-services-section/turntide-islands"]
 	path = services/web-services-section/services/web2-services-section/discord-services-section/turntide-islands
 	url = https://github.com/emsenn/2025-12-15-turntide-islands.git
-[submodule "services/web-services-section/services/media-services-section/services/koios-news/sites/experimental.koios.news"]
-	path = services/web-services-section/services/media-services-section/services/koios-news/sites/experimental.koios.news
-	url = https://github.com/emsenn/experimental.koios.news.git
 [submodule "services/web-services-section/services/web3-services-section/defi-services-section"]
 	path = services/web-services-section/services/web3-services-section/defi-services-section
 	url = https://github.com/emsenn/defi-services-section.git
@@ -22,22 +19,6 @@
 [submodule "services/public-web-services-section"]
 	path = services/public-web-services-section
 	url = https://github.com/causeway-services/public-web-services-section.git
-[submodule "web-source-acquisition"]
-	path = services/web-services-section/services/media-services-section/services/koios-news/services/web-source-acquisition
-	url = https://github.com/causeway-services/web-source-acquisition.git
-	branch = main
-[submodule "newswire-editorial-production"]
-	path = services/web-services-section/services/media-services-section/services/koios-news/services/newswire-editorial-production
-	url = https://github.com/causeway-services/newswire-editorial-production.git
-	branch = main
-[submodule "independent-editorial-assessment"]
-	path = services/web-services-section/services/media-services-section/services/koios-news/services/independent-editorial-assessment
-	url = https://github.com/causeway-services/independent-editorial-assessment.git
-	branch = main
-[submodule "activitypub-retained-inbox-provider"]
-	path = services/web-services-section/services/media-services-section/services/koios-news/services/activitypub-retained-inbox-provider
-	url = https://github.com/causeway-services/activitypub-retained-inbox-provider.git
-	branch = main
 [submodule "paid-ephemeris-gateway"]
 	path = services/web-services-section/services/divination-services-section/services/astrology-services-section/services/astrology-emphemeris-services-section
 	url = https://github.com/causeway-services/paid-ephemeris-gateway.git
@@ -93,4 +74,8 @@
 [submodule "cassia-lorne-substack-com"]
 	path = services/web-services-section/lib/characters/cassia-lorne/sites/substack
 	url = https://github.com/causeway-services/cassia-lorne-substack-com.git
+	branch = main
+[submodule "koios-news-service-section"]
+	path = services/web-services-section/services/media-services-section/services/koios-news
+	url = https://github.com/causeway-services/koios-news-service-section.git
 	branch = main

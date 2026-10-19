@@ -22,3 +22,7 @@
 [submodule "services/public-web-services-section"]
 	path = services/public-web-services-section
 	url = https://github.com/causeway-services/public-web-services-section.git
+[submodule "web-source-acquisition"]
+	path = services/web-services-section/services/media-services-section/services/koios-news/services/web-source-acquisition
+	url = https://github.com/causeway-services/web-source-acquisition.git
+	branch = main

@@ -74,3 +74,7 @@
 	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-patch-synthesis-service
 	url = https://github.com/causeway-services/software-patch-synthesis-service.git
 	branch = main
+[submodule "software-execution-adjudication-service"]
+	path = services/web-services-section/services/software-development-services-section/algora-work-board/services/software-execution-adjudication-service
+	url = https://github.com/causeway-services/software-execution-adjudication-service.git
+	branch = main

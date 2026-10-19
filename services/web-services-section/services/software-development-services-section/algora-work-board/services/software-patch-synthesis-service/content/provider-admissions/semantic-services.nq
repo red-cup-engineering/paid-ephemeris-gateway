@@ -1,2 +1,0 @@
-<urn:ame:rmn-semantic-conformance> <urn:union:service-role:rmn-conformance> <http://127.0.0.1:8786/.well-known/agent-card.json> <urn:ame:software-patch-synthesis-service:service-admissions> .
-<urn:ame:witness-journal-rdf-projection-service> <urn:union:service-role:witness-journal-rdf> <http://127.0.0.1:19763/.well-known/agent-card.json> <urn:ame:software-patch-synthesis-service:service-admissions> .

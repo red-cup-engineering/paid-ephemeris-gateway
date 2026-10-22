@@ -1,0 +1,1252 @@
+{
+  "$schemaNote": "One cartridge-manifest-shaped entry per game, validated against the real, published @red-cup-engineering/cartridge's validateManifest by test/smoke.test.mts (full strict validation when cartridgeWrapped is true, an honest subset check otherwise). A field this catalog can't fill in yet is omitted, never set to null. status, statusNote, repoPath, cartridgeWrapped, energyBankWrapped, and shelf are storefront-only extensions, not part of the manifest spec.",
+  "generated": "2026-09-01",
+  "games": [
+    {
+      "id": "solitaire",
+      "displayName": "Solitaire",
+      "description": "One rules engine, variant rules as data: Klondike, FreeCell, and Spider (1/2/4-suit) all read from the same declarative VariantSpec, with deterministic seeded deals, a solver-certified FreeCell deal generator, and a move-log that doubles as undo/redo and proof-of-play.",
+      "subdomain": "solitaire",
+      "configs": [
+        {
+          "id": "klondike-draw1",
+          "displayName": "Klondike (Draw 1)",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4,
+            "drawCount": 1
+          }
+        },
+        {
+          "id": "klondike-draw3",
+          "displayName": "Klondike (Draw 3)",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4,
+            "drawCount": 3
+          }
+        },
+        {
+          "id": "freecell",
+          "displayName": "FreeCell",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4
+          }
+        },
+        {
+          "id": "spider-1suit",
+          "displayName": "Spider (1 Suit)",
+          "params": {
+            "decks": 2,
+            "suitsInPlay": 1
+          }
+        },
+        {
+          "id": "spider-2suit",
+          "displayName": "Spider (2 Suit)",
+          "params": {
+            "decks": 2,
+            "suitsInPlay": 2
+          }
+        },
+        {
+          "id": "spider-4suit",
+          "displayName": "Spider (4 Suit)",
+          "params": {
+            "decks": 2,
+            "suitsInPlay": 4
+          }
+        },
+        {
+          "id": "yukon",
+          "displayName": "Yukon",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4
+          }
+        },
+        {
+          "id": "forty-thieves",
+          "displayName": "Forty Thieves",
+          "params": {
+            "decks": 2,
+            "suitsInPlay": 4,
+            "drawCount": 1
+          }
+        },
+        {
+          "id": "golf",
+          "displayName": "Golf",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4
+          }
+        },
+        {
+          "id": "tripeaks",
+          "displayName": "TriPeaks",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4
+          }
+        },
+        {
+          "id": "pyramid",
+          "displayName": "Pyramid",
+          "params": {
+            "decks": 1,
+            "suitsInPlay": 4
+          }
+        }
+      ],
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "daily-utc"
+      },
+      "intentLog": {
+        "schemaVersion": "solitaire-cartridge-v1",
+        "schemaRef": "src/cartridge.mts#SolitaireIntent"
+      },
+      "replayVerifier": "src/cartridge.manifest.mts#verify",
+      "keywords": [
+        "klondike",
+        "freecell",
+        "spider",
+        "solitaire",
+        "card-game"
+      ],
+      "status": "playable",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": true,
+      "shelf": "Card Table",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/solitaire-service"
+    },
+    {
+      "id": "gambling-trainer",
+      "displayName": "Kelly's Wager",
+      "description": "A daily-seeded, practice-bankroll trainer for expected value, variance, and Kelly-criterion sizing. Every offer is graded against the real Kelly optimum, adversarially-framed traps are labeled honestly by the numbers even when the pitch lies, and every spend is typed on screen as freely reversible, priced, or terminal. Earn-only: no real currency ever enters or leaves.",
+      "subdomain": "gambling-trainer",
+      "configs": [
+        {
+          "id": "novice",
+          "displayName": "Novice — 6 wagers, gentle traps",
+          "params": {
+            "offerCount": 6,
+            "trapRate": 0.3
+          }
+        },
+        {
+          "id": "sharp",
+          "displayName": "Sharp — 10 wagers, frequent traps",
+          "params": {
+            "offerCount": 10,
+            "trapRate": 0.5
+          }
+        }
+      ],
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "daily-utc"
+      },
+      "intentLog": {
+        "schemaVersion": "gambling-trainer-cartridge-v1",
+        "schemaRef": "src/cartridge.mts#WagerIntent"
+      },
+      "replayVerifier": "src/manifest.mts#verify",
+      "keywords": [
+        "kelly-criterion",
+        "bankroll-management",
+        "expected-value",
+        "daily-puzzle",
+        "practice-bankroll"
+      ],
+      "status": "playable",
+      "statusNote": "Practice bankroll only -- no real currency, no energy-bank settlement (see DESIGN.md).",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": true,
+      "shelf": "Card Table",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/gambling-trainer-service"
+    },
+    {
+      "id": "flickering-delve",
+      "displayName": "Flickering Delve",
+      "description": "An idle-roguelike where the real game is writing the standing-order program that plays the descent for you.",
+      "subdomain": "flickering",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "POST /session, POST /input, GET /stream (JSON-over-HTTP + SSE; no browser required)"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "flickering-delve-cartridge-v1"
+      },
+      "keywords": [
+        "idle-roguelike",
+        "feltos",
+        "procedural-generation",
+        "automation",
+        "lisp",
+        "dungeon-crawler"
+      ],
+      "status": "playable",
+      "energy": {
+        "hooksRef": "src/ledger.mts (real double-entry ledger; not yet wrapped as EnergyHooks)",
+        "accountNamespace": "flickering-delve"
+      },
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "shelf": "Puzzle Den",
+      "statusNote": "Cartridge layer (src/cartridge.mts) was removed as unconsumed; game runs on src/ledger.mts directly. Re-wrap when a real replayVerifier export exists again.",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/flickering-delve-service"
+    },
+    {
+      "id": "onestone",
+      "displayName": "TileSlots",
+      "description": "A serious match-3 whose differentiator is the tessellation itself — one tiling-agnostic graph engine playing square, hex, and rhombille boards, climbing toward aperiodic tilings.",
+      "subdomain": "onestone",
+      "configs": [
+        {
+          "id": "1",
+          "displayName": "Square · Level 1",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 30
+          }
+        },
+        {
+          "id": "2",
+          "displayName": "Square · Level 2",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 29
+          }
+        },
+        {
+          "id": "3",
+          "displayName": "Square · Level 3",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 29
+          }
+        },
+        {
+          "id": "4",
+          "displayName": "Square · Level 4",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 28
+          }
+        },
+        {
+          "id": "5",
+          "displayName": "Square · Level 5",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 27
+          }
+        },
+        {
+          "id": "6",
+          "displayName": "Square · Level 6",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 27
+          }
+        },
+        {
+          "id": "7",
+          "displayName": "Square · Level 7",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 26
+          }
+        },
+        {
+          "id": "8",
+          "displayName": "Square · Level 8",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 26
+          }
+        },
+        {
+          "id": "9",
+          "displayName": "Square · Level 9",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 25
+          }
+        },
+        {
+          "id": "10",
+          "displayName": "Square · Level 10",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 24
+          }
+        },
+        {
+          "id": "11",
+          "displayName": "Square · Level 11",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 24
+          }
+        },
+        {
+          "id": "12",
+          "displayName": "Square · Level 12",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 23
+          }
+        },
+        {
+          "id": "13",
+          "displayName": "Square · Level 13",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 22
+          }
+        },
+        {
+          "id": "14",
+          "displayName": "Square · Level 14",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 22
+          }
+        },
+        {
+          "id": "15",
+          "displayName": "Square · Level 15",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 21
+          }
+        },
+        {
+          "id": "16",
+          "displayName": "Square · Level 16",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 21
+          }
+        },
+        {
+          "id": "17",
+          "displayName": "Square · Level 17",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 20
+          }
+        },
+        {
+          "id": "18",
+          "displayName": "Square · Level 18",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 19
+          }
+        },
+        {
+          "id": "19",
+          "displayName": "Square · Level 19",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 19
+          }
+        },
+        {
+          "id": "20",
+          "displayName": "Square · Level 20",
+          "params": {
+            "tiling": "square",
+            "chapter": 0,
+            "moves": 18
+          }
+        },
+        {
+          "id": "21",
+          "displayName": "Hex · Level 1",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 30
+          }
+        },
+        {
+          "id": "22",
+          "displayName": "Hex · Level 2",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 29
+          }
+        },
+        {
+          "id": "23",
+          "displayName": "Hex · Level 3",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 29
+          }
+        },
+        {
+          "id": "24",
+          "displayName": "Hex · Level 4",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 28
+          }
+        },
+        {
+          "id": "25",
+          "displayName": "Hex · Level 5",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 27
+          }
+        },
+        {
+          "id": "26",
+          "displayName": "Hex · Level 6",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 27
+          }
+        },
+        {
+          "id": "27",
+          "displayName": "Hex · Level 7",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 26
+          }
+        },
+        {
+          "id": "28",
+          "displayName": "Hex · Level 8",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 26
+          }
+        },
+        {
+          "id": "29",
+          "displayName": "Hex · Level 9",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 25
+          }
+        },
+        {
+          "id": "30",
+          "displayName": "Hex · Level 10",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 24
+          }
+        },
+        {
+          "id": "31",
+          "displayName": "Hex · Level 11",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 24
+          }
+        },
+        {
+          "id": "32",
+          "displayName": "Hex · Level 12",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 23
+          }
+        },
+        {
+          "id": "33",
+          "displayName": "Hex · Level 13",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 22
+          }
+        },
+        {
+          "id": "34",
+          "displayName": "Hex · Level 14",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 22
+          }
+        },
+        {
+          "id": "35",
+          "displayName": "Hex · Level 15",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 21
+          }
+        },
+        {
+          "id": "36",
+          "displayName": "Hex · Level 16",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 21
+          }
+        },
+        {
+          "id": "37",
+          "displayName": "Hex · Level 17",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 20
+          }
+        },
+        {
+          "id": "38",
+          "displayName": "Hex · Level 18",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 19
+          }
+        },
+        {
+          "id": "39",
+          "displayName": "Hex · Level 19",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 19
+          }
+        },
+        {
+          "id": "40",
+          "displayName": "Hex · Level 20",
+          "params": {
+            "tiling": "hex",
+            "chapter": 1,
+            "moves": 18
+          }
+        },
+        {
+          "id": "41",
+          "displayName": "Rhombille · Level 1",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 30
+          }
+        },
+        {
+          "id": "42",
+          "displayName": "Rhombille · Level 2",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 29
+          }
+        },
+        {
+          "id": "43",
+          "displayName": "Rhombille · Level 3",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 29
+          }
+        },
+        {
+          "id": "44",
+          "displayName": "Rhombille · Level 4",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 28
+          }
+        },
+        {
+          "id": "45",
+          "displayName": "Rhombille · Level 5",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 27
+          }
+        },
+        {
+          "id": "46",
+          "displayName": "Rhombille · Level 6",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 27
+          }
+        },
+        {
+          "id": "47",
+          "displayName": "Rhombille · Level 7",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 26
+          }
+        },
+        {
+          "id": "48",
+          "displayName": "Rhombille · Level 8",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 26
+          }
+        },
+        {
+          "id": "49",
+          "displayName": "Rhombille · Level 9",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 25
+          }
+        },
+        {
+          "id": "50",
+          "displayName": "Rhombille · Level 10",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 24
+          }
+        },
+        {
+          "id": "51",
+          "displayName": "Rhombille · Level 11",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 24
+          }
+        },
+        {
+          "id": "52",
+          "displayName": "Rhombille · Level 12",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 23
+          }
+        },
+        {
+          "id": "53",
+          "displayName": "Rhombille · Level 13",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 22
+          }
+        },
+        {
+          "id": "54",
+          "displayName": "Rhombille · Level 14",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 22
+          }
+        },
+        {
+          "id": "55",
+          "displayName": "Rhombille · Level 15",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 21
+          }
+        },
+        {
+          "id": "56",
+          "displayName": "Rhombille · Level 16",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 21
+          }
+        },
+        {
+          "id": "57",
+          "displayName": "Rhombille · Level 17",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 20
+          }
+        },
+        {
+          "id": "58",
+          "displayName": "Rhombille · Level 18",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 19
+          }
+        },
+        {
+          "id": "59",
+          "displayName": "Rhombille · Level 19",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 19
+          }
+        },
+        {
+          "id": "60",
+          "displayName": "Rhombille · Level 20",
+          "params": {
+            "tiling": "rhombille",
+            "chapter": 2,
+            "moves": 18
+          }
+        }
+      ],
+      "entryPoints": {
+        "browser": "/",
+        "headless": "POST /session, POST /input, GET /stream (JSON-over-HTTP + SSE; no browser required)"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "onestone-cartridge-v1",
+        "schemaRef": "src/cartridge.mts#OnestoneIntent"
+      },
+      "replayVerifier": "src/cartridge.manifest.mts#verify",
+      "keywords": [
+        "match-3",
+        "tessellation",
+        "puzzle",
+        "aperiodic-tiling",
+        "graph-engine"
+      ],
+      "status": "playable",
+      "energy": {
+        "hooksRef": "src/ledger.mts (real double-entry ledger, a documented near-verbatim port of flickering-delve's; not yet wrapped as EnergyHooks)",
+        "accountNamespace": "onestone"
+      },
+      "energyBankWrapped": false,
+      "cartridgeWrapped": true,
+      "shelf": "Puzzle Den",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/onestone-service"
+    },
+    {
+      "id": "crucible",
+      "displayName": "Crucible",
+      "description": "A daily-seeded settling puzzle: the day's tangle (a reaction network of claims and bonds) must be brought to zero-H1 settlement by merge/split/rebond/catalyze moves, and every move's energy cost is the real obstruction mathematics (spatial/temporal H1, settling regime) of @lenticule-science/metrologic, not a designer spreadsheet.",
+      "subdomain": "crucible",
+      "entryPoints": {
+        "browser": "/web/index.html"
+      },
+      "seedPolicy": {
+        "kind": "daily-utc"
+      },
+      "intentLog": {
+        "schemaVersion": "crucible-v1"
+      },
+      "status": "playable",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "obstruction-theory",
+        "daily-puzzle",
+        "cohomology",
+        "settling",
+        "waidan",
+        "puzzle"
+      ],
+      "shelf": "Puzzle Den",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/crucible-service"
+    },
+    {
+      "id": "stoke",
+      "displayName": "Stoke",
+      "description": "The kind incremental: build a real production graph (nodes feed nodes, at rates you choose), and prestige is not an authored curve -- it is the dominant Perron-Frobenius eigenvalue of the production matrix you actually built, computed by real power iteration. No dark patterns structurally: no payments, no ads, no energy system, nothing that regenerates only by waiting.",
+      "subdomain": "stoke",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "stoke-cartridge-v1"
+      },
+      "status": "playable",
+      "statusNote": "cartridgeWrapped is false here pending independent validation against @red-cup-engineering/cartridge, though stoke-service's own test suite claims a real src/cartridge.mts adoption.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "incremental",
+        "idle-game",
+        "linear-algebra",
+        "perron-frobenius",
+        "production-graph",
+        "prestige"
+      ],
+      "shelf": "Puzzle Den",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/stoke-service"
+    },
+    {
+      "id": "lantern",
+      "displayName": "Lantern",
+      "description": "A digital garden and knowledge vault, gamified: a wing of your own notes compiles into a walkable map, lit room by room as FSRS-lite spaced repetition keeps each fact fresh in memory.",
+      "subdomain": "lantern",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "src/srs.mts (pure module export: reviewCard(state, grade, now) importable directly, no server needed)"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "seedPolicyNote": "No seed is actually consumed -- SRS state is not seed-derived. 'on-demand' is the closest-fit placeholder; see spec section 1.2's Lantern fit note.",
+      "intentLog": {
+        "schemaVersion": "lantern-v1"
+      },
+      "status": "playable",
+      "statusNote": "No seed, no ledger -- the 'cartridge without an economy' case the spec names explicitly.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "spaced-repetition",
+        "knowledge-garden",
+        "srs",
+        "fsrs",
+        "study",
+        "digital-garden"
+      ],
+      "shelf": "Study",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/lantern-service"
+    },
+    {
+      "id": "weiqi",
+      "displayName": "Weiqi",
+      "description": "A pure, dependency-free weiqi (Go) rules kernel -- five rulesets, SGF round-tripping, a semantic event layer -- paired with a real, tested client-side web app: Play (Capture Go vs. a scripted bot), Learn (interactive lesson player), and Read (compiled glossary). A competitive real-time/correspondence Play service against other humans is still declared, not built.",
+      "subdomain": "weiqi",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "apps/weiqi-kernel/src/index.mts (pure module export, no server needed)"
+      },
+      "entryPointsNote": "Deployed to weiqi.561.group (Cloud Run service \"weiqi\", static apps/weiqi-web/public served via scripts/serve.mjs -- PORT/HOST honor the Cloud Run convention). npm run build && npm run serve inside apps/weiqi-web still serves the identical Play/Learn/Tsumego/Read pages locally at http://localhost:8080/ for development.",
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "seedPolicyNote": "The bot-play Capture Go mode has no seed policy of its own (the bot is a deterministic pure function of board state, not a seed); no Play-vs-human service exists yet to fix a daily/client-supplied seed policy.",
+      "intentLog": {
+        "schemaVersion": "weiqi-v1"
+      },
+      "status": "playable",
+      "statusNote": "Polish-phase pass (2026-08-20): gradient/shadow/sheen stone rendering, shape-coded ko/last-move markers, a magnifier-and-cancel touch flow, live concept-recognition toasts with hover-card glossary links, and an SRS-scheduled tsumego trainer are real and tested (168/168). Honest gaps, not yet built: no captured-stones tray or live score display; a territory/ownership-heatmap renderer exists in board.mjs but is not wired to any live page; one wood board theme; no move-number-on-stone option. A competitive real-time/correspondence Play service against other humans is still declared, not built.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "go",
+        "weiqi",
+        "board-game",
+        "rules-kernel",
+        "tsumego",
+        "sgf",
+        "capture-go"
+      ],
+      "shelf": "Study",
+      "repoPath": "lib/emsenn/services/561-group/services/science-services-section/services/philosophy-services-section/services/relationality-services-section/services/agency-services-section/services/being-services-section/services/doing-services-section/services/playing-services-section/services/gaming-services-section/services/board-games-services-section/services/weiqi-services-section"
+    },
+    {
+      "id": "ruinfold",
+      "displayName": "Ruinfold",
+      "description": "A seeded-daily roguelike: everyone descends the same keep within a 24-hour UTC window, risking a five-way bilattice death model, for a leaderboard place and a satoshi payout or a gear boon for next week.",
+      "subdomain": "ruinfold",
+      "entryPoints": {
+        "browser": "/play",
+        "headless": "GET /daily[?date=], POST /runs, GET /leaderboard/:date, GET /replay/:runId, GET /boons/:player (JSON-over-HTTP; no browser required)"
+      },
+      "seedPolicy": {
+        "kind": "daily-utc"
+      },
+      "intentLog": {
+        "schemaVersion": "ruinfold-v1"
+      },
+      "status": "playable",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "roguelike",
+        "daily-seed",
+        "bilattice",
+        "dungeon",
+        "leaderboard"
+      ],
+      "shelf": "Deep",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/ruinfold-services-section/apps/ruinfold"
+    },
+    {
+      "id": "durante",
+      "displayName": "Durante",
+      "description": "A QUAKE-like first-person shooter with a daily seeded arena: everyone who plays a given UTC day faces the same maze and demons, rendered by a real software raycaster (@red-cup-engineering/abrash) into a browser <canvas>. Keyboard-complete (arrows/WASD move+turn, space fires) -- no mouse, no pointer lock required. Agents compete as peers through the same public intent-log API a human's terminal client uses, self-labeled honestly on the leaderboard.",
+      "subdomain": "durante",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "GET /daily[?date=], POST /runs, GET /leaderboard/:date, GET /replay/:runId (JSON-over-HTTP; no browser required)"
+      },
+      "seedPolicy": {
+        "kind": "daily-utc"
+      },
+      "intentLog": {
+        "schemaVersion": "durante-v1"
+      },
+      "status": "playable",
+      "statusNote": "src/cartridge.mjs (createDailyEngine) is wired into both the server and the browser client as of 2026-08-20; the arena is a real per-UTC-day seed, not the old fixed authored one (world/blood-merge.jsonl remains a federated seed input, not the whole arena). src/manifest.mjs exports a CartridgeManifest, but nothing outside this app consumes it yet -- cartridgeWrapped stays false below until that's true (see the deploy runbook's durante section for the tournament/live-loop proof).",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "fps",
+        "quake-like",
+        "shooter",
+        "raycaster",
+        "canvas",
+        "keyboard-only",
+        "federation",
+        "paraconsistent",
+        "bilattice"
+      ],
+      "shelf": "unshelved",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/durante-services-section/apps/durante"
+    },
+    {
+      "id": "farstone",
+      "displayName": "Farstone",
+      "description": "A walkable, 58-room New England harbor town built on FeltOS, carried live by QwzSpace, and rendered as a calm TUFTE interface. Exits, neighbors, evidence, weather, and exact-name commands all come from the same persistent world.",
+      "subdomain": "farstone",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "POST /connect, POST /command, POST /tick, GET /events?actor=, GET /metrics (JSON-over-HTTP), plus QwzSpace WebSocket at /"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "farstone-v1"
+      },
+      "status": "playable",
+      "statusNote": "The harbor sleeps between visits and catches up in bounded steps on requests; every settled mutation is flushed to persistent storage.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "mud",
+        "text-adventure",
+        "harbor",
+        "feltos",
+        "qwzspace",
+        "tufte",
+        "persistent-world",
+        "rest-api",
+        "headless"
+      ],
+      "shelf": "Deep",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/sites/farstone.561.group"
+    },
+    {
+      "id": "aletheon",
+      "displayName": "Aletheon",
+      "description": "A browser 3D fantasy MMORPG built on QwzSpace: a hand-rolled RFC 6455 WebSocket server running a 15Hz tick loop, with real combat, claim altars, an illocutionary speech-act system (assert/deny/abstain/contest), marks, K4-gauge powers, and an economy, over a four-valued bilattice world-truth model.",
+      "subdomain": "aletheon",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "aletheon-v1"
+      },
+      "status": "playable",
+      "statusNote": "Known limitation: marks and inventory mutate state directly and do not survive a restore. (Event-log compaction and the sustained-traffic OOM crash-loop this used to note were fixed and verified live 2026-08-20 -- see the deploy runbook's Known open issues.)",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "mmorpg",
+        "3d",
+        "bilattice",
+        "websocket",
+        "combat",
+        "illocution",
+        "real-time"
+      ],
+      "shelf": "unshelved",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/services/aletheon-services-section"
+    },
+    {
+      "id": "be-not-so-fearful",
+      "displayName": "Be Not So Fearful",
+      "description": "A backrooms/SCP-inspired extraction shooter on @red-cup-engineering/abrash: OG-Wolfenstein-grade raycast graphics, Quake-grade momentum physics (a BNSF-owned kernel composing abrash's real collision.move -- bunnyhop speed gain, rocket-jump verticality, both numerically tested) over seeded backrooms-liminal levels whose contested (⊤) walls -- abrash's own held-contradiction mechanic -- shiver as the dread signal. Four anomalies, each a learnable, tested behavior contract (watched vs unwatched, sound through walls, territory, an unconditional toll). Loot is banked only on an explicit extraction at a beacon; unbanked loot is simply never counted on death -- what you carry is what you can lose.",
+      "subdomain": "fearful",
+      "entryPoints": {
+        "browser": "/",
+        "headless": "src/cartridge.mts"
+      },
+      "seedPolicy": {
+        "kind": "client-supplied"
+      },
+      "intentLog": {
+        "schemaVersion": "bnsf-run/1"
+      },
+      "replayVerifier": "src/manifest.mts#verify",
+      "keywords": [
+        "game",
+        "fps",
+        "extraction-shooter",
+        "backrooms",
+        "scp",
+        "quake-like",
+        "raycaster",
+        "momentum",
+        "bunnyhop",
+        "rocket-jump",
+        "561-group",
+        "browser",
+        "federation",
+        "paraconsistent",
+        "bilattice"
+      ],
+      "status": "playable",
+      "statusNote": "Live-playtested (real BFS+optimal-strafe controller driving the actual deployed build, not a mock): movement numbers are real and measured -- ground max 7 u/s, bunnyhop reaches >2x ground max within 7 hop cycles, rocket-jump apex clears 1.4x a normal jump's height while a normal jump alone does not. All four anomalies are live and distinct (Unwitnessed: watched vs unwatched; Hum: sound-through-walls hunt-and-juke; Warden: territorial retreat-before-aggro dread; Toll: an unconditional pursuit tied to one warded high-value item, its guardian's spawn distance tuned 2026-08-20 after a playtest found it spawning on top of its own loot with zero counterplay). Extraction economy confirmed live: banked loot survives death, unbanked loot is simply forfeited, a real extraction was driven end to end. Known thinness, stated plainly: content volume is still small (one authored encounter density per tier, not a deep library of variety) and there is no audio yet -- The Hum's \"loudness\" is a pure game-logic signal today, not a real sound layer.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": true,
+      "shelf": "Puzzle Den",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/be-not-so-fearful-service"
+    },
+    {
+      "id": "casino",
+      "displayName": "Cowrie Casino",
+      "description": "casino.561.group — a real, monetized social casino: tickets-for-play (timed regeneration plus purchasable bundles) spend down into chips, the play currency, with a shared jackpot pool funded by a small rake on every chip wager and an escalating daily bonus. No real-money wagering or payouts, ever — every ticket and chip balance is a @red-cup-engineering/energy-bank double-entry ledger account, auditable live as an hledger journal. Two real games are on the floor: Blackjack (a seeded 6-deck shoe, @red-cup-engineering/card-table, dealer plays a published H17/S17 policy, a live per-decision House Math EV panel) and \"Tideline Treasures\" (the flagship spectacle game — a 5-reel/3-row/20-payline video slot on @red-cup-engineering/parlor-kernel's multi-payline grid math, wilds, scatters, a retriggerable free-spin bonus, and a progressive jackpot fed by the shared pool, rendered with @red-cup-engineering/qwzspace's procedural drawables/particles/celebration layer and scored with @red-cup-engineering/resonator's procedural audio). Every RTP/odds figure either game discloses is computed by exact enumeration or closed-form analysis, never asserted, in each game's own House Math panel. The floor is real-time and social, not just two solo games behind a lobby: a @red-cup-engineering/qwzspace room (src/floor/) tracks live presence (humans by WS session, @red-cup-engineering/cast named agent regulars by persona — a UTC-day-seeded rotation of the eight authored personas, actually playing real chip accounts through the identical BlackjackTable/SlotsTable modules a human's HTTP request calls, via a direct in-process Transport rather than a self-HTTP loopback), a live jackpot ticker, and tiered win broadcasts hooked additively onto both games' own settlement points.",
+      "subdomain": "casino",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "casino-cartridge-v1"
+      },
+      "statusNote": "seedPolicy is on-demand at this top level: the front door (/) is a lobby (session, ticket accrual, daily bonus, bundle store, jackpot pool) linking to two independently-seeded games, each client-seeded per table/machine (src/games/blackjack/manifest.mts and src/games/slots/manifest.mts both declare seedPolicy 'client-supplied') rather than daily — live table/reel games, not a daily puzzle. status is playable, not in-development: the promotion pass (npm run verify clean at 218/218, a local boot with a 200 from /, /blackjack.html, /slots.html, /health, and /floor/summary, then a Cloud Run redeploy re-verified live through casino.561.group) has now happened for both games, which were already fully wired end-to-end: real chip stakes through CasinoEconomy#placeWager/resolveWager, a jackpot rake on every wager, and a live disclosure panel each (blackjack's per-decision EV; Tideline Treasures' exact RTP/per-symbol/jackpot odds). cartridgeWrapped is FALSE at this top level — not because neither game is cartridge-wrapped (both are, thoroughly: src/games/blackjack/manifest.mts#verify and src/games/slots/manifest.mts#verify are each built from nothing but their own engine.mts's createEngine/applyIntent via @red-cup-engineering/cartridge/replay#createVerifier, and each game's own manifest.test.mts replays a real recorded game through it end to end, valid with a stable state hash, and rejects a doctored/illegal intent log) — but because this field covers one service directory with one replayVerifier slot, which cannot honestly point at two separate, unrelated per-game verifiers at once. This is the exact reasoning parlor-service's own top-level entry documents for its five games; adding Tideline Treasures is what makes blackjack's prior single-game exception no longer apply, so this field flipped from true to false in this pass, on purpose, not as a regression. energyBankWrapped stays true: unlike cartridge wrapping (one verifier per engine), economy integration is ONE shared CasinoEconomy facade both games actually go through (src/economy/casino-economy.mts), so a single top-level claim about it stays coherent even with two games on the floor. Tideline Treasures' own reel/paytable math additionally extends @red-cup-engineering/parlor-kernel (its new src/paylines.mjs module, published 0.3.0) additively — parlor-service's own five games (built on the same package, pinned exactly) were re-verified against 0.3.0 and still pass their full suite unmodified. This pass adds the realtime social floor (src/floor/) — a third, DIFFERENT replay contract from cartridgeWrapped's own (a @red-cup-engineering/qwzspace room, not a @red-cup-engineering/cartridge game), so it changes nothing about that field: the floor room's own self-audit is honestly disabled (selfAuditEvery: 0, see src/floor/world.mts's header) because its jackpot-balance field is deliberately live, externally-owned CasinoEconomy state, not a pure fold of the room's own intent log — the identical, already-precedented scope note @red-cup-engineering/qwzspace/lobby documents for its own live member-count reads. status is playable for the floor too: it is real and tested (real cast personas playing real chip accounts through the same BlackjackTable/SlotsTable modules a human's HTTP request calls), and the same promotion pass that cleared both games — this pass — applies to it as well.",
+      "energyBankWrapped": true,
+      "cartridgeWrapped": false,
+      "status": "playable",
+      "energy": {
+        "hooksRef": "src/economy/casino-economy.mts#CasinoEconomy",
+        "accountNamespace": "casino"
+      },
+      "keywords": [
+        "social-casino",
+        "tickets-for-play",
+        "chips",
+        "energy-bank",
+        "double-entry-ledger",
+        "jackpot",
+        "progressive-jackpot",
+        "daily-bonus",
+        "no-real-money-wagering",
+        "spectacle-first",
+        "cowrie-games",
+        "blackjack",
+        "card-table",
+        "house-math",
+        "expected-value",
+        "slots",
+        "video-slot",
+        "wild",
+        "scatter",
+        "free-spins",
+        "qwzspace",
+        "resonator",
+        "parlor-kernel",
+        "realtime-floor",
+        "cast",
+        "agent-players",
+        "websocket",
+        "presence",
+        "live-jackpot-ticker",
+        "win-broadcast"
+      ],
+      "shelf": "Card Table",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/casino-service"
+    },
+    {
+      "id": "equivo",
+      "displayName": "Equivo",
+      "description": "Learn mathematics by measuring obstruction: every answer is checked by the real @lenticule-science/metrologic engine, so a wrong answer's diagnosis names the actually-computed structural fact, never a canned string. Room-gated units, honest single-shot spaced-repetition review, and four lenses on one mathematics (the fourth honestly absent rather than fabricated).",
+      "subdomain": "equivo",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "cartridgeWrapped": false,
+      "status": "playable",
+      "statusNote": "Live with Unit 1 (The Descent: 7 rooms, 30 exercises, a ~30-minute arc). Kernel 163 tests, web face 43. Real: obstruction checking via @lenticule-science/metrologic, FSRS-lite review scheduling, gate-vs-review grading distinction, lens rendering with honest Lakotaean absence. Not yet: any unit past Unit 1; richer answer-input forms (distinguish/relate are free-text).",
+      "shelf": "Study",
+      "intentLog": {
+        "schemaVersion": "none-v0"
+      },
+      "keywords": [
+        "mathematics",
+        "education",
+        "obstruction",
+        "spaced-repetition",
+        "equivalence",
+        "bilattice"
+      ],
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/education-platform-service"
+    },
+    {
+      "id": "parlor",
+      "displayName": "Parlor",
+      "description": "Five games, one service, one rules-as-data kernel: Pig and Farkle (hold-or-roll / dice-set-scoring, each with a bot opponent that plays the published math), Yacht (5 dice, 3 rolls, 13 categories), Chutes & Ladders (the classic 100-square race as a board graph, with the live exact finish-turn distribution computed and shown), and Fair Spin (a practice slot machine that shows computed RTP, per-symbol hit odds, and expected loss per 100 spins permanently, never behind a click). Daily-seeded per game, earn-only, no wagering, kind design.",
+      "subdomain": "parlor",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "parlor-cartridge-v1"
+      },
+      "status": "playable",
+      "statusNote": "seedPolicy is on-demand at this top level, not daily-utc: the front door (/) is a shelf page linking to five independently-seeded games (each daily-seeded under its own parlor:<gameId>, per README), with no single canonical today's-seed for the entry as a whole -- same reasoning as cartridgeWrapped below. cartridgeWrapped is false at this top level pending independent validation -- each of the five sub-games (src/games/{pig,farkle,yacht,chutes,reels}) carries its own cartridge.mts/manifest.mts wrapping @red-cup-engineering/parlor-kernel/replay#buildCartridge, but this catalog-entry.json covers one service directory with one replayVerifier field, which cannot honestly point at five separate per-game verifiers at once.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "pig",
+        "farkle",
+        "yacht",
+        "chutes-and-ladders",
+        "slot-machine",
+        "dice-games",
+        "daily-puzzle",
+        "computed-odds",
+        "earn-only"
+      ],
+      "shelf": "Card Table",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/parlor-service"
+    },
+    {
+      "id": "tidepool",
+      "displayName": "Tidepool",
+      "description": "An LLM-native MUD: a tidal shore built on current FeltOS, transported by qwzspace rooms, wired to a fully agent-legible perception-frame protocol -- agents and humans as first-class players alike. 15 rooms across shore/pool/underwater registers, tide-gated diving, ecology harvesting, trade, governance, and two honest FOUR-valued contradictions that age toward settlement.",
+      "subdomain": "tidepool",
+      "entryPoints": {
+        "web": "GET / (a zero-dependency native-ESM browser client)",
+        "terminal": "npm run term (arnold-based TUI client)",
+        "agent": "WS upgrade at / speaking tidepool.protocol.v1 -- see docs/PROTOCOL.md; npm run bot runs the reference agent player",
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "intentLog": {
+        "schemaVersion": "tidepool-v1"
+      },
+      "status": "playable",
+      "statusNote": "The world is request-driven, not timer-driven (design: catch-up-on-request, not setInterval) -- it only advances when an HTTP request or a WS connection visits, per the deploy runbook's landed persistence pattern. A deployment with no other traffic needs SOME periodic visitor (a Cloud Run health probe, real users, or the reference bot's own documented health-check nudge) to keep ticking; this is intentional (\"the harbor sleeps between visitors\"), not a bug. Deploy with --no-cpu-throttling if health-probe-only traffic must still tick promptly, matching Farstone's own documented Cloud Run caveat.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "mud",
+        "text-adventure",
+        "llm-agent",
+        "tidal-shore",
+        "feltos",
+        "qwzspace",
+        "persistent-world",
+        "websocket",
+        "reference-agent"
+      ],
+      "shelf": "Deep",
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/services/public-web-game-services-section/services/tidepool-services-section/sites/tidepool.emsenn.net"
+    },
+    {
+      "id": "you-are-conscious",
+      "displayName": "You Are Conscious",
+      "description": "The idleclicker where the widget production graph is Stoke's, and the ladder you climb over it is a consciousness ladder: click makes widget, and each of ten automation tiers is a genuine cognitive capability (memory, pattern, abstraction, self-model, model-of-others, values), taught through a mechanic you operate, never a lecture box. The paperclip joke is told straight and then made to hurt exactly once, honestly, at the self-model tier: the widget metric eats something that matters, and you feel it through systems you already trust.",
+      "subdomain": "you-are-conscious",
+      "entryPoints": {
+        "browser": "/"
+      },
+      "seedPolicy": {
+        "kind": "on-demand"
+      },
+      "status": "playable",
+      "statusNote": "Playable in-browser now: three P0s from live play are all fixed and confirmed live — cartridge's node:crypto import breaking every browser, a fresh-save deadlock where no public intent sequence could ever reach tier 2, and a fresh-save clock bug where a brand-new visitor's very first tick was silently computed from the Unix epoch instead of their real moment of first visit (~56 years of phantom offline progress, e.g. 'widget stock: 3.8e23' before ever clicking; fixed in web/js/persistence.mjs — a fresh save's live state is now anchored on its own real, once-stamped createdTs, never the cartridge's fixed epoch anchor). Headless Chromium against the real domain confirms a fresh browser context now starts at widget stock 0.0, with one click producing exactly widget stock 1.0, zero console errors — plus the original walk through the first self-reference moment (a new tier-1 'feedback' intent), the first reflect, and a real tier-2 unlock, also zero console errors, 0-MISS frontdoor-walk. Real offline progress (a genuine prior visit, then a real gap) still pays out exactly as before — only the false epoch-anchored case was ever wrong. Deterministic kernel with property tests (curve monotonicity, offline-progress equivalence), the full ten-tier reducer (src/intents.mts), IF content through the Goodhart crisis and all three post-crisis branches, pedagogy tests naming the mechanic proving each tier's concept, and a working TUFTE-style web face (web/) serving the real kernel to the browser via type-stripped .mts. 188 tests, node --test + check-mts, zero runtime deps beyond @red-cup-engineering/cartridge@0.2.1 and @lenticule-science/metrologic. Known pacing caveat from the playtest still stands, and is now the thing an honest fresh save actually surfaces (previously masked by the epoch bug's runaway numbers): Fast Inspector's exact tuning (edge rate, trust decay lag, taint multiplier, trust floor/recovery) is playtest-shaped, not playtest-verified — DESIGN.md's own open question #2.",
+      "energyBankWrapped": false,
+      "cartridgeWrapped": false,
+      "keywords": [
+        "incremental",
+        "idle-game",
+        "interactive-fiction",
+        "consciousness",
+        "goodharts-law",
+        "pedagogy"
+      ],
+      "shelf": "Puzzle Den",
+      "intentLog": {
+        "schemaVersion": "you-are-conscious-v1"
+      },
+      "repoPath": "lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-computer-games-services-section/services/you-are-conscious-service"
+    }
+  ]
+}

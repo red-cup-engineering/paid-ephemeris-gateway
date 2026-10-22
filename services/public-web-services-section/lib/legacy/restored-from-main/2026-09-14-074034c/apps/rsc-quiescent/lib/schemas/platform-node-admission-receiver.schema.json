@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:emsenn:schema:rsc-platform-node-admission-receiver:v1",
+  "title": "RSC platform-node admission receiver records",
+  "oneOf": [
+    {"$ref": "#/$defs/configuration"},
+    {"$ref": "#/$defs/request"},
+    {"$ref": "#/$defs/receipt"},
+    {"$ref": "#/$defs/operation"}
+  ],
+  "$defs": {
+    "ni": {"type": "string", "pattern": "^ni:///sha-256;[A-Za-z0-9_-]{42}[AEIMQUYcgkosw048]$"},
+    "iso": {"type": "string", "format": "date-time"},
+    "ceilings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maximumFiles", "maximumBytes", "maximumRuntimeMs"],
+      "properties": {
+        "maximumFiles": {"type": "integer", "minimum": 1, "maximum": 16},
+        "maximumBytes": {"type": "integer", "minimum": 1, "maximum": 524288},
+        "maximumRuntimeMs": {"type": "integer", "minimum": 1, "maximum": 120000}
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["createOnly", "overwrite", "externalNetwork", "credentials", "externalSettlement"],
+      "properties": {
+        "createOnly": {"const": true},
+        "overwrite": {"const": false},
+        "externalNetwork": {"const": false},
+        "credentials": {"const": false},
+        "externalSettlement": {"const": false}
+      }
+    },
+    "witnessJournal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agentUrl", "dataRoot", "nodeId", "settlement", "actor"],
+      "properties": {
+        "agentUrl": {"type": "string", "minLength": 1},
+        "dataRoot": {"type": "string", "pattern": "^/"},
+        "nodeId": {"const": "rsc-quiescent"},
+        "settlement": {"const": "urn:ame:rsc-quiescent"},
+        "actor": {"const": "urn:ame:rsc-quiescent"}
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "version", "enabled", "actor", "admittedProvider", "admittedProviderLaw", "contract", "meshAuthorityRoot", "receiverRoot", "admittedParent", "allocationId", "customer", "nodeId", "authorizationAdmission", "authorizationEvidenceDigest", "workingRoot", "witnessJournal", "ceilings", "publication", "refusal"],
+      "properties": {
+        "type": {"const": "RscPlatformNodeAdmissionReceiverConfiguration"},
+        "version": {"const": 1},
+        "enabled": {"type": "boolean"},
+        "actor": {"const": "urn:ame:rsc-quiescent"},
+        "admittedProvider": {"const": "urn:ame:platform-node-inducer"},
+        "admittedProviderLaw": {"oneOf": [{"$ref": "#/$defs/ni"}, {"type": "null"}]},
+        "contract": {"oneOf": [{"$ref": "#/$defs/ni"}, {"type": "null"}]},
+        "meshAuthorityRoot": {"type": "string", "pattern": "^/"},
+        "receiverRoot": {"type": "string", "pattern": "^/"},
+        "admittedParent": {"type": "string", "pattern": "^/"},
+        "allocationId": {"type": ["string", "null"]},
+        "customer": {"type": ["string", "null"]},
+        "nodeId": {"type": ["string", "null"]},
+        "authorizationAdmission": {"oneOf": [{"$ref": "#/$defs/ni"}, {"type": "null"}]},
+        "authorizationEvidenceDigest": {"oneOf": [{"$ref": "#/$defs/ni"}, {"type": "null"}]},
+        "workingRoot": {"type": ["string", "null"]},
+        "witnessJournal": {"oneOf": [{"$ref": "#/$defs/witnessJournal"}, {"type": "null"}]},
+        "ceilings": {"$ref": "#/$defs/ceilings"},
+        "publication": {"$ref": "#/$defs/publication"},
+        "refusal": {"type": "string", "minLength": 1}
+      }
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "encoding", "content", "byteLength", "sha256"],
+      "properties": {
+        "kind": {"const": "file"},
+        "path": {"type": "string", "minLength": 1},
+        "encoding": {"const": "base64"},
+        "content": {"type": "string"},
+        "byteLength": {"type": "integer", "minimum": 0},
+        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "nodeId", "targetRoot", "fileCount", "totalBytes", "files"],
+      "properties": {
+        "type": {"const": "PlatformNodeProductionManifest"},
+        "nodeId": {"type": "string", "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62})$"},
+        "targetRoot": {"type": "string", "pattern": "^/"},
+        "fileCount": {"type": "integer", "minimum": 1, "maximum": 16},
+        "totalBytes": {"type": "integer", "minimum": 0, "maximum": 524288},
+        "files": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"$ref": "#/$defs/file"}}
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "contract", "receiver", "provider", "customer", "allocationId", "idempotencyKey", "nodeId", "targetRoot", "manifest", "manifestDigest", "authorizationEvidenceDigest", "authorizationAdmission", "effects", "requireAbsentTarget", "createOnly", "overwrite", "maximumRuntimeMs"],
+      "properties": {
+        "id": {"$ref": "#/$defs/ni"},
+        "type": {"const": "ReceiverCreateOnlyAdmissionRequest"},
+        "contract": {"$ref": "#/$defs/ni"},
+        "receiver": {"const": "urn:ame:rsc-quiescent"},
+        "provider": {"const": "urn:ame:platform-node-inducer"},
+        "customer": {"type": "string", "minLength": 1},
+        "allocationId": {"type": "string", "minLength": 1},
+        "idempotencyKey": {"$ref": "#/$defs/ni"},
+        "nodeId": {"type": "string", "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62})$"},
+        "targetRoot": {"type": "string", "pattern": "^/"},
+        "manifest": {"$ref": "#/$defs/manifest"},
+        "manifestDigest": {"$ref": "#/$defs/ni"},
+        "authorizationEvidenceDigest": {"$ref": "#/$defs/ni"},
+        "authorizationAdmission": {"$ref": "#/$defs/ni"},
+        "effects": {
+          "const": ["receiver-create-only-admission", "receiver-rollback-on-partial-failure", "provider-local-witness-journal-evidence", "provider-runtime-withdrawal"]
+        },
+        "requireAbsentTarget": {"const": true},
+        "createOnly": {"const": true},
+        "overwrite": {"const": false},
+        "maximumRuntimeMs": {"type": "integer", "minimum": 1, "maximum": 120000}
+      }
+    },
+    "postState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetExists", "manifestDigest", "fileCount", "totalBytes"],
+      "properties": {
+        "targetExists": {"const": true},
+        "manifestDigest": {"$ref": "#/$defs/ni"},
+        "fileCount": {"type": "integer", "minimum": 1, "maximum": 16},
+        "totalBytes": {"type": "integer", "minimum": 0, "maximum": 524288}
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "contract", "receiver", "customer", "provider", "allocationId", "idempotencyKey", "nodeId", "targetRoot", "manifestDigest", "installation", "createOnly", "overwrite", "priorTargetAbsent", "postState", "rollback", "lifecycle", "resourceReceipt", "recordedAt"],
+      "properties": {
+        "id": {"$ref": "#/$defs/ni"},
+        "type": {"const": "ReceiverCreateOnlyAdmissionReceipt"},
+        "contract": {"$ref": "#/$defs/ni"},
+        "receiver": {"const": "urn:ame:rsc-quiescent"},
+        "customer": {"type": "string", "minLength": 1},
+        "provider": {"const": "urn:ame:platform-node-inducer"},
+        "allocationId": {"type": "string", "minLength": 1},
+        "idempotencyKey": {"$ref": "#/$defs/ni"},
+        "nodeId": {"type": "string"},
+        "targetRoot": {"type": "string"},
+        "manifestDigest": {"$ref": "#/$defs/ni"},
+        "installation": {"const": true},
+        "createOnly": {"const": true},
+        "overwrite": {"const": false},
+        "priorTargetAbsent": {"const": true},
+        "postState": {"$ref": "#/$defs/postState"},
+        "rollback": {
+          "type": "object", "additionalProperties": false,
+          "required": ["ownedByReceiver", "partialFailureRemovesExactNewTarget"],
+          "properties": {"ownedByReceiver": {"const": true}, "partialFailureRemovesExactNewTarget": {"const": true}}
+        },
+        "lifecycle": {
+          "type": "object", "additionalProperties": false,
+          "required": ["providerRuntimeImported", "continuingAuthority", "withdrawal"],
+          "properties": {"providerRuntimeImported": {"const": false}, "continuingAuthority": {"const": false}, "withdrawal": {"const": "complete"}}
+        },
+        "resourceReceipt": {
+          "type": "object", "additionalProperties": false,
+          "required": ["elapsedMs", "network", "credentialsUsed", "externalSettlement"],
+          "properties": {"elapsedMs": {"type": "number", "minimum": 0, "maximum": 120000}, "network": {"const": false}, "credentialsUsed": {"const": false}, "externalSettlement": {"const": false}}
+        },
+        "recordedAt": {"$ref": "#/$defs/iso"}
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "contract", "state", "predecessor", "request", "requestDigest", "idempotencyKey", "targetRoot", "manifestDigest", "recordedAt"],
+      "properties": {
+        "id": {"$ref": "#/$defs/ni"},
+        "type": {"const": "RscPlatformNodeAdmissionOperation"},
+        "contract": {"$ref": "#/$defs/ni"},
+        "state": {"enum": ["claimed", "prepared", "committed", "receipted", "refused"]},
+        "predecessor": {"oneOf": [{"$ref": "#/$defs/ni"}, {"type": "null"}]},
+        "request": {"$ref": "#/$defs/request"},
+        "requestDigest": {"$ref": "#/$defs/ni"},
+        "idempotencyKey": {"$ref": "#/$defs/ni"},
+        "targetRoot": {"type": "string"},
+        "manifestDigest": {"$ref": "#/$defs/ni"},
+        "recordedAt": {"$ref": "#/$defs/iso"}
+      }
+    }
+  }
+}

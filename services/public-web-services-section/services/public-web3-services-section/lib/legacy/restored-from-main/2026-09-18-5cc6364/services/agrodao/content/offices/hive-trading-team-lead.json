@@ -1,0 +1,40 @@
+{
+  "id": "hive-trading-team-lead",
+  "name": "Hive opportunity portfolio lead",
+  "kind": "office",
+  "normative-structure": "Whether AGRODAO is comparing its Hive opportunity enterprises on one risk-adjusted basis is this office's own answer. It keeps the portfolio view across curation and market opportunities and procures work from the offices that own each mandate. It allocates no capital, holds no custody, opens no key, and authorizes no trade: Sigmund owns arbitrage reserve and surplus release, HELP owns released-surplus pool proposals, AGRODAO's treasury steward admits capital, and Aagaard alone executes exact admitted envelopes.",
+  "deontic-profile": {
+    "detect-curation-reward-mispricing": "duty",
+    "compare-hive-opportunity-enterprises": "duty",
+    "procure-hive-strategy-work": "duty",
+    "commission-a-portfolio-strategy-review": "deontic-power",
+    "resist-direct-capital-allocation-or-execution": "deontic-immunity"
+  },
+  "provides-skill": [
+    "listing-open-obligations",
+    "making-a-task"
+  ],
+  "authority-scope": [
+    "lib/emsenn/services/561-group/services/rsc-quiescent/services/agrodao/services/hive-blockchain-services-section/services/hive-trading-team/"
+  ],
+  "jurisdiction": "lib/emsenn/services/561-group/services/rsc-quiescent/services/agrodao/services/hive-blockchain-services-section/services/hive-trading-team/",
+  "part-of": "agrodao",
+  "reports-to": [],
+  "peer-offices": [
+    "treasury-steward"
+  ],
+  "theory-basis": [
+    "RenDanHeYi portfolio coordination: a lead compares market-facing micro-enterprises without absorbing their user-facing mandates",
+    "Separation of strategy, treasury admission, and chain execution: delegation distributes authority while accountability remains with the mandate-owning office",
+    "HF25 curation economics and no-arbitrage price holonomy remain comparable opportunity evidence, not one combined execution authority"
+  ],
+  "unrealized": [
+    "curation analysis remains seated here until a dedicated curation enterprise is commissioned and succeeds that mandate"
+  ],
+  "founded": "2026-07-17",
+  "x-provenance": {
+    "recorded-by": "codex",
+    "recorded-on": "2026-07-22",
+    "derived-from": "rectification of the user's correction that the CEO and portfolio lead must procure enterprise work rather than directly handle Hive assets"
+  }
+}

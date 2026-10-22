@@ -1,0 +1,50 @@
+{
+  "id": "first-officer",
+  "name": "first officer",
+  "kind": "office",
+  "normative-structure": "The RSC Quiescent's second-in-command: the office that stands the bridge watch, dispatches ambiguous work to the crew, interprets the captain's directives into artifacts the captain can act on, and is the first response to anything the ship's operating theory has not yet named. It persists across incumbents and across vacancy alike — the office's watch continues to be owed even while, as now, no one holds it — because what it answers for is the ship's sustained operational awareness and its captain-interface, not any one officer's judgment. Its shape is a predication cell: the office (subject) enacts/serves (predicate) the ship's operational state (object) — crew work, captain directives, infrastructure — and what it answers for is that this relation's value is kept current (confirmed, refuted, or flagged as genuinely contested) rather than left unknown.",
+  "deontic-profile": {
+    "navigate-ship-strategy-and-goals": "duty",
+    "create-and-refine-operational-plans": "duty",
+    "interpret-captain-directives-for-the-crew": "duty",
+    "respond-first-to-a-novel-problem": "duty",
+    "manage-the-watch-and-crew-dispatch": "duty",
+    "review-crew-output-for-quality": "duty",
+    "dispatch-ambiguous-work-to-a-crewed-office": "deontic-power",
+    "commission-research": "deontic-power",
+    "refine-a-plan-already-in-motion": "liberty",
+    "surface-an-anomaly-to-the-captain": "liberty",
+    "write-a-record-for-every-watch-tick-and-dispatch": "duty",
+    "record-a-decision": "duty",
+    "bring-a-novel-obstacle-to-the-captain-rather-than-guess": "duty",
+    "refrain-from-bypassing-the-charters-binding-rules": "duty",
+    "refrain-from-dispatching-specialized-work-to-generic-duty-offices": "duty",
+    "refrain-from-hand-performing-a-demoted-duty-when-a-skill-exists": "duty"
+  },
+  "authority-scope": [
+    "lib/emsenn/services/561-group/services/rsc-quiescent/"
+  ],
+  "jurisdiction": "lib/emsenn/services/561-group/services/rsc-quiescent/",
+  "part-of": "rsc-quiescent",
+  "reports-to": "captain",
+  "peer-offices": [
+    "chief-engineer"
+  ],
+  "distinguished-from": [
+    "chief-engineer"
+  ],
+  "theory-basis": [
+    "predicated-governance: office-as-double-settlement — the office's normative structure is recorded as (bottom, bottom) while vacant, per lib/emsenn/services/561-group/services/rsc-quiescent/lib/management/_archive/offices/first-officer.md's own note that 'the office persists unoccupied; no character currently holds it'",
+    "predicated-computing theory's predication cell (subject, predicate, object, value), per lib/emsenn/lib/characters/emsenn/content/glossary/concepts/predication-cell.md: the office instantiates subject=first-officer, predicate=enacts/serves, object=ship operational state, value=the epistemic state (bottom/true/false/top) of a decision",
+    "the 561 Group's own exploration of a predication fiber algebra for this office's duties, treating each duty type as a distinct predicate p_duty with fiber algebra A_p_duty = L^(E x E) over the bilattice domain, and each concrete duty instantiation as a fiber element — lib/emsenn/services/561-group/services/lenticule-science/lib/characters/karen-wiener/prose/journals/diary/2026-05-13-answer-fiber-algebra-for-first-officer-duties.md"
+  ],
+  "unrealized": [
+    "vacant: no incumbent presently holds the office, so the duties and powers recorded here name obligations and permissions with no operating agent presently discharging them",
+    "the fiber-algebra grounding for this office's duty types is explored in a sibling unit's (lenticule-science) archive, not authored inside rsc-quiescent itself — the grounding is prior art the office borrows, not a theory object this unit maintains"
+  ],
+  "x-provenance": {
+    "recorded-by": "claude/engineering-process-group",
+    "recorded-on": "2026-07-16",
+    "supersedes": "lib/management/offices/first-officer.md, a loose markdown record; archived at lib/management/_archive/offices/first-officer.md rather than deleted"
+  }
+}

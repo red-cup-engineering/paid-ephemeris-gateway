@@ -1,0 +1,95 @@
+{
+  "type": "TTIKnowledgeVaultProduct",
+  "version": 5,
+  "id": "tti-founding-knowledge-vault-2026-01",
+  "status": "customer-discovery-no-charge",
+  "name": "Turntide Islands Founding Knowledge Vault",
+  "customer": "People who need source-grounded climate, technology, culture, and institutional memory without losing the working context to Discord scrollback.",
+  "problemEvidence": [
+    "The live guild has 19 human members and nine distinct recent participants in mainland.",
+    "Members ask how prior research and analytical methods worked while the supporting notes and source trails remain difficult to retrieve.",
+    "The existing member vault lanes are empty even though TTI already declares a Vault Keeper, archive desk, receipts lane, and vault-backed briefings product surface."
+  ],
+  "offer": {
+    "currency": "USD",
+    "candidateUnitAmount": 500,
+    "billingPeriod": "P1M",
+    "priceStatus": "hypothesis-not-yet-charged",
+    "promise": "A maintained, source-traceable knowledge vault that converts useful TTI conversation and Union/corpus research into briefings, reading paths, retrieval responses, and durable provenance.",
+    "included": [
+      "At least one source-traceable vault briefing each week while the founding product is operated",
+      "A pooled member request desk for retrieval questions and reading-path requests",
+      "Durable rescue of selected Discord knowledge with source and access provenance",
+      "A receipts lane showing product status, observed revenue, known costs, and unknown costs"
+    ],
+    "excluded": [
+      "Personalized medical, legal, financial, safety, or emergency advice",
+      "A guaranteed response to every individual request or a private consulting SLA",
+      "Publication of member-private material outside its intended access boundary",
+      "Access to source material TTI is not authorized to redistribute"
+    ]
+  },
+  "roles": {
+    "grandfathered": "islander",
+    "paidEntitlement": "vault subscriber",
+    "rule": "The historical islander role preserves founding access and is never evidence of payment; only a TTI-admitted settled entitlement may grant vault subscriber."
+  },
+  "territory": {
+    "publicChannel": "start-here",
+    "activeConversationChannel": "mainland",
+    "category": "Knowledge Vault",
+    "memberChannels": ["vault-briefings", "archive-desk", "receipts", "serious-threading"]
+  },
+  "conversion": {
+    "kind": "discord-reaction-customer-discovery",
+    "offerMarker": "TTI-KV-FOUNDING-2026-01",
+    "signals": {
+      "💸": "would-start-at-five-usd-per-month",
+      "🧠": "values-weekly-briefings",
+      "🔎": "values-retrieval-request-desk",
+      "🧾": "values-transparent-receipts"
+    },
+    "feedbackCadence": "PT1H",
+    "checkoutIngress": "implementation-ready-signed-Discord-interaction-to-hashed-expiring-single-use-private-invitation",
+    "qualifiedCheckoutIntent": "While payments are not admitted, one affirmative invitation POST records no-charge purchase interest at the exact candidate price and never contacts the payment provider."
+  },
+  "commercial": {
+    "beneficiarySettlement": "urn:ame:turntide-islands",
+    "legalMerchant": "emsenn",
+    "paymentProvider": "urn:ame:stripe-payment-acceptance-enterprise",
+    "paymentStatus": "blocked-not-live",
+    "paymentRuntime": "src/apps/turntide-islands-discord-platform/src/turntide-software-system/vault-payment.mts",
+    "providerSolicitation": "content/solicitations/founding-knowledge-vault-subscription-provider.json",
+    "providerOfferContract": "content/contracts/vault-payment-provider-offer.rml",
+    "providerOfferIngress": "POST /membership/payment-provider/offer using a dedicated provider contract token and application/activity+json",
+    "providerOfferAdmission": "An authenticated, self-content-addressed, unexpired offer can only become qualified-for-test after its ten bounded claims, evidence references, and USD 1 maximum provider-cost quote pass. Live operational admission separately requires seven self-addressed TTI-observed test receipts covering all ten requirements.",
+    "providerOfferDecisionStatus": "no-authenticated-provider-offer-observed",
+    "providerCompatibilityVerifier": "lib/management/verify-vault-payment-provider-compatibility.mjs",
+    "providerCompatibilityStatus": "current-customer-observation-incompatible-not-provider-refusal",
+    "providerCompatibilityCounts": { "requirements": 10, "compatible": 3, "incompatible": 6, "unknown": 1 },
+    "providerCostCeilingHypothesis": { "currency": "USD", "unitAmount": 100, "basis": "successfully settled subscriber-month including payment processing and provider service" },
+    "observedProviderCost": "unknown",
+    "entitlementContract": "content/contracts/knowledge-vault-payment-entitlement.rml",
+    "activationAdmission": "content/admissions/founding-knowledge-vault-payment-activation.json",
+    "syntheticCircuitStatus": "initial-checkout-to-dedicated-role-path-passed-no-external-effects",
+    "externalRevenueReceiptCount": 0,
+    "activationBlockers": [
+      "Leader-authorized commercial terms",
+      "Discord-authenticated one-time checkout ingress",
+      "Public HTTPS TTI service URL",
+      "TTI-to-provider customer contract token and provider-to-TTI receipt token",
+      "Contracted witness-journal RDF provider",
+      "Provider catalog activation of this exact fixed USD 5 P1M subscription offering",
+      "Provider receipts for initial checkout, paid renewal, payment failure, cancellation, refund, and dispute lifecycle",
+      "Provider-authored service offer and attributable-cost quote at or below the candidate cost ceiling, followed by seven passing customer-observed operational test receipts"
+      ,"Dedicated provider-offer contract token and authenticated offer delivery"
+    ]
+  },
+  "measurement": {
+    "customerSignal": "Reaction counts excluding the bot's seeded reactions",
+    "conversion": "Settled TTI entitlement receipts divided by distinct qualified interest actors",
+    "retention": "Active renewal entitlements by cohort",
+    "fulfillment": "Weekly briefings and admitted retrieval responses with publication receipts",
+    "economics": "Externally receipted revenue minus attributable receipted costs; unknown costs remain unknown"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "sigmund-hive-arbitrage-manager",
+  "name": "arbitrage portfolio manager",
+  "kind": "office",
+  "normative-structure": "Whether AGRODAO's liquid Hive capital is reserved against current, executable, risk-bounded arbitrage rather than left idle or committed elsewhere is this office's own answer. It produces asset-specific reserve declarations and exact plan digests; capital it does not justify is released to the HELP Hive Liquidity Enterprise. It never holds keys or treats sigmund-vexler's editorial authority as trading authority.",
+  "deontic-profile": {
+    "detect-cross-venue-arbitrage": "duty",
+    "declare-liquid-capital-reserve": "duty",
+    "release-unneeded-liquid-capital": "duty",
+    "authorize-an-exact-arbitrage-envelope": "deontic-power",
+    "resist-editorial-or-executive-trading-authority": "deontic-immunity"
+  },
+  "provides-skill": [
+    "listing-open-obligations",
+    "making-a-task",
+    "dispatching-a-task"
+  ],
+  "authority-scope": [
+    "services/hive-blockchain-services-section/services/sigmund-hive-arbitrage-enterprise/"
+  ],
+  "jurisdiction": "services/hive-blockchain-services-section/services/sigmund-hive-arbitrage-enterprise/",
+  "part-of": "agrodao",
+  "reports-to": "treasury-steward",
+  "theory-basis": [
+    "RenDanHeYi xiaowei: a market-facing micro-enterprise constituted by the price discrepancy it resolves rather than by a managerial budget line",
+    "AGRODAO treasury separation: strategy declares bounded capital need while Aagaard alone holds Hive execution and key custody",
+    "No-arbitrage as vanishing price holonomy: only a measured, executable cycle can justify a liquid-capital reserve"
+  ],
+  "founded": "2026-07-22",
+  "x-provenance": {
+    "recorded-by": "codex",
+    "recorded-on": "2026-07-22",
+    "derived-from": "user correction that other Union enterprises must handle Hive assets, with Sigmund owning arbitrage and first claim on liquid capital"
+  }
+}

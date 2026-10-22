@@ -9,3 +9,7 @@
 	path = services/web-services-section
 	url = https://github.com/causeway-services/web-services-section.git
 	branch = main
+[submodule "services/public-computer-development-services-section/services/public-bug-bounty-services-section/services/public-algora-bug-bounty-services-section"]
+	path = services/public-computer-development-services-section/services/public-bug-bounty-services-section/services/public-algora-bug-bounty-services-section
+	url = https://github.com/causeway-services/public-algora-bug-bounty-services-section.git
+	branch = main

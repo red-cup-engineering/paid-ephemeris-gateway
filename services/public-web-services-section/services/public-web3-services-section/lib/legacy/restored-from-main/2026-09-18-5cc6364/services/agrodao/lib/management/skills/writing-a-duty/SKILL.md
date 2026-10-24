@@ -19,9 +19,9 @@ explicitly delegates to it (id-equals-basename, reference resolution).
 ## Run it
 
 ```sh
-node .../write-a-duty.js --check      # validate every seated duty
-echo '{...}' | node .../write-a-duty.js
-echo '{...}' | node .../write-a-duty.js --amend
+node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-duty/scripts/write-a-duty.js --check      # validate every seated duty
+echo '{...}' | node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-duty/scripts/write-a-duty.js
+echo '{...}' | node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-duty/scripts/write-a-duty.js --amend
 ```
 
 `--from` (default: the caller's working directory) is where the duties pool

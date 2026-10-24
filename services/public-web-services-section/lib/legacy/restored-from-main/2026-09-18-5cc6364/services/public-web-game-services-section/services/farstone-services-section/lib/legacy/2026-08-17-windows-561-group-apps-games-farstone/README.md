@@ -11,7 +11,7 @@ Farstone is that content — extracted here so the engine stays engine-only.
 
 ```sh
 npm start                       # build the harbour world + serve it over HTTP/SSE on :18793
-node scripts/farstone.mjs [dir] [--http 18793] [--host 127.0.0.1] [--start newcomer-landing]
+node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/public-web-game-services-section/services/farstone-services-section/lib/legacy/2026-08-17-windows-561-group-apps-games-farstone/scripts/farstone.mjs [dir] [--http 18793] [--host 127.0.0.1] [--start newcomer-landing]
 ```
 
 Open `http://localhost:18793` in a browser to play; or watch the world-event firehose: `curl -N http://localhost:18793/events?topics=market,combat,chat`.

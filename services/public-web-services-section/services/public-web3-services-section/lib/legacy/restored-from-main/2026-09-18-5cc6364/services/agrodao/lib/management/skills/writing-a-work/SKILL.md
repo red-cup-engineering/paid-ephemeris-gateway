@@ -20,9 +20,9 @@ The schema is loaded at RUNTIME and is the only authority on shape.
 ## Run it
 
 ```sh
-node .../write-a-work.js --check      # validate every seated work
-echo '{...}' | node .../write-a-work.js
-echo '{...}' | node .../write-a-work.js --amend
+node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-work/scripts/write-a-work.js --check      # validate every seated work
+echo '{...}' | node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-work/scripts/write-a-work.js
+echo '{...}' | node <red-cup-engineering/public-computer-services-section>/services/public-web-services-section/services/public-web3-services-section/lib/legacy/restored-from-main/2026-09-18-5cc6364/services/agrodao/lib/management/skills/writing-a-work/scripts/write-a-work.js --amend
 ```
 
 `--from` (default: the caller's working directory) is where the works pool

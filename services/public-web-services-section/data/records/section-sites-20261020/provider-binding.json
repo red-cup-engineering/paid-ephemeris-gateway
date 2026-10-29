@@ -1,0 +1,32 @@
+{
+  "type": "SectionPublicationProviderBinding",
+  "version": 1,
+  "observedAt": "2026-10-21T03:44:14.938Z",
+  "source": {
+    "repository": "causeway-services/public-web-services-section",
+    "revision": "0b56a6a7a21328b2f3391d3dedc62a71af416dfb",
+    "path": "sites/compose-publication.mjs",
+    "gitBlob": "0eefa4df2ddd5dfc366a0ef892287a44a54db605",
+    "sha256": "8fd4ce6edc8dc571cee4200b6d4cc67987cfaf69eded3454de0f3251a66307e9"
+  },
+  "reusedInstalledGraph": {
+    "owner": "/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-web-engineering-services-section/apps/computer-web-platform",
+    "package": "@red-cup-engineering/computer-web-platform",
+    "version": "0.7.0",
+    "manifestSha256": "98eead06f8218c48f42710ad65c763843fa356bcb6847fa0054bde7edd7fd887",
+    "lockSha256": "808c2396a66feb9f7a721c91a20a04949317c9f7b0c5c828ad475e888d74aa71",
+    "copiedPackagePayloadBytes": 0,
+    "selectedStaticPublisher": "@red-cup-engineering/web-page-tiling-engine@0.14.2",
+    "selectedCatalog": "@red-cup-engineering/knowledge-system-server@0.1.2"
+  },
+  "storage": {
+    "owner": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section",
+    "stagingMaximumAdditionalBytes": 16777216,
+    "observedPhysicalAvailableBytes": 100628897792,
+    "physicalReserveBytes": 100000000000,
+    "observationIsNotReservation": true,
+    "retention": "Exact source/provenance/artifacts retained through public receiving; disposable graph link and staging retired only after references reconciled."
+  },
+  "stagedSourceOnly": true,
+  "executed": false
+}

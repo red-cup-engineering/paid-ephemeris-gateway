@@ -1,0 +1,8 @@
+{
+  "service": "lenticule-science-knowledge-vault",
+  "status": 200,
+  "contentType": "multipart/form-data; boundary=c2919de6ad60b1e24c8284c7a4db44ce57d91a54b85f2a4c927af47c6d87",
+  "bytes": 109863,
+  "sha256": "1f1e8557efbf07750cbeb8931b054effb4ffe1613802ce84542673e175a42ae4",
+  "file": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/lenticule-science-knowledge-vault.content"
+}

@@ -1,0 +1,110 @@
+{
+  "type": "IndependentFourPortalEstateSourceReview",
+  "version": 1,
+  "observedAt": "2026-10-21T04:45:35.793Z",
+  "reviewer": "/root/portal_receiving",
+  "verdict": "met-for-bounded-four-portal-canonical-promotion",
+  "candidate": {
+    "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/final-estate-data/candidate-receipt.json",
+    "sha256": "f1bf2a10c41e3681f2722a02ed5a631bbd63e65c41258ada7cbf7f86a2571436",
+    "base": "9976362a1822e257b3e7374c7fdc0fdeb278ad18"
+  },
+  "files": [
+    {
+      "path": "data/records/section-sites-20261020/provider-publication-receipt.json",
+      "sha256": "8e352d584eb978aa66716f2bd33fb4e29414818d04d79bba55ae7dbc317e1c4c",
+      "bytes": 6495
+    },
+    {
+      "path": "data/records/section-sites-20261020/science-predecessor-receipt.json",
+      "sha256": "6f42f26e4fec407469fe9251c87b62716188f6c57e6c6e35a4e0edbd325f97d9",
+      "bytes": 4748
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-hosting-commit-review.json",
+      "sha256": "57b372c5d8e16548a501c8e394e558d888dfeda50e8aa6a5513c1a7b39162a5f",
+      "bytes": 1986
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-hosting-source-review.json",
+      "sha256": "90adf09d5984a15738a3a46668e9f0ab9db54769c826fbaf3381402d39259d07",
+      "bytes": 6108
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-native-projection-review.json",
+      "sha256": "61e74bcfbb828f5d4269d41804e6ca2b69ebd766a7469098b541cca76ffd7b42",
+      "bytes": 12363
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-science-access-disposition.json",
+      "sha256": "f71712f23df410b3abe90f069cba3a1120c8bfa4a624685f8b9013dad70eef09",
+      "bytes": 4624
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-four-portal-public-witness.json",
+      "sha256": "48e863fc44b52fc8ca27473e20e29386e1cbaf02019628b8e5648327dd81eac6",
+      "bytes": 11286
+    },
+    {
+      "path": "sites/registry.json",
+      "sha256": "f26dfd6adc97c6697ced915a4575865961b2eb6713acd72201f4fd5f1fa08d02",
+      "bytes": 73556
+    },
+    {
+      "path": "data/records/section-sites-20261020/estate-receiving.json",
+      "sha256": "4d1f1c1f8dd2ac86b389183d28309bd37c401f7ebe44d45717b0c443028f302c",
+      "bytes": 1232
+    }
+  ],
+  "promotedDomains": [
+    "science.561.group",
+    "engineering.561.group",
+    "operations.561.group",
+    "services.561.group"
+  ],
+  "judgment": {
+    "allNineDataFileHashesAndLengthsMatch": true,
+    "onlyFourPropertiesChanged": true,
+    "oldDeploymentObservationsUnchanged": true,
+    "exactlyFourReceivedDeploymentsAppended": true,
+    "allOtherEstateJsonValuesUnchanged": true,
+    "sourceBuildProviderAndIndependentWitnessExactChain": true,
+    "independentReviewCopiesByteExact": true,
+    "sciencePredecessorOriginalReadbackHashesMatch": true,
+    "noNewProgramOrGeneratedArtifactsCommitted": true
+  },
+  "nativeValidatorEvidence": {
+    "type": "SectionPortalEstateReceiving",
+    "version": 1,
+    "at": "2026-10-21T04:44:39.833Z",
+    "sourceHostingMerge": "9976362a1822e257b3e7374c7fdc0fdeb278ad18",
+    "promotedDomains": [
+      "science.561.group",
+      "engineering.561.group",
+      "operations.561.group",
+      "services.561.group"
+    ],
+    "sourceIntegration": "data/records/section-sites-20261020/source-integration.json",
+    "publicWitness": {
+      "path": "data/records/section-sites-20261020/independent-four-portal-public-witness.json",
+      "sha256": "48e863fc44b52fc8ca27473e20e29386e1cbaf02019628b8e5648327dd81eac6"
+    },
+    "providerReceipt": {
+      "path": "data/records/section-sites-20261020/provider-publication-receipt.json",
+      "sha256": "8e352d584eb978aa66716f2bd33fb4e29414818d04d79bba55ae7dbc317e1c4c"
+    },
+    "nativeRegistryValidation": {
+      "implementation": "causeway-services/public-web-services-section@9976362a1822e257b3e7374c7fdc0fdeb278ad18:sites/validate.mjs",
+      "errors": [],
+      "properties": 30,
+      "canonicalProperties": 4
+    },
+    "unrelatedEstateUnchanged": true,
+    "generatedArtifactsOrProgramChanges": false,
+    "scope": "Four new subject portals received. Commerce sites and unrelated estate are outside this bounded registry promotion."
+  },
+  "remainingReceiving": [
+    "Exact source PR head payload and integration readback.",
+    "Separate original commerce/all-seven receiving."
+  ]
+}

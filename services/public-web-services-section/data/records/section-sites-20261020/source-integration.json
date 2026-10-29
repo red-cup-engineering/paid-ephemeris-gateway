@@ -1,0 +1,34 @@
+{
+  "type": "SectionPortalSourceIntegration",
+  "at": "2026-10-21T04:38:09.575Z",
+  "sources": [
+    {
+      "domain": "science.561.group",
+      "repo": "lenticule-science/science-services-section",
+      "pr": 245,
+      "head": "394e41edf59331a604b7910924feee1b1d3de2ff",
+      "merge": "adf35735fe42742774cca08047416af649464479"
+    },
+    {
+      "domain": "engineering.561.group",
+      "repo": "red-cup-engineering/engineering-services-section",
+      "pr": 140,
+      "head": "966dc403687defce128d859fe9619a37944f6f7a",
+      "merge": "f0453893830d187b6136e41a7f8a8920fe994072"
+    },
+    {
+      "domain": "operations.561.group",
+      "repo": "coesite-operations/operations-services-section",
+      "pr": 328,
+      "head": "bbc77a1ce05516ed36a76f9bb62391a56135036d",
+      "merge": "3e39cdb51a2225d534b172529f5860d847ac9144"
+    },
+    {
+      "domain": "services.561.group",
+      "repo": "causeway-services/public-services-section",
+      "pr": 77,
+      "head": "34d7247aadb2eca0c131b3fa20a0f9179916980d",
+      "merge": "c9eebc37b1fcf079f1dc610a1112b1434f0816bc"
+    }
+  ]
+}

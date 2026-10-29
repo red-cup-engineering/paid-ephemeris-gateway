@@ -1,0 +1,90 @@
+{
+  "type": "IndependentScienceAccessDisposition",
+  "version": 1,
+  "observedAt": "2026-10-21T04:41:54.484Z",
+  "reviewer": "/root/portal_receiving",
+  "verdict": "met-for-bounded-original-access-application-path-disposition-pending-readback-and-https",
+  "before": {
+    "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/records/section-sites-20261020/access-before.json",
+    "sha256": "5a16551808ab279f90a78f26a302b52219bc71e223a5d1d66a913d677de6f6ed",
+    "applicationId": "d3e5a071-62c8-49ff-99ba-fb5766b3eb08",
+    "originalPublicDestination": {
+      "type": "public",
+      "uri": "science.561.group"
+    },
+    "retainedWorkerDestination": {
+      "type": "worker",
+      "worker_id": "146c6e18a2994d94b1f0a9a358ff30aa"
+    }
+  },
+  "finding": "All20 anonymous Science HTTPS requests received Cloudflare Access302 before either Worker. Original hostname-wide Access application overlapped the new public portal.",
+  "decision": {
+    "mechanism": "Narrow the existing original self_hosted application public destinations to precisely the retained legacy paths; preserve original Worker destination and all authentication policy/identity-provider/session/cookie properties. No new bypass policy/application or account-wide change.",
+    "publicDestinations": [
+      {
+        "type": "public",
+        "uri": "science.561.group/api/*"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/oauth/*"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/vault*"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/healthz"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/feed.xml"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/feed.atom"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/app.js"
+      },
+      {
+        "type": "public",
+        "uri": "science.561.group/js/*"
+      }
+    ],
+    "retainedWorkerDestination": {
+      "type": "worker",
+      "worker_id": "146c6e18a2994d94b1f0a9a358ff30aa"
+    },
+    "fieldConsistency": "Update legacy domain/self_hosted_domains consistently to the same bounded destinations if API requires. No bare science.561.group hostname may remain a matching protected public destination.",
+    "protectedScope": "Original Access outer authentication remains on every retained legacy path, including API, OAuth, vault, health, old feeds and retained assets; original Worker inner authentication remains unchanged.",
+    "newPortalScope": "Root, native publication feeds/assets/search/discovery/resources and ordinary native publication routes are public as explicitly requested and independently accepted.",
+    "privateRefusalReceiving": "Anonymous retained legacy paths should continue to show Access refusal/302. Do not remove existing Access to force observation of the inner401. Unchanged original Worker version/source proves preservation of its inspected inner guard; no authenticated private read is required or authorized by this review."
+  },
+  "officialSources": [
+    {
+      "url": "https://developers.cloudflare.com/cloudflare-one/access-controls/policies/app-paths/",
+      "claim": "Specific paths and path wildcards are supported; hostname-wide configuration protects all paths."
+    },
+    {
+      "url": "https://developers.cloudflare.com/api/resources/zero_trust/subresources/access/subresources/applications/",
+      "claim": "Public destination URIs may contain domain/path wildcards; destinations replace deprecated self_hosted_domains."
+    },
+    {
+      "url": "https://developers.cloudflare.com/workers/configuration/cloudflare-access/",
+      "claim": "Worker protection covers its routes while hostname-based matching controls matching URLs."
+    }
+  ],
+  "requiredReadback": [
+    "Same original application id, Worker destination, policy id/content, IdP selections and unrelated security/session fields.",
+    "Exactly eight bounded public destinations; no bare hostname catchall or bypass policy.",
+    "Public root/native artifacts return correct200 bytes while original legacy paths still require original Access.",
+    "Original legacy Worker deployment/version remains exactly unchanged."
+  ],
+  "limitations": [
+    "No authenticated login, grant, authoring or private read is performed.",
+    "Protected legacy public asset paths may remain behind the existing Access gate; this is preserved predecessor behavior, not a new public L-Space release."
+  ]
+}

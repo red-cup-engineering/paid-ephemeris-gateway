@@ -1,0 +1,243 @@
+{
+  "type": "CloudflareZoneRouting",
+  "version": 1,
+  "observedAt": "2026-10-21T03:45:49.946Z",
+  "accountId": "337e54ee6dc7d488933f473204a6d89e",
+  "zoneId": "179300009777a1a35c04494c503b7ebd",
+  "zoneName": "561.group",
+  "routes": [
+    {
+      "id": "a28ee0d590b8411e9847f02d46570087",
+      "pattern": "science.561.group/*",
+      "script": "lenticule-science-knowledge-vault"
+    },
+    {
+      "id": "9eb139676c2d4282b49a5a8c7daa111c",
+      "pattern": "www.561.group/*",
+      "script": "561-group-site"
+    },
+    {
+      "id": "01150e3186984930b216ead4f01b206a",
+      "pattern": "561.group/*",
+      "script": "561-group-site"
+    }
+  ],
+  "customDomains": [
+    {
+      "id": "02ef95646a2bebd549d47b402e79820b0bd9bb9e",
+      "hostname": "deterministic-intent-admission.actions.561.group",
+      "service": "deterministic-intent-admission-service",
+      "environment": "production"
+    },
+    {
+      "id": "7e49a97c17b1338eab2ca829429154fc83716df9",
+      "hostname": "package-backed-settlement-assay.actions.561.group",
+      "service": "package-backed-settlement-assay-service",
+      "environment": "production"
+    },
+    {
+      "id": "b362890a5f6c1ac9d96846a978a8b570ac8177fd",
+      "hostname": "package-backed-capcell-fabrication.actions.561.group",
+      "service": "package-backed-capcell-fabrication-service",
+      "environment": "production"
+    },
+    {
+      "id": "d7720cf889c718bafc7ba3481a8ae2ce868eccb2",
+      "hostname": "capcell-manifest-fabrication.actions.561.group",
+      "service": "capcell-manifest-fabrication-service",
+      "environment": "production"
+    },
+    {
+      "id": "2e9b02778a2ccd5813520963566c13d3ef1b7fd9",
+      "hostname": "eve-assist.561.group",
+      "service": "eve-assist",
+      "environment": "production"
+    },
+    {
+      "id": "8e04da1f531f082f743dc492b586376a39d91edf",
+      "hostname": "pacing.561.group",
+      "service": "pacing-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "edd9e11d678dfc8777d01e1649ef37c9822ab9a8",
+      "hostname": "solar.561.group",
+      "service": "salt-pan-solar-gateway",
+      "environment": "production"
+    },
+    {
+      "id": "386ab6af7115ff67b1ad177a14aa18ffe844208a",
+      "hostname": "ads.561.group",
+      "service": "house-ads-server",
+      "environment": "production"
+    },
+    {
+      "id": "b729561fb5741a6a5c27f7b84cb8514b833187fc",
+      "hostname": "muse.561.group",
+      "service": "muse-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "48cfc537b840819d85680119be9aea1c75ee85d7",
+      "hostname": "turntide.561.group",
+      "service": "turntide-islands-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "3e001d054b17d53a0c12d449d7c13861e093aea5",
+      "hostname": "equivo.play.561.group",
+      "service": "equivo-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "4b03d111c0316d3300cdce8a23def6b46a667104",
+      "hostname": "iyappy.561.group",
+      "service": "iyappy-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "ebb0059fd87dedbfa65c359c88b2d361df2c47e0",
+      "hostname": "ruinfold.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "4cf43e20bab786b1b735269b33e623aedc6f53d0",
+      "hostname": "durante.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "054efcf73c312b754b8eafe4e222527a85c8f641",
+      "hostname": "aletheon.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "7684caeac16a38a284a46ee1ad22a1fdd97f3ff4",
+      "hostname": "casino.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "874a217cfa404fece61e21b7b216e5ee56004d1d",
+      "hostname": "flickering.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "0449dd349017e3300f190ded4f1ffef8459b551e",
+      "hostname": "onestone.561.group",
+      "service": "cloudflare-router-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "0574feb1ba10bcda8ccc0e435de7f021fc7865c3",
+      "hostname": "weiqi.561.group",
+      "service": "weiqi-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "72ed1298a81a3b2f889d81f2cdb16d9b1f76a98c",
+      "hostname": "play.561.group",
+      "service": "play-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "9e72dce33179efe1381de03d343c21fb28afadda",
+      "hostname": "holofoam.561.group",
+      "service": "holofoam",
+      "environment": "production"
+    },
+    {
+      "id": "d62452124b7fdb6cfecc45c5797af9fc5b7d222f",
+      "hostname": "portage.561.group",
+      "service": "portage-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "dc01cc240ddb6c2672f1c299827060e62c1b00ce",
+      "hostname": "stoke.561.group",
+      "service": "stoke-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "0b47db99570f3cb252a3f3c39e38a61bfda081c5",
+      "hostname": "crucible.561.group",
+      "service": "crucible-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "e8e0520d5a1556b733113fb6a7ee17c232d2b174",
+      "hostname": "fearful.561.group",
+      "service": "be-not-so-fearful-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "e7fb8cf7df09fcc2dbd9fe525bd850297e19ba77",
+      "hostname": "gambling-trainer.561.group",
+      "service": "gambling-trainer-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "631f035434e3d8545146c8d67475556a1dfa3c94",
+      "hostname": "parlor.561.group",
+      "service": "parlor-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "636c4adaf6e6e45bbcffcf33e94865f617c76bf9",
+      "hostname": "solitaire.561.group",
+      "service": "solitaire-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "2784fd16e65c31ea6be816fcc53ecfbaaaaaa8c0",
+      "hostname": "you-are-conscious.561.group",
+      "service": "you-are-conscious-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "27e1a37af86c376cd89f9be85b8288b492b8bcb5",
+      "hostname": "farstone.561.group",
+      "service": "farstone",
+      "environment": "production"
+    },
+    {
+      "id": "a9690c8d790f4498a7c58dbe4af6bf9aa275ce8b",
+      "hostname": "mud.561.group",
+      "service": "mud-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "7048a45000fe639664ab72640caa85b5a1d0502d",
+      "hostname": "pool.turntide.561.group",
+      "service": "tidepool-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "31ecf88d12158b9b9cde882b811209ae7d8bef7a",
+      "hostname": "shop.561.group",
+      "service": "shop-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "9d5fa68ca0df2b93adca470ec68fd31904dcdc82",
+      "hostname": "north-shore-scenic-railroad-service.561.group",
+      "service": "north-shore-scenic-railroad-service",
+      "environment": "production"
+    },
+    {
+      "id": "5b43295a703b822491d21df968f3579f2d8dfe71",
+      "hostname": "bazaar.561.group",
+      "service": "bazaar-561-group",
+      "environment": "production"
+    },
+    {
+      "id": "de76b6783cfc2f0f21ec9dcb259fe3934548790e",
+      "hostname": "market.561.group",
+      "service": "market-navigation-561-group",
+      "environment": "production"
+    }
+  ]
+}

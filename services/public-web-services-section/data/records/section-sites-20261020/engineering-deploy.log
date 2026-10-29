@@ -1,0 +1,51 @@
+Cloudflare: issued scoped token bf60a4fb00e87a5f91996643bd633c10, expires 2026-10-21T05:40:11Z
+
+ ⛅️ wrangler 4.127.1 (update available 4.151.3)
+───────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 51 files from the assets directory /home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/engineering/public
+🌀 Starting asset upload...
+🌀 Found 32 new or modified static assets to upload. Proceeding with upload...
++ /redirects.json
++ /discovery.json
++ /feed.json
++ /resources.json
++ /atlas/index.html
++ /types/index.html
++ /archive/index.html
++ /statuses/active/archive/index.html
++ /types/article/index.html
++ /tags/navigation/index.html
++ /index.html
++ /robots.txt
++ /search/search.mjs
++ /feed.rss.xml
++ /start-here/index.html
++ /start-here/neighborhood/index.html
++ /statuses/index.html
++ /types/article/archive/index.html
++ /tags/navigation/archive/index.html
++ /tags/resources/index.html
++ /tags/engineering/index.html
++ /search/search-index.json
++ /sitemap.xml
++ /styles.css
++ /feed.atom.xml
++ /404.html
++ /sections/index.html
++ /tags/index.html
++ /tags/resources/archive/index.html
++ /tags/engineering/archive/index.html
++ /statuses/active/index.html
++ /search/index.html
+Uploaded 11 of 32 assets
+Uploaded 21 of 32 assets
+Uploaded 32 of 32 assets
+✨ Success! Uploaded 32 files (1.40 sec)
+
+Total Upload: 0.62 KiB / gzip: 0.33 KiB
+Uploaded section-engineering-561-group (3.94 sec)
+Deployed section-engineering-561-group triggers (1.88 sec)
+  engineering.561.group (custom domain)
+Current Version ID: d4ad50ff-2cc5-45fb-8889-731ead21d764
+Cloudflare: revoked token bf60a4fb00e87a5f91996643bd633c10

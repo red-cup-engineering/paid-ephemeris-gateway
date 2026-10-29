@@ -1,0 +1,333 @@
+{
+  "type": "SectionPublicationProviderReceiving",
+  "at": "2026-10-21T04:42:49.823Z",
+  "accountId": "337e54ee6dc7d488933f473204a6d89e",
+  "zoneId": "179300009777a1a35c04494c503b7ebd",
+  "sites": [
+    {
+      "domain": "science.561.group",
+      "service": "section-science-561-group",
+      "deployments": {
+        "deployments": [
+          {
+            "id": "92662900-9630-4aa3-9e25-62459ad9ff15",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "e9b3c163-4c1f-4c9a-a2bd-677f691260cb",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-21T04:39:55.80161Z"
+          }
+        ]
+      },
+      "version": {
+        "id": "e9b3c163-4c1f-4c9a-a2bd-677f691260cb",
+        "number": 1,
+        "metadata": {
+          "created_on": "2026-10-21T04:39:55.80161Z",
+          "source": "wrangler",
+          "author_id": "1809283bab5941c568784f2d9e8dd635",
+          "author_email": "",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "",
+            "handlers": null,
+            "last_deployed_from": ""
+          },
+          "script_runtime": {
+            "assets": {
+              "html_handling": "auto-trailing-slash",
+              "not_found_handling": "404-page",
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-10-20",
+            "usage_model": "standard"
+          },
+          "bindings": []
+        }
+      },
+      "customDomain": {
+        "id": "bb30cd2f42fa728187c96a95388165fb8cc0c223",
+        "zone_id": "179300009777a1a35c04494c503b7ebd",
+        "zone_name": "561.group",
+        "hostname": "science.561.group",
+        "service": "section-science-561-group",
+        "environment": "production",
+        "cert_id": "7fcd8a2a-11c7-450a-8196-00cfebc4344d",
+        "previews_enabled": false,
+        "enabled": true
+      },
+      "routes": [
+        {
+          "id": "338fc1a14a484cb49f474f501898b6bd",
+          "pattern": "science.561.group/api/*",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "1c244cc738b54df2a314066d7349eb82",
+          "pattern": "science.561.group/healthz",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "1f51673be24444c387a878afdb3add67",
+          "pattern": "science.561.group/feed.atom",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "ecbff77908b74ffe8460149ec2696ce1",
+          "pattern": "science.561.group/feed.xml",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "7ac11f598ea5485ea30f198a077d4eb7",
+          "pattern": "science.561.group/js/*",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "8245742978ba4599bcaf693612464780",
+          "pattern": "science.561.group/oauth/*",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "e7210afe9dae430babdb4bfc795ea941",
+          "pattern": "science.561.group/vault*",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        },
+        {
+          "id": "24a216a2359948ae8cbb701e0bced84d",
+          "pattern": "science.561.group/app.js",
+          "script": "lenticule-science-knowledge-vault",
+          "request_limit_fail_open": false
+        }
+      ]
+    },
+    {
+      "domain": "engineering.561.group",
+      "service": "section-engineering-561-group",
+      "deployments": {
+        "deployments": [
+          {
+            "id": "96cac59b-548e-4275-9a29-df2abd00c28c",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "d4ad50ff-2cc5-45fb-8889-731ead21d764",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-21T04:40:20.667297Z"
+          }
+        ]
+      },
+      "version": {
+        "id": "d4ad50ff-2cc5-45fb-8889-731ead21d764",
+        "number": 1,
+        "metadata": {
+          "created_on": "2026-10-21T04:40:20.667297Z",
+          "source": "wrangler",
+          "author_id": "bf60a4fb00e87a5f91996643bd633c10",
+          "author_email": "",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "",
+            "handlers": null,
+            "last_deployed_from": ""
+          },
+          "script_runtime": {
+            "assets": {
+              "html_handling": "auto-trailing-slash",
+              "not_found_handling": "404-page",
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-10-20",
+            "usage_model": "standard"
+          },
+          "bindings": []
+        }
+      },
+      "customDomain": {
+        "id": "409c9274a6f29f336e009a0624e52efbf48d1972",
+        "zone_id": "179300009777a1a35c04494c503b7ebd",
+        "zone_name": "561.group",
+        "hostname": "engineering.561.group",
+        "service": "section-engineering-561-group",
+        "environment": "production",
+        "cert_id": "5eab6ea2-28ad-4fae-8070-850f248e8772",
+        "previews_enabled": false,
+        "enabled": true
+      },
+      "routes": []
+    },
+    {
+      "domain": "operations.561.group",
+      "service": "section-operations-561-group",
+      "deployments": {
+        "deployments": [
+          {
+            "id": "eba309f5-efdd-4a4e-a92b-c354d777b1ec",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "249a9bea-b59d-4943-a83b-62c90c490add",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-21T04:40:43.236948Z"
+          }
+        ]
+      },
+      "version": {
+        "id": "249a9bea-b59d-4943-a83b-62c90c490add",
+        "number": 1,
+        "metadata": {
+          "created_on": "2026-10-21T04:40:43.236948Z",
+          "source": "wrangler",
+          "author_id": "3131d594681060b71b95159ebe013ba4",
+          "author_email": "",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "",
+            "handlers": null,
+            "last_deployed_from": ""
+          },
+          "script_runtime": {
+            "assets": {
+              "html_handling": "auto-trailing-slash",
+              "not_found_handling": "404-page",
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-10-20",
+            "usage_model": "standard"
+          },
+          "bindings": []
+        }
+      },
+      "customDomain": {
+        "id": "44ead524c19851aee0f6ac3f91614c89a4d4cc30",
+        "zone_id": "179300009777a1a35c04494c503b7ebd",
+        "zone_name": "561.group",
+        "hostname": "operations.561.group",
+        "service": "section-operations-561-group",
+        "environment": "production",
+        "cert_id": "99740233-3d9d-4140-a007-daf1acca2adc",
+        "previews_enabled": false,
+        "enabled": true
+      },
+      "routes": []
+    },
+    {
+      "domain": "services.561.group",
+      "service": "section-services-561-group",
+      "deployments": {
+        "deployments": [
+          {
+            "id": "c1b65a2f-277d-425e-99f4-0d32aa70ece9",
+            "source": "wrangler",
+            "strategy": "percentage",
+            "annotations": {
+              "workers/message": "Automatic deployment on upload.",
+              "workers/triggered_by": "upload"
+            },
+            "versions": [
+              {
+                "version_id": "985a3c47-7aa3-4f79-b423-fb6c9955e8ba",
+                "percentage": 100
+              }
+            ],
+            "created_on": "2026-10-21T04:41:19.844187Z"
+          }
+        ]
+      },
+      "version": {
+        "id": "985a3c47-7aa3-4f79-b423-fb6c9955e8ba",
+        "number": 1,
+        "metadata": {
+          "created_on": "2026-10-21T04:41:19.844187Z",
+          "source": "wrangler",
+          "author_id": "e56036193a38c70314acc133e198251b",
+          "author_email": "",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "",
+            "handlers": null,
+            "last_deployed_from": ""
+          },
+          "script_runtime": {
+            "assets": {
+              "html_handling": "auto-trailing-slash",
+              "not_found_handling": "404-page",
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-10-20",
+            "usage_model": "standard"
+          },
+          "bindings": []
+        }
+      },
+      "customDomain": {
+        "id": "5fe1302ab21450e9ed5c448d3fce7eb3ec24a8be",
+        "zone_id": "179300009777a1a35c04494c503b7ebd",
+        "zone_name": "561.group",
+        "hostname": "services.561.group",
+        "service": "section-services-561-group",
+        "environment": "production",
+        "cert_id": "d949c3e2-1392-451d-b87b-5173d19d0000",
+        "previews_enabled": false,
+        "enabled": true
+      },
+      "routes": []
+    }
+  ]
+}

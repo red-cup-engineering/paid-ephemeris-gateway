@@ -1,0 +1,89 @@
+{
+  "type": "SectionPortalHostingSourceProposal",
+  "version": 1,
+  "at": "2026-10-21T04:41:26.380Z",
+  "repository": "causeway-services/public-web-services-section",
+  "base": "0b56a6a7a21328b2f3391d3dedc62a71af416dfb",
+  "head": "b8f1927f7fe6e3be7e73896cd625ae83a09d1f29",
+  "tree": "5cc09a66c19709e906c1832eb68da84fcfa35938",
+  "pullRequest": "https://github.com/causeway-services/public-web-services-section/pull/16",
+  "files": [
+    {
+      "path": "data/records/section-sites-20261020/source-integration.json",
+      "sha256": "251776e77b507e9b4f1a2cd6068cfed1576392c6fe341f45fe6d66dc6703fc1c",
+      "bytes": 1090
+    },
+    {
+      "path": "data/records/section-sites-20261020/provider-binding.json",
+      "sha256": "91b897ef5dec3e030a561bd5624e149793d1b01a0580fb304748e88b2ef141a6",
+      "bytes": 1805
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-data-review.json",
+      "sha256": "b3296aad85f3dcd07989670f3495ff6ff3edd0ee1e9a2f35020bee56dda858c9",
+      "bytes": 30730
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-link-refinement-review.json",
+      "sha256": "a55ec140a1ae633ff2054c630cea97835365b2b49127cc1c80e65ebd0fa8c2e9",
+      "bytes": 8219
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-portal-source-commit-review.json",
+      "sha256": "57ea0ce1f958960262b4c50c3bbce422211d2862d51f934264dc839fe0aef57d",
+      "bytes": 7603
+    },
+    {
+      "path": "data/records/section-sites-20261020/independent-science-predecessor-disposition.json",
+      "sha256": "cf92f87c6c707c6c90b40bf2395967e72a270b185fe2f547bc16f7031566d809",
+      "bytes": 4790
+    },
+    {
+      "path": "sites/science.561.group/wrangler.json",
+      "sha256": "b2e049db8bc1b805599dac5d630220d99b84bfa774cbd5fed01788cd5afa7932",
+      "bytes": 463
+    },
+    {
+      "path": "data/records/section-sites-20261020/builds/science.json",
+      "sha256": "b2cf086b9d91f941825f3954eeb8df7535d94200696996efbb2f62db534a0d64",
+      "bytes": 5956
+    },
+    {
+      "path": "sites/engineering.561.group/wrangler.json",
+      "sha256": "4c977bcfcbdfeb507b328cdad2541e18d8d806f068ebb2fd3b5cf4179e636f1a",
+      "bytes": 475
+    },
+    {
+      "path": "data/records/section-sites-20261020/builds/engineering.json",
+      "sha256": "27980ae7158263478b2183e5f5576076e79910d8ab1f3bf0a9f8205a0e284ea3",
+      "bytes": 5982
+    },
+    {
+      "path": "sites/operations.561.group/wrangler.json",
+      "sha256": "469234b385d757f34835e7393bb7545c4d491a3f6279504a3c5edcc0bc773015",
+      "bytes": 472
+    },
+    {
+      "path": "data/records/section-sites-20261020/builds/operations.json",
+      "sha256": "2fcc0f9e49cbb2ebf5c1f677ab044f666bb04bc371088394d26225f4c7f5c2af",
+      "bytes": 5909
+    },
+    {
+      "path": "sites/services.561.group/wrangler.json",
+      "sha256": "7c616d5a0365c4ecfbb7e05ab86aa9a10ceb703b7ee3ea875ec1a257e0f95138",
+      "bytes": 466
+    },
+    {
+      "path": "data/records/section-sites-20261020/builds/services.json",
+      "sha256": "12dcc9b1842be100fe1a31bd4d22ad44d2436936d04ed8412c0f0aaf290bc115",
+      "bytes": 5892
+    },
+    {
+      "path": "data/records/section-sites-20261020/deployment-binding.json",
+      "sha256": "63bb676a111c131de7546b8b314723001362b289ef7122f02c8a406282465f8f",
+      "bytes": 8529
+    }
+  ],
+  "sourceReadback": "All15 Git source blobs match staged exact SHA256 bytes. No code, generated artifact or registry lifecycle changes.",
+  "state": "Proposed; no merge or provider deployment by source proposer"
+}

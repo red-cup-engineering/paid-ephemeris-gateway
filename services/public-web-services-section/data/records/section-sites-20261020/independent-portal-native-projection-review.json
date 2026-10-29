@@ -1,0 +1,276 @@
+{
+  "type": "IndependentSectionPortalNativeProjectionAndHostingReview",
+  "version": 1,
+  "observedAt": "2026-10-21T04:39:27.141Z",
+  "reviewer": "/root/portal_receiving",
+  "verdict": "met-for-exact-native-artifacts-and-assets-only-hosting-data",
+  "scope": "Inspected existing native output and invoked generated searchIndex without rebuilding or mutating source/provider.",
+  "supplier": {
+    "adapterGitBlob": "0eefa4df2ddd5dfc366a0ef892287a44a54db605",
+    "renderer": "@red-cup-engineering/web-page-tiling-engine@0.14.2",
+    "catalog": "@red-cup-engineering/knowledge-system-server@0.1.2"
+  },
+  "domains": [
+    {
+      "domain": "https://science.561.group/",
+      "source": {
+        "owner": "science-services-section",
+        "domain": "science",
+        "repo": "lenticule-science/science-services-section",
+        "ref": "394e41edf59331a604b7910924feee1b1d3de2ff",
+        "merge": "adf35735fe42742774cca08047416af649464479"
+      },
+      "build": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/science/build.json",
+        "sha256": "b2cf086b9d91f941825f3954eeb8df7535d94200696996efbb2f62db534a0d64"
+      },
+      "accepted": {
+        "name": "start-here",
+        "address": "ni:///sha-256;vaR2hPvCM4GugnwOR7ZzQ46wHSCZvJ0clzqVQl-pEEg",
+        "rawSha256": "7330c0e0ec85c30e65819e03605ecd6f6c23ce19d5e1b77b5ed0a9f8675f53ee"
+      },
+      "withheld": [
+        {
+          "name": "intro",
+          "status": "potential",
+          "address": "ni:///sha-256;fFPAbOJX90nNJ34YSPHfYUyoIADnIwfIB-6rZuxUEQU"
+        }
+      ],
+      "artifactsCount": 32,
+      "allArtifactLengthsAndHashesMatch": true,
+      "homeTitle": "Explore Lenticule Science",
+      "feedItems": 1,
+      "feedIdentity": "ni:///sha-256;vaR2hPvCM4GugnwOR7ZzQ46wHSCZvJ0clzqVQl-pEEg",
+      "search": {
+        "query": "science",
+        "documentCount": 18,
+        "rootResultFound": true
+      },
+      "withheldTitleAndAddressAbsentEveryArtifact": true,
+      "sevenSiteMenuPresent": true,
+      "resourceDiscoveryExactReviewedBytes": true,
+      "hosting": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/science/wrangler.json",
+        "sha256": "64c546fa74cbf53c634dd0a4fa1bd3955ee0e86b04dee8097081d9a4a1127c1a",
+        "config": {
+          "name": "section-science-561-group",
+          "account_id": "337e54ee6dc7d488933f473204a6d89e",
+          "compatibility_date": "2026-10-20",
+          "workers_dev": false,
+          "preview_urls": false,
+          "assets": {
+            "directory": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/science/public",
+            "not_found_handling": "404-page",
+            "html_handling": "auto-trailing-slash"
+          },
+          "routes": [
+            {
+              "pattern": "science.561.group",
+              "custom_domain": true
+            }
+          ]
+        },
+        "verdict": "met-for-assets-only-canonical-custom-domain"
+      }
+    },
+    {
+      "domain": "https://engineering.561.group/",
+      "source": {
+        "owner": "engineering-services-section",
+        "domain": "engineering",
+        "repo": "red-cup-engineering/engineering-services-section",
+        "ref": "966dc403687defce128d859fe9619a37944f6f7a",
+        "merge": "f0453893830d187b6136e41a7f8a8920fe994072"
+      },
+      "build": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/engineering/build.json",
+        "sha256": "27980ae7158263478b2183e5f5576076e79910d8ab1f3bf0a9f8205a0e284ea3"
+      },
+      "accepted": {
+        "name": "start-here",
+        "address": "ni:///sha-256;oLNsbWN7QA6G8OZDjEBIEBIO9zDg3_x9-Bbn3ZkpWao",
+        "rawSha256": "4ad899e3247e2bc056818da187ad67233bbc33491d8bdfb40d0805762a1e4d52"
+      },
+      "withheld": [
+        {
+          "name": "intro",
+          "status": "potential",
+          "address": "ni:///sha-256;MX8_4mPQKRBlWezk0Ye5cgEyYcX0-2GrlCAZ6IkfHqE"
+        }
+      ],
+      "artifactsCount": 32,
+      "allArtifactLengthsAndHashesMatch": true,
+      "homeTitle": "Find and use Red Cup Engineering resources",
+      "feedItems": 1,
+      "feedIdentity": "ni:///sha-256;oLNsbWN7QA6G8OZDjEBIEBIO9zDg3_x9-Bbn3ZkpWao",
+      "search": {
+        "query": "engineering",
+        "documentCount": 18,
+        "rootResultFound": true
+      },
+      "withheldTitleAndAddressAbsentEveryArtifact": true,
+      "sevenSiteMenuPresent": true,
+      "resourceDiscoveryExactReviewedBytes": true,
+      "hosting": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/engineering/wrangler.json",
+        "sha256": "bf9ca6cd4562c75340f21a0be28ff9e6eccf9aa4bf9fb76df6cfcf9a1717c4c5",
+        "config": {
+          "name": "section-engineering-561-group",
+          "account_id": "337e54ee6dc7d488933f473204a6d89e",
+          "compatibility_date": "2026-10-20",
+          "workers_dev": false,
+          "preview_urls": false,
+          "assets": {
+            "directory": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/engineering/public",
+            "not_found_handling": "404-page",
+            "html_handling": "auto-trailing-slash"
+          },
+          "routes": [
+            {
+              "pattern": "engineering.561.group",
+              "custom_domain": true
+            }
+          ]
+        },
+        "verdict": "met-for-assets-only-canonical-custom-domain"
+      }
+    },
+    {
+      "domain": "https://operations.561.group/",
+      "source": {
+        "owner": "operations-services-section",
+        "domain": "operations",
+        "repo": "coesite-operations/operations-services-section",
+        "ref": "bbc77a1ce05516ed36a76f9bb62391a56135036d"
+      },
+      "build": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/operations/build.json",
+        "sha256": "2fcc0f9e49cbb2ebf5c1f677ab044f666bb04bc371088394d26225f4c7f5c2af"
+      },
+      "accepted": {
+        "name": "start-here",
+        "address": "ni:///sha-256;YazkBetlXXRuRi0V-S8V7HH6OBHJ6iWUI1nJd2bDP6I",
+        "rawSha256": "c8f7f990556a5be5edb5e0e59b2583c1770b90c86cc8e8d8d7a8be166e1048c8"
+      },
+      "withheld": [
+        {
+          "name": "intro",
+          "status": "potential",
+          "address": "ni:///sha-256;nkbDzehspK-222SKIVWlvuttSzrX_GeOWPVDsOlXyPQ"
+        }
+      ],
+      "artifactsCount": 32,
+      "allArtifactLengthsAndHashesMatch": true,
+      "homeTitle": "Find Coesite operating methods and evidence",
+      "feedItems": 1,
+      "feedIdentity": "ni:///sha-256;YazkBetlXXRuRi0V-S8V7HH6OBHJ6iWUI1nJd2bDP6I",
+      "search": {
+        "query": "operations",
+        "documentCount": 18,
+        "rootResultFound": true
+      },
+      "withheldTitleAndAddressAbsentEveryArtifact": true,
+      "sevenSiteMenuPresent": true,
+      "resourceDiscoveryExactReviewedBytes": true,
+      "hosting": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/operations/wrangler.json",
+        "sha256": "a2f1873009486f0090f0d3116c2a980c7f8af2f0af4a129d450f7aabb828e7fd",
+        "config": {
+          "name": "section-operations-561-group",
+          "account_id": "337e54ee6dc7d488933f473204a6d89e",
+          "compatibility_date": "2026-10-20",
+          "workers_dev": false,
+          "preview_urls": false,
+          "assets": {
+            "directory": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/operations/public",
+            "not_found_handling": "404-page",
+            "html_handling": "auto-trailing-slash"
+          },
+          "routes": [
+            {
+              "pattern": "operations.561.group",
+              "custom_domain": true
+            }
+          ]
+        },
+        "verdict": "met-for-assets-only-canonical-custom-domain"
+      }
+    },
+    {
+      "domain": "https://services.561.group/",
+      "source": {
+        "owner": "public-services-section",
+        "domain": "services",
+        "repo": "causeway-services/public-services-section",
+        "ref": "34d7247aadb2eca0c131b3fa20a0f9179916980d"
+      },
+      "build": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/services/build.json",
+        "sha256": "12dcc9b1842be100fe1a31bd4d22ad44d2436936d04ed8412c0f0aaf290bc115"
+      },
+      "accepted": {
+        "name": "start-here",
+        "address": "ni:///sha-256;9aZF7LHaFIfr1ffb-72HLTNvm5RT_sDi94YsBoKCQrU",
+        "rawSha256": "25a3429a45bcea131075edbebba75bf0cb62555c6dd9db7333976e1d8ca364f0"
+      },
+      "withheld": [
+        {
+          "name": "intro",
+          "status": "potential",
+          "address": "ni:///sha-256;c6IbMTiWbYTLJ0L3nxomCShlvo4xzpDAyTqULd9bzEU"
+        }
+      ],
+      "artifactsCount": 32,
+      "allArtifactLengthsAndHashesMatch": true,
+      "homeTitle": "Choose a public 561 Group service",
+      "feedItems": 1,
+      "feedIdentity": "ni:///sha-256;9aZF7LHaFIfr1ffb-72HLTNvm5RT_sDi94YsBoKCQrU",
+      "search": {
+        "query": "service",
+        "documentCount": 18,
+        "rootResultFound": true
+      },
+      "withheldTitleAndAddressAbsentEveryArtifact": true,
+      "sevenSiteMenuPresent": true,
+      "resourceDiscoveryExactReviewedBytes": true,
+      "hosting": {
+        "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/services/wrangler.json",
+        "sha256": "53e642479c70c45011dc5b8854ac02a6b86ba6fbffdcc29d6883298a4b4ec155",
+        "config": {
+          "name": "section-services-561-group",
+          "account_id": "337e54ee6dc7d488933f473204a6d89e",
+          "compatibility_date": "2026-10-20",
+          "workers_dev": false,
+          "preview_urls": false,
+          "assets": {
+            "directory": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/candidates/services/public",
+            "not_found_handling": "404-page",
+            "html_handling": "auto-trailing-slash"
+          },
+          "routes": [
+            {
+              "pattern": "services.561.group",
+              "custom_domain": true
+            }
+          ]
+        },
+        "verdict": "met-for-assets-only-canonical-custom-domain"
+      }
+    }
+  ],
+  "judgment": {
+    "all128ArtifactHashesMatch": true,
+    "oneAcceptedGuideEach": true,
+    "potentialIntroWithheldEveryArtifact": true,
+    "sevenSiteMenus": true,
+    "feedsNativeIdentity": true,
+    "nativeSearchFindsHome": true,
+    "resourcesDiscoveryExactReviewedBytes": true,
+    "assetsOnlyCanonicalHosting": true,
+    "scienceRouteReconciliationRequired": true
+  },
+  "remainingReceiving": [
+    "Actual provider releases and independent public HTTPS receiving.",
+    "Science bounded predecessor routing and unauthenticated private refusal."
+  ]
+}

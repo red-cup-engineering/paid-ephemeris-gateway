@@ -1,0 +1,121 @@
+{
+  "type": "SciencePredecessorRouteDisposition",
+  "at": "2026-10-21T04:39:07.038Z",
+  "review": "independent-science-predecessor-disposition.json",
+  "before": [
+    {
+      "id": "a28ee0d590b8411e9847f02d46570087",
+      "pattern": "science.561.group/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    }
+  ],
+  "created": [
+    {
+      "id": "338fc1a14a484cb49f474f501898b6bd",
+      "pattern": "science.561.group/api/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "8245742978ba4599bcaf693612464780",
+      "pattern": "science.561.group/oauth/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "e7210afe9dae430babdb4bfc795ea941",
+      "pattern": "science.561.group/vault*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "1c244cc738b54df2a314066d7349eb82",
+      "pattern": "science.561.group/healthz",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "ecbff77908b74ffe8460149ec2696ce1",
+      "pattern": "science.561.group/feed.xml",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "1f51673be24444c387a878afdb3add67",
+      "pattern": "science.561.group/feed.atom",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "24a216a2359948ae8cbb701e0bced84d",
+      "pattern": "science.561.group/app.js",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "7ac11f598ea5485ea30f198a077d4eb7",
+      "pattern": "science.561.group/js/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    }
+  ],
+  "rollback": {
+    "pattern": "science.561.group/*",
+    "script": "lenticule-science-knowledge-vault"
+  },
+  "status": "specific-routes-applied",
+  "deletedBroad": {
+    "id": "a28ee0d590b8411e9847f02d46570087"
+  },
+  "after": [
+    {
+      "id": "338fc1a14a484cb49f474f501898b6bd",
+      "pattern": "science.561.group/api/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "1c244cc738b54df2a314066d7349eb82",
+      "pattern": "science.561.group/healthz",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "1f51673be24444c387a878afdb3add67",
+      "pattern": "science.561.group/feed.atom",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "ecbff77908b74ffe8460149ec2696ce1",
+      "pattern": "science.561.group/feed.xml",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "7ac11f598ea5485ea30f198a077d4eb7",
+      "pattern": "science.561.group/js/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "8245742978ba4599bcaf693612464780",
+      "pattern": "science.561.group/oauth/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "e7210afe9dae430babdb4bfc795ea941",
+      "pattern": "science.561.group/vault*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "24a216a2359948ae8cbb701e0bced84d",
+      "pattern": "science.561.group/app.js",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "type": "SectionPublicationPredecessorSnapshot",
+  "at": "2026-10-21T04:37:44.407Z",
+  "deployments": {
+    "deployments": [
+      {
+        "id": "674b5053-d395-490e-bbba-07316c2297b9",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "aed72b19-b43b-4dd4-a747-2d4829e03b88",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T15:05:32.840875Z"
+      },
+      {
+        "id": "74a7864f-3aad-48e9-a5b3-518f98aa6f5b",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "798bf9f6-52f1-4026-9b52-71e86453f3a1",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:58:55.917772Z"
+      },
+      {
+        "id": "67d2a9a2-8d67-434a-b35a-bc47c4d2913c",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "7dc2da2e-0cbd-4b95-9fa4-2ae2543ca220",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:56:50.46455Z"
+      },
+      {
+        "id": "f24e927e-f410-45fd-98f6-dc43e7b50f8e",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "4fa70e6c-936c-443a-8c0f-4268801cf18d",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:56:41.860323Z"
+      },
+      {
+        "id": "4d67e523-9003-4c3c-8a0c-3c8d1f3b09f9",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "c0aba2f6-2f7d-4c21-8eff-804de9f7308b",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:17:07.461051Z"
+      },
+      {
+        "id": "bbe32bf9-c57c-4cdf-83d7-e960daca4991",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "b82fa1cc-0138-4ec5-aa1f-d5c3b508a52d",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:13:45.55432Z"
+      },
+      {
+        "id": "a0e6897e-c93a-47c0-bcfe-7ee22a8638d5",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "52a28433-4acd-4e80-bb36-22f87eb9f3d3",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:13:42.175874Z"
+      },
+      {
+        "id": "5777e000-ef68-4d3a-9b8e-31896859aee7",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "34f6eeac-8bff-4f6e-9538-5f795b0c0398",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:13:39.420918Z"
+      },
+      {
+        "id": "a0a93c4d-1168-400c-918c-e2fdfc207959",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "babd6fcf-087c-40a6-988a-b439c52612a3",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:13:36.273857Z"
+      },
+      {
+        "id": "720561e9-0228-43d7-ad91-398d333439f9",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "morgan.sennhauser@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "secret"
+        },
+        "versions": [
+          {
+            "version_id": "548500a0-b9cb-45b6-9a84-bf0fe9634e8e",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-08-29T14:13:30.754575Z"
+      }
+    ]
+  },
+  "version": {
+    "id": "aed72b19-b43b-4dd4-a747-2d4829e03b88",
+    "number": 18,
+    "metadata": {
+      "created_on": "2026-08-29T15:05:32.270991Z",
+      "source": "wrangler",
+      "author_id": "4485b89ee36a9682f33295df11ffe364",
+      "author_email": "morgan.sennhauser@gmail.com",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "fcdd514f0501b4153b3bc7e67ab681fc66fc731ba26e32f0d24706615624dd2a",
+        "handlers": [
+          "fetch",
+          "scheduled"
+        ],
+        "named_handlers": [
+          {
+            "name": "authoringResponse",
+            "handlers": [
+              "class"
+            ]
+          }
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "assets": {
+          "not_found_handling": "single-page-application",
+          "serve_directly": false,
+          "raw_run_worker_first": true
+        },
+        "compatibility_date": "2026-08-18",
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "DISCORD_BOT_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "name": "DISCORD_CLIENT_ID",
+          "type": "secret_text"
+        },
+        {
+          "name": "DISCORD_GUILD_ID",
+          "type": "secret_text"
+        },
+        {
+          "name": "DISCORD_PUBLIC_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "GOOGLE_CLIENT_ID",
+          "type": "secret_text"
+        },
+        {
+          "name": "GOOGLE_CLIENT_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "database_id": "8a87986c-bd39-4a96-8d8a-f906ca37fcd7",
+          "id": "8a87986c-bd39-4a96-8d8a-f906ca37fcd7",
+          "name": "LEARNER_STATE",
+          "type": "d1"
+        },
+        {
+          "name": "LSPACE_ALLOWED_EMAILS",
+          "type": "secret_text"
+        },
+        {
+          "name": "PUBLIC_BASE_URL",
+          "text": "https://l-space.561.group",
+          "type": "plain_text"
+        },
+        {
+          "name": "SESSION_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "TURNTIDE_ISLANDER_ROLE_ID",
+          "type": "secret_text"
+        }
+      ]
+    }
+  },
+  "routes": [
+    {
+      "id": "a28ee0d590b8411e9847f02d46570087",
+      "pattern": "science.561.group/*",
+      "script": "lenticule-science-knowledge-vault",
+      "request_limit_fail_open": false
+    }
+  ],
+  "domains": []
+}

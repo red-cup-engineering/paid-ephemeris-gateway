@@ -1,0 +1,82 @@
+{
+  "type": "IndependentSciencePredecessorDisposition",
+  "version": 1,
+  "recordedAt": "2026-10-21T04:32:07.320Z",
+  "reviewer": "portal_receiving",
+  "verdict": "met-for-bounded-native-route-disposition-pending-live-receiving",
+  "originalUserObligation": "All seven sites live with the right resources, linked to each other, easy to find and use for humans and agents.",
+  "evidence": {
+    "source": {
+      "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/logs/section-sites-20261020/legacy-worker.js",
+      "bytes": 109612,
+      "sha256": "4f4e351c792f890cf79b0084f63d7ee3a760600795c9add9bc91309eb2fe9a44"
+    },
+    "providerBefore": {
+      "path": "/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-computer-services-section/services/public-web-services-section/data/records/section-sites-20261020/cloudflare-before.json",
+      "observedAt": "2026-10-21T03:45:49.946Z",
+      "legacyRoute": {
+        "id": "a28ee0d590b8411e9847f02d46570087",
+        "pattern": "science.561.group/*",
+        "script": "lenticule-science-knowledge-vault"
+      }
+    },
+    "baseline": "Parent observed science.561.group DNS ENOTFOUND before cutover; a configured wildcard route is not evidence of a received public frontend."
+  },
+  "decision": {
+    "mechanism": "Bounded Cloudflare route DATA referencing the unchanged original Worker; new native publication Custom Domain owns the remaining Science paths.",
+    "legacyWorker": "lenticule-science-knowledge-vault",
+    "legacyPatterns": [
+      "science.561.group/api/*",
+      "science.561.group/oauth/*",
+      "science.561.group/vault*",
+      "science.561.group/healthz",
+      "science.561.group/feed.xml",
+      "science.561.group/feed.atom",
+      "science.561.group/app.js",
+      "science.561.group/js/*"
+    ],
+    "newPublicationOwns": [
+      "/",
+      "/index.html",
+      "/styles.css",
+      "/favicon.ico",
+      "/robots.txt",
+      "/feed.json",
+      "/feed.rss.xml",
+      "/feed.atom.xml",
+      "/resources.json",
+      "/discovery.json",
+      "native publication content, search and sitemap"
+    ],
+    "legacyRootAndFeedJsonDisposition": "The old frontend root and old /feed.json are retained in the original artifact and unchanged Worker/assets, but their unreceived, misbound Science ingress is superseded by the reviewed public Science publication. This is not a full L-Space frontend migration or canonical L-Space release.",
+    "sourceRetention": "Keep original Worker script/deployment, bindings, secrets, assets, data and authentication logic unchanged. Preserve no additional host or grant.",
+    "authPrefix": "Actual source constants use /oauth/*, not /auth/*.",
+    "privacy": "Do not expose protected vault contents or grant repository, authoring, identity, payment or MCP authority. Existing /api/* and /vault* authorization remains in the original Worker."
+  },
+  "independentSourceFindings": [
+    {
+      "lines": 2385,
+      "finding": "Legacy shell owns root, index.html, styles.css, app.js, favicon.ico, robots.txt and /js/*.mjs; root/styles/robots collide with the new publication and require this explicit disposition."
+    },
+    {
+      "lines": 2527,
+      "finding": "Original anonymous dispatch includes healthz, OAuth, public surface/index/rooms, old feeds and shell."
+    },
+    {
+      "lines": 2571,
+      "finding": "Original protected dispatch identifies Google/Discord sessions before private resources; no session returns 401 access-required, or authorization availability 503 when the existing provider is unavailable."
+    }
+  ],
+  "requiredRuntimeReceiving": [
+    "Parent reads original deployment/version metadata and confirms the retained original script and assets unchanged after route-only mutation.",
+    "Independent GET new portal root and native public artifacts; inspect correct identity and crosslinks.",
+    "Independent GET legacy /healthz, /api/v1/surface and /api/v1/public/index; record actual outcomes without inventing expected asset contents.",
+    "Independent anonymous GET /api/v1/me, /api/v1/vault/manifest and /vault/index.json; verify private refusal remains, with no credentials or auth exchange.",
+    "Independent GET missing-code /oauth/callback if needed to demonstrate preserved auth routing without creating an identity."
+  ],
+  "limitations": [
+    "Source inspection and route plan acceptance do not constitute live receiving.",
+    "Public legacy asset absence may preserve an original not-found response; this does not establish availability of a new L-Space public collection.",
+    "No predecessor source or provider mutation was performed by this reviewer."
+  ]
+}

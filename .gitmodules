@@ -13,3 +13,7 @@
 	path = services/public-computer-development-services-section/services/public-bug-bounty-services-section/services/public-algora-bug-bounty-services-section
 	url = https://github.com/causeway-services/public-algora-bug-bounty-services-section.git
 	branch = main
+[submodule "services/public-computer-game-services-section"]
+	path = services/public-computer-game-services-section
+	url = https://github.com/causeway-services/public-computer-game-services-section.git
+	branch = main

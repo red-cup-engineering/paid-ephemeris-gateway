@@ -1,7 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "RepositoryMaterialObservation",
-  "type": "object",
-  "required": ["id", "type", "provider", "source", "denominator", "projection", "resourceObservation", "customerMutation", "recordedAt"],
-  "properties": { "type": { "const": "RepositoryMaterialObservation" } }
-}

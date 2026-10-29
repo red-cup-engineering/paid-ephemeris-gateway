@@ -1,3 +1,0 @@
-node_modules/
-# The bin's default runtime world dir (scripts/farstone.mjs builds/serves here) — not source.
-/world/

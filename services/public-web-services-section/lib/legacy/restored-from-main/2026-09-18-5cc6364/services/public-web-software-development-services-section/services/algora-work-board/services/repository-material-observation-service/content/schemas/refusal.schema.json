@@ -1,7 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "RepositoryMaterialObservationRefusal",
-  "type": "object",
-  "required": ["id", "type", "provider", "reason", "details", "customerMutation", "recordedAt"],
-  "properties": { "type": { "const": "RepositoryMaterialObservationRefusal" } }
-}

@@ -102,3 +102,6 @@ secrets—but no publication is authorized yet.
 - Paid HTTP boundary: RSC Quiescent / paid-ephemeris-gateway
 - x402 protocol: Red Cup Engineering / x402 Services Section
 - settlement witness: Lenticule Science / witness-journal RDF Services
+
+## Earlier work
+- `lib/legacy/2026-08-01-ops`: Earlier paid ephemeris gateway operations material. Origin: 561-group/bare-cedar-fog `services/rsc-quiescent/services/paid-ephemeris-gateway/ops`, restored from commit 271c444 on 2026-08-01.

@@ -4,7 +4,7 @@ import {
   createCdpFacilitatorContract,
   createExactEvmPaymentBoundary,
   declareDiscoveryExtension,
-} from "@red-cup-engineering/x402-services-section/server";
+} from "@red-cup-engineering/x402-engineering-services-section/server";
 
 import {
   computeEphemeris,

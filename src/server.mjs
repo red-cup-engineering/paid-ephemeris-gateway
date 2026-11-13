@@ -9,11 +9,11 @@ import {
 import {
   computeEphemeris,
   normalizeInstant,
-} from "@lenticule-science/divination-services-section/services/divination-services-section/services/ephemeris-tracking-team/src/ephemeris-product.mjs";
+} from "@lenticule-science/divination-science-services-section/services/divination-science-services-section/services/ephemeris-tracking-team/src/ephemeris-product.mjs";
 import {
   computePrecisionMoment,
   normalizePrecisionRequest,
-} from "@lenticule-science/divination-services-section/services/divination-services-section/services/ephemeris-tracking-team/src/precision-moment.mjs";
+} from "@lenticule-science/divination-science-services-section/services/divination-science-services-section/services/ephemeris-tracking-team/src/precision-moment.mjs";
 import { createSettlementWitness } from "./settlement-witness.mjs";
 
 export const MOMENT_ESSENTIALS_PRICE = "$0.04";

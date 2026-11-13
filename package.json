@@ -20,7 +20,7 @@
     "verify": "npm run check && npm test"
   },
   "dependencies": {
-    "@lenticule-science/divination-services-section": "2.0.0",
+    "@lenticule-science/divination-science-services-section": "2.0.0",
     "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0",
     "@red-cup-engineering/x402-engineering-services-section": "^0.13.8-dev.301",
     "@red-cup-engineering/x402-settlement-witness-identity": "0.2.0",

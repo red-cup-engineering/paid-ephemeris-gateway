@@ -2,8 +2,8 @@ import { startSeavtDocumentProvider } from "@red-cup-engineering/semiotic-eavt-e
 
 import { createServer } from "./server.mjs";
 
-const witnessJournal = await startSeavtDocumentProvider({ root: process.env.SEAVT_DOCUMENT_ROOT, port: Number(process.env.SEAVT_DOCUMENT_PORT ?? 19763) });
-const env = { ...process.env, SEAVT_DOCUMENT_AGENT: witnessJournal.agentCardUrl };
+const witnessLog = await startSeavtDocumentProvider({ root: process.env.SEAVT_DOCUMENT_ROOT, port: Number(process.env.SEAVT_DOCUMENT_PORT ?? 19763) });
+const env = { ...process.env, SEAVT_DOCUMENT_AGENT: witnessLog.agentCardUrl };
 const { app, network, facilitatorUrl, payTo, prices, port } = createServer(env);
 const server = app.listen(port, "0.0.0.0", () => {
   console.log(JSON.stringify({
@@ -13,14 +13,14 @@ const server = app.listen(port, "0.0.0.0", () => {
     facilitatorUrl,
     payTo,
     prices,
-    witnessJournalAgent: witnessJournal.agentCardUrl,
+    witnessJournalAgent: witnessLog.agentCardUrl,
   }));
 });
 
 async function stop(signal) {
   console.log(JSON.stringify({ event: "paid-ephemeris-gateway-stopping", signal }));
   await new Promise((accept) => server.close(accept));
-  await witnessJournal.close();
+  await witnessLog.close();
 }
 
 for (const signal of ["SIGINT", "SIGTERM"]) {

@@ -138,7 +138,7 @@ function precisionOptions(query) {
   };
 }
 
-function dateRejection(response, error) {
+function dateRefusal(response, error) {
   if (error instanceof TypeError || error instanceof RangeError) {
     response.status(422).json({ error: error.message });
     return true;
@@ -199,18 +199,18 @@ export function createServer(env = process.env, dependencies = {}) {
 
   app.get(MOMENT_ESSENTIALS_ROUTE, (request, response, next) => {
     try { normalizeInstant(request.params.date); next(); }
-    catch (error) { if (!dateRejection(response, error)) next(error); }
+    catch (error) { if (!dateRefusal(response, error)) next(error); }
   });
   app.get(PRECISION_MOMENT_ROUTE, (request, response, next) => {
     try { normalizePrecisionRequest(request.params.date, precisionOptions(request.query)); next(); }
-    catch (error) { if (!dateRejection(response, error)) next(error); }
+    catch (error) { if (!dateRefusal(response, error)) next(error); }
   });
 
   app.use(payment.middleware);
 
   app.get(MOMENT_ESSENTIALS_ROUTE, (request, response, next) => {
     try { response.json((dependencies.computeEssentials || computeEphemeris)(request.params.date)); }
-    catch (error) { if (!dateRejection(response, error)) next(error); }
+    catch (error) { if (!dateRefusal(response, error)) next(error); }
   });
   app.get(PRECISION_MOMENT_ROUTE, async (request, response, next) => {
     try {
@@ -220,7 +220,7 @@ export function createServer(env = process.env, dependencies = {}) {
       );
       response.json(product);
     } catch (error) {
-      if (!dateRejection(response, error)) next(error);
+      if (!dateRefusal(response, error)) next(error);
     }
   });
 
